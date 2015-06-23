@@ -1,0 +1,4 @@
+test:
+  pre:
+    - npm install -g divshot-cli
+    - divshot push staging --token $DIVSHOT_TOKEN

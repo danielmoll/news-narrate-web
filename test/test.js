@@ -5,7 +5,7 @@ describe('narrate', function(){
 
     it('Home test', function(done){
         browser
-        .url('https://prod-narrate.firebaseapp.com')
+        .url('http://staging.narrate-web.divshot.io')
         .click('=Map')
         .call(done)
 
