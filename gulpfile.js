@@ -6,6 +6,7 @@ var browserify = require('browserify');
 var watchify = require('watchify');
 var babel = require('babelify');
 var browserSync = require('browser-sync').create();
+var webdriver = require('gulp-webdriver');
 
 function compile(watch) {
     var bundler = watchify(browserify('./src/index.js', { debug: true }).transform(babel));
@@ -54,6 +55,27 @@ gulp.task('test:local', function() {
         }
     }));
 });
+
+
+
+
+gulp.task('test:chrome_ci', function() {
+    return gulp.src('test/*.js', {
+        read: false
+    }).pipe(webdriver({
+        updateSauceJob: true,
+        user: process.env.SAUCE_USERNAME,
+        key: process.env.SAUCE_ACCESS_KEY,
+        host: 'ondemand.saucelabs.com',
+        port: 80,
+        desiredCapabilities: {
+            browserName: 'chrome',
+            platform: 'Windows 8',
+            version: '31',
+        }
+    }));
+});
+
 
 
 
