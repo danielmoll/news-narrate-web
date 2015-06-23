@@ -14,11 +14,13 @@ function compile(watch) {
     function rebundle() {
         bundler.bundle()
             .on('error', function(err) { console.error(err); this.emit('end'); })
+            .on('end',  function() { process.exit(0); })
             .pipe(source('build.js'))
             .pipe(buffer())
             .pipe(sourcemaps.init({ loadMaps: true }))
             .pipe(sourcemaps.write('./'))
             .pipe(gulp.dest('./build'));
+
     }
 
     if (watch) {
