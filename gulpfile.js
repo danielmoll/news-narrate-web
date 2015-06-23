@@ -44,6 +44,19 @@ gulp.task('browser-sync', function() {
     });
 });
 
+
+gulp.task('test:local', function() {
+    return gulp.src('test/*.js', {
+        read: false
+    }).pipe(webdriver({
+        desiredCapabilities: {
+            browserName: 'chrome'
+        }
+    }));
+});
+
+
+
 gulp.task('build', function() { return compile(); });
 gulp.task('watch', function() { return watch(); });
 
