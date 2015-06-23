@@ -59,7 +59,7 @@ gulp.task('test:local', function() {
 
 
 
-gulp.task('test:chrome_ci', function() {
+gulp.task('test:ie11', function() {
     return gulp.src('test/*.js', {
         read: false
     }).pipe(webdriver({
@@ -69,9 +69,9 @@ gulp.task('test:chrome_ci', function() {
         host: 'ondemand.saucelabs.com',
         port: 80,
         desiredCapabilities: {
-            browserName: 'chrome',
-            platform: 'Windows 8',
-            version: '31',
+            browserName: 'internet explorer',
+            platform: 'Windows 8.1',
+            version: '11.0',
         }
     }));
 });
