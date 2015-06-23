@@ -1,4 +1,5 @@
 test:
   pre:
+    - gulp build
     - npm install -g divshot-cli
     - divshot push staging --token $DIVSHOT_TOKEN
