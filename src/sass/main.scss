@@ -25,6 +25,7 @@ $darkBg: #262730;
 .cf:after {
   content: " ";
   display: table;
+
 }
 
 .cf:after {
@@ -196,6 +197,46 @@ body {
     .card_text {
       color: $textgrey;
       padding: 0 25px 30px;
+    }
+
+    .card__videos {
+      margin-left: 55px;
+      text-align: center;
+
+      img {
+        border-radius: 35px;
+        float: left;
+        margin-right: 15px;
+        width: 70px;
+      }
+    }
+
+    .card__video {
+      margin: 0 auto;
+      margin-top: 20px;
+      text-align: left;
+      width: 80%;
+    }
+
+    .card__video-play {
+      border: 1px solid #333;
+      border-radius: 22px;
+      float: right;
+      height: 44px;
+      text-indent: -9999em;
+      width: 44px;
+    }
+
+    .card__video-title,
+    .card__video-author {
+      display: block;
+      margin-left: 65px;
+      width: 60%;
+    }
+
+    .card__video-author {
+      color: $textgrey;
+      padding-top: 5px;
     }
   }
 }

@@ -3,6 +3,7 @@ import _ from 'lodash';
 
 import Hero from './hero';
 import TimeTab from './time_tab';
+import Videos from './videos';
 
 import scenes from '../data/scenes';
 
@@ -24,7 +25,7 @@ class Scene extends React.Component {
                 { image }
                 <p className="card_text">{this.props.data.body}</p>
             </div>
-            <div className="card__media"></div>
+            <Videos></Videos>
         </article>
     }
 }
