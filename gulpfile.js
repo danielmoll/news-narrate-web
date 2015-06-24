@@ -7,6 +7,8 @@ var watchify = require('watchify');
 var babel = require('babelify');
 var browserSync = require('browser-sync').create();
 var webdriver = require('gulp-webdriver');
+var sass = require('gulp-sass');
+var serve = require('gulp-serve');
 
 function compile(watch) {
     var bundler = watchify(browserify('./src/index.js', { debug: true }).transform(babel));
@@ -19,7 +21,11 @@ function compile(watch) {
             .pipe(sourcemaps.init({ loadMaps: true }))
             .pipe(sourcemaps.write('./'))
             .pipe(gulp.dest('./build'))
-            .on('end',  function() { process.exit(0); });
+            .on('end',  function() {
+                if(!watch) {
+                    process.exit(0);
+                }
+            });
 
     }
 
@@ -29,7 +35,6 @@ function compile(watch) {
             rebundle();
         });
     }
-
     rebundle();
 }
 
@@ -58,8 +63,15 @@ gulp.task('test:local', function() {
     }));
 });
 
+gulp.task('sass', function () {
+    gulp.src('./src/sass/**/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('./build/css'));
+});
 
-
+gulp.task('sass:watch', function () {
+    gulp.watch('./src/sass/**/*.scss', ['sass']);
+});
 
 gulp.task('test:ie11', function() {
     return gulp.src('test/*.js', {
@@ -78,11 +90,10 @@ gulp.task('test:ie11', function() {
     }));
 });
 
-
-
-
-gulp.task('build', function() { return compile(); });
+gulp.task('compile', function() { return compile(); });
 gulp.task('watch', function() { return watch(); });
 
+gulp.task('build', ['sass', 'compile']);
+gulp.task('serve', serve('.'));
 
-gulp.task('default', ['watch']);
+gulp.task('default', ['sass:watch', 'watch', 'serve']);
