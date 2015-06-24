@@ -82,19 +82,21 @@ body {
     position: relative;
 
     &:before {
-      border-right: 2px solid red;
+      border-right: 1px solid #333;
       content: " ";
       display: block;
       height: 100%;
       position: absolute;
-      left: 5%;
+      left: 25px;
       z-index: 0;
     }
 
     .card {
       clear: both;
       margin-bottom: 1rem;
+      position: relative;
       width: 100%;
+      z-index: 10;
     }
 
     .card__time {
@@ -105,7 +107,7 @@ body {
       line-height: 3rem;
       min-height: 3rem;
       text-align: center;
-      width: 10%;
+      width: 55px;
       z-index: 10;
     }
 
@@ -125,18 +127,18 @@ body {
 
     .card__content {
       background-color: #fff;
-      float: left;
       min-height: 55px;
-      width: 90%;
+      margin-left: 55px;
     }
 
-    .card__title,
-    .card_text {
-      margin: 0.5rem 1rem;
+    .card__title {
+      line-height: 3rem;
+      padding: 0 1rem;
     }
 
     .card_text {
       color: $textgrey;
+      margin: 0.5rem 1rem;
     }
   }
 }
