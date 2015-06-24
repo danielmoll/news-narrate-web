@@ -7,13 +7,6 @@ import Menu from './modules/menu'
 import Timeline from './modules/timeline'
 
 
-
-
-
-
-
-
-
 class Narrate extends React.Component {
     constructor(props) {
         super(props);
@@ -31,8 +24,8 @@ class Narrate extends React.Component {
 
     render() {
 
-
         var Content;
+
         switch(this.state.route) {
             case '/interviews':
                 Content = Interviews;
@@ -63,6 +56,4 @@ var mountNode = document.getElementById('narrate-app')
 React.render(
     <Narrate/>
     , mountNode);
-
-
 

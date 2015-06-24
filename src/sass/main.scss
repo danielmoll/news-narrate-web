@@ -1,4 +1,15 @@
 $link: #444;
+$textgrey: #666;
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
 
 body,
 html,
@@ -7,9 +18,16 @@ html,
   padding: 0;
 }
 
-body {
+html {
   background-color: #eee;
+  text-align: center;
+}
+
+body {
   font-family: Helvetica, Arial, sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
 }
 
 #narrate-app {
@@ -43,18 +61,82 @@ body {
   section.hero {
     background-color: #25252f;
     color: #fff;
+    margin-bottom: 1rem;
     min-height: 300px;
     position: relative;
     text-align: center;
+    width: 100%;
 
     .hero__content {
       bottom: 1rem;
+      left: 0;
       margin: 0 auto;
       position: absolute;
-      margin: 0 3rem;
+      padding: 0 3rem;
+      right: 0;
       text-align: center;
     }
-
   }
 
+  section.cards {
+    position: relative;
+
+    &:before {
+      border-right: 2px solid red;
+      content: " ";
+      display: block;
+      height: 100%;
+      position: absolute;
+      left: 5%;
+      z-index: 0;
+    }
+
+    .card {
+      clear: both;
+      margin-bottom: 1rem;
+      width: 100%;
+    }
+
+    .card__time {
+      background-color: #25252f;
+      color: #fff;
+      display: block;
+      float: left;
+      line-height: 3rem;
+      min-height: 3rem;
+      text-align: center;
+      width: 10%;
+      z-index: 10;
+    }
+
+    .card__image {
+      height: 80px;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+
+      img {
+        top: 0;
+        margin-top: -50px;
+        position: absolute;
+        width: 100%;
+      }
+    }
+
+    .card__content {
+      background-color: #fff;
+      float: left;
+      min-height: 55px;
+      width: 90%;
+    }
+
+    .card__title,
+    .card_text {
+      margin: 0.5rem 1rem;
+    }
+
+    .card_text {
+      color: $textgrey;
+    }
+  }
 }

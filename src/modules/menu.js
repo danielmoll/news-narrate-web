@@ -9,7 +9,6 @@ class MenuItem extends React.Component {
         var href = '#/' + this.props.data.href;
         return <a href={href}>{this.props.data.label}</a>
     }
-
 }
 
 class Menu extends React.Component {
