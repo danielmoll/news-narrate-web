@@ -5,8 +5,9 @@ class Hero extends React.Component {
     render () {
         return <section className="hero">
             <div className="hero__content">
-                <h1>7/7 Attacks</h1>
-                <p>On July 7, 2005, four terrorists blew themselves up in the middle of London’s rush hour, killing 52 people and injuring more than 700. Here is the story of that day, told using testimony from people whose lives were changed by what is still the worst atrocity ever committed on British soil.</p>
+                <h1>7 / 7 ten years on</h1>
+                <p>On July 7 2005, four suicide bmbers attacked central London, killing 52 people and injuring hundreds more.</p>
+                <button>Scroll down for full story</button>
             </div>
         </section>
     }

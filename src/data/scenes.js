@@ -11,7 +11,11 @@ var scenes = [
     },
     {
         id: 2,
-        title: 'Ambulances'
+        title: 'Service stop',
+        body: "The rented Micra heads south on the M1, stopping to fill up at a petrol station.",
+        icon: "",
+        photo: null,
+        time: "2005-07-07 04:54:00"
     },
     {
         id: 3,
