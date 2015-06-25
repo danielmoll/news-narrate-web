@@ -3,7 +3,7 @@
 }
 
 .interview {
-
+	overflow: hidden;
 }
 
 .interview__body {
@@ -11,6 +11,9 @@
 }
 
 .interview__interviewee {
+	float: left;
+	margin-right: 20px;
+
 	.image {
 		border-radius: 35px;
 		width: 70px;
@@ -19,6 +22,10 @@
 
 .interview__text {
 
+}
+
+.interview__name {
+	font-family: SkyTextMedium;
 }
 
 .interview__videos {

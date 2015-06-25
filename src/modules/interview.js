@@ -15,17 +15,19 @@ class Interview extends React.Component {
 
     render() {
         var imageUrl = (this.props.data.thumbnail) ? this.props.data.thumbnail : '',
-            text = this.props.data.body;
+            text = this.props.data.body,
+            name = this.props.data.name;
 
-        return <article className="interview">
-            <div className="interview__body">
-                <Image data={imageUrl} classNames="interview__interviewee" />
-                <p className="interview__text">{ text }</p>
-            </div>
-            <div className="interview__videos">
-                <Videos data={ {videos: this.props.data.videos} }></Videos>
-            </div>
-        </article>
+        return  <article className="interview">
+                    <Image data={imageUrl} classNames="interview__interviewee" />
+                    
+                    <div className="interview__body">
+                        <blockquote className="interview__text">{text}</blockquote>
+                        <div className="interview__name">{name}</div>
+                    </div>
+
+                    <div className="interview__button"></div>
+                </article>
     }
 }
 
