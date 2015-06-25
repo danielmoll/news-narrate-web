@@ -7,7 +7,7 @@ var scenes = [
         photo: null,
         image: "http://www.londonbusmuseum.com/wp-content/uploads/2012/01/SG00b.jpg",
         video: "video1",
-        time: "2005-07-07 03:58:00"
+        time: "2005-07-07T03:58:00Z"
     },
     {
         id: 2,
@@ -15,7 +15,7 @@ var scenes = [
         body: "The rented Micra heads south on the M1, stopping to fill up at a petrol station.",
         icon: "",
         photo: null,
-        time: "2005-07-07 04:54:00"
+        time: "2005-07-07T04:54:00Z"
     },
     {
         id: 3,
@@ -34,6 +34,6 @@ var videos = {
         thumbnail: "url",
         title: 'basdf'
     }
-}
+};
 
 export default scenes;
