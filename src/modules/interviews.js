@@ -1,7 +1,7 @@
 import React from 'react';
-import _ from 'lodash';
-
+import Interview from './interview';
 import interviews from '../data/interviews';
+import _ from 'lodash';
 
 class Interviews extends React.Component {
     constructor(props) {

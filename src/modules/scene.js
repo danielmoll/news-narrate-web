@@ -3,6 +3,7 @@ import _ from 'lodash';
 
 import TimeTab from './time_tab';
 import Videos from './videos';
+import Image from './image';
 
 class Scene extends React.Component {
     constructor() {
@@ -20,7 +21,7 @@ class Scene extends React.Component {
         var contentClassString = 'scene__content' + (this.state.expanded ? ' expanded' : ''),
             h2ClassString = 'scene__title scene__title--type1',
             expandableIcon = '',
-            image = '',
+            imageUrl = (this.props.data.image) ? this.props.data.image : '',
             textParagraphs = [''],
             paragraphs = [],
             text = [];
@@ -48,10 +49,6 @@ class Scene extends React.Component {
             }
         }
 
-        if(this.props.data.image){
-            image = <div className="scene__image"><img src={this.props.data.image} /></div>
-        }
-
         return <article className="cf scene scene--timeline">
             <TimeTab data={this.props.data.time}/>
             <div className={ contentClassString }>
@@ -59,7 +56,7 @@ class Scene extends React.Component {
                     { expandableIcon }
                     {this.props.data.title}
                 </h2>
-                { image }
+                <Image data={imageUrl}/>
                 { text }
             </div>
             <Videos data={ {videos: this.props.data.videos} }></Videos>
