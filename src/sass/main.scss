@@ -80,6 +80,12 @@ body {
   }
 }
 
+.header-nav--sticky {
+  margin: 0 auto;
+  max-width: 900px;
+  z-index: 1000;
+}
+
 nav.header-nav {
   background-color: #fff;
   border-bottom: 1px solid $darkBg;
