@@ -6,17 +6,27 @@ import menuItemData from '../data/menu_items'
 
 class MenuItem extends React.Component {
     render() {
-        var href = '#/' + this.props.data.href;
-        return <a href={href}>{this.props.data.label}</a>
+        var href = '#/' + this.props.data.href,
+            classes = 'header-nav__link' + (this.props.activeItem ? ' selected' : '');
+
+        return <a href={href} className={classes}>{this.props.data.label}</a>
     }
 }
 
 class Menu extends React.Component {
-    render() {
+    handleActiveItem(itemData, route) {
+        return itemData.href === route.slice(1);
+    }
 
-        var buttons = _.map(menuItemData, function (menuItem) {
-            return <MenuItem data={menuItem}/>
-        });
+    render() {
+        var activeItem,
+
+            buttons = _.map(menuItemData, function (menuItem) {
+                activeItem = this.handleActiveItem(menuItem, this.props.data);
+
+                return <MenuItem data={menuItem} activeItem={activeItem} />
+            }.bind(this));
+
         return <nav className="header-nav">{buttons}</nav>
     }
 }

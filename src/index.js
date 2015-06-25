@@ -43,7 +43,7 @@ class Narrate extends React.Component {
 
         return (
             <div>
-                <Menu></Menu>
+                <Menu data={this.state.route}></Menu>
                 <Content></Content>
             </div>
         )
