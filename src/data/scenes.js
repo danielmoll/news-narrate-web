@@ -2,7 +2,7 @@ var scenes = [
     {
         id: 1,
         title: 'The bombers set off',
-        body: "A small, light blue Nissan Micra is caught on CCTV winding through the residential streets of Leeds towards the M1.\nInside are Mohammad Sidique Khan (30), Shehzad Tanweer (22) and Hasib Hussain (18), all British nationals of Pakistani origin.  Resting in the boot are four large rucksacks filled with home-made explosives.",
+        body: "A small, light blue Nissan Micra is caught on CCTV winding through the residential streets of Leeds towards the M1.\nInside are Mohammad Sidique Khan (30), Shehzad Tanweer (22) and Hasib Hussain (18), all British nationals of Pakistani origin. Resting in the boot are four large rucksacks filled with home-made explosives.",
         icon: "",
         photo: null,
         image: "http://www.londonbusmuseum.com/wp-content/uploads/2012/01/SG00b.jpg",
