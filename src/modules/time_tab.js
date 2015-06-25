@@ -12,7 +12,6 @@ class TimeTab extends React.Component {
             hours = hours < 10 ? '0' + hours : hours;
             minutes = minutes < 10 ? '0' + minutes : minutes;
 
-
             theDate = hours + '.' + minutes;
         }
 

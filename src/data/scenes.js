@@ -15,7 +15,7 @@ var scenes = [
         body: "The rented Micra heads south on the M1, stopping to fill up at a petrol station.",
         icon: "",
         photo: null,
-        time: "2005-07-07 04:54:00"
+        time: "2005-07-07T04:54:00Z"
     },
     {
         id: 3,

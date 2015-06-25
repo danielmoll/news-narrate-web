@@ -93,6 +93,7 @@ body {
       right: 0;
       text-align: center;
       max-width: 315px;
+      width: 100%;
 
       p {
         line-height: 19px;
@@ -116,7 +117,7 @@ body {
     position: relative;
 
     &:before {
-      border-right: 1px solid $darkBg;
+      border-right: 1px dotted $darkBg;
       content: " ";
       display: block;
       height: 100%;
@@ -174,16 +175,28 @@ body {
       font-family: SkyTextMedium;
       font-size: 20px;
       padding: 10px 25px 11px;
+    }
 
+    .scene__title.expandable {
+      cursor: pointer;
     }
 
     .scene_text {
       color: $textgrey;
+      display: none;
       padding-bottom: 10px;
 
       p {
         padding: 0 25px 5px;
       }
+    }
+
+    div.scene_excerpt {
+      display: block;
+    }
+
+    .expanded .scene_text {
+      display: block;
     }
 
     .scene__videos {
