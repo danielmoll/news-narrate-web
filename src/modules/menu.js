@@ -1,4 +1,5 @@
 import React from 'react';
+import Sticky from 'react-sticky';
 import _ from 'lodash';
 
 import menuItemData from '../data/menu_items'
@@ -27,7 +28,7 @@ class Menu extends React.Component {
                 return <MenuItem data={menuItem} activeItem={activeItem} />
             }.bind(this));
 
-        return <nav className="header-nav">{buttons}</nav>
+        return <Sticky stickyClass="header-nav--sticky"><nav className="header-nav">{buttons}</nav></Sticky>
     }
 }
 
