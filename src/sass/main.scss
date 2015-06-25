@@ -113,7 +113,6 @@ nav.header-nav {
 section.hero {
   background-color: #000;
   color: #fff;
-  margin-bottom: 1rem;
   min-height: 370px;
   position: relative;
   text-align: center;
@@ -159,12 +158,14 @@ section.hero {
 
 section.scenes {
   position: relative;
+  padding-top: 1rem;
 
   &:before {
     border-right: 1px dotted $darkBg;
     content: " ";
     display: block;
     height: 100%;
+    padding-bottom: 1rem;
     position: absolute;
     left: 25px;
     z-index: 0;
@@ -176,6 +177,10 @@ section.scenes {
     position: relative;
     width: 100%;
     z-index: 10;
+  }
+
+  .scene:last-child {
+    margin-bottom: 0;
   }
 
   .scene__time {
