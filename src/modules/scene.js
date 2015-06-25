@@ -66,7 +66,7 @@ class Scene extends React.Component {
                     { expandableIcon }
                     {this.props.data.title}
                 </h2>
-                <Image data={imageUrl}/>
+                <Image data={imageUrl} classNames="scene__image" />
                 { text }
             </div>
             <Videos data={ {videos: this.props.data.videos} }></Videos>

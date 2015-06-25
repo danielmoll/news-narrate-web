@@ -1,0 +1,35 @@
+.header-nav--sticky {
+  margin: 0 auto;
+  max-width: 900px;
+  z-index: 1000;
+}
+
+nav.header-nav {
+  background-color: #fff;
+  border-bottom: 1px solid $darkBg;
+  border-top: 1px solid $darkBg;
+  text-align: center;
+  width: 100%;
+
+  a {
+    border-left: 1px solid $darkBg;
+    color: $textColour;
+    display: inline-block;
+    font-size: 14px;
+    padding: 12px 0;
+    text-decoration: none;
+    width: calc(100% / 3 );
+  }
+
+  a:first-child {
+    border-left: none;
+    width: calc(100% / 3);
+  }
+
+  a:hover,
+  a.selected {
+    background-color: $darkBg;
+    color: #fff;
+  }
+
+}
