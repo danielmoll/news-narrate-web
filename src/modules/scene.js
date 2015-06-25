@@ -52,7 +52,7 @@ class Scene extends React.Component {
                 { image }
                 { text }
             </div>
-            <Videos></Videos>
+            <Videos data={ {videos: this.props.data.videos} }></Videos>
         </article>
     }
 }
