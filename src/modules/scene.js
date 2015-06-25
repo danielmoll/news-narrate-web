@@ -5,10 +5,21 @@ import TimeTab from './time_tab';
 import Videos from './videos';
 
 class Scene extends React.Component {
+    constructor() {
+        super();
+        this.handleClick = this.handleClick.bind(this);
+        this.state = { expanded: false };
+    }
+
+    handleClick() {
+        this.setState({ expanded: !this.state.expanded });
+    }
 
     render() {
 
-        var image = '',
+        var contentClassString = 'scene__content' + (this.state.expanded ? ' expanded' : ''),
+            h2ClassString = 'scene__title scene__title--type1',
+            image = '',
             textParagraphs = [''],
             paragraphs = [],
             text = [];
@@ -18,6 +29,8 @@ class Scene extends React.Component {
             text.push(<div className="scene_text scene_excerpt"><p>{ textParagraphs.shift() }</p></div>);
 
             if (textParagraphs.length) {
+                h2ClassString += ' expandable';
+
                 for ( var idx in textParagraphs) {
                     paragraphs.push(<p>{ textParagraphs[idx] }</p>);
                 }
@@ -32,8 +45,8 @@ class Scene extends React.Component {
 
         return <article className="cf scene scene--timeline">
             <TimeTab data={this.props.data.time}/>
-            <div className="scene__content">
-                <h2 className="scene__title scene__title--type1">
+            <div className={ contentClassString }>
+                <h2 className={ h2ClassString } onClick={this.handleClick}>
                     {this.props.data.title}
                 </h2>
                 { image }
