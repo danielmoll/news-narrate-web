@@ -19,6 +19,7 @@ class Scene extends React.Component {
 
         var contentClassString = 'scene__content' + (this.state.expanded ? ' expanded' : ''),
             h2ClassString = 'scene__title scene__title--type1',
+            expandableIcon = '',
             image = '',
             textParagraphs = [''],
             paragraphs = [],
@@ -29,7 +30,15 @@ class Scene extends React.Component {
             text.push(<div className="scene_text scene_excerpt"><p>{ textParagraphs.shift() }</p></div>);
 
             if (textParagraphs.length) {
+                var iconState = 'icon icon--expand';
+
                 h2ClassString += ' expandable';
+
+                if (this.state.expanded) {
+                    iconState = 'icon icon--collapse';
+                }
+
+                expandableIcon = <span className={ iconState }></span>;
 
                 for ( var idx in textParagraphs) {
                     paragraphs.push(<p>{ textParagraphs[idx] }</p>);
@@ -47,12 +56,13 @@ class Scene extends React.Component {
             <TimeTab data={this.props.data.time}/>
             <div className={ contentClassString }>
                 <h2 className={ h2ClassString } onClick={this.handleClick}>
+                    { expandableIcon }
                     {this.props.data.title}
                 </h2>
                 { image }
                 { text }
             </div>
-            <Videos></Videos>
+            <Videos data={ {videos: this.props.data.videos} }></Videos>
         </article>
     }
 }

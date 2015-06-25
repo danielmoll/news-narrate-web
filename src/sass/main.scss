@@ -8,7 +8,6 @@ $darkBg: #262730;
 .cf:after {
   content: " ";
   display: table;
-
 }
 
 .cf:after {
@@ -38,9 +37,44 @@ body {
 }
 
 #narrate-app {
+  .icon {
+    background-image: url('/build/img/icons-left.png');
+    background-repeat: no-repeat;
+    background-size: 107px 329px;
+    display: block;
+    height: 10px;
+    width: 20px;
+  }
+
+  .icon--expand {
+    background-position: 0 -135px;
+  }
+
+  .icon--collapse {
+    background-position: 0 -155px;
+  }
+
+  .header {
+    background-color: #fff;
+    height: 25px;
+    padding: 25px;
+
+    a {
+      background-image: url('/build/img/icons-left.png');
+      background-position: 0 -8px;
+      background-repeat: no-repeat;
+      background-size: 107px 329px;
+      display: block;
+      height: 25px;
+      width: 213px;
+      text-indent: -9999em;
+    }
+  }
+
   nav.header-nav {
     background-color: #fff;
     border-bottom: 1px solid $darkBg;
+    border-top: 1px solid $darkBg;
     text-align: center;
     width: 100%;
 
@@ -175,6 +209,11 @@ body {
       font-family: SkyTextMedium;
       font-size: 20px;
       padding: 10px 25px 11px;
+
+      .icon {
+        float: right;
+        margin-top: 8px;
+      }
     }
 
     .scene__title.expandable {
