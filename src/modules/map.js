@@ -1,9 +1,10 @@
 import React from 'react';
-import _ from 'lodash';
 
 class Map extends React.Component {
     render() {
-        return <h1>MAP</h1>;
+        return <div className="map">
+            <img className="map__interactive" src="/build/img/map.png" />
+        </div>;
     }
 }
 
