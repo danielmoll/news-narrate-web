@@ -18,12 +18,21 @@ class Scene extends React.Component {
     render() {
 
         var contentClassString = 'scene__content' + (this.state.expanded ? ' expanded' : ''),
-            h2ClassString = 'scene__title scene__title--type1',
+            h2ClassString = 'scene__title',
+            typeClassString = '',
+            typeIcon = '',
             expandableIcon = '',
             image = '',
             textParagraphs = [''],
             paragraphs = [],
             text = [];
+
+
+        if (this.props.data.type) {
+            h2ClassString += ' scene__title--with_icon';
+            typeClassString = 'scene__title-type scene__title-type--' + this.props.data.type;
+            typeIcon = <span className={ typeClassString }></span>;
+        }
 
         if (this.props.data.body) {
             textParagraphs = this.props.data.body.split('\n');
@@ -56,6 +65,7 @@ class Scene extends React.Component {
             <TimeTab data={this.props.data.time}/>
             <div className={ contentClassString }>
                 <h2 className={ h2ClassString } onClick={this.handleClick}>
+                    { typeIcon }
                     { expandableIcon }
                     {this.props.data.title}
                 </h2>

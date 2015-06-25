@@ -4,6 +4,12 @@ $darkBg: #262730;
 
 @import "fonts";
 
+@mixin spriteBg {
+    background-image: url('/build/img/sprite.png');
+    background-repeat: no-repeat;
+    background-size: 107px 329px;
+}
+
 .cf:before,
 .cf:after {
   content: " ";
@@ -38,9 +44,8 @@ body {
 
 #narrate-app {
   .icon {
-    background-image: url('/build/img/icons-left.png');
-    background-repeat: no-repeat;
-    background-size: 107px 329px;
+    @include spriteBg;
+
     display: block;
     height: 10px;
     width: 20px;
@@ -60,10 +65,9 @@ body {
     padding: 25px;
 
     a {
-      background-image: url('/build/img/icons-left.png');
+      @include spriteBg;
+
       background-position: 0 -8px;
-      background-repeat: no-repeat;
-      background-size: 107px 329px;
       display: block;
       height: 25px;
       width: 213px;
@@ -209,12 +213,32 @@ body {
       font-family: SkyTextMedium;
       font-size: 20px;
       padding: 10px 25px 11px;
+      position: relative;
 
       .icon {
         float: right;
         margin-top: 8px;
       }
     }
+
+    .scene__title--with_icon {
+      padding: 10px 25px 11px 50px;
+    }
+
+    .scene__title-type {
+      @include spriteBg;
+
+      display: block;
+      position: absolute;
+      height: 32px;
+      left: 10px;
+      top: 8px;
+      width: 32px;
+    }
+
+    .scene__title-type--icon1 { background-position: 0 -215px; }
+    .scene__title-type--icon2 { background-position: 0 -255px; }
+    .scene__title-type--icon3 { background-position: 0 -293px; }
 
     .scene__title.expandable {
       cursor: pointer;
@@ -258,12 +282,17 @@ body {
     }
 
     .scene__video-play {
-      border: 1px solid #333;
-      border-radius: 22px;
+      background: none;
+      border: none;
+      @include spriteBg;
+
+      background-position: 0 -90px;
+
       float: right;
-      height: 44px;
+      height: 32px;
+      margin-top: 10px;
       text-indent: -9999em;
-      width: 44px;
+      width: 32px;
     }
 
     .scene__video-title,
