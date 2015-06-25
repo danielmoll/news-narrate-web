@@ -16,7 +16,7 @@ class TimeTab extends React.Component {
             theDate = hours + '.' + minutes;
         }
 
-        return <div className="card__time">{theDate}</div>
+        return <div className="scene__time">{theDate}</div>
     }
 }
 

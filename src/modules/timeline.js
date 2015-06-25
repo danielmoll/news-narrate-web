@@ -13,17 +13,17 @@ class Scene extends React.Component {
         var image = '';
 
         if(this.props.data.image){
-            image = <div className="card__image"><img src={this.props.data.image} /></div>
+            image = <div className="scene__image"><img src={this.props.data.image} /></div>
         }
 
-        return <article className="cf card card--timeline">
+        return <article className="cf scene scene--timeline">
             <TimeTab data={this.props.data.time}/>
-            <div className="card__content">
-                <h2 className="card__title card__title--type1">
+            <div className="scene__content">
+                <h2 className="scene__title scene__title--type1">
                     {this.props.data.title}
                 </h2>
                 { image }
-                <p className="card_text">{this.props.data.body}</p>
+                <p className="scene_text">{this.props.data.body}</p>
             </div>
             <Videos></Videos>
         </article>
@@ -37,14 +37,14 @@ class Timeline extends React.Component {
     }
 
     render() {
-        var cards = _.map(this.state.scenes, function (scene) {
+        var scenes = _.map(this.state.scenes, function (scene) {
             return <Scene data={scene} key={scene.id}/>
         });
 
         return (
             <div>
                 <Hero></Hero>
-                <section className="cards">{cards}</section>
+                <section className="scenes">{scenes}</section>
             </div>
         )
     }
