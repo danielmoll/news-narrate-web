@@ -52,7 +52,6 @@ gulp.task('browser-sync', function() {
     });
 });
 
-
 gulp.task('test:local', function() {
     return gulp.src('test/*.js', {
         read: false
@@ -61,6 +60,11 @@ gulp.task('test:local', function() {
             browserName: 'chrome'
         }
     }));
+});
+
+gulp.task('copy', function(){
+    gulp.src('./src/img/**/*')
+        .pipe(gulp.dest('./build/img'));
 });
 
 gulp.task('sass', function () {
@@ -93,7 +97,7 @@ gulp.task('test:ie11', function() {
 gulp.task('compile', function() { return compile(); });
 gulp.task('watch', function() { return watch(); });
 
-gulp.task('build', ['sass', 'compile']);
+gulp.task('build', ['copy', 'sass', 'compile']);
 gulp.task('serve', serve('.'));
 
-gulp.task('default', ['sass:watch', 'watch', 'serve']);
+gulp.task('default', ['copy', 'sass:watch', 'watch', 'serve']);

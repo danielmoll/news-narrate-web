@@ -43,6 +43,9 @@ class Narrate extends React.Component {
 
         return (
             <div>
+                <div className="header">
+                    <a href="/">go to...</a>
+                </div>
                 <Menu data={this.state.route}></Menu>
                 <Content></Content>
             </div>
