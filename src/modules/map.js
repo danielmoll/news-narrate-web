@@ -1,9 +1,63 @@
 import React from 'react';
 
+import locations from '../data/locations';
+
 class Map extends React.Component {
+    constructor(props){
+        super(props);
+
+        this.render = this.render.bind(this);
+        this.setState = this.setState.bind(this);
+        this._handleResize = this._handleResize.bind(this);
+        this._handleClick = this._handleClick.bind(this);
+        this.state = {containerWidth: 0, selected: null};
+        this.locations = locations;
+    }
+
+    _handleResize(e) {
+        this.setState({containerWidth: this.refs.container.getDOMNode().offsetWidth});
+    }
+
+    _handleClick(name) {
+        var state = this.state;
+
+        if (state.selected === name) {
+            state.selected = null;
+        } else {
+            state.selected = name;
+        }
+
+        this.setState(state);
+    }
+
+    componentDidMount() {
+        window.addEventListener('resize', this._handleResize);
+        this._handleResize();
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this._handleResize);
+    }
+
     render() {
+        var markers = [],
+            style;
+
+        for (var i in locations) {
+            var loc = locations[i],
+                selected = this.state.selected === i,
+                classNames = 'map__marker' + (selected ? ' map__marker--selected' : '');
+
+            style = {
+                left: this.state.containerWidth / 2 + loc.coordinates[0] - (selected ? 10 : 0),
+                top: loc.coordinates[1] - (selected ? 10 : 0)
+            };
+
+            markers.push(<a className={ classNames } style={ style } onClick={ this._handleClick.bind(this, i) }></a>);
+        }
+
         return <div className="map">
-            <img className="map__interactive" src="/build/img/map.png" />
+            <div className="map__container" ref="container">{ markers }</div>
         </div>;
     }
 }
