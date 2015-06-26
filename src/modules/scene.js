@@ -24,6 +24,7 @@ class Scene extends React.Component {
             typeIcon = '',
             expandableIcon = '',
             imageUrl = (this.props.data.image) ? this.props.data.image : '',
+            imageOutput = '',
             textParagraphs = [''],
             paragraphs = [],
             text = [];
@@ -58,6 +59,10 @@ class Scene extends React.Component {
             }
         }
 
+        if (imageUrl) {
+            imageOutput = <Image data={imageUrl} classNames="scene__image" />;
+        }
+
         return <article className="cf scene scene--timeline">
             <TimeTab data={this.props.data.time}/>
             <div className={ contentClassString }>
@@ -66,7 +71,7 @@ class Scene extends React.Component {
                     { expandableIcon }
                     {this.props.data.title}
                 </h2>
-                <Image data={imageUrl} classNames="scene__image" />
+                { imageOutput }
                 { text }
             </div>
             <Videos data={ {videos: this.props.data.videos} }></Videos>
