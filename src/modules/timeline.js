@@ -15,8 +15,10 @@ class Timeline extends React.Component {
     }
 
     render() {
-        var scenes = _.map(this.state.scenes, function (scene) {
-            return <Scene data={scene} key={scene.id}/>
+        var scenes = [];
+
+        _.forEach(this.state.scenes, function (scene, id) {
+            scenes.push(<Scene data={scene} key={id}/>);
         });
 
         return (

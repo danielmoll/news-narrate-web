@@ -56,8 +56,8 @@ class Map extends React.Component {
                 classNames = 'map__marker' + (selected ? ' map__marker--selected' : '');
 
             style = {
-                left: state.containerWidth / 2 + loc.coordinates[0] - (selected ? 10 : 0),
-                top: loc.coordinates[1] - (selected ? 10 : 0)
+                left: state.containerWidth / 2 + loc.coordinates.x - (selected ? 10 : 0),
+                top: loc.coordinates.y - (selected ? 10 : 0)
             };
 
             markers.push(<a className={ classNames } style={ style } onClick={ this._handleClick.bind(this, i) }></a>);
@@ -67,7 +67,7 @@ class Map extends React.Component {
 
             for (var i in scenes) {
 
-                if (scenes[i].id === locations[state.selected].scene) {
+                if (i === locations[state.selected].scene) {
                     sceneData = scenes[i];
 
                     break;

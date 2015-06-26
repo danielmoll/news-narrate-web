@@ -10,8 +10,10 @@ class Interviews extends React.Component {
     }
 
     render() {
-        var interviews = _.map(this.state.interviews, function (interview) {
-            return <Interview data={interview} key={interview.id}/>
+        var interviews = [];
+
+        _.forEach(this.state.interviews, function (interview, id) {
+            interviews.push(<Interview data={interview} key={id}/>);
         });
 
         return (
