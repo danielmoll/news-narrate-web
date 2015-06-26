@@ -15,19 +15,19 @@ var locations = {
         coordinates: [10,200],
         locationName: "Bank",
         locationImg: "http://www.travelstay.com/images/1447707/1/Bank_Tube_Station.jpg",
-        scene: 2
+        scene: 3
     },
     'loc4': {
         coordinates: [8,250],
         locationName: "Bank",
         locationImg: "http://www.travelstay.com/images/1447707/1/Bank_Tube_Station.jpg",
-        scene: 2
+        scene: 4
     },
     'loc5': {
         coordinates: [100,180],
         locationName: "Bank",
         locationImg: "http://www.travelstay.com/images/1447707/1/Bank_Tube_Station.jpg",
-        scene: 2
+        scene: 5
     }
 };
 

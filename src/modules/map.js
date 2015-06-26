@@ -1,6 +1,10 @@
 import React from 'react';
+import _ from 'lodash';
+
+import Scene from './scene';
 
 import locations from '../data/locations';
+import scenes from '../data/scenes';
 
 class Map extends React.Component {
     constructor(props){
@@ -41,23 +45,43 @@ class Map extends React.Component {
 
     render() {
         var markers = [],
-            style;
+            scene = '',
+            sceneData,
+            style,
+            state = this.state;
 
         for (var i in locations) {
             var loc = locations[i],
-                selected = this.state.selected === i,
+                selected = state.selected === i,
                 classNames = 'map__marker' + (selected ? ' map__marker--selected' : '');
 
             style = {
-                left: this.state.containerWidth / 2 + loc.coordinates[0] - (selected ? 10 : 0),
+                left: state.containerWidth / 2 + loc.coordinates[0] - (selected ? 10 : 0),
                 top: loc.coordinates[1] - (selected ? 10 : 0)
             };
 
             markers.push(<a className={ classNames } style={ style } onClick={ this._handleClick.bind(this, i) }></a>);
         }
 
+        if (state.selected !== null) {
+
+            for (var i in scenes) {
+
+                if (scenes[i].id === locations[state.selected].scene) {
+                    sceneData = scenes[i];
+
+                    break;
+                }
+            }
+
+            if (sceneData) {
+                scene = <Scene data={sceneData} key={sceneData.id}/>
+            }
+        }
+
         return <div className="map">
             <div className="map__container" ref="container">{ markers }</div>
+            { scene }
         </div>;
     }
 }
