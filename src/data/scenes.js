@@ -6,7 +6,8 @@ var scenes = [
         body: "A small, light blue Nissan Micra is caught on CCTV winding through the residential streets of Leeds towards the M1.\nInside are Mohammad Sidique Khan (30), Shehzad Tanweer (22) and Hasib Hussain (18), all British nationals of Pakistani origin. Resting in the boot are four large rucksacks filled with home-made explosives.",
         image: "http://www.londonbusmuseum.com/wp-content/uploads/2012/01/SG00b.jpg",
         videos: ['video1', 'video2'],
-        time: "2005-07-07T03:58:00Z"
+        time: "2005-07-07T03:58:00Z",
+        locationId: ['loc1'],
     },
     {
         id: 2,
