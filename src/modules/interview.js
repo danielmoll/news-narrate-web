@@ -19,22 +19,36 @@ class Interview extends React.Component {
             image,
             text = this.props.data.body,
             name = this.props.data.name,
-            location = locations[this.props.data.location].locationName;
+            location = locations[this.props.data.location].locationName,
+            iconState = (this.state.expanded) ? 'icon icon--collapse' : 'icon icon--expand',
+            videos;
 
         if (imageUrl) {
             image = <Image data={imageUrl} classNames="interview__interviewee" />
         }
 
+        if (this.state.expanded) {
+            videos = <Videos data={ {videos: this.props.data.videos} }></Videos>
+        }
+
         return  <article className="interview">
+                    <div className="interview__button" onClick={this.handleClick}>
+                        <span className={iconState}></span>
+                    </div>
+
                     {image}
 
                     <div className="interview__body">
-                        <blockquote className="interview__text">{text}</blockquote>
+                        <blockquote className="interview__text">
+                            <span className="icon icon--quote icon--quote-left"></span>
+                            {text}
+                            <span className="icon icon--quote icon--quote-right"></span>
+                        </blockquote>
                         <div className="interview__name">{name}</div>
                         <div className="interview__location">{location}</div>
                     </div>
 
-                    <div className="interview__button"></div>
+                    {videos}
                 </article>
     }
 }

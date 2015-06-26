@@ -1,13 +1,13 @@
-.interviews {
-
-}
-
 .interview {
+	background: white;
 	overflow: hidden;
+	margin-bottom: 20px;
+	padding: 15px;
 }
 
 .interview__body {
-
+	float: left;
+	width: calc(100% - 130px);
 }
 
 .interview__interviewee {
@@ -21,7 +21,7 @@
 }
 
 .interview__text {
-
+	margin-bottom: 20px;
 }
 
 .interview__name,
@@ -31,4 +31,20 @@
 
 .interview__videos {
 
+}
+
+.interview__button {
+	float: right;
+	height: 10px;
+	width: 20px;
+}
+
+.interviews {
+	.interview:first-child {
+		margin-top: 20px;
+	}
+
+	.interview:last-child {
+		margin-bottom: 20px;
+	}
 }
