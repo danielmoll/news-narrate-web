@@ -16,16 +16,16 @@ class Videos extends React.Component {
 
                 if(video) {
                     sceneVideo.push(<img src={ video.thumbnail } />);
-                    sceneVideo.push(<button className="scene__video-play">play</button>);
-                    sceneVideo.push(<span className="scene__video-title">{ video.title }</span>);
-                    sceneVideo.push(<span className="scene__video-author">{ video.author }</span>);
+                    sceneVideo.push(<button className="video-play">play</button>);
+                    sceneVideo.push(<span className="video-title">{ video.title }</span>);
+                    sceneVideo.push(<span className="video-author">{ video.author }</span>);
 
-                    scenes.push(<div className="cf scene__video">{ sceneVideo }</div>);
+                    scenes.push(<div className="cf video">{ sceneVideo }</div>);
                 }
             }
         }
 
-        return <div className="scene__videos">{ scenes }</div>
+        return <div className="videos">{ scenes }</div>
     }
 }
 

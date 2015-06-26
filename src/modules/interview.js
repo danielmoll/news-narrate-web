@@ -47,8 +47,9 @@ class Interview extends React.Component {
                         <div className="interview__name">{name}</div>
                         <div className="interview__location">{location}</div>
                     </div>
-
-                    {videos}
+                    <div className="interview__videos">
+                        {videos}
+                    </div>
                 </article>
     }
 }

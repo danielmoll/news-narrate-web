@@ -1,0 +1,44 @@
+.videos {
+  margin-left: 45px;
+  text-align: center;
+
+  img {
+    border-radius: 25px;
+    float: left;
+    margin-right: 15px;
+    width: 50px;
+  }
+}
+
+.video {
+  margin: 0 auto;
+  margin-top: 20px;
+  text-align: left;
+  width: 80%;
+}
+
+.video-play {
+  background: none;
+  border: none;
+  @include spriteBg;
+
+  background-position: 0 -90px;
+
+  float: right;
+  height: 32px;
+  margin-top: 10px;
+  text-indent: -9999em;
+  width: 32px;
+}
+
+.video-title,
+.video-author {
+  display: block;
+  margin-left: 65px;
+  width: 50%;
+}
+
+.video-author {
+  color: $textgrey;
+  padding-top: 5px;
+}

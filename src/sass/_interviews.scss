@@ -39,6 +39,16 @@
 	width: 20px;
 }
 
+.interview__videos {
+	float: left;
+	width: 100%;
+	margin-top: 20px;
+
+	&:empty {
+		margin: 0;
+	}
+}
+
 .interviews {
 	.interview:first-child {
 		margin-top: 20px;
