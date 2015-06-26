@@ -24,9 +24,10 @@ class Narrate extends React.Component {
 
     render() {
 
-        var Content;
+        var Content,
+            route = this.state.route || '/timeline';
 
-        switch(this.state.route) {
+        switch(route) {
             case '/interviews':
                 Content = Interviews;
                 break;
@@ -46,7 +47,7 @@ class Narrate extends React.Component {
                 <div className="header">
                     <a href="/">go to...</a>
                 </div>
-                <Menu data={this.state.route}></Menu>
+                <Menu data={ route }></Menu>
                 <Content></Content>
             </div>
         )
