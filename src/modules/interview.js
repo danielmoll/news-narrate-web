@@ -1,6 +1,7 @@
 import React from 'react';
 import Videos from './videos';
 import Image from './image';
+import locations from '../data/locations';
 
 class Interview extends React.Component {
     constructor() {
@@ -14,16 +15,23 @@ class Interview extends React.Component {
     }
 
     render() {
-        var imageUrl = (this.props.data.thumbnail) ? this.props.data.thumbnail : '',
+        var imageUrl = (this.props.data.thumbnail) ? this.props.data.thumbnail : false,
+            image,
             text = this.props.data.body,
-            name = this.props.data.name;
+            name = this.props.data.name,
+            location = locations[this.props.data.location].locationName;
+
+        if (imageUrl) {
+            image = <Image data={imageUrl} classNames="interview__interviewee" />
+        }
 
         return  <article className="interview">
-                    <Image data={imageUrl} classNames="interview__interviewee" />
-                    
+                    {image}
+
                     <div className="interview__body">
                         <blockquote className="interview__text">{text}</blockquote>
                         <div className="interview__name">{name}</div>
+                        <div className="interview__location">{location}</div>
                     </div>
 
                     <div className="interview__button"></div>
