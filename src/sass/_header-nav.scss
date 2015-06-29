@@ -20,17 +20,20 @@ nav.header-nav {
     font-size: 14px;
     padding: 12px 0;
     text-decoration: none;
-    width: calc(100% / 3 );
+    width: 33.3333333333%;
+    width: calc(( 100% / 3 ) + 1 );
   }
+
 
   a:first-child {
     border-left: none;
   }
 
-  a:first-child,
   a:last-child {
-    width: calc(( 100% / 3 ) + 1 );
+    width: 33.3333333333%;
+    width: calc(( 100% / 3 ) + 2 );
   }
+
 
   a:hover,
   a.selected {
