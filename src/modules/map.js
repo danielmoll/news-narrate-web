@@ -3,10 +3,8 @@ import _ from 'lodash';
 
 import Scene from './scene';
 
-import locations from '../data/locations';
-import scenes from '../data/scenes';
-
 class Map extends React.Component {
+
     constructor(props){
         super(props);
 
@@ -15,7 +13,6 @@ class Map extends React.Component {
         this._handleResize = this._handleResize.bind(this);
         this._handleClick = this._handleClick.bind(this);
         this.state = {containerWidth: 0, selected: null};
-        this.locations = locations;
     }
 
     _handleResize(e) {
@@ -44,7 +41,10 @@ class Map extends React.Component {
     }
 
     render() {
-        var markers = [],
+
+        var locations = (this.props.data && this.props.data.locations) || [],
+            scenes =  (this.props.data && this.props.data.scenes) || [],
+            markers = [],
             scene = '',
             sceneData,
             style,

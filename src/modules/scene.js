@@ -23,21 +23,21 @@ class Scene extends React.Component {
             typeClassString = '',
             typeIcon = '',
             expandableIcon = '',
-            imageUrl = (this.props.data.image) ? this.props.data.image : '',
+            imageUrl = (this.props.data.scene.image) ? this.props.data.scene.image : '',
             imageOutput = '',
             textParagraphs = [''],
             paragraphs = [],
             text = [];
 
 
-        if (this.props.data.type) {
+        if (this.props.data.scene.type) {
             h2ClassString += ' scene__title--with_icon';
-            typeClassString = 'scene__title-type scene__title-type--' + this.props.data.type;
+            typeClassString = 'scene__title-type scene__title-type--' + this.props.data.scene.type;
             typeIcon = <span className={ typeClassString }></span>;
         }
 
-        if (this.props.data.body) {
-            textParagraphs = this.props.data.body.split('\n');
+        if (this.props.data.scene.body) {
+            textParagraphs = this.props.data.scene.body.split('\n');
             text.push(<div className="scene_text scene_excerpt"><p>{ textParagraphs.shift() }</p></div>);
 
             if (textParagraphs.length) {
@@ -64,17 +64,17 @@ class Scene extends React.Component {
         }
 
         return <article className="cf scene scene--timeline">
-            <TimeTab data={this.props.data.time}/>
+            <TimeTab data={this.props.data.scene.time}/>
             <div className={ contentClassString }>
                 <h2 className={ h2ClassString } onClick={this.handleClick}>
                     { typeIcon }
                     { expandableIcon }
-                    {this.props.data.title}
+                    {this.props.data.scene.title}
                 </h2>
                 { imageOutput }
                 { text }
             </div>
-            <Videos data={ {videos: this.props.data.videos} }></Videos>
+            <Videos data={ {ids: this.props.data.scene.videos, videos: this.props.data.globalData.videos } }></Videos>
         </article>
     }
 }

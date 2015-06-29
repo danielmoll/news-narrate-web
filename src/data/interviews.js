@@ -18,21 +18,21 @@ var interviews = {
         name: 'Thelma Stober',
         body: "I felt as if I was lifted up and circling round.Part of my body was underneath the train, I could see the platform and sign. Part of the door was stuck to my thigh.\nThe aim of the people behind what happened was to destroy us, and they did that to the people who lost their lives. I wanted to prove that no, you've changed my life but you’re not going to stop me.",
         videos: ['video1'],
-        location: 'aldgate'
+        location: 'kingscross'
     },
     '4': {
         thumbnail: 'http://static.tumblr.com/b04fe0aa57392b1f0b8d9ded8c6c1020/0ye6w9h/Gyjmo6use/tumblr_static_tumblr_lr0zitb5pj1qa17c7o1_500.jpg',
         name: 'John Tullock',
         body: "You think something’s happened to you but then I rolled over and saw these two women who were in a shocking state. Then I realised this was up to me alone.",
         videos: ['video2'],
-        location: 'bank'
+        location: 'edgeware'
     },
     '5': {
         thumbnail: 'http://static.tumblr.com/b04fe0aa57392b1f0b8d9ded8c6c1020/0ye6w9h/Gyjmo6use/tumblr_static_tumblr_lr0zitb5pj1qa17c7o1_500.jpg',
         name: 'George Psaradakis (Driver)',
         body: "I saw so many massacred bodied on the road, then I realised it was a terrorist attack. I kept saying 'Lord have mercy, lord have mercy.'",
         videos: ['video1'],
-        location: 'aldgate'
+        location: 'thames'
     },
     '6': {
         thumbnail: 'http://static.tumblr.com/b04fe0aa57392b1f0b8d9ded8c6c1020/0ye6w9h/Gyjmo6use/tumblr_static_tumblr_lr0zitb5pj1qa17c7o1_500.jpg',

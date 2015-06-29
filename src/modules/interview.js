@@ -1,7 +1,6 @@
 import React from 'react';
 import Videos from './videos';
 import Image from './image';
-import locations from '../data/locations';
 
 class Interview extends React.Component {
     constructor() {
@@ -15,11 +14,12 @@ class Interview extends React.Component {
     }
 
     render() {
-        var imageUrl = (this.props.data.thumbnail) ? this.props.data.thumbnail : false,
+        var interviewData = this.props.data.interview,
+            imageUrl = (interviewData.thumbnail) ? interviewData.thumbnail : false,
             image,
-            text = this.props.data.body,
-            name = this.props.data.name,
-            location = locations[this.props.data.location].locationName,
+            text = interviewData.body,
+            name = interviewData.name,
+            location = this.props.data.globalData.locations[interviewData.location].locationName,
             iconState = (this.state.expanded) ? 'icon icon--collapse' : 'icon icon--expand',
             videos;
 
@@ -28,7 +28,7 @@ class Interview extends React.Component {
         }
 
         if (this.state.expanded) {
-            videos = <Videos data={ {videos: this.props.data.videos} }></Videos>
+            videos = <Videos data={ {ids: interviewData.videos, videos: this.props.data.globalData.videos} }></Videos>
         }
 
         return  <article className="interview">

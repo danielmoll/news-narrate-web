@@ -1,24 +1,22 @@
 import React from 'react';
 
-import videosData from '../data/videos';
-
 class Videos extends React.Component {
     render () {
-        var videos = this.props.data.videos,
+
+        var videoIds = this.props.data.ids,
             scenes = [];
 
-        if(videos) {
-            for (var idx in videos) {
+        if(videoIds) {
+            for (var id in videoIds) {
 
-                var videoId = videos[idx],
-                    video = videosData[videoId],
+                var videoId = videoIds[id],
+                    video = this.props.data.videos[videoId],
                     sceneVideo = [];
 
                 if(video) {
                     sceneVideo.push(<img src={ video.thumbnail } />);
                     sceneVideo.push(<button className="video-play">play</button>);
                     sceneVideo.push(<span className="video-title">{ video.title }</span>);
-                    sceneVideo.push(<span className="video-author">{ video.author }</span>);
 
                     scenes.push(<div className="cf video">{ sceneVideo }</div>);
                 }
