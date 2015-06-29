@@ -6,7 +6,7 @@ var locations = {
         },
         locationName: "Aldgate",
         locationImg: "http://media-cdn.tripadvisor.com/media/photo-s/06/fb/e3/de/meet-aldgate-tube-station.jpg",
-        scene: '11'
+        scene: '-Jsk2WNr8VajG8wWBUHo'
     },
     'bank': {
         coordinates: {
@@ -15,7 +15,7 @@ var locations = {
         },
         locationName: "Bank",
         locationImg: "http://www.travelstay.com/images/1447707/1/Bank_Tube_Station.jpg",
-        scene: '22'
+        scene: '-Jsk3ajX7ZbwvDro9iah'
     },
     'loc3': {
         coordinates: {
@@ -24,7 +24,7 @@ var locations = {
         },
         locationName: "Bank",
         locationImg: "http://www.travelstay.com/images/1447707/1/Bank_Tube_Station.jpg",
-        scene: '33'
+        scene: '-Jsk5TLY5NNupAmqU2nv'
     },
     'loc4': {
         coordinates: {
@@ -33,7 +33,7 @@ var locations = {
         },
         locationName: "Bank",
         locationImg: "http://www.travelstay.com/images/1447707/1/Bank_Tube_Station.jpg",
-        scene: '44'
+        scene: '-Jsk5UjHsz1Ei3gMySsY'
     },
     'loc5': {
         coordinates: {
@@ -42,7 +42,7 @@ var locations = {
         },
         locationName: "Bank",
         locationImg: "http://www.travelstay.com/images/1447707/1/Bank_Tube_Station.jpg",
-        scene: '55'
+        scene: '-Jsk5VS0M1fYTtiquXQ4'
     }
 };
 
