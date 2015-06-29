@@ -60,7 +60,7 @@ class Map extends React.Component {
                 top: loc.coordinates.y - (selected ? 10 : 0)
             };
 
-            markers.push(<a className={ classNames } style={ style } onClick={ this._handleClick.bind(this, i) }></a>);
+            markers.push(<a className={ classNames } style={ style } onClick={ this._handleClick.bind(this, i) }  key={ 'marker' + i }></a>);
         }
 
         if (state.selected !== null) {
