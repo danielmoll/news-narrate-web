@@ -75,7 +75,7 @@ class Map extends React.Component {
             }
 
             if (sceneData) {
-                scene = <Scene data={sceneData} key={sceneData.id}/>
+                scene = <Scene data={ {scene: sceneData, globalData: this.props.data} } key={sceneData.id}/>
             }
         }
 
