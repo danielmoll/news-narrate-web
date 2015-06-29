@@ -10,7 +10,9 @@ import Timeline from './modules/timeline'
 class Narrate extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {route: window.location.hash.substr(1)}
+        this.state = {
+            route: window.location.hash.substr(1)
+        };
     }
 
     componentDidMount() {
@@ -19,45 +21,54 @@ class Narrate extends React.Component {
                 route: window.location.hash.substr(1)
             });
         });
+    }
 
+    getTemplate(route) {
+        var view = {};
+
+        switch(true) {
+            case /\/timeline/.test(route):
+                view.module = Timeline;
+                break;
+            case /\/map/.test(route):
+                view.module = Map;
+                break;
+            case /\/interviews\/\d+/.test(route):
+                view.module = Interviews;
+                view.id = route.match(/\d+/)[0];
+                break;
+            case /\/interviews/.test(route):
+                view.module = Interviews;
+                break;
+            default:
+                view.module = Timeline;
+        }
+
+        return view;
     }
 
     render() {
-
-        var Content,
-            route = this.state.route || '/timeline';
-
-        switch(route) {
-            case '/interviews':
-                Content = Interviews;
-                break;
-            case '/map':
-                Content = Map;
-                break;
-            case '/timeline':
-                Content = Timeline;
-                break;
-            default:
-                Content = Timeline;
-        }
-
+        var route = this.state.route || '/timeline',
+            template = this.getTemplate(route),
+            Content = template.module,
+            id = template.id || 'all';
 
         return (
             <div>
                 <div className="header">
                     <a href="/">go to...</a>
                 </div>
+
                 <Menu data={ route }></Menu>
-                <Content></Content>
+
+                <Content data={ id }></Content>
             </div>
         )
     }
 
 }
 
+var mountNode = document.getElementById('narrate-app');
 
-var mountNode = document.getElementById('narrate-app')
-React.render(
-    <Narrate/>
-    , mountNode);
+React.render(<Narrate/>, mountNode);
 

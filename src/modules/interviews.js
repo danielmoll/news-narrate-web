@@ -6,15 +6,21 @@ import _ from 'lodash';
 class Interviews extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {interviews: interviews};
+        this.state = { interviews: interviews };
     }
 
     render() {
-        var interviews = [];
+        var interviews = [],
+            id = this.props.data,
+            data = this.state.interviews;
 
-        _.forEach(this.state.interviews, function (interview, id) {
-            interviews.push(<Interview data={interview} key={id}/>);
-        });
+        if (id !== 'all' && data[id]) {
+            interviews.push(<Interview data={data[id]} key={id} />)
+        } else {
+            _.forEach(data, function (interview, key) {
+                interviews.push(<Interview data={interview} key={interview.key} />);
+            });            
+        }
 
         return (
             <div>

@@ -24,6 +24,7 @@
     "gulp-serve": "^1.0.0",
     "gulp-sourcemaps": "^1.5.2",
     "gulp-webdriver": "^0.1.1",
+    "react-async": "^2.1.0",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.2.2",
@@ -33,7 +34,6 @@
     "browser-sync": "^2.7.12",
     "lodash": "^3.9.3",
     "react": "^0.13.3",
-    "react-router": "^0.13.3",
     "react-sticky": "^2.3.0"
   }
 }
