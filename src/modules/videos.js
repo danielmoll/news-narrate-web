@@ -9,8 +9,7 @@ class Videos extends React.Component {
         if(videoIds) {
             for (var id in videoIds) {
 
-                var videoId = videoIds[id],
-                    video = this.props.data.videos[videoId],
+                var video = this.props.data.videos[id],
                     sceneVideo = [];
 
                 if(video) {

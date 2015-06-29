@@ -30,14 +30,19 @@ var scenes = {
         "title": "The bombers set off",
         "type": 'icon1',
         "image": "http://www.londonbusmuseum.com/wp-content/uploads/2012/01/SG00b.jpg",
-        "videos": ['video1', 'video2']
+        "videos": {
+            'video1': true,
+            'video2': true
+        }
     },
     "-Jsk2WNr8VajG8wWBUHo": {
         "body": "The rented Micra heads south on the M1, stopping to fill up at a petrol station.",
         "time": "2005-07-07T03:54:00.000Z",
         "title": "Service stop ",
         "type": 'icon2',
-        "videos": ['video2']
+        "videos": {
+            'video2': true
+        }
     },
     "-Jsk3_4m6Xz4Q1cd47df": {
         "body": "A red Fiat Brava pulls into Luton station car park. \n\nIts driver Germaine Lindsay (19), a Jamaican-born convert to Islam, is the fourth member of the group. Hours earlier he had left his young, pregnant wife at home. He enters the station to check the departure board. His fellow bombers have yet to arrive. ",
