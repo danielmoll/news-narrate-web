@@ -26,7 +26,7 @@ class Timeline extends React.Component {
                 <Hero></Hero>
                 <section className="scenes">{scenes}</section>
             </div>
-        )
+        );
     }
 }
 

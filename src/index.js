@@ -100,7 +100,7 @@ class Narrate extends React.Component {
                 <Menu data={ route }></Menu>
                 <Content data={ this.state.data }></Content>
             </div>
-        )
+        );
     }
 
 }

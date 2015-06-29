@@ -64,19 +64,21 @@ class Scene extends React.Component {
             imageOutput = <Image data={imageUrl} classNames="scene__image" />;
         }
 
-        return <article className="cf scene scene--timeline">
-            <TimeTab data={sceneData.time}/>
-            <div className={ contentClassString }>
-                <h2 className={ h2ClassString } onClick={this.handleClick}>
-                    { typeIcon }
-                    { expandableIcon }
-                    {sceneData.title}
-                </h2>
-                { imageOutput }
-                { text }
-            </div>
-            <Videos data={ {ids: sceneData.videos, videos: this.props.data.globalData.videos } }></Videos>
-        </article>
+        return (
+            <article className="cf scene scene--timeline">
+                <TimeTab data={sceneData.time}/>
+                <div className={ contentClassString }>
+                    <h2 className={ h2ClassString } onClick={this.handleClick}>
+                        { typeIcon }
+                        { expandableIcon }
+                        {sceneData.title}
+                    </h2>
+                    { imageOutput }
+                    { text }
+                </div>
+                <Videos data={ {ids: sceneData.videos, videos: this.props.data.globalData.videos } }></Videos>
+            </article>
+        );
     }
 }
 

@@ -31,26 +31,28 @@ class Interview extends React.Component {
             videos = <Videos data={ {ids: interviewData.videos, videos: this.props.data.globalData.videos} }></Videos>
         }
 
-        return  <article className="interview">
-                    <div className="interview__button" onClick={this.handleClick}>
-                        <span className={iconState}></span>
-                    </div>
+        return  (
+            <article className="interview">
+                <div className="interview__button" onClick={this.handleClick}>
+                    <span className={iconState}></span>
+                </div>
 
-                    {image}
+                {image}
 
-                    <div className="interview__body">
-                        <blockquote className="interview__text">
-                            <span className="icon icon--quote icon--quote-left"></span>
-                            {text}
-                            <span className="icon icon--quote icon--quote-right"></span>
-                        </blockquote>
-                        <div className="interview__name">{name}</div>
-                        <div className="interview__location">{location}</div>
-                    </div>
-                    <div className="interview__videos">
-                        {videos}
-                    </div>
-                </article>
+                <div className="interview__body">
+                    <blockquote className="interview__text">
+                        <span className="icon icon--quote icon--quote-left"></span>
+                        {text}
+                        <span className="icon icon--quote icon--quote-right"></span>
+                    </blockquote>
+                    <div className="interview__name">{name}</div>
+                    <div className="interview__location">{location}</div>
+                </div>
+                <div className="interview__videos">
+                    {videos}
+                </div>
+            </article>
+            );
     }
 }
 

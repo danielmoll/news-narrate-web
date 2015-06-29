@@ -23,7 +23,7 @@ class Videos extends React.Component {
             }
         }
 
-        return <div className="videos">{ scenes }</div>
+        return ( <div className="videos">{ scenes }</div> );
     }
 }
 

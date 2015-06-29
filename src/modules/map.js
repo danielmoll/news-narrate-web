@@ -79,10 +79,12 @@ class Map extends React.Component {
             }
         }
 
-        return <div className="map">
-            <div className="map__container" ref="container">{ markers }</div>
-            { scene }
-        </div>;
+        return (
+            <div className="map">
+                <div className="map__container" ref="container">{ markers }</div>
+                { scene }
+            </div>
+        );
     }
 }
 
