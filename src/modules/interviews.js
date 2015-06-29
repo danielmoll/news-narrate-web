@@ -1,25 +1,24 @@
 import React from 'react';
 import Interview from './interview';
-import interviews from '../data/interviews';
 import _ from 'lodash';
 
 class Interviews extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { interviews: interviews };
+        this.state = { interviews: [] };
     }
 
     render() {
-        var interviews = [],
-            id = this.props.data,
-            data = this.state.interviews;
+        var propInterviews = (this.props.data && this.props.data.interviews) || [],
+            interviews = [],
+            id = this.props.id;
 
-        if (id !== 'all' && data[id]) {
-            interviews.push(<Interview data={data[id]} key={id} />)
+        if (id !== 'all' && propInterviews[id]) {
+            interviews.push(<Interview data={ {interview: propInterviews[id], globalData: this.props.data} } key={id} />)
         } else {
-            _.forEach(data, function (interview, key) {
-                interviews.push(<Interview data={interview} key={interview.key} />);
-            });            
+            _.forEach(propInterviews, function (interview, key) {
+                interviews.push(<Interview data={ {interview: interview, globalData: this.props.data} } key={ interview.id }/>);
+            }.bind(this));
         }
 
         return (

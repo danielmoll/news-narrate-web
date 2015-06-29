@@ -59,3 +59,15 @@ section.hero {
     margin-bottom: 25px;
     padding: 7px 8px 0;
 }
+
+@media screen and (max-device-width: 800px) {
+    section.hero {
+        background-color: #000;
+        background-image: url('/build/img/heroBg.jpg');
+        background-size: cover;
+    }
+
+    .hero__video {
+        display: none;
+    }
+}

@@ -6,19 +6,19 @@ import TimeTab from './time_tab';
 import Videos from './videos';
 import Scene from './scene';
 
-import scenes from '../data/scenes';
-
 class Timeline extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {scenes: scenes};
+        this.state = {scenes: []};
     }
 
     render() {
-        var scenes = [];
+        var propScenes = (this.props.data && this.props.data.scenes) || [],
+            scenes = [],
+            that = this;
 
-        _.forEach(this.state.scenes, function (scene, id) {
-            scenes.push(<Scene data={scene} key={id}/>);
+        _.forEach(propScenes, function (scene, id) {
+            scenes.push(<Scene data={ { scene: scene, globalData: that.props.data } } key={id}/>);
         });
 
         return (
@@ -26,7 +26,7 @@ class Timeline extends React.Component {
                 <Hero></Hero>
                 <section className="scenes">{scenes}</section>
             </div>
-        )
+        );
     }
 }
 

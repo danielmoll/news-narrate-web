@@ -1,7 +1,6 @@
 import React from 'react';
 import Videos from './videos';
 import Image from './image';
-import locations from '../data/locations';
 
 class Interview extends React.Component {
     constructor() {
@@ -15,11 +14,12 @@ class Interview extends React.Component {
     }
 
     render() {
-        var imageUrl = (this.props.data.thumbnail) ? this.props.data.thumbnail : false,
+        var interviewData = this.props.data.interview,
+            imageUrl = (interviewData.thumbnail) ? interviewData.thumbnail : false,
             image,
-            text = this.props.data.body,
-            name = this.props.data.name,
-            location = locations[this.props.data.location].locationName,
+            text = interviewData.body,
+            name = interviewData.name,
+            location = this.props.data.globalData.locations[interviewData.location].locationName,
             iconState = (this.state.expanded) ? 'icon icon--collapse' : 'icon icon--expand',
             videos;
 
@@ -28,29 +28,31 @@ class Interview extends React.Component {
         }
 
         if (this.state.expanded) {
-            videos = <Videos data={ {videos: this.props.data.videos} }></Videos>
+            videos = <Videos data={ {ids: interviewData.videos, videos: this.props.data.globalData.videos} }></Videos>
         }
 
-        return  <article className="interview">
-                    <div className="interview__button" onClick={this.handleClick}>
-                        <span className={iconState}></span>
-                    </div>
+        return  (
+            <article className="interview">
+                <div className="interview__button" onClick={this.handleClick}>
+                    <span className={iconState}></span>
+                </div>
 
-                    {image}
+                {image}
 
-                    <div className="interview__body">
-                        <blockquote className="interview__text">
-                            <span className="icon icon--quote icon--quote-left"></span>
-                            {text}
-                            <span className="icon icon--quote icon--quote-right"></span>
-                        </blockquote>
-                        <div className="interview__name">{name}</div>
-                        <div className="interview__location">{location}</div>
-                    </div>
-                    <div className="interview__videos">
-                        {videos}
-                    </div>
-                </article>
+                <div className="interview__body">
+                    <blockquote className="interview__text">
+                        <span className="icon icon--quote icon--quote-left"></span>
+                        {text}
+                        <span className="icon icon--quote icon--quote-right"></span>
+                    </blockquote>
+                    <div className="interview__name">{name}</div>
+                    <div className="interview__location">{location}</div>
+                </div>
+                <div className="interview__videos">
+                    {videos}
+                </div>
+            </article>
+            );
     }
 }
 

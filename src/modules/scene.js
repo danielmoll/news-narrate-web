@@ -18,26 +18,27 @@ class Scene extends React.Component {
 
     render() {
 
-        var contentClassString = 'scene__content' + (this.state.expanded ? ' expanded' : ''),
+        var sceneData = (this.props.data && this.props.data.scene) || {},
+            contentClassString = 'scene__content' + (this.state.expanded ? ' expanded' : ''),
             h2ClassString = 'scene__title',
             typeClassString = '',
             typeIcon = '',
             expandableIcon = '',
-            imageUrl = (this.props.data.image) ? this.props.data.image : '',
+            imageUrl = (sceneData.image) ? sceneData.image : '',
             imageOutput = '',
             textParagraphs = [''],
             paragraphs = [],
             text = [];
 
 
-        if (this.props.data.type) {
+        if (sceneData.type) {
             h2ClassString += ' scene__title--with_icon';
-            typeClassString = 'scene__title-type scene__title-type--' + this.props.data.type;
+            typeClassString = 'scene__title-type scene__title-type--' + sceneData.type;
             typeIcon = <span className={ typeClassString }></span>;
         }
 
-        if (this.props.data.body) {
-            textParagraphs = this.props.data.body.split('\n');
+        if (sceneData.body) {
+            textParagraphs = sceneData.body.split('\n');
             text.push(<div className="scene_text scene_excerpt"><p>{ textParagraphs.shift() }</p></div>);
 
             if (textParagraphs.length) {
@@ -63,19 +64,21 @@ class Scene extends React.Component {
             imageOutput = <Image data={imageUrl} classNames="scene__image" />;
         }
 
-        return <article className="cf scene scene--timeline">
-            <TimeTab data={this.props.data.time}/>
-            <div className={ contentClassString }>
-                <h2 className={ h2ClassString } onClick={this.handleClick}>
-                    { typeIcon }
-                    { expandableIcon }
-                    {this.props.data.title}
-                </h2>
-                { imageOutput }
-                { text }
-            </div>
-            <Videos data={ {videos: this.props.data.videos} }></Videos>
-        </article>
+        return (
+            <article className="cf scene scene--timeline">
+                <TimeTab data={sceneData.time}/>
+                <div className={ contentClassString }>
+                    <h2 className={ h2ClassString } onClick={this.handleClick}>
+                        { typeIcon }
+                        { expandableIcon }
+                        {sceneData.title}
+                    </h2>
+                    { imageOutput }
+                    { text }
+                </div>
+                <Videos data={ {ids: sceneData.videos, videos: this.props.data.globalData.videos } }></Videos>
+            </article>
+        );
     }
 }
 

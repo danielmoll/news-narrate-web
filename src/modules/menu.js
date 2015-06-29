@@ -28,7 +28,7 @@ class Menu extends React.Component {
                 return <MenuItem data={menuItem} activeItem={activeItem} />
             }.bind(this));
 
-        return <Sticky stickyClass="header-nav--sticky"><nav className="header-nav">{buttons}</nav></Sticky>
+        return <Sticky stickyClass="header-nav--sticky"><nav className="cf header-nav">{buttons}</nav></Sticky>
     }
 }
 

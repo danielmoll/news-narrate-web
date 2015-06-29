@@ -6,6 +6,18 @@ import Interviews from './modules/interviews'
 import Menu from './modules/menu'
 import Timeline from './modules/timeline'
 
+import scenesData from './data/scenes';
+import interviewsData from './data/interviews';
+import videosData from './data/videos';
+import locationsData from './data/locations';
+
+var defaultData = {
+        scenes: scenesData,
+        interviews: interviewsData,
+        videos: videosData,
+        locations: locationsData
+    },
+    dataSource = 'https://prod-narrate.firebaseio.com/london.json';
 
 class Narrate extends React.Component {
     constructor(props) {
@@ -21,6 +33,28 @@ class Narrate extends React.Component {
                 route: window.location.hash.substr(1)
             });
         });
+
+        $.get(dataSource, function(data) {
+            // Those are placeholders in case the live data doesn't
+            //   contain the right bits.
+            // REMOVE FOR PROD!!!!
+            if (!data.scenes) {
+                data.scenes = scenesData;
+            }
+            if (!data.interviews) {
+                data.interviews = interviewsData;
+            }
+            if (!data.videos) {
+                data.videos = videosData;
+            }
+            if (!data.locations) {
+                data.locations = locationsData;
+            }
+
+            this.setState({
+                data: data
+            });
+        }.bind(this));
     }
 
     getTemplate(route) {
@@ -61,14 +95,17 @@ class Narrate extends React.Component {
 
                 <Menu data={ route }></Menu>
 
-                <Content data={ id }></Content>
+                <Content data={ this.state.data } id={ id }></Content>
             </div>
-        )
+        );
     }
-
 }
 
-var mountNode = document.getElementById('narrate-app');
+var mountNode = document.getElementById('narrate-app')
 
-React.render(<Narrate/>, mountNode);
+$(function(){
+    React.render(
+        <Narrate/>
+        , mountNode);
+});
 

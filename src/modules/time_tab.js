@@ -6,7 +6,7 @@ class TimeTab extends React.Component {
 
         if(this.props.data) {
             var date = new Date(this.props.data),
-                hours = date.getUTCHours(),
+                hours = date.getUTCHours() + 1,
                 minutes = date.getUTCMinutes();
 
             hours = hours < 10 ? '0' + hours : hours;
