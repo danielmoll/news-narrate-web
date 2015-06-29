@@ -1,6 +1,5 @@
 import React from 'react';
 import _ from 'lodash';
-import 'whatwg-fetch';
 
 import Map from './modules/map'
 import Interviews from './modules/interviews'
@@ -13,11 +12,12 @@ import videosData from './data/videos';
 import locationsData from './data/locations';
 
 var defaultData = {
-    scenes: scenesData,
-    interviews: interviewsData,
-    videos: videosData,
-    locations: locationsData
-}
+        scenes: scenesData,
+        interviews: interviewsData,
+        videos: videosData,
+        locations: locationsData
+    },
+    dataSource = 'https://prod-narrate.firebaseio.com/london.json';
 
 class Narrate extends React.Component {
     constructor(props) {
@@ -32,46 +32,28 @@ class Narrate extends React.Component {
             });
         });
 
-        function checkStatus(response) {
-            if (response.status >= 200 && response.status < 300) {
-                return response
-            } else {
-                var error = new Error(response.statusText)
-                error.response = response
-                throw error
+        $.get(dataSource, function(data) {
+            console.log(data);
+            // Those are placeholders in case the live data doesn't
+            //   contain the right bits.
+            // REMOVE FOR PROD!!!!
+            if (!data.scenes) {
+                data.scenes = scenesData;
             }
-        }
+            if (!data.interviews) {
+                data.interviews = interviewsData;
+            }
+            if (!data.videos) {
+                data.videos = videosData;
+            }
+            if (!data.locations) {
+                data.locations = locationsData;
+            }
 
-        function parseJSON(response) {
-            return response.json()
-        }
-
-        fetch("http://prod-narrate.firebaseio.com/london.json")
-            .then(checkStatus)
-            .then(parseJSON)
-            .then(function(data) {
-                // Those are placeholders in case the live data doesn't
-                //   contain the right bits.
-                // REMOVE FOR PROD!!!!
-                if (!data.scenes) {
-                    data.scenes = scenesData;
-                }
-                if (!data.interviews) {
-                    data.interviews = interviewsData;
-                }
-                if (!data.videos) {
-                    data.videos = videosData;
-                }
-                if (!data.locations) {
-                    data.locations = locationsData;
-                }
-
-                this.setState({
-                    data: data
-                });
-            }.bind(this)).catch(function(error) {
-                console.log('request failed', error)
-            })
+            this.setState({
+                data: data
+            });
+        }.bind(this));
     }
 
     render() {
@@ -107,7 +89,10 @@ class Narrate extends React.Component {
 
 
 var mountNode = document.getElementById('narrate-app')
-React.render(
-    <Narrate/>
-    , mountNode);
+
+$(function(){
+    React.render(
+        <Narrate/>
+        , mountNode);
+});
 
