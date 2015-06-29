@@ -25,7 +25,7 @@ class Menu extends React.Component {
             buttons = _.map(menuItemData, function (menuItem) {
                 activeItem = this.handleActiveItem(menuItem, this.props.data);
 
-                return <MenuItem data={menuItem} activeItem={activeItem} />
+                return <MenuItem data={menuItem} activeItem={activeItem} key={menuItem.key} />
             }.bind(this));
 
         return <Sticky stickyClass="header-nav--sticky"><nav className="cf header-nav">{buttons}</nav></Sticky>

@@ -10,19 +10,20 @@ class Videos extends React.Component {
             for (var id in videoIds) {
 
                 var video = this.props.data.videos[id],
-                    sceneVideo = [];
+                    sceneVideo = [],
+                    videoKey = 'video' + id;
 
                 if(video) {
-                    sceneVideo.push(<img src={ video.thumbnail } />);
-                    sceneVideo.push(<button className="video-play">play</button>);
-                    sceneVideo.push(<span className="video-title">{ video.title }</span>);
+                    sceneVideo.push(<img src={ video.thumbnail } key={ videoKey + '_img' } />);
+                    sceneVideo.push(<button className="video-play" key={ videoKey + '_playbtn' } >play</button>);
+                    sceneVideo.push(<span className="video-title" key={ videoKey + '_title' } >{ video.title }</span>);
 
-                    scenes.push(<div className="cf video">{ sceneVideo }</div>);
+                    scenes.push(<div className="cf video" key={videoKey}>{ sceneVideo }</div>);
                 }
             }
         }
 
-        return ( <div className="videos">{ scenes }</div> );
+        return ( <div className="videos" key="videos">{ scenes }</div> );
     }
 }
 

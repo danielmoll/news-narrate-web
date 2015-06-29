@@ -18,7 +18,7 @@ class Timeline extends React.Component {
             that = this;
 
         _.forEach(propScenes, function (scene, id) {
-            scenes.push(<Scene data={ { scene: scene, globalData: that.props.data } } key={id}/>);
+            scenes.push(<Scene data={ { scene: scene, id: id, globalData: that.props.data } } key={id}/>);
         });
 
         return (

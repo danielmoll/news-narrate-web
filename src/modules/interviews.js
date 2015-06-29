@@ -23,7 +23,7 @@ class Interviews extends React.Component {
 
         return (
             <div>
-                <section className="interviews">{interviews}</section>
+                <section className="interviews" key="interviews">{interviews}</section>
             </div>
         )
     }
