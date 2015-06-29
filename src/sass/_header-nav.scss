@@ -20,18 +20,17 @@ nav.header-nav {
     font-size: 14px;
     padding: 12px 0;
     text-decoration: none;
-    width: 33.3333333333%;
-    width: calc(( 100% / 3 ) + 1 );
+    width: 34%;
   }
 
 
   a:first-child {
     border-left: none;
+    width: 33%;
   }
 
   a:last-child {
-    width: 33.3333333333%;
-    width: calc(( 100% / 3 ) + 2 );
+    width: 33%;
   }
 
 
