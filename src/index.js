@@ -38,6 +38,19 @@ class Narrate extends React.Component {
             // Those are placeholders in case the live data doesn't
             //   contain the right bits.
             // REMOVE FOR PROD!!!!
+
+            var sortedScenes = [];
+
+            _.forEach(data.scenes, function(s, k) {
+                s._id = k;
+            });
+
+            sortedScenes = _.sortBy(data.scenes, function(s) {
+                return new Date(s.time).getTime();
+            })
+
+            data.scenes = sortedScenes;
+
             if (!data.scenes) {
                 data.scenes = scenesData;
             }
