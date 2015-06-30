@@ -65,11 +65,10 @@ class Map extends React.Component {
 
         if (state.selected !== null) {
 
-            for (var i in scenes) {
+            for (var i = 0 ; i < scenes.length ; i++) {
 
-                if (i === locations[state.selected].scene) {
+                if (scenes[i]._id === locations[state.selected].scene) {
                     sceneData = scenes[i];
-
                     break;
                 }
             }
