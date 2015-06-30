@@ -2,11 +2,11 @@
   background-color: #fff;
   padding: 25px;
 
-  a {
+  .logo {
     @include spriteBg;
 
     background-position: 0 -8px;
-    display: block;
+    display: inline-block;
     height: 25px;
     width: 213px;
     text-indent: -9999em;

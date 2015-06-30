@@ -6,6 +6,7 @@ import Interviews from './modules/interviews'
 import Menu from './modules/menu'
 import Timeline from './modules/timeline'
 import VideoPlayer from './modules/videoPlayer';
+import Share from './modules/share'
 
 import scenesData from './data/scenes';
 import interviewsData from './data/interviews';
@@ -104,7 +105,8 @@ class Narrate extends React.Component {
         return (
             <div>
                 <div className="header">
-                    <a href="/">go to...</a>
+                    <a className="logo" href="/">go to...</a>
+                    <Share/>
                 </div>
 
                 <Menu data={ route }></Menu>
