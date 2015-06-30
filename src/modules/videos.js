@@ -17,6 +17,8 @@ class Videos extends React.Component {
             marginTop = 0,
             marginLeft = 0;
 
+        $('body').css({ 'overflow': 'hidden'});
+
         this.playerContainer = playerContainer;
 
         if(playerWidth > 700) {

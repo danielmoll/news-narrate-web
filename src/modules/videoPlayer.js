@@ -50,6 +50,7 @@ class VideoPlayer extends React.Component {
         player.pause();
 
         $('.video-player').hide();
+        $('body').css({ 'overflow': 'auto'});
     }
 
     initPlayerApi() {
@@ -79,8 +80,7 @@ class VideoPlayer extends React.Component {
     render() {
         return (
             <div className='video-player' ref='master'>
-                <div className='video-player__overlay' ref='overlay' ></div>
-                <button className="video-player__close" ref="close" onClick={this._handleClose}>close</button>
+                <div className='video-player__overlay' ref='overlay' onClick={this._handleClose}></div>
                 <video ref="player" width={this.state.vidWidth} id='video-player' className="video-player__player" preload='metadata' controls>
                     <source src={videoOptions.src} type={videoOptions.type} id="videoSource" />
                 </video>
