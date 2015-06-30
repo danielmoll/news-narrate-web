@@ -10,6 +10,7 @@ class Scene extends React.Component {
         super();
         this.handleClick = this.handleClick.bind(this);
         this.state = { expanded: false };
+        this.firstRender = true;
     }
 
     handleClick() {
@@ -18,9 +19,10 @@ class Scene extends React.Component {
 
     render() {
 
-        var sceneKey = 'scene_' + this.props.data.id,
+        var expanded = this.state.expanded || this.props.data.expanded,
+            sceneKey = 'scene_' + this.props.data.id,
             sceneData = (this.props.data && this.props.data.scene) || {},
-            contentClassString = 'scene__content' + (this.state.expanded ? ' expanded' : ''),
+            contentClassString = 'scene__content' + (expanded ? ' expanded' : ''),
             h2ClassString = 'scene__title',
             typeClassString = '',
             typeIcon = '',
@@ -43,15 +45,16 @@ class Scene extends React.Component {
             text.push(<div className="scene_text scene_excerpt" key={ sceneKey + '_excerpt' }><p>{ textParagraphs.shift() }</p></div>);
 
             if (textParagraphs.length) {
-                var iconState = 'icon icon--expand';
+                if (!this.props.data.expanded) {
+                    var iconState = 'icon icon--expand';
 
-                h2ClassString += ' expandable';
+                    if (this.state.expanded) {
+                        iconState = 'icon icon--collapse';
+                    }
 
-                if (this.state.expanded) {
-                    iconState = 'icon icon--collapse';
+                    h2ClassString += ' expandable';
+                    expandableIcon = <span className={ iconState } key={ sceneKey + '_expandHandle' }></span>;
                 }
-
-                expandableIcon = <span className={ iconState } key={ sceneKey + '_expandHandle' }></span>;
 
                 for ( var idx in textParagraphs) {
                     paragraphs.push(<p key={ 'p_' + idx }>{ textParagraphs[idx] }</p>);
