@@ -10,7 +10,6 @@ class Scene extends React.Component {
         super();
         this.handleClick = this.handleClick.bind(this);
         this.state = { expanded: false };
-        this.firstRender = true;
     }
 
     handleClick() {
@@ -82,7 +81,7 @@ class Scene extends React.Component {
                 </div>
                 <Videos data={ {ids: sceneData.videos, videos: this.props.data.globalData.videos } } key={ sceneKey + '_videos' }></Videos>
             </article>
-        );
+        )
     }
 }
 

@@ -5,6 +5,7 @@ import Map from './modules/map'
 import Interviews from './modules/interviews'
 import Menu from './modules/menu'
 import Timeline from './modules/timeline'
+import VideoPlayer from './modules/videoPlayer';
 
 import scenesData from './data/scenes';
 import interviewsData from './data/interviews';
@@ -109,6 +110,7 @@ class Narrate extends React.Component {
                 <Menu data={ route }></Menu>
 
                 <Content data={ this.state.data } id={ id }></Content>
+                <VideoPlayer></VideoPlayer>
             </div>
         );
     }

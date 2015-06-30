@@ -1,5 +1,5 @@
 section.scenes {
-  position: relative;
+  // position: relative;
   padding-top: 1rem;
 
   &:before {
@@ -17,7 +17,7 @@ section.scenes {
 .scene {
   clear: both;
   margin-bottom: 1rem;
-  position: relative;
+  // position: relative;
   width: 100%;
   z-index: 10;
 }
