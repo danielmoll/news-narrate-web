@@ -37,15 +37,27 @@ class Videos extends React.Component {
             'top' : 0
         });
 
-        // playerDom.addEventListener('webkitbeginfullscreen', this.onVideoBeginsFullScreen.bind(this), false);
         playerDom.addEventListener('webkitendfullscreen', this.onVideoEndsFullScreen.bind(this), false);
 
         playerDom.load();
         playerDom.play();
+
+        if ($(window).width() < 850) {
+            if (typeof(playerDom.webkitEnterFullscreen) != "undefined") {
+                // This is for Android Stock.
+                // playerDom.webkitEnterFullscreen();
+
+            } else if (typeof(playerDom.webkitRequestFullscreen)  != "undefined") {
+                // This is for Chrome.
+                // playerDom.webkitRequestFullscreen();
+
+            } else if (typeof(playerDom.mozRequestFullScreen)  != "undefined") {
+                playerDom.mozRequestFullScreen();
+            }
+        }
     }
 
     onVideoEndsFullScreen() {
-        console.log('onVideoEndsFullScreen');
         this.playerContainer.hide();
     }
 
