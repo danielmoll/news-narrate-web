@@ -11,7 +11,7 @@ var interviews = {
         name: 'Colin Pettet',
         body: "There was an incredibly bright flash.  I was very worried about surviving what I thought had been a train crash. I was worried about burning alive.",
         videos: ['video2'],
-        location: 'bank'
+        location: 'russellsquare'
     },
     '3': {
         thumbnail: 'http://static.tumblr.com/b04fe0aa57392b1f0b8d9ded8c6c1020/0ye6w9h/Gyjmo6use/tumblr_static_tumblr_lr0zitb5pj1qa17c7o1_500.jpg',
@@ -32,14 +32,14 @@ var interviews = {
         name: 'George Psaradakis (Driver)',
         body: "I saw so many massacred bodied on the road, then I realised it was a terrorist attack. I kept saying 'Lord have mercy, lord have mercy.'",
         videos: ['video1'],
-        location: 'thames'
+        location: 'tavistocksquare'
     },
     '6': {
         thumbnail: 'http://static.tumblr.com/b04fe0aa57392b1f0b8d9ded8c6c1020/0ye6w9h/Gyjmo6use/tumblr_static_tumblr_lr0zitb5pj1qa17c7o1_500.jpg',
         name: 'Peter Holden',
         body: "The real concern I had was not with the ones who were obviously very heavily injured but the ones who were not up and walking, who I realised could be quietly bleeding away inside.",
         videos: ['video2'],
-        location: 'bank'
+        location: 'russellsquare'
     }
 };
 
