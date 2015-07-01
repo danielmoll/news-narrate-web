@@ -57,7 +57,7 @@ class Map extends React.Component {
             scale = 1,
             mapBgWidth = 1000,
             mapBgHeight = 500,
-            mapDefaultHeight = 350,
+            mapMaxHeightDesktop = 350,
             markersMinX = 0,
             markersMaxX = 0,
             markersMinY = 0,
@@ -81,10 +81,10 @@ class Map extends React.Component {
         }
 
         widthNeeded = markersMaxX - markersMinX + 150;
+        heightNeeded = markersMaxY - markersMinY + 230;
 
-        if (!locations.length) {
-            heightNeeded = markersMaxY - markersMinY + 220;
-            heightNeeded = heightNeeded > mapDefaultHeight ? mapDefaultHeight : heightNeeded;
+        if (window.innerWidth > 800) {
+            heightNeeded = heightNeeded > mapMaxHeightDesktop ? mapMaxHeightDesktop : heightNeeded;
         }
 
         scale = state.containerWidth / widthNeeded;
