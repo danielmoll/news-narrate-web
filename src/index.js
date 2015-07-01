@@ -34,6 +34,8 @@ class Narrate extends React.Component {
             this.setState({
                 route: window.location.hash.substr(1)
             });
+
+            window.scrollTo(0,0);
         });
 
         $.get(dataSource, function(data) {
