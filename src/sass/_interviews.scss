@@ -21,7 +21,7 @@
 	}
 }
 
-.interview__text {
+.interview__quote {
 	margin-bottom: 20px;
 }
 
@@ -30,14 +30,8 @@
 	font-family: SkyTextMedium;
 }
 
-.interview__videos {
-
-}
-
-.interview__button {
-	float: right;
-	height: 10px;
-	width: 20px;
+.interview__name {
+	color: $textColour;
 }
 
 .interview__videos {
@@ -48,6 +42,23 @@
 	&:empty {
 		margin: 0;
 	}
+
+	.videos {
+		margin-left: 90px;
+	}
+}
+
+.interview__button {
+	float: right;
+	height: 10px;
+	width: 20px;
+}
+
+.interview__text {
+	color: $textgrey;
+	float: left;
+	margin-left: 90px;
+	margin-top: 20px;
 }
 
 .interviews {
