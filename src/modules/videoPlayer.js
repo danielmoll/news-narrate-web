@@ -25,14 +25,24 @@ class VideoPlayer extends React.Component {
         var playerOverlay = $('.video-player__overlay'),
             player = $('.video-player__player'),
             playerWidth = $(window).width() * 0.8,
+            playerHeight = $(window).height() * 0.8,
             marginTop = 0,
-            marginLeft = 0;
+            marginLeft = 0,
+            windowWidth = $(window).width();
 
         if(playerWidth > 700) {
             playerWidth = 700;
         }
 
         player.attr('width', playerWidth);
+
+        if(player.outerHeight() > playerHeight ) {
+            player.removeAttr('width');
+            player.attr('height', playerHeight);
+            playerWidth = player.outerWidth();
+        } else {
+            player.removeAttr('height');
+        }
 
         marginLeft = ($(window).width() - playerWidth) / 2,
         marginTop = ($(window).height() - player.outerHeight()) / 2;
