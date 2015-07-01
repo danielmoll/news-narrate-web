@@ -15,7 +15,10 @@ class Videos extends React.Component {
             playerDom = player.get(0),
             playerWidth = $(window).width() * 0.8,
             marginTop = 0,
-            marginLeft = 0;
+            marginLeft = 0,
+            ua = navigator.userAgent,
+            isAndroidMobile = ua.indexOf("android") > -1 && ua.indexOf("mobile"),
+            windowWidth = $(window).width();
 
         $('body').css({ 'overflow': 'hidden'});
 
@@ -41,17 +44,25 @@ class Videos extends React.Component {
 
         playerDom.addEventListener('webkitendfullscreen', this.onVideoEndsFullScreen.bind(this), false);
 
+        player.bind('webkitfullscreenchange mozfullscreenchange fullscreenchange', function(e) {
+            var state = document.fullScreen || document.mozFullScreen || document.webkitIsFullScreen,
+                event = state ? 'FullscreenOn' : 'FullscreenOff';
+
+            // Now do something interesting
+            alert('Event: ' + event);
+        });
+
         playerDom.load();
         playerDom.play();
 
-        if ($(window).width() < 850) {
+        if (isAndroidMobile && windowWidth < 850) {
             if (typeof(playerDom.webkitEnterFullscreen) != "undefined") {
                 // This is for Android Stock.
-                // playerDom.webkitEnterFullscreen();
+                playerDom.webkitEnterFullscreen();
 
             } else if (typeof(playerDom.webkitRequestFullscreen)  != "undefined") {
                 // This is for Chrome.
-                // playerDom.webkitRequestFullscreen();
+                playerDom.webkitRequestFullscreen();
 
             } else if (typeof(playerDom.mozRequestFullScreen)  != "undefined") {
                 playerDom.mozRequestFullScreen();
