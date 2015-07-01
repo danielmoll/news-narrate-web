@@ -30,8 +30,9 @@
 }
 
 .share__list {
+  margin-left: 0;
   float: right;
     .skycon {
-      color: #898D8C;
+      color: $socialGrey;
     }
 }
