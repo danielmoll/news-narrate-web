@@ -1,7 +1,7 @@
 import React from 'react';
 
 var videoOptions = {
-    src: "http://video-js.zencoder.com/oceans-clip.mp4", //video url goes here
+    src: "", //video url goes here
     type: "video/mp4" //video type here
 }
 
