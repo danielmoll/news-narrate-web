@@ -17,7 +17,9 @@ class Interviews extends React.Component {
             interviews.push(<Interview data={ {interview: propInterviews[id], globalData: this.props.data} } key={id} />)
         } else {
             _.forEach(propInterviews, function (interview, key) {
-                interviews.push(<Interview data={ {interview: interview, globalData: this.props.data} } key={ interview.id }/>);
+                if (interview) {
+                    interviews.push(<Interview data={ {interview: interview, globalData: this.props.data} } key={ interview.id }/>);
+                }
             }.bind(this));
         }
 
