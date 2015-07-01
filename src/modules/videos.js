@@ -14,7 +14,7 @@ class Videos extends React.Component {
             player = $('.video-player__player'),
             playerDom = player.get(0),
             playerWidth = $(window).width() * 0.8,
-            playerHeight = $(window).height() * 0.8,
+            playerHeight = $(window).height() * 0.7,
             marginTop = 0,
             marginLeft = 0,
             windowWidth = $(window).width();
@@ -29,24 +29,24 @@ class Videos extends React.Component {
 
         player.find('#videoSource').attr('src', url);
 
+        player.removeAttr('height');
         player.attr('width', playerWidth);
 
         if(player.outerHeight() > playerHeight ) {
             player.removeAttr('width');
             player.attr('height', playerHeight);
             playerWidth = player.outerWidth();
+
         } else {
-            player.removeAttr('height');
+            playerHeight = player.outerHeight();
         }
 
         marginLeft = ($(window).width() - playerWidth) / 2,
-        marginTop = ($(window).height() - player.outerHeight()) / 2;
+        marginTop = ($(window).height() - playerHeight) / 2;
 
         player.css({
             'margin-left' : marginLeft,
-            'margin-top' : marginTop,
-            'left' : 0,
-            'top' : 0
+            'margin-top' : marginTop
         });
 
         playerDom.addEventListener('webkitendfullscreen', this.onVideoEndsFullScreen.bind(this), false);
