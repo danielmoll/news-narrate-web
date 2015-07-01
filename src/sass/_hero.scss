@@ -60,7 +60,7 @@ section.hero {
     padding: 7px 8px 0;
 }
 
-@media screen and (max-device-width: 800px) {
+@media (max-width: 769px) {
     section.hero {
         background-color: #000;
         background-image: url('/build/img/heroBg.jpg');

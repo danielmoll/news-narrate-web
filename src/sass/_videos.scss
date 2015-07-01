@@ -1,38 +1,51 @@
+@mixin tableCell {
+    display: table-cell;
+    padding-top: 20px;
+    vertical-align: top;
+}
+
 .videos {
-  margin-left: 45px;
-  text-align: center;
+    display: table;
+    margin-left: 55px;
+    text-align: left;
+    width: 80%;
+    max-width: 480px;
+}
 
-  img {
+.videos__video {
+    display: table-row;
+    margin: 0;
+}
+
+.videos__thumbnail-wrapper {
+    @include tableCell;
+    padding-right: 15px;
+    width: 65px;
+}
+
+.videos__thumbnail {
     border-radius: 25px;
-    float: left;
-    margin-right: 15px;
     width: 50px;
-  }
 }
 
-.video {
-  margin: 0 auto;
-  margin-top: 20px;
-  text-align: left;
-  width: 80%;
+.videos__title {
+    @include tableCell;
+    padding-right: 20px;
+    width: 50%;
 }
 
-.video-play {
-  background: none;
-  border: none;
-  @include spriteBg;
-
-  background-position: 0 -90px;
-
-  float: right;
-  height: 32px;
-  margin-top: 10px;
-  text-indent: -9999em;
-  width: 32px;
+.videos__play-button-wrapper {
+    @include tableCell;
 }
 
-.video-title {
-  display: block;
-  margin-left: 65px;
-  width: 50%;
+.videos__play-button {
+    // reset browser styles
+    background: none;
+    border: none;
+    // include our own
+    @include spriteBg;
+    background-position: 0 -90px;
+    height: 32px;
+    text-indent: -9999em;
+    width: 32px;
 }
