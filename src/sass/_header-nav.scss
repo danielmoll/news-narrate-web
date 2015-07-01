@@ -11,26 +11,29 @@ nav.header-nav {
     border-top: 1px solid $darkBg;
     text-align: center;
     width: 100%;
+}
 
-    a {
-        border-left: 1px solid $darkBg;
-        color: $textColour;
-        display: block;
-        float: left;
-        font-size: 14px;
-        padding: 12px 0;
-        text-decoration: none;
-        width: 34%;
-    }
-    a:first-child {
+.header-nav__link {
+    border-left: 1px solid $darkBg;
+    color: $textColour;
+    display: block;
+    float: left;
+    font-size: 14px;
+    padding: 12px 0;
+    text-decoration: none;
+    width: 34%;
+
+    &:first-child {
         border-left: none;
         width: 33%;
     }
-    a:last-child {
+
+    &:last-child {
         width: 33%;
     }
-    a:hover,
-    a.selected {
+
+    &:hover,
+    &.selected {
         background-color: $darkBg;
         color: #fff;
     }

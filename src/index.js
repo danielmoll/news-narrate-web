@@ -107,7 +107,7 @@ class Narrate extends React.Component {
         return (
             <div>
                 <div className="header">
-                    <a className="logo" href="/">go to...</a>
+                    <a className="header__logo" href="/">go to...</a>
                     <Share/>
                 </div>
 
