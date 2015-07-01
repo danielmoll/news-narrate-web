@@ -17,7 +17,7 @@ class Interview extends React.Component {
         var interviewData = this.props.data.interview,
             imageUrl = (interviewData.thumbnail) ? interviewData.thumbnail : false,
             image,
-            text = interviewData.body,
+            quote = interviewData.quote,
             name = interviewData.name,
             location = this.props.data.globalData.locations[interviewData.location].locationName,
             iconState = (this.state.expanded) ? 'icon icon--collapse' : 'icon icon--expand',
@@ -42,7 +42,7 @@ class Interview extends React.Component {
                 <div className="interview__body">
                     <blockquote className="interview__text">
                         <span className="icon icon--quote icon--quote-left"></span>
-                        {text}
+                        {quote}
                         <span className="icon icon--quote icon--quote-right"></span>
                     </blockquote>
                     <div className="interview__name">{name}</div>
