@@ -2,7 +2,7 @@ var locations = {
     'aldgate': {
         coordinates: {
             x: 313,
-            y: 250
+            y: 75
         },
         locationName: "Aldgate",
         locationImg: "http://media-cdn.tripadvisor.com/media/photo-s/06/fb/e3/de/meet-aldgate-tube-station.jpg",
@@ -11,7 +11,7 @@ var locations = {
     'russellsquare': {
         coordinates: {
             x: -45,
-            y: 144
+            y: -31
         },
         locationName: "Russell Square",
         locationImg: "http://www.travelstay.com/images/1447707/1/Bank_Tube_Station.jpg",
@@ -20,7 +20,7 @@ var locations = {
     'edgeware': {
         coordinates: {
             x: -384,
-            y: 184
+            y: 9
         },
         locationName: "Edgeware Road",
         locationImg: "http://www.travelstay.com/images/1447707/1/Bank_Tube_Station.jpg",
@@ -29,7 +29,7 @@ var locations = {
     'kingscross': {
         coordinates: {
             x: -43,
-            y: 52
+            y: -123
         },
 
         locationName: "King's Cross",
@@ -39,7 +39,7 @@ var locations = {
     'tavistocksquare': {
         coordinates: {
             x: -83,
-            y: 120
+            y: -55
         },
         locationName: "Tavistock Square",
         locationImg: "http://www.travelstay.com/images/1447707/1/Bank_Tube_Station.jpg",
