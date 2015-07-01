@@ -19,8 +19,10 @@ class Interview extends React.Component {
             image,
             quote = interviewData.quote,
             name = interviewData.name,
-            location = this.props.data.globalData.locations[interviewData.location].locationName,
             iconState = (this.state.expanded) ? 'icon icon--collapse' : 'icon icon--expand',
+            location,
+            locatinText,
+            locationElt,
             videos,
             text;
 
@@ -31,6 +33,17 @@ class Interview extends React.Component {
         if (this.state.expanded) {
             text = <p className="interview__text">{ interviewData.text }</p>
             videos = <div className="interview__videos"><Videos data={ {ids: interviewData.videos, videos: this.props.data.globalData.videos} }></Videos></div>
+        }
+
+        if (interviewData.location) {
+            var globalLoc = this.props.data.globalData.locations[interviewData.location],
+                locationText = globalLoc && globalLoc.locationName;
+
+            if (!locationText) {
+                locationText = interviewData.location
+            }
+
+            locationElt = <div className="interview__location">{locationText}</div>
         }
 
         return  (
@@ -48,7 +61,7 @@ class Interview extends React.Component {
                         <span className="icon icon--quote icon--quote-right"></span>
                     </blockquote>
                     <div className="interview__name">{name}</div>
-                    <div className="interview__location">{location}</div>
+                    { locationElt }
                 </div>
                 {text}
                 {videos}
