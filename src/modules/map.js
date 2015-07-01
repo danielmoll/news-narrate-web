@@ -63,11 +63,8 @@ class Map extends React.Component {
             markersMinY = 0,
             markersMaxY = 0,
             widthNeeded = 0,
-            heightNeeded = (state && state.containerHeight) || mapDefaultHeight,
-            containerStyle = {
-                'backgroundSize': mapBgWidth + 'px ' + mapBgHeight + 'px',
-                'height': heightNeeded + 'px'
-            },
+            heightNeeded = state.containerHeight,
+            containerStyle,
             markers = [],
             scene = '',
             sceneData,
@@ -95,8 +92,8 @@ class Map extends React.Component {
         scale = scale > 1 ? 1 : scale;
 
         containerStyle = {
-            'backgroundSize': mapBgWidth * scale + 'px ' + mapBgHeight * scale + 'px',
-            'height': heightNeeded * scale + 'px'
+            'backgroundSize': (mapBgWidth * scale) + 'px ' + (mapBgHeight * scale) + 'px',
+            'height': (heightNeeded * scale) + 'px'
         }
 
         for (var i in locations) {
@@ -106,7 +103,7 @@ class Map extends React.Component {
 
             style = {
                 left: (state.containerWidth / 2 + loc.coordinates.x  * scale) - (selected ? 10 : 0),
-                top: ((state.containerHeight || mapDefaultHeight) / 2 + loc.coordinates.y * scale) - (selected ? 10 : 0)
+                top: (heightNeeded * scale / 2 + loc.coordinates.y * scale) - (selected ? 10 : 0)
             };
 
             markers.push(<a className={ classNames } style={ style } onClick={ this._handleClick.bind(this, i) }  key={ 'marker' + i }></a>);

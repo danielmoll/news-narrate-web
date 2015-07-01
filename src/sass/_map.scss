@@ -1,6 +1,7 @@
 .map {
     // background-color: $darkBg;
     min-height: 1000px;
+    position: relative;
 }
 
 .map__container {
@@ -16,16 +17,13 @@
 }
 
 .map__marker {
+    background-image: url('/build/img/marker.png');
+    background-size: 40px 40px;
     background-position: center;
     cursor: pointer;
     display: block;
-    position: absolute;
-}
-
-.map__marker {
-    background-image: url('/build/img/marker.png');
-    background-size: 40px 40px;
     height: 40px;
+    position: absolute;
     width: 40px;
 }
 
