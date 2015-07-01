@@ -102,3 +102,9 @@ section.scenes {
     padding: 0 25px 5px;
   }
 }
+
+@media (min-width: 769px) {
+  .scene__image {
+    height: 500px;
+  }
+}

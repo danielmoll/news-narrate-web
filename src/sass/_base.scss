@@ -34,3 +34,9 @@ body {
   margin: 0 auto;
   text-align: left;
 }
+
+@media (min-width: 769px) {
+  body {
+    font-size: 17px;
+  }
+}
