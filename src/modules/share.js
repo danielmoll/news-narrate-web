@@ -18,8 +18,12 @@ class Share extends React.Component {
         return encodeURIComponent(this.fullUrl())
     }
 
+    title() {
+       return this.props.data.title || "Sky News: London Bombings 7-7"
+    }
+
     titleEncoded() {
-        return encodeURIComponent(this.props.data.title || "Sky News: London Bombings 7-7")
+        return encodeURIComponent(this.title())
     }
 
     facebookUrl() {
@@ -29,6 +33,19 @@ class Share extends React.Component {
     twitterUrl() {
         return "https://twitter.com/intent/tweet?url=" + this.urlEncoded() + ";text=" + this.titleEncoded();
     }
+
+    handleTwitterShare() {
+       this.handleShare('Twitter');
+    }
+
+    handleFacebookShare() {
+        this.handleShare('Facebook');
+    }
+
+    handleShare(network) {
+        window.ga('send', 'event', 'share', network, this.title());
+    }
+
 
     render() {
         var classes = 'share__list';
@@ -40,12 +57,12 @@ class Share extends React.Component {
         return (
             <ul className={ classes }>
                 <li>
-                    <a className="share__social-link skycon--hover" target="_blank" href={this.facebookUrl()}>
+                    <a className="share__social-link skycon--hover" target="_blank" onClick={this.handleFacebookShare.bind(this)} href={this.facebookUrl()}>
                         <i aria-hidden="true" className="skycon skycon--facebook"></i>
                     </a>
                 </li>
                 <li>
-                    <a className="share__social-link skycon--hover" target="_blank" href={this.twitterUrl()}>
+                    <a className="share__social-link skycon--hover" target="_blank" onClick={this.handleTwitterShare.bind(this)} href={this.twitterUrl()}>
                         <i aria-hidden="true" className="skycon skycon--twitter"></i>
                     </a>
                 </li>
