@@ -86,6 +86,7 @@ class VideoPlayer extends React.Component {
         window.removeEventListener('resize', this._handleResize);
     }
 
+
     render() {
         return (
             <div className='video-player' ref='master'>
