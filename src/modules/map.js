@@ -58,8 +58,7 @@ class Map extends React.Component {
             heightNeeded = state.containerHeight,
             containerStyle,
             markers = [],
-            scene = '',
-            sceneData,
+            scenesOut = [],
             style;
 
         for (var i in locations) {
@@ -116,24 +115,22 @@ class Map extends React.Component {
             }
 
             if (state.selected !== null && state.selected !== undefined) {
+                _.forEach(locations[state.selected].scenes, function(sceneId) {
+                    var scene = _.find(scenes, function(s) {
+                        return s._id === sceneId;
+                    })
 
-                for (var i = 0 ; i < scenes.length ; i++) {
-                    if (scenes[i]._id === locations[state.selected].scene) {
-                        sceneData = scenes[i];
-                        break;
+                    if (scene) {
+                        scenesOut.push(<Scene data={ {scene: scene, globalData: this.props.data, expanded:true} } key={scene._id}/>)
                     }
-                }
-
-                if (sceneData) {
-                    scene = <Scene data={ {scene: sceneData, globalData: this.props.data, expanded:true} } key={sceneData._id}/>
-                }
+                }.bind(this));
             }
         }
 
         return (
             <div className="map">
                 <div className="map__container" ref="container" style={containerStyle}>{ markers }</div>
-                { scene }
+                { scenesOut }
             </div>
         );
     }

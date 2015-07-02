@@ -8,7 +8,7 @@ var london = {
             },
             "locationName": "Aldgate",
             "locationImg": "http://media-cdn.tripadvisor.com/media/photo-s/06/fb/e3/de/meet-aldgate-tube-station.jpg",
-            "scene": '-Jsk3ajX7ZbwvDro9iah'
+            "scenes": ['-Jsk3ajX7ZbwvDro9iah']
         },
         'russellsquare': {
             "coordinates": {
@@ -17,7 +17,9 @@ var london = {
             },
             "locationName": "Russell Square",
             "locationImg": "http://www.travelstay.com/images/1447707/1/Bank_Tube_Station.jpg",
-            "scene": '-Jsk3cO6B653vRvbiayF'
+            "scenes": [
+                '-Jsk3cO6B653vRvbiayF'
+            ]
         },
         'edgeware': {
             "coordinates": {
@@ -26,7 +28,7 @@ var london = {
             },
             "locationName": "Edgeware Road",
             "locationImg": "http://www.travelstay.com/images/1447707/1/Bank_Tube_Station.jpg",
-            "scene": '-Jsk3b-7kQcTtIAVlX0O'
+            "scenes": ['-Jsk3b-7kQcTtIAVlX0O']
         },
         'tavistocksquare': {
             "coordinates": {
@@ -35,7 +37,7 @@ var london = {
             },
             "locationName": "Tavistock Square",
             "locationImg": "http://www.travelstay.com/images/1447707/1/Bank_Tube_Station.jpg",
-            "scene": '-Jsk6aeJkAHyQMXBoycA'
+            "scenes": ['-Jsk6aeJkAHyQMXBoycA']
         }
     },
     "interviews": {
