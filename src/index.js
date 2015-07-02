@@ -84,9 +84,10 @@ class Narrate extends React.Component {
             case /\/map/.test(route):
                 view.module = Map;
                 break;
-            case /\/interviews\/\d+/.test(route):
+            case /\/interviews\/.+/.test(route):
                 view.module = Interviews;
-                view.id = route.match(/\d+/)[0];
+                var regexp = /interviews\/(.+)/g;
+                view.id = regexp.exec(route)[1];
                 break;
             case /\/interviews/.test(route):
                 view.module = Interviews;

@@ -1,6 +1,7 @@
 import React from 'react';
 import Videos from './videos';
 import Image from './image';
+import Share from './share'
 
 class Interview extends React.Component {
     constructor() {
@@ -15,6 +16,7 @@ class Interview extends React.Component {
 
     render() {
         var interviewData = this.props.data.interview,
+            interviewUrl = window.location.origin + window.location.pathname + '#/interviews/' + interviewData.id,
             imageUrl = (interviewData.thumbnail) ? interviewData.thumbnail : false,
             image,
             quote = interviewData.quote,
@@ -62,6 +64,7 @@ class Interview extends React.Component {
                     </blockquote>
                     <div className="interview__name">{name}</div>
                     { locationElt }
+                    <Share data={ {url: interviewUrl } }/>
                 </div>
                 {text}
                 {videos}

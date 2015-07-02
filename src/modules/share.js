@@ -1,25 +1,38 @@
 import React from 'react';
+import _ from 'lodash';
 
-export default React.createClass({
+class Share extends React.Component {
+    constructor() {
+        super();
 
-    fullUrl: function () {
-        return window.location;
-    },
-    urlEncoded: function () {
+        this.state = {
+            showVideo: false
+        };
+    }
+
+    fullUrl() {
+        return (this.props.data && this.props.data.url) || window.location;
+    }
+
+    urlEncoded() {
         return encodeURIComponent(this.fullUrl())
-    },
-    titleEncoded: function () {
+    }
+
+    titleEncoded() {
         return encodeURIComponent("Sky News: London Bombings 7-7")
-    },
-    facebookUrl: function () {
+    }
+
+    facebookUrl() {
         return "https://www.facebook.com/sharer/sharer.php?u=" + this.urlEncoded();
-    },
-    twitterUrl: function () {
+    }
+
+    twitterUrl() {
         return "https://twitter.com/intent/tweet?url=" + this.urlEncoded() + ";text=" + this.titleEncoded();
-    },
-    render: function () {
+    }
+
+    render() {
         return (
-            <ul className="share__list">
+            <ul className="share__list share__list--right">
                 <li>
                     <a className="share__social-link skycon--hover" target="_blank" href={this.facebookUrl()}>
                         <i aria-hidden="true" className="skycon skycon--facebook"></i>
@@ -33,6 +46,7 @@ export default React.createClass({
             </ul>
         );
     }
-});
 
+}
 
+export default Share
