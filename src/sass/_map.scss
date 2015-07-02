@@ -4,9 +4,9 @@
 
 .map__container {
     background-image: url('/build/img/mapBg.jpg');
-    background-position: center;
+    background-position: center top;
     background-size: 1000px 500px;
-    height: 350px;
+    height: 400px;
     margin-bottom: 1rem;
     overflow: hidden;
     position: relative;
@@ -30,4 +30,36 @@
     background-size: 60px 60px;
     height: 60px;
     width: 60px;
+}
+
+.map__title-bg {
+    background-image: url('/build/img/map__title-bg.png');
+    background-position: top left;
+    background-repeat: repeat-x;
+    height: 150px;
+    text-align: center;
+}
+
+.map__title {
+    color: #fff;
+    font-family: SkyTextRegular;
+    font-size: 26px;
+    margin: 0 auto;
+    max-width: 400px;
+    padding-top: 2rem;
+    text-transform: uppercase;
+    width: 80%;
+}
+
+@media (max-width: 769px) {
+    .map__title-bg {
+        background-size: 1px 120px;
+        height: 120px;
+    }
+
+    .map__title {
+        font-size: 18px;
+        max-width: 300px;
+        padding-top: 1.5rem;
+    }
 }

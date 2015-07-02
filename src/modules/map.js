@@ -49,12 +49,13 @@ class Map extends React.Component {
             scale = 1,
             mapBgWidth = 1000,
             mapBgHeight = 500,
-            mapMaxHeightDesktop = 350,
+            mapMaxHeightDesktop = 400,
             markersMinX = 0,
             markersMaxX = 0,
             markersMinY = 0,
             markersMaxY = 0,
             widthNeeded = 0,
+            offset = 0,
             heightNeeded = state.containerHeight,
             containerStyle,
             markers = [],
@@ -71,15 +72,22 @@ class Map extends React.Component {
 
             markersMinX = markersMinX > x ? x : markersMinX;
             markersMaxX = markersMaxX < x ? x : markersMaxX;
-            markersMinY = markersMinY > y ? y : markersMinY;
             markersMaxY = markersMaxY < y ? y : markersMaxY;
         }
 
-        widthNeeded = markersMaxX - markersMinX + 150;
-        heightNeeded = markersMaxY - markersMinY + 230;
+        if (markersMaxX > Math.abs(markersMinX)) {
+            widthNeeded = 2 * markersMaxX;
+        } else {
+            widthNeeded = 2 * Math.abs(markersMinX);
+        }
 
-        if (window.innerWidth > 800) {
+        widthNeeded += 150; // arbitrary offset from edges...
+        heightNeeded = markersMaxY + 80; // arbitrary offset from edges...
+
+        if (window.innerWidth > 768) {
             heightNeeded = heightNeeded > mapMaxHeightDesktop ? mapMaxHeightDesktop : heightNeeded;
+        } else {
+            offset = 50;
         }
 
         scale = state.containerWidth / widthNeeded;
@@ -88,7 +96,11 @@ class Map extends React.Component {
 
         containerStyle = {
             'backgroundSize': (mapBgWidth * scale) + 'px ' + (mapBgHeight * scale) + 'px',
-            'height': (heightNeeded * scale) + 'px'
+            'height': (heightNeeded * scale) + offset + 'px'
+        }
+
+        if (window.innerWidth < 768) {
+            containerStyle['backgroundPosition'] = '50% ' + offset + 'px';
         }
 
         if (locations) {
@@ -106,9 +118,11 @@ class Map extends React.Component {
                     selected = state.selected === i,
                     classNames = 'map__marker' + (selected ? ' map__marker--selected' : '');
 
+                // The -20 below are 1/2 the markers widht and heights, as they should
+                //  be centered on the given coordinates.
                 style = {
-                    left: (state.containerWidth / 2 + loc.coordinates.x  * scale) - (selected ? 10 : 0),
-                    top: (heightNeeded * scale / 2 + loc.coordinates.y * scale) - (selected ? 10 : 0)
+                    left: (state.containerWidth / 2 + loc.coordinates.x  * scale) - 20 - (selected ? 10 : 0),
+                    top: (loc.coordinates.y * scale) + offset - 20 - (selected ? 10 : 0)
                 };
 
                 markers.push(<a className={ classNames } style={ style } onClick={ this._handleClick.bind(this, i) }  key={ 'marker' + i }></a>);
@@ -129,7 +143,7 @@ class Map extends React.Component {
 
         return (
             <div className="map">
-                <div className="map__container" ref="container" style={containerStyle}>{ markers }</div>
+                <div className="map__container" ref="container" style={containerStyle}>{ markers }<div className="map__title-bg"><h2 className="map__title">Explore the map of central London bombs blasts</h2></div></div>
                 { scenesOut }
             </div>
         );
