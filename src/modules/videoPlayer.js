@@ -91,10 +91,12 @@ class VideoPlayer extends React.Component {
         var width = window.innerWidth;
         if (width > 1000) {
             return src;
+        } else if (width > 800) {
+            return src.replace('upload/','upload/c_scale,q_60,w_800/')
         } else if (width > 600) {
-            return src.replace('upload/','upload/c_scale,q_60,w_600/')
+            return src.replace('upload/','upload/c_scale,q_50,w_600/')
         } else {
-            return src.replace('upload/','upload/c_scale,q_60,w_400/')
+            return src.replace('upload/','upload/c_scale,q_50,w_400/')
         }
     }
 
