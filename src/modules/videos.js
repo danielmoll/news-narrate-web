@@ -21,7 +21,9 @@ class Videos extends React.Component {
         }
     }
 
-    handleClick(url, evt) {
+    handleClick(url, e) {
+        e.preventDefault();
+        e.stopPropagation();
 
         var playerContainer = $('.video-player').show(),
             playerOverlay = $('.video-player__overlay'),
