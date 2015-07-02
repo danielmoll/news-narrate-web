@@ -11,6 +11,7 @@ section.hero {
     background-color: #000;
     background-image: url('/build/img/heroBg.jpg');
     background-size: cover;
+    background-position: top center;
     height: auto;
     left: 50%;
     min-width: 100%;
@@ -65,6 +66,7 @@ section.hero {
         background-color: #000;
         background-image: url('/build/img/heroBg.jpg');
         background-size: cover;
+        background-position: top center;
     }
 
     .hero__video {
