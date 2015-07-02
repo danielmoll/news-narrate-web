@@ -29,15 +29,7 @@ class Map extends React.Component {
     }
 
     _handleClick(name) {
-        var state = this.state;
-
-        if (state.selected === name) {
-            state.selected = null;
-        } else {
-            state.selected = name;
-        }
-
-        this.setState(state);
+        this.setState( { selected: name } );
     }
 
     componentDidMount() {
@@ -71,6 +63,10 @@ class Map extends React.Component {
             style;
 
         for (var i in locations) {
+            if (i === 'default') {
+                continue;
+            }
+
             var x = locations[i].coordinates.x,
                 y = locations[i].coordinates.y;
 
@@ -96,31 +92,41 @@ class Map extends React.Component {
             'height': (heightNeeded * scale) + 'px'
         }
 
-        for (var i in locations) {
-            var loc = locations[i],
-                selected = state.selected === i,
-                classNames = 'map__marker' + (selected ? ' map__marker--selected' : '');
+        if (locations) {
 
-            style = {
-                left: (state.containerWidth / 2 + loc.coordinates.x  * scale) - (selected ? 10 : 0),
-                top: (heightNeeded * scale / 2 + loc.coordinates.y * scale) - (selected ? 10 : 0)
-            };
-
-            markers.push(<a className={ classNames } style={ style } onClick={ this._handleClick.bind(this, i) }  key={ 'marker' + i }></a>);
-        }
-
-        if (state.selected !== null) {
-
-            for (var i = 0 ; i < scenes.length ; i++) {
-
-                if (scenes[i]._id === locations[state.selected].scene) {
-                    sceneData = scenes[i];
-                    break;
-                }
+            if (this.state.selected === null || state.selected === undefined) {
+                state.selected = locations.default;
             }
 
-            if (sceneData) {
-                scene = <Scene data={ {scene: sceneData, globalData: this.props.data, expanded:true} } key={sceneData._id}/>
+            for (var i in locations) {
+                if (i === 'default') {
+                    continue;
+                }
+
+                var loc = locations[i],
+                    selected = state.selected === i,
+                    classNames = 'map__marker' + (selected ? ' map__marker--selected' : '');
+
+                style = {
+                    left: (state.containerWidth / 2 + loc.coordinates.x  * scale) - (selected ? 10 : 0),
+                    top: (heightNeeded * scale / 2 + loc.coordinates.y * scale) - (selected ? 10 : 0)
+                };
+
+                markers.push(<a className={ classNames } style={ style } onClick={ this._handleClick.bind(this, i) }  key={ 'marker' + i }></a>);
+            }
+
+            if (state.selected !== null && state.selected !== undefined) {
+
+                for (var i = 0 ; i < scenes.length ; i++) {
+                    if (scenes[i]._id === locations[state.selected].scene) {
+                        sceneData = scenes[i];
+                        break;
+                    }
+                }
+
+                if (sceneData) {
+                    scene = <Scene data={ {scene: sceneData, globalData: this.props.data, expanded:true} } key={sceneData._id}/>
+                }
             }
         }
 

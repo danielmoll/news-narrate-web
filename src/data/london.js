@@ -1,5 +1,6 @@
 var london = {
     "locations": {
+        'default': 'edgeware',
         'aldgate': {
             "coordinates": {
                 "x": 313,
