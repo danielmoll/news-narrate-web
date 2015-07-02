@@ -15,14 +15,14 @@
 	padding: 15px;
 }
 
-.interview--expandable {
-	cursor: pointer;
-}
-
 .interview__body {
     color: $textgrey;
 	float: left;
-	width: calc(100% - 130px);
+	width: calc(100% - 95px);
+}
+
+.interview__body--expandable {
+	cursor: pointer;
 }
 
 .interview__interviewee {
@@ -85,6 +85,7 @@
 .interview__button {
 	float: right;
 	height: 10px;
+	margin-top: 7px;
 	width: 20px;
 }
 
