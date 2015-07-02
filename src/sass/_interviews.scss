@@ -33,7 +33,9 @@
 }
 
 .interview__quote {
+	font-size: 19px;
 	margin-bottom: 20px;
+	margin-right: 25px;
 }
 
 .interview__name,
@@ -99,6 +101,11 @@
 
 
 @media (min-width: 769px) {
+	.interview__quote {
+		font-size: 23px;
+		margin-right: 45px;
+	}
+
 	.interview__videos {
 		padding-left: 155px;
 	}
