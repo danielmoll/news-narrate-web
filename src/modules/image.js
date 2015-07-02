@@ -17,9 +17,10 @@ class Image extends React.Component {
 
     render() {
 
-        var classNames = (this.props.classNames ? ' ' + this.props.classNames : '');
+        var classNames = 'image' + (this.props.classNames ? ' ' + this.props.classNames : '');
+
         return (
-            <div className={classNames}><img className="image" src={this.resizedSource(this.props.data)}/></div>
+            <img className={ classNames } src={this.resizedSource(this.props.data)}/>
         )
     }
 }

@@ -23,13 +23,10 @@
 }
 
 .interview__interviewee {
+	border-radius: 35px;
 	float: left;
 	margin-right: 20px;
-
-	.image {
-		border-radius: 35px;
-		width: 70px;
-	}
+	width: 70px;
 }
 
 .interview__quote {
