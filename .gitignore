@@ -3,4 +3,5 @@ tmp
 build
 node_modules
 .divshot-cache
+.DS_Store
 *.swp
