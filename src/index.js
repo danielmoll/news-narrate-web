@@ -8,18 +8,9 @@ import Timeline from './modules/timeline'
 import VideoPlayer from './modules/videoPlayer';
 import Share from './modules/share'
 
-import scenesData from './data/scenes';
-import interviewsData from './data/interviews';
-import videosData from './data/videos';
-import locationsData from './data/locations';
+import londonData from './data/london';
 
-var defaultData = {
-        scenes: scenesData,
-        interviews: interviewsData,
-        videos: videosData,
-        locations: locationsData
-    },
-    dataSource = 'https://prod-narrate.firebaseio.com/london.json';
+var dataSource = 'https://prod-narrate.firebaseio.com/london.json';
 
 class Narrate extends React.Component {
     constructor(props) {
@@ -56,16 +47,16 @@ class Narrate extends React.Component {
             data.scenes = sortedScenes;
 
             if (!data.scenes) {
-                data.scenes = scenesData;
+                data.scenes = londonData.scenes;
             }
             if (!data.interviews) {
-                data.interviews = interviewsData;
+                data.interviews = londonData.interviews;
             }
             if (!data.videos) {
-                data.videos = videosData;
+                data.videos = londonData.videos;
             }
             if (!data.locations) {
-                data.locations = locationsData;
+                data.locations = londonData.locations;
             }
 
             this.setState({
