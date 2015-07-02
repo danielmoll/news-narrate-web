@@ -15,14 +15,14 @@
     margin: 0;
 
     .videos__thumbnail-wrapper,
-    .videos__title,
+    .videos__text-wrapper,
     .videos__play-button-wrapper {
         border-top: 1px solid #d1d1d1;
     }
 
     &:first-child {
         .videos__thumbnail-wrapper,
-        .videos__title,
+        .videos__text-wrapper,
         .videos__play-button-wrapper {
             border: none;
         }
@@ -46,12 +46,15 @@
     width: 75px;
 }
 
-.videos__title {
-    border-top: 1px solid #ddd;
+.videos__text-wrapper {
     @include tableCell;
-    font-family: SkyTextMedium;
     padding-right: 20px;
     vertical-align: middle;
+}
+
+.videos__title {
+    display: block;
+    font-family: SkyTextMedium;
 }
 
 .videos__play-button-wrapper {

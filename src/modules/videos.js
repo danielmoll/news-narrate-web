@@ -87,9 +87,9 @@ class Videos extends React.Component {
                     videoKey = 'video' + id;
 
                 if(video) {
-                    sceneVideo.push(<div className="video__spacer">&nbsp;</div>)
+                    sceneVideo.push(<div className="video__spacer" key={ videoKey + '_spacer' }>&nbsp;</div>)
                     sceneVideo.push(<div className="videos__thumbnail-wrapper" key={ videoKey + '_img-wapper' }><img className="videos__thumbnail" src={ video.thumbnail } key={ videoKey + '_img' } /></div>);
-                    sceneVideo.push(<span className="videos__title" key={ videoKey + '_title' } >{ video.title }</span>);
+                    sceneVideo.push(<div className="videos__text-wrapper" key={ videoKey + '_txt-wapper' }><span className="videos__name" key={ videoKey + '_name' } >{ video.name }</span><span className="videos__title" key={ videoKey + '_title' } >{ video.title }</span></div>);
                     sceneVideo.push(<div className="videos__play-button-wrapper" key={ videoKey + '_button-wrapper' }><button className="videos__play-button" onClick={this.handleClick.bind(null,video.url)} key={ videoKey + '_playbtn' } >play</button></div>);
 
                     videos.push(<div className="videos__video" key={videoKey}>{ sceneVideo }</div>);
