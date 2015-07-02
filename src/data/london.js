@@ -1,16 +1,16 @@
 var london = {
     "locations": {
-        'default': 'edgeware',
-        'aldgate': {
+        "default": "edgeware",
+        "aldgate": {
             "coordinates": {
                 "x": 313,
                 "y": 75
             },
             "locationName": "Aldgate",
             "locationImg": "http://media-cdn.tripadvisor.com/media/photo-s/06/fb/e3/de/meet-aldgate-tube-station.jpg",
-            "scenes": ['-Jsk3ajX7ZbwvDro9iah']
+            "scenes": ["-Jsk3ajX7ZbwvDro9iah"]
         },
-        'russellsquare': {
+        "russellsquare": {
             "coordinates": {
                 "x": -45,
                 "y": -31
@@ -18,26 +18,26 @@ var london = {
             "locationName": "Russell Square",
             "locationImg": "http://www.travelstay.com/images/1447707/1/Bank_Tube_Station.jpg",
             "scenes": [
-                '-Jsk3cO6B653vRvbiayF'
+                "-Jsk3cO6B653vRvbiayF"
             ]
         },
-        'edgeware': {
+        "edgeware": {
             "coordinates": {
                 "x": -384,
                 "y": 9
             },
             "locationName": "Edgeware Road",
             "locationImg": "http://www.travelstay.com/images/1447707/1/Bank_Tube_Station.jpg",
-            "scenes": ['-Jsk3b-7kQcTtIAVlX0O']
+            "scenes": ["-Jsk3b-7kQcTtIAVlX0O"]
         },
-        'tavistocksquare': {
+        "tavistocksquare": {
             "coordinates": {
                 "x": -83,
                 "y": -55
             },
             "locationName": "Tavistock Square",
             "locationImg": "http://www.travelstay.com/images/1447707/1/Bank_Tube_Station.jpg",
-            "scenes": ['-Jsk6aeJkAHyQMXBoycA']
+            "scenes": ["-Jsk6aeJkAHyQMXBoycA"]
         }
     },
     "interviews": {
@@ -362,6 +362,7 @@ var london = {
         "colin": {
             "name": "Colin Pettet",
             "thumbnail": "http://res.cloudinary.com/skynews/image/upload/v1435847053/Colin-Pettet_iyxfwu.jpg",
+            "frame": "http://news.carrentals.co.uk/wp-content/uploads/2012/04/Passengers-Wait-for-Tube-Train.jpg",
             "title": "I Was Expecting To Die",
             "url": "http://res.cloudinary.com/skynews/video/upload/v1435586047/narrate/london-bombing-7-7/colin.mp4"
         },
