@@ -19,7 +19,7 @@ class Share extends React.Component {
     }
 
     titleEncoded() {
-        return encodeURIComponent("Sky News: London Bombings 7-7")
+        return encodeURIComponent(this.props.data.title || "Sky News: London Bombings 7-7")
     }
 
     facebookUrl() {

@@ -18,17 +18,17 @@ class Interview extends React.Component {
         var interviewData = this.props.data.interview,
             interviewUrl = window.location.origin + window.location.pathname + '#/interviews/' + interviewData.id,
             imageUrl = (interviewData.thumbnail) ? interviewData.thumbnail : false,
-            image,
             quote = interviewData.quote,
-            name = interviewData.name,
-            iconState,
+            name = 'Sky News: London Bombings 7-7 - Interview of ' + interviewData.name,
+            shareTitle = name,
             expandable = false,
             expandedIcon,
+            iconState,
+            image,
             location,
-            locatinText,
             locationElt,
-            videos,
-            text;
+            text,
+            videos;
 
         if (imageUrl) {
             image = <Image data={imageUrl} classNames="interview__interviewee" />
@@ -64,6 +64,8 @@ class Interview extends React.Component {
                 locationText = interviewData.location
             }
 
+            shareTitle += ' - ' + locationText;
+
             locationElt = <div className="interview__location">{locationText}</div>
         }
 
@@ -80,7 +82,7 @@ class Interview extends React.Component {
                     </blockquote>
                     <div className="interview__name">{ name }</div>
                     { locationElt }
-                    <Share data={ {url: interviewUrl } }/>
+                    <Share data={ {url: interviewUrl, title: shareTitle  } }/>
                 </div>
                 {text}
                 {videos}
