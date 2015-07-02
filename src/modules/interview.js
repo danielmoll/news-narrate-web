@@ -22,6 +22,7 @@ class Interview extends React.Component {
             quote = interviewData.quote,
             name = interviewData.name,
             iconState = (this.state.expanded) ? 'icon icon--collapse' : 'icon icon--expand',
+            expandedIcon,
             location,
             locatinText,
             locationElt,
@@ -32,9 +33,13 @@ class Interview extends React.Component {
             image = <Image data={imageUrl} classNames="interview__interviewee" />
         }
 
-        if (this.state.expanded) {
+        if (this.props.data.expanded || this.state.expanded) {
             text = <p className="interview__text">{ interviewData.text }</p>
             videos = <div className="interview__videos"><Videos data={ {ids: interviewData.videos, videos: this.props.data.globalData.videos} }></Videos></div>
+        }
+
+        if (!this.props.data.expanded) {
+            expandedIcon = <div className="interview__button" onClick={this.handleClick}><span className={iconState}></span></div>
         }
 
         if (interviewData.location) {
@@ -50,19 +55,16 @@ class Interview extends React.Component {
 
         return  (
             <article className="interview">
-                <div className="interview__button" onClick={this.handleClick}>
-                    <span className={iconState}></span>
-                </div>
-
-                {image}
+                { expandedIcon }
+                { image }
 
                 <div className="interview__body">
                     <blockquote className="interview__quote">
                         <span className="icon icon--quote icon--quote-left"></span>
-                        {quote}
+                        { quote }
                         <span className="icon icon--quote icon--quote-right"></span>
                     </blockquote>
-                    <div className="interview__name">{name}</div>
+                    <div className="interview__name">{ name }</div>
                     { locationElt }
                     <Share data={ {url: interviewUrl } }/>
                 </div>
