@@ -47,7 +47,7 @@ class Interview extends React.Component {
             }
 
             if (interviewData.videos) {
-                videos = <div className="interview__videos"><Videos data={ {ids: interviewData.videos, videos: this.props.data.globalData.videos} }></Videos></div>
+                videos = <div className="interview__videos"><Videos data={ {ids: interviewData.videos, useFrame: true, videos: this.props.data.globalData.videos} }></Videos></div>
             }
         }
 

@@ -87,7 +87,7 @@ class Videos extends React.Component {
                 var video = this.props.data.videos[id],
                     sceneVideo = [],
                     videoKey = 'video' + id,
-                    thumbnail = video.frame ? video.frame : video.thumbnail;
+                    thumbnail = (this.props.data.useFrame && video.frame) ? video.frame : video.thumbnail;
 
                 if(video) {
                     sceneVideo.push(<div className="video__spacer" key={ videoKey + '_spacer' }>&nbsp;</div>)
