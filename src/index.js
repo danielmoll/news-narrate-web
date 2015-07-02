@@ -116,6 +116,7 @@ class Narrate extends React.Component {
 
                 <Content data={ this.state.data } id={ id }></Content>
                 <VideoPlayer></VideoPlayer>
+                <footer>skynews.com</footer>
             </div>
         );
     }

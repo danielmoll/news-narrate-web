@@ -36,8 +36,26 @@ body {
     text-align: left;
 }
 
+footer {
+    border-top: 1px solid #ddd;
+    clear: both;
+    color: $textgrey;
+    font-family: SkyTextMedium;
+    display: block;
+    margin-top: 15px;
+    padding: 15px;
+    text-align: right;
+    width: 100%;
+}
+
 @media (min-width: 769px) {
     body {
         font-size: 17px;
+    }
+}
+
+@media (min-width: 900px) {
+    footer {
+        padding: 15px 0;
     }
 }
