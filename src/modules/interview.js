@@ -21,7 +21,8 @@ class Interview extends React.Component {
             image,
             quote = interviewData.quote,
             name = interviewData.name,
-            iconState = (this.state.expanded) ? 'icon icon--collapse' : 'icon icon--expand',
+            iconState,
+            expandable = false,
             expandedIcon,
             location,
             locatinText,
@@ -33,12 +34,25 @@ class Interview extends React.Component {
             image = <Image data={imageUrl} classNames="interview__interviewee" />
         }
 
-        if (this.props.data.expanded || this.state.expanded) {
-            text = <p className="interview__text">{ interviewData.text }</p>
-            videos = <div className="interview__videos"><Videos data={ {ids: interviewData.videos, videos: this.props.data.globalData.videos} }></Videos></div>
+        if (interviewData.text || interviewData.videos) {
+            expandable = true;
         }
 
-        if (!this.props.data.expanded) {
+        if (this.props.data.expanded || this.state.expanded) {
+            if (interviewData.text) {
+                text = <p className="interview__text">{ interviewData.text }</p>
+            }
+
+            if (interviewData.videos) {
+                videos = <div className="interview__videos"><Videos data={ {ids: interviewData.videos, videos: this.props.data.globalData.videos} }></Videos></div>
+            }
+        }
+
+        if (expandable) {
+            iconState = (this.state.expanded) ? 'icon icon--collapse' : 'icon icon--expand'
+        }
+
+        if (expandable && !this.props.data.expanded) {
             expandedIcon = <div className="interview__button" onClick={this.handleClick}><span className={iconState}></span></div>
         }
 
