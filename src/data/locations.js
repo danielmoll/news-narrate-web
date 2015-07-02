@@ -26,16 +26,6 @@ var locations = {
         locationImg: "http://www.travelstay.com/images/1447707/1/Bank_Tube_Station.jpg",
         scene: '-Jsk3b-7kQcTtIAVlX0O'
     },
-    'kingscross': {
-        coordinates: {
-            x: -43,
-            y: -123
-        },
-
-        locationName: "King's Cross",
-        locationImg: "http://www.travelstay.com/images/1447707/1/Bank_Tube_Station.jpg",
-        scene: '-Jsk5UjHsz1Ei3gMySsY'
-    },
     'tavistocksquare': {
         coordinates: {
             x: -83,
