@@ -31,8 +31,14 @@ class Share extends React.Component {
     }
 
     render() {
+        var classes = 'share__list';
+
+        if (this.props.data.classNames) {
+            classes += ' ' + this.props.data.classNames;this.props.data.classNames;
+        }
+
         return (
-            <ul className="share__list share__list--right">
+            <ul className={ classes }>
                 <li>
                     <a className="share__social-link skycon--hover" target="_blank" href={this.facebookUrl()}>
                         <i aria-hidden="true" className="skycon skycon--facebook"></i>

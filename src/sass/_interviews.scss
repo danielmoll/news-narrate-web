@@ -1,3 +1,13 @@
+.interviews {
+	.interview:first-child {
+		margin-top: 20px;
+	}
+
+	.interview:last-child {
+		margin-bottom: 20px;
+	}
+}
+
 .interview {
 	background: white;
 	overflow: hidden;
@@ -61,12 +71,7 @@
 	margin-top: 20px;
 }
 
-.interviews {
-	.interview:first-child {
-		margin-top: 20px;
-	}
-
-	.interview:last-child {
-		margin-bottom: 20px;
-	}
+.interview .share__list{
+	margin-top: 10px;
 }
+

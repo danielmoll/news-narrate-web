@@ -109,7 +109,7 @@ class Narrate extends React.Component {
             <div>
                 <div className="header">
                     <a className="header__logo" href="http://news.sky.com/">go to...</a>
-                    <Share/>
+                    <Share data={ {classNames:'share__list--right'} }/>
                 </div>
 
                 <Menu data={ route }></Menu>
