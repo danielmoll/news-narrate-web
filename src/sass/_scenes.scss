@@ -1,6 +1,14 @@
 section.scenes {
     position: relative;
     padding-top: 1rem;
+}
+
+.scene {
+    clear: both;
+    padding-bottom: 1rem;
+    position: relative;
+    width: 100%;
+    z-index: 10;
 
     &:before {
         border-right: 1px dotted $darkBg;
@@ -11,14 +19,12 @@ section.scenes {
         left: 25px;
         z-index: 0;
     }
-}
 
-.scene {
-    clear: both;
-    margin-bottom: 1rem;
-    position: relative;
-    width: 100%;
-    z-index: 10;
+    &:last-child {
+        &:before {
+            border: none;
+        }
+    }
 }
 
 .scene:last-child {
