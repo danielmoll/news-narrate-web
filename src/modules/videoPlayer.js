@@ -86,12 +86,24 @@ class VideoPlayer extends React.Component {
         window.removeEventListener('resize', this._handleResize);
     }
 
+    adjustedVideoSource() {
+        var src = videoOptions.src;
+        var width = window.innerWidth;
+        if (width > 1000) {
+            return src;
+        } else if (width > 600) {
+            return src.replace('upload/','upload/c_scale,q_60,w_600/')
+        } else {
+            return src.replace('upload/','upload/c_scale,q_60,w_400/')
+        }
+    }
+
     render() {
         return (
             <div className='video-player' ref='master'>
                 <div className='video-player__overlay' ref='overlay' onClick={this._handleClose}></div>
                 <video ref="player" width={this.state.vidWidth} id='video-player' className="video-player__player" preload='metadata' controls>
-                    <source src={videoOptions.src} type={videoOptions.type} id="videoSource" />
+                    <source src={this.adjustedVideoSource()} type={videoOptions.type} id="videoSource" />
                 </video>
             </div>
         )
