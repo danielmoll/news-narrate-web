@@ -10,10 +10,13 @@
 
 .interview {
 	background: white;
-	cursor: pointer;
 	overflow: hidden;
 	margin-bottom: 20px;
 	padding: 15px;
+}
+
+.interview--expandable {
+	cursor: pointer;
 }
 
 .interview__body {

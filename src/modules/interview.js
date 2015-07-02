@@ -24,6 +24,7 @@ class Interview extends React.Component {
             name = 'Sky News: London Bombings 7-7 - Interview of ' + interviewData.name,
             shareTitle = name,
             expandable = false,
+            classNames = 'interview',
             expandedIcon,
             iconState,
             image,
@@ -51,6 +52,7 @@ class Interview extends React.Component {
         }
 
         if (expandable) {
+            classNames += ' interview--expandable';
             iconState = (this.state.expanded) ? 'icon icon--collapse' : 'icon icon--expand'
         }
 
@@ -72,7 +74,7 @@ class Interview extends React.Component {
         }
 
         return  (
-            <article className="interview" onClick={this.handleClick}>
+            <article className={ classNames } onClick={this.handleClick}>
                 { expandedIcon }
                 { image }
 
