@@ -46,6 +46,14 @@ footer {
     padding: 15px;
     text-align: right;
     width: 100%;
+
+    a,
+    a:active,
+    a:hover,
+    a:visited {
+        color: $textgrey;
+        text-decoration: none;
+    }
 }
 
 @media (min-width: 769px) {
