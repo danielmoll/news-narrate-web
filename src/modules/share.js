@@ -34,15 +34,20 @@ class Share extends React.Component {
         return "https://twitter.com/intent/tweet?url=" + this.urlEncoded() + ";text=" + this.titleEncoded();
     }
 
-    handleTwitterShare() {
-       this.handleShare('Twitter');
+    handleTwitterShare(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        this.handleShare('Twitter');
     }
 
     handleFacebookShare() {
+        e.preventDefault();
+        e.stopPropagation();
         this.handleShare('Facebook');
     }
 
     handleShare(network) {
+
         window.ga('send', 'event', 'share', network, this.title());
     }
 

@@ -10,7 +10,9 @@ class Interview extends React.Component {
         this.state = { expanded: false };
     }
 
-    handleClick() {
+    handleClick(e) {
+        e.preventDefault();
+        e.stopPropagation();
         this.setState({ expanded: !this.state.expanded });
     }
 
@@ -53,7 +55,7 @@ class Interview extends React.Component {
         }
 
         if (expandable && !this.props.data.expanded) {
-            expandedIcon = <div className="interview__button" onClick={this.handleClick}><span className={iconState}></span></div>
+            expandedIcon = <div className="interview__button"><span className={iconState}></span></div>
         }
 
         if (interviewData.location) {
@@ -70,7 +72,7 @@ class Interview extends React.Component {
         }
 
         return  (
-            <article className="interview">
+            <article className="interview" onClick={this.handleClick}>
                 { expandedIcon }
                 { image }
 
