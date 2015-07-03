@@ -49,7 +49,19 @@ class Map extends React.Component {
             scale = 1,
             mapBgWidth = 1000,
             mapBgHeight = 500,
+            mobileBreakpoint = 768,
             mapMaxHeightDesktop = 400,
+            // Arbitrary offset from top/bottom edges...
+            verticalEdgeOffset = 80,
+            // Offset to increase the height of the map on < 768 width
+            //  which makes space for the data at the top.
+            // Random/trial-error defined.
+            verticalMobileExtend = 30,
+            // Arbitrary offset from left/right edges...
+            horizontalEdgeOffset = 150,
+            markerUnselectedHalfSize = 20,
+            markerSelectedHalfSize = 30,
+            markerHalfSizeDifference = markerSelectedHalfSize - markerUnselectedHalfSize,
             markersMinX = 0,
             markersMaxX = 0,
             markersMinY = 0,
@@ -63,6 +75,8 @@ class Map extends React.Component {
             style;
 
         for (var i in locations) {
+            // Horrible hack to identify the marker
+            //  to show as selected by default
             if (i === 'default') {
                 continue;
             }
@@ -70,24 +84,27 @@ class Map extends React.Component {
             var x = locations[i].coordinates.x,
                 y = locations[i].coordinates.y;
 
+            // Map coordinates [0,0] is at the top, center
+            //  of the map.
+            // A marker on the left of the map will have
+            //      x < 0
+            // A marker on the right of the map will have
+            //      x > 0
+            // All markers have y > 0 (min === 0)
             markersMinX = markersMinX > x ? x : markersMinX;
             markersMaxX = markersMaxX < x ? x : markersMaxX;
             markersMaxY = markersMaxY < y ? y : markersMaxY;
         }
 
-        if (markersMaxX > Math.abs(markersMinX)) {
-            widthNeeded = 2 * markersMaxX;
-        } else {
-            widthNeeded = 2 * Math.abs(markersMinX);
-        }
+        widthNeeded = 2 * Math.max(markersMaxX, Math.abs(markersMinX));
 
-        widthNeeded += 150; // arbitrary offset from edges...
-        heightNeeded = markersMaxY + 80; // arbitrary offset from edges...
+        widthNeeded += horizontalEdgeOffset;
+        heightNeeded = markersMaxY + verticalEdgeOffset;
 
-        if (window.innerWidth > 768) {
+        if (window.innerWidth > mobileBreakpoint) {
             heightNeeded = heightNeeded > mapMaxHeightDesktop ? mapMaxHeightDesktop : heightNeeded;
         } else {
-            offset = 30;
+            offset = verticalMobileExtend;
         }
 
         scale = state.containerWidth / widthNeeded;
@@ -99,7 +116,8 @@ class Map extends React.Component {
             'height': (heightNeeded * scale) + offset + 'px'
         }
 
-        if (window.innerWidth < 768) {
+        // Applying the vertical offset if needed.
+        if (window.innerWidth < mobileBreakpoint) {
             containerStyle['backgroundPosition'] = '50% ' + offset + 'px';
         }
 
@@ -110,6 +128,8 @@ class Map extends React.Component {
             }
 
             for (var i in locations) {
+                // Horrible hack to identify the marker
+                //  to show as selected by default
                 if (i === 'default') {
                     continue;
                 }
@@ -118,11 +138,11 @@ class Map extends React.Component {
                     selected = state.selected === i,
                     classNames = 'map__marker' + (selected ? ' map__marker--selected' : '');
 
-                // The -20 below are 1/2 the markers widht and heights, as they should
-                //  be centered on the given coordinates.
+                // The -markerUnselectedHalfSize below are 1/2 the markers widht
+                //  and heights, as they should be centered on the given coordinates.
                 style = {
-                    left: (state.containerWidth / 2 + loc.coordinates.x  * scale) - 20 - (selected ? 10 : 0),
-                    top: (loc.coordinates.y * scale) + offset - 20 - (selected ? 10 : 0)
+                    left: (state.containerWidth / 2 + loc.coordinates.x  * scale) - markerUnselectedHalfSize - (selected ? markerHalfSizeDifference : 0),
+                    top: (loc.coordinates.y * scale) + offset - markerUnselectedHalfSize - (selected ? markerHalfSizeDifference : 0)
                 };
 
                 markers.push(<a className={ classNames } style={ style } onClick={ this._handleClick.bind(this, i) }  key={ 'marker' + i }></a>);
