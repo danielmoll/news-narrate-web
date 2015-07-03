@@ -34,6 +34,7 @@
     "browser-sync": "^2.7.12",
     "lodash": "^3.9.3",
     "react": "^0.13.3",
+    "react-document-meta": "^0.1.4",
     "react-sticky": "^2.3.0"
   }
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
+import DocumentMeta from 'react-document-meta';
 
 import Map from './modules/map'
 import Interviews from './modules/interviews'
@@ -91,6 +92,15 @@ class Narrate extends React.Component {
     }
 
     render() {
+        const metaData = {
+            title: 'July 7 bombings - Timeline and key interviews',
+            canonical: 'http://narrate.news.sky.com/london7-7',
+            meta: {
+                charset: 'utf-8',
+                'og:image': '',
+            }
+        };
+
         var route = this.state.route || '/timeline',
             template = this.getTemplate(route),
             Content = template.module,
@@ -98,6 +108,7 @@ class Narrate extends React.Component {
 
         return (
             <div>
+                <DocumentMeta {...metaData} />
                 <div className="header">
                     <a className="header__logo" href="http://news.sky.com/">go to...</a>
                     <Share data={ {classNames:'share__list--right'} }/>
