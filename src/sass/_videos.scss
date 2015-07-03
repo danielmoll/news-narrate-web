@@ -12,6 +12,7 @@
 }
 
 .videos__video {
+    cursor: pointer;
     display: table-row;
     margin: 0;
 
@@ -66,7 +67,6 @@
     // reset browser styles
     background: none;
     border: none;
-    cursor: pointer;
     // include our own
     @include spriteBg;
     background-position: 0 -90px;
