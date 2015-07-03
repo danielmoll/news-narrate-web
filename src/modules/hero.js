@@ -9,7 +9,7 @@ class Hero extends React.Component {
             </video>
             <div className="hero__content">
                 <h1 className="hero__title">7 / 7 ten years on</h1>
-                <p className="hero__text">On July 7 2005, four suicide bombers attacked central London, killing 52 people and injuring hundreds more.</p>
+                <p className="hero__text">On 7 July, 2005, four suicide bombers attacked London killing 52 people. Watch the survivors’ stories and see how the day unfolded.</p>
             </div>
         </section>
     }

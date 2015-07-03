@@ -87,7 +87,7 @@ class Map extends React.Component {
         if (window.innerWidth > 768) {
             heightNeeded = heightNeeded > mapMaxHeightDesktop ? mapMaxHeightDesktop : heightNeeded;
         } else {
-            offset = 50;
+            offset = 30;
         }
 
         scale = state.containerWidth / widthNeeded;
@@ -143,7 +143,7 @@ class Map extends React.Component {
 
         return (
             <div className="map">
-                <div className="map__container" ref="container" style={containerStyle}>{ markers }<div className="map__title-bg"><h2 className="map__title">Explore the map of central London bombs blasts</h2></div></div>
+                <div className="map__container" ref="container" style={containerStyle}>{ markers }<div className="map__title-bg"><h2 className="map__title">Explore the locations</h2></div></div>
                 { scenesOut }
             </div>
         );
