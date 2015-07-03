@@ -92,19 +92,22 @@ class Narrate extends React.Component {
     }
 
     render() {
+        var route = this.state.route || '/timeline',
+            template = this.getTemplate(route),
+            Content = template.module,
+            id = template.id || 'all',
+            pageTitle = 'July 7 bombings - Timeline and key interviews';
+
+
         const metaData = {
-            title: 'July 7 bombings - Timeline and key interviews',
+            title: pageTitle,
             canonical: 'http://narrate.news.sky.com/london7-7',
             meta: {
                 charset: 'utf-8',
                 'og:image': '',
+                'og:title': pageTitle
             }
         };
-
-        var route = this.state.route || '/timeline',
-            template = this.getTemplate(route),
-            Content = template.module,
-            id = template.id || 'all';
 
         return (
             <div>

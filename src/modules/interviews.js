@@ -26,18 +26,21 @@ class Interviews extends React.Component {
             interviews.push(<Interview data={ {interview: propInterviews[id], globalData: this.props.data, expanded: true} } key={ 'interview_' + id} />)
         } else {
 
-            _.forEach(_.sortBy(propInterviews, 'order'), function (interview, key) {
+            _.forEach(propInterviews, function (interview, key) {
                 if (interview) {
                     interview.id = key;
                     interviews.push(<Interview data={ {interview: interview, globalData: this.props.data} } key={ 'interview_' + key }/>);
                 }
             }.bind(this));
+
+            propInterviews = _.sortBy(propInterviews, 'order');
         }
 
         const metaData = {
             title: newDocTitle || this.state.title,
             meta: {
-                "og:image": ogImage || ''
+                'og:image': ogImage || '',
+                'og:title': newDocTitle || this.state.title
             },
             extend: true
         };

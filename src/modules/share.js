@@ -40,7 +40,7 @@ class Share extends React.Component {
         this.handleShare('Twitter');
     }
 
-    handleFacebookShare() {
+    handleFacebookShare(e) {
         e.preventDefault();
         e.stopPropagation();
         this.handleShare('Facebook');
