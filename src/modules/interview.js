@@ -22,7 +22,7 @@ class Interview extends React.Component {
             imageUrl = (interviewData.thumbnail) ? interviewData.thumbnail : false,
             quote = interviewData.quote,
             name = interviewData.name,
-            shareTitle = 'Sky News: London Bombings 7-7 - Interview of ' + name,
+            shareTitle = 'July 7 bombings - Sky News speaks to ' + name,
             expandable = false,
             classNames = 'interview__body',
             expandedIcon,
@@ -67,8 +67,6 @@ class Interview extends React.Component {
             if (!locationText) {
                 locationText = interviewData.location
             }
-
-            shareTitle += ' - ' + locationText;
 
             locationElt = <div className="interview__location">{locationText}</div>
         }
