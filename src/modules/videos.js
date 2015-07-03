@@ -11,9 +11,9 @@ class Videos extends React.Component {
         var width = window.innerWidth;
 
         if (width < 600) {
-            return src.replace('upload/','upload/vc_auto,q_50/');
+            return src.replace('upload/','upload/vc_auto,q_80,c_scale,h_225,w_400/');
         } else if (width < 800) {
-            return src.replace('upload/','upload/vc_auto,q_60/');
+            return src.replace('upload/','upload/vc_auto,q_80,c_scale,h_450,w_800/');
         } else {
             return src.replace('upload/','upload/vc_auto/');
         }
