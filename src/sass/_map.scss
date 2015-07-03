@@ -3,8 +3,10 @@
 }
 
 .map__container {
+    background-color: #262730;
     background-image: url('/build/img/mapBg.jpg');
     background-position: center top;
+    background-repeat: no-repeat;
     background-size: 1000px 500px;
     height: 400px;
     margin-bottom: 1rem;
