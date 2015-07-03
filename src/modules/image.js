@@ -7,11 +7,11 @@ class Image extends React.Component {
         if (width > 1000) {
             return src.replace('upload/', 'upload/q_80/');
         } else if (width > 800) {
-            return src.replace('upload/', 'upload/q_80/');
+            return src.replace('upload/', 'upload/c_scale,w_800,q_80/');
         } else if (width > 600) {
-            return src.replace('upload/', 'upload/q_60/');
+            return src.replace('upload/', 'upload/c_scale,w_600,q_80/');
         } else {
-            return src.replace('upload/', 'upload/q_50/');
+            return src.replace('upload/', 'upload/c_scale,w_500,q_80/');
         }
     }
 
