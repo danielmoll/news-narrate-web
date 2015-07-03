@@ -7,17 +7,15 @@ class Videos extends React.Component {
         this.state = { showVideo: false };
     }
 
-
     adjustedVideoSource(src) {
         var width = window.innerWidth;
-        if (width > 1000) {
-            return src.replace('upload/','upload/vc_auto/');
-        } else if (width > 800) {
-            return src.replace('upload/','upload/vc_auto,c_scale,q_60,w_800/');
-        } else if (width > 600) {
-            return src.replace('upload/','upload/vc_auto,c_scale,q_50,w_600/');
+
+        if (width < 600) {
+            return src.replace('upload/','upload/vc_auto,q_50/');
+        } else if (width < 800) {
+            return src.replace('upload/','upload/vc_auto,q_60/');
         } else {
-            return src.replace('upload/','upload/vc_auto,c_scale,q_50,w_400/');
+            return src.replace('upload/','upload/vc_auto/');
         }
     }
 
@@ -75,7 +73,7 @@ class Videos extends React.Component {
         this.playerContainer.hide();
     }
 
-    render () {
+    render() {
 
         var videoIds = this.props.data.ids,
             videos = [],
