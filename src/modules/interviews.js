@@ -25,7 +25,8 @@ class Interviews extends React.Component {
             ogImage = propInterviews[id].thumbnail;
             interviews.push(<Interview data={ {interview: propInterviews[id], globalData: this.props.data, expanded: true} } key={ 'interview_' + id} />)
         } else {
-            _.forEach(propInterviews, function (interview, key) {
+
+            _.forEach(_.sortBy(propInterviews, 'order'), function (interview, key) {
                 if (interview) {
                     interview.id = key;
                     interviews.push(<Interview data={ {interview: interview, globalData: this.props.data} } key={ 'interview_' + key }/>);
