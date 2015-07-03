@@ -24,6 +24,25 @@ section.hero {
     transform: translateX(-50%) translateY(-50%);
 }
 
+.hero__content {
+    background-image: url('/build/img/heroContentBg.png');
+    bottom: 0;
+    font-size: 14px;
+    left: 0;
+    margin: 0;
+    position: absolute;
+    padding: 60px 25px 25px;
+    right: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.hero__title,
+.hero__text {
+    margin: 0 auto;
+    max-width: 315px;
+}
+
 .hero__title {
     font-size: 30px;
     margin-bottom: 22px;
@@ -31,22 +50,8 @@ section.hero {
     white-space: nowrap;
 }
 
-.hero__content {
-    bottom: 20px;
-    font-size: 14px;
-    left: 0;
-    margin: 0 auto;
-    position: absolute;
-    padding: 0;
-    right: 0;
-    text-align: center;
-    max-width: 315px;
-    width: 100%;
-}
-
 .hero__text {
     line-height: 19px;
-    margin-bottom: 15px;
     padding: 0 48px;
 }
 
