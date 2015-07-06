@@ -1,3 +1,9 @@
+@mixin heroBg {
+    .hero__content {
+        background-image: url('/build/img/heroContentBg.png');
+    }
+}
+
 section.hero {
     color: #fff;
     min-height: 370px;
@@ -77,7 +83,40 @@ section.hero {
         display: none;
     }
 
-    .hero__content {
-        background-image: url('/build/img/heroContentBg.png');
-    }
+    @include heroBg;
+}
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+    @include heroBg;
+
+}
+
+/* ----------- iPad 1 and 2 ----------- */
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+    @include heroBg;
+}
+
+/* ----------- iPad 3 and 4 ----------- */
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    @include heroBg;
 }
