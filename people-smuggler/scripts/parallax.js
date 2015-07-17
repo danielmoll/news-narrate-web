@@ -32,7 +32,8 @@ function calculateTransform(el) {
 	if (!el.parentNode._inView) return;
 
 	var parent = el.parentNode,
-		parentTop = parent.offsetTop - window.scrollY,
+		boundingRect = parent.getBoundingClientRect();
+		parentTop = boundingRect.top,
 		height = el.offsetHeight;
 
 	el.style.transform = 'translateY(' + Math.round((((parentTop + (el.parentNode.offsetHeight / 2)) / currentViewportHeight) * height) - (height - 150)) + 'px)';

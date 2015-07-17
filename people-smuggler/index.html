@@ -6,24 +6,31 @@
 		<link href="css/main.css" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
-	<body>
+	<body id="top">
+
+		<div class="header">
+			<a href="http://news.sky.com/" class="header__link"><img class="header__logo" src="images/sky_news_logo.svg"></a>
+
+			<ul class="header__list">
+				<li class="header__item">
+					<a href="#" class="header__link"><img class="header__social-icon" src="images/twitter.svg"></a>
+				</li>
+				<li class="header__item">
+					<a href="#" class="header__link"><img class="header__social-icon" src="images/facebook.svg"></a>
+				</li>
+			</ul>
+		</div>
+
 		<div class="hero">
 
-			<div class="hero__header">
-				<a href="http://news.sky.com/" class="hero__link"><img class="hero__logo" src="images/sky_news_logo.svg"></a>
+			<div class="hero__media js-in-view">
+				<div class="image image--4x3">
+					<img class="image__item" src="http://res.cloudinary.com/skynews/image/upload/c_scale,w_362/v1437138693/narrate-people-smuggler/face1.jpg" data-template="http://res.cloudinary.com/skynews/image/upload/c_scale,w_{width}/v1437138693/narrate-people-smuggler/face1.jpg" data-sizes="362x270 589x442 750x563 1500x1126">
+				</div>
 
-				<ul class="hero__list">
-					<li class="hero__item">
-						<a href="#" class="hero__link"><img class="hero__social-icon" src="images/twitter.svg"></a>
-					</li>
-					<li class="hero__item">
-						<a href="#" class="hero__link"><img class="hero__social-icon" src="images/facebook.svg"></a>
-					</li>
-				</ul>
-			</div>
-
-			<div class="image image--16x9">
-				<img class="image__item" src="http://res.cloudinary.com/skynews/image/upload/c_scale,w_362/v1437043861/narrate-people-smuggler/title.jpg" data-template="http://res.cloudinary.com/skynews/image/upload/c_scale,w_{width}/v1437043861/narrate-people-smuggler/title.jpg" data-sizes="362x204 762x428 942x530 1600x900">
+				<div class="image image--4x3 image--face-replace image--fade-in">
+					<img class="image__item" src="http://res.cloudinary.com/skynews/image/upload/c_scale,w_362/v1437138693/narrate-people-smuggler/face2.jpg" data-template="http://res.cloudinary.com/skynews/image/upload/c_scale,w_{width}/v1437138693/narrate-people-smuggler/face2.jpg" data-sizes="362x270 589x442 750x563 1500x1126">
+				</div>
 			</div>
 
 			<h1 class="hero__title"><span class="hero__title-bold">People Smuggler:</span><span class="hero__title-full-width">World's Most Wanted</span></h1>
@@ -34,18 +41,47 @@
 
 			<div class="scene scene--map">
 				<div class="scene__inner">
-					<h2 class="scene__title">Intro</h2>
-					<div class="image image--4x3">
-						<img class="image__item" src="http://res.cloudinary.com/skynews/image/upload/c_scale,w_362/v1437129670/narrate-people-smuggler/map.jpg" data-template="http://res.cloudinary.com/skynews/image/upload/c_scale,w_{width}/v1437129670/narrate-people-smuggler/map.jpg" data-sizes="362x270 589x442 750x563 1500x1126">
+					<h2 class="scene__title">Introduction</h2>
+					<div class="scene__media">
+						<div class="image image--4x3">
+							<img class="image__item" src="http://res.cloudinary.com/skynews/image/upload/c_scale,w_362/v1437129670/narrate-people-smuggler/map.jpg" data-template="http://res.cloudinary.com/skynews/image/upload/c_scale,w_{width}/v1437129670/narrate-people-smuggler/map.jpg" data-sizes="362x270 589x442 750x563 1500x1126">
+						</div>
 					</div>
 				</div>
 			</div>
+
+			<nav class="navigation js-navigation">
+				<div class="navigation__header">
+					<div class="navigation__table">
+						<div class="navigation__table-row">
+							<div class="navigation__table-cell">
+								<button class="navigation__heading js-navigation-expand">Explore Locations <span class="icon icon--navigation-heading"><i class="icon__item icon__item--chevron-down"></i></span></button>
+							</div>
+							<div class="navigation__table-cell">
+								<a class="navigation__top" href="#top">Top <span class="icon icon--circle"><i class="icon__item icon__item--chevron-up"></i></span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<ol class="navigation__list js-navigation-list">
+					<li class="navigation__item"><a class="navigation__link" href="#">Khartoum</a></li>
+					<li class="navigation__item"><a class="navigation__link" href="#">Kufra</a></li>
+					<li class="navigation__item"><a class="navigation__link" href="#">Benghazi</a></li>
+					<li class="navigation__item"><a class="navigation__link" href="#">Tripoli</a></li>
+					<li class="navigation__item"><a class="navigation__link" href="#">Zuwara</a></li>
+					<li class="navigation__item"><a class="navigation__link" href="#">Lampedusa</a></li>
+				</ol>
+			</nav>
 
 			<div class="scene scene--1">
 				<div class="scene__inner">
 					<h2 class="scene__title">Khartoum</h2>
 					<div class="scene__media">
-						<video class="video" src="http://video.news.sky.com/video/h264/vod/700/2015/07/DIGI091347WEPEOPLESMUGGLERPROMONEXT150715091517381436948130738700.mp4" controls></video>
+						<div class="video">
+							<video class="video__item" src="http://video.news.sky.com/video/h264/vod/700/2015/07/DIGI091347WEPEOPLESMUGGLERPROMONEXT150715091517381436948130738700.mp4" controls></video>
+							<div class="video__caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum et lectus eget aliquet.</div>
+						</div>
 					</div>
 					<div class="scene__text">The start of the journey.</div>
 				</div>
@@ -162,7 +198,7 @@
 
 			<div class="scene scene--5">
 				<div class="scene__inner">
-					<h2 class="scene__title">Suwazar</h2>
+					<h2 class="scene__title">Zuwara</h2>
 					<div class="scene__media">
 						<div class="image image--16x9">
 							<img class="image__item" src="http://res.cloudinary.com/skynews/image/upload/c_scale,w_362/v1437060284/placeholder.jpg" data-template="http://res.cloudinary.com/skynews/image/upload/c_scale,w_{width}/v1437060284/placeholder.jpg" data-sizes="362x204 762x428 942x530 1600x900">
