@@ -5,3 +5,4 @@ node_modules
 .divshot-cache
 .DS_Store
 *.swp
+people-smuggler/scripts/bundle.js
