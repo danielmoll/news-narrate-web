@@ -1,6 +1,7 @@
 (function() {
 	require('./detect');
 	require('./images');
+	require('./video');
 	require('./parallax');
 	require('./in-view');
 	require('./navigation');
