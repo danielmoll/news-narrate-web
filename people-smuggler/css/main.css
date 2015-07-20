@@ -602,6 +602,18 @@ a, a:hover {
 	top: calc(50% - 0.5em);
 }
 
+/* Footer */
+
+.footer {
+	border-top: 1px solid #ccc;
+	padding: 0 .5rem .5rem .5rem;
+	margin: 2rem 0;
+}
+
+.footer__text {
+	color: #ccc;
+}
+
 /* Media Queries */
 
 @media (min-width: 30em) { /* 480px */
@@ -734,6 +746,14 @@ a, a:hover {
 		padding-top: 5%;
 		height: 0;
 		clear: both;
+	}
+
+	.footer {
+		width: 100%;
+		max-width: 1000px;
+		margin-top: 4rem;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 
