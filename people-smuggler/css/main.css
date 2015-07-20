@@ -458,7 +458,7 @@ a, a:hover {
 
 .navigation__list {
 	overflow: hidden;
-	padding: 0 0 1rem 1rem;
+	padding: 0 1rem 1rem 1rem;
 }
 
 .navigation__item {
@@ -466,10 +466,19 @@ a, a:hover {
 	width: 100%;
 }
 
+.navigation__item--last {
+	display: none;
+}
+
 .navigation__link {
 	display: block;
 	color: black;
-	padding: .5rem;
+	padding: .7rem;
+}
+
+.navigation__link:hover {
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
 }
 
 .navigation--active .icon__item--chevron-down {
@@ -575,6 +584,13 @@ a, a:hover {
 	/* navigation */
 	.navigation {
 		text-align: center;
+		padding: 1rem;
+	}
+
+	.navigation__inner {
+		max-height: inherit;
+		-webkit-transition: none;
+				transition: none;
 	}
 
 	.navigation__header {
@@ -582,15 +598,22 @@ a, a:hover {
 	}
 
 	.navigation__list {
-		display: inline-block;
+		display: table;
 		width: 100%;
+		padding: 0;
 	}
 
 	.navigation__item {
-		float: left;
-		display: inline-block;
-		width: calc(100% / 6);
+		float: none;
+		width: auto;
+		display: table-cell;
 		font-size: 1.2rem;
+		vertical-align: middle;
+		text-align: center;
+	}
+
+	.navigation__item--last .navigation__top {
+		margin-top: 4px;
 	}
 
 	.hero__title {
@@ -617,6 +640,7 @@ a, a:hover {
 
 	.navigation__list {
 		max-width: 80%;
+		margin: 0 auto;
 	}
 }
 
