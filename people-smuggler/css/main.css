@@ -29,7 +29,9 @@ body {
 }
 
 .icon__item--chevron-down {
-	transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+		-ms-transform: rotate(180deg);
+			transform: rotate(180deg);
 	background-image: url('../images/arrow.png');	
 }
 
@@ -142,6 +144,7 @@ a, a:hover {
 
 .image--face-replace {
 	opacity: 0;
+	-webkit-transition: opacity 3s;
 	transition: opacity 3s;
 	position: absolute;
 	top: 0;
@@ -390,7 +393,17 @@ a, a:hover {
 
 /* Main navigation */
 .navigation {
+	overflow: hidden;
 	background: #efefef;
+	margin: 10px 0;
+}
+
+.navigation__inner {
+	overflow: hidden;
+	max-height: 0;
+
+	-webkit-transition: max-height .8s ease-in-out;
+			transition: max-height .8s ease-in-out;
 }
 
 .navigation__header {
@@ -445,7 +458,7 @@ a, a:hover {
 
 .navigation__list {
 	overflow: hidden;
-	display: none;
+	padding: 0 0 1rem 1rem;
 }
 
 .navigation__item {
@@ -459,18 +472,18 @@ a, a:hover {
 	padding: .5rem;
 }
 
-.navigation--active {}
-
 .navigation--active .icon__item--chevron-down {
-	transform: rotate(0deg);
+	-webkit-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+			transform: rotate(0deg);
 }
 
-.navigation--active .navigation__list {
-	display: block;
-	padding: 0 1rem 1rem 1rem;
+.navigation--active .navigation__inner {
+	max-height: 600px;
 }
 
 .navigation--sticky {
+	margin: 0;
 	position: fixed;
 	top: 0;
 	left: 0;
