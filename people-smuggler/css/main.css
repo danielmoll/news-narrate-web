@@ -255,11 +255,11 @@ a, a:hover {
 	background-repeat: no-repeat;
 	overflow: hidden;
 	position: relative;
+	clear: both;
 }
 
 .scene--4x3 {
-	padding-top: 75%;
-	height: 0;
+	min-height: 75vw;
 }
 
 .scene--4x3 .scene__title {
@@ -269,13 +269,19 @@ a, a:hover {
 	width: 100%;
 }
 
+.scene__inner {
+	position: relative;
+}
+
 .scene__title {
 	text-align: center;
 	text-transform: uppercase;
 	font-family: SkyTextMedium;
 	font-size: 8vw;
 	margin: 0;
-
+	position: relative;
+	background: rgba(255,255,255, 0.5);
+	margin-bottom: 5%;
 }
 
 .scene__leader {
@@ -289,7 +295,8 @@ a, a:hover {
 
 .scene__text {
 	font-size: 1.2rem;
-	padding: 1em;
+	padding: 0;
+	margin: 0 0 1em 0;
 }
 
 .scene__text--translucent {
@@ -300,6 +307,8 @@ a, a:hover {
 	background-position: center center;
 	background-size: cover;
 }
+
+
 
 .scene--map {
 }
@@ -601,12 +610,60 @@ a, a:hover {
 		width: 25%;
 	}
 
+	.scene__media {
+		padding: 10px;
+		background-color: rgba(255,255,255,0.5);
+	}
+
+	.scene__media--left {
+		width: 50%;
+		float: left;
+	}
+
+	.scene__media--right {
+		width: 50%;
+		float: right;
+	}
+
+	.scene__media--full {
+		width: 100%;
+		clear: both;
+	}
+
+	.scene__overlay {
+		position: absolute;
+		width: 100%;
+	}
+
+	.scene__overlay--bottom {
+		bottom: 0;
+	}
+
+	.scene__overlay--middle {
+		top: 40%;
+	}
+
+	.scene__overlay--left {
+
+	}
+
+	.scene__background {
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+
 	/* scene text */
-	.scene__text--bottom-left {
+	.scene__text--bottom{
 		position: absolute;
 		bottom: 0;
-		left: 0;
-		width: 50%;
+		width: 100%;
+	}
+
+	.scene__spacer {
+		padding-top: 5%;
+		height: 0;
+		clear: both;
 	}
 }
 
