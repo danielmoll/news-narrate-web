@@ -288,6 +288,7 @@ a, a:hover {
 	background: white;
 	margin-bottom: 5%;
 	padding: 0 0 0 20px;
+	z-index: 10;
 }
 
 .scene__leader {
@@ -357,18 +358,18 @@ a, a:hover {
 }
 
 .map-overlay__item--benghazi {
-	padding-top: 14%;
-	left: 53%;
+	padding-top: 13%;
+	left: 56%;
 }
 
 .map-overlay__item--tripoli {
-	padding-top: 12%;
-	left: 37%;
+	padding-top: 11%;
+	left: 38%;
 }
 
 .map-overlay__item--zuwara {
-	padding-top: 12%;
-	left: 20%;
+	padding-top: 14%;
+	left: 19%;
 }
 
 .map-overlay__item--lampedusa {
