@@ -286,7 +286,7 @@ a, a:hover {
 	margin: 0;
 	position: relative;
 	background: white;
-	/*margin-bottom: 5%;*/
+	margin-bottom: 5%;
 	padding: 0 0 0 20px;
 }
 
@@ -322,7 +322,60 @@ a, a:hover {
 }
 
 
+
 .scene--map {
+}
+
+
+/* Map overlays */
+.map-overlay {
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.map-overlay__item {
+	
+	position: absolute;
+}
+
+.map-overlay__link {
+	background: black;
+	color: white;
+	text-transform: uppercase;
+	padding: 0.2vw 1vw;
+	letter-spacing: 0.5vw;
+	font-size: 3vw;
+}
+
+.map-overlay__item--khartoum {
+	padding-top: 60%;
+	left: 68%;
+}
+
+.map-overlay__item--kufra {
+	padding-top: 38%;
+	left: 53%;
+}
+
+.map-overlay__item--benghazi {
+	padding-top: 14%;
+	left: 53%;
+}
+
+.map-overlay__item--tripoli {
+	padding-top: 12%;
+	left: 37%;
+}
+
+.map-overlay__item--zuwara {
+	padding-top: 12%;
+	left: 20%;
+}
+
+.map-overlay__item--lampedusa {
+	padding-top: 3%;
+	left: 20%;
 }
 
 .scene--1 .scene__media {
