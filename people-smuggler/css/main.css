@@ -189,7 +189,7 @@ a, a:hover {
 
 .header__list {
 	float: right;
-	margin: 8px 10px 0 0;
+	margin: 18px 15px 0 0;
 }
 
 .header__item {
@@ -197,16 +197,16 @@ a, a:hover {
 }
 
 .header__item:first-child {
-	margin-right: 2vw;	
+	margin-right: 20px;	
 }
 
 .header__social-icon {
-	width: 44px;
-	height: 44px;
+	width: 22px;
+	height: 22px;
 	opacity: 0.6;
 }
 
-.header__link:hover .hero__social-icon {
+.header__link:hover .header__social-icon {
 	opacity: 1;
 }
 
@@ -563,27 +563,11 @@ a, a:hover {
 	}
 
 	.header {
-		height: 6vw;
 		position: absolute;
 		left: 0;
 		top: 0;
 		opacity: .8;
 		z-index: 1;
-	}
-
-	.header__logo {
-		margin: 1vw 0 0 10px;
-		height: 4vw;
-	}
-
-	.header__list {
-		float: right;
-		margin: 1vw 10px 0 0;
-	}
-
-	.header__social-icon {
-		width: 4vw;
-		height: 4vw;
 	}
 
 	.touch .segue--no-parallax {
