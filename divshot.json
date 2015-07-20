@@ -1,8 +1,9 @@
 {
-  "name": "narrate-web",
+  "name": "narrate",
   "root": "./",
   "clean_urls": true,
   "error_page": "error.html",
-  "exclude": ["node_modules"]
-
+  "exclude": [
+    "node_modules"
+  ]
 }
