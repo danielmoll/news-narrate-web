@@ -12,8 +12,6 @@ function handleClick() {
 function sticky() {
 	var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
 
-	console.log(scrollTop, stop);
-
 	if (scrollTop >= stop) {
 		navigation.classList.add('navigation--sticky');
 	} else {
