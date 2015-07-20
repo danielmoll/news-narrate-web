@@ -68,6 +68,7 @@ body {
 body {
 	font-family: SkyTextRegular;
 	font-size: 16px;
+	line-height: 1.4;
 }
 
 @font-face {
@@ -262,26 +263,27 @@ a, a:hover {
 	min-height: 75vw;
 }
 
-.scene--4x3 .scene__title {
+/*.scene--4x3 .scene__title {
 	position: absolute;
 	top: 0;
 	background: rgba(255,255,255, 0.5);
 	width: 100%;
-}
+}*/
 
 .scene__inner {
 	position: relative;
 }
 
 .scene__title {
-	text-align: center;
+	/*text-align: center;*/
 	text-transform: uppercase;
 	font-family: SkyTextMedium;
-	font-size: 8vw;
+	font-size: 4vw;
 	margin: 0;
 	position: relative;
-	background: rgba(255,255,255, 0.5);
-	margin-bottom: 5%;
+	background: white;
+	/*margin-bottom: 5%;*/
+	padding: 0 0 0 20px;
 }
 
 .scene__leader {
@@ -306,8 +308,8 @@ a, a:hover {
 .scene__media {
 	background-position: center center;
 	background-size: cover;
-		padding: 10px;
-		background-color: rgba(255,255,255,0.5);
+	padding: 20px;
+	background-color: white;
 }
 
 
@@ -643,6 +645,10 @@ a, a:hover {
 	.scene__media--right {
 		width: 50%;
 		float: right;
+	}
+
+	.scene__media--clear {
+		clear: both;
 	}
 
 	.scene__media--full {
