@@ -321,11 +321,9 @@ a, a:hover {
 	top: 0;
 }
 
-
-
-.scene--map {
+.touch .scene--video-background {
+	display: none;
 }
-
 
 /* Map overlays */
 .map-overlay {
