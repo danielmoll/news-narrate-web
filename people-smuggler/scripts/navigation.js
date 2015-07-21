@@ -12,7 +12,8 @@ placeholder.style.width = navigationPosition.width + 'px';
 placeholder.style.height = navigationPosition.height + 'px';
 
 function handleResize() {
-	navigationPosition = navigation.getBoundingClientRect();
+	if (!isAdded) return;
+	navigationPosition = placeholder.getBoundingClientRect();
 	navigationTop = navigationPosition.top + (document.body || document.documentElement).scrollTop;
 	placeholder.style.width = navigationPosition.width + 'px';
 	placeholder.style.height = navigationPosition.height + 'px';
@@ -21,11 +22,11 @@ function handleResize() {
 }
 
 function handleScroll() {
-	if (window.pageYOffset >= navigationTop && !isAdded) {
+	if (window.scrollY >= navigationTop && !isAdded) {
 		navigation.classList.add('navigation--sticky');
 		navigation.parentNode.insertBefore(placeholder, navigation);
 		isAdded = true;
-	} else if (window.pageYOffset < navigationTop && isAdded) {
+	} else if (window.scrollY < navigationTop && isAdded) {
 		navigation.classList.remove('navigation--sticky');
 		navigation.parentNode.removeChild(placeholder);
 		isAdded = false;

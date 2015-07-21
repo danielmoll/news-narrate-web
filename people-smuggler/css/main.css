@@ -457,7 +457,7 @@ a, a:hover {
 
 .motion-blur {
 	text-shadow: 0 2px 5px #666, 0 -2px 5px #666;
-	opacity: 0.9;
+	opacity: 0.8;
 }
 
 .no-touch .segue--parallax  {
