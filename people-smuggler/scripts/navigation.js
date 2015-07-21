@@ -2,6 +2,7 @@
 
 var navigation = document.querySelector('.navigation'),
 	navigationPosition = navigation.getBoundingClientRect(),
+	navigationTop = navigationPosition.top + (document.body || document.documentElement).scrollTop,
 	button = document.querySelector('.js-navigation-expand'),
 	navList = document.querySelector('.js-navigation-list'),
 	placeholder = document.createElement('div'),
@@ -10,23 +11,33 @@ var navigation = document.querySelector('.navigation'),
 placeholder.style.width = navigationPosition.width + 'px';
 placeholder.style.height = navigationPosition.height + 'px';
 
-function handleClick() {
-	navigation.classList.toggle('navigation--active');
+function handleResize() {
+	navigationPosition = navigation.getBoundingClientRect();
+	navigationTop = navigationPosition.top + (document.body || document.documentElement).scrollTop;
+	placeholder.style.width = navigationPosition.width + 'px';
+	placeholder.style.height = navigationPosition.height + 'px';
+
+	handleScroll();
 }
 
-function handleNavEvent() {
-	if (window.pageYOffset >= navigationPosition.top && !isAdded) {
+function handleScroll() {
+	if (window.pageYOffset >= navigationTop && !isAdded) {
 		navigation.classList.add('navigation--sticky');
 		navigation.parentNode.insertBefore(placeholder, navigation);
 		isAdded = true;
-	} else if (window.pageYOffset < navigationPosition.top && isAdded) {
+	} else if (window.pageYOffset < navigationTop && isAdded) {
 		navigation.classList.remove('navigation--sticky');
 		navigation.parentNode.removeChild(placeholder);
 		isAdded = false;
 	}
 }
 
-button.addEventListener('click', handleClick);
-window.addEventListener('scroll', handleNavEvent);
+function handleClick() {
+	navigation.classList.toggle('navigation--active');
+}
 
-handleNavEvent();
+button.addEventListener('click', handleClick);
+window.addEventListener('scroll', handleScroll);
+window.addEventListener('resize', handleResize);
+
+handleScroll();
