@@ -1,6 +1,7 @@
 test:
   pre:
     - gulp build
+    - pushd people-smuggler/ && . ./build.sh && popd
     - npm install -g divshot-cli
     - divshot push staging --token $DIVSHOT_TOKEN
-    - divshot purge staging
+    - divshot purge staging --token $DIVSHOT_TOKEN
