@@ -3,5 +3,6 @@ test:
     - gulp build
     - pushd people-smuggler/ && . ./build.sh && popd
     - npm install -g divshot-cli
+    - npm install -g uglifyjs
     - divshot push staging --token $DIVSHOT_TOKEN
     - divshot purge staging --token $DIVSHOT_TOKEN
