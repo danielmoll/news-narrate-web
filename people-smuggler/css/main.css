@@ -446,11 +446,23 @@ a, a:hover {
 .segue--parallax {
 	color: #666;
 	font-size: 5vw;
+
+}
+
+.parallax__list {
+	transition: text-shadow 0.2s, opacity 0.2s;
+	text-shadow: 0 0 0 #666;
+	opacity: 1;
+}
+
+.motion-blur {
+	text-shadow: 0 2px 5px #666, 0 -2px 5px #666;
+	opacity: 0.9;
 }
 
 .no-touch .segue--parallax  {
 	height: 25vw;
-	font-size: 10vw;
+	font-size: 6vw;
 }
 
 .touch .segue--no-parallax {

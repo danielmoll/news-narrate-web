@@ -19,11 +19,8 @@ function onScroll() {
 
 	_.forEach(parallaxElements, calculateTransform);
 	_.forEach(parallaxElements, function(el) {
-		if (el.parentNode._inView) {
-			el.style.webkitFilter = 'blur(' + blur + 'px)';
-			el.style.mozFilter = 'blur(' + blur + 'px)';
-			el.style.MsFilter = 'blur(' + blur + 'px)';
-			el.style.filter = 'blur(' + blur + 'px)';
+		if (el.parentNode._inView && !el.classList.contains('motion-blur')) {
+			el.classList.add('motion-blur');
 		}
 	});
 
@@ -49,10 +46,7 @@ function calculateTransform(el) {
 function scrollReset() {
 	_.forEach(parallaxElements, function(el) {
 		if (el.parentNode._inView) {
-			el.style.filter = 'blur(0px)';
-			el.style.webkitFilter = 'blur(0px)';
-			el.style.mozFilter = 'blur(0px)';
-			el.style.MsFilter = 'blur(0px)';
+			el.classList.remove('motion-blur');
 		}
 	});
 }
