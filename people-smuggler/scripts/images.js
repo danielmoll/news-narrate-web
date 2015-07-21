@@ -24,6 +24,7 @@
 			index: 0,
 			width: 0
 		};
+		this.preload = el.classList.contains('image__item--preload');
 
 		// Options defaults
 		this.options.lazyLoad = (this.options.lazyLoad !== undefined) ? this.options.lazyLoad : true;
@@ -91,7 +92,7 @@
 		this.setAspectRatio(sizeToSet.w, sizeToSet.h);
 
 		// Don't load if image is out of view, or the size to set is the same as the current size (stops resetting of this.el.src on each resize)
-		if (this.isImageHidden(this.el) || sizeToSet.w === this.currentSize.width) {
+		if (!this.preload && (this.isImageHidden(this.el) || sizeToSet.w === this.currentSize.width)) {
 			return;
 		}
 

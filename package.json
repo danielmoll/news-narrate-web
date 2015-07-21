@@ -6,7 +6,7 @@
   "scripts": {
     "test": "gulp test:ie11"
   },
-  "author": "George Richmond",
+  "author": "Sky News Products",
   "license": "MIT",
   "devDependencies": {
     "babel": "^5.5.8",
@@ -25,6 +25,7 @@
     "gulp-sourcemaps": "^1.5.2",
     "gulp-webdriver": "^0.1.1",
     "react-async": "^2.1.0",
+    "uglifyjs": "^2.4.10",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.2.2",

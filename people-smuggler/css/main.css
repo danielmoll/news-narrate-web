@@ -412,6 +412,50 @@ a, a:hover {
 	left: 20%;
 }
 
+.scene--1 .scene__background {
+	-webkit-transform-origin: 90% 90%;
+	-moz-transform-origin: 90% 90%;
+	-ms-transform-origin: 90% 90%;
+	transform-origin: 90% 90%;
+
+	-webkit-transition: -webkit-transform 4s;
+	-moz-transition: -moz-transform 4s;
+	-ms-transition: -ms-transform 4s;
+	transition: transform 4s;
+
+	-webkit-transform: scale(3.5);
+	-moz-transform: scale(3.5);
+	-ms-transform: scale(3.5);
+	transform: scale(3.5);
+}
+
+.in-view.scene--1 .scene__background {
+	-webkit-transform: scale(4);
+	-moz-transform: scale(4);
+	-ms-transform: scale(4);
+	transform: scale(4);
+}
+
+.scene--2 .scene__media {
+	
+}
+
+.scene--3 .scene__media {
+	
+}
+
+.scene--4 .scene__media {
+	
+}
+
+.scene--5 .scene__media {
+	
+}
+
+.scene--6 .scene__media {
+	
+}
+
 /* Segue */
 
 .segue {
