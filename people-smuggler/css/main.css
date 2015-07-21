@@ -423,6 +423,12 @@ a, a:hover {
 	transform-origin: 50% 50%;
 }
 
+.map__marker-pulse {
+	width: 100%;
+	animation: 1.5s pulse infinite;
+	transform: scale(1);
+}
+
  .map__marker--khartoum {
  	transform: translate(72vw, 41vw);
  }
@@ -854,3 +860,18 @@ a, a:hover {
 		max-width: 100%;
 	}*/
 }
+
+
+/* animations */
+@keyframes pulse {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
