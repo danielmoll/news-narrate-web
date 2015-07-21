@@ -439,7 +439,7 @@ a, a:hover {
 }
 
 .in-view .map__marker-pulse {
-	-webkit-animation:: 1.5s webkit-pulse 2 forwards;
+	-webkit-animation: 1.5s webkit-pulse 2 forwards;
 	-moz-animation: 1.5s moz-pulse 2 forwards;
 	-ms-animation: 1.5s ms-pulse 2 forwards;
 	animation: 1.5s pulse 2 forwards;
@@ -453,9 +453,9 @@ a, a:hover {
  }
 
  .map__marker--kufra {
- 	-webkit-transform: translate(63vw 24vw);
- 	-moz-transform: translate(63vw 24vw);
- 	-ms-transform: translate(63vw 24vw);
+ 	-webkit-transform: translate(63vw, 24vw);
+ 	-moz-transform: translate(63vw, 24vw);
+ 	-ms-transform: translate(63vw, 24vw);
  	transform: translate(63vw, 24vw);
  }
 
