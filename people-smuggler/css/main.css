@@ -135,7 +135,7 @@ a, a:hover {
 .image--background {
 	position: absolute;
 	top: 0;
-	width: 100%;
+	width: 100vw;
 	z-index: -1;
 }
 
@@ -412,29 +412,24 @@ a, a:hover {
 	left: 20%;
 }
 
-.scene--1 .scene__background {
-	-webkit-transform-origin: 90% 90%;
-	-moz-transform-origin: 90% 90%;
-	-ms-transform-origin: 90% 90%;
-	transform-origin: 90% 90%;
-
-	-webkit-transition: -webkit-transform 4s;
-	-moz-transition: -moz-transform 4s;
-	-ms-transition: -ms-transform 4s;
-	transition: transform 4s;
-
-	-webkit-transform: scale(3.5);
-	-moz-transform: scale(3.5);
-	-ms-transform: scale(3.5);
-	transform: scale(3.5);
+.map__marker {
+	width: 15vw;
+	height: 15vw;
+	background-image: url('../images/marker-1.png');
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	transform: scale(0.1);
+	transform-origin: 50% 50%;
 }
 
-.in-view.scene--1 .scene__background {
-	-webkit-transform: scale(4);
-	-moz-transform: scale(4);
-	-ms-transform: scale(4);
-	transform: scale(4);
-}
+ .map__marker--khartoum {
+ 	transform: translate(63vw, 40vw);
+ }
+
+ .scene__background {
+ 	position: relative;
+ }
 
 .scene--2 .scene__media {
 	
