@@ -7,7 +7,8 @@ var _ = require('lodash'),
 	navigationPosition = navigationParent.getBoundingClientRect().top + (document.body || document.documentElement).scrollTop,
 	button = document.querySelector('.js-navigation-expand'),
 	navList = document.querySelector('.js-navigation-list'),
-	isAdded = false;
+	isAdded = false,
+	linkItems = document.querySelectorAll('.navigation__link');
 
 navigationParent.style.height = navigationPosition.height + 'px';
 
@@ -31,15 +32,13 @@ function handleClick() {
 }
 
 function handleScenes() {
-	var items = document.querySelectorAll('.navigation__link');
-
 	_.forEach(scenes, function(scene) {
 		if (scene.hasAttribute('id')) {
 			var id = scene.getAttribute('id'),
 				activeItem = document.querySelector('.navigation__link--' + id);
 			
 			scene._onInView = function() {
-				_.forEach(items, function(item) {
+				_.forEach(linkItems, function(item) {
 					item.classList.remove('navigation__link--active');
 				});
 
@@ -49,9 +48,17 @@ function handleScenes() {
 	});
 }
 
+function handleNavClick() {
+	navigation.classList.removeClass('navigation--active');
+}
+
 button.addEventListener('click', handleClick);
 window.addEventListener('scroll', handleScroll);
 window.addEventListener('resize', handleResize);
+
+_.forEach(linkItems, function(item) {
+	item.addEventListener('click', handleNavClick);
+});
 
 handleScenes();
 handleScroll();
