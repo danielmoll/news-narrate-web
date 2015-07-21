@@ -436,6 +436,26 @@ a, a:hover {
  	transform: translate(72vw, 41vw);
  }
 
+ .map__marker--kufra {
+ 	transform: translate(63vw, 24vw);
+ }
+
+ .map__marker--benghazi {
+ 	transform: translate(64vw, 14vw);
+ }
+
+ .map__marker--tripoli {
+ 	transform: translate(57vw, 19vw);
+ }
+
+ .map__marker--zuwara {
+ 	transform: translate(57vw, 34vw);
+ }
+
+ .map__marker--lampedusa {
+ 	transform: translate(60vw, 8vw);
+ }
+
  .scene__background {
  	position: relative;
  }
