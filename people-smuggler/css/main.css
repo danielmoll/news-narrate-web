@@ -260,7 +260,7 @@ a, a:hover {
 }
 
 .scene--4x3 {
-	min-height: 75vw;
+	min-height: 74vw;
 }
 
 .scene--16x9 {
@@ -278,6 +278,14 @@ a, a:hover {
 	position: relative;
 }
 
+.scene__header {
+	background: white;
+	width: 100%;
+	z-index: 10;
+	position: relative;
+	margin-bottom: 40px;
+}
+
 .scene__title {
 	/*text-align: center;*/
 	text-transform: uppercase;
@@ -286,14 +294,20 @@ a, a:hover {
 	margin: 0;
 	position: relative;
 	background: white;
-	margin-bottom: 5%;
+	/*margin-bottom: 5%;*/
 	padding: 0 0 0 20px;
 	z-index: 10;
+	display: inline-block;
 }
 
 .scene__leader {
-	font-size: 6vw;
-	text-align: center;
+	font-size: 3vw;
+	/*text-align: center;*/
+	padding: 0 20px 20px 20px;
+	display: inline-block;
+	float: right;
+	line-height: 6vw;
+	color: #9c9c9c;
 }
 
 .touch .scene__leader {
