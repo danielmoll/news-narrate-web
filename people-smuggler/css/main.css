@@ -267,13 +267,6 @@ a, a:hover {
 	min-height: 56.25vw;
 }
 
-/*.scene--4x3 .scene__title {
-	position: absolute;
-	top: 0;
-	background: rgba(255,255,255, 0.5);
-	width: 100%;
-}*/
-
 .scene__inner {
 	position: relative;
 }
