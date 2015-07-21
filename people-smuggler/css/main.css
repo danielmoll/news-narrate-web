@@ -334,8 +334,16 @@ a, a:hover {
 }
 
 .map-overlay__item {
-	
+	transition: all 1s ease-out;
+	transform-origin: 50% 100%;
+	transform: scale(0.5);
+	opacity: 0.5;
 	position: absolute;
+}
+
+.in-view .map-overlay__item {
+	transform: scale(1);
+	opacity: 1;
 }
 
 .map-overlay__link {
