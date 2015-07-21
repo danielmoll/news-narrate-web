@@ -929,7 +929,7 @@ a, a:hover {
   }
 }
 
-@keyframes webkit-pulse {
+@-webkit-keyframes webkit-pulse {
   from {
     -webkit-transform: scale(1);
     opacity: 1;
@@ -941,7 +941,7 @@ a, a:hover {
   }
 }
 
-@keyframes moz-pulse {
+@-moz-keyframes moz-pulse {
   from {
     -moz-transform: scale(1);
     opacity: 1;
@@ -953,7 +953,7 @@ a, a:hover {
   }
 }
 
-@keyframes ms-pulse {
+@-ms-keyframes ms-pulse {
   from {
     -ms-transform: scale(1);
     opacity: 1;
