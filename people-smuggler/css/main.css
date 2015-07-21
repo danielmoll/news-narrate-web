@@ -333,7 +333,7 @@ a, a:hover {
 	width: 100%;
 }
 
-.map-overlay__item {
+.map-overlay__link {
 	-webkit-transition: opacity 1s, transform 1s;
 	-moz-transition: opacity 1s, transform 1s;
 	-ms-transition: opacity 1s, transform 1;
@@ -350,10 +350,9 @@ a, a:hover {
 	transform: scale(0.5);
 
 	opacity: 0.5;
-	position: absolute;
 }
 
-.in-view .map-overlay__item {
+.in-view.map-overlay__link {
 	-webkit-transform: scale(1);
 	-moz-transform: scale(1);
 	-ms-transform: scale(1);
@@ -369,6 +368,10 @@ a, a:hover {
 	padding: 0.2vw 1vw;
 	letter-spacing: 0.5vw;
 	font-size: 3vw;
+}
+
+.map-overlay__item {
+	position: absolute;
 }
 
 .map-overlay__item--khartoum {
