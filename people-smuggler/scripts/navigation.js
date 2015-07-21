@@ -1,33 +1,26 @@
 'use strict';
 
 var navigation = document.querySelector('.navigation'),
+	navigationPosition = navigation.getBoundingClientRect(),
 	button = document.querySelector('.js-navigation-expand'),
 	navList = document.querySelector('.js-navigation-list'),
-	stop;
-
-function setStop() {
-	stop = navigation.getBoundingClientRect().top + (document.body || document.documentElement).scrollTop;
-}
+	isAdded = false;
 
 function handleClick() {
 	navigation.classList.toggle('navigation--active');
 }
 
-function isSticky() {
-	return ((document.body || document.documentElement).scrollTop >= stop);
-}
-
 function handleNavEvent() {
-	if (isSticky()) {
+	if (window.pageYOffset >= navigationPosition.top && !isAdded) {
 		navigation.classList.add('navigation--sticky');
-	} else {
+		isAdded = true;
+	} else if (window.pageYOffset < navigationPosition.top && isAdded) {
 		navigation.classList.remove('navigation--sticky');
+		isAdded = false;
 	}
 }
 
 button.addEventListener('click', handleClick);
 window.addEventListener('scroll', handleNavEvent);
-window.addEventListener('resize', setStop);
 
-setStop();
 handleNavEvent();
