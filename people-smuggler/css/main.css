@@ -425,8 +425,11 @@ a, a:hover {
 
 .map__marker-pulse {
 	width: 100%;
-	animation: 1.5s pulse infinite;
 	transform: scale(1);
+}
+
+.in-view .map__marker-pulse {
+	animation: 1.5s pulse 2 forwards;
 }
 
  .map__marker--khartoum {
