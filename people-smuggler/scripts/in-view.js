@@ -22,8 +22,6 @@ function calculateInView(el) {
 		el._onOutView && el._onOutView();
 		el.classList.remove('in-view');
 	}
-
-
 }
 
 onScroll();

@@ -412,30 +412,6 @@ a, a:hover {
 	left: 20%;
 }
 
-.scene--1 .scene__media {
-
-}
-
-.scene--2 .scene__media {
-	
-}
-
-.scene--3 .scene__media {
-	
-}
-
-.scene--4 .scene__media {
-	
-}
-
-.scene--5 .scene__media {
-	
-}
-
-.scene--6 .scene__media {
-	
-}
-
 /* Segue */
 
 .segue {
@@ -514,8 +490,16 @@ a, a:hover {
 /* Main navigation */
 .navigation {
 	overflow: hidden;
+	float: left;
+	width: 100%;
+	position: relative;
+	margin: 0 0 2rem 0;
+}
+
+.navigation__wrapper {
+	width: 100%;
 	background: #efefef;
-	margin: 10px 0;
+	overflow: hidden;
 }
 
 .navigation__inner {
@@ -594,8 +578,10 @@ a, a:hover {
 	display: block;
 	color: black;
 	padding: .7rem;
+	position: relative;
 }
 
+.navigation__link--active,
 .navigation__link:hover {
 	background-color: rgba(0, 0, 0, 0.5);
 	color: white;
@@ -700,6 +686,10 @@ a, a:hover {
 	/* navigation */
 	.navigation {
 		text-align: center;
+		margin-top: 2rem;
+	}
+
+	.navigation__wrapper {
 		padding: 1rem;
 	}
 

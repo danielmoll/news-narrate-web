@@ -1,34 +1,27 @@
 'use strict';
 
-var navigation = document.querySelector('.navigation'),
-	navigationPosition = navigation.getBoundingClientRect(),
-	navigationTop = navigationPosition.top + (document.body || document.documentElement).scrollTop,
+var _ = require('lodash'),
+	navigation = document.querySelector('.js-navigation'),
+	scenes = document.querySelectorAll('.scene'),
+	navigationParent = navigation.parentNode,
+	navigationPosition = navigationParent.getBoundingClientRect().top + (document.body || document.documentElement).scrollTop,
 	button = document.querySelector('.js-navigation-expand'),
 	navList = document.querySelector('.js-navigation-list'),
-	placeholder = document.createElement('div'),
 	isAdded = false;
 
-placeholder.style.width = navigationPosition.width + 'px';
-placeholder.style.height = navigationPosition.height + 'px';
+navigationParent.style.height = navigationPosition.height + 'px';
 
 function handleResize() {
-	if (!isAdded) return;
-	navigationPosition = placeholder.getBoundingClientRect();
-	navigationTop = navigationPosition.top + (document.body || document.documentElement).scrollTop;
-	placeholder.style.width = navigationPosition.width + 'px';
-	placeholder.style.height = navigationPosition.height + 'px';
-
-	handleScroll();
+	navigationPosition = navigationParent.getBoundingClientRect().top + (document.body || document.documentElement).scrollTop;
+	navigationParent.style.height = navigationPosition.height + 'px';
 }
 
 function handleScroll() {
-	if (window.scrollY >= navigationTop && !isAdded) {
+	if (window.scrollY >= navigationPosition && !isAdded) {
 		navigation.classList.add('navigation--sticky');
-		navigation.parentNode.insertBefore(placeholder, navigation);
 		isAdded = true;
-	} else if (window.scrollY < navigationTop && isAdded) {
+	} else if (window.scrollY < navigationPosition && isAdded) {
 		navigation.classList.remove('navigation--sticky');
-		navigation.parentNode.removeChild(placeholder);
 		isAdded = false;
 	}
 }
@@ -37,8 +30,28 @@ function handleClick() {
 	navigation.classList.toggle('navigation--active');
 }
 
+function handleScenes() {
+	var items = document.querySelectorAll('.navigation__link');
+
+	_.forEach(scenes, function(scene) {
+		if (scene.hasAttribute('id')) {
+			var id = scene.getAttribute('id'),
+				activeItem = document.querySelector('.navigation__link--' + id);
+			
+			scene._onInView = function() {
+				_.forEach(items, function(item) {
+					item.classList.remove('navigation__link--active');
+				});
+
+				activeItem.classList.add('navigation__link--active');
+			};
+		}
+	});
+}
+
 button.addEventListener('click', handleClick);
 window.addEventListener('scroll', handleScroll);
 window.addEventListener('resize', handleResize);
 
+handleScenes();
 handleScroll();

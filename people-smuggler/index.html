@@ -61,12 +61,12 @@
 
 				<div class="map-overlay">
 					<ol class="">
-						<li class="map-overlay__item map-overlay__item--khartoum"><a class="map-overlay__link js-in-view" href="#">Khartoum</a></li>
-						<li class="map-overlay__item map-overlay__item--kufra"><a class="map-overlay__link js-in-view" href="#">Kufra</a></li>
-						<li class="map-overlay__item map-overlay__item--benghazi"><a class="map-overlay__link js-in-view" href="#">Benghazi</a></li>
-						<li class="map-overlay__item map-overlay__item--tripoli"><a class="map-overlay__link js-in-view" href="#">Tripoli</a></li>
-						<li class="map-overlay__item map-overlay__item--zuwara"><a class="map-overlay__link js-in-view" href="#">Zuwara</a></li>
-						<li class="map-overlay__item map-overlay__item--lampedusa"><a class="map-overlay__link js-in-view" href="#">Lampedusa</a></li>
+						<li class="map-overlay__item map-overlay__item--khartoum"><a class="map-overlay__link js-in-view" href="#khartoum">Khartoum</a></li>
+						<li class="map-overlay__item map-overlay__item--kufra"><a class="map-overlay__link js-in-view" href="#kufra">Kufra</a></li>
+						<li class="map-overlay__item map-overlay__item--benghazi"><a class="map-overlay__link js-in-view" href="#benghazi">Benghazi</a></li>
+						<li class="map-overlay__item map-overlay__item--tripoli"><a class="map-overlay__link js-in-view" href="#tripoli">Tripoli</a></li>
+						<li class="map-overlay__item map-overlay__item--zuwara"><a class="map-overlay__link js-in-view" href="#zuwara">Zuwara</a></li>
+						<li class="map-overlay__item map-overlay__item--lampedusa"><a class="map-overlay__link js-in-view" href="#lampedusa">Lampedusa</a></li>
 					</ol>
 				</div>
 				
@@ -79,36 +79,38 @@
 				</div>
 			</div>
 
-			<nav class="navigation js-navigation">
-				<div class="navigation__header">
-					<div class="navigation__table">
-						<div class="navigation__table-row">
-							<div class="navigation__table-cell">
-								<button class="navigation__heading js-navigation-expand">Explore Locations <span class="icon icon--navigation-heading"><i class="icon__item icon__item--chevron-down"></i></span></button>
-							</div>
-							<div class="navigation__table-cell">
-								<a class="navigation__top" href="#top">Top <span class="icon icon--circle"><i class="icon__item icon__item--chevron-up"></i></span></a>
+			<nav class="navigation">
+				<div class="navigation__wrapper js-navigation">
+					<div class="navigation__header">
+						<div class="navigation__table">
+							<div class="navigation__table-row">
+								<div class="navigation__table-cell">
+									<button class="navigation__heading js-navigation-expand">Explore Locations <span class="icon icon--navigation-heading"><i class="icon__item icon__item--chevron-down"></i></span></button>
+								</div>
+								<div class="navigation__table-cell">
+									<a class="navigation__top" href="#top">Top <span class="icon icon--circle"><i class="icon__item icon__item--chevron-up"></i></span></a>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
 
-				<div class="navigation__inner">
-					<ol class="navigation__list js-navigation-list">
-						<li class="navigation__item"><a class="navigation__link" href="#">Khartoum</a></li>
-						<li class="navigation__item"><a class="navigation__link" href="#">Kufra</a></li>
-						<li class="navigation__item"><a class="navigation__link" href="#">Benghazi</a></li>
-						<li class="navigation__item"><a class="navigation__link" href="#">Tripoli</a></li>
-						<li class="navigation__item"><a class="navigation__link" href="#">Zuwara</a></li>
-						<li class="navigation__item"><a class="navigation__link" href="#">Lampedusa</a></li>
-						<li class="navigation__item navigation__item--last"><a class="navigation__top" href="#top">Top <span class="icon icon--circle"><i class="icon__item icon__item--chevron-up"></i></span></a></li>
-					</ol>
+					<div class="navigation__inner">
+						<ol class="navigation__list js-navigation-list">
+							<li class="navigation__item"><a class="navigation__link navigation__link--khartoum" href="#khartoum">Khartoum</a></li>
+							<li class="navigation__item"><a class="navigation__link navigation__link--kufra" href="#kufra">Kufra</a></li>
+							<li class="navigation__item"><a class="navigation__link navigation__link--benghazi" href="#benghazi">Benghazi</a></li>
+							<li class="navigation__item"><a class="navigation__link navigation__link--tripoli" href="#tripoli">Tripoli</a></li>
+							<li class="navigation__item"><a class="navigation__link navigation__link--zuwara" href="#zuwara">Zuwara</a></li>
+							<li class="navigation__item"><a class="navigation__link navigation__link--lampedusa" href="#lampedusa">Lampedusa</a></li>
+							<li class="navigation__item navigation__item--last"><a class="navigation__top" href="#top">Top <span class="icon icon--circle"><i class="icon__item icon__item--chevron-up"></i></span></a></li>
+						</ol>
+					</div>
 				</div>
 			</nav>
 
 			<!-- 2. Khartoum -->
 
-			<div class="scene scene--1 scene--4x3">
+			<div class="scene scene--1 scene--4x3 js-in-view" id="khartoum">
 				<div class="scene__header">
 					<div class="scene__inner">
 						<h2 class="scene__title">Khartoum: Sudan</h2>
@@ -161,7 +163,7 @@
 
 			<!-- 3. Kufra -->
 
-			<div class="scene scene--2">
+			<div class="scene scene--2 js-in-view" id="kufra">
 				<div class="scene__header">
 					<div class="scene__inner">
 						<h2 class="scene__title">Kufra</h2>
@@ -232,7 +234,7 @@
 
 			<!-- 4. Benghazi -->
 
-			<div class="scene scene--3 ">
+			<div class="scene scene--3 js-in-view" id="benghazi">
 				<div class="scene__header">
 					<div class="scene__inner">
 						<h2 class="scene__title">Benghazi</h2>
@@ -293,7 +295,7 @@
 
 			<!-- 5. Tripoli -->
 
-			<div class="scene scene--4">
+			<div class="scene scene--4 js-in-view" id="tripoli">
 				<div class="scene__header">
 					<div class="scene__inner">
 						<h2 class="scene__title">Tripoli</h2>
@@ -329,7 +331,7 @@
 
 			<!-- 6. Zuwara -->
 
-			<div class="scene scene--5">
+			<div class="scene scene--5 js-in-view" id="zuwara">
 				<div class="scene__header">
 					<div class="scene__inner">
 						<h2 class="scene__title">Zuwara</h2>
@@ -384,7 +386,7 @@
 
 			<!-- 7. Lampedusa -->
 
-			<div class="scene scene--6">
+			<div class="scene scene--6 js-in-view" id="lampedusa">
 				<div class="scene__header">
 					<div class="scene__inner">
 						<h2 class="scene__title">Lampedusa</h2>
