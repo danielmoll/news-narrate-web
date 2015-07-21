@@ -334,15 +334,15 @@ a, a:hover {
 }
 
 .map-overlay__link {
-	-webkit-transition: opacity 1s, transform 1s;
-	-moz-transition: opacity 1s, transform 1s;
-	-ms-transition: opacity 1s, transform 1;
-	transition: opacity 1s, transform 1s;
+	-webkit-transition: -webkit-transform 1s, opacity 1s;
+	-moz-transition: opacity 1s, -moz-transform 1s;
+	-ms-transition: opacity 1s, -ms-transform 1s;
+	transition: opacity 1s, transform 1s, -webkit-transform 1s;
 
-	-webkit-transform-origin: 50% 100%;
-	-moz-transform-origin: 50% 100%;
-	-ms-transform-origin: 50% 100%;
-	transform-origin: 50% 100%;
+	-webkit-transform-origin: 50% 50%;
+	-moz-transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
 
 	-webkit-transform: scale(0.5);
 	-moz-transform: scale(0.5);
@@ -350,6 +350,8 @@ a, a:hover {
 	transform: scale(0.5);
 
 	opacity: 0.5;
+
+	display: inline-block;
 }
 
 .in-view.map-overlay__link {
@@ -357,7 +359,6 @@ a, a:hover {
 	-moz-transform: scale(1);
 	-ms-transform: scale(1);
 	transform: scale(1);
-
 	opacity: 1;
 }
 
