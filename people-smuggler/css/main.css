@@ -119,7 +119,6 @@ a, a:hover {
 
 /* Responsive images */
 
-
 .image .image__item {
 	position: absolute;
 	height: 100%;
@@ -271,20 +270,33 @@ a, a:hover {
 }
 
 .hero__title {
-	font-size: 8vw;
+	font-size: 1.3rem;
 	margin: 0;
+	font-weight: normal;
+	letter-spacing: 2px;
 }
 
 .hero__title-bold {
 	text-transform: uppercase;
 	background: black;
-	color: rgb(213,210,198);
+	color: white;
 	padding: 3px 10px;
 }
 
 .hero__title-full-width {
 	margin-top: 5px;
 	display: block;
+	letter-spacing: 3px;
+}
+
+.hero__text {
+	font-size: 1rem;
+	text-transform: uppercase;
+	margin-top: 0.5rem;
+}
+
+.hero__text .button {
+	margin-top: -4px;
 }
 
 /* Scenes */
@@ -785,12 +797,29 @@ a, a:hover {
 	.hero__content {
 		right: 10px;
 	}
+
+	.hero__title {
+		font-size: 1.8rem;
+	}
 }
 
 @media (min-width: 37.5em) { /* 600px */
 	.hero__content {
-		right: 20px;
-		bottom: 20px;
+		right: 10%;
+		bottom: 20%;
+	}
+
+	.hero__title {
+		font-size: 2.2rem;
+		letter-spacing: 4px;
+	}
+
+	.hero__title-full-width {
+		letter-spacing: 5px;
+	}
+
+	.hero__text {
+		font-size: 1.5rem;	
 	}
 
 	.touch .segue--no-parallax {
@@ -839,6 +868,10 @@ a, a:hover {
 
 	.hero__title {
 		font-size: 3rem;
+	}
+
+	.hero__text {
+		font-size: 2rem;
 	}
 
 	.scene__header {
