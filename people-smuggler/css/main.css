@@ -102,6 +102,7 @@ a, a:hover {
 
 /* Responsive images */
 
+
 .image .image__item {
 	position: absolute;
 	height: 100%;
@@ -119,6 +120,7 @@ a, a:hover {
 .image {
 	position: relative;
 	overflow: hidden;
+	width: 100%;
 }
 
 .image__item--clone {
@@ -253,7 +255,7 @@ a, a:hover {
 /* Scene */
 
 .scene {
-	background-color: #efefef;
+	background-color: white;
 	background-position: center center;
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -279,7 +281,6 @@ a, a:hover {
 	width: 100%;
 	z-index: 10;
 	position: relative;
-	margin-bottom: 40px;
 }
 
 .scene__title {
@@ -299,7 +300,7 @@ a, a:hover {
 .scene__leader {
 	font-size: 3vw;
 	/*text-align: center;*/
-	padding: 0 20px 20px 20px;
+	padding: 0 20px 0 20px;
 	display: inline-block;
 	float: right;
 	line-height: 6vw;
@@ -418,19 +419,20 @@ a, a:hover {
 .map__marker {
 	width: 12vw;
 	height: 12vw;
-	background-image: url('../images/marker-1.png');
-	background-size: cover;
+	/*background-image: url('../images/marker-1.png');*/
+	/*background-size: cover;*/
 	position: absolute;
-	top: 0;
-	-webkit-transform: scale(0.1);
+	top: 50%;
+	left: 50%;
+/*	-webkit-transform: scale(0.1);
 	-moz-transform: scale(0.1);
 	-ms-transform: scale(0.1);
-	transform: scale(0.1);
+	transform: scale(0.1);*/
 
-	-webkit-transform-origin: 50% 50%;
-	-moz-transform-origin: 50% 50%;
-	-ms-transform-origin: 50% 50%;
-	transform-origin: 50% 50%;
+	-webkit-transform-origin: 0 0;
+	-moz-transform-origin: 0 0;
+	-ms-transform-origin: 0 0;
+	transform-origin: 0 0;
 }
 
 .map__marker-pulse {
@@ -439,6 +441,16 @@ a, a:hover {
 	-moz-transform: scale(1);
 	-ms-transform: scale(1);
 	transform: scale(1);
+	position: absolute;
+	top: -50%;
+	left: -50%;
+}
+
+.map__marker-static {
+	width: 100%;
+	position: absolute;
+	top: -50%;
+	left: -50%;
 }
 
 .in-view .map__marker-pulse {
@@ -449,45 +461,45 @@ a, a:hover {
 }
 
  .map__marker--khartoum {
- 	-webkit-transform: translate(72vw, 41vw);
- 	-moz-transform: translate(72vw, 41vw);
- 	-ms-transform: translate(72vw, 41vw);
- 	transform: translate(72vw, 41vw);
+ 	-webkit-transform: translate(242%, 93%);
+ 	-moz-transform: translate(242%, 93%);
+ 	-ms-transform: translate(242%, 93%);
+ 	transform: translate(242%, 93%);
  }
 
  .map__marker--kufra {
- 	-webkit-transform: translate(63vw, 24vw);
- 	-moz-transform: translate(63vw, 24vw);
- 	-ms-transform: translate(63vw, 24vw);
- 	transform: translate(63vw, 24vw);
+ 	-webkit-transform: translate(155%, -72%);
+ 	-moz-transform: translate(155%, -72%);
+ 	-ms-transform: translate(155%, -72%);
+ 	transform: translate(155%, -72%);
  }
 
  .map__marker--benghazi {
- 	-webkit-transform: translate(64vw, 14vw);
- 	-moz-transform: translate(64vw, 14vw);
- 	-ms-transform: translate(64vw, 14vw);
- 	transform: translate(64vw, 14vw);
+ 	-webkit-transform: translate(159%, -167%);
+ 	-moz-transform: translate(159%, -167%);
+ 	-ms-transform: translate(159%, -167%);
+ 	transform: translate(159%, -167%);
  }
 
  .map__marker--tripoli {
- 	-webkit-transform: translate(57vw, 19vw);
- 	-moz-transform: translate(57vw, 19vw);
- 	-ms-transform: translate(57vw, 19vw);
- 	transform: translate(57vw, 19vw);
+ 	-webkit-transform: translate(100%, -100%);
+ 	-moz-transform: translate(100%, -100%);
+ 	-ms-transform: translate(100%, -100%);
+ 	transform: translate(100%, -100%);
  }
 
  .map__marker--zuwara {
- 	-webkit-transform: translate(57vw, 34vw);
- 	-moz-transform: translate(57vw, 34vw);
- 	-ms-transform: translate(57vw, 34vw);
- 	transform: translate(57vw, 34vw);
+ 	-webkit-transform: translate(102%, 17%);
+ 	-moz-transform: translate(102%, 17%);
+ 	-ms-transform: translate(102%, 17%);
+ 	transform: translate(102%, 17%);
  }
 
  .map__marker--lampedusa {
- 	-webkit-transform: translate(60vw, 8vw);
- 	-moz-transform: translate(60vw, 8vw);
- 	-ms-transform: translate(60vw, 8vw);
- 	transform: translate(60vw, 8vw);
+ 	-webkit-transform: translate(130%, -200%);
+ 	-moz-transform: translate(130%, -200%);
+ 	-ms-transform: translate(130%, -200%);
+ 	transform: translate(130%, -200%);
  }
 
  .scene__background {
@@ -830,6 +842,10 @@ a, a:hover {
 
 	.touch .segue--no-parallax {
 		width: 25%;
+	}
+
+	.scene__header {
+		margin-bottom: 40px;
 	}
 
 	.scene__media--left {
