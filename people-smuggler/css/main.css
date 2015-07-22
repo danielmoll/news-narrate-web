@@ -303,12 +303,12 @@ a, a:hover {
 }
 
 .scene__leader {
-	font-size: 3vw;
+	font-size: 6vw;
 	/*text-align: center;*/
 	padding: 0 20px 0 20px;
 	display: inline-block;
 	float: right;
-	line-height: 6vw;
+	line-height: 12vw;
 	color: #9c9c9c;
 }
 
@@ -855,6 +855,11 @@ a, a:hover {
 
 	.scene__title {
 		font-size: 4vw;
+	}
+
+	.scene__leader {
+		font-size: 3vw;
+		line-height: 6vw;
 	}
 
 	.scene__media--left {
