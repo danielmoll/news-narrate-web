@@ -635,6 +635,10 @@ a, a:hover {
 	margin: 0;
 }
 
+.touch .navigation {
+	display: none;
+}
+
 .navigation__anchor {
 	position: absolute;
 	top: -80px;
@@ -820,10 +824,6 @@ a, a:hover {
 
 	.hero__text {
 		font-size: 1.5rem;	
-	}
-
-	.touch .segue--no-parallax {
-		width: 30%;
 	}
 }
 
