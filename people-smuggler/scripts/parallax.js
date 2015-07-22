@@ -35,7 +35,7 @@ function calculateTransform(el) {
 		boundingRect = parent.getBoundingClientRect();
 		parentTop = boundingRect.top,
 		height = el.offsetHeight,
-		translation = Math.round((((parentTop + (el.parentNode.offsetHeight / 2)) / currentViewportHeight) * height) - (height - 150));
+		translation = Math.round((((parentTop + (el.parentNode.offsetHeight / 2)) / currentViewportHeight) * height) - (height - (el.parentNode.offsetHeight / 2)));
 
 	el.style.transform = 'translateY(' + translation + 'px)';
 	el.style.webkitTransform = 'translateY(' + translation + 'px)';
