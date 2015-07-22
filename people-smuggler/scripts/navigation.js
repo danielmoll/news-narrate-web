@@ -8,21 +8,30 @@ var _ = require('lodash'),
 	button = document.querySelector('.js-navigation-expand'),
 	navList = document.querySelector('.js-navigation-list'),
 	isAdded = false,
-	linkItems = document.querySelectorAll('.navigation__link');
+	linkItems = document.querySelectorAll('.navigation__link'),
+	navIcon = document.querySelector('.js-nav-icon');
 
-navigationParent.style.height = navigationPosition.height + 'px';
+navIcon.style.display = 'none';
+navigationParent.style.height = (navigationParent.getBoundingClientRect().height) + 'px';
 
 function handleResize() {
+	navigationParent.style.height = 'auto';
 	navigationPosition = navigationParent.getBoundingClientRect().top + (document.body || document.documentElement).scrollTop;
-	navigationParent.style.height = navigationPosition.height + 'px';
+	navigationParent.style.height = (navigationParent.getBoundingClientRect().height) + 'px';
 }
 
 function handleScroll() {
 	if (window.scrollY >= navigationPosition && !isAdded) {
 		navigation.classList.add('navigation--sticky');
+		navigation.classList.remove('navigation--active');
+		button.addEventListener('click', handleClick);
+		navIcon.style.display = 'inline-block';
 		isAdded = true;
 	} else if (window.scrollY < navigationPosition && isAdded) {
 		navigation.classList.remove('navigation--sticky');
+		navigation.classList.add('navigation--active');
+		button.removeEventListener('click', handleClick);
+		navIcon.style.display = 'none';
 		isAdded = false;
 	}
 }
@@ -48,17 +57,12 @@ function handleScenes() {
 	});
 }
 
-function handleNavClick() {
-	navigation.classList.removeClass('navigation--active');
-}
+_.forEach(linkItems, function(item) {
+	item.addEventListener('click', handleClick);
+});
 
-button.addEventListener('click', handleClick);
 window.addEventListener('scroll', handleScroll);
 window.addEventListener('resize', handleResize);
-
-_.forEach(linkItems, function(item) {
-	item.addEventListener('click', handleNavClick);
-});
 
 handleScenes();
 handleScroll();

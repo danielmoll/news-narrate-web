@@ -545,8 +545,8 @@ a, a:hover {
 	overflow: hidden;
 	max-height: 0;
 
-	-webkit-transition: max-height .8s ease-in-out;
-			transition: max-height .8s ease-in-out;
+	-webkit-transition: max-height .5s ease-in-out;
+			transition: max-height .5s ease-in-out;
 }
 
 .navigation__header {
