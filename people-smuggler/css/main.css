@@ -7,6 +7,10 @@ body {
 	margin: 0;
 }
 
+html {
+    -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
+}
+
 .icon {
 	display: inline-block;
 	width: 32px;
