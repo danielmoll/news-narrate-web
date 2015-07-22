@@ -767,6 +767,9 @@ a, a:hover {
 	-webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.6);
 	-moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.6);
 	box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.6);
+	-webkit-transform: translateY(0);
+		-ms-transform: translateY(0);
+			tranform: translateY(0);
 }
 
 /* Parallax */
