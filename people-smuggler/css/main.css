@@ -896,14 +896,6 @@ a, a:hover {
 		width: 100%;
 	}
 
-	.scene--map .scene__overlay {
-		width: 50%;
-	}
-
-	.scene--map .scene__media--left {
-		width: 100%;
-	}
-
 	.segue {
 		font-size: 3vw;
 	}
