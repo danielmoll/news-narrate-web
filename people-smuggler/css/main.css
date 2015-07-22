@@ -7,6 +7,10 @@ body {
 	margin: 0;
 }
 
+html {
+    -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
+}
+
 .icon {
 	display: inline-block;
 	width: 32px;
@@ -262,7 +266,6 @@ a, a:hover {
 	position: relative;
 	letter-spacing: 2px;
   	font-weight: normal;
-  	margin-bottom: 20px;
 }
 
 .hero__content {
@@ -305,6 +308,8 @@ a, a:hover {
 	overflow: hidden;
 	position: relative;
 	clear: both;
+	border-bottom: 10px solid #efefef;
+	border-top: 10px solid #efefef;
 }
 
 .scene--4x3 {
@@ -330,7 +335,7 @@ a, a:hover {
 	/*text-align: center;*/
 	text-transform: uppercase;
 	font-family: SkyTextMedium;
-	font-size: 4vw;
+	font-size: 8vw;
 	margin: 0;
 	position: relative;
 	background: white;
@@ -341,12 +346,12 @@ a, a:hover {
 }
 
 .scene__leader {
-	font-size: 3vw;
+	font-size: 6vw;
 	/*text-align: center;*/
 	padding: 0 20px 0 20px;
 	display: inline-block;
 	float: right;
-	line-height: 6vw;
+	line-height: 12vw;
 	color: #9c9c9c;
 }
 
@@ -574,12 +579,13 @@ a, a:hover {
 .segue {
 	position: relative;
 	overflow: hidden;
+	background: #efefef;
 }
 
 .segue--parallax {
 	color: #666;
 	font-size: 5vw;
-
+	z-index: -1;
 }
 
 .parallax__list {
@@ -650,7 +656,7 @@ a, a:hover {
 	float: left;
 	width: 100%;
 	position: relative;
-	margin: 0 0 2rem 0;
+	margin: 0;
 }
 
 .navigation__wrapper {
@@ -835,7 +841,6 @@ a, a:hover {
 	/* navigation */
 	.navigation {
 		text-align: center;
-		margin-top: 2rem;
 	}
 
 	.navigation__wrapper {
@@ -881,6 +886,15 @@ a, a:hover {
 
 	.scene__header {
 		margin-bottom: 40px;
+	}
+
+	.scene__title {
+		font-size: 4vw;
+	}
+
+	.scene__leader {
+		font-size: 3vw;
+		line-height: 6vw;
 	}
 
 	.scene__media--left {
