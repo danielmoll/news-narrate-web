@@ -517,17 +517,17 @@ a, a:hover {
 }
 
  .map__marker--khartoum {
- 	-webkit-transform: translate(242%, 93%);
- 	-moz-transform: translate(242%, 93%);
- 	-ms-transform: translate(242%, 93%);
- 	transform: translate(242%, 93%);
+ 	-webkit-transform: translate(257%, 76%);
+ 	-moz-transform: translate(257%, 76%);
+ 	-ms-transform: translate(257%, 76%);
+ 	transform: translate(257%, 76%);
  }
 
  .map__marker--kufra {
- 	-webkit-transform: translate(155%, -72%);
- 	-moz-transform: translate(155%, -72%);
- 	-ms-transform: translate(155%, -72%);
- 	transform: translate(155%, -72%);
+ 	-webkit-transform: translate(141%, -72%);
+ 	-moz-transform: translate(141%, -72%);
+ 	-ms-transform: translate(141%, -72%);
+ 	transform: translate(141%, -72%);
  }
 
  .map__marker--benghazi {
@@ -538,17 +538,17 @@ a, a:hover {
  }
 
  .map__marker--tripoli {
- 	-webkit-transform: translate(100%, -100%);
- 	-moz-transform: translate(100%, -100%);
- 	-ms-transform: translate(100%, -100%);
- 	transform: translate(100%, -100%);
+ 	-webkit-transform: translate(100%, -82%);
+ 	-moz-transform: translate(100%, -82%);
+ 	-ms-transform: translate(100%, -82%);
+ 	transform: translate(100%, -82%);
  }
 
  .map__marker--zuwara {
- 	-webkit-transform: translate(102%, 17%);
- 	-moz-transform: translate(102%, 17%);
- 	-ms-transform: translate(102%, 17%);
- 	transform: translate(102%, 17%);
+ 	-webkit-transform: translate(87%, 17%);
+ 	-moz-transform: translate(87%, 17%);
+ 	-ms-transform: translate(87%, 17%);
+ 	transform: translate(87%, 17%);
  }
 
  .map__marker--lampedusa {
