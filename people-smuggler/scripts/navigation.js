@@ -42,8 +42,10 @@ function handleClick() {
 
 function handleScenes() {
 	_.forEach(scenes, function(scene) {
-		if (scene.hasAttribute('id')) {
-			var id = scene.getAttribute('id'),
+		var scene_anchor = scene.querySelector('.navigation__anchor');
+		
+		if (scene_anchor && scene_anchor.hasAttribute('id')) {
+			var id = scene_anchor.getAttribute('id'),
 				activeItem = document.querySelector('.navigation__link--' + id);
 			
 			scene._onInView = function() {

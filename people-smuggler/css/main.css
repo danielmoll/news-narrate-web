@@ -584,6 +584,11 @@ a, a:hover {
 	margin: 0;
 }
 
+.navigation__anchor {
+	position: absolute;
+	top: -80px;
+}
+
 .navigation__wrapper {
 	width: 100%;
 	background: #efefef;
