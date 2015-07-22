@@ -727,12 +727,16 @@ a, a:hover {
 	color: black;
 	padding: .7rem;
 	position: relative;
+
+  text-transform: uppercase;
+  letter-spacing: 0.3vw;
 }
 
 .navigation__link--active,
 .navigation__link:hover {
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: black;
 	color: white;
+
 }
 
 .navigation--active .icon__item--chevron-down {
