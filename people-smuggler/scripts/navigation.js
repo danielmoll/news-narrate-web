@@ -15,9 +15,9 @@ navIcon.style.display = 'none';
 navigationParent.style.height = (navigationParent.getBoundingClientRect().height) + 'px';
 
 function handleResize() {
-	navigationParent.style.height = 'auto';
+	navigationParent.style.height = 'auto'; //reset
 	navigationPosition = navigationParent.getBoundingClientRect().top + (document.body || document.documentElement).scrollTop;
-	navigationParent.style.height = (navigationParent.getBoundingClientRect().height) + 'px';
+	navigationParent.style.height = (navigationParent.getBoundingClientRect().height) ? (navigationParent.getBoundingClientRect().height) + 'px' : 'auto';
 }
 
 function handleScroll() {
