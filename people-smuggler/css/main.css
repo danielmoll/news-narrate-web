@@ -63,12 +63,6 @@ html {
 	outline: none;
 }
 
-.button--close {
-	position: absolute;
-	color: white;
-	height: 24px;
-}
-
 /* Table */
 
 .table,
@@ -187,15 +181,10 @@ a, a:hover {
 .video {}
 
 .video--documentary {
-	max-width: 90%;
 	position: absolute;
-	left: 50%;
-	top: 50%;
 	width: 100%;
 	height: 0;
 	padding-bottom: 51.25%;
-	margin-top: -25%;
-	margin-left: -45%;
 }
 
 .video__item {
