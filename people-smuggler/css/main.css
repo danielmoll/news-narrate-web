@@ -337,6 +337,7 @@ a, a:hover {
 	width: 100%;
 	z-index: 10;
 	position: relative;
+	padding-top: 30px;
 }
 
 .scene__title {
@@ -347,7 +348,6 @@ a, a:hover {
 	margin: 0;
 	position: relative;
 	background: white;
-	/*margin-bottom: 5%;*/
 	padding: 0 0 0 20px;
 	z-index: 10;
 	display: inline-block;
@@ -875,7 +875,7 @@ a, a:hover {
 	}
 
 	.scene__header {
-		margin-bottom: 40px;
+		/*margin-bottom: 40px;*/
 	}
 
 	.scene__title {
@@ -926,14 +926,6 @@ a, a:hover {
 	.scene__background {
 		position: absolute;
 		top: 0;
-		width: 100%;
-	}
-
-	.scene--map .scene__overlay {
-		width: 50%;
-	}
-
-	.scene--map .scene__media--left {
 		width: 100%;
 	}
 
