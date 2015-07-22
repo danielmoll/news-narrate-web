@@ -292,7 +292,7 @@ a, a:hover {
 	/*text-align: center;*/
 	text-transform: uppercase;
 	font-family: SkyTextMedium;
-	font-size: 4vw;
+	font-size: 8vw;
 	margin: 0;
 	position: relative;
 	background: white;
@@ -851,6 +851,10 @@ a, a:hover {
 
 	.scene__header {
 		margin-bottom: 40px;
+	}
+
+	.scene__title {
+		font-size: 4vw;
 	}
 
 	.scene__media--left {
