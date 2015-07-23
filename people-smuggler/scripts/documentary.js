@@ -11,4 +11,5 @@ if (window.detect.touch) {
 function playVideo(e) {
 	documentary.classList.add('documentary--active');
 	video.play();
+	ga('send', 'event', 'smuggler-documentary', 'play');
 }
