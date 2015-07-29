@@ -1,17 +1,17 @@
-var gulp = require('gulp');
-var sourcemaps = require('gulp-sourcemaps');
-var source = require('vinyl-source-stream');
-var buffer = require('vinyl-buffer');
-var browserify = require('browserify');
-var watchify = require('watchify');
-var babel = require('babelify');
-var browserSync = require('browser-sync').create();
-var webdriver = require('gulp-webdriver');
-var sass = require('gulp-sass');
-var serve = require('gulp-serve');
+var gulp = require('gulp'),
+    sourcemaps = require('gulp-sourcemaps'),
+    source = require('vinyl-source-stream'),
+    buffer = require('vinyl-buffer'),
+    browserify = require('browserify'),
+    watchify = require('watchify'),
+    babel = require('babelify'),
+    browserSync = require('browser-sync').create(),
+    webdriver = require('gulp-webdriver'),
+    sass = require('gulp-sass'),
+    serve = require('gulp-serve');
 
 function compile(watch) {
-    var bundler = watchify(browserify('./src/index.js', { debug: true }).transform(babel));
+    var bundler = watchify(browserify('./london7-7/src/index.js', { debug: true }).transform(babel));
 
     function rebundle() {
         bundler.bundle()
@@ -20,7 +20,7 @@ function compile(watch) {
             .pipe(buffer())
             .pipe(sourcemaps.init({ loadMaps: true }))
             .pipe(sourcemaps.write('./'))
-            .pipe(gulp.dest('./build'))
+            .pipe(gulp.dest('./london7-7/build'))
             .on('end',  function() {
                 if(!watch) {
                     process.exit(0);
@@ -40,9 +40,7 @@ function compile(watch) {
 
 function watch() {
     return compile(true);
-};
-
-
+}
 
 gulp.task('browser-sync', function() {
     browserSync.init({
@@ -63,18 +61,18 @@ gulp.task('test:local', function() {
 });
 
 gulp.task('copy', function(){
-    gulp.src('./src/img/**/*')
-        .pipe(gulp.dest('./build/img'));
+    gulp.src('./london7-7/src/img/**/*')
+        .pipe(gulp.dest('./london7-7/build/img'));
 });
 
 gulp.task('sass', function () {
-    gulp.src('./src/sass/**/*.scss')
+    gulp.src('./london7-7/src/sass/**/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./build/css'));
+        .pipe(gulp.dest('./london7-7/build/css'));
 });
 
 gulp.task('sass:watch', function () {
-    gulp.watch('./src/sass/**/*.scss', ['sass']);
+    gulp.watch('./london7-7/src/sass/**/*.scss', ['sass']);
 });
 
 gulp.task('test:ie11', function() {

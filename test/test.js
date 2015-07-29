@@ -5,13 +5,10 @@ describe('narrate', function(){
 
     it('Home test', function(done){
         browser
-        .url('http://staging.narrate-web.divshot.io')
+        .url('http://staging.narrate-web.divshot.io/london7-7')
         .click('=Map')
-        .call(done)
-
+        .call(done);
     });
-
-
 });
 
 
