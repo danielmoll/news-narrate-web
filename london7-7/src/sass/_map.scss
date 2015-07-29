@@ -4,7 +4,7 @@
 
 .map__container {
     background-color: #262730;
-    background-image: url('/build/img/mapBg.jpg');
+    background-image: url('../img/mapBg.jpg');
     background-position: center top;
     background-repeat: no-repeat;
     background-size: 1000px 500px;
@@ -17,7 +17,7 @@
 }
 
 .map__marker {
-    background-image: url('/build/img/marker.png');
+    background-image: url('../img/marker.png');
     background-size: 40px 40px;
     background-position: center;
     cursor: pointer;
@@ -28,14 +28,14 @@
 }
 
 .map__marker--selected {
-    background-image: url('/build/img/markerRed.png');
+    background-image: url('../img/markerRed.png');
     background-size: 60px 60px;
     height: 60px;
     width: 60px;
 }
 
 .map__title-bg {
-    background-image: url('/build/img/map__title-bg.png');
+    background-image: url('../img/map__title-bg.png');
     background-position: top left;
     background-repeat: repeat-x;
     height: 150px;

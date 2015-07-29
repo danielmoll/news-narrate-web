@@ -2,7 +2,54 @@
 <html>
 <head>
     <title>Sky News Narrate.</title>
+
+    <script src="/__/env.js"></script>
+
+    <link href='//web-toolkit.global.sky.com/static/fonts/sky_regular.ttf' rel='prefetch'>
+    <link href='//web-toolkit.global.sky.com/static/fonts/sky_regular.svg' rel='prefetch'>
+    <link href='//web-toolkit.global.sky.com/static/fonts/sky_medium.ttf' rel='prefetch'>
+    <link href='//web-toolkit.global.sky.com/static/fonts/sky_medium.svg' rel='prefetch'>
+
+    <link rel="shortcut icon" href="/public/img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/public/img/f670e1be.sky-news-touch.png"><!-- 60x60 -->
+    <link rel="apple-touch-icon" sizes="76x76" href="/public/img/1b5f54e3.sky-news-touch-ipad.png"><!-- 76x76 -->
+    <link rel="apple-touch-icon" sizes="120x120" href="/public/img/74ebaccd.sky-news-touch-retina.png"><!-- 120x120 -->
+    <link rel="apple-touch-icon" sizes="152x152" href="/public/img/61bf2734.sky-news-touch-retina-ipad.png"><!-- 152x152 -->
+
+    <link rel="stylesheet" href="http://web-toolkit.global.sky.com/components/skycons/0.3.5/styles/skycons.min.css" />
+    <link rel="stylesheet" media="all" href="/public/css/main.css">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
+    <div class="header">
+        <a class="header__logo" href="/">Sky News Narrate</a>
+    </div>
+    <ul class="narrate-list">
+        <li class="narrate-list__item cf">
+            <a class="narrate-list__item-link" href="/london7-7"><img class="narrate-list__item-image"src="/public/img/narratives/london7-7.jpg" /><span class="narrate-list__item-title">London 7 / 7</span></a>
+        </li>
+        <li class="narrate-list__item cf">
+            <a class="narrate-list__item-link" href="/people-smuggler"><img class="narrate-list__item-image"src="/public/img/narratives/people-smuggler.jpg" /><span class="narrate-list__item-title">People smuggler</span></a>
+        </li>
+    </ul>
+    <footer><a href="http://news.sky.com/">skynews.com</a></footer>
+    <script>
+
+        if (window.__env) {
+            window.googleAnalyticsAccount = __env.GOOGLE_ANALYTICS;
+        } else {
+            window.googleAnalyticsAccount = "UA-64699888-3";
+        }
+
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', window.googleAnalyticsAccount, 'auto');
+        ga('send', 'pageview');
+
+    </script>
 </body>
 </html>

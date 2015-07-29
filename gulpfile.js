@@ -66,12 +66,18 @@ gulp.task('copy', function(){
 });
 
 gulp.task('sass', function () {
+    gulp.src('./src/sass/**/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('./public/css'));
+
     gulp.src('./london7-7/src/sass/**/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./london7-7/build/css'));
 });
 
 gulp.task('sass:watch', function () {
+    gulp.watch('./src/sass/**/*.scss', ['sass']);
+
     gulp.watch('./london7-7/src/sass/**/*.scss', ['sass']);
 });
 

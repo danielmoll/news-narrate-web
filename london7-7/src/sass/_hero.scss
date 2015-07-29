@@ -1,12 +1,12 @@
 @mixin heroBg {
     .hero__content {
-        background-image: url('/build/img/heroContentBg.png');
+        background-image: url('../img/heroContentBg.png');
     }
 }
 
 section.hero {
     color: #fff;
-    min-height: 370px;
+    min-height: 570px;
     overflow: hidden;
     position: relative;
     text-align: center;
@@ -15,7 +15,7 @@ section.hero {
 
 .hero__video {
     background-color: #000;
-    background-image: url('/build/img/heroBg.jpg');
+    background-image: url('../img/heroBg.jpg');
     background-size: cover;
     background-position: top center;
     height: auto;
@@ -49,8 +49,7 @@ section.hero {
 }
 
 .hero__title {
-    font-size: 30px;
-    margin-bottom: 22px;
+    font-size: 50px;
     text-transform: uppercase;
     white-space: nowrap;
 }
@@ -70,11 +69,12 @@ section.hero {
     margin-bottom: 25px;
     padding: 7px 8px 0;
 }
+    @include heroBg;
 
 @media (max-width: 768px) {
     section.hero {
         background-color: #000;
-        background-image: url('/build/img/heroBg.jpg');
+        background-image: url('../img/heroBg.jpg');
         background-size: cover;
         background-position: top center;
     }
