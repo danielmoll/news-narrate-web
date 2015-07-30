@@ -1,0 +1,14 @@
+{
+  "name": "narrate-web-people-smuggler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test:ie11"
+  },
+  "author": "Sky News Products",
+  "license": "MIT",
+  "dependencies": {
+    "swig": "^1.4.2"
+  }
+}

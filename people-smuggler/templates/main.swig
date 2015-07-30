@@ -35,178 +35,21 @@
 			- Noreen Hasan
 		-->
 
-				<div class="header">
-			<a href="http://news.sky.com/" class="header__link"><img alt="" class="header__logo" src="images/sky_news_logo.svg"></a>
+		{% include "header.swig" %}	
 
-			<ul class="header__list">
-				<li class="header__item">
-					<a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fnarrate.news.sky.com%2Fpeople-smuggler/;text=People+Smuggler+-+World%27s+Most+Wanted" class="header__link js-social-item"><img alt="" class="header__social-icon" src="images/twitter.svg"></a>
-				</li>
-				<li class="header__item">
-					<a href="https://www.facebook.com/sharer/sharer.php?u=http://narrate.news.sky.com/people-smuggler/" class="header__link js-social-item"><img alt="" class="header__social-icon" src="images/facebook.svg"></a>
-				</li>
-			</ul>
-		</div>	
-
-		
-
-<div class="hero">
-	<div class="hero__media js-in-view">
-
-		
-	<div class="image image--16x9 ">
-		
-			<img alt="" class="image__item" src="http://res.cloudinary.com/skynews/image/upload/c_scale,w_362/v1437573838/narrate-people-smuggler/face1-16x9.jpg" data-template="http://res.cloudinary.com/skynews/image/upload/c_scale,w_{width}/v1437573838/narrate-people-smuggler/face1-16x9.jpg" data-sizes="362x204 600x338 900x506 1500x844">
-		
-	</div>
-
-
-		
-	<div class="image image--16x9 image--face-replace image--fade-in">
-		
-			<img alt="" class="image__item" src="http://res.cloudinary.com/skynews/image/upload/c_scale,w_362/v1437573841/narrate-people-smuggler/face2-16x9.jpg" data-template="http://res.cloudinary.com/skynews/image/upload/c_scale,w_{width}/v1437573841/narrate-people-smuggler/face2-16x9.jpg" data-sizes="362x204 600x338 900x506 1500x844">
-		
-	</div>
-
-
-	</div>
-
-	<div class="hero__content">
-		<h1 class="hero__title"><span class="hero__title-bold">People Smuggler:</span><span class="hero__title-full-width">World&rsquo;s Most Wanted</span></h1>
-
-		<div class="hero__text"><button class="button js-play-button button--play icon icon--play">Full documentary</button></div>
-	</div>
-
-	<div class="documentary js-documentary">
-		<div class="video video--documentary">
-			<video class="video__item js-documentary-video" src="http://video.news.sky.com/video/h264/vod/3000/2015/07/DIGI114937WEPEOPLESMUGGLERSWITHWARN1507221238383814375664169653000.mp4" controls></video>
-		</div>
-	</div>
-</div>
-	
+		{% include "hero.swig" %}	
 		
 		<div class="scenes">
 
 			<!-- 1. Introduction -->
 
-			
+			{% include "scenes/map.swig" %}
 
-
-<div class="scene scene--4x3 scene--map">
-			<div class="scene__background">
-				
-	<div class="image image--4x3 ">
-		
-			<img alt="" class="image__item" src="http://res.cloudinary.com/skynews/image/upload/c_scale,w_362/v1437399881/narrate-people-smuggler/map4x3.jpg" data-template="http://res.cloudinary.com/skynews/image/upload/c_scale,w_{width}/v1437399881/narrate-people-smuggler/map4x3.jpg" data-sizes="362x270 589x442 750x563 1500x1126">
-		
-	</div>
-
-			</div>
-
-
-
-	<div class="scene__overlay scene__overlay--bottom">
-		<div class="scene__inner">
-			<div class="scene__media scene__media--left">
-				<p class="scene__text">Almost 150,000 migrants have crossed the Mediterranean into Europe in the first six months of 2015. The 180-mile journey from North Africa to one of Europe's southernmost points claims thousands of lives every year, but for the migrants braving the Mediterranean, it is the final leg of a long, dangerous and expensive journey. Take a look at that journey by following this interactive route from the centre of Sudan to one of the many entrances to Europe dotted along the region's southern coast.</p>
-			</div>
-		</div>
-	</div>
-
-	<div class="map-overlay">
-		<ol class="">
-			<li class="map-overlay__item map-overlay__item--khartoum"><a class="map-overlay__link js-in-view" href="#khartoum">Khartoum</a></li>
-			<li class="map-overlay__item map-overlay__item--kufra"><a class="map-overlay__link js-in-view" href="#kufra">Kufra</a></li>
-			<li class="map-overlay__item map-overlay__item--benghazi"><a class="map-overlay__link js-in-view" href="#benghazi">Benghazi</a></li>
-			<li class="map-overlay__item map-overlay__item--tripoli"><a class="map-overlay__link js-in-view" href="#tripoli">Tripoli</a></li>
-			<li class="map-overlay__item map-overlay__item--zuwara"><a class="map-overlay__link js-in-view" href="#zuwara">Zuwara</a></li>
-			<li class="map-overlay__item map-overlay__item--lampedusa"><a class="map-overlay__link js-in-view" href="#lampedusa">Lampedusa</a></li>
-		</ol>
-	</div>
-
-
-</div>
-
-
-			<nav class="navigation">
-	<div class="navigation__wrapper navigation--active js-navigation">
-		<div class="navigation__header">
-			<div class="navigation__table">
-				<div class="navigation__table-row">
-					<div class="navigation__table-cell">
-						<button class="navigation__heading js-navigation-expand">Explore Locations <span class="icon icon--navigation-heading js-nav-icon"><i class="icon__item icon__item--chevron-down"></i></span></button>
-					</div>
-					<div class="navigation__table-cell">
-						<a class="navigation__top" href="#top">Top <span class="icon icon--circle"><i class="icon__item icon__item--chevron-up"></i></span></a>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="navigation__inner">
-			<ol class="navigation__list js-navigation-list">
-				<li class="navigation__item"><a class="navigation__link navigation__link--khartoum" href="#khartoum">Khartoum</a></li>
-				<li class="navigation__item"><a class="navigation__link navigation__link--kufra" href="#kufra">Kufra</a></li>
-				<li class="navigation__item"><a class="navigation__link navigation__link--benghazi" href="#benghazi">Benghazi</a></li>
-				<li class="navigation__item"><a class="navigation__link navigation__link--tripoli" href="#tripoli">Tripoli</a></li>
-				<li class="navigation__item"><a class="navigation__link navigation__link--zuwara" href="#zuwara">Zuwara</a></li>
-				<li class="navigation__item"><a class="navigation__link navigation__link--lampedusa" href="#lampedusa">Lampedusa</a></li>
-				<li class="navigation__item navigation__item--last"><a class="navigation__top" href="#top">Top <span class="icon icon--circle"><i class="icon__item icon__item--chevron-up"></i></span></a></li>
-			</ol>
-		</div>
-	</div>
-</nav>
+			{% include "partials/navigation.swig" %}
 
 			<!-- 2. Khartoum -->
 
-			
-
-<div class="scene scene--4x3 ">
-	<a class="navigation__anchor" id="khartoum"></a>
-	<div class="scene__header">
-		<div class="scene__inner">
-			<h2 class="scene__title">Khartoum, Sudan</h2>
-			
-		</div>
-	</div>
-	
-	<div class="scene__background">
-		
-			
-	<div class="image image--4x3 ">
-		
-			<img alt="" class="image__item" src="http://res.cloudinary.com/skynews/image/upload/c_scale,w_362/v1437575735/narrate-people-smuggler/digimap_khartoum3.jpg" data-template="http://res.cloudinary.com/skynews/image/upload/c_scale,w_{width}/v1437575735/narrate-people-smuggler/digimap_khartoum3.jpg" data-sizes="362x270 589x442 750x563 1500x1126">
-		
-	</div>
-
-		
-		
-			<div class="map__marker map__marker--khartoum">
-				<img class="map__marker-static" src="images/marker-1.png" alt="">
-				<img class="map__marker-pulse" src="images/marker-2.png" alt="">
-			</div>
-		
-		</div>
-	
-	
-
-<div class="scene__inner">
-	<div class="scene__media scene__media--left">
-		<p class="scene__text">The start of many migrants’ journeys to Europe. A bustling metropolitan area of over five million people that is a magnet for refugees fleeing conflict in neighbouring countries. Many migrants meet their handlers at the Omdurman Market and negotiate a price for the first stage of their journey north. But for many, they'll never reach Europe.</p>
-	</div>
-
-
-	<div class="scene__media scene__media--left scene__media--clear">
-		<div class="video">
-			<video class="video__item" preload="none" src="http://res.cloudinary.com/skynews/video/upload/v1437487738/narrate-people-smuggler/NRCrawfordInteractiveKhartoum1507211042333914374719935313000.mp4" poster="http://res.cloudinary.com/skynews/image/upload/q_60/v1437560214/narrate-people-smuggler/poster-khartoum.jpg" controls></video>
-			<div class="video__caption">Alex Crawford on the first steps migrants take on their journey from some of Africa's most troubled regions to Europe's land of opportunity.</div>
-		</div>
-	</div>
-</div>
-
-</div>
-
-
+			{% include "scenes/khartoum.swig" %}
 
 				<div class="segue segue--parallax js-in-view" aria-hidden="true">
 					<ol class="parallax__list js-parallax">
@@ -232,60 +75,7 @@
 
 			<!-- 3. Kufra -->
 
-			
-
-<div class="scene scene--4x3 ">
-	<a class="navigation__anchor" id="kufra"></a>
-	<div class="scene__header">
-		<div class="scene__inner">
-			<h2 class="scene__title">Kufra, Libya</h2>
-			
-		</div>
-	</div>
-	
-	<div class="scene__background">
-		
-			
-	<div class="image image--4x3 ">
-		
-			<img alt="" class="image__item" src="http://res.cloudinary.com/skynews/image/upload/c_scale,w_362/v1437572062/narrate-people-smuggler/digimap_kufra1.jpg" data-template="http://res.cloudinary.com/skynews/image/upload/c_scale,w_{width}/v1437572062/narrate-people-smuggler/digimap_kufra1.jpg" data-sizes="362x270 589x442 750x563 1500x1126">
-		
-	</div>
-
-		
-		
-			<div class="map__marker map__marker--kufra">
-				<img class="map__marker-static" src="images/marker-1.png" alt="">
-				<img class="map__marker-pulse" src="images/marker-2.png" alt="">
-			</div>
-		
-		</div>
-	
-	
-
-<div class="scene__inner">
-	<div class="scene__media scene__media--left">
-		<p class="scene__text">Kufra was for centuries a staging post on slave routes. Today it is the entry point for all sorts of contraband into Libya. Locals have tried to prevent illicit trade into the town with The Great Wall Of Kufra, which stretches 150km around the town. It struggles to stop the flow of people north with the harsh reality of Saharan sand and the well-equipped smugglers easily rendering it useless.</p>
-	</div>
-
-	<div class="scene__media scene__media--left scene__media--clear">
-		<div class="video">
-			<video class="video__item" preload="none" src="http://res.cloudinary.com/skynews/video/upload/v1437488263/narrate-people-smuggler/NRCrawfordInteractiveKufra1507211042333014374718683353000.mp4" poster="http://res.cloudinary.com/skynews/video/upload/v1437574676/NRINTERACTIVECLIPKUFRA1507220657098514375446716733000_eyuebi.jpg" controls></video>
-			<div class="video__caption">How is an ancient stop on Africa's trading routes now under the control of people smugglers?</div>
-		</div>
-
-		<div class="video">
-			<video class="video__item" preload="none" src="http://res.cloudinary.com/skynews/video/upload/v1437574676/NRINTERACTIVECLIPKUFRA1507220657098514375446716733000_eyuebi.mp4" poster="http://res.cloudinary.com/skynews/image/upload/q_35/v1437559729/narrate-people-smuggler/poster-kufra.jpg" controls></video>
-			<div class="video__caption">These women have paid thousands of dollars to cross the Sahara, but are now stuck in Kufra.</div>
-		</div>
-	</div>
-
-	<div class="scene__spacer"></div>
-</div>
-
-</div>
-
-
+			{% include "scenes/kufra.swig" %}
 
 			<!-- Video background -->
 
@@ -327,39 +117,7 @@
 
 			<!-- 4. Benghazi -->
 
-			
-
-<div class="scene scene--4x3 ">
-	<a class="navigation__anchor" id="kufra"></a>
-	<div class="scene__header">
-		<div class="scene__inner">
-			<h2 class="scene__title">Title required!</h2>
-			
-		</div>
-	</div>
-	
-	<div class="scene__background">
-		
-			
-	<div class="image image--4x3 ">
-		
-			<img alt="" class="image__item" src="http://res.cloudinary.com/skynews/image/upload/c_scale,w_362/v1437572062/narrate-people-smuggler/digimap_kufra1.jpg" data-template="http://res.cloudinary.com/skynews/image/upload/c_scale,w_{width}/v1437572062/narrate-people-smuggler/digimap_kufra1.jpg" data-sizes="362x270 589x442 750x563 1500x1126">
-		
-	</div>
-
-		
-		
-			<div class="map__marker map__marker--kufra">
-				<img class="map__marker-static" src="images/marker-1.png" alt="">
-				<img class="map__marker-pulse" src="images/marker-2.png" alt="">
-			</div>
-		
-		</div>
-	
-	
-</div>
-
-
+			{% include "scenes/benghazi.swig" %}
 
 			<hr><hr>
 
