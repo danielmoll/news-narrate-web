@@ -2,21 +2,23 @@
 
 <div class="scene scene--4x3 {{ classes }}">
 	<a class="navigation__anchor" id="{{ sceneName }}"></a>
+	{% if title %} 
 	<div class="scene__header">
 		<div class="scene__inner">
-			<h2 class="scene__title">{% block title %}Title required!{% endblock %}</h2>
+			<h2 class="scene__title">{{ title }}</h2>
 			{% if leader %}<div class="scene__leader">{{ leader }}</div>{% endif %}
 		</div>
 	</div>
-	{% if backgroundImageUrl %}
+	{% endif %}
+	{% if backgroundImage or backgroundVideo %}
 	<div class="scene__background">
-		{% if backgroundImageUrl %}
-			{{ image.render(backgroundImageUrl, '4x3') }}
+		{% if backgroundImage %}
+			{{ image.render(backgroundImage, '4x3') }}
 		{% endif %}
 
-		{% if backgroundVideoUrl %}
+		{% if backgroundVideo %}
 			<div class="image image--4x3">
-				<video class="video__item js-video js-in-view" preload="none" src="{{ backgroundVideoUrl }}" poster="{{ backgroundVideoPosterUrl }}" loop muted></video>
+				<video class="video__item js-video js-in-view" preload="none" src="{{ backgroundVideo }}" poster="{{ backgroundVideoPoster }}" {% if loop %}loop{% endif %} muted></video>
 			</div>
 		{% endif %}
 

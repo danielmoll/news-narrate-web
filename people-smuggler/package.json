@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "gulp test:ie11"
+    "build": "node render-templates.js"
   },
   "author": "Sky News Products",
   "license": "MIT",
-  "dependencies": {
-    "swig": "^1.4.2"
+  "devDependencies": {
+    "nunjucks": "^1.3.4"
   }
 }

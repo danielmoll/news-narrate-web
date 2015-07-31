@@ -1,6 +1,9 @@
-{% import '../macros/scene.swig' as scene %}
+{% import '../macros/image.swig' as image %}
 
-{{ scene.start('http://res.cloudinary.com/skynews/image/upload/c_scale,w_{width}/v1437399881/narrate-people-smuggler/map4x3.jpg', 'scene--map') }}
+<div class="scene scene--map scene--4x3">
+	<div class="scene__background">
+		{{ image.render('http://res.cloudinary.com/skynews/image/upload/c_scale,w_{width}/v1437399881/narrate-people-smuggler/map4x3.jpg', '4x3')}}
+	</div>
 
 
 	<div class="scene__overlay scene__overlay--bottom">
@@ -21,5 +24,4 @@
 			<li class="map-overlay__item map-overlay__item--lampedusa"><a class="map-overlay__link js-in-view" href="#lampedusa">Lampedusa</a></li>
 		</ol>
 	</div>
-
-{{ scene.end() }}
+</div>

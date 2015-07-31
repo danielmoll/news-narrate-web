@@ -1,3 +1,5 @@
+{% import 'macros/parallax.swig' as parallax %}
+
 <!doctype html>
 <html>
 	<head>
@@ -51,27 +53,7 @@
 
 			{% include "scenes/khartoum.swig" %}
 
-				<div class="segue segue--parallax js-in-view" aria-hidden="true">
-					<ol class="parallax__list js-parallax">
-						<li class="parallax__item">100</li>
-						<li class="parallax__item">200</li>
-						<li class="parallax__item">300</li>
-						<li class="parallax__item">400</li>
-						<li class="parallax__item">500</li>
-						<li class="parallax__item">600</li>
-						<li class="parallax__item">700</li>
-						<li class="parallax__item">800</li>
-					</ol>
-					<div class="parallax__label">miles</div>
-				</div>
-
-				<div class="segue segue--no-parallax">
-					<div class="segue__label">
-						<div class="segue__label-content">
-							<span class="segue__label-distance">876 miles</span>
-						</div>
-					</div>
-				</div>
+			{{ parallax.render([100, 200, 300, 400, 500, 600, 700, 800], 'miles', '876 miles') }}
 
 			<!-- 3. Kufra -->
 
@@ -79,284 +61,41 @@
 
 			<!-- Video background -->
 
-			<div class="scene scene--video-background scene--4x3">
-				<div class="scene__background">
-					<div class="image image--4x3">
-						<video class="video__item js-video js-in-view" preload="none" src="http://res.cloudinary.com/skynews/video/upload/v1437551466/narrate-people-smuggler/Desert_loop_alternate_static_shot.mp4" poster="http://res.cloudinary.com/skynews/video/upload/v1437551466/narrate-people-smuggler/Desert_loop_alternate_static_shot.jpg" loop muted></video>
-					</div>
-				</div>
-				
-				<div class="scene__overlay scene__overlay--bottom">
-					<div class="scene__inner">
-						<div class="scene__media scene__media--left">
-							<p class="scene__text">Smugglers store supplies and weapons at hidden camps in the desert. The Libyan authorities will not take them on. Migrants say the Sahara Desert is like another sea they have to cross if they have any chance of reaching Europe.</p>
-						</div>
-					</div>
-				</div>
-			</div>
+			{% include "scenes/kufra-video.swig" %}
 
-			<div class="segue segue--parallax js-in-view" aria-hidden="true">
-				<ol class="parallax__list js-parallax">
-					<li class="parallax__item">900</li>
-					<li class="parallax__item">1000</li>
-					<li class="parallax__item">1100</li>
-					<li class="parallax__item">1200</li>
-					<li class="parallax__item">1300</li>
-
-				</ol>
-				<div class="parallax__label">miles</div>
-			</div>
-
-			<div class="segue segue--no-parallax">
-				<div class="segue__label">
-					<div class="segue__label-content">
-						<span class="segue__label-distance">1495 miles</span>
-					</div>
-				</div>
-			</div>
+			{{ parallax.render([900, 1000, 1100, 1200, 1300], 'miles', '1495 miles') }}
 
 			<!-- 4. Benghazi -->
 
 			{% include "scenes/benghazi.swig" %}
 
-			<hr><hr>
-
-			<div class="scene scene--3 scene--4x3 js-in-view">
-				<a class="navigation__anchor" id="benghazi"></a>
-				<div class="scene__header">
-					<div class="scene__inner">
-						<h2 class="scene__title">Benghazi, Libya</h2>
-						<div class="scene__leader">1495 miles</div>
-					</div>
-				</div>
-				<div class="scene__background">
-					<div class="image image--4x3">
-						<img alt="" class="image__item" src="http://res.cloudinary.com/skynews/image/upload/c_scale,w_362/v1437572061/narrate-people-smuggler/digimap_benghazi.jpg" data-template="http://res.cloudinary.com/skynews/image/upload/c_scale,w_{width}/v1437572061/narrate-people-smuggler/digimap_benghazi.jpg" data-sizes="362x270 589x442 750x563 1500x1126">
-					</div>
-					<div class="map__marker map__marker--benghazi">
-						<img class="map__marker-static" src="images/marker-1.png" alt="">
-						<img class="map__marker-pulse" src="images/marker-2.png" alt="">
-					</div>
-				</div>
-				<div class="scene__inner">
-					<div class="scene__media scene__media--left">
-						<p class="scene__text">Libya's second city is the frontline of the country's civil war. Fighters from the National Army and the internationally-recognised Tobruk government clash with Islamic State fighters trying to spread the group's poisonous message across the Middle East. The dangerous conditions don't hinder the smugglers from moving men, women and children through the city.</p>
-					</div>
-
-					<div class="scene__media scene__media--left scene__media--clear">
-						<div class="video">
-							<video class="video__item" preload="none" src="http://res.cloudinary.com/skynews/video/upload/v1437489746/narrate-people-smuggler/NRCrawfordInteractiveBENGHAZI1507211042332914374719754723000.mp4" poster="http://res.cloudinary.com/skynews/image/upload/q_35/v1437559728/narrate-people-smuggler/poster-benghazi.jpg" controls></video>
-							<div class="video__caption">Having been herded across deserts like human cattle, migrants now face being caught up in a civil war.</div>
-						</div>
-						<div class="video">
-							<video class="video__item" preload="none" src="http://res.cloudinary.com/skynews/video/upload/v1437574676/NRINTERACTIVECLIPBENGHAZI1507220657098814375446787163000_cn35fw.mp4" poster="http://res.cloudinary.com/skynews/video/upload/v1437574676/NRINTERACTIVECLIPBENGHAZI1507220657098814375446787163000_cn35fw.jpg" controls></video>
-							<div class="video__caption">The threat from the Islamic State is clear in Benghazi.</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
 			<!-- Video background -->
 
-			<div class="scene scene--video-background scene--4x3">
-				<div class="scene__background">
-					<div class="image image--4x3">
-						<video class="video__item js-video js-in-view" preload="none" src="http://res.cloudinary.com/skynews/video/upload/v1437551479/narrate-people-smuggler/Guns_Loop_v1.mp4" poster="http://res.cloudinary.com/skynews/video/upload/v1437551479/narrate-people-smuggler/Guns_Loop_v1.jpg" muted></video>
-					</div>
-				</div>
-				
-				<div class="scene__overlay scene__overlay--bottom">
-					<div class="scene__inner">
-						<div class="scene__media scene__media--left">
-							<p class="scene__text">The fighting provides the perfect anarchic conditions for people-smuggling gangs to thrive.</p>
-						</div>
-					</div>
-				</div>
-			</div>
+			{% include "scenes/benghazi-video.swig" %}
 
-			<div class="segue segue--parallax js-in-view" aria-hidden="true">
-				<ol class="parallax__list js-parallax">
-					<li class="parallax__item">1400</li>
-					<li class="parallax__item">1500</li>
-					<li class="parallax__item">1600</li>
-					<li class="parallax__item">1700</li>
-					<li class="parallax__item">1800</li>
-					<li class="parallax__item">1900</li>
-					<li class="parallax__item">2000</li>
-					<li class="parallax__item">2100</li>
-				</ol>
-				<div class="parallax__label">miles</div>
-			</div>
-
-			<div class="segue segue--no-parallax">
-				<div class="segue__label">
-					<div class="segue__label-content">
-						<span class="segue__label-distance">2126 miles</span>
-					</div>
-				</div>
-			</div>
+			{{ parallax.render([1400, 1500, 1600, 1700, 1800, 1900, 2000, 2100], 'miles', '2126 miles') }}
 
 			<!-- 5. Tripoli -->
 
-			<div class="scene scene--4 scene--4x3 js-in-view">
-				<a class="navigation__anchor" id="tripoli"></a>
-				<div class="scene__header">
-					<div class="scene__inner">
-						<h2 class="scene__title">Tripoli, Libya</h2>
-						<div class="scene__leader">2126 miles</div>
-					</div>
-				</div>
-				<div class="scene__background">
-					<div class="image image--4x3">
-						<img alt="" class="image__item" src="http://res.cloudinary.com/skynews/image/upload/c_scale,w_362/v1437572062/narrate-people-smuggler/digimap_tripoli1.jpg" data-template="http://res.cloudinary.com/skynews/image/upload/c_scale,w_{width}/v1437572062/narrate-people-smuggler/digimap_tripoli1.jpg" data-sizes="362x270 589x442 750x563 1500x1126">
-					</div>
-					<div class="map__marker map__marker--tripoli">
-						<img class="map__marker-static" src="images/marker-1.png" alt="">
-						<img class="map__marker-pulse" src="images/marker-2.png" alt="">
-					</div>
-				</div>
-				<div class="scene__inner">
-					<div class="scene__media scene__media--left">
-						<p class="scene__text">Tripoli seems like any other city in the Middle East - a thriving, bustling home to millions of people. But it is a facade. A government unrecognised by the outside world is in charge and smugglers have a free rein in large areas of the city. They use dilapidated houses and old factories to store their cargo until passage can be arranged. The wait for the right sea conditions can take weeks. Sometimes though, the migrants who have travelled over 2,000 miles to get here are simply held until more money is wired to their smugglers.</p>
-					</div>
-
-					<div class="scene__media scene__media--left scene__media--clear">
-						<div class="video">
-							<video class="video__item" preload="none" src="http://res.cloudinary.com/skynews/video/upload/v1437490138/narrate-people-smuggler/NRCrawfordInteractiveTripoli1507211042334014374718507833000.mp4" poster="http://res.cloudinary.com/skynews/image/upload/q_35/v1437559728/narrate-people-smuggler/poster-tripoli.jpg" controls></video>
-							<div class="video__caption">Tripoli may look safe, but hidden below its rooftops is a city in the grip of dangerous smugglers.</div>
-						</div>
-						<div class="video">
-							<video class="video__item" preload="none" src="http://res.cloudinary.com/skynews/video/upload/v1437574677/NRINTERACTIVECLIPTRIPOLI1507220657095814375446839863000_o3ocij.mp4" poster="http://res.cloudinary.com/skynews/video/upload/v1437574677/NRINTERACTIVECLIPTRIPOLI1507220657095814375446839863000_o3ocij.jpg" controls></video>
-							<div class="video__caption">People are held for months in tiny prisons, and they aren't happy to see their guards.</div>
-						</div>
-					</div>
-				</div>
-
-				
-			</div>
-
-			<div class="segue segue--parallax js-in-view" aria-hidden="true">
-				<ol class="parallax__list js-parallax">
-					<li class="parallax__item">2100</li>
-				</ol>
-				<div class="parallax__label">miles</div>
-			</div>
-
-			<div class="segue segue--no-parallax">
-				<div class="segue__label">
-					<div class="segue__label-content">
-						<span class="segue__label-distance">2199 miles</span>
-					</div>
-				</div>
-			</div>
+			{% include "scenes/tripoli.swig" %}
+			
+			{{ parallax.render([2100], 'miles', '2199 miles') }}
 
 			<!-- 6. Zuwara -->
 
-			<div class="scene scene--5 scene--4x3 js-in-view">
-				<a class="navigation__anchor" id="zuwara"></a>
-				<div class="scene__header">
-					<div class="scene__inner">
-						<h2 class="scene__title">Zuwara, Libya</h2>
-						<div class="scene__leader">2199 miles</div>
-					</div>
-				</div>
-				<div class="scene__background">
-					<div class="image image--4x3">
-						<img alt="" class="image__item" src="http://res.cloudinary.com/skynews/image/upload/c_scale,w_362/v1437572062/narrate-people-smuggler/digimap_zuwara1.jpg" data-template="http://res.cloudinary.com/skynews/image/upload/c_scale,w_{width}/v1437572062/narrate-people-smuggler/digimap_zuwara1.jpg" data-sizes="362x270 589x442 750x563 1500x1126">
-					</div>
-					<div class="map__marker map__marker--zuwara">
-						<img class="map__marker-static" src="images/marker-1.png" alt="">
-						<img class="map__marker-pulse" src="images/marker-2.png" alt="">
-					</div>
-				</div>
-				<div class="scene__inner">
-					<div class="scene__media scene__media--left">
-						<p class="scene__text">It should only take a few hours to get to Europe from Zuwara. A good boat could make the journey in a single sunny Mediterranean afternoon. But the migrants desperate to cross to southern Europe face an arduous trip in rickety old boats that the smugglers can afford to lose. They are packed on board, with those who pay the least being locked in the hold. Thousands leave Zuwara for Europe, but hundreds never get there.</p>
-					</div>
-
-					<div class="scene__media scene__media--left scene__media--clear">
-						<div class="video">
-							<video class="video__item" preload="none" src="http://res.cloudinary.com/skynews/video/upload/v1437490633/narrate-people-smuggler/NRCrawfordInteractiveZuwara1507211042336114374718347433000.mp4" poster="http://res.cloudinary.com/skynews/image/upload/q_35/v1437559730/narrate-people-smuggler/poster-zuwara.jpg" controls></video>
-							<div class="video__caption">It may be closer than ever but there is still one deadly step on the journey to Europe.</div>
-						</div>
-						<div class="video">
-							<video class="video__item" preload="none" src="http://res.cloudinary.com/skynews/video/upload/v1437574677/NRINTERACTIVECLIPZUWARA1507220657067514375447524013000_mwetti.mp4" poster="http://res.cloudinary.com/skynews/image/upload/v1437575549/narrate-people-smuggler/cegrab_20150722_152927_536.jpg" controls></video>
-							<div class="video__caption">Migrants are kept in back-street safe houses before handing over their final dollars to smugglers who send them to Europe from a local beach.</div>
-						</div>
-					</div>
-				</div>
-			</div>
+			{% include "scenes/zuwara.swig" %}
+			
 
 			<!-- Video background -->
 
-			<div class="scene scene--video-background scene--4x3">
-				<div class="scene__background">
-					<div class="image image--4x3">
-						<video class="video__item js-video js-in-view" preload="none" src="http://res.cloudinary.com/skynews/video/upload/v1437551452/narrate-people-smuggler/Beach_loop_v4.mp4" poster="http://res.cloudinary.com/skynews/video/upload/v1437551452/narrate-people-smuggler/Beach_loop_v4.jpg" loop muted></video>
-					</div>
-				</div>
-				
-				<div class="scene__overlay scene__overlay--bottom">
-					<div class="scene__inner">
-						<div class="scene__media scene__media--left">
-							<p class="scene__text">Hundreds never make it - bodies wash up on the shore here, and the local cemetery is packed.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="segue segue--parallax js-in-view" aria-hidden="true">
-				<ol class="parallax__list js-parallax">
-					<li class="parallax__item">2200</li>
-					<li class="parallax__item">2300</li>
-				</ol>
-				<div class="parallax__label">miles</div>
-			</div>
-
-			<div class="segue segue--no-parallax">
-				<div class="segue__label">
-					<div class="segue__label-content">
-						<span class="segue__label-distance">2379 miles</span>
-					</div>
-				</div>
-			</div>
+			{% include "scenes/zuwara-video.swig" %}
+			
+			{{ parallax.render([2200, 2300], 'miles', '2379 miles') }}
 
 			<!-- 7. Lampedusa -->
 
-			<div class="scene scene--6 scene--4x3 js-in-view">
-				<a class="navigation__anchor" id="lampedusa"></a>
-				<div class="scene__header">
-					<div class="scene__inner">
-						<h2 class="scene__title">Lampedusa, Italy</h2>
-						<div class="scene__leader">2379 miles</div>
-					</div>
-				</div>
-				<div class="scene__background">
-					<div class="image image--4x3">
-						<img alt="" class="image__item" src="http://res.cloudinary.com/skynews/image/upload/c_scale,w_362/v1437572062/narrate-people-smuggler/digimap_lampedusa.jpg" data-template="http://res.cloudinary.com/skynews/image/upload/c_scale,w_{width}/v1437572062/narrate-people-smuggler/digimap_lampedusa.jpg" data-sizes="362x270 589x442 750x563 1500x1126">
-					</div>
-					<div class="map__marker map__marker--lampedusa">
-						<img class="map__marker-static" src="images/marker-1.png" alt="">
-						<img class="map__marker-pulse" src="images/marker-2.png" alt="">
-					</div>
-				</div>
-				<div class="scene__inner">
-					<div class="scene__media scene__media--left">
-						<p class="scene__text">For the migrants who make it to Lampedusa, the journey is simply half-done. They may encounter some smiling faces for the first time in weeks as medics and aid workers help them from the boat, but they now have to reach mainland Europe. They are exhausted and terrified, but for many the dream of a life in the comfort of northern Europe's major cities will spur them on to face another dangerous journey.</p>
-					</div>
-
-					<div class="scene__media scene__media--left scene__media--clear">
-						<div class="video">
-							<video class="video__item" preload="none" src="http://res.cloudinary.com/skynews/video/upload/v1437490954/narrate-people-smuggler/NRCrawfordInteractiveLampedusa1507211042334314374718383353000.mp4" poster="http://res.cloudinary.com/skynews/image/upload/q_35/v1437559729/narrate-people-smuggler/poster-lampedusa.jpg" controls></video>
-							<div class="video__caption">Setting foot on European soil may feel like the end of their journey, but smuggled migrants rapidly discover they are simply at the start of another difficult battle to get into Europe.</div>
-						</div>
-						<div class="video">
-							<video class="video__item" preload="none" src="http://res.cloudinary.com/skynews/video/upload/v1437574676/NRINTERACTIVECLIPLAMPEDUSA1507220657097914375446596433000_m65vwy.mp4" poster="http://res.cloudinary.com/skynews/video/upload/v1437574676/NRINTERACTIVECLIPLAMPEDUSA1507220657097914375446596433000_m65vwy.jpg" controls></video>
-							<div class="video__caption">For those tasked with helping forlorn migrants arriving in Europe, the reality of people smuggling can be tough to cope with.</div>
-						</div>
-					</div>
-				</div>
-			</div>
+			{% include "scenes/lampedusa.swig" %}
+			
 
 		</div>
 

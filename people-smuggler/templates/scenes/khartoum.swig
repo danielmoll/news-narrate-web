@@ -1,9 +1,9 @@
 {% extends '../layouts/scene.swig' %}
 
-{% set backgroundImageUrl = 'http://res.cloudinary.com/skynews/image/upload/c_scale,w_{width}/v1437575735/narrate-people-smuggler/digimap_khartoum3.jpg' %}
+{% set backgroundImage = 'http://res.cloudinary.com/skynews/image/upload/c_scale,w_{width}/v1437575735/narrate-people-smuggler/digimap_khartoum3.jpg' %}
 {% set sceneName = 'khartoum' %}
-
-{% block title %}Khartoum, Sudan{% endblock %}
+{% set classes = 'scene--1 js-in-view' %}
+{% set title = 'Khartoum, Sudan' %}
 
 {% block content %}
 
