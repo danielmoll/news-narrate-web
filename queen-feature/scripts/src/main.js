@@ -27,6 +27,9 @@ function create() {
     map.setCollisionBetween(20, 25);
     map.setCollisionBetween(27, 29);
     map.setCollision(40);
+    // map.setCollision(11); // coin
+
+    map.setTileIndexCallback(11, hitCoin, this);
     
     layer = map.createLayer('World1');
 
@@ -38,6 +41,8 @@ function create() {
     p = game.add.sprite(32, 32, 'player');
 
     game.physics.enable(p);
+
+    console.log(map);
    
 
     game.physics.arcade.gravity.y = 600;
@@ -55,6 +60,12 @@ function create() {
     // text1.scrollFactorX = 1.15;
 }
 
+function hitCoin(sprite, tile) {
+	// console.log(tile);
+    tile.index = 1;
+    layer.dirty = true;
+    // return true;
+}
 function update() {
 
 	text1.x = (-layer.x / 4) + 100;
