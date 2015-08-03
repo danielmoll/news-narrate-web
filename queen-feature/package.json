@@ -1,0 +1,12 @@
+{
+  "name": "narrate-web-queen-feature",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Sky News Products",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {
+    "phaser": "^2.4.2"
+  }
+}
