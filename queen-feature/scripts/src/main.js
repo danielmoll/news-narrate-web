@@ -8,7 +8,9 @@ var game = new Phaser.Game(568, 320, Phaser.AUTO, 'main', { preload: preload, cr
 function preload() {
 	game.load.tilemap('mario', 'assets/tilemaps/maps/super_mario.json', null, Phaser.Tilemap.TILED_JSON);
 	game.load.image('tiles', 'assets/tilemaps/tiles/super_mario.png');
-	game.load.image('player', 'assets/sprites/phaser-dude.png');
+	game.load.image('player', 'assets/sprites/pixel_queen.png');
+	game.load.bitmapFont('nokia', 'assets/fonts/bitmapFonts/nokia.png', 'assets/fonts/bitmapFonts/nokia.xml');
+
 }
 
 function create() {
@@ -19,7 +21,7 @@ function create() {
     map.addTilesetImage('SuperMarioBros-World1-1', 'tiles');
 
     //  14 = ? block
-    // map.setCollisionBetween(14, 15);
+    map.setCollisionBetween(14, 15);
 
     map.setCollisionBetween(15, 16);
     map.setCollisionBetween(20, 25);
@@ -47,9 +49,15 @@ function create() {
     game.camera.follow(p);
 
     cursors = game.input.keyboard.createCursorKeys();
+
+    text1 = game.add.bitmapText(200, 20, 'nokia', '1953: The Coronation', 32);
+    console.log(text1);
+    // text1.scrollFactorX = 1.15;
 }
 
 function update() {
+
+	text1.x = (-layer.x / 4) + 100;
 
     game.physics.arcade.collide(p, layer);
     if (cursors.up.isDown)
