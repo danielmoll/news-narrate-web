@@ -8,7 +8,7 @@ var game = new Phaser.Game(568, 320, Phaser.AUTO, 'main', { preload: preload, cr
 function preload() {
 	game.load.tilemap('mario', 'assets/tilemaps/maps/super_mario.json', null, Phaser.Tilemap.TILED_JSON);
 	game.load.image('tiles', 'assets/tilemaps/tiles/super_mario.png');
-	game.load.image('player', 'assets/sprites/pixel_queen.png');
+	game.load.spritesheet('player', 'assets/sprites/queen-sprite.png', 32, 32, 6);
 	game.load.bitmapFont('nokia', 'assets/fonts/bitmapFonts/nokia.png', 'assets/fonts/bitmapFonts/nokia.xml');
 
 }
@@ -58,6 +58,9 @@ function create() {
     text1 = game.add.bitmapText(200, 20, 'nokia', '1953: The Coronation', 32);
     console.log(text1);
     // text1.scrollFactorX = 1.15;
+
+    p.animations.add('left', [0, 1], 10, true);
+    p.animations.add('right', [3,4], 10, true);
 }
 
 function hitCoin(sprite, tile) {
@@ -92,15 +95,22 @@ function update() {
     {
        if (game.input.activePointer.x < 284) {
        		p.body.velocity.x = -150;
+       		p.animations.play('left', 5, true);
        }
        else {
        		p.body.velocity.x = 150;
+       		p.animations.play('right', 5, true);
+
        }
 
        if (p.body.onFloor())
         {
             p.body.velocity.y = -300;
         }
+    }
+
+    if (p.body.velocity.x === 0) {
+    	p.animations.stop();
     }
 
 }
