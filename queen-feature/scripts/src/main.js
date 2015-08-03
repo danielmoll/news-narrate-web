@@ -1,35 +1,19 @@
-'use strict';
-
-var game = new Phaser.Game(568, 320, Phaser.AUTO, 'main', { preload: preload, create: create, update: update, render: render });
-
+var game = new Phaser.Game(568, 320, Phaser.AUTO, 'main', { preload: preload, create: create, update: update, render: render }),
+	map,
+	tileset,
+	layer,
+	p,
+	cursors;
 
 function preload() {
-
-	// game.scale.maxWidth = 800;
- //    game.scale.maxHeight = 600;
-    // game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-    // game.scale.setScreenSize();
-
-    // game.load.tilemap('mario', 'assets/tilemaps/maps/super_mario.json', null, Phaser.Tilemap.TILED_JSON);
-    // game.load.image('tiles', 'assets/tilemaps/tiles/super_mario.png');
-    // game.load.image('player', 'assets/sprites/phaser-dude.png');
-
-
-	game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-	game.scale.refresh();
+	game.load.tilemap('mario', 'assets/tilemaps/maps/super_mario.json', null, Phaser.Tilemap.TILED_JSON);
+	game.load.image('tiles', 'assets/tilemaps/tiles/super_mario.png');
+	game.load.image('player', 'assets/sprites/phaser-dude.png');
 }
 
-var map;
-var tileset;
-var layer;
-var p;
-var cursors;
-
 function create() {
-
     game.physics.startSystem(Phaser.Physics.ARCADE);
     game.stage.backgroundColor = '#787878';
-
     map = game.add.tilemap('mario');
 
     map.addTilesetImage('SuperMarioBros-World1-1', 'tiles');
@@ -52,8 +36,9 @@ function create() {
     p = game.add.sprite(32, 32, 'player');
 
     game.physics.enable(p);
+   
 
-    game.physics.arcade.gravity.y = 250;
+    game.physics.arcade.gravity.y = 600;
 
     p.body.bounce.y = 0.2;
     p.body.linearDamping = 1;
@@ -62,15 +47,11 @@ function create() {
     game.camera.follow(p);
 
     cursors = game.input.keyboard.createCursorKeys();
-
 }
 
 function update() {
 
     game.physics.arcade.collide(p, layer);
-
-    p.body.velocity.x = 0;
-
     if (cursors.up.isDown)
     {
         if (p.body.onFloor())
@@ -86,6 +67,21 @@ function update() {
     else if (cursors.right.isDown)
     {
         p.body.velocity.x = 150;
+    }
+
+    if (game.input.activePointer.isDown)
+    {
+       if (game.input.activePointer.x < 284) {
+       		p.body.velocity.x = -150;
+       }
+       else {
+       		p.body.velocity.x = 150;
+       }
+
+       if (p.body.onFloor())
+        {
+            p.body.velocity.y = -300;
+        }
     }
 
 }
