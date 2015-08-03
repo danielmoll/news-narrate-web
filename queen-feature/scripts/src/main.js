@@ -16,6 +16,9 @@ function preload() {
 function create() {
     game.physics.startSystem(Phaser.Physics.ARCADE);
     game.stage.backgroundColor = '#787878';
+    game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+    // game.scale.setScreenSize();
+
     map = game.add.tilemap('mario');
 
     map.addTilesetImage('SuperMarioBros-World1-1', 'tiles');
@@ -59,8 +62,8 @@ function create() {
     console.log(text1);
     // text1.scrollFactorX = 1.15;
 
-    p.animations.add('left', [0, 1], 10, true);
-    p.animations.add('right', [3,4], 10, true);
+    p.animations.add('left', [0, 1], 5, true);
+    p.animations.add('right', [3,4], 5, true);
 }
 
 function hitCoin(sprite, tile) {
@@ -95,11 +98,11 @@ function update() {
     {
        if (game.input.activePointer.x < 284) {
        		p.body.velocity.x = -150;
-       		p.animations.play('left', 5, true);
+       		p.animations.play('left');
        }
        else {
        		p.body.velocity.x = 150;
-       		p.animations.play('right', 5, true);
+       		p.animations.play('right');
 
        }
 
@@ -111,6 +114,7 @@ function update() {
 
     if (p.body.velocity.x === 0) {
     	p.animations.stop();
+    	p.frame = 2;
     }
 
 }
