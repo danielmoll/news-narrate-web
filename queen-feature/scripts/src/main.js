@@ -1,16 +1,15 @@
 var game = new Phaser.Game(568, 320, Phaser.AUTO, 'main', { preload: preload, create: create, update: update, render: render }),
-	map,
-	tileset,
-	layer,
-	p,
-	cursors;
+    map,
+    tileset,
+    layer,
+    p,
+    cursors;
 
 function preload() {
-	game.load.tilemap('mario', 'assets/tilemaps/maps/super_mario.json', null, Phaser.Tilemap.TILED_JSON);
-	game.load.image('tiles', 'assets/tilemaps/tiles/super_mario.png');
-	game.load.spritesheet('player', 'assets/sprites/queen-sprite.png', 32, 32, 6);
-	game.load.bitmapFont('nokia', 'assets/fonts/bitmapFonts/nokia.png', 'assets/fonts/bitmapFonts/nokia.xml');
-
+    game.load.tilemap('mario', 'assets/tilemaps/maps/super_mario.json', null, Phaser.Tilemap.TILED_JSON);
+    game.load.image('tiles', 'assets/tilemaps/tiles/super_mario.png');
+    game.load.spritesheet('player', 'assets/sprites/queen-sprite.png', 32, 32, 6);
+    game.load.bitmapFont('nokia', 'assets/fonts/bitmapFonts/nokia.png', 'assets/fonts/bitmapFonts/nokia.xml');
 }
 
 function create() {
@@ -25,7 +24,6 @@ function create() {
 
     //  14 = ? block
     map.setCollisionBetween(14, 15);
-
     map.setCollisionBetween(15, 16);
     map.setCollisionBetween(20, 25);
     map.setCollisionBetween(27, 29);
@@ -67,60 +65,63 @@ function create() {
 }
 
 function hitCoin(sprite, tile) {
-	// console.log(tile);
+    // console.log(tile);
     tile.index = 1;
     layer.dirty = true;
     // return true;
 }
+
+function moveLeft() {
+    p.body.velocity.x = -150;
+    p.animations.play('left');
+}
+
+function moveRight() {
+    p.body.velocity.x = 150;
+    p.animations.play('right');
+}
+
+function jump() {
+    p.body.velocity.y = -300;
+}
+
 function update() {
 
-	text1.x = (-layer.x / 4) + 100;
+    text1.x = (-layer.x / 4) + 100;
 
     game.physics.arcade.collide(p, layer);
-    if (cursors.up.isDown)
-    {
-        if (p.body.onFloor())
-        {
-            p.body.velocity.y = -200;
+
+    if (cursors.up.isDown) {
+        if (p.body.onFloor()) {
+            jump();
         }
     }
 
-    if (cursors.left.isDown)
-    {
-        p.body.velocity.x = -150;
-    }
-    else if (cursors.right.isDown)
-    {
-        p.body.velocity.x = 150;
+    if (cursors.left.isDown) {
+        moveLeft();
+
+    } else if (cursors.right.isDown) {
+        moveRight();
     }
 
-    if (game.input.activePointer.isDown)
-    {
-       if (game.input.activePointer.x < 284) {
-       		p.body.velocity.x = -150;
-       		p.animations.play('left');
-       }
-       else {
-       		p.body.velocity.x = 150;
-       		p.animations.play('right');
+    if (game.input.activePointer.isDown) {
+        if (game.input.activePointer.x < 284) {
+            moveLeft();
+        } else {
+            moveRight();
+        }
 
-       }
-
-       if (p.body.onFloor())
-        {
-            p.body.velocity.y = -300;
+        if (p.body.onFloor()) {
+            jump();
         }
     }
 
     if (p.body.velocity.x === 0) {
-    	p.animations.stop();
-    	p.frame = 2;
+        p.animations.stop();
+        p.frame = 2;
     }
-
 }
 
 function render() {
-
     game.debug.bodyInfo(p, 32, 320);
-
 }
