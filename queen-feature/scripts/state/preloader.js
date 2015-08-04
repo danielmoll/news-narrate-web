@@ -1,21 +1,26 @@
 Game.State.Preloader = function(game) {};
 Game.State.Preloader.prototype = {
     preload: function() {
-        this.game.stage.backgroundColor = '#787878';
+        this.stage.backgroundColor = '#000000';
         
         // loading screen
-        // this.add.sprite(492, 175, 'loading_text');
-        // this.add.sprite(120, 580, 'loading_bar_bg');
-        // this.preloadBar = this.add.sprite(140, 600, 'loading_bar');
-        // this.add.sprite(140, 600, 'loading_bar_fg');
+        this.add.sprite(195, 142, 'crown');
+        // this.add.sprite(120, 80, 'loading_bar_bg');
+        // this.preloadBar = this.add.sprite(140, 100, 'loading_bar');
+        // this.add.sprite(140, 100, 'loading_bar_fg');
         // this.load.setPreloadSprite(this.preloadBar);
+
+        this.textGroup = this.game.add.group();
+        this.textGroup.fixedToCamera = true;
+        // this.textGroup.alpha = 0.4;
+        // this.textGroup.add(new Phaser.BitmapText(this.game, 50, 50, 'nokia', 'loading', 30));
+        this.textGroup.add(new Phaser.Text(this.game, this.game.width / 2 - 50, this.game.height / 2 - 20, 'Loading...', {'fontSize':25, 'fill': '#ffffff' }));
 
         // Load our sprites
         this.load.spritesheet('player', 'assets/sprites/queen-sprite.png', 32, 64, 6);
         this.game.load.image('sparkle1', 'assets/sprites/sparkle1.png');
-        this.load.image('sparkle2', 'assets/sprites/sparkle2.png');
-        this.load.image('sparkle3', 'assets/sprites/sparkle3.png');
-        this.load.image('crown', 'assets/sprites/crown.png');
+        this.game.load.image('sparkle2', 'assets/sprites/sparkle2.png');
+        this.game.load.image('sparkle3', 'assets/sprites/sparkle3.png');
         
         // Fonts
         this.load.bitmapFont('nokia', 'assets/fonts/bitmapFonts/nokia.png', 'assets/fonts/bitmapFonts/nokia.xml');
@@ -55,6 +60,6 @@ Game.State.Preloader.prototype = {
     },
 
     create: function() {
-        this.game.state.start('game');
+         setTimeout(function() {this.game.state.start('game'); }.bind(this), 1200);
     }
 };

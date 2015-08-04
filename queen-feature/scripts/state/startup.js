@@ -18,10 +18,11 @@ Game.State.Startup = function(game) {};
 Game.State.Startup.prototype = {
     preload: function() {
         // Load our "loading" images
-        this.load.image('loading_text', 'assets/sprites/loading_text.png');
-        // this.load.image('loading_bar_bg', 'res/img/loading_bar_bg.png');
-        // this.load.image('loading_bar', 'res/img/loading_bar.png');
-        // this.load.image('loading_bar_fg', 'res/img/loading_bar_fg.png');
+        // this.load.image('loading_text', 'assets/sprites/loading_text.png');
+        // this.load.image('loading_bar_bg', 'assets/sprites/loading_bar_bg.png');
+        // this.load.image('loading_bar', 'assets/sprites/loading_bar.png');
+        // this.load.image('loading_bar_fg', 'assets/sprites/loading_bar_fg.png');
+        this.load.image('crown', 'assets/sprites/crown.png');
 
         // Load the json maps, so we can load the images in the next steps.
         var map;

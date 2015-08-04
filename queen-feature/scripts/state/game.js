@@ -28,22 +28,22 @@ Game.State.Game.prototype = {
         this.background.resizeWorld();
 
         // Place the subMaps
-        this.subMaps = {};
-        var subMapLocations = this.mapBackground.findObjectsByType('sub_map');
-        var location, tileX, tileY;
-        for (var i = 0; i < subMapLocations.length; i++) {
-            location = subMapLocations[i];
-            tileX = location.x / 32;
-            tileY = location.y / 32;
-            this.subMaps[location.name] = new RPG.Map.SubMap(
-                this.modules[location.properties.sub_map], tileX, tileY);
-        }
+        // this.subMaps = {};
+        // var subMapLocations = this.mapBackground.findObjectsByType('sub_map');
+        // var location, tileX, tileY;
+        // for (var i = 0; i < subMapLocations.length; i++) {
+        //     location = subMapLocations[i];
+        //     tileX = location.x / 32;
+        //     tileY = location.y / 32;
+        //     this.subMaps[location.name] = new RPG.Map.SubMap(
+        //         this.modules[location.properties.sub_map], tileX, tileY);
+        // }
         // this.subMaps['home0'].setIndoorAlpha(0);
 
         // Collision map!
-        this.collisions = this.game.add.group();
-        this.inCollisionObjects = this.mapBackground.getCollisionSprites(
-            'collision', this.collisions, 1, 13);
+        // this.collisions = this.game.add.group();
+        // this.inCollisionObjects = this.mapBackground.getCollisionSprites(
+        //     'collision', this.collisions, 1, 13);
 
         this.mapBackground.tilemap.setCollisionBetween(76, 84);
         // console.log(this.background.tileX);
@@ -153,6 +153,7 @@ Game.State.Game.prototype = {
         } else if (this.game.input.activePointer.isDown) {
             if (this.game.input.activePointer.x < this.game.width / 2) {
                 this.moveLeft();
+
             } else {
                 this.moveRight();
             }
