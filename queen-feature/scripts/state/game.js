@@ -17,7 +17,7 @@ Game.State.Game.prototype = {
         
         // We manually add the over world background for now...
         this.background = this.mapBackground.createLayer('background');
-        // this.background.debug = true;
+        this.background.debug = true;
 
         // Resize the game world to match the layer dimensions
         this.background.resizeWorld();
@@ -38,23 +38,10 @@ Game.State.Game.prototype = {
         // Collision map!
         this.collisions = this.game.add.group();
         this.inCollisionObjects = this.mapBackground.getCollisionSprites(
-            'collision', this.collisions, this.background.tileX, this.background.tileY);
-        
+            'collision', this.collisions, 1, 13);
 
+        this.mapBackground.tilemap.setCollisionBetween(76, 84);
         // console.log(this.background.tileX);
-
-
-        //  14 = ? block
-        // this.map.setCollisionBetween(14, 15);
-        // this.map.setCollisionBetween(15, 16);
-        // this.map.setCollisionBetween(20, 25);
-        // this.map.setCollisionBetween(27, 29);
-        // this.map.setCollision(76);
-        // this.map.setCollision(11); // coin
-
-        
-        // this.layer = this.map.createLayer('World1');
-
 
         var spawn = this.mapBackground.findObjectsByType('player_spawn');
         this.player = this.game.add.sprite(spawn[0].x, spawn[0].y, 'player');
@@ -62,7 +49,6 @@ Game.State.Game.prototype = {
         this.game.physics.arcade.gravity.y = 600;
         this.player.body.bounce.y = 0.2;
         this.player.body.linearDamping = 1;
-        // this.player.body.setSize(20, 20, 0, 20);
         this.player.body.collideWorldBounds = true;
         this.game.camera.follow(this.player);
 
@@ -105,7 +91,7 @@ Game.State.Game.prototype = {
             this.logged = true;
         }
 
-        this.game.physics.arcade.collide(this.player, this.collisions);
+        this.game.physics.arcade.collide(this.player, this.background);
 
         if (this.cursors.up.isDown) {
             if (this.player.body.onFloor()) {
