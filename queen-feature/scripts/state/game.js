@@ -89,6 +89,7 @@ Game.State.Game.prototype = {
 
     jump: function () {
         this.player.body.velocity.y = -300;
+        this.jumped = true;
     },
 
     update: function() {
@@ -123,9 +124,13 @@ Game.State.Game.prototype = {
                 this.moveRight();
             }
 
-            if (this.player.body.onFloor()) {
+            if (this.player.body.onFloor() && !this.jumped) {
                 this.jump();
             }
+        }
+        else {
+            this.player.body.velocity.x = 0;
+            this.jumped = false;
         }
 
         if (this.player.body.velocity.x === 0) {
