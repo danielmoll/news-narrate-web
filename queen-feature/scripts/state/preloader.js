@@ -21,6 +21,8 @@ Game.State.Preloader.prototype = {
         this.game.load.image('sparkle1', 'assets/sprites/sparkle1.png');
         this.game.load.image('sparkle2', 'assets/sprites/sparkle2.png');
         this.game.load.image('sparkle3', 'assets/sprites/sparkle3.png');
+        this.load.image('crown', 'assets/sprites/crown.png');
+        // this.load.image('corgi', 'assets/sprites/corgi.gif');
         
         // Fonts
         this.load.bitmapFont('nokia', 'assets/fonts/bitmapFonts/nokia.png', 'assets/fonts/bitmapFonts/nokia.xml');

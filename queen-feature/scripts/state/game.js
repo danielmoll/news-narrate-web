@@ -77,11 +77,12 @@ Game.State.Game.prototype = {
 
         emitter.start(false, 1000, 100);
         this.crown = this.game.add.sprite(crownSpawn[0].x, crownSpawn[0].y, 'crown');
-        console.log(this.crown);
         this.game.physics.arcade.enable(this.crown);
         this.crown.body.allowGravity = false;
         
-        // this.player.addChild(new Phaser.Sprite(this.game, 1, -14, 'crown'));
+        // Corgi!
+        // var corgiSpawn = this.mapBackground.findObjectsByType('corgi_spawn');
+        // this.corgi = this.game.add.sprite(corgiSpawn[0].x, corgiSpawn[0].y, 'corgi');
 
         // Text overlays
         this.textGroup = this.game.add.group();
@@ -96,6 +97,8 @@ Game.State.Game.prototype = {
         // this.doors[doorSprite.properties.id] = new RPG.Map.Object.Door(this.game, doorSprite);
 
         this.cursors = this.game.input.keyboard.createCursorKeys();
+        this.banisterLayer = this.mapBackground.createLayer('banisters');
+        this.columnLayer = this.mapBackground.createLayer('columns');
     },
 
     collisionHandler: function() {
