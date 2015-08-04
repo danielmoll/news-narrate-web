@@ -7,6 +7,11 @@ Game.State.Game.prototype = {
     cursors: null,
     map: null,
     layer: null,
+    textOverlays: [
+        { text: '1953', size: 200, x: 50, y: 230 },
+        { text: 'February 1952 George VI dies aged 56. \nHis daughter, Princess Elizabeth, is proclaimed\nQueen of the United Kingdom.', size: 20, x: 50, y: 380}
+    ],
+    TEXT_PARALLAX_SCALE: 1.2,
 
     create: function() {
 
@@ -17,7 +22,7 @@ Game.State.Game.prototype = {
         
         // We manually add the over world background for now...
         this.background = this.mapBackground.createLayer('background');
-        this.background.debug = true;
+        // this.background.debug = true;
 
         // Resize the game world to match the layer dimensions
         this.background.resizeWorld();
@@ -44,7 +49,7 @@ Game.State.Game.prototype = {
         // console.log(this.background.tileX);
 
         var spawn = this.mapBackground.findObjectsByType('player_spawn');
-        this.player = this.game.add.sprite(spawn[0].x, spawn[0].y, 'player');
+        this.player = this.game.add.sprite(spawn[0].x, spawn[0].y - 32, 'player');
         this.game.physics.arcade.enable(this.player);
         this.game.physics.arcade.gravity.y = 600;
         this.player.body.bounce.y = 0.2;
@@ -55,8 +60,12 @@ Game.State.Game.prototype = {
         this.player.animations.add('left', [0, 1], 5, true);
         this.player.animations.add('right', [3,4], 5, true);
 
-        this.text1 = this.game.add.bitmapText(200, 20, 'nokia', '1953: The Coronation', 32);
-        this.text1.scrollFactorX = 1.15;
+        this.textGroup = this.game.add.group();
+        this.textGroup.fixedToCamera = false;
+        this.textGroup.alpha = 0.4;
+        this.textOverlays.forEach(function(textItem) {
+            this.textGroup.add(new Phaser.BitmapText(this.game, textItem.x * this.TEXT_PARALLAX_SCALE, textItem.y * this.TEXT_PARALLAX_SCALE, 'nokia', textItem.text, textItem.size));
+        }.bind(this));
 
         this.cursors = this.game.input.keyboard.createCursorKeys();
     },
@@ -84,10 +93,11 @@ Game.State.Game.prototype = {
 
     update: function() {
         
-        this.text1.x = (-this.background.x / 4) + 100;
-        
+        this.textGroup.x = this.game.world.x * this.TEXT_PARALLAX_SCALE;
+        this.textGroup.y = this.game.world.y * this.TEXT_PARALLAX_SCALE;
+
         if (!this.logged){
-            console.log(this.collisions);
+            // console.log(this.collisions);
             this.logged = true;
         }
 
@@ -107,7 +117,7 @@ Game.State.Game.prototype = {
         }
 
         if (this.game.input.activePointer.isDown) {
-            if (this.game.input.activePointer.x < 284) {
+            if (this.game.input.activePointer.x < this.game.width / 2) {
                 this.moveLeft();
             } else {
                 this.moveRight();

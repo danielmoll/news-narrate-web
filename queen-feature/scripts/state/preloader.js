@@ -20,7 +20,7 @@ Game.State.Preloader.prototype = {
         // this.load.audio('doorClose_4', 'res/audio/doorClose_4.ogg');
 
         this.load.image('tiles', 'assets/tiles/buckinghampalace_background.png');
-        this.load.spritesheet('player', 'assets/sprites/queen-sprite.png', 32, 32, 6);
+        this.load.spritesheet('player', 'assets/sprites/queen-sprite.png', 32, 64, 6);
         this.load.bitmapFont('nokia', 'assets/fonts/bitmapFonts/nokia.png', 'assets/fonts/bitmapFonts/nokia.xml');
 
         // Load all of our maps and their components.
