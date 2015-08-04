@@ -133,9 +133,8 @@ Game.State.Game.prototype = {
 
         } else if (this.cursors.right.isDown) {
             this.moveRight();
-        }
-
-        if (this.game.input.activePointer.isDown) {
+            
+        } else if (this.game.input.activePointer.isDown) {
             if (this.game.input.activePointer.x < this.game.width / 2) {
                 this.moveLeft();
             } else {
@@ -145,8 +144,8 @@ Game.State.Game.prototype = {
             if (this.player.body.onFloor() && !this.jumped) {
                 this.jump();
             }
-        }
-        else {
+
+        } else if (this.game.input.activePointer.isUp) {
             this.player.body.velocity.x = 0;
             this.jumped = false;
         }
