@@ -62,17 +62,8 @@ Game.State.Game.prototype = {
         this.player.animations.add('right', [3,4], 5, true);
 
         // Loading gthe crown
-        this.game.add.sprite(500, 200, 'crown');
-        this.player.addChild(new Phaser.Sprite(this.game, 1, -14, 'crown'));
-
-        this.textGroup = this.game.add.group();
-        this.textGroup.fixedToCamera = false;
-        this.textGroup.alpha = 0.4;
-        this.textOverlays.forEach(function(textItem) {
-            this.textGroup.add(new Phaser.BitmapText(this.game, textItem.x * this.TEXT_PARALLAX_SCALE, textItem.y * this.TEXT_PARALLAX_SCALE, 'nokia', textItem.text, textItem.size));
-        }.bind(this));
-
-        emitter = this.game.add.emitter(516, 216, 10);
+        var crownSpawn = this.mapBackground.findObjectsByType('crown_spawn');
+        var emitter = this.game.add.emitter(crownSpawn[0].x + 16, crownSpawn[0].y + 16, 10);
         emitter.makeParticles(['sparkle1', 'sparkle2', 'sparkle3']);
         emitter.minParticleSpeed.setTo(-50, -50);
         emitter.maxParticleSpeed.setTo(50, 50);
@@ -84,6 +75,20 @@ Game.State.Game.prototype = {
         emitter.maxParticleScale = 1.5;
 
         emitter.start(false, 1000, 100);
+        this.game.add.sprite(crownSpawn[0].x, crownSpawn[0].y, 'crown');
+        // this.player.addChild(new Phaser.Sprite(this.game, 1, -14, 'crown'));
+
+        // Text overlays
+        this.textGroup = this.game.add.group();
+        this.textGroup.fixedToCamera = false;
+        this.textGroup.alpha = 0.4;
+        this.textOverlays.forEach(function(textItem) {
+            this.textGroup.add(new Phaser.BitmapText(this.game, textItem.x * this.TEXT_PARALLAX_SCALE, textItem.y * this.TEXT_PARALLAX_SCALE, 'nokia', textItem.text, textItem.size));
+        }.bind(this));
+
+        // var doorSprite = this.game.spriteFromObject('crown', this.doorGroup);
+        // RPG.Map.Object.Door.init(this.game);
+        // this.doors[doorSprite.properties.id] = new RPG.Map.Object.Door(this.game, doorSprite);
 
         this.cursors = this.game.input.keyboard.createCursorKeys();
     },

@@ -315,6 +315,22 @@
                  "width":32,
                  "x":36,
                  "y":320
+                }, 
+                {
+                 "gid":112,
+                 "height":32,
+                 "id":21,
+                 "name":"crown",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"crown_spawn",
+                 "visible":true,
+                 "width":32,
+                 "x":1489,
+                 "y":184
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -323,7 +339,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":20,
+ "nextobjectid":23,
  "orientation":"orthogonal",
  "properties":
     {
