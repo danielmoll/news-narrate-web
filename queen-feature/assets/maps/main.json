@@ -329,8 +329,8 @@
                  "type":"crown_spawn",
                  "visible":true,
                  "width":32,
-                 "x":1489,
-                 "y":184
+                 "x":1480,
+                 "y":176
                 }],
          "opacity":1,
          "type":"objectgroup",

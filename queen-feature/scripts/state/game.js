@@ -64,6 +64,7 @@ Game.State.Game.prototype = {
         // Loading gthe crown
         var crownSpawn = this.mapBackground.findObjectsByType('crown_spawn');
         var emitter = this.game.add.emitter(crownSpawn[0].x + 16, crownSpawn[0].y + 16, 10);
+        this.crownSparkleEmitter = emitter;
         emitter.makeParticles(['sparkle1', 'sparkle2', 'sparkle3']);
         emitter.minParticleSpeed.setTo(-50, -50);
         emitter.maxParticleSpeed.setTo(50, 50);
@@ -75,7 +76,11 @@ Game.State.Game.prototype = {
         emitter.maxParticleScale = 1.5;
 
         emitter.start(false, 1000, 100);
-        this.game.add.sprite(crownSpawn[0].x, crownSpawn[0].y, 'crown');
+        this.crown = this.game.add.sprite(crownSpawn[0].x, crownSpawn[0].y, 'crown');
+        console.log(this.crown);
+        this.game.physics.arcade.enable(this.crown);
+        this.crown.body.allowGravity = false;
+        
         // this.player.addChild(new Phaser.Sprite(this.game, 1, -14, 'crown'));
 
         // Text overlays
@@ -91,6 +96,13 @@ Game.State.Game.prototype = {
         // this.doors[doorSprite.properties.id] = new RPG.Map.Object.Door(this.game, doorSprite);
 
         this.cursors = this.game.input.keyboard.createCursorKeys();
+    },
+
+    collisionHandler: function() {
+        this.player.addChild(this.crown);
+        this.crown.x = 1;
+        this.crown.y = -16;
+        this.crownSparkleEmitter.on = false;
     },
 
     hitCoin: function (sprite, tile) {
@@ -116,7 +128,6 @@ Game.State.Game.prototype = {
     },
 
     update: function() {
-        
         this.textGroup.x = this.game.world.x * this.TEXT_PARALLAX_SCALE;
         this.textGroup.y = this.game.world.y * this.TEXT_PARALLAX_SCALE;
 
@@ -159,5 +170,9 @@ Game.State.Game.prototype = {
             this.player.animations.stop();
             this.player.frame = 2;
         }
+
+
+        // crown collision
+        this.game.physics.arcade.overlap(this.player, this.crown, this.collisionHandler, null, this);
     }
 };
