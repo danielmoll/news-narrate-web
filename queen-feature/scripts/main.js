@@ -1,5 +1,5 @@
 Game.main = function() {
-    var game = new Phaser.Game(1280, 720, Phaser.AUTO);
+    var game = new Phaser.Game(568, 320, Phaser.AUTO);
 
     game.state.add('startup', Game.State.Startup);
     game.state.add('preloader', Game.State.Preloader);
