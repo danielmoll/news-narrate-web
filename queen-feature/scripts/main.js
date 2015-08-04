@@ -4,6 +4,9 @@ Game.main = function() {
     game.state.add('startup', Game.State.Startup);
     game.state.add('preloader', Game.State.Preloader);
     game.state.add('game', Game.State.Game);
+    game.state.add('playvideo', Game.State.PlayVideo);
+
+
     game.state.start('startup');
 };
 

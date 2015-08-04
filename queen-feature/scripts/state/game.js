@@ -79,6 +79,13 @@ Game.State.Game.prototype = {
         this.crown = this.game.add.sprite(crownSpawn[0].x, crownSpawn[0].y, 'crown');
         this.game.physics.arcade.enable(this.crown);
         this.crown.body.allowGravity = false;
+
+        // Next stage
+        var nextLevelSpawn = this.mapBackground.findObjectsByType('next_level');
+        this.nextLevel = this.game.add.sprite(nextLevelSpawn[0].x, nextLevelSpawn[0].y, 'transparent_32-160');
+        this.game.physics.arcade.enable(this.nextLevel);
+        this.nextLevel.body.allowGravity = false;
+        this.nextLevel.y -=110;
         
         // Corgi!
         // var corgiSpawn = this.mapBackground.findObjectsByType('corgi_spawn');
@@ -106,6 +113,10 @@ Game.State.Game.prototype = {
         this.crown.x = 1;
         this.crown.y = -16;
         this.crownSparkleEmitter.on = false;
+    },
+
+    nextLevelHandler: function() {
+        this.game.state.start('playvideo');
     },
 
     hitCoin: function (sprite, tile) {
@@ -178,5 +189,8 @@ Game.State.Game.prototype = {
 
         // crown collision
         this.game.physics.arcade.overlap(this.player, this.crown, this.collisionHandler, null, this);
+
+        // next level detection
+        this.game.physics.arcade.overlap(this.player, this.nextLevel, this.nextLevelHandler, null, this);
     }
 };

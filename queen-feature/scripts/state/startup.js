@@ -24,6 +24,9 @@ Game.State.Startup.prototype = {
         // this.load.image('loading_bar_fg', 'assets/sprites/loading_bar_fg.png');
         this.load.image('crown', 'assets/sprites/crown.png');
 
+        // Fonts
+        this.load.bitmapFont('nokia', 'assets/fonts/bitmapFonts/nokia.png', 'assets/fonts/bitmapFonts/nokia.xml');
+
         // Load the json maps, so we can load the images in the next steps.
         var map;
         for (var i = 0; i < Game.Map.MAPS.length; i++) {

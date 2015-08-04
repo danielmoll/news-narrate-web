@@ -4,7 +4,7 @@ Game.State.Preloader.prototype = {
         this.stage.backgroundColor = '#000000';
         
         // loading screen
-        this.add.sprite(195, 142, 'crown');
+        this.add.sprite(195, 138, 'crown');
         // this.add.sprite(120, 80, 'loading_bar_bg');
         // this.preloadBar = this.add.sprite(140, 100, 'loading_bar');
         // this.add.sprite(140, 100, 'loading_bar_fg');
@@ -14,19 +14,16 @@ Game.State.Preloader.prototype = {
         this.textGroup.fixedToCamera = true;
         // this.textGroup.alpha = 0.4;
         // this.textGroup.add(new Phaser.BitmapText(this.game, 50, 50, 'nokia', 'loading', 30));
-        this.textGroup.add(new Phaser.Text(this.game, this.game.width / 2 - 50, this.game.height / 2 - 20, 'Loading...', {'fontSize':25, 'fill': '#ffffff' }));
+        this.textGroup.add(new Phaser.BitmapText(this.game, this.game.width / 2 - 50, this.game.height / 2 - 20, 'nokia', 'Loading...', 25));
 
         // Load our sprites
         this.load.spritesheet('player', 'assets/sprites/queen-sprite.png', 32, 64, 6);
         this.game.load.image('sparkle1', 'assets/sprites/sparkle1.png');
         this.game.load.image('sparkle2', 'assets/sprites/sparkle2.png');
         this.game.load.image('sparkle3', 'assets/sprites/sparkle3.png');
-        this.load.image('crown', 'assets/sprites/crown.png');
+        this.game.load.image('transparent_32-160', 'assets/sprites/transparent_32-160.png');
         // this.load.image('corgi', 'assets/sprites/corgi.gif');
         
-        // Fonts
-        this.load.bitmapFont('nokia', 'assets/fonts/bitmapFonts/nokia.png', 'assets/fonts/bitmapFonts/nokia.xml');
-
         // Get some audio up in this shit.
         // this.load.audio('doorOpen_1', 'res/audio/doorOpen_1.ogg');
         // this.load.audio('doorClose_4', 'res/audio/doorClose_4.ogg');
@@ -62,6 +59,6 @@ Game.State.Preloader.prototype = {
     },
 
     create: function() {
-         setTimeout(function() {this.game.state.start('game'); }.bind(this), 1200);
+         setTimeout(function() {this.game.state.start('game'); }.bind(this), 100);
     }
 };

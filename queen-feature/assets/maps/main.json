@@ -358,6 +358,22 @@
                  "width":32,
                  "x":90,
                  "y":319
+                }, 
+                {
+                 "gid":120,
+                 "height":160,
+                 "id":28,
+                 "name":"door",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"next_level",
+                 "visible":true,
+                 "width":32,
+                 "x":1551,
+                 "y":229
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -377,7 +393,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":28,
+ "nextobjectid":29,
  "orientation":"orthogonal",
  "properties":
     {
