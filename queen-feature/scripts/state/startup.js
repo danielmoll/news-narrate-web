@@ -32,8 +32,6 @@ Game.State.Startup.prototype = {
     },
 
     create: function() {
-        this.scale.pageAlignHorizontally = true;
-        this.scale.pageAlignVertically = true;
         this.game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
 
         //physics system
