@@ -1,9 +1,9 @@
 Game.State.Preloader = function(game) {};
 Game.State.Preloader.prototype = {
     preload: function() {
-        // Black loading screen
         this.game.stage.backgroundColor = '#787878';
-
+        
+        // loading screen
         // this.add.sprite(492, 175, 'loading_text');
         // this.add.sprite(120, 580, 'loading_bar_bg');
         // this.preloadBar = this.add.sprite(140, 600, 'loading_bar');
@@ -11,17 +11,18 @@ Game.State.Preloader.prototype = {
         // this.load.setPreloadSprite(this.preloadBar);
 
         // Load our sprites
-        // this.load.image('player', 'res/img/sprites/player.png');
-        // this.load.image('door', 'res/img/sprites/door.png');
-        // this.load.image('stairs', 'res/img/sprites/stairs.png');
+        this.load.spritesheet('player', 'assets/sprites/queen-sprite.png', 32, 64, 6);
+        this.game.load.image('sparkle1', 'assets/sprites/sparkle1.png');
+        this.load.image('sparkle2', 'assets/sprites/sparkle2.png');
+        this.load.image('sparkle3', 'assets/sprites/sparkle3.png');
+        this.load.image('crown', 'assets/sprites/crown.png');
+        
+        // Fonts
+        this.load.bitmapFont('nokia', 'assets/fonts/bitmapFonts/nokia.png', 'assets/fonts/bitmapFonts/nokia.xml');
 
         // Get some audio up in this shit.
         // this.load.audio('doorOpen_1', 'res/audio/doorOpen_1.ogg');
         // this.load.audio('doorClose_4', 'res/audio/doorClose_4.ogg');
-
-        this.load.image('tiles', 'assets/tiles/buckinghampalace_background.png');
-        this.load.spritesheet('player', 'assets/sprites/queen-sprite.png', 32, 64, 6);
-        this.load.bitmapFont('nokia', 'assets/fonts/bitmapFonts/nokia.png', 'assets/fonts/bitmapFonts/nokia.xml');
 
         // Load all of our maps and their components.
         this.loadTileMaps();

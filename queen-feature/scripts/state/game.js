@@ -48,6 +48,7 @@ Game.State.Game.prototype = {
         this.mapBackground.tilemap.setCollisionBetween(76, 84);
         // console.log(this.background.tileX);
 
+        // Loading the queen
         var spawn = this.mapBackground.findObjectsByType('player_spawn');
         this.player = this.game.add.sprite(spawn[0].x, spawn[0].y - 32, 'player');
         this.game.physics.arcade.enable(this.player);
@@ -60,12 +61,29 @@ Game.State.Game.prototype = {
         this.player.animations.add('left', [0, 1], 5, true);
         this.player.animations.add('right', [3,4], 5, true);
 
+        // Loading gthe crown
+        this.game.add.sprite(500, 200, 'crown');
+        this.player.addChild(new Phaser.Sprite(this.game, 1, -14, 'crown'));
+
         this.textGroup = this.game.add.group();
         this.textGroup.fixedToCamera = false;
         this.textGroup.alpha = 0.4;
         this.textOverlays.forEach(function(textItem) {
             this.textGroup.add(new Phaser.BitmapText(this.game, textItem.x * this.TEXT_PARALLAX_SCALE, textItem.y * this.TEXT_PARALLAX_SCALE, 'nokia', textItem.text, textItem.size));
         }.bind(this));
+
+        emitter = this.game.add.emitter(516, 216, 10);
+        emitter.makeParticles(['sparkle1', 'sparkle2', 'sparkle3']);
+        emitter.minParticleSpeed.setTo(-50, -50);
+        emitter.maxParticleSpeed.setTo(50, 50);
+        emitter.gravity = -600;
+        emitter.alpha = 0.5;
+        emitter.minParticleAlpha = 0.7;
+        emitter.maxParticleAlpha = 1;
+        emitter.minParticleScale = 0.5;
+        emitter.maxParticleScale = 1.5;
+
+        emitter.start(false, 1000, 100);
 
         this.cursors = this.game.input.keyboard.createCursorKeys();
     },
