@@ -23,6 +23,8 @@ Game.State.Startup.prototype = {
     create: function() {
         this.game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
 
+        this.game.fadePlugin = this.game.plugins.add(new Phaser.Plugin.Fade(this));
+
         //physics system
         this.game.physics.startSystem(Phaser.Physics.ARCADE);
 

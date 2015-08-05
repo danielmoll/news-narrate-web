@@ -16,7 +16,12 @@ Game.State.Game.prototype = {
     ],
     TEXT_PARALLAX_SCALE: 1.2,
 
-    create: function() {
+    create: function () {
+        this.createState();
+        this.game.fadePlugin.fadeIn(0x000, 750, 0);
+    },
+
+    createState: function() {
 
         // Load the current over world map
         this.mapBackground = new Game.Map.Module(this.game, 'main');
@@ -130,7 +135,9 @@ Game.State.Game.prototype = {
     },
 
     nextLevelHandler: function() {
-        this.game.state.start('playvideo');
+        this.game.fadePlugin.fadeOut(0x000, 750, 0, function() {
+            this.game.state.start('playvideo');
+        }.bind(this));
     },
 
     hitCoin: function (sprite, tile) {
