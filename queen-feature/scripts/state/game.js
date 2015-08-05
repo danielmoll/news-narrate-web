@@ -7,9 +7,12 @@ Game.State.Game.prototype = {
     cursors: null,
     map: null,
     layer: null,
-    textOverlays: [
+    paralaxTextOverlays: [
         { text: '1953', size: 200, x: 50, y: 230 },
         { text: 'February 1952 George VI dies aged 56. \nHis daughter, Princess Elizabeth, is proclaimed\nQueen of the United Kingdom.', size: 20, x: 50, y: 380}
+    ],
+    fixedTextOverlays: [
+        { text: 'Onwards to the 60s >>', size: 20, x: 1850, y: 100 }
     ],
     TEXT_PARALLAX_SCALE: 1.2,
 
@@ -49,11 +52,18 @@ Game.State.Game.prototype = {
         // console.log(this.background.tileX);
 
         // Text overlays
-        this.textGroup = this.game.add.group();
-        this.textGroup.fixedToCamera = false;
-        this.textGroup.alpha = 0.4;
-        this.textOverlays.forEach(function(textItem) {
-            this.textGroup.add(new Phaser.BitmapText(this.game, textItem.x * this.TEXT_PARALLAX_SCALE, textItem.y * this.TEXT_PARALLAX_SCALE, 'nokia', textItem.text, textItem.size));
+        this.paralaxTextGroup = this.game.add.group();
+        this.paralaxTextGroup.fixedToCamera = false;
+        this.paralaxTextGroup.alpha = 0.4;
+        this.paralaxTextOverlays.forEach(function(textItem) {
+            this.paralaxTextGroup.add(new Phaser.BitmapText(this.game, textItem.x * this.TEXT_PARALLAX_SCALE, textItem.y * this.TEXT_PARALLAX_SCALE, 'nokia', textItem.text, textItem.size));
+        }.bind(this));
+
+        this.endTextGroup = this.game.add.group();
+        this.endTextGroup.fixedToCamera = false;
+        this.endTextGroup.alpha = 0.8;
+        this.fixedTextOverlays.forEach(function(textItem) {
+            this.endTextGroup.add(new Phaser.BitmapText(this.game, textItem.x, textItem.y, 'nokia', textItem.text, textItem.size));
         }.bind(this));
 
         // Loading the queen
@@ -148,8 +158,8 @@ Game.State.Game.prototype = {
     },
 
     update: function() {
-        this.textGroup.x = this.game.world.x * this.TEXT_PARALLAX_SCALE;
-        this.textGroup.y = this.game.world.y * this.TEXT_PARALLAX_SCALE;
+        this.paralaxTextGroup.x = this.game.world.x * this.TEXT_PARALLAX_SCALE;
+        this.paralaxTextGroup.y = this.game.world.y * this.TEXT_PARALLAX_SCALE;
 
         if (!this.logged){
             // console.log(this.collisions);
