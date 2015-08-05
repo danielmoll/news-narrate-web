@@ -19,9 +19,9 @@ Game.main = function() {
 
     game.state.add('startup', Game.State.Startup);
     game.state.add('preloader', Game.State.Preloader);
-    game.state.add('game', Game.State.Game);
+    game.state.add('intro_50s', Game.State.intro_50s);
+    game.state.add('decade_50s', Game.State.decade_50s);
     game.state.add('playvideo', Game.State.PlayVideo);
-
 
     game.state.start('startup');
 };

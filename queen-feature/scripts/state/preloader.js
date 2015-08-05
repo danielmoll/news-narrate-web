@@ -61,7 +61,7 @@ Game.State.Preloader.prototype = {
     create: function() {
         setTimeout(function() {
             this.game.fadePlugin.fadeOut(0x000, 750, 0, function() {
-                this.game.state.start('game');
+                this.game.state.start('intro_50s');
             }.bind(this));
         }.bind(this), 500);
     }

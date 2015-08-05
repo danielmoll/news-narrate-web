@@ -2,8 +2,8 @@
  * Created by knash on 15-03-12.
  */
 
-Game.State.Game = function(game) {};
-Game.State.Game.prototype = {
+Game.State.decade_50s = function(game) {};
+Game.State.decade_50s.prototype = {
     cursors: null,
     map: null,
     layer: null,
@@ -148,13 +148,13 @@ Game.State.Game.prototype = {
     },
 
     moveLeft: function () {
-        this.player.body.velocity.x = -150;
+        this.player.body.velocity.x = -750;
         this.player.animations.play('left');
         this.corgi.animations.play('left');
     },
 
     moveRight: function() {
-        this.player.body.velocity.x = 150;
+        this.player.body.velocity.x = 750;
         this.player.animations.play('right');
         this.corgi.animations.play('right');
     },
