@@ -1,4 +1,3 @@
-
 Game.State.Startup = function(game) {};
 Game.State.Startup.prototype = {
     preload: function() {
