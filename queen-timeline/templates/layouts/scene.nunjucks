@@ -1,0 +1,24 @@
+{% import '../macros/image.nunjucks' as image %}
+{% import '../macros/video.nunjucks' as video %}
+
+<div class="scene scene--{{ aspect|default('4x3') }} js-in-view">
+	<div class="scene__anchor" id="{{ sceneName }}"></div>
+
+	<div class="scene__media">
+	{% if sceneImage %}
+		{{ image.render({
+			url: sceneImage
+		}) }}
+	{% elif sceneVideo %}
+		{{ video.render({
+			src: sceneVideo,
+			poster: sceneVideoPoster,
+			caption: sceneVideoCaption
+		}) }}
+	{% endif %}
+	</div>
+
+	{% block title %}{% endblock %}
+
+	{% block content %}{% endblock %}
+</div>

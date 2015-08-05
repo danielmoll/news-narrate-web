@@ -6,3 +6,4 @@ node_modules
 .DS_Store
 *.swp
 people-smuggler/scripts/bundle.js
+queen-timeline/scripts/bundle.js
