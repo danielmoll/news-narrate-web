@@ -18,11 +18,11 @@ Game.State.Preloader.prototype = {
 
         // Load our sprites
         this.load.spritesheet('player', 'assets/sprites/queen-sprite.png', 32, 64, 6);
+        this.load.spritesheet('corgi', 'assets/sprites/corgi-sprite.png', 32, 32, 6);
         this.game.load.image('sparkle1', 'assets/sprites/sparkle1.png');
         this.game.load.image('sparkle2', 'assets/sprites/sparkle2.png');
         this.game.load.image('sparkle3', 'assets/sprites/sparkle3.png');
         this.game.load.image('transparent_32-160', 'assets/sprites/transparent_32-160.png');
-        // this.load.image('corgi', 'assets/sprites/corgi.gif');
         
         // Get some audio up in this shit.
         // this.load.audio('doorOpen_1', 'res/audio/doorOpen_1.ogg');

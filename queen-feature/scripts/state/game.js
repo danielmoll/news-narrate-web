@@ -48,11 +48,18 @@ Game.State.Game.prototype = {
         this.mapBackground.tilemap.setCollisionBetween(76, 84);
         // console.log(this.background.tileX);
 
+        // Text overlays
+        this.textGroup = this.game.add.group();
+        this.textGroup.fixedToCamera = false;
+        this.textGroup.alpha = 0.4;
+        this.textOverlays.forEach(function(textItem) {
+            this.textGroup.add(new Phaser.BitmapText(this.game, textItem.x * this.TEXT_PARALLAX_SCALE, textItem.y * this.TEXT_PARALLAX_SCALE, 'nokia', textItem.text, textItem.size));
+        }.bind(this));
+
         // Loading the queen
         var spawn = this.mapBackground.findObjectsByType('player_spawn');
         this.player = this.game.add.sprite(spawn[0].x, spawn[0].y - 32, 'player');
         this.game.physics.arcade.enable(this.player);
-        this.game.physics.arcade.gravity.y = 600;
         this.player.body.bounce.y = 0.2;
         this.player.body.linearDamping = 1;
         this.player.body.collideWorldBounds = true;
@@ -61,6 +68,19 @@ Game.State.Game.prototype = {
         this.player.animations.add('left', [0, 1], 5, true);
         this.player.animations.add('right', [3,4], 5, true);
 
+        // Loading the corgi
+        var corgiSpawn = this.mapBackground.findObjectsByType('corgi_spawn');
+        this.corgi = this.game.add.sprite(corgiSpawn[0].x, corgiSpawn[0].y, 'corgi');
+        this.game.physics.arcade.enable(this.corgi);
+        this.corgi.body.allowGravity = false;
+        this.player.addChild(this.corgi);
+        this.corgi.x = 40;
+        this.corgi.y = 32;
+
+        this.corgi.animations.add('left', [0, 1], 5, true);
+        this.corgi.animations.add('right', [3,4], 5, true);
+
+        this.game.physics.arcade.gravity.y = 600;
         // Loading gthe crown
         var crownSpawn = this.mapBackground.findObjectsByType('crown_spawn');
         var emitter = this.game.add.emitter(crownSpawn[0].x + 16, crownSpawn[0].y + 16, 10);
@@ -87,22 +107,6 @@ Game.State.Game.prototype = {
         this.nextLevel.body.allowGravity = false;
         this.nextLevel.y -=110;
         
-        // Corgi!
-        // var corgiSpawn = this.mapBackground.findObjectsByType('corgi_spawn');
-        // this.corgi = this.game.add.sprite(corgiSpawn[0].x, corgiSpawn[0].y, 'corgi');
-
-        // Text overlays
-        this.textGroup = this.game.add.group();
-        this.textGroup.fixedToCamera = false;
-        this.textGroup.alpha = 0.4;
-        this.textOverlays.forEach(function(textItem) {
-            this.textGroup.add(new Phaser.BitmapText(this.game, textItem.x * this.TEXT_PARALLAX_SCALE, textItem.y * this.TEXT_PARALLAX_SCALE, 'nokia', textItem.text, textItem.size));
-        }.bind(this));
-
-        // var doorSprite = this.game.spriteFromObject('crown', this.doorGroup);
-        // RPG.Map.Object.Door.init(this.game);
-        // this.doors[doorSprite.properties.id] = new RPG.Map.Object.Door(this.game, doorSprite);
-
         this.cursors = this.game.input.keyboard.createCursorKeys();
         this.banisterLayer = this.mapBackground.createLayer('banisters');
         this.columnLayer = this.mapBackground.createLayer('columns');
@@ -129,11 +133,13 @@ Game.State.Game.prototype = {
     moveLeft: function () {
         this.player.body.velocity.x = -150;
         this.player.animations.play('left');
+        this.corgi.animations.play('left');
     },
 
     moveRight: function() {
         this.player.body.velocity.x = 150;
         this.player.animations.play('right');
+        this.corgi.animations.play('right');
     },
 
     jump: function () {
@@ -183,7 +189,9 @@ Game.State.Game.prototype = {
 
         if (this.player.body.velocity.x === 0) {
             this.player.animations.stop();
+            this.corgi.animations.stop();
             this.player.frame = 2;
+            this.corgi.frame = 2;
         }
 
 
