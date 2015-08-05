@@ -1,18 +1,3 @@
-var Game = {};
-
-// Setup our namespaces and resource lists.
-Game = {};
-Game.State = {};
-Game.Map = {};
-Game.Map.Object = {};
-
-Game.Map.MAPS = [
-    // Overworld maps
-    'main'//,
-
-    // // Modules used in maps
-    // 'house0_f0'
-];
 
 Game.State.Startup = function(game) {};
 Game.State.Startup.prototype = {
