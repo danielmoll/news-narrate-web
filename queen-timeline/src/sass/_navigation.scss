@@ -1,2 +1,15 @@
 .navigation {
+	width: 100%;
+	max-width: $maxWidth;
+	margin: 0 auto 20px auto;
+}
+
+.navigation__list {
+	display: table;
+	width: 100%;
+}
+
+.navigation__item {
+	display: table-cell;
+	text-align: center;
 }

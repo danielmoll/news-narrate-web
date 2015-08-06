@@ -1,7 +1,9 @@
 .scene {
 	background: white;
 	overflow: hidden;
-	margin: 0 0 20px 0;
+	margin: 0 auto 20px auto;
+	width: 100%;
+	max-width: $maxWidth;
 }
 
 .scene__title {
@@ -9,4 +11,9 @@
 	font-size: 2rem;
 	text-align: center;
 	margin: 10px 0;
+}
+
+.scene__text {
+	margin-left: 20px;
+	margin-right: 20px;
 }
