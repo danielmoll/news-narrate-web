@@ -26,6 +26,12 @@ html {
     /* Prevent font scaling in landscape while allowing user zoom */
 }
 
+ol, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
 body {
     font-family: SkyTextRegular;
     font-size: 16px;
