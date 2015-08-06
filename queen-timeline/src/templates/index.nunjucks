@@ -1,6 +1,4 @@
-{% import 'macros/image.nunjucks' as image %}
-{% import 'macros/video.nunjucks' as video %}
-<!doctype html>
+{% import 'macros/image.nunjucks' as image %}{% import 'macros/video.nunjucks' as video %}<!doctype html>
 <html>
 	<head>
 		<meta charset="utf-8">

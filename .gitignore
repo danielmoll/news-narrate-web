@@ -7,3 +7,4 @@ node_modules
 *.swp
 people-smuggler/scripts/bundle.js
 queen-timeline/scripts/bundle.js
+queen-timeline/css/main.css
