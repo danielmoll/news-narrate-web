@@ -8,3 +8,4 @@ node_modules
 people-smuggler/scripts/bundle.js
 queen-timeline/scripts/bundle.js
 queen-timeline/css/main.css
+queen-timeline/css/sass.css.map
