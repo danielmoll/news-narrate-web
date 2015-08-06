@@ -19,6 +19,7 @@ Game.State.Preloader.prototype = {
         // Load our sprites
         this.load.spritesheet('player', 'assets/sprites/queen-sprite.png', 32, 64, 6);
         this.load.spritesheet('corgi', 'assets/sprites/corgi-sprite.png', 32, 32, 6);
+        this.load.spritesheet('next_button', 'assets/sprites/next_button.png', 100, 30);
         this.game.load.image('sparkle1', 'assets/sprites/sparkle1.png');
         this.game.load.image('sparkle2', 'assets/sprites/sparkle2.png');
         this.game.load.image('sparkle3', 'assets/sprites/sparkle3.png');
