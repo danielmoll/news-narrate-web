@@ -1,11 +1,12 @@
 .scene {
-	background-color: white;
-	background-position: center center;
-	background-size: contain;
-	background-repeat: no-repeat;
+	background: white;
 	overflow: hidden;
-	position: relative;
-	clear: both;
-	border-bottom: 10px solid #efefef;
-	border-top: 10px solid #efefef;
+	margin: 0 0 20px 0;
+}
+
+.scene__title {
+	font-family: SkyTextMedium;
+	font-size: 2rem;
+	text-align: center;
+	margin: 10px 0;
 }

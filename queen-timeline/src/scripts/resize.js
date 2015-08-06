@@ -10,7 +10,6 @@ var _ = require('lodash'),
 	currentWidth,
 	currentHeight;
 
-
 exports._handleResize = function() {
 	// Remove any unsubscribed callbacks
 	listeningObjects = _.difference(listeningObjects, objectsToUnsubscribe);

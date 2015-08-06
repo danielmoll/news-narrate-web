@@ -4,13 +4,7 @@ var _ = require('lodash'),
 	inViewElements = document.querySelectorAll('.js-in-view'),
 	exports = {};
 
-window.addEventListener('scroll', onScroll);
-
-function onScroll() {
-	_.forEach(inViewElements, calculateInView);
-}
-
-function calculateInView(el) {
+exports.calculateInView = function(el) {
 	var boundingRect = el.getBoundingClientRect();
 
 	if (!el._inView && (boundingRect.bottom > 0 && boundingRect.top < window.innerHeight)) {
@@ -23,10 +17,16 @@ function calculateInView(el) {
 		el._onOutView && el._onOutView();
 		el.classList.remove('in-view');
 	}
-}
+};
+
+exports.onScroll = function() {
+	_.forEach(inViewElements, exports.calculateInView);
+};
+
+window.addEventListener('scroll', exports.onScroll);
 
 exports.init = function() {
-	onScroll();	
+	exports.onScroll();
 };
 
 module.exports = exports;
