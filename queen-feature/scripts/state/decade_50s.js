@@ -125,6 +125,10 @@ Game.State.decade_50s.prototype = {
         this.cursors = this.game.input.keyboard.createCursorKeys();
         this.banisterLayer = this.mapBackground.createLayer('banisters');
         this.columnLayer = this.mapBackground.createLayer('columns');
+
+        // Add joystick
+        this.game.touchControl = this.game.plugins.add(Phaser.Plugin.TouchControl);
+        this.game.touchControl.inputEnable();
     },
 
     collisionHandler: function() {
@@ -148,13 +152,13 @@ Game.State.decade_50s.prototype = {
     },
 
     moveLeft: function () {
-        this.player.body.velocity.x = -750;
+        this.player.body.velocity.x = -250;
         this.player.animations.play('left');
         this.corgi.animations.play('left');
     },
 
     moveRight: function() {
-        this.player.body.velocity.x = 750;
+        this.player.body.velocity.x = 250;
         this.player.animations.play('right');
         this.corgi.animations.play('right');
     },
@@ -165,6 +169,7 @@ Game.State.decade_50s.prototype = {
     },
 
     update: function() {
+
         this.paralaxTextGroup.x = this.game.world.x * this.TEXT_PARALLAX_SCALE;
         this.paralaxTextGroup.y = this.game.world.y * this.TEXT_PARALLAX_SCALE;
 
@@ -175,34 +180,43 @@ Game.State.decade_50s.prototype = {
 
         this.game.physics.arcade.collide(this.player, this.background);
 
-        if (this.cursors.up.isDown) {
-            if (this.player.body.onFloor()) {
-                this.jump();
-            }
-        }
-
-        if (this.cursors.left.isDown) {
+        if (this.game.touchControl.cursors.left) {
             this.moveLeft();
-
-        } else if (this.cursors.right.isDown) {
+        } else if (this.game.touchControl.cursors.right) {
             this.moveRight();
-            
-        } else if (this.game.input.activePointer.isDown) {
-            if (this.game.input.activePointer.x < this.game.width / 2) {
-                this.moveLeft();
-
-            } else {
-                this.moveRight();
-            }
-
-            if (this.player.body.onFloor() && !this.jumped) {
-                this.jump();
-            }
-
-        } else if (this.game.input.activePointer.isUp) {
+        } else {
             this.player.body.velocity.x = 0;
             this.jumped = false;
         }
+
+        // if (this.cursors.up.isDown) {
+        //     if (this.player.body.onFloor()) {
+        //         this.jump();
+        //     }
+        // }
+
+        // if (this.cursors.left.isDown) {
+        //     this.moveLeft();
+
+        // } else if (this.cursors.right.isDown) {
+        //     this.moveRight();
+            
+        // } else if (this.game.input.activePointer.isDown) {
+        //     if (this.game.input.activePointer.x < this.game.width / 2) {
+        //         this.moveLeft();
+
+        //     } else {
+        //         this.moveRight();
+        //     }
+
+        //     if (this.player.body.onFloor() && !this.jumped) {
+        //         this.jump();
+        //     }
+
+        // } else if (this.game.input.activePointer.isUp) {
+        //     this.player.body.velocity.x = 0;
+        //     this.jumped = false;
+        // }
 
         if (this.player.body.velocity.x === 0) {
             this.player.animations.stop();
@@ -210,8 +224,7 @@ Game.State.decade_50s.prototype = {
             this.player.frame = 2;
             this.corgi.frame = 2;
         }
-
-
+        
         // crown collision
         this.game.physics.arcade.overlap(this.player, this.crown, this.collisionHandler, null, this);
 
