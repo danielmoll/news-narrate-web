@@ -4,9 +4,9 @@
 
 Game.State.decade_50s = function(game) {};
 Game.State.decade_50s.prototype = {
-    cursors: null,
     map: null,
     layer: null,
+    controls: null,
     paralaxTextOverlays: [
         { text: '1953', size: 200, x: 50, y: 230 },
         { text: 'February 1952 George VI dies aged 56. \nHis daughter, Princess Elizabeth, is proclaimed\nQueen of the United Kingdom.', size: 20, x: 50, y: 380}
@@ -30,31 +30,11 @@ Game.State.decade_50s.prototype = {
         
         // We manually add the over world background for now...
         this.background = this.mapBackground.createLayer('background');
-        // this.background.debug = true;
 
         // Resize the game world to match the layer dimensions
         this.background.resizeWorld();
 
-        // Place the subMaps
-        // this.subMaps = {};
-        // var subMapLocations = this.mapBackground.findObjectsByType('sub_map');
-        // var location, tileX, tileY;
-        // for (var i = 0; i < subMapLocations.length; i++) {
-        //     location = subMapLocations[i];
-        //     tileX = location.x / 32;
-        //     tileY = location.y / 32;
-        //     this.subMaps[location.name] = new RPG.Map.SubMap(
-        //         this.modules[location.properties.sub_map], tileX, tileY);
-        // }
-        // this.subMaps['home0'].setIndoorAlpha(0);
-
-        // Collision map!
-        // this.collisions = this.game.add.group();
-        // this.inCollisionObjects = this.mapBackground.getCollisionSprites(
-        //     'collision', this.collisions, 1, 13);
-
         this.mapBackground.tilemap.setCollisionBetween(76, 84);
-        // console.log(this.background.tileX);
 
         // Text overlays
         this.paralaxTextGroup = this.game.add.group();
@@ -83,18 +63,6 @@ Game.State.decade_50s.prototype = {
         this.player.animations.add('left', [0, 1], 5, true);
         this.player.animations.add('right', [3,4], 5, true);
 
-        // Loading the corgi
-        var corgiSpawn = this.mapBackground.findObjectsByType('corgi_spawn');
-        this.corgi = this.game.add.sprite(corgiSpawn[0].x, corgiSpawn[0].y, 'corgi');
-        this.game.physics.arcade.enable(this.corgi);
-        this.corgi.body.allowGravity = false;
-        this.player.addChild(this.corgi);
-        this.corgi.x = 40;
-        this.corgi.y = 32;
-
-        this.corgi.animations.add('left', [0, 1], 5, true);
-        this.corgi.animations.add('right', [3,4], 5, true);
-
         this.game.physics.arcade.gravity.y = 600;
         // Loading gthe crown
         var crownSpawn = this.mapBackground.findObjectsByType('crown_spawn');
@@ -122,13 +90,11 @@ Game.State.decade_50s.prototype = {
         this.nextLevel.body.allowGravity = false;
         this.nextLevel.y -=110;
         
-        this.cursors = this.game.input.keyboard.createCursorKeys();
         this.banisterLayer = this.mapBackground.createLayer('banisters');
         this.columnLayer = this.mapBackground.createLayer('columns');
 
         // Add joystick
-        this.game.touchControl = this.game.plugins.add(Phaser.Plugin.TouchControl);
-        this.game.touchControl.inputEnable();
+        this.controls = new Game.Controls(this.game, this.player);
     },
 
     collisionHandler: function() {
@@ -144,91 +110,18 @@ Game.State.decade_50s.prototype = {
         }.bind(this));
     },
 
-    hitCoin: function (sprite, tile) {
-        // console.log(tile);
-        tile.index = 1;
-        this.layer.dirty = true;
-        // return true;
-    },
-
-    moveLeft: function () {
-        this.player.body.velocity.x = -250;
-        this.player.animations.play('left');
-        this.corgi.animations.play('left');
-    },
-
-    moveRight: function() {
-        this.player.body.velocity.x = 250;
-        this.player.animations.play('right');
-        this.corgi.animations.play('right');
-    },
-
-    jump: function () {
-        this.player.body.velocity.y = -300;
-        this.jumped = true;
-    },
-
     update: function() {
-
+        // Text group movement update.
         this.paralaxTextGroup.x = this.game.world.x * this.TEXT_PARALLAX_SCALE;
         this.paralaxTextGroup.y = this.game.world.y * this.TEXT_PARALLAX_SCALE;
 
-        if (!this.logged){
-            // console.log(this.collisions);
-            this.logged = true;
-        }
-
+        // Floor collision
         this.game.physics.arcade.collide(this.player, this.background);
-
-        if (this.game.touchControl.cursors.left) {
-            this.moveLeft();
-        } else if (this.game.touchControl.cursors.right) {
-            this.moveRight();
-        } else {
-            this.player.body.velocity.x = 0;
-            this.jumped = false;
-        }
-
-        // if (this.cursors.up.isDown) {
-        //     if (this.player.body.onFloor()) {
-        //         this.jump();
-        //     }
-        // }
-
-        // if (this.cursors.left.isDown) {
-        //     this.moveLeft();
-
-        // } else if (this.cursors.right.isDown) {
-        //     this.moveRight();
-            
-        // } else if (this.game.input.activePointer.isDown) {
-        //     if (this.game.input.activePointer.x < this.game.width / 2) {
-        //         this.moveLeft();
-
-        //     } else {
-        //         this.moveRight();
-        //     }
-
-        //     if (this.player.body.onFloor() && !this.jumped) {
-        //         this.jump();
-        //     }
-
-        // } else if (this.game.input.activePointer.isUp) {
-        //     this.player.body.velocity.x = 0;
-        //     this.jumped = false;
-        // }
-
-        if (this.player.body.velocity.x === 0) {
-            this.player.animations.stop();
-            this.corgi.animations.stop();
-            this.player.frame = 2;
-            this.corgi.frame = 2;
-        }
-        
-        // crown collision
+        // Crown collision
         this.game.physics.arcade.overlap(this.player, this.crown, this.collisionHandler, null, this);
-
-        // next level detection
+        // Next level detection
         this.game.physics.arcade.overlap(this.player, this.nextLevel, this.nextLevelHandler, null, this);
+
+        this.controls.update();
     }
 };

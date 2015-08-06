@@ -5,10 +5,6 @@ Game.State.Preloader.prototype = {
         
         // loading screen
         this.add.sprite(195, 138, 'crown');
-        // this.add.sprite(120, 80, 'loading_bar_bg');
-        // this.preloadBar = this.add.sprite(140, 100, 'loading_bar');
-        // this.add.sprite(140, 100, 'loading_bar_fg');
-        // this.load.setPreloadSprite(this.preloadBar);
 
         this.textGroup = this.game.add.group();
         this.textGroup.fixedToCamera = true;
@@ -18,7 +14,6 @@ Game.State.Preloader.prototype = {
 
         // Load our sprites
         this.load.spritesheet('player', 'assets/sprites/queen-sprite.png', 32, 64, 6);
-        this.load.spritesheet('corgi', 'assets/sprites/corgi-sprite.png', 32, 32, 6);
         this.load.spritesheet('next_button', 'assets/sprites/next_button.png', 100, 30);
         this.game.load.image('sparkle1', 'assets/sprites/sparkle1.png');
         this.game.load.image('sparkle2', 'assets/sprites/sparkle2.png');
