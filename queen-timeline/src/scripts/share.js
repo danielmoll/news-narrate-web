@@ -1,5 +1,7 @@
 'use strict';
 
+var exports = {};
+
 function popup(e) {
 	e.preventDefault();
 
@@ -18,6 +20,10 @@ var _ = require('lodash'),
 
 if (window.detect.touch) return;
 
-_.forEach(socialItems, function(socialItem) {
-	socialItem.addEventListener('click', popup);
-});
+exports.init = function() {
+	_.forEach(socialItems, function(socialItem) {
+		socialItem.addEventListener('click', popup);
+	});
+}
+
+module.exports = exports;

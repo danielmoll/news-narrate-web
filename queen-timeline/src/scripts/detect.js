@@ -8,7 +8,7 @@ var html = document.querySelector('html'),
 
 tests.touch = function() {
 	return (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch);
-}
+};
 
 for (var test in tests) {
 	result = tests[test]();

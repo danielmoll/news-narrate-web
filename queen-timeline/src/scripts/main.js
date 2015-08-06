@@ -1,11 +1,19 @@
-(function() {
-	require('./detect');
-	require('./images');
-	require('./video');
-	require('./in-view');
-	require('./navigation');
-	require('./share');
-	var resize = require('./resize');
+'use strict';
+
+require('./detect');
+
+var $ = require('jquery'),
+	inView = require('./in-view'),
+	navigation = require('./navigation'),
+	videos = require('./video'),
+	images = require('./images'),
+	resize = require('./resize'),
+	share = require('./share');
+
+$(function() {
+	inView.init();
 	resize.init();
-	window.responsiveImages.init();
-}());
+	images.init();
+	videos.init();
+	share.init();
+});

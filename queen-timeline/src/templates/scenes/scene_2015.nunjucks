@@ -1,0 +1,11 @@
+{% extends '../layouts/scene.nunjucks' %}
+
+{% set sceneName = 'scene_2015' %}
+
+{% block title %}
+<div class="scene__title">2015</div>
+{% endblock %}
+
+{% block content %}
+<p class="scene__text">Queen Elizabeth II becomes the longest reigning British monarch. She has surpassed Queen Victoria&rsquo;s time on the throne at 23,226 days, 16 hours and 24 minutes.</p>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends '../layouts/scene.nunjucks' %}
+
+{% set sceneName = 'scene_1953a' %}
+{% set sceneImage = 'http://res.cloudinary.com/skynews/image/upload/c_scale,w_{width}/v1437399881/narrate-people-smuggler/map4x3.jpg' %}
+
+{% block title %}
+<div class="scene__title">1953</div>
+{% endblock %}
+
+{% block content %}
+<p class="scene__text">Elizabeth embarks on her first Commonwealth tour. Travelling by air, sea and rail, she tours the world for almost six months.</p>
+{% endblock %}

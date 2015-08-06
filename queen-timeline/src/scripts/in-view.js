@@ -1,7 +1,8 @@
 'use strict';
 
 var _ = require('lodash'),
-	inViewElements = document.querySelectorAll('.js-in-view');
+	inViewElements = document.querySelectorAll('.js-in-view'),
+	exports = {};
 
 window.addEventListener('scroll', onScroll);
 
@@ -24,4 +25,8 @@ function calculateInView(el) {
 	}
 }
 
-onScroll();
+exports.init = function() {
+	onScroll();	
+};
+
+module.exports = exports;

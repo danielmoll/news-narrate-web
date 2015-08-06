@@ -1,0 +1,12 @@
+{% extends '../layouts/scene.nunjucks' %}
+
+{% set sceneName = 'scene_1997' %}
+{% set sceneImage = 'http://res.cloudinary.com/skynews/image/upload/c_scale,w_{width}/v1437399881/narrate-people-smuggler/map4x3.jpg' %}
+
+{% block title %}
+<div class="scene__title">1997</div>
+{% endblock %}
+
+{% block content %}
+<p class="scene__text">Princess Diana dies in a car crash in Paris. The Queen says she is  &lsquo;deeply shocked and distressed&rsquo;, but at first chooses to stay at Balmoral Castle in Scotland.</p>
+{% endblock %}

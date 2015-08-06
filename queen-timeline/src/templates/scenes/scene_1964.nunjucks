@@ -1,0 +1,12 @@
+{% extends '../layouts/scene.nunjucks' %}
+
+{% set sceneName = 'scene_1964' %}
+{% set sceneImage = 'http://res.cloudinary.com/skynews/image/upload/c_scale,w_{width}/v1437399881/narrate-people-smuggler/map4x3.jpg' %}
+
+{% block title %}
+<div class="scene__title">1964</div>
+{% endblock %}
+
+{% block content %}
+<p class="scene__text">Prince Edward is born. Becoming the Earl of Wessex, he is the youngest of the family. His brother Charles and sister Anne were born before the Queen&rsquo;s reign begins.</p>
+{% endblock %}

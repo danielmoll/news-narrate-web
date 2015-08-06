@@ -27,31 +27,38 @@
 		{{ navigation.render({
 			items: [{
 				text: '1952',
-				link: ''
+				link: '',
+				id: ''
 			},
 			{
 				text: '60s',
-				link: ''
+				link: '',
+				id: ''
 			},
 			{
 				text: '70s',
-				link: ''
+				link: '',
+				id: ''
 			},
 			{
 				text: '80s',
-				link: ''
+				link: '',
+				id: ''
 			},
 			{
 				text: '90s',
-				link: ''
+				link: '',
+				id: ''
 			},
 			{
 				text: '00s',
-				link: ''
+				link: '',
+				id: ''
 			},
 			{
 				text: '2015',
-				link: ''
+				link: '',
+				id: ''
 			}]
 		}) }}
 
@@ -60,6 +67,44 @@
 			{% include "scenes/scene_1952.nunjucks" %}
 
 			{% include "scenes/scene_1953.nunjucks" %}
+
+			{% include "scenes/scene_1953a.nunjucks" %}
+
+			{% include "scenes/scene_1960.nunjucks" %}
+
+			{% include "scenes/scene_1964.nunjucks" %}
+
+			{% include "scenes/scene_1974.nunjucks" %}
+
+			{% include "scenes/scene_1977.nunjucks" %}
+
+			{% include "scenes/scene_1981.nunjucks" %}
+
+			{% include "scenes/scene_1982.nunjucks" %}
+
+			{% include "scenes/scene_1982a.nunjucks" %}
+
+			{% include "scenes/scene_1992.nunjucks" %}
+
+			{% include "scenes/scene_1992a.nunjucks" %}
+
+			{% include "scenes/scene_1997.nunjucks" %}
+			
+			{% include "scenes/scene_1997a.nunjucks" %}
+
+			{% include "scenes/scene_2002.nunjucks" %}
+
+			{% include "scenes/scene_2002a.nunjucks" %}
+
+			{% include "scenes/scene_2009.nunjucks" %}
+
+			{% include "scenes/scene_2011.nunjucks" %}
+
+			{% include "scenes/scene_2011a.nunjucks" %}
+
+			{% include "scenes/scene_2012.nunjucks" %}
+
+			{% include "scenes/scene_2015.nunjucks" %}
 
 		</div>
 

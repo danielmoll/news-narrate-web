@@ -1,0 +1,11 @@
+{% extends '../layouts/scene.nunjucks' %}
+
+{% set sceneName = 'scene_1974' %}
+
+{% block title %}
+<div class="scene__title">1974</div>
+{% endblock %}
+
+{% block content %}
+<p class="scene__text">The Queen&rsquo;s daughter Princess Anne escapes an apparent kindnap attempt when the car she is travelling in is blocked by another vehicle.</p>
+{% endblock %}

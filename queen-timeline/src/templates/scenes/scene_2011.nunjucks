@@ -1,0 +1,12 @@
+{% extends '../layouts/scene.nunjucks' %}
+
+{% set sceneName = 'scene_2011' %}
+{% set sceneImage = 'http://res.cloudinary.com/skynews/image/upload/c_scale,w_{width}/v1437399881/narrate-people-smuggler/map4x3.jpg' %}
+
+{% block title %}
+<div class="scene__title">2011</div>
+{% endblock %}
+
+{% block content %}
+<p class="scene__text">The Queen embarks on the first state visit to Ireland since the country gained independence.</p>
+{% endblock %}

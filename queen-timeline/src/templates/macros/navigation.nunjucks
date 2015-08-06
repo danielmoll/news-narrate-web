@@ -3,7 +3,7 @@
 		<div class="navigation__wrapper js-navigation">
 			<ol class="navigation__list">
 			{% for item in options.items %}
-				<li class="navigation__item"><a class="navigation__link" href="{{ item.link }}" data-id="{{ item.text|lower }}">{{ item.text }}</a></li>
+				<li class="navigation__item"><a class="navigation__link" href="{{ item.link }}" data-id="{{ item.id }}">{{ item.text }}</a></li>
 			{% endfor %}
 			</ol>
 		</div>

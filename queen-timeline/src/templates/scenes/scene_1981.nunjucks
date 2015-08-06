@@ -1,13 +1,13 @@
 {% extends '../layouts/scene.nunjucks' %}
 
-{% set sceneName = 'scene_1952' %}
+{% set sceneName = 'scene_1981' %}
 {% set sceneVideo = 'http://res.cloudinary.com/skynews/video/upload/v1437551479/narrate-people-smuggler/Guns_Loop_v1.mp4' %}
 {% set sceneVideoPoster = 'http://res.cloudinary.com/skynews/video/upload/v1437551479/narrate-people-smuggler/Guns_Loop_v1.jpg' %}
 
 {% block title %}
-<div class="scene__title">1952</div>
+<div class="scene__title">1981</div>
 {% endblock %}
 
 {% block content %}
-<p class="scene__text">George VI dies aged 56. His daughter, Princess Elizabeth, is proclaimed Queen of the United Kingdom.</p>
+<p class="scene__text">Prince Charles marries Diana Spencer at St Paul&rsquo;s Cathedral. An estimated 750 million tune in globally to watch the event.</p>
 {% endblock %}
