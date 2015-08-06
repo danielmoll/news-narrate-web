@@ -97,7 +97,7 @@ Game.State.decade_50s.prototype = {
         this.controls = new Game.Controls(this.game, this.player);
     },
 
-    collisionHandler: function() {
+    crownCollisionHandler: function() {
         this.player.addChild(this.crown);
         this.crown.x = 1;
         this.crown.y = -16;
@@ -117,8 +117,10 @@ Game.State.decade_50s.prototype = {
 
         // Floor collision
         this.game.physics.arcade.collide(this.player, this.background);
+
         // Crown collision
-        this.game.physics.arcade.overlap(this.player, this.crown, this.collisionHandler, null, this);
+        this.game.physics.arcade.overlap(this.player, this.crown, this.crownCollisionHandler, null, this);
+
         // Next level detection
         this.game.physics.arcade.overlap(this.player, this.nextLevel, this.nextLevelHandler, null, this);
 

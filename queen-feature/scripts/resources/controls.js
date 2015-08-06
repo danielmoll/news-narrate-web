@@ -2,9 +2,16 @@ Game.Controls = function(game, player) {
     this.game = game;
     this.player = player;
 
+    this.create();
+};
+
+Game.Controls.prototype.create = function() {
     this.cursors = this.game.input.keyboard.createCursorKeys();
     this.game.touchControl = this.game.plugins.add(Phaser.Plugin.TouchControl);
     this.game.touchControl.inputEnable();
+    
+    this.jumpButton = this.game.add.button(this.game.camera.width -120,  this.game.camera.height - 120, 'touch', this.jump, this);
+    this.jumpButton.fixedToCamera = true;
 };
 
 Game.Controls.prototype.moveLeft = function(speed) {
@@ -51,7 +58,7 @@ Game.Controls.prototype.update = function () {
         this.player.body.velocity.x = 0;
         this.jumped = false;
     }
-    
+
     if (this.player.body.velocity.x === 0) {
         this.player.animations.stop();
         this.player.frame = 2;

@@ -6,10 +6,9 @@ Game.State.Preloader.prototype = {
         // loading screen
         this.add.sprite(195, 138, 'crown');
 
+        // Adding the 'loading text'
         this.textGroup = this.game.add.group();
         this.textGroup.fixedToCamera = true;
-        // this.textGroup.alpha = 0.4;
-        // this.textGroup.add(new Phaser.BitmapText(this.game, 50, 50, 'nokia', 'loading', 30));
         this.textGroup.add(new Phaser.BitmapText(this.game, this.game.width / 2 - 50, this.game.height / 2 - 20, 'nokia', 'Loading...', 25));
 
         // Load our sprites
