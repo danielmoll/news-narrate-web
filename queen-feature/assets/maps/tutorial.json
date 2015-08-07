@@ -331,33 +331,17 @@
                  "gid":112,
                  "height":32,
                  "id":21,
-                 "name":"crown",
+                 "name":"jewel1",
                  "properties":
                     {
 
                     },
                  "rotation":0,
-                 "type":"crown_spawn",
+                 "type":"jewel_spawn",
                  "visible":true,
                  "width":32,
                  "x":2351,
                  "y":176
-                }, 
-                {
-                 "gid":130,
-                 "height":32,
-                 "id":26,
-                 "name":"corgi",
-                 "properties":
-                    {
-
-                    },
-                 "rotation":0,
-                 "type":"corgi_spawn",
-                 "visible":true,
-                 "width":32,
-                 "x":283,
-                 "y":292
                 }, 
                 {
                  "gid":120,
@@ -374,6 +358,70 @@
                  "width":32,
                  "x":4493,
                  "y":224
+                }, 
+                {
+                 "gid":112,
+                 "height":32,
+                 "id":29,
+                 "name":"jewel2",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"jewel_spawn",
+                 "visible":true,
+                 "width":32,
+                 "x":369,
+                 "y":318
+                }, 
+                {
+                 "gid":112,
+                 "height":32,
+                 "id":30,
+                 "name":"jewel3",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"jewel_spawn",
+                 "visible":true,
+                 "width":32,
+                 "x":2545,
+                 "y":282
+                }, 
+                {
+                 "gid":112,
+                 "height":32,
+                 "id":31,
+                 "name":"jewel4",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"jewel_spawn",
+                 "visible":true,
+                 "width":32,
+                 "x":3219,
+                 "y":538
+                }, 
+                {
+                 "gid":112,
+                 "height":32,
+                 "id":32,
+                 "name":"jewel5",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"jewel_spawn",
+                 "visible":true,
+                 "width":32,
+                 "x":3309,
+                 "y":218
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -393,7 +441,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":29,
+ "nextobjectid":33,
  "orientation":"orthogonal",
  "properties":
     {

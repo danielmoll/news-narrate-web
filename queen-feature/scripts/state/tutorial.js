@@ -3,9 +3,8 @@ Game.State.Tutorial.prototype = {
     map: null,
     layer: null,
     controls: null,
+    jewels: [],
     paralaxTextOverlays: [
-        // { text: '1953', size: 200, x: 50, y: 230 },
-        // { text: 'February 1952 George VI dies aged 56. \nHis daughter, Princess Elizabeth, is proclaimed\nQueen of the United Kingdom.', size: 20, x: 50, y: 380}
         { text: 'Touch this area of\nthe screen to move...', size: 20, x: 260, y: 410},
         { text: 'Slide your thumb up to jump\nover obstacles.', size: 20, x: 1300, y: 220}
     ],
@@ -55,24 +54,16 @@ Game.State.Tutorial.prototype = {
         this.player.animations.add('right', [3,4], 5, true);
 
         this.game.physics.arcade.gravity.y = 600;
-        // Loading gthe crown
-        var crownSpawn = this.mapBackground.findObjectsByType('crown_spawn');
-        var emitter = this.game.add.emitter(crownSpawn[0].x + 16, crownSpawn[0].y + 16, 10);
-        this.crownSparkleEmitter = emitter;
-        emitter.makeParticles(['sparkle1', 'sparkle2', 'sparkle3']);
-        emitter.minParticleSpeed.setTo(-50, -50);
-        emitter.maxParticleSpeed.setTo(50, 50);
-        emitter.gravity = -600;
-        emitter.alpha = 0.5;
-        emitter.minParticleAlpha = 0.7;
-        emitter.maxParticleAlpha = 1;
-        emitter.minParticleScale = 0.5;
-        emitter.maxParticleScale = 1.5;
+        // Loading gthe jewels
+        var jewelSpawns = this.mapBackground.findObjectsByType('jewel_spawn');
 
-        emitter.start(false, 1000, 100);
-        this.crown = this.game.add.sprite(crownSpawn[0].x, crownSpawn[0].y, 'crown');
-        this.game.physics.arcade.enable(this.crown);
-        this.crown.body.allowGravity = false;
+        jewelSpawns.forEach(function(jewelSpawn) {
+            var jewel = this.game.add.sprite(jewelSpawn.x, jewelSpawn.y, 'jewel');
+            this.game.physics.arcade.enable(jewel);
+            jewel.body.allowGravity = false;
+
+            this.jewels.push(jewel);
+        }.bind(this));
 
         // Next stage
         var nextLevelSpawn = this.mapBackground.findObjectsByType('next_level');
@@ -93,16 +84,19 @@ Game.State.Tutorial.prototype = {
             this.paralaxTextGroup.add(new Phaser.BitmapText(this.game, textItem.x * this.TEXT_PARALLAX_SCALE, textItem.y * this.TEXT_PARALLAX_SCALE, 'nokia', textItem.text, textItem.size));
         }.bind(this));
 
-
         // Add joystick
         this.controls = new Game.Controls(this.game, this.player);
     },
 
-    crownCollisionHandler: function() {
-        this.player.addChild(this.crown);
-        this.crown.x = 1;
-        this.crown.y = -16;
-        this.crownSparkleEmitter.on = false;
+    jewelCollisionHandler: function(sprite1, sprite2) {
+        if (sprite1.key === 'jewel') {
+            sprite1.destroy();
+
+        } else if (sprite2.key === 'jewel') {
+            sprite2.destroy();
+        }
+
+        // Increment points
     },
 
     nextLevelHandler: function() {
@@ -119,8 +113,8 @@ Game.State.Tutorial.prototype = {
         // Floor collision
         this.game.physics.arcade.collide(this.player, this.background);
 
-        // Crown collision
-        this.game.physics.arcade.overlap(this.player, this.crown, this.crownCollisionHandler, null, this);
+        // Jewel collision
+        this.game.physics.arcade.overlap(this.player, this.jewels, this.jewelCollisionHandler, null, this);
 
         // Next level detection
         this.game.physics.arcade.overlap(this.player, this.nextLevel, this.nextLevelHandler, null, this);
