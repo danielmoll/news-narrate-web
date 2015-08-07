@@ -74,7 +74,7 @@ Game.State.Tutorial.prototype = {
         
         this.banisterLayer = this.mapBackground.createLayer('banisters');
         this.columnLayer = this.mapBackground.createLayer('columns');
-
+        this.doorLayer = this.mapBackground.createLayer('door');
 
         // Text overlays
         this.paralaxTextGroup = this.game.add.group();
