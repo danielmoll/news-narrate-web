@@ -1,6 +1,7 @@
 {% extends '../layouts/scene.nunjucks' %}
 
 {% set sceneName = 'scene_2015' %}
+{% set sceneGroup = 'group_2015' %}
 
 {% block title %}
 <div class="scene__title">2015</div>

@@ -1,9 +1,7 @@
 {% import '../macros/image.nunjucks' as image %}
 {% import '../macros/video.nunjucks' as video %}
 
-<div class="scene scene--{{ aspect|default('4x3') }} js-in-view">
-	<div class="scene__anchor" id="{{ sceneName }}"></div>
-
+<div class="scene scene--{{ aspect|default('4x3') }} js-scene js-in-view" id="{{ sceneName }}" data-group-name="{{ sceneGroup }}">
 	{% if sceneImage or sceneVideo %}
 		<div class="scene__media">
 		{% if sceneImage %}

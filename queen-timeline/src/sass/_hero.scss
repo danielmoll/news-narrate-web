@@ -1,5 +1,5 @@
 .hero {
-	margin: 0 auto 20px auto;
+	margin: 0 auto $itemSpacingVertical auto;
 	width: 100%;
 	max-width: $maxWidth;
 }
@@ -11,10 +11,15 @@
 	text-align: center;
 }
 
+.hero__media {
+	margin-bottom: $itemSpacingVertical;
+}
+
 .hero__title {
 	margin: 0;
 	letter-spacing: 2px;
 	line-height: 1.2;
+	color: $titleColor;
 }
 
 .hero__strap {

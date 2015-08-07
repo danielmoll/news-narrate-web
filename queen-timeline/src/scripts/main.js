@@ -4,6 +4,7 @@ require('./detect');
 
 var $ = require('jquery'),
 	inView = require('./in-view'),
+	scene = require('./scene'),
 	navigation = require('./navigation'),
 	videos = require('./video'),
 	images = require('./images'),
@@ -11,9 +12,12 @@ var $ = require('jquery'),
 	share = require('./share');
 
 $(function() {
-	inView.init();
+	scene.init();
 	resize.init();
 	images.init();
 	videos.init();
 	share.init();
+	navigation.init();
+
+	inView.init();
 });

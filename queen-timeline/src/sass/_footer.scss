@@ -1,7 +1,9 @@
 .footer {
 	border-top: 1px solid #ccc;
-	padding: 0 .5rem .5rem .5rem;
-	margin: 2rem 0;
+	margin: 0 auto 20px auto;
+	padding-top: 10px;
+	width: 100%;
+	max-width: $maxWidth;
 }
 
 .footer__text {

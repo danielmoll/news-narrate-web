@@ -16,7 +16,7 @@ exports.init = function() {
 			video.pause();
 		}.bind(video);
 	});
-}
+};
 
 module.exports = exports;
 

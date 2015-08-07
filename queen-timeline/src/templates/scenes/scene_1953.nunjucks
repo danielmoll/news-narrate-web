@@ -1,6 +1,7 @@
 {% extends '../layouts/scene.nunjucks' %}
 
 {% set sceneName = 'scene_1953' %}
+{% set sceneGroup = 'group_50s' %}
 {% set sceneVideo = 'http://res.cloudinary.com/skynews/video/upload/v1437551479/narrate-people-smuggler/Guns_Loop_v1.mp4' %}
 {% set sceneVideoPoster = 'http://res.cloudinary.com/skynews/video/upload/v1437551479/narrate-people-smuggler/Guns_Loop_v1.jpg' %}
 

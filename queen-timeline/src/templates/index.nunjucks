@@ -27,38 +27,38 @@
 		{{ navigation.render({
 			items: [{
 				text: '1952',
-				link: '',
-				id: ''
+				link: '#scene_1952',
+				id: 'group_50s'
 			},
 			{
 				text: '60s',
-				link: '',
-				id: ''
+				link: '#scene_1960',
+				id: 'group_60s'
 			},
 			{
 				text: '70s',
-				link: '',
-				id: ''
+				link: '#scene_1974',
+				id: 'group_70s'
 			},
 			{
 				text: '80s',
-				link: '',
-				id: ''
+				link: '#scene_1981',
+				id: 'group_80s'
 			},
 			{
 				text: '90s',
-				link: '',
-				id: ''
+				link: '#scene_1992',
+				id: 'group_90s'
 			},
 			{
 				text: '00s',
-				link: '',
-				id: ''
+				link: '#scene_2002',
+				id: 'group_00s'
 			},
 			{
 				text: '2015',
-				link: '',
-				id: ''
+				link: '#scene_2015',
+				id: 'group_2015'
 			}]
 		}) }}
 

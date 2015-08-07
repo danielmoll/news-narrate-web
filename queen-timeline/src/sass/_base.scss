@@ -38,4 +38,9 @@ body {
     margin: 0 auto;
     text-align: left;
     background: white;
+    color: $textColor;
+}
+
+a, a:hover {
+    text-decoration: none;
 }

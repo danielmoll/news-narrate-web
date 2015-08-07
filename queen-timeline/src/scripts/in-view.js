@@ -1,7 +1,8 @@
 'use strict';
 
 var _ = require('lodash'),
-	inViewElements = document.querySelectorAll('.js-in-view'),
+	$ = require('jquery'),
+	inViewElements = $('.js-in-view'),
 	exports = {};
 
 exports.calculateInView = function(el) {

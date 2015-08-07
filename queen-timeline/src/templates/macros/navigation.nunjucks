@@ -6,6 +6,11 @@
 				<li class="navigation__item"><a class="navigation__link" href="{{ item.link }}" data-id="{{ item.id }}">{{ item.text }}</a></li>
 			{% endfor %}
 			</ol>
+
+			<div class="timeline">
+				<div class="timeline__line"></div>
+				<div class="timeline__marker js-timeline-marker"></div>
+			</div>
 		</div>
 	</nav>
 {% endmacro %}

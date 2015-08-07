@@ -1,6 +1,7 @@
 {% extends '../layouts/scene.nunjucks' %}
 
 {% set sceneName = 'scene_1964' %}
+{% set sceneGroup = 'group_60s' %}
 {% set sceneImage = 'http://res.cloudinary.com/skynews/image/upload/c_scale,w_{width}/v1437399881/narrate-people-smuggler/map4x3.jpg' %}
 
 {% block title %}
