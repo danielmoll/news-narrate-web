@@ -3,10 +3,8 @@ Game.State.Tutorial.prototype = {
     map: null,
     layer: null,
     controls: null,
+    score: null,
     jewels: [],
-    scoreText: null,
-    score: 0,
-    maxScore: 0,
     paralaxTextOverlays: [
         { text: 'Touch this area of\nthe screen to move...', size: 20, x: 260, y: 410},
         { text: 'Slide your thumb up to jump\nover obstacles.', size: 20, x: 1300, y: 220}
@@ -67,8 +65,6 @@ Game.State.Tutorial.prototype = {
             this.jewels.push(jewel);
         }.bind(this));
 
-        this.maxScore = this.jewels.length;
-
         // Next stage
         var nextLevelSpawn = this.mapBackground.findObjectsByType('next_level');
         this.nextLevel = this.game.add.sprite(nextLevelSpawn[0].x, nextLevelSpawn[0].y, 'transparent_32-160');
@@ -89,20 +85,10 @@ Game.State.Tutorial.prototype = {
         }.bind(this));
 
         // Score display
-        var scoreJewel = this.game.add.sprite(0, 0, 'jewel');
-        this.scoreText = new Phaser.BitmapText(this.game, 33, 7, 'nokia', '0', 20);
-
-        this.scoreGroup = this.game.add.group();
-        this.scoreGroup.fixedToCamera = true;
-        this.scoreGroup.add(scoreJewel);
-        this.scoreGroup.add(this.scoreText);
+        this.score = new Game.Score(this.game);
 
         // Add joystick
         this.controls = new Game.Controls(this.game, this.player);
-    },
-
-    updateScore: function() {
-        this.scoreText.setText(this.score);
     },
 
     jewelCollisionHandler: function(sprite1, sprite2) {
@@ -114,8 +100,7 @@ Game.State.Tutorial.prototype = {
         }
 
         // Increment points
-        this.score++;
-        this.updateScore();
+        this.score.increment(1);
     },
 
     nextLevelHandler: function() {
