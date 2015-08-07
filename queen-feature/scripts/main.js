@@ -8,7 +8,7 @@ Game.Map.Object = {};
 
 Game.Map.MAPS = [
     'tutorial',
-    'main'
+    'decade_50s'
 
     // // Modules used in maps
     // 'house0_f0'
@@ -19,6 +19,7 @@ Game.main = function() {
 
     game.state.add('startup', Game.State.Startup);
     game.state.add('preloader', Game.State.Preloader);
+    game.state.add('tutorial', Game.State.Tutorial);
     game.state.add('intro_50s', Game.State.intro_50s);
     game.state.add('decade_50s', Game.State.decade_50s);
     game.state.add('playvideo', Game.State.PlayVideo);

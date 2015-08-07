@@ -1,14 +1,16 @@
-Game.State.decade_50s = function(game) {};
-Game.State.decade_50s.prototype = {
+Game.State.Tutorial = function(game) {};
+Game.State.Tutorial.prototype = {
     map: null,
     layer: null,
     controls: null,
     paralaxTextOverlays: [
-        { text: '1953', size: 200, x: 50, y: 230 },
-        { text: 'February 1952 George VI dies aged 56. \nHis daughter, Princess Elizabeth, is proclaimed\nQueen of the United Kingdom.', size: 20, x: 50, y: 380}
+        // { text: '1953', size: 200, x: 50, y: 230 },
+        // { text: 'February 1952 George VI dies aged 56. \nHis daughter, Princess Elizabeth, is proclaimed\nQueen of the United Kingdom.', size: 20, x: 50, y: 380}
+        { text: 'Touch this area of\nthe screen to move...', size: 20, x: 260, y: 410},
+        { text: 'Slide your thumb up to jump\nover obstacles.', size: 20, x: 1300, y: 220}
     ],
     fixedTextOverlays: [
-        { text: 'Onwards to the 60s >>', size: 20, x: 1850, y: 100 }
+        { text: '1950s >>', size: 20, x: 4200, y: 100 }
     ],
     TEXT_PARALLAX_SCALE: 1.1,
 
@@ -20,7 +22,7 @@ Game.State.decade_50s.prototype = {
     createState: function() {
 
         // Load the current over world map
-        this.mapBackground = new Game.Map.Module(this.game, 'decade_50s');
+        this.mapBackground = new Game.Map.Module(this.game, 'tutorial');
         
         this.modules = {};
         
@@ -105,7 +107,7 @@ Game.State.decade_50s.prototype = {
 
     nextLevelHandler: function() {
         this.game.fadePlugin.fadeOut(0x000, 750, 0, function() {
-            this.game.state.start('playvideo');
+            this.game.state.start('intro_50s');
         }.bind(this));
     },
 

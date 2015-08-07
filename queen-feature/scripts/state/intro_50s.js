@@ -30,7 +30,7 @@ Game.State.intro_50s.prototype = {
             this.endTextGroup.add(txtElement);
         }.bind(this));
 
-        this.game.add.button(this.game.world.width - 120, this.game.world.height - 50, 'next_button', this.nextLevel, this);
+        this.game.add.button(this.game.width - 120, this.game.height - 50, 'next_button', this.nextLevel, this);
 
         this.cursors = this.game.input.keyboard.createCursorKeys();
     },
