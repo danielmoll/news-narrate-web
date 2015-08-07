@@ -48,18 +48,24 @@ Game.Map.Module.prototype = {
     getCollisionSprites: function(layer, group, tileX, tileY) {
         tileX = tileX || 0;
         tileY = tileY || 0;
+        console.log('tileX, tileY', tileX, tileY);
 
         var self = this;
+        var tileHeight = this.tilemap.tileHeight;
         var result = [];
         var sprite;
+        console.log('tileHeight', tileHeight);
         this.tilemap.objects[layer].forEach(function(element) {
-            // console.log(element);
-            element.y -= self.tilemap.tileHeight;
+            element.y -= tileHeight;
+            console.log('element.y', element.y);
+            console.log('element.properties.width, element.properties.height', element.properties.width, element.properties.height);
+            // console.log('tileY', tileY);
             sprite = group.create(element.x + tileX*32, element.y + tileY*32);
             self.game.physics.arcade.enable(sprite);
             sprite.body.setSize(element.properties.width, element.properties.height);
             sprite.body.immovable = true;
             result.push(sprite);
+            console.log(sprite);
         });
         return result;
     },

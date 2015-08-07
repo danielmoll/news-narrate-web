@@ -65,6 +65,6 @@ Game.State.Preloader.prototype = {
             this.game.fadePlugin.fadeOut(0x000, 750, 0, function() {
                 this.game.state.start('tutorial');
             }.bind(this));
-        }.bind(this), 500);
+        }.bind(this), 800);
     }
 };

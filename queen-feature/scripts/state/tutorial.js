@@ -75,7 +75,7 @@ Game.State.Tutorial.prototype = {
         this.banisterLayer = this.mapBackground.createLayer('banisters');
         this.columnLayer = this.mapBackground.createLayer('columns');
         this.doorLayer = this.mapBackground.createLayer('door');
-
+        
         // Text overlays
         this.paralaxTextGroup = this.game.add.group();
         this.paralaxTextGroup.fixedToCamera = false;
@@ -83,6 +83,20 @@ Game.State.Tutorial.prototype = {
         this.paralaxTextOverlays.forEach(function(textItem) {
             this.paralaxTextGroup.add(new Phaser.BitmapText(this.game, textItem.x * this.TEXT_PARALLAX_SCALE, textItem.y * this.TEXT_PARALLAX_SCALE, 'nokia', textItem.text, textItem.size));
         }.bind(this));
+
+        /*******/
+        /**  objects for collisions **/
+        /*******/
+
+        this.collisionsGroup = this.game.add.group();
+        var collisionsOrigin = this.mapBackground.findObjectsByType('collisions_origin');
+        console.log('collisionsOrigin', collisionsOrigin);
+        // this.collisionObjects = this.mapBackground.getCollisionSprites('collision', this.collisionsGroup, collisionsOrigin[0].x / 32, collisionsOrigin[0].y / 32);
+        this.collisionObjects = this.mapBackground.getCollisionSprites('collision', this.collisionsGroup);
+
+        console.log(this.collisionObjects);
+        /**  END objects for collisions **/
+        /*******/
 
         // Score display
         this.score = new Game.Score(this.game);
@@ -112,6 +126,9 @@ Game.State.Tutorial.prototype = {
     update: function() {
         // Text group movement update.
         this.paralaxTextGroup.x = this.game.world.x * this.TEXT_PARALLAX_SCALE;
+
+        // Test collision objects
+        this.game.physics.arcade.collide(this.player, this.collisionsGroup);
 
         // Floor collision
         this.game.physics.arcade.collide(this.player, this.background);
