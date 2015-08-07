@@ -1,20 +1,18 @@
-/**
- * Created by knash on 15-03-12.
- */
-
 Game.State.decade_50s = function(game) {};
 Game.State.decade_50s.prototype = {
     map: null,
     layer: null,
     controls: null,
     paralaxTextOverlays: [
-        { text: '1953', size: 200, x: 50, y: 230 },
-        { text: 'February 1952 George VI dies aged 56. \nHis daughter, Princess Elizabeth, is proclaimed\nQueen of the United Kingdom.', size: 20, x: 50, y: 380}
+        // { text: '1953', size: 200, x: 50, y: 230 },
+        // { text: 'February 1952 George VI dies aged 56. \nHis daughter, Princess Elizabeth, is proclaimed\nQueen of the United Kingdom.', size: 20, x: 50, y: 380}
+        { text: 'Touch this area of\nthe screen to move...', size: 20, x: 260, y: 410},
+        { text: 'Slide your thumb up to jump\nover obstacles.', size: 20, x: 1300, y: 220}
     ],
     fixedTextOverlays: [
-        { text: 'Onwards to the 60s >>', size: 20, x: 1850, y: 100 }
+        { text: 'Onwards to the 60s >>', size: 20, x: 4200, y: 100 }
     ],
-    TEXT_PARALLAX_SCALE: 1.2,
+    TEXT_PARALLAX_SCALE: 1.1,
 
     create: function () {
         this.createState();
@@ -24,7 +22,7 @@ Game.State.decade_50s.prototype = {
     createState: function() {
 
         // Load the current over world map
-        this.mapBackground = new Game.Map.Module(this.game, 'main');
+        this.mapBackground = new Game.Map.Module(this.game, 'tutorial');
         
         this.modules = {};
         
@@ -36,13 +34,6 @@ Game.State.decade_50s.prototype = {
 
         this.mapBackground.tilemap.setCollisionBetween(76, 84);
 
-        // Text overlays
-        this.paralaxTextGroup = this.game.add.group();
-        this.paralaxTextGroup.fixedToCamera = false;
-        this.paralaxTextGroup.alpha = 0.4;
-        this.paralaxTextOverlays.forEach(function(textItem) {
-            this.paralaxTextGroup.add(new Phaser.BitmapText(this.game, textItem.x * this.TEXT_PARALLAX_SCALE, textItem.y * this.TEXT_PARALLAX_SCALE, 'nokia', textItem.text, textItem.size));
-        }.bind(this));
 
         this.endTextGroup = this.game.add.group();
         this.endTextGroup.fixedToCamera = false;
@@ -92,6 +83,16 @@ Game.State.decade_50s.prototype = {
         
         this.banisterLayer = this.mapBackground.createLayer('banisters');
         this.columnLayer = this.mapBackground.createLayer('columns');
+
+
+        // Text overlays
+        this.paralaxTextGroup = this.game.add.group();
+        this.paralaxTextGroup.fixedToCamera = false;
+        this.paralaxTextGroup.alpha = 0.4;
+        this.paralaxTextOverlays.forEach(function(textItem) {
+            this.paralaxTextGroup.add(new Phaser.BitmapText(this.game, textItem.x * this.TEXT_PARALLAX_SCALE, textItem.y * this.TEXT_PARALLAX_SCALE, 'nokia', textItem.text, textItem.size));
+        }.bind(this));
+
 
         // Add joystick
         this.controls = new Game.Controls(this.game, this.player);

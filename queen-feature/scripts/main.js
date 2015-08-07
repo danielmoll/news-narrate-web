@@ -7,8 +7,8 @@ Game.Map = {};
 Game.Map.Object = {};
 
 Game.Map.MAPS = [
-    // Overworld maps
-    'main'//,
+    'tutorial',
+    'main'
 
     // // Modules used in maps
     // 'house0_f0'
