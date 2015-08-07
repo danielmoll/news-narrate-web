@@ -6,11 +6,11 @@ Game.State.Tutorial.prototype = {
     score: null,
     jewels: [],
     paralaxTextOverlays: [
-        { text: 'Touch this area of\nthe screen to move...', size: 20, x: 260, y: 410},
-        { text: 'Slide your thumb up to jump\nover obstacles.', size: 20, x: 1300, y: 220}
+        { text: 'Touch this area of\nthe screen to move...', size: 20, x: 300, y: 320},
+        { text: 'Touch this area of the\nscreen to jump forward.', size: 20, x: 1580, y: 120}
     ],
     fixedTextOverlays: [
-        { text: '1950s >>', size: 20, x: 4200, y: 100 }
+        { text: '1950s >>', size: 20, x: 4300, y: 100 }
     ],
     TEXT_PARALLAX_SCALE: 1.1,
 
@@ -112,7 +112,6 @@ Game.State.Tutorial.prototype = {
     update: function() {
         // Text group movement update.
         this.paralaxTextGroup.x = this.game.world.x * this.TEXT_PARALLAX_SCALE;
-        this.paralaxTextGroup.y = this.game.world.y * this.TEXT_PARALLAX_SCALE;
 
         // Floor collision
         this.game.physics.arcade.collide(this.player, this.background);
