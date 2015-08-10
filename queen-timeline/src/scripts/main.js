@@ -19,5 +19,5 @@ $(function() {
 	share.init();
 	navigation.init();
 
-	inView.init();
+	inView.init(); // this has to fire last
 });
