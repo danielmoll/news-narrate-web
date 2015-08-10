@@ -3,18 +3,18 @@
   "description": "Sky News Narrate",
   "version": "0.0.1",
   "scripts": {
-    "clean": "parallelshell 'rm -f npm-debug.log' 'rm -f scripts/*' 'rm -f css/*' 'rm -f index.html'",
+    "clean": "parallelshell 'rm -f npm-debug.log' 'rm -f ./scripts/*' 'rm -f ./css/*' 'rm -f ./index.html'",
     "dist": "npm run clean && npm run browserify && npm run uglifyjs && npm run sass && npm run nunjucks && npm run cleancss",
     "dev": "npm run clean && parallelshell 'npm run watch'",
     "nunjucks": "node ./build/render-templates.js",
-    "browserify": "browserify src/scripts/main.js -d -o scripts/bundle.js",
-    "sass": "node-sass --output-style expanded --source-map true src/sass/ -o css/",
-    "cleancss":"cleancss -o css/main.css css/main.css",
-    "uglifyjs": "uglifyjs scripts/bundle.js -b beautify=false --screw-ie8 -m --compress drop_console -o scripts/bundle.js",
+    "browserify": "browserify ./src/scripts/main.js -d -o ./scripts/bundle.js",
+    "sass": "node-sass --output-style expanded --source-map true ./src/sass/ -o ./css/",
+    "cleancss":"cleancss -o ./css/main.css ./css/main.css",
+    "uglifyjs": "uglifyjs ./scripts/bundle.js -b beautify=false --screw-ie8 -m --compress drop_console -o ./scripts/bundle.js",
     "watch": "parallelshell 'npm run watch:sass' 'npm run watch:appjs' 'npm run watch:templates'",
-    "watch:sass": "sane 'npm run sass' src/sass",
-    "watch:appjs": "sane 'npm run browserify' src/scripts/ --glob='**/*.js'",
-    "watch:templates": "sane 'npm run nunjucks' src/templates"
+    "watch:sass": "sane 'npm run sass' ./src/sass",
+    "watch:appjs": "sane 'npm run browserify' ./src/scripts/ --glob='**/*.js'",
+    "watch:templates": "sane 'npm run nunjucks' ./src/templates"
   },
   "private": true,
   "dependencies": {
