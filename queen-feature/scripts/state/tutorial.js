@@ -104,7 +104,7 @@ Game.State.Tutorial.prototype = {
 
     nextLevelHandler: function() {
         this.game.fadePlugin.fadeOut(0x000, 750, 0, function() {
-            this.game.state.start('intro_50s');
+            this.game.state.start('decade_50s');
         }.bind(this));
     },
 
