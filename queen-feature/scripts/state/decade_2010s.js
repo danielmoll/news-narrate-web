@@ -1,8 +1,8 @@
-Game.State.decade_50s = function(game) {};
-Game.State.decade_50s.prototype = {
-    levelName: 'decade_50s',
+Game.State.decade_2010s = function(game) {};
+Game.State.decade_2010s.prototype = {
+    levelName: 'decade_2010s',
     controls: null,
-    crownCollected: false,
+    collectibleItems: [],
     paralaxTextOverlays: [
         { text: '1953', size: 200, x: 50, y: 230 },
         { text: 'February 1952 George VI dies aged 56. \nHis daughter, Princess Elizabeth, is proclaimed\nQueen of the United Kingdom.', size: 20, x: 50, y: 380}
@@ -20,7 +20,7 @@ Game.State.decade_50s.prototype = {
     createState: function() {
 
         // Load the current over world map
-        this.mapBackground = new Game.Map.Module(this.game, 'decade_50s');
+        this.mapBackground = new Game.Map.Module(this.game, 'decade_2010s');
         
         this.modules = {};
         
@@ -30,7 +30,8 @@ Game.State.decade_50s.prototype = {
         // Resize the game world to match the layer dimensions
         this.background.resizeWorld();
 
-        this.mapBackground.tilemap.setCollisionBetween(76, 84);
+        this.mapBackground.tilemap.setCollisionBetween(833, 848);
+        this.mapBackground.tilemap.setCollisionBetween(860, 881);
 
 
         this.endTextGroup = this.game.add.group();
@@ -53,35 +54,19 @@ Game.State.decade_50s.prototype = {
         this.player.animations.add('right', [3,4], 5, true);
 
         this.game.physics.arcade.gravity.y = 600;
-        // Loading gthe crown
-        var crownSpawn = this.mapBackground.findObjectsByType('crown_spawn');
-        var emitter = this.game.add.emitter(crownSpawn[0].x + 16, crownSpawn[0].y + 16, 10);
-        this.crownSparkleEmitter = emitter;
-        emitter.makeParticles(['sparkle1', 'sparkle2', 'sparkle3']);
-        emitter.minParticleSpeed.setTo(-50, -50);
-        emitter.maxParticleSpeed.setTo(50, 50);
-        emitter.gravity = -600;
-        emitter.alpha = 0.5;
-        emitter.minParticleAlpha = 0.7;
-        emitter.maxParticleAlpha = 1;
-        emitter.minParticleScale = 0.5;
-        emitter.maxParticleScale = 1.5;
 
-        emitter.start(false, 1000, 100);
-        this.crown = this.game.add.sprite(crownSpawn[0].x, crownSpawn[0].y, 'crown');
-        this.game.physics.arcade.enable(this.crown);
-        this.crown.body.allowGravity = false;
+        // Loading the collectibles
+        var collectibleSpawns = this.mapBackground.findCollectibleObjects();
 
-        // Next stage
-        var nextLevelSpawn = this.mapBackground.findObjectsByType('next_level');
-        this.nextLevel = this.game.add.sprite(nextLevelSpawn[0].x, nextLevelSpawn[0].y, 'transparent_32-160');
-        this.game.physics.arcade.enable(this.nextLevel);
-        this.nextLevel.body.allowGravity = false;
-        this.nextLevel.y -=110;
-        
-        this.banisterLayer = this.mapBackground.createLayer('banisters');
-        this.columnLayer = this.mapBackground.createLayer('columns');
+        collectibleSpawns.forEach(function(collectible) {
+            var collectibleItem = this.game.add.sprite(collectible.x, collectible.y, collectible.properties.sprite_key);
+            collectibleItem.properties = collectible.properties;
 
+            this.game.physics.arcade.enable(collectibleItem);
+            collectibleItem.body.allowGravity = false;
+
+            this.collectibleItems.push(collectibleItem);
+        }.bind(this));
 
         // Text overlays
         this.paralaxTextGroup = this.game.add.group();
@@ -98,23 +83,20 @@ Game.State.decade_50s.prototype = {
         this.controls = new Game.Controls(this.game, this.player);
     },
 
-    crownCollisionHandler: function() {
-        if (!this.crownCollected) {
-            this.player.addChild(this.crown);
-            this.crown.x = 1;
-            this.crown.y = -16;
-            this.crownSparkleEmitter.on = false;
+    collectiblesCollisionHandler: function(sprite1, sprite2) {
+        var collectible = null;
 
-            // Increment points
-            this.game.score.scoreItem({ sprite_key: 'crown', score: 10}, this.levelName);
-            this.crownCollected = true;
+        if (sprite1.key !== 'player') {
+            sprite1.destroy();
+            collectible = sprite1;
+
+        } else if (sprite2.key !== 'player') {
+            sprite2.destroy();
+            collectible = sprite2;
         }
-    },
 
-    nextLevelHandler: function() {
-        this.game.fadePlugin.fadeOut(0x000, 750, 0, function() {
-            this.game.state.start('decade_2010s');
-        }.bind(this));
+        // Add item to score.
+        this.game.score.scoreItem(collectible.properties, this.levelName);
     },
 
     update: function() {
@@ -124,12 +106,9 @@ Game.State.decade_50s.prototype = {
 
         // Floor collision
         this.game.physics.arcade.collide(this.player, this.background);
-
-        // Crown collision
-        this.game.physics.arcade.overlap(this.player, this.crown, this.crownCollisionHandler, null, this);
-
-        // Next level detection
-        this.game.physics.arcade.overlap(this.player, this.nextLevel, this.nextLevelHandler, null, this);
+        
+        // Jewel collision
+        this.game.physics.arcade.overlap(this.player, this.collectibleItems, this.collectiblesCollisionHandler, null, this);
 
         this.controls.update();
     }
