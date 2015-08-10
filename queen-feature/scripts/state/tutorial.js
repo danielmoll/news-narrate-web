@@ -1,5 +1,6 @@
 Game.State.Tutorial = function(game) {};
 Game.State.Tutorial.prototype = {
+    levelName: 'tutorial',
     map: null,
     layer: null,
     controls: null,
@@ -84,7 +85,7 @@ Game.State.Tutorial.prototype = {
         this.columnLayer = this.mapBackground.createLayer('columns');
 
         // Score display
-        this.score = new Game.Score(this.game);
+        this.game.score.addDisplay();
 
         // Add joystick
         this.controls = new Game.Controls(this.game, this.player);
@@ -99,7 +100,7 @@ Game.State.Tutorial.prototype = {
         }
 
         // Increment points
-        this.score.increment(1);
+        this.game.score.increment(1, this.levelName);
     },
 
     nextLevelHandler: function() {

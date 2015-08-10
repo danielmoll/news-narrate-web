@@ -1,11 +1,9 @@
 Game.Score = function(game) {
     this.game = game;
-    this.score = 0;
-
-    this.create();
+    this.scores = {};
 };
 
-Game.Score.prototype.create = function() {
+Game.Score.prototype.addDisplay = function() {
     var scoreJewel = this.game.add.sprite(this.game.width - 65, 0, 'jewel');
     this.scoreText = new Phaser.BitmapText(this.game, this.game.width - 33, 7, 'nokia', '0', 20);
 
@@ -15,7 +13,10 @@ Game.Score.prototype.create = function() {
     this.scoreGroup.add(this.scoreText);
 };
 
-Game.Score.prototype.increment = function (value) {
-    this.score += value;
-    this.scoreText.setText(this.score);
+Game.Score.prototype.increment = function (value, levelName) {
+    this.scores[levelName] = this.scores[levelName] || 0;
+    this.scores[levelName] += value;
+    this.scoreText.setText(this.scores[levelName]);
+
+    this.game.storage.set(levelName, {score: this.scores[levelName]});
 };

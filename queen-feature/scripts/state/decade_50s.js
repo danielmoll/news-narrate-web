@@ -1,8 +1,10 @@
 Game.State.decade_50s = function(game) {};
 Game.State.decade_50s.prototype = {
+    levelName: 'decade_50s',
     map: null,
     layer: null,
     controls: null,
+    crownCollected: false,
     paralaxTextOverlays: [
         { text: '1953', size: 200, x: 50, y: 230 },
         { text: 'February 1952 George VI dies aged 56. \nHis daughter, Princess Elizabeth, is proclaimed\nQueen of the United Kingdom.', size: 20, x: 50, y: 380}
@@ -91,16 +93,24 @@ Game.State.decade_50s.prototype = {
             this.paralaxTextGroup.add(new Phaser.BitmapText(this.game, textItem.x * this.TEXT_PARALLAX_SCALE, textItem.y * this.TEXT_PARALLAX_SCALE, 'nokia', textItem.text, textItem.size));
         }.bind(this));
 
+        // Score display
+        this.game.score.addDisplay();
 
         // Add joystick
         this.controls = new Game.Controls(this.game, this.player);
     },
 
     crownCollisionHandler: function() {
-        this.player.addChild(this.crown);
-        this.crown.x = 1;
-        this.crown.y = -16;
-        this.crownSparkleEmitter.on = false;
+        if (!this.crownCollected) {
+            this.player.addChild(this.crown);
+            this.crown.x = 1;
+            this.crown.y = -16;
+            this.crownSparkleEmitter.on = false;
+
+            // Increment points
+            this.game.score.increment(10, this.levelName);
+            this.crownCollected = true;
+        }
     },
 
     nextLevelHandler: function() {
