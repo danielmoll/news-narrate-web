@@ -1,10 +1,10 @@
 .idea
 tmp
-build
 node_modules
 .divshot-cache
 .DS_Store
 *.swp
+london7-7/build
 people-smuggler/scripts/bundle.js
 queen-timeline/scripts/bundle.js
 queen-timeline/css/main.css
