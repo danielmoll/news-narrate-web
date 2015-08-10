@@ -30,8 +30,8 @@ Game.State.decade_2010s.prototype = {
         // Resize the game world to match the layer dimensions
         this.background.resizeWorld();
 
-        this.mapBackground.tilemap.setCollisionBetween(833, 848);
-        this.mapBackground.tilemap.setCollisionBetween(860, 881);
+        this.mapBackground.tilemap.setCollisionBetween(834, 849);
+        this.mapBackground.tilemap.setCollisionBetween(861, 882);
 
 
         this.endTextGroup = this.game.add.group();
