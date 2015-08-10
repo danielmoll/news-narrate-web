@@ -7,6 +7,7 @@ test:
     - gulp build
     - npm install -g divshot-cli
     - npm install -g uglifyjs
+    - npm install -g browserify
     - pushd people-smuggler/ && . ./build.sh && popd
     - pushd queen-timeline/ && npm i && npm run dist && popd
     - divshot push staging --token $DIVSHOT_TOKEN
