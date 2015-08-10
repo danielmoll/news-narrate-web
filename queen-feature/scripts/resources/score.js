@@ -6,8 +6,8 @@ Game.Score = function(game) {
 };
 
 Game.Score.prototype.create = function() {
-    var scoreJewel = this.game.add.sprite(0, 0, 'jewel');
-    this.scoreText = new Phaser.BitmapText(this.game, 33, 7, 'nokia', '0', 20);
+    var scoreJewel = this.game.add.sprite(this.game.width - 65, 0, 'jewel');
+    this.scoreText = new Phaser.BitmapText(this.game, this.game.width - 33, 7, 'nokia', '0', 20);
 
     this.scoreGroup = this.game.add.group();
     this.scoreGroup.fixedToCamera = true;
@@ -19,7 +19,3 @@ Game.Score.prototype.increment = function (value) {
     this.score += value;
     this.scoreText.setText(this.score);
 };
-
-// Game.Score.prototype.update = function () {
-
-// };
