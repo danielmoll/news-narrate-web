@@ -5,13 +5,8 @@ Game.State.Tutorial.prototype = {
     controls: null,
     score: null,
     jewels: [],
-    paralaxTextOverlays: [
-        { text: 'Touch this area of\nthe screen to move...', size: 20, x: 300, y: 320},
-        { text: 'Touch this area of the\nscreen to jump forward.', size: 20, x: 1580, y: 120}
-    ],
-    fixedTextOverlays: [
-        { text: '1950s >>', size: 20, x: 4300, y: 100 }
-    ],
+    parallaxTextGroup: null,
+    fixedTextGroup: null,
     TEXT_PARALLAX_SCALE: 1.1,
 
     create: function () {
@@ -34,14 +29,26 @@ Game.State.Tutorial.prototype = {
 
         this.mapBackground.tilemap.setCollisionBetween(76, 84);
 
-        this.endTextGroup = this.game.add.group();
-        this.endTextGroup.fixedToCamera = false;
-        this.endTextGroup.alpha = 0.8;
-        this.fixedTextOverlays.forEach(function(textItem) {
-            this.endTextGroup.add(new Phaser.BitmapText(this.game, textItem.x, textItem.y, 'nokia', textItem.text, textItem.size));
+        // Text overlays
+        this.fixedTextGroup = this.game.add.group();
+        this.fixedTextGroup.fixedToCamera = false;
+        this.fixedTextGroup.alpha = 0.8;
+
+        this.parallaxTextGroup = this.game.add.group();
+        this.parallaxTextGroup.fixedToCamera = false;
+        this.parallaxTextGroup.alpha = 0.4;
+
+        var textSpawns = this.mapBackground.findTextObjects();
+
+        textSpawns.forEach(function(textItem) {
+            if(textItem.properties.parallax) {
+                this.parallaxTextGroup.add(new Phaser.BitmapText(this.game, textItem.x, textItem.y, 'nokia', textItem.properties.text, textItem.properties.size));
+            } else {
+                this.fixedTextGroup.add(new Phaser.BitmapText(this.game, textItem.x, textItem.y, 'nokia', textItem.properties.text, textItem.properties.size));
+            }
         }.bind(this));
 
-        // Loading the queen
+        // Loading the player
         var spawn = this.mapBackground.findObjectsByType('player_spawn');
         this.player = this.game.add.sprite(spawn[0].x, spawn[0].y - 32, 'player');
         this.game.physics.arcade.enable(this.player);
@@ -54,6 +61,7 @@ Game.State.Tutorial.prototype = {
         this.player.animations.add('right', [3,4], 5, true);
 
         this.game.physics.arcade.gravity.y = 600;
+
         // Loading gthe jewels
         var jewelSpawns = this.mapBackground.findObjectsByType('jewel_spawn');
 
@@ -74,15 +82,6 @@ Game.State.Tutorial.prototype = {
         
         this.banisterLayer = this.mapBackground.createLayer('banisters');
         this.columnLayer = this.mapBackground.createLayer('columns');
-
-
-        // Text overlays
-        this.paralaxTextGroup = this.game.add.group();
-        this.paralaxTextGroup.fixedToCamera = false;
-        this.paralaxTextGroup.alpha = 0.4;
-        this.paralaxTextOverlays.forEach(function(textItem) {
-            this.paralaxTextGroup.add(new Phaser.BitmapText(this.game, textItem.x * this.TEXT_PARALLAX_SCALE, textItem.y * this.TEXT_PARALLAX_SCALE, 'nokia', textItem.text, textItem.size));
-        }.bind(this));
 
         // Score display
         this.score = new Game.Score(this.game);
@@ -111,7 +110,7 @@ Game.State.Tutorial.prototype = {
 
     update: function() {
         // Text group movement update.
-        this.paralaxTextGroup.x = this.game.world.x * this.TEXT_PARALLAX_SCALE;
+        this.parallaxTextGroup.x = this.game.world.x * this.TEXT_PARALLAX_SCALE;
 
         // Floor collision
         this.game.physics.arcade.collide(this.player, this.background);

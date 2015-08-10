@@ -356,8 +356,8 @@
                  "type":"next_level",
                  "visible":true,
                  "width":32,
-                 "x":4493,
-                 "y":224
+                 "x":4614.20202020202,
+                 "y":222.989898989899
                 }, 
                 {
                  "gid":112,
@@ -440,8 +440,90 @@
          "width":146,
          "x":0,
          "y":0
+        }, 
+        {
+         "draworder":"topdown",
+         "height":20,
+         "name":"text",
+         "objects":[
+                {
+                 "gid":124,
+                 "height":32,
+                 "id":33,
+                 "name":"1950s_title",
+                 "properties":
+                    {
+                     "size":"20",
+                     "text":"1950s"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":4150,
+                 "y":64
+                }, 
+                {
+                 "gid":124,
+                 "height":32,
+                 "id":35,
+                 "name":"1950s_text",
+                 "properties":
+                    {
+                     "size":"12",
+                     "text":"Post-war Britain started the 1950s hard-up and hurting.\\n\\nFood rations were in place until 1954, there were unexploded bombs in the\\rstreets, and Britain's international standing was shaken by the Suez crisis.\\n\\nBut by the end of the decade the UK had a new Queen, television sets,\\rand rock n'roll.\\n\\nPrime Minister Harold MacMillan proclaimed 'most of\\rour people have never had it so good'."
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":4150,
+                 "y":102
+                }, 
+                {
+                 "gid":130,
+                 "height":32,
+                 "id":38,
+                 "name":"tutorial-move-right",
+                 "properties":
+                    {
+                     "parallax":"true",
+                     "size":"20",
+                     "text":"Touch this area of\\nthe screen to move..."
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":300,
+                 "y":385
+                }, 
+                {
+                 "gid":130,
+                 "height":32,
+                 "id":40,
+                 "name":"tutorial-jump-right",
+                 "properties":
+                    {
+                     "parallax":"true",
+                     "size":"20",
+                     "text":"Touch this area of the\\nscreen to jump forward."
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":1700,
+                 "y":155
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "width":146,
+         "x":0,
+         "y":0
         }],
- "nextobjectid":33,
+ "nextobjectid":41,
  "orientation":"orthogonal",
  "properties":
     {

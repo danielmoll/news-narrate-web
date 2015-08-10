@@ -29,6 +29,22 @@ Game.Map.Module.prototype = {
         return result;
     },
 
+    // Searches the text layer for text elements to place
+    findTextObjects: function() {
+        var self = this;
+        var result = [];
+        this.tilemap.objects['text'].forEach(function(element) {
+            // Phaser uses top left, Tiled bottom left so we have to adjust the y position
+            // also keep in mind that the cup images are a bit smaller than the tile which is 16x16
+            // so they might not be placed in the exact pixel position as in Tiled
+            element.y -= self.tilemap.tileHeight;
+            element.properties.text = element.properties.text.replace(/\\n/g,'\n').replace(/\\r/g,'\r');
+            element.properties.size = element.properties.size || 20;
+            result.push(element);
+        });
+        return result;
+    },
+
     // Searches the object layer for a specific type
     findObjectsByType: function(type) {
         var self = this;
