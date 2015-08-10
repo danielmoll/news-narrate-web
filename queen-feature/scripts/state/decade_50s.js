@@ -1,8 +1,6 @@
 Game.State.decade_50s = function(game) {};
 Game.State.decade_50s.prototype = {
     levelName: 'decade_50s',
-    map: null,
-    layer: null,
     controls: null,
     crownCollected: false,
     paralaxTextOverlays: [

@@ -15,6 +15,11 @@ Game.Score.prototype.addDisplay = function() {
 
 Game.Score.prototype.increment = function (value, levelName) {
     this.scores[levelName] = this.scores[levelName] || 0;
+
+    if (typeof(value) !== Number) {
+        value = parseInt(value, 10);
+    }
+
     this.scores[levelName] += value;
     this.scoreText.setText(this.scores[levelName]);
 

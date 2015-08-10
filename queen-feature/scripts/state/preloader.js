@@ -19,6 +19,7 @@ Game.State.Preloader.prototype = {
         this.game.load.image('sparkle3', 'assets/sprites/sparkle3.png');
         this.game.load.image('transparent_32-160', 'assets/sprites/transparent_32-160.png');
         this.game.load.image('jewel', 'assets/sprites/jewel.png');
+        this.game.load.image('corgi', 'assets/sprites/corgi.png');
         
         // virtual joystick
         this.load.image('compass', 'assets/sprites/compass_rose.png');

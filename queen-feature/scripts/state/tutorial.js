@@ -1,11 +1,9 @@
 Game.State.Tutorial = function(game) {};
 Game.State.Tutorial.prototype = {
     levelName: 'tutorial',
-    map: null,
     layer: null,
     controls: null,
-    score: null,
-    jewels: [],
+    collectibleItems: [],
     parallaxTextGroup: null,
     fixedTextGroup: null,
     TEXT_PARALLAX_SCALE: 1.1,
@@ -63,15 +61,17 @@ Game.State.Tutorial.prototype = {
 
         this.game.physics.arcade.gravity.y = 600;
 
-        // Loading gthe jewels
-        var jewelSpawns = this.mapBackground.findObjectsByType('jewel_spawn');
+        // Loading the collectibles
+        var collectibleSpawns = this.mapBackground.findCollectibleObjects();
 
-        jewelSpawns.forEach(function(jewelSpawn) {
-            var jewel = this.game.add.sprite(jewelSpawn.x, jewelSpawn.y, 'jewel');
-            this.game.physics.arcade.enable(jewel);
-            jewel.body.allowGravity = false;
+        collectibleSpawns.forEach(function(collectible) {
+            var collectibleItem = this.game.add.sprite(collectible.x, collectible.y, collectible.properties.sprite_key);
+            collectibleItem.properties = collectible.properties;
 
-            this.jewels.push(jewel);
+            this.game.physics.arcade.enable(collectibleItem);
+            collectibleItem.body.allowGravity = false;
+
+            this.collectibleItems.push(collectibleItem);
         }.bind(this));
 
         // Next stage
@@ -91,16 +91,20 @@ Game.State.Tutorial.prototype = {
         this.controls = new Game.Controls(this.game, this.player);
     },
 
-    jewelCollisionHandler: function(sprite1, sprite2) {
-        if (sprite1.key === 'jewel') {
-            sprite1.destroy();
+    collectiblesCollisionHandler: function(sprite1, sprite2) {
+        var collectible = null;
 
-        } else if (sprite2.key === 'jewel') {
+        if (sprite1.key !== 'player') {
+            sprite1.destroy();
+            collectible = sprite1;
+
+        } else if (sprite2.key !== 'player') {
             sprite2.destroy();
+            collectible = sprite2;
         }
 
-        // Increment points
-        this.game.score.increment(1, this.levelName);
+        // Increment score
+        this.game.score.increment(collectible.properties.score, this.levelName);
     },
 
     nextLevelHandler: function() {
@@ -117,7 +121,7 @@ Game.State.Tutorial.prototype = {
         this.game.physics.arcade.collide(this.player, this.background);
 
         // Jewel collision
-        this.game.physics.arcade.overlap(this.player, this.jewels, this.jewelCollisionHandler, null, this);
+        this.game.physics.arcade.overlap(this.player, this.collectibleItems, this.collectiblesCollisionHandler, null, this);
 
         // Next level detection
         this.game.physics.arcade.overlap(this.player, this.nextLevel, this.nextLevelHandler, null, this);

@@ -45,6 +45,20 @@ Game.Map.Module.prototype = {
         return result;
     },
 
+    // Searches the text layer for text elements to place
+    findCollectibleObjects: function() {
+        var self = this;
+        var result = [];
+        this.tilemap.objects['collectibles'].forEach(function(element) {
+            // Phaser uses top left, Tiled bottom left so we have to adjust the y position
+            // also keep in mind that the cup images are a bit smaller than the tile which is 16x16
+            // so they might not be placed in the exact pixel position as in Tiled
+            element.y -= self.tilemap.tileHeight;
+            result.push(element);
+        });
+        return result;
+    },
+
     // Searches the object layer for a specific type
     findObjectsByType: function(type) {
         var self = this;
