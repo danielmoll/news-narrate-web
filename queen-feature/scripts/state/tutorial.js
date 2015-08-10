@@ -103,8 +103,8 @@ Game.State.Tutorial.prototype = {
             collectible = sprite2;
         }
 
-        // Increment score
-        this.game.score.increment(collectible.properties.score, this.levelName);
+        // Add item to score.
+        this.game.score.scoreItem(collectible.properties, this.levelName);
     },
 
     nextLevelHandler: function() {

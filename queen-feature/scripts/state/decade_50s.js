@@ -106,7 +106,7 @@ Game.State.decade_50s.prototype = {
             this.crownSparkleEmitter.on = false;
 
             // Increment points
-            this.game.score.increment(10, this.levelName);
+            this.game.score.scoreItem({ sprite_key: 'crown', score: 10}, this.levelName);
             this.crownCollected = true;
         }
     },

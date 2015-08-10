@@ -1,6 +1,7 @@
-Game.Score = function(game) {
+Game.Score = function(game, objects) {
     this.game = game;
-    this.scores = {};
+    this.scoredItems = {};
+    this.objects = objects;
 };
 
 Game.Score.prototype.addDisplay = function() {
@@ -13,15 +14,28 @@ Game.Score.prototype.addDisplay = function() {
     this.scoreGroup.add(this.scoreText);
 };
 
-Game.Score.prototype.increment = function (value, levelName) {
-    this.scores[levelName] = this.scores[levelName] || 0;
+Game.Score.prototype.scoreItem = function (scoredItem, levelName) {
+    this.scoredItems[levelName] = this.scoredItems[levelName] || [];
 
-    if (typeof(value) !== Number) {
-        value = parseInt(value, 10);
-    }
+    this.scoredItems[levelName].push(scoredItem);
+    this.game.storage.set(levelName, {scoredItems: this.scoredItems[levelName]});
 
-    this.scores[levelName] += value;
-    this.scoreText.setText(this.scores[levelName]);
+    this.updatePoints(levelName);
+};
 
-    this.game.storage.set(levelName, {score: this.scores[levelName]});
+Game.Score.prototype.updatePoints = function (levelName) {
+    var score = 0,
+        value;
+
+    this.scoredItems[levelName].forEach(function(item) {
+        value = item.score;
+
+        if (typeof(value) !== Number) {
+            value = parseInt(value, 10);
+        }
+        
+        score += value;
+    });
+
+    this.scoreText.setText(score);
 };
