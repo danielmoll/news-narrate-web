@@ -9,6 +9,6 @@ test:
     - npm install -g uglifyjs
     - npm install -g browserify
     - pushd people-smuggler/ && . ./build.sh && popd
-    - pushd queen-timeline/ && npm i && npm run dist && popd
+    - pushd queen-timeline/ && mkdir scripts && mkdir && css npm i && npm run dist && popd
     - divshot push staging --token $DIVSHOT_TOKEN
     - divshot purge staging --token $DIVSHOT_TOKEN
