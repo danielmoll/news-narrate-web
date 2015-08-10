@@ -1,0 +1,14 @@
+{% extends '../layouts/scene.nunjucks' %}
+
+{% set sceneName = 'scene_1992' %}
+{% set sceneGroup = 'group_90s' %}
+{% set sceneVideo = 'http://res.cloudinary.com/skynews/video/upload/v1437551479/narrate-people-smuggler/Guns_Loop_v1.mp4' %}
+{% set sceneVideoPoster = 'http://res.cloudinary.com/skynews/video/upload/v1437551479/narrate-people-smuggler/Guns_Loop_v1.jpg' %}
+
+{% block title %}
+<div class="scene__title">1992</div>
+{% endblock %}
+
+{% block content %}
+<p class="scene__text">The Queen&rsquo;s &lsquo;Annus Horribillis&rsquo;, as her daughter Princess Anne divorces, and the Prince of Wales and Duke of York separate from their partners. Windsor Castle goes up in flames.</p>
+{% endblock %}

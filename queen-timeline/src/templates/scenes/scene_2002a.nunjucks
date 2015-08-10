@@ -1,0 +1,14 @@
+{% extends '../layouts/scene.nunjucks' %}
+
+{% set sceneName = 'scene_2002a' %}
+{% set sceneGroup = 'group_00s' %}
+{% set sceneVideo = 'http://res.cloudinary.com/skynews/video/upload/v1437551479/narrate-people-smuggler/Guns_Loop_v1.mp4' %}
+{% set sceneVideoPoster = 'http://res.cloudinary.com/skynews/video/upload/v1437551479/narrate-people-smuggler/Guns_Loop_v1.jpg' %}
+
+{% block title %}
+<div class="scene__title">2002</div>
+{% endblock %}
+
+{% block content %}
+<p class="scene__text">The Queen celebrates her Golden Jubilee, marking 50 years of her reign. She travels over 40,000 miles across the Commonwealth to mark the event.</p>
+{% endblock %}

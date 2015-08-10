@@ -1,0 +1,14 @@
+{% extends '../layouts/scene.nunjucks' %}
+
+{% set sceneName = 'scene_1982a' %}
+{% set sceneGroup = 'group_80s' %}
+{% set sceneVideo = 'http://res.cloudinary.com/skynews/video/upload/v1437551479/narrate-people-smuggler/Guns_Loop_v1.mp4' %}
+{% set sceneVideoPoster = 'http://res.cloudinary.com/skynews/video/upload/v1437551479/narrate-people-smuggler/Guns_Loop_v1.jpg' %}
+
+{% block title %}
+<div class="scene__title">1982</div>
+{% endblock %}
+
+{% block content %}
+<p class="scene__text">Prince William is born at St Mary&rsquo;s Hospital. He becomes third in line to the throne.</p>
+{% endblock %}

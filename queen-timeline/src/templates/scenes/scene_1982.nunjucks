@@ -1,0 +1,12 @@
+{% extends '../layouts/scene.nunjucks' %}
+
+{% set sceneName = 'scene_1982' %}
+{% set sceneGroup = 'group_80s' %}
+
+{% block title %}
+<div class="scene__title">1982</div>
+{% endblock %}
+
+{% block content %}
+<p class="scene__text">A man breaks into Buckingham Palace, spending 10 minutes talking to the Queen in her bedroom. Michael Fagan is arrested for trespass and stealing half a bottle of wine.</p>
+{% endblock %}

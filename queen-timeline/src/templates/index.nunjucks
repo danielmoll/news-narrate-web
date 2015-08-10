@@ -1,0 +1,127 @@
+{% import 'macros/navigation.nunjucks' as navigation %}{% import 'macros/image.nunjucks' as image %}{% import 'macros/video.nunjucks' as video %}<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Queen Elizabeth II | The World&rsquo;s Longest Reigning Monarch | Sky News</title>
+		<meta name="description" content="">
+		<link href="css/main.css" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<meta property="og:title" content="Queen Elizabeth II - The World&rsquo;s Longest Reigning Monarch">
+		<meta property="og:description" content="">
+
+		<meta property="og:url" content="http://narrate.news.sky.com/queen-timeline/">
+		<meta property="og:image" content="">
+
+	    <link rel="shortcut icon" href="//news.sky.com/images/favicon.ico" type="image/x-icon">
+	    <link rel="apple-touch-icon" href="//news.sky.com/images/f670e1be.sky-news-touch.png"><!-- 60x60 -->
+	    <link rel="apple-touch-icon" sizes="76x76" href="//news.sky.com/images/1b5f54e3.sky-news-touch-ipad.png"><!-- 76x76 -->
+	    <link rel="apple-touch-icon" sizes="120x120" href="//news.sky.com/images/74ebaccd.sky-news-touch-retina.png"><!-- 120x120 -->
+	    <link rel="apple-touch-icon" sizes="152x152" href="//news.sky.com/images/61bf2734.sky-news-touch-retina-ipad.png"><!-- 152x152 -->
+	</head>
+	<body id="top">
+		{% include "partials/header.nunjucks" %}
+
+		{% include "partials/hero.nunjucks" %}
+
+		{{ navigation.render({
+			items: [{
+				text: '1952',
+				link: '#scene_1952',
+				id: 'group_50s'
+			},
+			{
+				text: '60s',
+				link: '#scene_1960',
+				id: 'group_60s'
+			},
+			{
+				text: '70s',
+				link: '#scene_1974',
+				id: 'group_70s'
+			},
+			{
+				text: '80s',
+				link: '#scene_1981',
+				id: 'group_80s'
+			},
+			{
+				text: '90s',
+				link: '#scene_1992',
+				id: 'group_90s'
+			},
+			{
+				text: '00s',
+				link: '#scene_2002',
+				id: 'group_00s'
+			},
+			{
+				text: '2015',
+				link: '#scene_2015',
+				id: 'group_2015'
+			}]
+		}) }}
+
+		<div class="scenes">
+
+			{% include "scenes/scene_1952.nunjucks" %}
+
+			{% include "scenes/scene_1953.nunjucks" %}
+
+			{% include "scenes/scene_1953a.nunjucks" %}
+
+			{% include "scenes/scene_1960.nunjucks" %}
+
+			{% include "scenes/scene_1964.nunjucks" %}
+
+			{% include "scenes/scene_1974.nunjucks" %}
+
+			{% include "scenes/scene_1977.nunjucks" %}
+
+			{% include "scenes/scene_1981.nunjucks" %}
+
+			{% include "scenes/scene_1982.nunjucks" %}
+
+			{% include "scenes/scene_1982a.nunjucks" %}
+
+			{% include "scenes/scene_1992.nunjucks" %}
+
+			{% include "scenes/scene_1992a.nunjucks" %}
+
+			{% include "scenes/scene_1997.nunjucks" %}
+			
+			{% include "scenes/scene_1997a.nunjucks" %}
+
+			{% include "scenes/scene_2002.nunjucks" %}
+
+			{% include "scenes/scene_2002a.nunjucks" %}
+
+			{% include "scenes/scene_2009.nunjucks" %}
+
+			{% include "scenes/scene_2011.nunjucks" %}
+
+			{% include "scenes/scene_2011a.nunjucks" %}
+
+			{% include "scenes/scene_2012.nunjucks" %}
+
+			{% include "scenes/scene_2015.nunjucks" %}
+
+		</div>
+
+		{% include "partials/footer.nunjucks" %}
+
+		<script src="scripts/bundle.js" async></script>
+
+	    <script>
+			window.googleAnalyticsAccount = 'UA-64699888-1';
+
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', window.googleAnalyticsAccount, 'auto');
+			ga('send', 'pageview');
+	    </script>
+	</body>
+</html>
