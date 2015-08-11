@@ -145,6 +145,23 @@
                  "width":32,
                  "x":97.121212121212,
                  "y":383.020202020202
+                }, 
+                {
+                 "gid":116,
+                 "height":32,
+                 "id":41,
+                 "name":"crown",
+                 "properties":
+                    {
+                     "score":"10",
+                     "sprite_key":"crown"
+                    },
+                 "rotation":0,
+                 "type":"crown_spawn",
+                 "visible":true,
+                 "width":32,
+                 "x":353.12,
+                 "y":253.020202020202
                 }],
          "opacity":1,
          "type":"objectgroup",

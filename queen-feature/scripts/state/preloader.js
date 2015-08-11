@@ -22,7 +22,19 @@ Game.State.Preloader.prototype = {
         this.game.load.image('sparkle3', 'assets/sprites/sparkle3.png');
         this.game.load.image('transparent_32-160', 'assets/sprites/transparent_32-160.png');
         this.game.load.image('jewel', 'assets/sprites/jewel.png');
+        this.game.load.image('jewel_grey', 'assets/sprites/jewel_grey.png');
         this.game.load.image('corgi', 'assets/sprites/corgi.png');
+        this.game.load.image('corgi_grey', 'assets/sprites/corgi_grey.png');
+        this.game.load.image('crown_grey', 'assets/sprites/crown_grey.png');
+
+        // Load navigation button images
+        this.game.load.image('button_level_50s', 'assets/sprites/level_buttons/level_50s.png');
+        this.game.load.image('button_level_60s', 'assets/sprites/level_buttons/level_60s.png');
+        this.game.load.image('button_level_70s', 'assets/sprites/level_buttons/level_70s.png');
+        this.game.load.image('button_level_80s', 'assets/sprites/level_buttons/level_80s.png');
+        this.game.load.image('button_level_90s', 'assets/sprites/level_buttons/level_90s.png');
+        this.game.load.image('button_level_00s', 'assets/sprites/level_buttons/level_00s.png');
+        this.game.load.image('button_level_10s', 'assets/sprites/level_buttons/level_10s.png');
         
         // virtual joystick
         this.load.image('compass', 'assets/sprites/compass_rose.png');
@@ -72,7 +84,7 @@ Game.State.Preloader.prototype = {
     create: function() {
         setTimeout(function() {
             this.game.fadePlugin.fadeOut(0x000, 750, 0, function() {
-                this.game.state.start('decade_50s');
+                this.game.state.start('navigation');
             }.bind(this));
         }.bind(this), 500);
     }
