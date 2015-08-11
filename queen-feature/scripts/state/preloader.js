@@ -29,6 +29,9 @@ Game.State.Preloader.prototype = {
         this.load.image('touch_segment', 'assets/sprites/touch_segment.png');
         this.load.image('touch', 'assets/sprites/touch.png');
 
+        // In-game menu
+        this.load.image('pause', 'assets/sprites/pause.png');
+
         // Get some audio up in this shit.
         // this.load.audio('doorOpen_1', 'res/audio/doorOpen_1.ogg');
         // this.load.audio('doorClose_4', 'res/audio/doorClose_4.ogg');
