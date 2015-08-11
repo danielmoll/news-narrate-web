@@ -2,7 +2,7 @@
 
 {% set sceneName = 'scene_1953a' %}
 {% set sceneGroup = 'group_50s' %}
-{% set sceneImage = 'http://res.cloudinary.com/skynews/image/upload/c_scale,w_{width}/v1437399881/narrate-people-smuggler/map4x3.jpg' %}
+{% set sceneImage = 'http://res.cloudinary.com/skynews/image/upload/c_scale,w_{width}/v1439296075/queen-timeline/1953_tour.jpg' %}
 
 {% block title %}
 <div class="scene__title">1953</div>

@@ -1,7 +1,7 @@
 <div class="hero">
 	<div class="hero__media">
 		{{ image.render({
-			url: 'http://res.cloudinary.com/skynews/image/upload/c_scale,w_{width}/v1437399881/narrate-people-smuggler/map4x3.jpg'
+			url: 'http://res.cloudinary.com/skynews/image/upload/c_scale,w_{width}/v1439289651/queen-timeline/hrm_bw.jpg'
 		}) }}
 	</div>
 
