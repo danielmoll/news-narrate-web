@@ -1,3 +1,6 @@
+/* global Phaser */
+'use strict';
+
 Phaser.Plugin.Fade = function(game, parent) {
     Phaser.Plugin.call(this, game, parent);
 };
@@ -19,13 +22,16 @@ Phaser.Plugin.Fade.prototype.fadeIn = function(hexColor, time, delay, callback) 
 
 Phaser.Plugin.Fade.prototype.fade = function(hexColor, time, delay, fromAlpha, toAlpha, callback) {
     delay = delay || 0;
-    var bg = this.game.add.graphics(0, 0);
+    var bg = this.game.add.graphics(0, 0),
+        s;
+
     bg.beginFill(hexColor, 1);
     bg.drawRect(this.game.camera.x, this.game.camera.y, this.game.width * 1.5, this.game.height * 1.5);
     bg.alpha = fromAlpha;
     bg.endFill();
 
-    var s = this.game.add.tween(bg);
+    s = this.game.add.tween(bg);
+
     s.to({
         alpha: toAlpha
     }, time, null);

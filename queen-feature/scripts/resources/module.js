@@ -1,6 +1,5 @@
-/**
- * Created by knash on 15-03-14.
- */
+/* global Game */
+'use strict';
 
 Game.Map.Module = function(game, key) {
     this.game = game;
@@ -13,16 +12,18 @@ Game.Map.Module = function(game, key) {
 
 Game.Map.Module.prototype = {
     // Pass through to the Phaser.TileMap createLayer function
-    createLayer: function(args) {
+    createLayer: function() {
         return this.tilemap.createLayer.apply(this.tilemap, arguments);
     },
 
     // Expects strings for the layer names
     // Returns a map containing the layers
-    createLayers: function(args) {
-        var result = {};
-        var key;
-        for (var i = 0; i < arguments.length; i++) {
+    createLayers: function() {
+        var result = {},
+            key,
+            i;
+
+        for (i = 0; i < arguments.length; i++) {
             key = arguments[i];
             result[key] = this.tilemap.createLayer(key);
         }
@@ -31,9 +32,10 @@ Game.Map.Module.prototype = {
 
     // Searches the text layer for text elements to place
     findTextObjects: function() {
-        var self = this;
-        var result = [];
-        this.tilemap.objects['text'].forEach(function(element) {
+        var self = this,
+            result = [];
+
+        this.tilemap.objects.text.forEach(function(element) {
             // Phaser uses top left, Tiled bottom left so we have to adjust the y position
             // also keep in mind that the cup images are a bit smaller than the tile which is 16x16
             // so they might not be placed in the exact pixel position as in Tiled
@@ -47,9 +49,10 @@ Game.Map.Module.prototype = {
 
     // Searches the text layer for text elements to place
     findCollectibleObjects: function() {
-        var self = this;
-        var result = [];
-        this.tilemap.objects['collectibles'].forEach(function(element) {
+        var self = this,
+            result = [];
+
+        this.tilemap.objects.collectibles.forEach(function(element) {
             // Phaser uses top left, Tiled bottom left so we have to adjust the y position
             // also keep in mind that the cup images are a bit smaller than the tile which is 16x16
             // so they might not be placed in the exact pixel position as in Tiled
@@ -61,9 +64,10 @@ Game.Map.Module.prototype = {
 
     // Searches the object layer for a specific type
     findObjectsByType: function(type) {
-        var self = this;
-        var result = [];
-        this.tilemap.objects['objects'].forEach(function(element) {
+        var self = this,
+            result = [];
+
+        this.tilemap.objects.objects.forEach(function(element) {
             if (element.type === type) {
                 // Phaser uses top left, Tiled bottom left so we have to adjust the y position
                 // also keep in mind that the cup images are a bit smaller than the tile which is 16x16
@@ -79,9 +83,10 @@ Game.Map.Module.prototype = {
         tileX = tileX || 0;
         tileY = tileY || 0;
 
-        var self = this;
-        var result = [];
-        var sprite;
+        var self = this,
+            result = [],
+            sprite;
+
         this.tilemap.objects[layer].forEach(function(element) {
             // console.log(element);
             element.y -= self.tilemap.tileHeight;

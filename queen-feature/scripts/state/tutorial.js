@@ -1,4 +1,7 @@
-Game.State.Tutorial = function(game) {};
+/* global Phaser, Game */
+'use strict';
+
+Game.State.Tutorial = function() {};
 Game.State.Tutorial.prototype = {
     levelName: 'tutorial',
     layer: null,
@@ -14,6 +17,10 @@ Game.State.Tutorial.prototype = {
     },
 
     createState: function() {
+        var textSpawns,
+            spawn,
+            collectibleSpawns,
+            nextLevelSpawn;
 
         // Load the current over world map
         this.mapBackground = new Game.Map.Module(this.game, 'tutorial');
@@ -37,7 +44,7 @@ Game.State.Tutorial.prototype = {
         this.parallaxTextGroup.fixedToCamera = false;
         this.parallaxTextGroup.alpha = 0.4;
 
-        var textSpawns = this.mapBackground.findTextObjects();
+        textSpawns = this.mapBackground.findTextObjects();
 
         textSpawns.forEach(function(textItem) {
             if(textItem.properties.parallax) {
@@ -48,7 +55,7 @@ Game.State.Tutorial.prototype = {
         }.bind(this));
 
         // Loading the player
-        var spawn = this.mapBackground.findObjectsByType('player_spawn');
+        spawn = this.mapBackground.findObjectsByType('player_spawn');
         this.player = this.game.add.sprite(spawn[0].x, spawn[0].y - 32, 'player');
         this.game.physics.arcade.enable(this.player);
         this.player.body.bounce.y = 0.2;
@@ -62,7 +69,7 @@ Game.State.Tutorial.prototype = {
         this.game.physics.arcade.gravity.y = 600;
 
         // Loading the collectibles
-        var collectibleSpawns = this.mapBackground.findCollectibleObjects();
+        collectibleSpawns = this.mapBackground.findCollectibleObjects();
 
         collectibleSpawns.forEach(function(collectible) {
             var collectibleItem = this.game.add.sprite(collectible.x, collectible.y, collectible.properties.sprite_key);
@@ -75,7 +82,7 @@ Game.State.Tutorial.prototype = {
         }.bind(this));
 
         // Next stage
-        var nextLevelSpawn = this.mapBackground.findObjectsByType('next_level');
+        nextLevelSpawn = this.mapBackground.findObjectsByType('next_level');
         this.nextLevel = this.game.add.sprite(nextLevelSpawn[0].x, nextLevelSpawn[0].y, 'transparent_32-160');
         this.game.physics.arcade.enable(this.nextLevel);
         this.nextLevel.body.allowGravity = false;

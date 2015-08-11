@@ -1,3 +1,6 @@
+/* global Game */
+'use strict';
+
 Game.Controls = function(game, player) {
     this.game = game;
     this.player = player;

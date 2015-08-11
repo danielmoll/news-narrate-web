@@ -1,4 +1,7 @@
-Game.State.Preloader = function(game) {};
+/* global Phaser, Game */
+'use strict';
+
+Game.State.Preloader = function() {};
 Game.State.Preloader.prototype = {
     preload: function() {
         this.stage.backgroundColor = '#000000';
@@ -37,12 +40,15 @@ Game.State.Preloader.prototype = {
     // Many of the maps use the same tile images. We create a map of all these images
     // so that we only load them once.
     loadTileMaps: function() {
-        var tileSetMap = {};
-        for (var i = 0; i < Game.Map.MAPS.length; i++) {
+        var tileSetMap = {},
+            key,
+            i;
+
+        for (i = 0; i < Game.Map.MAPS.length; i++) {
             this.addTileSets(Game.Map.MAPS[i], tileSetMap);
         }
 
-        for (var key in tileSetMap) {
+        for (key in tileSetMap) {
             if (tileSetMap.hasOwnProperty(key)) {
                 this.load.image(key, tileSetMap[key]);
             }
@@ -50,9 +56,12 @@ Game.State.Preloader.prototype = {
     },
 
     addTileSets: function(mapKey, tileSetMap) {
-        var tileSets = this.cache.getTilemapData(mapKey).data.tilesets;
-        var key, value;
-        for (var i = 0; i < tileSets.length; i++) {
+        var tileSets = this.cache.getTilemapData(mapKey).data.tilesets,
+            value,
+            key,
+            i;
+
+        for (i = 0; i < tileSets.length; i++) {
             key = tileSets[i].name;
             value = 'assets/maps/' + tileSets[i].image;
             if (key in tileSetMap) continue;
@@ -63,7 +72,7 @@ Game.State.Preloader.prototype = {
     create: function() {
         setTimeout(function() {
             this.game.fadePlugin.fadeOut(0x000, 750, 0, function() {
-                this.game.state.start('tutorial');
+                this.game.state.start('decade_50s');
             }.bind(this));
         }.bind(this), 500);
     }

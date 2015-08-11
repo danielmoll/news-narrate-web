@@ -1,3 +1,6 @@
+/* global Phaser, Game */
+'use strict';
+
 Game.Score = function(game, objects) {
     this.game = game;
     this.scoredItems = {};

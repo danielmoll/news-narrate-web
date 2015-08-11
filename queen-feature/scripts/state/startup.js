@@ -1,4 +1,7 @@
-Game.State.Startup = function(game) {};
+/* global Phaser, Game */
+'use strict';
+
+Game.State.Startup = function() {};
 Game.State.Startup.prototype = {
     preload: function() {
         this.load.image('crown', 'assets/sprites/crown.png');
@@ -7,8 +10,10 @@ Game.State.Startup.prototype = {
         this.load.bitmapFont('nokia', 'assets/fonts/bitmapFonts/nokia.png', 'assets/fonts/bitmapFonts/nokia.xml');
 
         // Load the json maps, so we can load the images in the next steps.
-        var map;
-        for (var i = 0; i < Game.Map.MAPS.length; i++) {
+        var map,
+            i;
+
+        for (i = 0; i < Game.Map.MAPS.length; i++) {
             map = Game.Map.MAPS[i];
             this.load.tilemap(map, 'assets/maps/' + map + '.json', null, Phaser.Tilemap.TILED_JSON);
         }

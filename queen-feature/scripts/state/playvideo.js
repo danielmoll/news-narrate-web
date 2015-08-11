@@ -1,4 +1,7 @@
-Game.State.PlayVideo = function(game) {};
+/* global Phaser, Game */
+'use strict';
+
+Game.State.PlayVideo = function() {};
 Game.State.PlayVideo.prototype = {
     preload: function() {
         this.stage.backgroundColor = '#000000';

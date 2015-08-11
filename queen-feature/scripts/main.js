@@ -1,3 +1,6 @@
+/* global Phaser */
+'use strict';
+
 var Game = {};
 
 // Setup our namespaces and resource lists.
@@ -10,9 +13,6 @@ Game.Map.MAPS = [
     'tutorial',
     'decade_50s',
     'decade_2010s'
-
-    // // Modules used in maps
-    // 'house0_f0'
 ];
 
 Game.main = function() {
@@ -30,6 +30,7 @@ Game.main = function() {
     game.state.add('playvideo', Game.State.PlayVideo);
 
     game.state.start('startup');
+    this.gameObj = game;
 };
 
 window.onload = function() {

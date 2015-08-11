@@ -1,4 +1,7 @@
-Game.State.decade_50s = function(game) {};
+/* global Phaser, Game */
+'use strict';
+
+Game.State.decade_50s = function() {};
 Game.State.decade_50s.prototype = {
     levelName: 'decade_50s',
     controls: null,
@@ -18,6 +21,10 @@ Game.State.decade_50s.prototype = {
     },
 
     createState: function() {
+        var spawn,
+            crownSpawn,
+            emitter,
+            nextLevelSpawn;
 
         // Load the current over world map
         this.mapBackground = new Game.Map.Module(this.game, 'decade_50s');
@@ -41,7 +48,7 @@ Game.State.decade_50s.prototype = {
         }.bind(this));
 
         // Loading the queen
-        var spawn = this.mapBackground.findObjectsByType('player_spawn');
+        spawn = this.mapBackground.findObjectsByType('player_spawn');
         this.player = this.game.add.sprite(spawn[0].x, spawn[0].y - 32, 'player');
         this.game.physics.arcade.enable(this.player);
         this.player.body.bounce.y = 0.2;
@@ -53,9 +60,10 @@ Game.State.decade_50s.prototype = {
         this.player.animations.add('right', [3,4], 5, true);
 
         this.game.physics.arcade.gravity.y = 600;
+        
         // Loading gthe crown
-        var crownSpawn = this.mapBackground.findObjectsByType('crown_spawn');
-        var emitter = this.game.add.emitter(crownSpawn[0].x + 16, crownSpawn[0].y + 16, 10);
+        crownSpawn = this.mapBackground.findObjectsByType('crown_spawn');
+        emitter = this.game.add.emitter(crownSpawn[0].x + 16, crownSpawn[0].y + 16, 10);
         this.crownSparkleEmitter = emitter;
         emitter.makeParticles(['sparkle1', 'sparkle2', 'sparkle3']);
         emitter.minParticleSpeed.setTo(-50, -50);
@@ -73,7 +81,7 @@ Game.State.decade_50s.prototype = {
         this.crown.body.allowGravity = false;
 
         // Next stage
-        var nextLevelSpawn = this.mapBackground.findObjectsByType('next_level');
+        nextLevelSpawn = this.mapBackground.findObjectsByType('next_level');
         this.nextLevel = this.game.add.sprite(nextLevelSpawn[0].x, nextLevelSpawn[0].y, 'transparent_32-160');
         this.game.physics.arcade.enable(this.nextLevel);
         this.nextLevel.body.allowGravity = false;

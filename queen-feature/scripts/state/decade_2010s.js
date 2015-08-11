@@ -1,4 +1,7 @@
-Game.State.decade_2010s = function(game) {};
+/* global Phaser, Game */
+'use strict';
+
+Game.State.decade_2010s = function() {};
 Game.State.decade_2010s.prototype = {
     levelName: 'decade_2010s',
     controls: null,
@@ -18,6 +21,8 @@ Game.State.decade_2010s.prototype = {
     },
 
     createState: function() {
+        var spawn,
+            collectibleSpawns;
 
         // Load the current over world map
         this.mapBackground = new Game.Map.Module(this.game, 'decade_2010s');
@@ -42,7 +47,7 @@ Game.State.decade_2010s.prototype = {
         }.bind(this));
 
         // Loading the queen
-        var spawn = this.mapBackground.findObjectsByType('player_spawn');
+        spawn = this.mapBackground.findObjectsByType('player_spawn');
         this.player = this.game.add.sprite(spawn[0].x, spawn[0].y - 32, 'player');
         this.game.physics.arcade.enable(this.player);
         this.player.body.bounce.y = 0.2;
@@ -56,7 +61,7 @@ Game.State.decade_2010s.prototype = {
         this.game.physics.arcade.gravity.y = 600;
 
         // Loading the collectibles
-        var collectibleSpawns = this.mapBackground.findCollectibleObjects();
+        collectibleSpawns = this.mapBackground.findCollectibleObjects();
 
         collectibleSpawns.forEach(function(collectible) {
             var collectibleItem = this.game.add.sprite(collectible.x, collectible.y, collectible.properties.sprite_key);

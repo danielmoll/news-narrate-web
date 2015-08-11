@@ -1,3 +1,6 @@
+/* global Game, localStorage */
+'use strict';
+
 Game.Storage = function(name) {
     this.storageName = name || 'skynews-game';
     this.read();
