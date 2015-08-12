@@ -29,7 +29,6 @@ Game.main = function() {
     game.state.add('intro_50s', Game.State.Intro_50s);
     game.state.add('decade_50s', Game.State.Decade_50s);
     game.state.add('decade_2010s', Game.State.Decade_2010s);
-    game.state.add('playvideo', Game.State.PlayVideo);
     game.state.add('intro_skynews', Game.State.Intro_Skynews);
 
     game.state.start('startup');

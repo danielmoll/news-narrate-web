@@ -14,7 +14,7 @@ Game.State.BaseState.prototype = {
     TEXT_PARALLAX_SCALE: 1.1,
 
     create: function () {
-        this.game.analytics.sendEvent('New state ' + this.levelKey);
+        this.game.analytics.stateStarted(this.levelKey);
         this.game.physics.arcade.gravity.y = 600;
         this._createState();
         this.game.fadePlugin.fadeIn(0x000, 750, 0);
@@ -139,7 +139,7 @@ Game.State.BaseState.prototype = {
 
     _nextLevelHandler: function() {
         this.game.fadePlugin.fadeOut(0x000, 750, 0, function() {
-            this.game.analytics.sendEvent('State ' + this.levelKey + ' completed');
+            this.game.analytics.stateComplete(this.levelKey);
             this.game.state.start(this.nextLevelKey);
         }.bind(this));
     },

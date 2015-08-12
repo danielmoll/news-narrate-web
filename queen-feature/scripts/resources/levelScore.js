@@ -65,7 +65,7 @@ Game.LevelScore.prototype.addDisplay = function() {
 };
 
 Game.LevelScore.prototype.scoreItem = function (scoredItem, levelName) {
-    this.game.analytics.sendEvent('Item ' + scoredItem.sprite_key + ' collected');
+    this.game.analytics.itemCollected(scoredItem.sprite_key);
 
     var collectibleSprite = this.sprites[scoredItem.sprite_key];
     collectibleSprite && collectibleSprite.loadTexture(scoredItem.sprite_key);

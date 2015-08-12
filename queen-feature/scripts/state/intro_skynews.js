@@ -13,7 +13,7 @@ Game.State.Intro_Skynews.prototype = {
 			textGroup,
 			tween;
 
-        this.game.analytics.sendEvent('New state Intro_Skynews');
+        this.game.analytics.stateStarted('intro');
         this.transitionning = false;
         this.game.fadePlugin.fadeIn(0x000, 750, 0);
         this.game.stage.backgroundColor = '#fff';
@@ -42,7 +42,7 @@ Game.State.Intro_Skynews.prototype = {
 			font: "16px Arial",
 			fill: "#000",
 			backgroundColor: 'white',
-			wordWrap: true, 
+			wordWrap: true,
 			wordWrapWidth: 200
 		});
 
@@ -50,7 +50,7 @@ Game.State.Intro_Skynews.prototype = {
 			font: "16px Arial",
 			fill: "#000",
 			backgroundColor: 'white',
-			wordWrap: true, 
+			wordWrap: true,
 			wordWrapWidth: 200
 		});
 

@@ -2,7 +2,23 @@
 'use strict';
 
 Game.Analytics = {
-    sendEvent: function (eventName) {
-        console.log(eventName);
+    stateStarted: function (name) {
+        this.sendEvent(['state started', name]);
+    },
+
+    stateComplete: function (name) {
+        this.sendEvent(['state completed', name]);
+    },
+
+    itemCollected: function (name) {
+        this.sendEvent(['item collected', name]);
+    },
+
+    sendEvent: function (eventData) {
+        console.log(eventData);
+        // Non-blocking analytics report.
+        setTimeout(function() {
+            ga('send', 'event', 'The Reign Game', eventData[0], eventData[1]);
+        }, 1);
     }
 };
