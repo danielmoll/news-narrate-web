@@ -23,6 +23,7 @@ Game.State.Navigation.prototype = {
     collectibleSize: 10,
 
     create: function () {
+        this.game.analytics.sendEvent('New state Navigation');
         this.transitionning = false;
         this.createState();
         this.game.fadePlugin.fadeIn(0x000, 750, 0);

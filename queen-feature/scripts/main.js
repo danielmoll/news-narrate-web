@@ -18,6 +18,8 @@ Game.Map.MAPS = [
 Game.main = function() {
     var game = new Phaser.Game(568, 320, Phaser.AUTO, 'main');
 
+    game.analytics = Game.Analytics;
+
     game.storage = new Game.Storage('skynews-queen-feature-game');
 
     game.state.add('startup', Game.State.Startup);

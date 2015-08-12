@@ -7,6 +7,7 @@ Game.State.Intro_Skynews.prototype = {
     transitionning: false,
 
     create: function () {
+        this.game.analytics.sendEvent('New state Intro_Skynews');
         this.transitionning = false;
         this.game.fadePlugin.fadeIn(0x000, 750, 0);
         this.game.stage.backgroundColor = '#fff';

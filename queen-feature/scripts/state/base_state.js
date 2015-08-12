@@ -14,6 +14,7 @@ Game.State.BaseState.prototype = {
     TEXT_PARALLAX_SCALE: 1.1,
 
     create: function () {
+        this.game.analytics.sendEvent('New state ' + this.levelKey);
         this.game.physics.arcade.gravity.y = 600;
         this._createState();
         this.game.fadePlugin.fadeIn(0x000, 750, 0);
