@@ -2,6 +2,7 @@
 'use strict';
 
 Game.State.BaseState = function() {
+    this.initialised = false;
     this.levelKey = null;
     this.controls = null;
     this.collectibleItems = [];
@@ -95,7 +96,12 @@ Game.State.BaseState.prototype = {
         }.bind(this));
 
         this.addPlayer();
-        this.addCollectibles();
+
+        if(!this.initialised) {
+            this.addCollectibles();
+            this.initialised = true;
+        }
+        
         this.addNextLevelPortal();
 
         // If subclass has its own createState method, call it.
