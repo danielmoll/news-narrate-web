@@ -14,6 +14,12 @@ Game.State.Preloader.prototype = {
         this.textGroup.fixedToCamera = true;
         this.textGroup.add(new Phaser.BitmapText(this.game, this.game.width / 2 - 50, this.game.height / 2 - 20, 'nokia', 'Loading...', 25));
 
+        // Intro Sky News report
+        this.game.load.image('intro_ticker', 'assets/sprites/intro-ticker.png');
+        this.game.load.image('skynews_logo', 'assets/sprites/8bit_sky_logo.png');
+        this.game.load.image('kay', 'assets/sprites/kayburley.png');
+
+
         // Load our sprites
         this.load.spritesheet('player', 'assets/sprites/queen-sprite.png', 32, 64, 6);
         this.load.spritesheet('next_button', 'assets/sprites/next_button.png', 100, 30);
@@ -87,7 +93,7 @@ Game.State.Preloader.prototype = {
     create: function() {
         setTimeout(function() {
             this.game.fadePlugin.fadeOut(0x000, 750, 0, function() {
-                this.game.state.start('tutorial');
+            this.game.state.start('intro_skynews');
             }.bind(this));
         }.bind(this), 500);
     }
