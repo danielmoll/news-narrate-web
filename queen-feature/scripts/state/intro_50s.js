@@ -1,8 +1,8 @@
 /* global Phaser, Game */
 'use strict';
 
-Game.State.intro_50s = function() {};
-Game.State.intro_50s.prototype = {
+Game.State.Intro_50s = function() {};
+Game.State.Intro_50s.prototype = {
     cursors: null,
     transitionning: false,
 
