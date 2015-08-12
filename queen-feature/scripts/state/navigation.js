@@ -5,15 +5,6 @@ Game.State.Navigation = function() {};
 Game.State.Navigation.prototype = {
     cursors: null,
     transitionning: false,
-    levels: [
-        { text: '50s', stateKey: 'decade_50s', spriteKey: 'button_level_50s', collectibles: ['corgi', 'crown', 'jewel']},
-        { text: '60s', stateKey: null, spriteKey: 'button_level_60s', collectibles: ['corgi', 'crown', 'jewel']},
-        { text: '70s', stateKey: null, spriteKey: 'button_level_70s', collectibles: ['.', '.', '.']},
-        { text: '80s', stateKey: 'tutorial', spriteKey: 'button_level_80s', collectibles: ['corgi', 'crown', 'jewel']},
-        { text: '90s', stateKey: null, spriteKey: 'button_level_90s', collectibles: ['.', '.', '.']},
-        { text: '00s', stateKey: null, spriteKey: 'button_level_00s', collectibles: ['.', '.', '.']},
-        { text: '10s', stateKey: 'decade_2010s', spriteKey: 'button_level_10s', collectibles: ['corgi', 'crown', 'jewel']}
-    ],
     buttonsOriginX: 24,
     buttonsOriginY: 24,
     buttonsMargin: 30,
@@ -31,7 +22,6 @@ Game.State.Navigation.prototype = {
 
     createState: function() {
         var bg = this.game.add.graphics(0, 0),
-            scores = this.getCollectedItems(),
             col = 0,
             row = 0;
 
@@ -40,8 +30,9 @@ Game.State.Navigation.prototype = {
         bg.endFill();
         
         this.buttonsGroup = this.game.add.group();
-        this.levels.forEach(function(level) {
-            var levelScore = scores[level.stateKey],
+
+        Game.Levels.forEach(function(level) {
+            var levelScore = Game.Scores[level.stateKey],
                 collectibleId = 0,
                 button,
                 x,
@@ -104,16 +95,6 @@ Game.State.Navigation.prototype = {
         }.bind(this));
 
         this.cursors = this.game.input.keyboard.createCursorKeys();
-    },
-
-    getCollectedItems: function() {
-        var levelScores = {};
-
-        this.levels.forEach(function (level) {
-            levelScores[level.stateKey] = this.game.storage.get(level.stateKey);
-        }.bind(this));
-
-        return levelScores;
     },
 
     nextLevel: function (button) {

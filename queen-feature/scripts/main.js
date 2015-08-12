@@ -4,10 +4,15 @@
 var Game = {};
 
 // Setup our namespaces and resource lists.
-Game = {};
+Game = {
+    nbCollectibles: 0,
+    nbCollected: 0
+};
+
 Game.State = {};
 Game.Map = {};
 Game.Map.Object = {};
+Game.Scores = {};
 
 Game.Map.MAPS = [
     'tutorial',
@@ -15,11 +20,21 @@ Game.Map.MAPS = [
     'decade_2010s'
 ];
 
-Game.main = function() {
+Game.Levels = [
+    { text: '50s', stateKey: 'decade_50s', spriteKey: 'button_level_50s', collectibles: ['corgi', 'crown', '.']},
+    { text: '60s', stateKey: null, spriteKey: 'button_level_60s', collectibles: ['.', '.', '.']},
+    { text: '70s', stateKey: null, spriteKey: 'button_level_70s', collectibles: ['.', '.', '.']},
+    { text: '80s', stateKey: 'tutorial', spriteKey: 'button_level_80s', collectibles: ['corgi', '.', '.']},
+    { text: '90s', stateKey: null, spriteKey: 'button_level_90s', collectibles: ['.', '.', '.']},
+    { text: '00s', stateKey: null, spriteKey: 'button_level_00s', collectibles: ['.', '.', '.']},
+    { text: '10s', stateKey: 'decade_2010s', spriteKey: 'button_level_10s', collectibles: ['corgi', 'crown', '.']}
+];
+
+Game.init = function() {
     var game = new Phaser.Game(568, 320, Phaser.AUTO, 'main');
+    this.game = game;
 
     game.analytics = Game.Analytics;
-
     game.storage = new Game.Storage('skynews-queen-feature-game');
 
     game.state.add('startup', Game.State.Startup);
@@ -32,10 +47,36 @@ Game.main = function() {
     game.state.add('intro_skynews', Game.State.Intro_Skynews);
     game.state.add('end_screen', Game.State.EndScreen);
 
+    // Make sure we know the number of artefacts we can collect
+    Game.Levels.forEach(function(level) {
+        level.collectibles.forEach(function(collectible) {
+            if(collectible !== '.') {
+                this.nbCollectibles++;
+            }
+        }.bind(this));
+    }.bind(this));
+
+    // Save in memory the artefacts already collected
+    Game.getCollectedItems();
+
+    // Start our game.
     game.state.start('startup');
-    this.gameObj = game;
 };
 
+Game.getCollectedItems = function() {
+    Game.Levels.forEach(function (level) {
+        var levelScore = this.game.storage.get(level.stateKey);
+        
+        levelScore && levelScore.scoredItems.forEach(function(ls) {
+            if (ls.sprite_key !== 'jewel') {
+                this.nbCollected++;
+            }
+        }.bind(this));
+        
+        Game.Scores[level.stateKey] = levelScore;
+    }.bind(this));
+},
+
 window.onload = function() {
-    Game.main();
+    Game.init();
 };
