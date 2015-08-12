@@ -1,4 +1,4 @@
-/* global Game */
+/* global Game, ga */
 'use strict';
 
 Game.Analytics = {
@@ -15,7 +15,6 @@ Game.Analytics = {
     },
 
     sendEvent: function (eventData) {
-        console.log(eventData);
         // Non-blocking analytics report.
         setTimeout(function() {
             ga('send', 'event', 'The Reign Game', eventData[0], eventData[1]);
