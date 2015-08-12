@@ -139,6 +139,7 @@ Game.State.BaseState.prototype = {
 
     _nextLevelHandler: function() {
         this.game.fadePlugin.fadeOut(0x000, 750, 0, function() {
+            this.game.analytics.sendEvent('State ' + this.levelKey + ' completed');
             this.game.state.start(this.nextLevelKey);
         }.bind(this));
     },
