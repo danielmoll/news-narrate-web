@@ -107,6 +107,9 @@ Game.State.BaseState.prototype = {
 
         // Add joystick
         this.controls = new Game.Controls(this.game, this.player);
+
+        // Add pause button
+        this.pauseMenu = new Game.PauseMenu(this.game);
     },
 
     _collectiblesCollisionHandler: function(sprite1, sprite2) {

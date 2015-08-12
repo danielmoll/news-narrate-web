@@ -28,6 +28,18 @@ Game.Controls.prototype.jump = function () {
     }
 };
 
+Game.Controls.prototype.activePointerIsOnPauseButton = function() {
+  var pauseButton = {x1: 10, y1: 10, x2: 42, y2: 42};
+  var x = this.game.input.activePointer.x;
+  var y = this.game.input.activePointer.y;
+
+  if ( x > pauseButton.x1 && x < pauseButton.x2 &&
+      y > pauseButton.y1 && x < pauseButton.y2) {
+    return true;
+  }
+  return false;
+}
+
 Game.Controls.prototype.update = function () {
 
     if (this.cursors.up.isDown) {
@@ -39,8 +51,12 @@ Game.Controls.prototype.update = function () {
 
     } else if (this.cursors.right.isDown) {
         this.moveRight();
-        
+
     } else if (this.game.input.activePointer.isDown) {
+        if (this.activePointerIsOnPauseButton()) {
+          return;
+        }
+
         if (this.game.input.activePointer.x < this.game.width / 2) {
             this.moveLeft();
 
