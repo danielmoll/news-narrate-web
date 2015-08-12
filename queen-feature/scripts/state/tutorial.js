@@ -2,7 +2,7 @@
 'use strict';
 
 Game.State.Tutorial = function() {};
-Game.State.Tutorial.prototype = Game.State.BaseState.prototype;
+Game.State.Tutorial.prototype = new Game.State.BaseState();
 Game.State.Tutorial.prototype.levelKey = 'tutorial';
 Game.State.Tutorial.prototype.nextLevelKey = 'decade_50s';
 

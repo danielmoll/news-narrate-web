@@ -1,15 +1,16 @@
 /* global Phaser, Game */
 'use strict';
 
-Game.State.BaseState = function() {};
+Game.State.BaseState = function() {
+    this.levelKey = null;
+    this.controls = null;
+    this.collectibleItems = [];
+    this.collectedItems = [];
+    this.parallaxTextGroup = null;
+    this.fixedTextGroup = null;
+};
 
 Game.State.BaseState.prototype = {
-    levelKey: null,
-    controls: null,
-    collectibleItems: [],
-    collectedItems: [],
-    parallaxTextGroup: null,
-    fixedTextGroup: null,
     TEXT_PARALLAX_SCALE: 1.1,
 
     create: function () {
@@ -35,7 +36,7 @@ Game.State.BaseState.prototype = {
     addCollectibles: function() {
         // Loading the collectibles
         var collectibleSpawns = this.mapBackground.findCollectibleObjects();
-
+        
         collectibleSpawns.forEach(function(collectible) {
             var collectibleItem = this.game.add.sprite(collectible.x, collectible.y, collectible.properties.sprite_key);
             collectibleItem.properties = collectible.properties;
@@ -102,10 +103,10 @@ Game.State.BaseState.prototype = {
             this.createState();
         }
 
-        // Score display
-        this.game.score.addDisplay();
+        // Add in-level score display
+        this.score = new Game.Score(this.game, this.collectibleItems);
 
-        // Add joystick
+        // Add controls
         this.controls = new Game.Controls(this.game, this.player);
 
         // Add pause button
@@ -132,7 +133,7 @@ Game.State.BaseState.prototype = {
         }
 
         // Add item to score.
-        this.game.score.scoreItem(collectible.properties, this.levelKey);
+        this.score.scoreItem(collectible.properties, this.levelKey);
     },
 
     _nextLevelHandler: function() {

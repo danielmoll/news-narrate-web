@@ -1,4 +1,4 @@
-/* global Phaser, Game */
+/* global Game */
 'use strict';
 
 Game.State.Navigation = function() {};
@@ -20,6 +20,7 @@ Game.State.Navigation.prototype = {
     buttonsPerRow: 3,
     buttonHeight: 48,
     buttonWidth: 48,
+    collectibleSize: 10,
 
     create: function () {
         this.transitionning = false;
@@ -57,8 +58,7 @@ Game.State.Navigation.prototype = {
                     collected = false,
                     color = 0X666666,
                     collBg,
-                    scaleX,
-                    scaleY;
+                    scale;
 
                 if (levelScore) {
                     levelScore.scoredItems.forEach(function(scoredItem) {
@@ -79,18 +79,15 @@ Game.State.Navigation.prototype = {
                     collBg.properties.collectibleName = collectible;
 
                     collBg.beginFill(color, 1);
-                    collBg.drawRect(collx, colly, 10, 10);
+                    collBg.drawRect(collx, colly, this.collectibleSize, this.collectibleSize);
                     collBg.endFill();
 
                 } else {
-                    if (!collected) {
-                        collectible += '_grey';
-                    }
+                    if (!collected) { collectible += '_grey'; }
 
                     collBg = this.game.add.sprite(collx, colly, collectible);
-                    scaleX = 10 / collBg.width;
-                    scaleY = 10 / collBg.height;
-                    collBg.scale.setTo(scaleX, scaleY);
+                    scale = Math.min(this.collectibleSize / collBg.width, this.collectibleSize / collBg.height);
+                    collBg.scale.setTo(scale, scale);
                 }
 
                 collectibleId ++;
