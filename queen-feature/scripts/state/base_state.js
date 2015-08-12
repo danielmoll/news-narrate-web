@@ -1,10 +1,7 @@
 /* global Phaser, Game */
 'use strict';
 
-Game.State.BaseState = function(options) {
-    this.levelKey = options.levelKey;
-    this.nextLevelKey = options.nextLevelKey || 'navigation';
-};
+Game.State.BaseState = function() {};
 
 Game.State.BaseState.prototype = {
     levelKey: null,
@@ -53,10 +50,13 @@ Game.State.BaseState.prototype = {
     addNextLevelPortal: function() {
         // Next stage
         var nextLevelSpawn = this.mapBackground.findObjectsByType('next_level');
-        this.nextLevel = this.game.add.sprite(nextLevelSpawn[0].x, nextLevelSpawn[0].y, 'transparent_32-160');
-        this.game.physics.arcade.enable(this.nextLevel);
-        this.nextLevel.body.allowGravity = false;
-        this.nextLevel.y -=110;
+
+        if (nextLevelSpawn.length) {
+            this.nextLevel = this.game.add.sprite(nextLevelSpawn[0].x, nextLevelSpawn[0].y, 'transparent_32-160');
+            this.game.physics.arcade.enable(this.nextLevel);
+            this.nextLevel.body.allowGravity = false;
+            this.nextLevel.y -=110;
+        }
     },
 
     _createState: function() {

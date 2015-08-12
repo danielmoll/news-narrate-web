@@ -2,7 +2,7 @@
 'use strict';
 
 Game.State.Decade_50s = function() {};
-Game.State.Decade_50s.prototype = Game.State.BaseState.prototype;
+Game.State.Decade_50s.prototype = new Game.State.BaseState();
 Game.State.Decade_50s.prototype.levelKey = 'decade_50s';
 Game.State.Decade_50s.prototype.nextLevelKey = 'decade_2010s';
 
