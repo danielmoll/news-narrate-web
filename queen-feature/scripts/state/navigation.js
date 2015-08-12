@@ -1,4 +1,4 @@
-/* global Phaser, Game */
+/* global Game */
 'use strict';
 
 Game.State.Navigation = function() {};
@@ -9,7 +9,7 @@ Game.State.Navigation.prototype = {
         { text: '50s', stateKey: 'decade_50s', spriteKey: 'button_level_50s', collectibles: ['corgi', 'crown', 'jewel']},
         { text: '60s', stateKey: null, spriteKey: 'button_level_60s', collectibles: ['corgi', 'crown', 'jewel']},
         { text: '70s', stateKey: null, spriteKey: 'button_level_70s', collectibles: ['.', '.', '.']},
-        { text: '80s', stateKey: 'tutorial', spriteKey: 'button_level_80s', collectibles: ['.', '.', '.']},
+        { text: '80s', stateKey: 'tutorial', spriteKey: 'button_level_80s', collectibles: ['corgi', 'crown', 'jewel']},
         { text: '90s', stateKey: null, spriteKey: 'button_level_90s', collectibles: ['.', '.', '.']},
         { text: '00s', stateKey: null, spriteKey: 'button_level_00s', collectibles: ['.', '.', '.']},
         { text: '10s', stateKey: 'decade_2010s', spriteKey: 'button_level_10s', collectibles: ['corgi', 'crown', 'jewel']}
@@ -20,8 +20,10 @@ Game.State.Navigation.prototype = {
     buttonsPerRow: 3,
     buttonHeight: 48,
     buttonWidth: 48,
+    collectibleSize: 10,
 
     create: function () {
+        this.game.analytics.sendEvent('New state Navigation');
         this.transitionning = false;
         this.createState();
         this.game.fadePlugin.fadeIn(0x000, 750, 0);
@@ -57,8 +59,7 @@ Game.State.Navigation.prototype = {
                     collected = false,
                     color = 0X666666,
                     collBg,
-                    scaleX,
-                    scaleY;
+                    scale;
 
                 if (levelScore) {
                     levelScore.scoredItems.forEach(function(scoredItem) {
@@ -79,18 +80,15 @@ Game.State.Navigation.prototype = {
                     collBg.properties.collectibleName = collectible;
 
                     collBg.beginFill(color, 1);
-                    collBg.drawRect(collx, colly, 10, 10);
+                    collBg.drawRect(collx, colly, this.collectibleSize, this.collectibleSize);
                     collBg.endFill();
 
                 } else {
-                    if (!collected) {
-                        collectible += '_grey';
-                    }
+                    if (!collected) { collectible += '_grey'; }
 
                     collBg = this.game.add.sprite(collx, colly, collectible);
-                    scaleX = 10 / collBg.width;
-                    scaleY = 10 / collBg.height;
-                    collBg.scale.setTo(scaleX, scaleY);
+                    scale = Math.min(this.collectibleSize / collBg.width, this.collectibleSize / collBg.height);
+                    collBg.scale.setTo(scale, scale);
                 }
 
                 collectibleId ++;

@@ -13,10 +13,10 @@ Game.State.Intro_Skynews.prototype = {
 			textGroup,
 			tween;
 
-		this.transitionning = false;
-		this.game.fadePlugin.fadeIn(0x000, 750, 0);
-		this.game.stage.backgroundColor = '#fff';
-		this.frameCounter = 0;
+        this.game.analytics.sendEvent('New state Intro_Skynews');
+        this.transitionning = false;
+        this.game.fadePlugin.fadeIn(0x000, 750, 0);
+        this.game.stage.backgroundColor = '#fff';
 
 		this.game.add.image(0, 0, 'kay');
 
@@ -80,7 +80,7 @@ Game.State.Intro_Skynews.prototype = {
 		if (!this.transitionning) {
 			this.transitionning = true;
 			this.game.fadePlugin.fadeOut(0x000, 750, 0, function() {
-				this.game.state.start('tutorial');
+				this.game.state.start('navigation');
 			});
 		}
 	}

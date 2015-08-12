@@ -19,7 +19,6 @@ Game.State.Preloader.prototype = {
         this.game.load.image('skynews_logo', 'assets/sprites/8bit_sky_logo.png');
         this.game.load.image('kay', 'assets/sprites/kayburley.png');
 
-
         // Load our sprites
         this.load.spritesheet('player', 'assets/sprites/queen-sprite.png', 32, 64, 6);
         this.load.spritesheet('next_button', 'assets/sprites/next_button.png', 100, 30);
