@@ -88,7 +88,6 @@ Game.Map.Module.prototype = {
             sprite;
 
         this.tilemap.objects[layer].forEach(function(element) {
-            // console.log(element);
             element.y -= self.tilemap.tileHeight;
             sprite = group.create(element.x + tileX*32, element.y + tileY*32);
             self.game.physics.arcade.enable(sprite);

@@ -9,7 +9,7 @@ Game.State.Navigation.prototype = {
         { text: '50s', stateKey: 'decade_50s', spriteKey: 'button_level_50s', collectibles: ['corgi', 'crown', 'jewel']},
         { text: '60s', stateKey: null, spriteKey: 'button_level_60s', collectibles: ['corgi', 'crown', 'jewel']},
         { text: '70s', stateKey: null, spriteKey: 'button_level_70s', collectibles: ['.', '.', '.']},
-        { text: '80s', stateKey: 'tutorial', spriteKey: 'button_level_80s', collectibles: ['.', '.', '.']},
+        { text: '80s', stateKey: 'tutorial', spriteKey: 'button_level_80s', collectibles: ['corgi', 'crown', 'jewel']},
         { text: '90s', stateKey: null, spriteKey: 'button_level_90s', collectibles: ['.', '.', '.']},
         { text: '00s', stateKey: null, spriteKey: 'button_level_00s', collectibles: ['.', '.', '.']},
         { text: '10s', stateKey: 'decade_2010s', spriteKey: 'button_level_10s', collectibles: ['corgi', 'crown', 'jewel']}
