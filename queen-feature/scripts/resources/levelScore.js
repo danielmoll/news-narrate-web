@@ -1,7 +1,7 @@
 /* global Phaser, Game */
 'use strict';
 
-Game.Score = function(game, collectibles) {
+Game.LevelScore = function(game, collectibles) {
     this.game = game;
     this.scoredItems = {};
     this.collectibles = collectibles;
@@ -10,7 +10,7 @@ Game.Score = function(game, collectibles) {
     this.addDisplay();
 };
 
-Game.Score.prototype.addDisplay = function() {
+Game.LevelScore.prototype.addDisplay = function() {
 
     this.scoreGroup = this.game.add.group();
     this.scoreGroup.fixedToCamera = true;
@@ -22,7 +22,8 @@ Game.Score.prototype.addDisplay = function() {
     this.collectibles.forEach(function(collectible) {
         if (collectible.properties.sprite_key === 'jewel') {
             if (!this.scoreText) {
-                collx -= 65
+                collx -= 65;
+                
                 var scoreJewel = this.game.add.sprite(collx, 0, 'jewel');
                 this.scoreText = new Phaser.BitmapText(this.game, collx + 32, 7, 'nokia', '0', 20);
 
@@ -44,7 +45,7 @@ Game.Score.prototype.addDisplay = function() {
     }.bind(this));
 };
 
-Game.Score.prototype.scoreItem = function (scoredItem, levelName) {
+Game.LevelScore.prototype.scoreItem = function (scoredItem, levelName) {
     this.scoredItems[levelName] = this.scoredItems[levelName] || [];
 
     this.scoredItems[levelName].push(scoredItem);
@@ -53,7 +54,7 @@ Game.Score.prototype.scoreItem = function (scoredItem, levelName) {
     this.updatePoints(levelName);
 };
 
-Game.Score.prototype.updatePoints = function (levelName) {
+Game.LevelScore.prototype.updatePoints = function (levelName) {
     var score = 0,
         value;
 

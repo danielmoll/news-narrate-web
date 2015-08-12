@@ -104,7 +104,7 @@ Game.State.BaseState.prototype = {
         }
 
         // Add in-level score display
-        this.score = new Game.Score(this.game, this.collectibleItems);
+        this.score = new Game.LevelScore(this.game, this.collectibleItems);
 
         // Add controls
         this.controls = new Game.Controls(this.game, this.player);
