@@ -73,7 +73,7 @@ Game.State.Intro_Skynews.prototype = {
 
 	updateClock: function() {
 		var date = new Date();
-		this.clock.setText(' ' + date.getHours() + ':' + date.getMinutes() + ' ');
+		this.clock.setText(' ' + ('0' + date.getHours()).slice(-2) + ':' + ('0' + date.getMinutes()).slice(-2) + ' ');
 	},
 
 	nextLevel: function () {
