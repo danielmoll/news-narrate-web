@@ -25,8 +25,8 @@ Game.State.BaseState.prototype = {
         var spawn = this.mapBackground.findObjectsByType('player_spawn');
         this.player = this.game.add.sprite(spawn[0].x, spawn[0].y - 32, 'player');
         this.game.physics.arcade.enable(this.player);
-        this.player.body.bounce.y = 0.2;
-        this.player.body.linearDamping = 1;
+        // this.player.body.bounce.y = 0.2;
+        // this.player.body.linearDamping = 1;
         this.player.body.collideWorldBounds = true;
         this.game.camera.follow(this.player);
 
