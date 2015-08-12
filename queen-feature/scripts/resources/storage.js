@@ -11,7 +11,7 @@ Game.Storage.prototype.save = function () {
 };
 
 Game.Storage.prototype.read = function () {
-    this.state = JSON.parse(localStorage.getItem(this.storageName)) || {};
+    this.state = JSON.parse(localStorage.getItem(this.storageName) || '{}') || {};
 };
 
 Game.Storage.prototype.set = function (key, value) {

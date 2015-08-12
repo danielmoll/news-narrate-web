@@ -35,7 +35,7 @@ Game.Map.Module.prototype = {
         var self = this,
             result = [];
 
-        this.tilemap.objects.text.forEach(function(element) {
+        this.tilemap.objects.text && this.tilemap.objects.text.forEach(function(element) {
             // Phaser uses top left, Tiled bottom left so we have to adjust the y position
             // also keep in mind that the cup images are a bit smaller than the tile which is 16x16
             // so they might not be placed in the exact pixel position as in Tiled
@@ -52,7 +52,7 @@ Game.Map.Module.prototype = {
         var self = this,
             result = [];
 
-        this.tilemap.objects.collectibles.forEach(function(element) {
+        this.tilemap.objects.collectibles && this.tilemap.objects.collectibles.forEach(function(element) {
             // Phaser uses top left, Tiled bottom left so we have to adjust the y position
             // also keep in mind that the cup images are a bit smaller than the tile which is 16x16
             // so they might not be placed in the exact pixel position as in Tiled
@@ -67,7 +67,7 @@ Game.Map.Module.prototype = {
         var self = this,
             result = [];
 
-        this.tilemap.objects.objects.forEach(function(element) {
+        this.tilemap.objects.objects && this.tilemap.objects.objects.forEach(function(element) {
             if (element.type === type) {
                 // Phaser uses top left, Tiled bottom left so we have to adjust the y position
                 // also keep in mind that the cup images are a bit smaller than the tile which is 16x16
