@@ -14,6 +14,10 @@ Game.Analytics = {
         this.sendEvent(['item collected', name]);
     },
 
+    gameCompleted: function () {
+        this.sendEvent(['game completed']);
+    },
+
     sendEvent: function (eventData) {
         // Non-blocking analytics report.
         setTimeout(function() {
