@@ -12,7 +12,7 @@ Game.State.Preloader.prototype = {
         // Adding the 'loading text'
         this.textGroup = this.game.add.group();
         this.textGroup.fixedToCamera = true;
-        this.textGroup.add(new Phaser.BitmapText(this.game, this.game.width / 2 - 50, this.game.height / 2 - 20, 'nokia', 'Loading...', 25));
+        this.textGroup.add(new Phaser.BitmapText(this.game, this.game.width / 2 - 50, this.game.height / 2 - 15, 'pixeltype', 'Loading...', 40));
 
         // Intro Sky News report
         this.game.load.image('intro_ticker', 'assets/sprites/intro-ticker.png');

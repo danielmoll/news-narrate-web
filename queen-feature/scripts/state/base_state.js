@@ -94,9 +94,9 @@ Game.State.BaseState.prototype = {
 
         textSpawns.forEach(function(textItem) {
             if(textItem.properties.parallax) {
-                this.parallaxTextGroup.add(new Phaser.BitmapText(this.game, textItem.x, textItem.y, 'nokia', textItem.properties.text, textItem.properties.size));
+                this.parallaxTextGroup.add(new Phaser.BitmapText(this.game, textItem.x, textItem.y, 'pixeltype', textItem.properties.text, textItem.properties.size));
             } else {
-                this.fixedTextGroup.add(new Phaser.BitmapText(this.game, textItem.x, textItem.y, 'nokia', textItem.properties.text, textItem.properties.size));
+                this.fixedTextGroup.add(new Phaser.BitmapText(this.game, textItem.x, textItem.y, 'pixeltype', textItem.properties.text, textItem.properties.size));
             }
         }.bind(this));
 
