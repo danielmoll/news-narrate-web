@@ -140,7 +140,7 @@ Game.State.BaseState.prototype = {
         }
 
         // Add in-level score display
-        this.score = new Game.LevelScore(this.game, this.levelKey, this.collectibleItems);
+        this.scoreDisplay = new Game.LevelScore(this.game, this.levelKey, this.collectibleItems);
 
         // Add controls
         this.controls = new Game.Controls(this.game, this.player);
@@ -181,7 +181,7 @@ Game.State.BaseState.prototype = {
         }
 
         // Add item to score.
-        this.score.scoreItem(collectible.properties, this.levelKey);
+        this.scoreDisplay.scoreItem(collectible.properties, this.levelKey);
     },
 
     _nextLevelHandler: function() {
@@ -190,7 +190,7 @@ Game.State.BaseState.prototype = {
         this.game.fadePlugin.fadeOut(0x000, 750, 0, function() {
             this.game.analytics.stateComplete(this.levelKey);
 
-            if(Game.nbCollectibles === Game.nbCollected) {
+            if(Game.Score.allCollected()) {
                 nextLevel = 'end_screen';
             }
 

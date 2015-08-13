@@ -75,9 +75,9 @@ Game.LevelScore.prototype.scoreItem = function (scoredItem, levelKey) {
     this.scoredItems.push(scoredItem);
 
     // Update overall game score.
-    Game.Scores[levelKey] = {scoredItems: this.scoredItems};
+    Game.Score.levelScores[levelKey] = {scoredItems: this.scoredItems};
     if (scoredItem.sprite_key !== 'jewel') {
-        Game.nbCollected++;
+        Game.Score.nbCollected++;
     }
 
     // Saving on local storage

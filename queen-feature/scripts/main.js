@@ -5,14 +5,19 @@ var Game = {};
 
 // Setup our namespaces and resource lists.
 Game = {
-    nbCollectibles: 0,
-    nbCollected: 0
 };
 
 Game.State = {};
 Game.Map = {};
 Game.Map.Object = {};
-Game.Scores = {};
+Game.Score = {
+    nbCollectibles: 0,
+    nbCollected: 0,
+    levelScores: {},
+    allCollected: function() {
+        return this.nbCollectibles === this.nbCollected;
+    }
+};
 
 Game.Map.MAPS = [
     'tutorial',
@@ -52,7 +57,7 @@ Game.init = function() {
     Game.Levels.forEach(function(level) {
         level.collectibles.forEach(function(collectible) {
             if(collectible !== '.') {
-                this.nbCollectibles++;
+                this.Score.nbCollectibles++;
             }
         }.bind(this));
     }.bind(this));
@@ -65,18 +70,18 @@ Game.init = function() {
 };
 
 Game.getCollectedItems = function() {
-    this.nbCollected = 0;
+    this.Score.nbCollected = 0;
     
     Game.Levels.forEach(function (level) {
         var levelScore = this.game.storage.get(level.stateKey);
         
         levelScore && levelScore.scoredItems.forEach(function(ls) {
             if (ls.sprite_key !== 'jewel') {
-                this.nbCollected++;
+                this.Score.nbCollected++;
             }
         }.bind(this));
         
-        Game.Scores[level.stateKey] = levelScore;
+        Game.Score.levelScores[level.stateKey] = levelScore;
     }.bind(this));
 },
 

@@ -32,7 +32,7 @@ Game.State.Navigation.prototype = {
         this.buttonsGroup = this.game.add.group();
 
         Game.Levels.forEach(function(level) {
-            var levelScore = Game.Scores[level.stateKey],
+            var levelScore = Game.Score.levelScores[level.stateKey],
                 collectibleId = 0,
                 button,
                 x,
