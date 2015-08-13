@@ -65,6 +65,8 @@ Game.init = function() {
 };
 
 Game.getCollectedItems = function() {
+    this.nbCollected = 0;
+    
     Game.Levels.forEach(function (level) {
         var levelScore = this.game.storage.get(level.stateKey);
         
