@@ -2,7 +2,6 @@
 'use strict';
 
 Game.State.BaseState = function() {
-    this.initialised = false;
     this.levelKey = null;
     this.controls = null;
     this.collectibleItems = [];
@@ -36,6 +35,7 @@ Game.State.BaseState.prototype = {
     },
 
     addCollectibles: function() {
+        this.collectibleItems = [];
         // Loading the collectibles
         var collectibleSpawns = this.levelModule.findCollectibleObjects();
         
@@ -126,10 +126,7 @@ Game.State.BaseState.prototype = {
 
         this.addPlayer();
 
-        if(!this.initialised) {
-            this.addCollectibles();
-            this.initialised = true;
-        }
+        this.addCollectibles();
         
         this.addNextLevelPortal();
 
