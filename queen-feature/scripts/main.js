@@ -40,6 +40,7 @@ Game.init = function() {
     game.state.add('startup', Game.State.Startup);
     game.state.add('preloader', Game.State.Preloader);
     game.state.add('intro_skynews', Game.State.Intro_Skynews);
+    game.state.add('intro_alexs_house', Game.State.Intro_AlexsHouse);
     game.state.add('navigation', Game.State.Navigation);
     game.state.add('tutorial', Game.State.Tutorial);
     game.state.add('intro_50s', Game.State.Intro_50s);
