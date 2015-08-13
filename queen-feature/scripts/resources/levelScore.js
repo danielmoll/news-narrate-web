@@ -64,17 +64,24 @@ Game.LevelScore.prototype.addDisplay = function() {
     }.bind(this));
 };
 
-Game.LevelScore.prototype.scoreItem = function (scoredItem, levelName) {
+Game.LevelScore.prototype.scoreItem = function (scoredItem, levelKey) {
     this.game.analytics.itemCollected(scoredItem.sprite_key);
 
     var collectibleSprite = this.sprites[scoredItem.sprite_key];
+
     collectibleSprite && collectibleSprite.loadTexture(scoredItem.sprite_key);
 
     // Saving in current level score
     this.scoredItems.push(scoredItem);
 
+    // Update overall game score.
+    Game.Scores[levelKey] = {scoredItems: this.scoredItems};
+    if (scoredItem.sprite_key !== 'jewel') {
+        Game.nbCollected++;
+    }
+
     // Saving on local storage
-    this.game.storage.set(levelName, {scoredItems: this.scoredItems});
+    this.game.storage.set(levelKey, {scoredItems: this.scoredItems});
 
     // Updating text display of points
     this.updatePoints(this.scoredItems);
