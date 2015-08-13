@@ -52,12 +52,12 @@ Game.Controls.prototype.update = function () {
     } else if (this.cursors.right.isDown) {
         this.moveRight();
 
-    } else if (this.game.input.activePointer.isDown) {
+    } else if (this.game.input.pointer1.isDown) {
         if (this.activePointerIsOnPauseButton()) {
           return;
         }
 
-        if (this.game.input.activePointer.x < this.game.width / 2) {
+        if (this.game.input.pointer1.x < this.game.width / 2) {
             this.moveLeft();
 
             // if (this.game.input.activePointer.y < this.game.height / 2) {
@@ -74,7 +74,7 @@ Game.Controls.prototype.update = function () {
             // }
         }
 
-    } else if (this.game.input.activePointer.isUp) {
+    } else if (this.game.input.pointer1.isUp) {
         this.player.body.velocity.x = 0;
         this.jumped = false;
     }
