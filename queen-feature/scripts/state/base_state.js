@@ -41,13 +41,36 @@ Game.State.BaseState.prototype = {
         
         collectibleSpawns.forEach(function(collectible) {
             var collectibleItem = this.game.add.sprite(collectible.x, collectible.y, collectible.properties.sprite_key);
+
+            if (collectible.properties.sprite_key !== 'jewel') {
+                collectibleItem._isArtefact = true;
+                this.addArtefactEmitter(collectibleItem);
+            }
+
             collectibleItem.properties = collectible.properties;
 
             this.game.physics.arcade.enable(collectibleItem);
             collectibleItem.body.allowGravity = false;
-
             this.collectibleItems.push(collectibleItem);
         }.bind(this));
+    },
+
+    addArtefactEmitter: function(collectibleItem) {
+        var emitter = this.game.add.emitter(collectibleItem.x + collectibleItem.width / 2, collectibleItem.y + collectibleItem.height / 2, 10);
+
+        emitter.makeParticles(['sparkle1', 'sparkle2', 'sparkle3']);
+        emitter.minParticleSpeed.setTo(-50, -50);
+        emitter.maxParticleSpeed.setTo(50, 50);
+        emitter.gravity = -600;
+        emitter.alpha = 0.5;
+        emitter.minParticleAlpha = 0.7;
+        emitter.maxParticleAlpha = 1;
+        emitter.minParticleScale = 0.5;
+        emitter.maxParticleScale = 1.5;
+
+        emitter.start(false, 1000, 100);
+
+        collectibleItem._emitter = emitter;
     },
 
     addNextLevelPortal: function() {
@@ -123,14 +146,24 @@ Game.State.BaseState.prototype = {
     _collectiblesCollisionHandler: function(sprite1, sprite2) {
         var collectible = null;
 
-        if (sprite1.key !== 'player') {
-            sprite1.destroy();
-            collectible = sprite1;
-
-        } else if (sprite2.key !== 'player') {
-            sprite2.destroy();
-            collectible = sprite2;
+        if (sprite2._emitter) {
+            sprite2._emitter.on = false;
         }
+        // sprite2.destroy();
+        
+
+        collectible = sprite2;
+        collectible.x = collectible.x - this.game.camera.x;
+        collectible.y = collectible.y - this.game.camera.y;
+
+        sprite2.fixedToCamera = true;
+        collectible.body.destroy();
+
+        this.game.add.tween(collectible.cameraOffset).to( { y: -32} , 500, 'Linear', true);
+        this.game.add.tween(collectible).to( { alpha: 0} , 500, 'Linear', true);
+        this.game.add.tween(collectible.scale).to( { x:4, y:4 } , 250, 'Linear', true).chain(
+            this.game.add.tween(collectible.scale).to( { x:1, y:1 } , 250, 'Linear')
+        );
 
         this.collectedItems.push(collectible);
 
