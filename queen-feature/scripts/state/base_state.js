@@ -51,12 +51,13 @@ Game.State.BaseState.prototype = {
 
             this.game.physics.arcade.enable(collectibleItem);
             collectibleItem.body.allowGravity = false;
+            collectibleItem.anchor = new Phaser.Point(0.5, 0.5);
             this.collectibleItems.push(collectibleItem);
         }.bind(this));
     },
 
     addArtefactEmitter: function(collectibleItem) {
-        var emitter = this.game.add.emitter(collectibleItem.x + collectibleItem.width / 2, collectibleItem.y + collectibleItem.height / 2, 10);
+        var emitter = this.game.add.emitter(collectibleItem.x, collectibleItem.y, 10);
 
         emitter.makeParticles(['sparkle1', 'sparkle2', 'sparkle3']);
         emitter.minParticleSpeed.setTo(-50, -50);
@@ -167,10 +168,11 @@ Game.State.BaseState.prototype = {
         sprite2.fixedToCamera = true;
         collectible.body.destroy();
 
-        this.game.add.tween(collectible.cameraOffset).to( { y: -32} , 500, 'Linear', true);
+        this.game.add.tween(collectible.cameraOffset).to( { y: -32} , 500, Phaser.Easing.Quadratic.InOut, true);
+        this.game.add.tween(collectible.cameraOffset).to( { x: 500} , 500, Phaser.Easing.Quadratic.InOut, true);
         this.game.add.tween(collectible).to( { alpha: 0} , 500, 'Linear', true);
-        this.game.add.tween(collectible.scale).to( { x:4, y:4 } , 250, 'Linear', true).chain(
-            this.game.add.tween(collectible.scale).to( { x:1, y:1 } , 250, 'Linear')
+        this.game.add.tween(collectible.scale).to( { x:3, y:3 } , 250, Phaser.Easing.Quadratic.In, true).chain(
+            this.game.add.tween(collectible.scale).to( { x:1, y:1 } , 250, Phaser.Easing.Quadratic.Out)
         );
 
         this.collectedItems.push(collectible);
