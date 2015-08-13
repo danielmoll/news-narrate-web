@@ -25,4 +25,6 @@ exports.init = function() {
 	});
 };
 
+if (!module.parent) exports.init();
+
 module.exports = exports;

@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "npm run clean && npm run watcher",
-    "dist": "npm run uglify",
+    "dist": "node ./build/uglify.js",
     "watcher": "node ./build/watcher.js",
     "clean": "rm -rf ./public/scripts/*"
   },
