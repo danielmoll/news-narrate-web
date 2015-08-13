@@ -76,7 +76,7 @@ Game.LevelScore.prototype.scoreItem = function (scoredItem, levelKey) {
 
     // Update overall game score.
     Game.Score.levelScores[levelKey] = {scoredItems: this.scoredItems};
-    if (scoredItem.sprite_key !== 'jewel') {
+    if (scoredItem.sprite_key !== 'jewel' && Game.Score.nbCollected < Game.Score.nbCollectibles) {
         Game.Score.nbCollected++;
     }
 
