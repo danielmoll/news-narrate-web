@@ -12,12 +12,15 @@ Game.State.Preloader.prototype = {
         // Adding the 'loading text'
         this.textGroup = this.game.add.group();
         this.textGroup.fixedToCamera = true;
-        this.textGroup.add(new Phaser.BitmapText(this.game, this.game.width / 2 - 50, this.game.height / 2 - 20, 'nokia', 'Loading...', 25));
+        this.textGroup.add(new Phaser.BitmapText(this.game, this.game.width / 2 - 50, this.game.height / 2 - 15, 'pixeltype', 'Loading...', 40));
 
         // Intro Sky News report
         this.game.load.image('intro_ticker', 'assets/sprites/intro-ticker.png');
         this.game.load.image('skynews_logo', 'assets/sprites/8bit_sky_logo.png');
         this.game.load.image('kay', 'assets/sprites/kayburley.png');
+
+        // Intro Alex's house
+        this.game.load.image('alexs_house', 'assets/sprites/alexshouse.png');
 
         // Load our sprites
         this.load.spritesheet('player', 'assets/sprites/queen-sprite.png', 32, 64, 6);
@@ -31,6 +34,14 @@ Game.State.Preloader.prototype = {
         this.game.load.image('corgi', 'assets/sprites/corgi.png');
         this.game.load.image('corgi_grey', 'assets/sprites/corgi_grey.png');
         this.game.load.image('crown_grey', 'assets/sprites/crown_grey.png');
+
+        // 50s assets
+        this.game.load.image('tv', 'assets/sprites/50s_tv.png');
+        this.game.load.image('tv_grey', 'assets/sprites/50s_tv_grey.png');
+        this.game.load.image('record', 'assets/sprites/50s_record.png');
+        this.game.load.image('record_grey', 'assets/sprites/50s_record_grey.png');
+        this.game.load.image('mini', 'assets/sprites/50s_mini.png');
+        this.game.load.image('mini_grey', 'assets/sprites/50s_mini_grey.png');
 
         // Load navigation button images
         this.game.load.image('button_level_50s', 'assets/sprites/level_buttons/level_50s.png');
