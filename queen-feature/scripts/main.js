@@ -21,7 +21,7 @@ Game.Map.MAPS = [
 ];
 
 Game.Levels = [
-    { text: '50s', stateKey: 'decade_50s', spriteKey: 'button_level_50s', collectibles: ['corgi', 'crown', '.']},
+    { text: '50s', stateKey: 'decade_50s', spriteKey: 'button_level_50s', collectibles: ['record', 'tv', 'mini']},
     { text: '60s', stateKey: null, spriteKey: 'button_level_60s', collectibles: ['.', '.', '.']},
     { text: '70s', stateKey: null, spriteKey: 'button_level_70s', collectibles: ['.', '.', '.']},
     { text: '80s', stateKey: 'tutorial', spriteKey: 'button_level_80s', collectibles: ['corgi', '.', '.']},
@@ -39,12 +39,12 @@ Game.init = function() {
 
     game.state.add('startup', Game.State.Startup);
     game.state.add('preloader', Game.State.Preloader);
+    game.state.add('intro_skynews', Game.State.Intro_Skynews);
     game.state.add('navigation', Game.State.Navigation);
     game.state.add('tutorial', Game.State.Tutorial);
     game.state.add('intro_50s', Game.State.Intro_50s);
     game.state.add('decade_50s', Game.State.Decade_50s);
     game.state.add('decade_2010s', Game.State.Decade_2010s);
-    game.state.add('intro_skynews', Game.State.Intro_Skynews);
     game.state.add('end_screen', Game.State.EndScreen);
 
     // Make sure we know the number of artefacts we can collect

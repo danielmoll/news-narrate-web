@@ -23,7 +23,7 @@ Game.State.BaseState.prototype = {
 
     addPlayer: function() {
         // Loading the player
-        var spawn = this.mapBackground.findObjectsByType('player_spawn');
+        var spawn = this.levelModule.findObjectsByType('player_spawn');
         this.player = this.game.add.sprite(spawn[0].x, spawn[0].y - 32, 'player');
         this.game.physics.arcade.enable(this.player);
         // this.player.body.bounce.y = 0.2;
@@ -37,7 +37,7 @@ Game.State.BaseState.prototype = {
 
     addCollectibles: function() {
         // Loading the collectibles
-        var collectibleSpawns = this.mapBackground.findCollectibleObjects();
+        var collectibleSpawns = this.levelModule.findCollectibleObjects();
         
         collectibleSpawns.forEach(function(collectible) {
             var collectibleItem = this.game.add.sprite(collectible.x, collectible.y, collectible.properties.sprite_key);
@@ -52,7 +52,7 @@ Game.State.BaseState.prototype = {
 
     addNextLevelPortal: function() {
         // Next stage
-        var nextLevelSpawn = this.mapBackground.findObjectsByType('next_level');
+        var nextLevelSpawn = this.levelModule.findObjectsByType('next_level');
 
         if (nextLevelSpawn.length) {
             this.nextLevel = this.game.add.sprite(nextLevelSpawn[0].x, nextLevelSpawn[0].y, 'transparent_32-160');
@@ -66,12 +66,17 @@ Game.State.BaseState.prototype = {
         var textSpawns;
 
         // Load the current over world map
-        this.mapBackground = new Game.Map.Module(this.game, this.levelKey);
+        this.levelModule = new Game.Map.Module(this.game, this.levelKey);
         
         this.modules = {};
         
+        // If subclass has a createBackgroundLayers method, call it.
+        if (this.createBackgroundLayers && typeof this.createBackgroundLayers === 'function') {
+            this.createBackgroundLayers();
+        }
+
         // We manually add the over world background for now...
-        this.background = this.mapBackground.createLayer('background');
+        this.background = this.levelModule.createLayer('background');
 
         // Resize the game world to match the layer dimensions
         this.background.resizeWorld();
@@ -85,7 +90,7 @@ Game.State.BaseState.prototype = {
         this.parallaxTextGroup.fixedToCamera = false;
         this.parallaxTextGroup.alpha = 0.4;
 
-        textSpawns = this.mapBackground.findTextObjects();
+        textSpawns = this.levelModule.findTextObjects();
 
         textSpawns.forEach(function(textItem) {
             if(textItem.properties.parallax) {
@@ -104,10 +109,13 @@ Game.State.BaseState.prototype = {
         
         this.addNextLevelPortal();
 
-        // If subclass has its own createState method, call it.
-        // This is here so layering is done properly, behind the score.
-        if (this.createState && typeof this.createState === 'function') {
-            this.createState();
+        // If subclass has a createForegroundLayers method, call it.
+        if (this.createForegroundLayers && typeof this.createForegroundLayers === 'function') {
+            this.createForegroundLayers();
+        }
+
+        if (this.setCollisions && typeof this.setCollisions === 'function') {
+            this.setCollisions();
         }
 
         // Add in-level score display

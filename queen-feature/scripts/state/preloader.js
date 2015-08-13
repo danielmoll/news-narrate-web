@@ -32,6 +32,14 @@ Game.State.Preloader.prototype = {
         this.game.load.image('corgi_grey', 'assets/sprites/corgi_grey.png');
         this.game.load.image('crown_grey', 'assets/sprites/crown_grey.png');
 
+        // 50s assets
+        this.game.load.image('tv', 'assets/sprites/50s_tv.png');
+        this.game.load.image('tv_grey', 'assets/sprites/50s_tv_grey.png');
+        this.game.load.image('record', 'assets/sprites/50s_record.png');
+        this.game.load.image('record_grey', 'assets/sprites/50s_record_grey.png');
+        this.game.load.image('mini', 'assets/sprites/50s_mini.png');
+        this.game.load.image('mini_grey', 'assets/sprites/50s_mini_grey.png');
+
         // Load navigation button images
         this.game.load.image('button_level_50s', 'assets/sprites/level_buttons/level_50s.png');
         this.game.load.image('button_level_60s', 'assets/sprites/level_buttons/level_60s.png');
