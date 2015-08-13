@@ -168,12 +168,13 @@ Game.State.BaseState.prototype = {
         sprite2.fixedToCamera = true;
         collectible.body.destroy();
 
-        this.game.add.tween(collectible.cameraOffset).to( { y: -32} , 500, Phaser.Easing.Quadratic.InOut, true);
-        this.game.add.tween(collectible.cameraOffset).to( { x: 500} , 500, Phaser.Easing.Quadratic.InOut, true);
         this.game.add.tween(collectible).to( { alpha: 0} , 500, 'Linear', true);
         this.game.add.tween(collectible.scale).to( { x:3, y:3 } , 250, Phaser.Easing.Quadratic.In, true).chain(
             this.game.add.tween(collectible.scale).to( { x:1, y:1 } , 250, Phaser.Easing.Quadratic.Out)
         );
+        this.game.add.tween(collectible.cameraOffset).to( { y: -32} , 500, Phaser.Easing.Quadratic.InOut, true);
+        this.game.add.tween(collectible.cameraOffset).to( { x: 500} , 500, Phaser.Easing.Quadratic.InOut, true)
+            .onComplete.add(collectible.destroy, collectible);
 
         this.collectedItems.push(collectible);
 
