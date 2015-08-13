@@ -42,7 +42,7 @@ Game.Controls.prototype.activePointerIsOnPauseButton = function() {
 
 Game.Controls.prototype.update = function () {
 
-    if (this.cursors.up.isDown || this.game.input.activePointers > 1) {
+    if (this.cursors.up.isDown || this.game.input.totalActivePointers > 1) {
         this.jump();
     }
 
