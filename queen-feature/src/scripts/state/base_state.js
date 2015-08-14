@@ -99,11 +99,12 @@ Game.State.BaseState.prototype = {
             this.createBackgroundLayers();
         }
 
-        // We manually add the over world background for now...
-        this.background = this.levelModule.createLayer('background');
+        // We manually add the over world platform for now...
+        this.platform = this.levelModule.createLayer('platform');
+        this.platform.alpha = 0;
 
         // Resize the game world to match the layer dimensions
-        this.background.resizeWorld();
+        this.platform.resizeWorld();
 
         // Text overlays
         this.fixedTextGroup = this.game.add.group();
@@ -214,7 +215,7 @@ Game.State.BaseState.prototype = {
         }
 
         // Floor collision
-        this.game.physics.arcade.collide(this.player, this.background);
+        this.game.physics.arcade.collide(this.player, this.platform);
 
         // Jewel collision
         this.game.physics.arcade.overlap(this.player, this.collectibleItems, this._collectiblesCollisionHandler, null, this);
