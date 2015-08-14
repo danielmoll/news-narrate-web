@@ -37,6 +37,6 @@ exports.bundle = function() {
 	});
 };
 
-if (!module.parent) exports.init();
+if (!module.parent) exports.bundle();
 
 module.exports = exports;
