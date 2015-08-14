@@ -38,7 +38,7 @@ Game.State.BaseState.prototype = {
         this.collectibleItems = [];
         // Loading the collectibles
         var collectibleSpawns = this.levelModule.findCollectibleObjects();
-        
+
         collectibleSpawns.forEach(function(collectible) {
             var collectibleItem = this.game.add.sprite(collectible.x, collectible.y, collectible.properties.sprite_key);
 
@@ -91,9 +91,9 @@ Game.State.BaseState.prototype = {
 
         // Load the current over world map
         this.levelModule = new Game.Map.Module(this.game, this.levelKey);
-        
+
         this.modules = {};
-        
+
         // If subclass has a createBackgroundLayers method, call it.
         if (this.createBackgroundLayers && typeof this.createBackgroundLayers === 'function') {
             this.createBackgroundLayers();
@@ -105,6 +105,16 @@ Game.State.BaseState.prototype = {
 
         // Resize the game world to match the layer dimensions
         this.platform.resizeWorld();
+        this.addPlayer();
+
+        this.addCollectibles();
+
+        this.addNextLevelPortal();
+
+        // If subclass has a createForegroundLayers method, call it.
+        if (this.createForegroundLayers && typeof this.createForegroundLayers === 'function') {
+            this.createForegroundLayers();
+        }
 
         // Text overlays
         this.fixedTextGroup = this.game.add.group();
@@ -125,16 +135,6 @@ Game.State.BaseState.prototype = {
             }
         }.bind(this));
 
-        this.addPlayer();
-
-        this.addCollectibles();
-        
-        this.addNextLevelPortal();
-
-        // If subclass has a createForegroundLayers method, call it.
-        if (this.createForegroundLayers && typeof this.createForegroundLayers === 'function') {
-            this.createForegroundLayers();
-        }
 
         if (this.setCollisions && typeof this.setCollisions === 'function') {
             this.setCollisions();
@@ -157,7 +157,7 @@ Game.State.BaseState.prototype = {
             sprite2._emitter.on = false;
         }
         // sprite2.destroy();
-        
+
 
         collectible = sprite2;
         collectible.x = collectible.x - this.game.camera.x;
