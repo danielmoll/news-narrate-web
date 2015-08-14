@@ -22,12 +22,13 @@ Game.Score = {
 Game.Map.MAPS = [
     'tutorial',
     'decade_50s',
+    'decade_60s',
     'decade_2010s'
 ];
 
 Game.Levels = [
     { text: '50s', stateKey: 'decade_50s', spriteKey: 'button_level_50s', collectibles: ['record', 'tv', 'mini']},
-    { text: '60s', stateKey: null, spriteKey: 'button_level_60s', collectibles: ['.', '.', '.']},
+    { text: '60s', stateKey: 'decade_60s', spriteKey: 'button_level_60s', collectibles: ['.', '.', '.']},
     { text: '70s', stateKey: null, spriteKey: 'button_level_70s', collectibles: ['.', '.', '.']},
     { text: '80s', stateKey: 'tutorial', spriteKey: 'button_level_80s', collectibles: ['corgi', '.', '.']},
     { text: '90s', stateKey: null, spriteKey: 'button_level_90s', collectibles: ['.', '.', '.']},
@@ -50,6 +51,7 @@ Game.init = function() {
     game.state.add('tutorial', Game.State.Tutorial);
     game.state.add('intro_50s', Game.State.Intro_50s);
     game.state.add('decade_50s', Game.State.Decade_50s);
+    game.state.add('decade_60s', Game.State.Decade_60s);
     game.state.add('decade_2010s', Game.State.Decade_2010s);
     game.state.add('end_screen', Game.State.EndScreen);
 
