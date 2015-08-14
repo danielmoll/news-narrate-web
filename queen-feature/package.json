@@ -5,7 +5,7 @@
   "author": "Sky News Products",
   "license": "MIT",
   "scripts": {
-    "start": "npm run clean && npm run watcher",
+    "start": "mkdir -p public/scripts && npm run clean && npm run watcher",
     "dist": "node ./build/uglify.js",
     "watcher": "node ./build/watcher.js",
     "clean": "rm -rf ./public/scripts/*"
