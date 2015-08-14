@@ -13,7 +13,7 @@
     "uglifyjs": "uglifyjs ./scripts/bundle.js -b beautify=false --screw-ie8 -m --compress drop_console -o ./scripts/bundle.js",
     "watch": "parallelshell 'npm run watch:sass' 'npm run watch:appjs' 'npm run watch:templates'",
     "watch:sass": "sane 'npm run sass' ./src/sass",
-    "watch:appjs": "sane 'npm run browserify' ./src/scripts/ --glob='**/*.js'",
+    "watch:appjs": "sane 'npm run browserify' ./src/scripts --glob='**/*.js'",
     "watch:templates": "sane 'npm run nunjucks' ./src/templates"
   },
   "private": true,
