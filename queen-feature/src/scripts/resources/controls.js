@@ -96,7 +96,14 @@ Game.Controls.prototype.update = function () {
     } else if (this.cursors.right.isDown) {
         this.moveRight();
 
-    } else if (this.activePointer) {
+    } else if (activePointers === 0) {
+        this.player.body.velocity.x = 0;
+        // this.jumped = false;
+        this.activePointer = null;
+    }
+
+
+    if (this.activePointer) {
         if (this.activePointerIsOnPauseButton()) {
           return;
         }
@@ -121,11 +128,7 @@ Game.Controls.prototype.update = function () {
 
     } 
 
-    if (activePointers === 0) {
-        this.player.body.velocity.x = 0;
-        // this.jumped = false;
-        this.activePointer = null;
-    }
+   
 
     if (this.player.body.velocity.x === 0) {
         this.player.animations.stop();
