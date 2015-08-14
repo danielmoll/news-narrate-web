@@ -5,22 +5,34 @@ require('./common');
 var uglify = require('uglifyjs'),
 	glob = require('glob'),
 	fs = require('fs-extra'),
-	exports = {};
+	concat = require('concat-files'),
+	exports = {},
+	srcFiles = [];
 
-exports.uglify = function(filepath) {
-	var result = uglify.minify(SRC_DIR + '/' + filepath),
-		file = filepath.split('/').pop().replace('.js', '.min.js');
 
-	fs.writeFileSync(DEST_DIR + file, result.code);
-	console.info('generated new ' + DEST_DIR + file);
+exports.uglify = function() {
+	var result = uglify.minify(DEST_DIR + 'bundle.min.js', { keep_fnames: true });
+
+	fs.writeFileSync(DEST_DIR + 'bundle.min.js', result.code);
+	console.info('Generated new bundle.min.js');
 };
 
-exports.init = function() {
+exports.concat = function() {
+	concat(srcFiles, DEST_DIR + 'bundle.min.js', function() {
+		exports.uglify();
+	});
+};
+
+exports.bundle = function() {
 	glob(SRC_DIR + '/' + GLOB_PATTERN, function (er, files) {
 		if (!er) {
+			console.log('Concatinating:');
 			files.forEach(function(file) {
-				exports.uglify(file.replace(SRC_DIR + '/', ''));
+				console.log(file);
+				srcFiles.push(file);
 			});
+
+			exports.concat();
 		}
 	});
 };

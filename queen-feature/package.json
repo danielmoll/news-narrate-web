@@ -17,6 +17,7 @@
   "dependencies": {
     "async": "^1.4.0",
     "clean-css": "^3.3.9",
+    "concat-files": "^0.1.0",
     "fs-extra": "^0.22.1",
     "glob": "^5.0.13",
     "parallelshell": "^1.2.0"
