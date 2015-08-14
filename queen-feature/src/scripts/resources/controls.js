@@ -44,12 +44,12 @@ Game.Controls.prototype.handleUp = function(e) {
 };
 
 Game.Controls.prototype.moveLeft = function(speed) {
-    this.player.body.velocity.x = (-speed || -100) * 3.5;
+    this.player.body.velocity.x = (-speed || -100) * 2.5;
     this.player.animations.play('left');
 };
 
 Game.Controls.prototype.moveRight = function(speed) {
-    this.player.body.velocity.x = (-speed || 100) * 3.5;
+    this.player.body.velocity.x = (-speed || 100) * 2.5;
     this.player.animations.play('right');
 };
 
