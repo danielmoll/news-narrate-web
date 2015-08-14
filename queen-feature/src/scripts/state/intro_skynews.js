@@ -15,7 +15,6 @@ Game.State.Intro_Skynews.prototype = {
 
         this.game.analytics.stateStarted('intro');
         this.transitionning = false;
-        this.game.fadePlugin.fadeIn(0x000, 750, 0);
         this.game.stage.backgroundColor = '#fff';
 
 		this.game.add.image(0, 0, 'kay');
@@ -59,6 +58,8 @@ Game.State.Intro_Skynews.prototype = {
 		this.updateClock();
 		this.game.time.events.loop(Phaser.Timer.SECOND, this.updateClock, this);
 		this.game.add.button(this.game.width - 120, this.game.height - 50, 'next_button', this.nextFrame, this);
+        
+        this.game.fadePlugin.fadeIn(0x000, 750, 0);
 	},
 
 	nextFrame: function() {

@@ -26,7 +26,7 @@ Phaser.Plugin.Fade.prototype.fade = function(hexColor, time, delay, fromAlpha, t
         s;
 
     bg.beginFill(hexColor, 1);
-    bg.drawRect(this.game.camera.x, this.game.camera.y, this.game.width * 1.5, this.game.height * 1.5);
+    bg.drawRect(this.game.camera.x, this.game.camera.y, this.game.world.width * 1.5, this.game.world.height * 1.5);
     bg.alpha = fromAlpha;
     bg.endFill();
 
