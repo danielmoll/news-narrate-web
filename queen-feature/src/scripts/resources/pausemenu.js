@@ -16,6 +16,24 @@ Game.PauseMenu = function(game) {
             x: 40,
             y: 120,
             callback: 'resume'
+        },
+        {
+            sprite: 'restart_level_button',
+            x: 40,
+            y: 160,
+            callback: 'restartLevel'
+        },
+        {
+            sprite: 'share_on_facebook',
+            x: 40,
+            y: 200,
+            callback: 'shareOnFacebook'
+        },
+        {
+            sprite: 'share_on_twitter',
+            x: 40,
+            y: 240,
+            callback: 'shareOnTwitter'
         }
     ];
 
@@ -53,7 +71,7 @@ Game.PauseMenu.prototype.drawMenu = function() {
     this.menuGroup.add(pauseText);
 
     this.buttonDefinitions.forEach(function(button) {
-        btn = new Phaser.Image(this.game, button.x, button.y, button.sprite)
+        btn = new Phaser.Image(this.game, button.x, button.y, button.sprite);
         btn.fixedToCamera = true;
         this.menuGroup.add(btn);
 
@@ -94,8 +112,22 @@ Game.PauseMenu.prototype.resume = function() {
     this.menuGroup.visible = false;
 };
 
+Game.PauseMenu.prototype.restartLevel = function() {
+    this.game.paused = false;
+
+    this.game.state.start(this.game.state.current);
+};
+
 Game.PauseMenu.prototype.showPauseMenu = function() {
     this.game.paused = true;
     this.pauseButton.visible = false;
     this.menuGroup.visible = true;
+};
+
+Game.PauseMenu.prototype.shareOnFacebook = function() {
+    console.log('shared on Facebook');
+};
+
+Game.PauseMenu.prototype.shareOnTwitter = function() {
+    console.log('shared on Twitter');
 };
