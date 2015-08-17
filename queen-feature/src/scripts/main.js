@@ -28,7 +28,7 @@ Game.Map.MAPS = [
 
 Game.Levels = [
     { text: '50s', stateKey: 'decade_50s', spriteKey: 'button_level_50s', collectibles: ['record', 'tv', 'mini']},
-    { text: '60s', stateKey: 'decade_60s', spriteKey: 'button_level_60s', collectibles: ['.', '.', '.']},
+    { text: '60s', stateKey: 'decade_60s', spriteKey: 'button_level_60s', collectibles: ['beatles', 'the_sun', 'worldcup']},
     { text: '70s', stateKey: null, spriteKey: 'button_level_70s', collectibles: ['.', '.', '.']},
     { text: '80s', stateKey: 'tutorial', spriteKey: 'button_level_80s', collectibles: ['corgi', '.', '.']},
     { text: '90s', stateKey: null, spriteKey: 'button_level_90s', collectibles: ['.', '.', '.']},

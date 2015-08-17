@@ -308,8 +308,8 @@
                  "type":"jewel_spawn",
                  "visible":true,
                  "width":32,
-                 "x":2559,
-                 "y":224
+                 "x":949,
+                 "y":828
                 }, 
                 {
                  "gid":807,
@@ -485,35 +485,35 @@
                  "gid":807,
                  "height":32,
                  "id":49,
-                 "name":"mini",
+                 "name":"worldcup",
                  "properties":
                     {
                      "score":"10",
-                     "sprite_key":"mini"
+                     "sprite_key":"worldcup"
                     },
                  "rotation":0,
-                 "type":"mini_spawn",
+                 "type":"worldcup_spawn",
                  "visible":true,
                  "width":32,
-                 "x":957,
-                 "y":829
+                 "x":618,
+                 "y":893
                 }, 
                 {
                  "gid":807,
                  "height":32,
                  "id":50,
-                 "name":"record",
+                 "name":"beatles",
                  "properties":
                     {
                      "score":"30",
-                     "sprite_key":"record"
+                     "sprite_key":"beatles"
                     },
                  "rotation":0,
-                 "type":"record_spawn",
+                 "type":"beatles_spawn",
                  "visible":true,
                  "width":32,
-                 "x":618,
-                 "y":895
+                 "x":2556,
+                 "y":222
                 }, 
                 {
                  "gid":807,
@@ -570,18 +570,18 @@
                  "gid":807,
                  "height":32,
                  "id":55,
-                 "name":"tv",
+                 "name":"the_sun",
                  "properties":
                     {
                      "score":"50",
-                     "sprite_key":"tv"
+                     "sprite_key":"the_sun"
                     },
                  "rotation":0,
-                 "type":"tv_spawn",
+                 "type":"the_sun_spawn",
                  "visible":true,
                  "width":32,
-                 "x":3372.33333333333,
-                 "y":433
+                 "x":3224.33333333333,
+                 "y":572
                 }, 
                 {
                  "gid":807,

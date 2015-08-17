@@ -43,6 +43,14 @@ Game.State.Preloader.prototype = {
         this.game.load.image('mini', 'assets/sprites/50s_mini.png');
         this.game.load.image('mini_grey', 'assets/sprites/50s_mini_grey.png');
 
+        // 60s assets
+        this.game.load.image('beatles', 'assets/sprites/60s_beatles.png');
+        this.game.load.image('beatles_grey', 'assets/sprites/60s_beatles_grey.png');
+        this.game.load.image('worldcup', 'assets/sprites/60s_worldcup.png');
+        this.game.load.image('worldcup_grey', 'assets/sprites/60s_worldcup_grey.png');
+        this.game.load.image('the_sun', 'assets/sprites/60s_the_sun.png');
+        this.game.load.image('the_sun_grey', 'assets/sprites/60s_the_sun_grey.png');
+
         // Load navigation button images
         this.game.load.image('button_level_50s', 'assets/sprites/level_buttons/level_50s.png');
         this.game.load.image('button_level_60s', 'assets/sprites/level_buttons/level_60s.png');
