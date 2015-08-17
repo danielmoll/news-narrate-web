@@ -1,6 +1,8 @@
 /* global Game */
 'use strict';
 
+var PLAYER_SPEED = 200;
+
 Game.Controls = function(game, player) {
     this.game = game;
     this.player = player;
@@ -44,12 +46,12 @@ Game.Controls.prototype.handleUp = function(e) {
 };
 
 Game.Controls.prototype.moveLeft = function(speed) {
-    this.player.body.velocity.x = (-speed || -100) * 2.5;
+    this.player.body.velocity.x = -PLAYER_SPEED;
     this.player.animations.play('left');
 };
 
 Game.Controls.prototype.moveRight = function(speed) {
-    this.player.body.velocity.x = (-speed || 100) * 2.5;
+    this.player.body.velocity.x = PLAYER_SPEED;
     this.player.animations.play('right');
 };
 
@@ -58,18 +60,6 @@ Game.Controls.prototype.jump = function () {
         this.player.body.velocity.y = -300;
     }
 };
-
-Game.Controls.prototype.activePointerIsOnPauseButton = function() {
-  var pauseButton = {x1: 10, y1: 10, x2: 42, y2: 42};
-  var x = this.game.input.activePointer.x;
-  var y = this.game.input.activePointer.y;
-
-  if ( x > pauseButton.x1 && x < pauseButton.x2 &&
-      y > pauseButton.y1 && x < pauseButton.y2) {
-    return true;
-  }
-  return false;
-}
 
 Game.Controls.prototype.update = function () {
     var activePointers = 0;
@@ -104,28 +94,12 @@ Game.Controls.prototype.update = function () {
 
 
     if (this.activePointer) {
-        if (this.activePointerIsOnPauseButton()) {
-          return;
-        }
-
         if (this.activePointer.x < this.game.width / 2) {
             this.moveLeft();
 
-            // if (this.game.input.activePointer.y < this.game.height / 2) {
-            //     this.jump();
-            //     this.jumped = true;
-            // }
-
         } else if (this.activePointer.x > this.game.width / 2) {
             this.moveRight();
-
-            // if (this.game.input.activePointer.y < this.game.height / 2) {
-            //     this.jump();
-            //     this.jumped = true;
-            // }
         }
-
-
     } 
 
    
