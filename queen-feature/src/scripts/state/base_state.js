@@ -96,6 +96,7 @@ Game.State.BaseState.prototype = {
         this.modules = {};
 
         // If subclass has a createBackgroundLayers method, call it.
+
         if (this.createBackgroundLayers && typeof this.createBackgroundLayers === 'function') {
             this.createBackgroundLayers();
         }
@@ -221,6 +222,12 @@ Game.State.BaseState.prototype = {
         if (this.updateState && typeof this.updateState === 'function') {
             this.updateState();
         }
+
+        if (this.levelModule.parallaxBackground) {
+            this.levelModule.parallaxBackground.tilePosition.x = this.world.x / 2;
+            this.levelModule.parallaxBackground.tilePosition.y = this.world.y / 2;
+        }
+        
     },
 
     _updateState: function() {

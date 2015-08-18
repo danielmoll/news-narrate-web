@@ -42,6 +42,7 @@ Game.State.Preloader.prototype = {
         this.game.load.image('record_grey', 'assets/sprites/50s_record_grey.png');
         this.game.load.image('mini', 'assets/sprites/50s_mini.png');
         this.game.load.image('mini_grey', 'assets/sprites/50s_mini_grey.png');
+        this.game.load.image('parallax_1950s', 'assets/tiles/parallax_1950s.png');
 
         // 60s assets
         this.game.load.image('beatles', 'assets/sprites/60s_beatles.png');
