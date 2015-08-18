@@ -47,6 +47,8 @@ Game.State.BaseState.prototype = {
                 collectibleItem.anchor.set(0.5, 0.5);
                 collectibleItem._revealFactId = collectible.properties.revealFactId;
                 this.addArtefactEmitter(collectibleItem);
+
+                this.game.add.tween(collectibleItem).to( { y: collectibleItem.y - 8 } , 500, Phaser.Easing.Quadratic.InOut, true, 0, -1, true);
             }
 
             collectibleItem.properties = collectible.properties;
