@@ -68,6 +68,10 @@ Game.State.Preloader.prototype = {
         // In-game menu
         this.load.image('pause', 'assets/sprites/pause.png');
         this.load.image('time_machine_button', 'assets/sprites/time-machine-button.png');
+        this.load.image('resume_button', 'assets/sprites/resume-button.png');
+        this.load.image('restart_level_button', 'assets/sprites/restart-level-button.png');
+        this.load.image('share_on_facebook', 'assets/sprites/share-on-facebook-button.png');
+        this.load.image('share_on_twitter', 'assets/sprites/share-on-twitter-button.png');
 
         // Get some audio up in this shit.
         // this.load.audio('doorOpen_1', 'res/audio/doorOpen_1.ogg');
