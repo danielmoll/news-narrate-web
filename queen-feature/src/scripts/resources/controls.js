@@ -33,7 +33,6 @@ Game.Controls.prototype.handleDown = function(e) {
 };
 
 Game.Controls.prototype.handleUp = function(e) {
-    console.log(this.game.input.totalActivePointers);
     if (this.game.input.totalActivePointers === 0) {
         this.player.animations.stop();
         this.player.frame = 2;

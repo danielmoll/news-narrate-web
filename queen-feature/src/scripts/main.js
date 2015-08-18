@@ -16,6 +16,19 @@ Game.Score = {
     levelScores: {},
     allCollected: function() {
         return this.nbCollectibles === this.nbCollected;
+    },
+    getTotalScore: function() {
+        var score = 0;
+
+        Object.keys(this.levelScores).forEach(function (level) {
+            var levelScore = this.levelScores[level];
+
+            levelScore && levelScore.scoredItems && levelScore.scoredItems.forEach(function(ls) {
+                score += parseInt(ls.score, 10);
+            }.bind(this));
+        }.bind(this));
+
+        return score;
     }
 };
 

@@ -20,7 +20,4 @@ Game.State.Decade_60s.prototype.createForegroundLayers = function() {
 };
 
 Game.State.Decade_60s.prototype.updateState = function() {
-    // Text group movement update.
-    this.parallaxTextGroup.x = this.game.world.x * this.TEXT_PARALLAX_SCALE;
-    this.parallaxTextGroup.y = this.game.world.y * this.TEXT_PARALLAX_SCALE;
 };

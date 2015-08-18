@@ -202,17 +202,7 @@ Game.State.BaseState.prototype = {
     },
 
     _nextLevelHandler: function() {
-        var nextLevel = this.nextLevelKey;
-
-        this.game.fadePlugin.fadeOut(0x000, 750, 0, function() {
-            this.game.analytics.stateComplete(this.levelKey);
-
-            if(Game.Score.allCollected()) {
-                nextLevel = 'end_screen';
-            }
-
-            this.game.state.start(nextLevel);
-        }.bind(this));
+        this.pauseMenu.showMenu('next_level');
     },
 
     update: function() {
