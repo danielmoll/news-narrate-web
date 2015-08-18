@@ -201,7 +201,7 @@ Game.State.BaseState.prototype = {
         }
     },
 
-    _nextLevelHandler: function() {
+    _endLevelHandler: function() {
         this.pauseMenu.showMenu('next_level');
     },
 
@@ -229,11 +229,11 @@ Game.State.BaseState.prototype = {
         // Floor collision
         this.game.physics.arcade.collide(this.player, this.platform);
 
-        // Jewel collision
+        // Collectibles collision
         this.game.physics.arcade.overlap(this.player, this.collectibleItems, this._collectiblesCollisionHandler, null, this);
 
         // Next level detection
-        this.game.physics.arcade.overlap(this.player, this.nextLevel, this._nextLevelHandler, null, this);
+        this.game.physics.arcade.overlap(this.player, this.nextLevel, this._endLevelHandler, null, this);
 
         this.controls.update();
     }
