@@ -61,8 +61,7 @@ Game.PauseMenu.prototype.addPauseButton = function() {
 };
 
 Game.PauseMenu.prototype.drawMenu = function() {
-    var // pauseText,
-        btn,
+    var btn,
         bg;
 
     // Resetting buttons locations.
@@ -79,12 +78,6 @@ Game.PauseMenu.prototype.drawMenu = function() {
     bg.endFill();
 
     this.menuGroup.add(bg);
-
-    // if (pause) {
-    //     pauseText = new Phaser.Text(this.game, 240, 40, "Paused", {font: 'helvetica', fontSize: 18, fill: '#ffffff'});
-    //     pauseText.fixedToCamera = true;
-    //     this.menuGroup.add(pauseText);
-    // }
 
     this.buttonDefinitions.forEach(function(button) {
         btn = this.game.add.image(button.x, button.y, button.sprite);
@@ -162,7 +155,6 @@ Game.PauseMenu.prototype.showMenu = function(state) {
     this.game.paused = true;
     
     if (state === 'next_level') {
-        // this.nextLevelCallback = nextLevelCallback;
         this.resumeButton.visible = false;
         this.nextLevelButton.visible = true;
     } else {
@@ -176,10 +168,12 @@ Game.PauseMenu.prototype.showMenu = function(state) {
 
 Game.PauseMenu.prototype.shareOnFacebook = function() {
     console.log('shared on Facebook');
+    this.share('facebook');
 };
 
 Game.PauseMenu.prototype.shareOnTwitter = function() {
     console.log('shared on Twitter');
+    this.share('twitter');
 };
 
 Game.PauseMenu.prototype.nextLevel = function () {
@@ -193,4 +187,18 @@ Game.PauseMenu.prototype.nextLevel = function () {
 
     this.game.analytics.stateComplete(this.game.state.current);
     this.game.state.start(nextLevel);
+};
+
+Game.PauseMenu.prototype.share = function (network) {
+    var sharerUrl;
+
+    if (network === 'facebook') {
+        sharerUrl = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(window.location);
+    } else if (network === 'twitter') {
+        sharerUrl = "https://twitter.com/intent/tweet?url=" + encodeURIComponent(window.location) + ";text=Play the reign game"; // And add current score
+    }
+
+    window.open(sharerUrl, '_blank');
+
+    this.game.analytics.share(network, sharerUrl);
 };

@@ -18,6 +18,10 @@ Game.Analytics = {
         this.sendEvent(['game completed']);
     },
 
+    share: function (network, message) {
+        this.sendEvent(['sharing on ' + network, message]);
+    },
+
     sendEvent: function (eventData) {
         // Non-blocking analytics report.
         setTimeout(function() {
