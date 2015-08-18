@@ -42,10 +42,10 @@ Game.Map.Object.Factoid.prototype.reveal = function() {
 
     this.game.add.tween(this.bg.scale).to( { x: 1 }, 1000, Phaser.Easing.Bounce.Out, true);
     this.game.add.tween(this.bg.scale).to( { y: 1 }, 750, Phaser.Easing.Bounce.Out, true);
-    this.game.add.tween(this.bg).to( { alpha : 0.8 }, 1000, Phaser.Easing.Linear.None, true);
+    this.game.add.tween(this.bg).to( { alpha : 1 }, 1000, Phaser.Easing.Linear.None, true);
 
     this.emitter.explode(1000, 100);
-}
+};
 
 Game.Map.Object.Factoid.prototype._getBackground = function() {
 	var width = this.text.width+ 5 + (FACTOID_TEXT_PADDING * 2),
@@ -54,8 +54,8 @@ Game.Map.Object.Factoid.prototype._getBackground = function() {
 	 
 	bmd.ctx.beginPath();
 	bmd.ctx.rect(0, 0, width, height);
-	bmd.ctx.fillStyle = '#ffffff';
-	bmd.ctx.strokeStyle = '#000000';
+	bmd.ctx.fillStyle = 'rgba(255,255,255, 0.7)';
+	bmd.ctx.strokeStyle = 'rgba(0,0,0,0.6)';
 	bmd.ctx.lineWidth = 5;
 
 	bmd.ctx.fill();
@@ -64,4 +64,4 @@ Game.Map.Object.Factoid.prototype._getBackground = function() {
 
 
 	return bmd;
-}
+};

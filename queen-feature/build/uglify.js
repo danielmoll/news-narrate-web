@@ -11,7 +11,13 @@ var uglify = require('uglifyjs'),
 
 
 exports.uglify = function() {
-	var result = uglify.minify(DEST_DIR + 'bundle.min.js', { keep_fnames: true });
+	try {
+		var result = uglify.minify(DEST_DIR + 'bundle.min.js', { keep_fnames: true });	
+	}
+	catch (e) {
+		console.log(e);
+		return;
+	}
 
 	fs.writeFileSync(DEST_DIR + 'bundle.min.js', result.code);
 	console.info('Generated new bundle.min.js');

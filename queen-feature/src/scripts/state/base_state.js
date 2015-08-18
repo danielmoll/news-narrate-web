@@ -112,10 +112,7 @@ Game.State.BaseState.prototype = {
 
         this.addNextLevelPortal();
 
-        // If subclass has a createForegroundLayers method, call it.
-        if (this.createForegroundLayers && typeof this.createForegroundLayers === 'function') {
-            this.createForegroundLayers();
-        }
+
 
         // Text overlays
         // this.fixedTextGroup = this.game.add.group();
@@ -126,14 +123,25 @@ Game.State.BaseState.prototype = {
 
         this.factReference = {};
 
-        textSpawns.forEach(function(textItem) {
-            this.factReference[textItem.properties.id] = new Game.Map.Object.Factoid(this.game, textItem);
-            // this.fixedTextGroup.add(this.factReference[textItem.properties.id].bg);
-        }.bind(this));
-
         this.addPlayer();
         this.addCollectibles();
         this.controls = new Game.Controls(this.game, this.player);
+
+        // If subclass has a createForegroundLayers method, call it.
+        if (this.createForegroundLayers && typeof this.createForegroundLayers === 'function') {
+            this.createForegroundLayers();
+        }
+
+        textSpawns.forEach(function(textItem) {
+            if (textItem.properties.type === 'factoid') {
+                this.factReference[textItem.properties.id] = new Game.Map.Object.Factoid(this.game, textItem);                
+            }
+            else {
+                new Game.Map.Object.FloatingText(this.game, textItem);
+            }
+        }.bind(this));
+
+
 
         if (this.setCollisions && typeof this.setCollisions === 'function') {
             this.setCollisions();
@@ -147,7 +155,7 @@ Game.State.BaseState.prototype = {
         // Add pause button
         this.pauseMenu = new Game.PauseMenu(this.game);
 
-        
+        // this.player.bringToTop();
 
     },
 

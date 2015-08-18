@@ -11,7 +11,6 @@ Game.State.Decade_50s.prototype.setCollisions = function() {
 };
 
 Game.State.Decade_50s.prototype.createBackgroundLayers = function() {
-    this.levelModule.createLayer('bg_colour');
     this.levelModule.createLayer('background');
 };
 
