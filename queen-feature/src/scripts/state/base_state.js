@@ -44,6 +44,7 @@ Game.State.BaseState.prototype = {
 
             if (collectible.properties.sprite_key !== 'jewel') {
                 collectibleItem._isArtefact = true;
+                collectibleItem._revealFactId = collectible.properties.revealFactId;
                 this.addArtefactEmitter(collectibleItem);
             }
 
@@ -105,9 +106,9 @@ Game.State.BaseState.prototype = {
 
         // Resize the game world to match the layer dimensions
         this.platform.resizeWorld();
-        this.addPlayer();
+        
 
-        this.addCollectibles();
+        
 
         this.addNextLevelPortal();
 
@@ -117,24 +118,22 @@ Game.State.BaseState.prototype = {
         }
 
         // Text overlays
-        this.fixedTextGroup = this.game.add.group();
-        this.fixedTextGroup.fixedToCamera = false;
-        this.fixedTextGroup.alpha = 0.8;
-
-        this.parallaxTextGroup = this.game.add.group();
-        this.parallaxTextGroup.fixedToCamera = false;
-        this.parallaxTextGroup.alpha = 0.4;
+        // this.fixedTextGroup = this.game.add.group();
+        // this.fixedTextGroup.z = 0;
+        // this.fixedTextGroup.fixedToCamera = false;
 
         textSpawns = this.levelModule.findTextObjects();
 
+        this.factReference = {};
+
         textSpawns.forEach(function(textItem) {
-            if(textItem.properties.parallax) {
-                this.parallaxTextGroup.add(new Phaser.BitmapText(this.game, textItem.x, textItem.y, 'pixeltype', textItem.properties.text, textItem.properties.size));
-            } else {
-                this.fixedTextGroup.add(new Phaser.BitmapText(this.game, textItem.x, textItem.y, 'pixeltype', textItem.properties.text, textItem.properties.size));
-            }
+            this.factReference[textItem.properties.id] = new Game.Map.Object.Factoid(this.game, textItem);
+            // this.fixedTextGroup.add(this.factReference[textItem.properties.id].bg);
         }.bind(this));
 
+        this.addPlayer();
+        this.addCollectibles();
+        this.controls = new Game.Controls(this.game, this.player);
 
         if (this.setCollisions && typeof this.setCollisions === 'function') {
             this.setCollisions();
@@ -144,14 +143,17 @@ Game.State.BaseState.prototype = {
         this.scoreDisplay = new Game.LevelScore(this.game, this.levelKey, this.collectibleItems);
 
         // Add controls
-        this.controls = new Game.Controls(this.game, this.player);
 
         // Add pause button
         this.pauseMenu = new Game.PauseMenu(this.game);
+
+        
+
     },
 
     _collectiblesCollisionHandler: function(sprite1, sprite2) {
-        var collectible = null;
+        var collectible = null,
+            factoid;
 
         if (sprite2._emitter) {
             sprite2._emitter.on = false;
@@ -183,6 +185,11 @@ Game.State.BaseState.prototype = {
 
         // Add item to score.
         this.scoreDisplay.scoreItem(collectible.properties, this.levelKey);
+
+        // reveal associated factoid
+        if (collectible._revealFactId) {
+            this.factReference[collectible._revealFactId].reveal();
+        }
     },
 
     _nextLevelHandler: function() {
