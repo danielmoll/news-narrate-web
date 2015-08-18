@@ -25,6 +25,7 @@ Game.State.Preloader.prototype = {
         // Load our sprites
         this.load.spritesheet('player', 'assets/sprites/queen-sprite.png', 32, 64, 6);
         this.load.spritesheet('next_button', 'assets/sprites/next_button.png', 100, 30);
+        this.game.load.image('navigation_bg', 'assets/sprites/navigation.png');
         this.game.load.image('sparkle1', 'assets/sprites/sparkle1.png');
         this.game.load.image('sparkle2', 'assets/sprites/sparkle2.png');
         this.game.load.image('sparkle3', 'assets/sprites/sparkle3.png');
@@ -52,16 +53,6 @@ Game.State.Preloader.prototype = {
         this.game.load.image('the_sun', 'assets/sprites/60s_the_sun.png');
         this.game.load.image('the_sun_grey', 'assets/sprites/60s_the_sun_grey.png');
         this.game.load.image('parallax_1960s', 'assets/tiles/parallax_1960s.png');
-
-
-        // Load navigation button images
-        this.game.load.image('button_level_50s', 'assets/sprites/level_buttons/level_50s.png');
-        this.game.load.image('button_level_60s', 'assets/sprites/level_buttons/level_60s.png');
-        this.game.load.image('button_level_70s', 'assets/sprites/level_buttons/level_70s.png');
-        this.game.load.image('button_level_80s', 'assets/sprites/level_buttons/level_80s.png');
-        this.game.load.image('button_level_90s', 'assets/sprites/level_buttons/level_90s.png');
-        this.game.load.image('button_level_00s', 'assets/sprites/level_buttons/level_00s.png');
-        this.game.load.image('button_level_10s', 'assets/sprites/level_buttons/level_10s.png');
         
         // virtual joystick
         this.load.image('compass', 'assets/sprites/compass_rose.png');

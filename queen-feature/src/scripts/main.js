@@ -40,13 +40,13 @@ Game.Map.MAPS = [
 ];
 
 Game.Levels = [
-    { text: '50s', stateKey: 'decade_50s', spriteKey: 'button_level_50s', collectibles: ['record', 'tv', 'mini']},
-    { text: '60s', stateKey: 'decade_60s', spriteKey: 'button_level_60s', collectibles: ['beatles', 'the_sun', 'worldcup']},
-    { text: '70s', stateKey: null, spriteKey: 'button_level_70s', collectibles: ['.', '.', '.']},
-    { text: '80s', stateKey: 'tutorial', spriteKey: 'button_level_80s', collectibles: ['corgi', '.', '.']},
-    { text: '90s', stateKey: null, spriteKey: 'button_level_90s', collectibles: ['.', '.', '.']},
-    { text: '00s', stateKey: null, spriteKey: 'button_level_00s', collectibles: ['.', '.', '.']},
-    { text: '10s', stateKey: 'decade_2010s', spriteKey: 'button_level_10s', collectibles: ['corgi', 'crown', '.']}
+    { text: '50', stateKey: 'decade_50s', collectibles: ['record', 'tv', 'mini']},
+    { text: '60', stateKey: 'decade_60s', collectibles: ['beatles', 'the_sun', 'worldcup']},
+    { text: '70', stateKey: null, collectibles: ['.', '.', '.']},
+    { text: '80', stateKey: 'tutorial', collectibles: ['corgi', '.', '.']},
+    { text: '90', stateKey: null, collectibles: ['.', '.', '.']},
+    { text: '00', stateKey: null, collectibles: ['.', '.', '.']},
+    { text: 'NOW', stateKey: 'decade_2010s', collectibles: ['corgi', 'crown', '.']}
 ];
 
 Game.init = function() {
