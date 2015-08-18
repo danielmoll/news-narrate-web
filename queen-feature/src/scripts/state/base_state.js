@@ -23,15 +23,16 @@ Game.State.BaseState.prototype = {
     addPlayer: function() {
         // Loading the player
         var spawn = this.levelModule.findObjectsByType('player_spawn');
-        this.player = this.game.add.sprite(spawn[0].x, spawn[0].y - 32, 'player');
+        this.player = this.game.add.sprite(spawn[0].x, spawn[0].y - 59, 'player');
+
         this.game.physics.arcade.enable(this.player);
         // this.player.body.bounce.y = 0.2;
         // this.player.body.linearDamping = 1;
         this.player.body.collideWorldBounds = true;
         this.game.camera.follow(this.player);
 
-        this.player.animations.add('left', [0, 1], 5, true);
-        this.player.animations.add('right', [3,4], 5, true);
+        this.player.animations.add('left', [1,2], 5, true);
+        this.player.animations.add('right', [5,6], 5, true);
     },
 
     addCollectibles: function() {

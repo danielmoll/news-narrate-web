@@ -7,6 +7,11 @@ Game.Controls = function(game, player) {
     this.game = game;
     this.player = player;
     this.moving = false;
+    this.lastDirection = 'right';
+    this.playerStoppedFrames = {
+        left: 3,
+        right: 4
+    };
     this.create();
 };
 
@@ -35,7 +40,7 @@ Game.Controls.prototype.handleDown = function(e) {
 Game.Controls.prototype.handleUp = function(e) {
     if (this.game.input.totalActivePointers === 0) {
         this.player.animations.stop();
-        this.player.frame = 2;
+        this.player.frame = this.playerStoppedFrames[this.lastDirection];
         this.player.body.velocity.x = 0;
         this.moving = false;
     }
@@ -45,11 +50,13 @@ Game.Controls.prototype.handleUp = function(e) {
 };
 
 Game.Controls.prototype.moveLeft = function(speed) {
+    this.lastDirection = 'left';
     this.player.body.velocity.x = -PLAYER_SPEED;
     this.player.animations.play('left');
 };
 
 Game.Controls.prototype.moveRight = function(speed) {
+    this.lastDirection = 'right';
     this.player.body.velocity.x = PLAYER_SPEED;
     this.player.animations.play('right');
 };
@@ -105,7 +112,7 @@ Game.Controls.prototype.update = function () {
 
     if (this.player.body.velocity.x === 0) {
         this.player.animations.stop();
-        this.player.frame = 2;
+        this.player.frame = this.playerStoppedFrames[this.lastDirection];
     }
 
     // this.game.debug.inputInfo(32, 32);

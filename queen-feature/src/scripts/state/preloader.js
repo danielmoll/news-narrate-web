@@ -23,7 +23,7 @@ Game.State.Preloader.prototype = {
         this.game.load.image('alexs_house', 'assets/sprites/alexshouse.png');
 
         // Load our sprites
-        this.load.spritesheet('player', 'assets/sprites/queen-sprite.png', 32, 64, 6);
+        this.load.spritesheet('player', 'assets/sprites/alex-sprite.png', 59, 64, 8);
         this.load.spritesheet('next_button', 'assets/sprites/next_button.png', 100, 30);
         this.game.load.image('navigation_bg', 'assets/sprites/navigation.png');
         this.game.load.image('sparkle1', 'assets/sprites/sparkle1.png');
