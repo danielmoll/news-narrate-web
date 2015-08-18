@@ -4,7 +4,7 @@ var FACTOID_TEXT_PADDING = 10;
 
 Game.Map.Object.Factoid = function(game, textItem) {
 	this.game = game;
-	this.text = new Phaser.Text(game, 0, 0, textItem.properties.text, { font: '20px silkscreennormal', wordWrap: true, wordWrapWidth: (32 * textItem.properties.tiles), align: 'center'} );
+	this.text = new Phaser.Text(game, 0, 0, textItem.properties.text, { font: '16px silkscreennormal', wordWrap: true, wordWrapWidth: (32 * textItem.properties.tiles), align: 'center'} );
 	this.bg = game.add.sprite(textItem.x, textItem.y, this._getBackground());
 
     this.bg.anchor.set(0.5, 0.5);

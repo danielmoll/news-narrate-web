@@ -51,6 +51,8 @@ Game.State.Preloader.prototype = {
         this.game.load.image('worldcup_grey', 'assets/sprites/60s_worldcup_grey.png');
         this.game.load.image('the_sun', 'assets/sprites/60s_the_sun.png');
         this.game.load.image('the_sun_grey', 'assets/sprites/60s_the_sun_grey.png');
+        this.game.load.image('parallax_1960s', 'assets/tiles/parallax_1960s.png');
+
 
         // Load navigation button images
         this.game.load.image('button_level_50s', 'assets/sprites/level_buttons/level_50s.png');
