@@ -195,7 +195,7 @@ Game.PauseMenu.prototype.share = function (network) {
     if (network === 'facebook') {
         sharerUrl = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(window.location);
     } else if (network === 'twitter') {
-        sharerUrl = "https://twitter.com/intent/tweet?url=" + encodeURIComponent(window.location) + ";text=Play the reign game"; // And add current score
+        sharerUrl = "https://twitter.com/intent/tweet?url=" + encodeURIComponent(window.location) + ";text=Can you beat my score of " + Game.Score.getTotalScore() + " in The Reign Game?"; // And add current score
     }
 
     window.open(sharerUrl, '_blank');
