@@ -44,6 +44,7 @@ Game.State.BaseState.prototype = {
 
             if (collectible.properties.sprite_key !== 'jewel') {
                 collectibleItem._isArtefact = true;
+                collectibleItem.anchor.set(0.5, 0.5);
                 collectibleItem._revealFactId = collectible.properties.revealFactId;
                 this.addArtefactEmitter(collectibleItem);
             }
@@ -52,7 +53,6 @@ Game.State.BaseState.prototype = {
 
             this.game.physics.arcade.enable(collectibleItem);
             collectibleItem.body.allowGravity = false;
-            collectibleItem.anchor = new Phaser.Point(0.5, 0.5);
             this.collectibleItems.push(collectibleItem);
         }.bind(this));
     },
