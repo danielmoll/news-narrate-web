@@ -18,14 +18,13 @@ Game.LevelScore = function(game, levelKey, collectibles) {
 Game.LevelScore.prototype.addDisplay = function() {
 
     var collx = 8,
-        jewelAdded = false,
         spriteName,
         collected,
-        collBg,
+        collectibleScoreItem,
         scale;
 
-    this.scoreBg = this.game.add.sprite(this.game.width - SCORE_BACKGROUND_WIDTH, SCORE_POSITION_Y, this._getBackground());
-    this.scoreBg.fixedToCamera = true;
+    this.scoreBackground = this.game.add.sprite(this.game.width - SCORE_BACKGROUND_WIDTH, SCORE_POSITION_Y, this._getBackground());
+    this.scoreBackground.fixedToCamera = true;
 
     this.collectibles.forEach(function(collectible) {
         if (collectible.properties.sprite_key !== 'jewel') {
@@ -42,23 +41,23 @@ Game.LevelScore.prototype.addDisplay = function() {
                 spriteName += '_grey';
             }
 
-            collBg = this.game.add.sprite(collx, 16, spriteName);
-            scale = Math.min(this.collectibleSize / collBg.width, this.collectibleSize / collBg.height);
-            collBg.scale.setTo(scale, scale);
-            collBg.anchor.setTo(0, 0.5);
+            collectibleScoreItem = this.game.add.sprite(collx, 16, spriteName);
+            scale = Math.min(this.collectibleSize / collectibleScoreItem.width, this.collectibleSize / collectibleScoreItem.height);
+            collectibleScoreItem.scale.setTo(scale, scale);
+            collectibleScoreItem.anchor.setTo(0, 0.5);
 
-            this.sprites[collectible.properties.sprite_key] = collBg;
+            this.sprites[collectible.properties.sprite_key] = collectibleScoreItem;
 
-            collx += (collBg.width) + 8;
+            collx += (collectibleScoreItem.width) + 8;
 
-            this.scoreBg.addChild(collBg);
+            this.scoreBackground.addChild(collectibleScoreItem);
         }
     }.bind(this));
 
     this.scoreJewel = this.game.add.sprite(collx, 0, 'jewel');
     this.scoreText = new Phaser.Text(this.game, collx + 32, 0, '0', { font: '24px silkscreennormal', } );
-    this.scoreBg.addChild(this.scoreText);
-    this.scoreBg.addChild(this.scoreJewel);
+    this.scoreBackground.addChild(this.scoreText);
+    this.scoreBackground.addChild(this.scoreJewel);
 };
 
 Game.LevelScore.prototype.scoreItem = function (scoredItem, levelKey) {
