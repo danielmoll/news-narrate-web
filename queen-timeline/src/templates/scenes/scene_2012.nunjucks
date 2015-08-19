@@ -4,6 +4,7 @@
 {% set sceneGroup = 'group_00s' %}
 {% set sceneVideo = 'http://res.cloudinary.com/skynews/video/upload/c_scale,w_1280/v1439965618/queen-timeline/DIGIQUEENTIMELINEDIAMONDJUBILEE1508161524569314397351372723000.mp4' %}
 {% set sceneVideoPoster = 'http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_800/v1439929790/queen-timeline/16x9/2012_Diamond_Jubilee.jpg' %}
+{% set sceneVideoLabel = '2012 - Diamond Jubilee River Pageant' %}
 
 {% block title %}
 <div class="scene__title">2012</div>

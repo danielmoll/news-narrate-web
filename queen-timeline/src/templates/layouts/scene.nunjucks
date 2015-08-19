@@ -12,7 +12,8 @@
 			{{ video.render({
 				src: sceneVideo,
 				poster: sceneVideoPoster,
-				caption: sceneVideoCaption
+				caption: sceneVideoCaption,
+				label: sceneVideoLabel
 			}) }}
 		{% endif %}
 		</div>
