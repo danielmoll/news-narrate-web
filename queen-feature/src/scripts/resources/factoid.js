@@ -1,3 +1,4 @@
+/* global Game, Phaser */
 'use strict';
 
 var FACTOID_TEXT_PADDING = 10;

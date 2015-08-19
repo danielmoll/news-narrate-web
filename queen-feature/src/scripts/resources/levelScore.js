@@ -1,6 +1,9 @@
 /* global Phaser, Game */
 'use strict';
 
+var SCORE_POSITION_Y = 0,
+    SCORE_BACKGROUND_WIDTH = 150;
+
 Game.LevelScore = function(game, levelKey, collectibles) {
     this.game = game;
     this.sprites = {};
@@ -14,32 +17,19 @@ Game.LevelScore = function(game, levelKey, collectibles) {
 
 Game.LevelScore.prototype.addDisplay = function() {
 
-    var collx = this.game.width - 33,
+    var collx = 8,
         jewelAdded = false,
         spriteName,
         collected,
         collBg,
         scale;
 
-    this.scoreGroup = this.game.add.group();
-    this.scoreGroup.fixedToCamera = true;
-
-    this.scoreText = new Phaser.BitmapText(this.game, collx, 7, 'nokia', '0', 20);
-    this.scoreGroup.add(this.scoreText);
+    this.scoreBg = this.game.add.sprite(this.game.width - SCORE_BACKGROUND_WIDTH, SCORE_POSITION_Y, this._getBackground());
+    this.scoreBg.fixedToCamera = true;
 
     this.collectibles.forEach(function(collectible) {
-        if (collectible.properties.sprite_key === 'jewel') {
-            if (!jewelAdded) {
-                jewelAdded = true;
-                collx -= 32;
-
-                var scoreJewel = this.game.add.sprite(collx, 0, 'jewel');
-
-                this.scoreGroup.add(scoreJewel);
-
-                collx -= 20;
-            }
-        } else {
+        if (collectible.properties.sprite_key !== 'jewel') {
+         
             spriteName = collectible.properties.sprite_key;
             
             this.collectedItems && this.collectedItems.scoredItems.forEach(function(scoredItem) {
@@ -52,16 +42,23 @@ Game.LevelScore.prototype.addDisplay = function() {
                 spriteName += '_grey';
             }
 
-            collBg = this.game.add.sprite(collx, 7, spriteName);
+            collBg = this.game.add.sprite(collx, 16, spriteName);
             scale = Math.min(this.collectibleSize / collBg.width, this.collectibleSize / collBg.height);
             collBg.scale.setTo(scale, scale);
-            
-            this.scoreGroup.add(collBg);
+            collBg.anchor.setTo(0, 0.5);
+
             this.sprites[collectible.properties.sprite_key] = collBg;
 
-            collx -= (collBg.width * scale + 16);
+            collx += (collBg.width) + 8;
+
+            this.scoreBg.addChild(collBg);
         }
     }.bind(this));
+
+    this.scoreJewel = this.game.add.sprite(collx, 0, 'jewel');
+    this.scoreText = new Phaser.Text(this.game, collx + 32, 0, '0', { font: '24px silkscreennormal', } );
+    this.scoreBg.addChild(this.scoreText);
+    this.scoreBg.addChild(this.scoreJewel);
 };
 
 Game.LevelScore.prototype.scoreItem = function (scoredItem, levelKey) {
@@ -102,4 +99,17 @@ Game.LevelScore.prototype.updatePoints = function (scoredItems) {
     });
 
     this.scoreText && this.scoreText.setText(score);
+};
+
+Game.LevelScore.prototype._getBackground = function() {
+    var height = 32,
+        bmd = this.game.add.bitmapData(SCORE_BACKGROUND_WIDTH, height);
+     
+    bmd.ctx.beginPath();
+    bmd.ctx.rect(0, 0, SCORE_BACKGROUND_WIDTH, height);
+    bmd.ctx.fillStyle = 'rgba(255,255,255, 0.7)';
+
+    bmd.ctx.fill();
+
+    return bmd;
 };
