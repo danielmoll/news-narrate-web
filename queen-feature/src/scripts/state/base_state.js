@@ -30,9 +30,13 @@ Game.State.BaseState.prototype = {
         // this.player.body.linearDamping = 1;
         this.player.body.collideWorldBounds = true;
         this.game.camera.follow(this.player);
+        this.player.body.width = 32;
+        this.player.body.height = 50;
+        var offset = new Phaser.Point(5,14);
+        this.player.body.offset = offset;
 
-        this.player.animations.add('left', [1,2], 5, true);
-        this.player.animations.add('right', [5,6], 5, true);
+        this.player.animations.add('left', [1,0,1,2], 7, true);
+        this.player.animations.add('right', [6,7,6,5], 6, true);
     },
 
     addCollectibles: function() {

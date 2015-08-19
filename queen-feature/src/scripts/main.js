@@ -36,13 +36,14 @@ Game.Map.MAPS = [
     'tutorial',
     'decade_50s',
     'decade_60s',
+    'decade_70s',
     'decade_2010s'
 ];
 
 Game.Levels = [
     { text: '50', stateKey: 'decade_50s', collectibles: ['record', 'tv', 'mini']},
     { text: '60', stateKey: 'decade_60s', collectibles: ['beatles', 'the_sun', 'worldcup']},
-    { text: '70', stateKey: null, collectibles: ['.', '.', '.']},
+    { text: '70', stateKey: 'decade_70s', collectibles: ['sex_pistols', 'starwars', 'maggie']},
     { text: '80', stateKey: 'tutorial', collectibles: ['corgi', '.', '.']},
     { text: '90', stateKey: null, collectibles: ['.', '.', '.']},
     { text: '00', stateKey: null, collectibles: ['.', '.', '.']},
@@ -65,6 +66,7 @@ Game.init = function() {
     game.state.add('intro_50s', Game.State.Intro_50s);
     game.state.add('decade_50s', Game.State.Decade_50s);
     game.state.add('decade_60s', Game.State.Decade_60s);
+    game.state.add('decade_70s', Game.State.Decade_70s);
     game.state.add('decade_2010s', Game.State.Decade_2010s);
     game.state.add('end_screen', Game.State.EndScreen);
 
