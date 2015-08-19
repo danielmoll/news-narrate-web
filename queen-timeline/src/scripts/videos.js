@@ -19,7 +19,7 @@ Video = function(el) {
 Video.prototype = {
 	onInView: function() {
 		if (!this.customEvent) {
-			analytics.videoInView($(this.el).data('id'));
+			analytics.videoInView($(this.el).data('label'), $(this.el).data('src'));
 			this.customEvent = true;
 		}
 

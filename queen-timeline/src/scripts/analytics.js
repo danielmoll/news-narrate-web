@@ -4,12 +4,13 @@ var exports = {};
 	
 
 exports = {
-    videoInView: function (name) {
-        this.sendEvent(['video in view', name]);
+    videoInView: function (label, url) {
+        this.sendEvent(['Video in view', label, url]);
     },
 
     sendEvent: function (eventData) {
-		ga('send', 'event', 'Queen Timeline', eventData[0], eventData[1]);
+    	if (!window.ga) return;
+		ga('send', 'event', 'Queen Timeline', eventData[0], eventData[1], eventData[2]);
     }
 };
 
