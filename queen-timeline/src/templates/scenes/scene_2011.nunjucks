@@ -2,12 +2,13 @@
 
 {% set sceneName = 'scene_2011' %}
 {% set sceneGroup = 'group_00s' %}
-{% set sceneImage = 'http://res.cloudinary.com/skynews/image/upload/c_scale,w_{width}/v1437399881/narrate-people-smuggler/map4x3.jpg' %}
+{% set sceneVideo = 'http://res.cloudinary.com/skynews/video/upload/v1439965396/queen-timeline/DIGIQUEENTIMELINEWILLIAMKATEWEDDING1508161524567514397351411163000.mp4' %}
+{% set sceneVideoPoster = 'http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_800/v1439929786/queen-timeline/16x9/2011_William_Catherine_Wedding.jpg' %}
 
 {% block title %}
 <div class="scene__title">2011</div>
 {% endblock %}
 
 {% block content %}
-<p class="scene__text">The Queen embarks on the first state visit to Ireland since the country gained independence.</p>
+<p class="scene__text">The Queen&rsquo;s grandson Prince William marries Catherine Middleton. He is the second of the Queen&rsquo;s grandchildren to marry.</p>
 {% endblock %}

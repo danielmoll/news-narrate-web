@@ -1,0 +1,13 @@
+{% extends '../layouts/scene.nunjucks' %}
+
+{% set sceneName = 'scene_2012a' %}
+{% set sceneGroup = 'group_00s' %}
+{% set sceneImage = 'http://res.cloudinary.com/skynews/image/upload/c_scale,h_204,q_70,w_{width}/v1439929789/queen-timeline/16x9/2012_Olympics.jpg' %}
+
+{% block title %}
+<div class="scene__title">2012</div>
+{% endblock %}
+
+{% block content %}
+<p class="scene__text">At the London 2012 Olympics the Queen jumps out of a helicopter to mark the Opening Ceremony. In fact, it is a stunt double, but embodies the jovial nature with which the games are treated by the nation.</p>
+{% endblock %}

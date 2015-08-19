@@ -2,12 +2,13 @@
 
 {% set sceneName = 'scene_1964' %}
 {% set sceneGroup = 'group_60s' %}
-{% set sceneImage = 'http://res.cloudinary.com/skynews/image/upload/c_scale,w_{width}/v1439296075/queen-timeline/1964_edward_born.jpg' %}
+{% set sceneVideo = 'http://res.cloudinary.com/skynews/video/upload/v1439931810/queen-timeline/DIGIQUEENTIMELINEEDWARDBORN1508161524536814397351237823000.mp4' %}
+{% set sceneVideoPoster = 'http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_800/v1439929772/queen-timeline/16x9/1964_Prince_Edward_born.jpg' %}
 
 {% block title %}
 <div class="scene__title">1964</div>
 {% endblock %}
 
 {% block content %}
-<p class="scene__text">Prince Edward is born. Becoming the Earl of Wessex, he is the youngest of the family. His brother Charles and sister Anne were born before the Queen&rsquo;s reign begins.</p>
+<p class="scene__text">Prince Edward is born. Becoming the Earl of Wessex, he is the youngest of the family. His brother Charles and sister Anne were born before the Queen&rsquo;s reign began.</p>
 {% endblock %}
