@@ -9,5 +9,5 @@
 {% endblock %}
 
 {% block content %}
-<p class="scene__text">More than a million people line the streets to celebrate the Queen's silver jubilee, marking 25 years of her reign.</p>
+<p class="scene__text">More than a million people line the streets to celebrate the Queen&rsquo;s silver jubilee, marking 25 years of her reign.</p>
 {% endblock %}
