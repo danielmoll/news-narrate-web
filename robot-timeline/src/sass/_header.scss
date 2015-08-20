@@ -1,0 +1,38 @@
+.header {
+	width: 100%;
+	height: 60px;
+	background: white;
+}
+
+.header__logo {
+	margin: 10px 0 0 10px;
+	height: 40px;
+	float: left;
+}
+
+.header__link {
+	display: block;
+}
+
+.header__list {
+	float: right;
+	margin: 18px 15px 0 0;
+}
+
+.header__item {
+	float: left;
+}
+
+.header__item:first-child {
+	margin-right: 20px;	
+}
+
+.header__social-icon {
+	width: 22px;
+	height: 22px;
+	opacity: 0.6;
+}
+
+.header__link:hover .header__social-icon {
+	opacity: 1;
+}

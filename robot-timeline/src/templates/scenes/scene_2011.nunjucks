@@ -1,0 +1,15 @@
+{% extends '../layouts/scene.nunjucks' %}
+
+{% set sceneName = 'scene_2011' %}
+{% set sceneGroup = 'group_00s' %}
+{% set sceneVideo = 'http://res.cloudinary.com/skynews/video/upload/v1439965396/queen-timeline/DIGIQUEENTIMELINEWILLIAMKATEWEDDING1508161524567514397351411163000.mp4' %}
+{% set sceneVideoPoster = 'http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_800/v1439929786/queen-timeline/16x9/2011_William_Catherine_Wedding.jpg' %}
+{% set sceneVideoLabel = '2011 - Prince William marries Catherine Middleton' %}
+
+{% block title %}
+<div class="scene__title">2011</div>
+{% endblock %}
+
+{% block content %}
+<p class="scene__text">The Queen&rsquo;s grandson Prince William marries Catherine Middleton. He is the second of the Queen&rsquo;s grandchildren to marry.</p>
+{% endblock %}

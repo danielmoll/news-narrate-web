@@ -1,0 +1,15 @@
+{% extends '../layouts/scene.nunjucks' %}
+
+{% set sceneName = 'scene_1953a' %}
+{% set sceneGroup = 'group_50s' %}
+{% set sceneVideo = 'http://res.cloudinary.com/skynews/video/upload/v1439931179/queen-timeline/DIGIQUEENTIMELINE1954COMMONWEALTHTOUR14397360908533000.mp4' %}
+{% set sceneVideoPoster = 'http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_800/v1439929775/queen-timeline/16x9/1953_Commonwealth_tour.jpg' %}
+{% set sceneVideoLabel = '1953 - Queen Elizabeth embarks on her first Commonweath tour' %}
+
+{% block title %}
+<div class="scene__title">1953</div>
+{% endblock %}
+
+{% block content %}
+<p class="scene__text">Queen Elizabeth embarks on her first Commonweath tour. Travelling by air, sea and rail, she tours the world for almost six months. She visits 15 Commonwealth countries as Queen in the 1950s alone.</p>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends '../layouts/scene.nunjucks' %}
+
+{% set sceneName = 'scene_1952' %}
+{% set sceneGroup = 'group_50s' %}
+{% set sceneVideo = 'http://res.cloudinary.com/skynews/video/upload/v1439929325/queen-timeline/DIGIQUEENTIMELINEKINGGEORGEFUNERAL14397362088273000.mp4' %}
+{% set sceneVideoPoster = 'http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_800/v1439929772/queen-timeline/16x9/1952_George_VI.jpg' %}
+{% set sceneVideoLabel = '1952 - George VI dies aged 56' %}
+
+{% block title %}
+<div class="scene__title">1952</div>
+{% endblock %}
+
+{% block content %}
+<p class="scene__text">George VI dies aged 56. His daughter, Princess Elizabeth, on hearing the news returns from a trip to Kenya. She is proclaimed Queen of the United Kingdom at the age of 25.</p>
+{% endblock %}

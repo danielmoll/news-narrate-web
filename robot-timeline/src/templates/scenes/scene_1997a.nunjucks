@@ -1,0 +1,15 @@
+{% extends '../layouts/scene.nunjucks' %}
+
+{% set sceneName = 'scene_1997a' %}
+{% set sceneGroup = 'group_90s' %}
+{% set sceneVideo = 'http://res.cloudinary.com/skynews/video/upload/v1439964537/queen-timeline/DIGIQUEENTIMELINEDIANADEATHSTATEMEN1508161524566514397352221593000.mp4' %}
+{% set sceneVideoPoster = 'http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_800/v1439929783/queen-timeline/16x9/1997_Princess_Diana_dies.jpg' %}
+{% set sceneVideoLabel = '1997 - Diana death' %}
+
+{% block title %}
+<div class="scene__title">1997</div>
+{% endblock %}
+
+{% block content %}
+<p class="scene__text">After criticism of her handling of Diana&rsquo;s death, the Queen returns to London and addresses the public.</p>
+{% endblock %}

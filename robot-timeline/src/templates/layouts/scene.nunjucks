@@ -1,0 +1,25 @@
+{% import '../macros/image.nunjucks' as image %}
+{% import '../macros/video.nunjucks' as video %}
+
+<div class="scene scene--{{ aspect|default('4x3') }} js-scene js-in-view" id="{{ sceneName }}" data-group-name="{{ sceneGroup }}">
+	{% if sceneImage or sceneVideo %}
+		<div class="scene__media">
+		{% if sceneImage %}
+			{{ image.render({
+				url: sceneImage
+			}) }}
+		{% elif sceneVideo %}
+			{{ video.render({
+				src: sceneVideo,
+				poster: sceneVideoPoster,
+				caption: sceneVideoCaption,
+				label: sceneVideoLabel
+			}) }}
+		{% endif %}
+		</div>
+	{% endif %}
+
+	{% block title %}{% endblock %}
+
+	{% block content %}{% endblock %}
+</div>

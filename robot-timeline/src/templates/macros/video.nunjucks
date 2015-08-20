@@ -1,0 +1,6 @@
+{% macro render(options) %}
+	<div class="video video--{{ options.aspect|default('4x3') }}{% if options.classes %} {{ options.classes }}{% endif %}">
+		<video class="video__item js-video js-in-view" data-label="{{ options.label }}" preload="none" src="{{ options.src }}" poster="{{ options.poster }}" loop></video>
+		{% if options.caption %}<div class="video__caption">{{ options.caption }}</div>{% endif %}
+	</div>
+{% endmacro %}
