@@ -1,5 +1,6 @@
 .channel {
 	position: relative;
+	height: 100vw;
 }
 
 .channel__item {
@@ -7,63 +8,80 @@
 	overflow: hidden;
 	position: absolute;
 	top: 0;
+	height: 100%;
 }
 
 .channel__item-inner {
-	width: 90%;
+	// width: 90%;
 }
 
-.channel__item--killer .channel__item-inner {
+.channel__item--killer {
 	background-color: $killer;
 }
 
-.channel__item--surgical .channel__item-inner{
+.channel__item--surgical {
 	background-color: $surgical;
 }
 
-.channel__item--prosthetic .channel__item-inner{
+.channel__item--prosthetic{
 	background-color: $prosthetic;
 }
 
 
 .scenes--killer {
 	.channel__item--killer {
-		transform: translateX(0);
+		transform: translateX(-5%);
+		-webkit-filter: brightness(1);
 	}
 
 	.channel__item--surgical {
 		transform: translateX(90%);
+		-webkit-filter: brightness(0.4);
+		
 	}
 
 	.channel__item--prosthetic {
 		transform: translateX(95%);
+		-webkit-filter: brightness(0.4);
 	}
 }
 
 .scenes--surgical {
 	.channel__item--killer {
-		transform: translateX(-90%);
+		transform: translateX(-5%);
+		-webkit-filter: brightness(0.4);
+
 	}
 
 	.channel__item--surgical {
 		transform: translateX(5%);
+		-webkit-filter: brightness(1);
+
 	}
 
 	.channel__item--prosthetic {
 		transform: translateX(95%);
+		-webkit-filter: brightness(0.4);
+
 	}
 }
 
 .scenes--prosthetic {
 	.channel__item--killer {
-		transform: translateX(-95%);
+		transform: translateX(-5%);
+		-webkit-filter: brightness(0.4);
+
 	}
 
 	.channel__item--surgical {
-		transform: translateX(-90%);
+		transform: translateX(5%);
+		-webkit-filter: brightness(0.4);
+
 	}
 
 	.channel__item--prosthetic {
 		transform: translateX(10%);
+		-webkit-filter: brightness(1);
+
 	}
 }

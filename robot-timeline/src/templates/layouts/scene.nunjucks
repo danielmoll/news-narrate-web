@@ -4,9 +4,7 @@
 <div class="scene scene--{{ aspect|default('4x3') }} js-in-view">
 	<div class="channel">
 		<div class="channel__item channel__item--killer">
-			<div class="channel__item-inner">
 				{% block killer %}{% endblock %}
-			</div>
 		</div>
 		<div class="channel__item channel__item--surgical">
 			<div class="channel__item-inner">

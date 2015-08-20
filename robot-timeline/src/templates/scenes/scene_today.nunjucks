@@ -11,16 +11,16 @@
 {% endblock %}
 
 {% block killer %}
-<img src="images/sageconsole1960s.jpg" class="image">
+<img src="images/todaymilitary.jpg" class="image">
 <p class="scene__text">George VI dies aged 56. His daughter, Princess Elizabeth, on hearing the news returns from a trip to Kenya. She is proclaimed Queen of the United Kingdom at the age of 25.</p>
 {% endblock %}
 
 {% block surgical %}
-<img src="images/neonatalLrg.jpg" class="image">
+<img src="images/todaysurgical.jpg" class="image">
 <p class="scene__text">George VI dies aged 56. His daughter, Princess Elizabeth, on hearing the news returns from a trip to Kenya. She is proclaimed Queen of the United Kingdom at the age of 25.</p>
 {% endblock %}
 
 {% block prosthetic %}
-<img src="images/prostheticlimbs.jpg" class="image">
+<img src="images/todayprosthetics.jpg" class="image">
 <p class="scene__text">George VI dies aged 56. His daughter, Princess Elizabeth, on hearing the news returns from a trip to Kenya. She is proclaimed Queen of the United Kingdom at the age of 25.</p>
 {% endblock %}

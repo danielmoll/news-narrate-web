@@ -33,9 +33,21 @@
 
 		{{ navigation.render() }}
 
-		<div class="scenes">
+		<div class="scenes scenes--killer">
 
 			<h2 class="scene__heading">50 Years Ago</h2>
+
+			{% include "scenes/scene_1960s.nunjucks" %}
+
+			<h2 class="scene__heading">20 Years Ago</h2>
+
+			{% include "scenes/scene_1990s.nunjucks" %}
+
+			<h2 class="scene__heading">Today</h2>
+
+			{% include "scenes/scene_today.nunjucks" %}
+
+			<h2 class="scene__heading">Future</h2>
 
 			{% include "scenes/scene_1960s.nunjucks" %}
 

@@ -2,9 +2,9 @@
 	<nav class="navigation">
 		<div class="navigation__wrapper js-navigation">
 			<ol class="navigation__list">
-				<li class="navigation__item navigation__item--killer"><a class="navigation__link" data-channel="killer" href="#">Killer Military Robots</a></li>
-				<li class="navigation__item navigation__item--surgical"><a class="navigation__link"  data-channel="surgical" href="#">Surgical Robots</a></li>
-				<li class="navigation__item navigation__item--prosthetic"><a class="navigation__link" data-channel="prosthetic" href="#">Prosthetic Robots</a></li>
+				<li class="navigation__item navigation__item--killer"><a class="navigation__link" data-channel="killer" href="#">Military</a></li>
+				<li class="navigation__item navigation__item--surgical"><a class="navigation__link"  data-channel="surgical" href="#">Surgery</a></li>
+				<li class="navigation__item navigation__item--prosthetic"><a class="navigation__link" data-channel="prosthetic" href="#">Prosthetics</a></li>
 			</ol>
 
 		</div>
