@@ -1,0 +1,69 @@
+.channel {
+	position: relative;
+}
+
+.channel__item {
+	transition: all 250ms ease-out;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+}
+
+.channel__item-inner {
+	width: 90%;
+}
+
+.channel__item--killer .channel__item-inner {
+	background-color: $killer;
+}
+
+.channel__item--surgical .channel__item-inner{
+	background-color: $surgical;
+}
+
+.channel__item--prosthetic .channel__item-inner{
+	background-color: $prosthetic;
+}
+
+
+.scenes--killer {
+	.channel__item--killer {
+		transform: translateX(0);
+	}
+
+	.channel__item--surgical {
+		transform: translateX(90%);
+	}
+
+	.channel__item--prosthetic {
+		transform: translateX(95%);
+	}
+}
+
+.scenes--surgical {
+	.channel__item--killer {
+		transform: translateX(-90%);
+	}
+
+	.channel__item--surgical {
+		transform: translateX(5%);
+	}
+
+	.channel__item--prosthetic {
+		transform: translateX(95%);
+	}
+}
+
+.scenes--prosthetic {
+	.channel__item--killer {
+		transform: translateX(-95%);
+	}
+
+	.channel__item--surgical {
+		transform: translateX(-90%);
+	}
+
+	.channel__item--prosthetic {
+		transform: translateX(10%);
+	}
+}

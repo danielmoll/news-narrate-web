@@ -1,15 +1,21 @@
 .scene {
-	background: white;
+	// background: white;
 	overflow: hidden;
 	padding-bottom: $itemSpacingVertical;
-	margin: 0 auto ($itemSpacingVertical * 2) auto;
-	width: 100%;
-	max-width: $maxWidth;
+	// margin: 0 auto ($itemSpacingVertical * 2) auto;
+	// width: 90%;
+	// max-width: $maxWidth;
 	border-bottom: 1px solid $keyline;
 
 	&:last-child {
 		border: none;	
 	}
+}
+
+.scene__heading {
+	font-size: 4rem;
+	text-align: center;
+	color: black;
 }
 
 .scene__title {

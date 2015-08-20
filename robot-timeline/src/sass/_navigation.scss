@@ -4,7 +4,7 @@
 	margin: 0 auto $itemSpacingVertical auto;
 	background: white;
 	position: relative;
-	padding: 0 $itemSpacingHorizontal;
+	// padding: 0 $itemSpacingHorizontal;
 }
 
 .navigation__wrapper {
@@ -22,10 +22,26 @@
 	display: table-cell;
 	text-align: center;
 	width: calc(100% / 7);
+	color: black;
+}
+
+.navigation__item--killer {
+	background-color:  $killer;
+}
+
+.navigation__item--surgical {
+	background-color: $surgical;
+}
+
+.navigation__item--prosthetic {
+	background-color: $prosthetic;
 }
 
 .navigation__link {
-	color: $linkColor;
+	color: black;
+	padding: 10px;
+	display: block;
+	font-weight: bold;
 }
 
 .navigation--sticky {

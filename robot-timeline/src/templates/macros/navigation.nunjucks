@@ -2,15 +2,11 @@
 	<nav class="navigation">
 		<div class="navigation__wrapper js-navigation">
 			<ol class="navigation__list">
-			{% for item in options.items %}
-				<li class="navigation__item"><a class="navigation__link" href="{{ item.link }}" data-id="{{ item.id }}">{{ item.text }}</a></li>
-			{% endfor %}
+				<li class="navigation__item navigation__item--killer"><a class="navigation__link" data-channel="killer" href="#">Killer Military Robots</a></li>
+				<li class="navigation__item navigation__item--surgical"><a class="navigation__link"  data-channel="surgical" href="#">Surgical Robots</a></li>
+				<li class="navigation__item navigation__item--prosthetic"><a class="navigation__link" data-channel="prosthetic" href="#">Prosthetic Robots</a></li>
 			</ol>
 
-			<div class="timeline">
-				<div class="timeline__line"></div>
-				<div class="timeline__marker js-timeline-marker"></div>
-			</div>
 		</div>
 	</nav>
 {% endmacro %}

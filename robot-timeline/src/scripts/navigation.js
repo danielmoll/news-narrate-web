@@ -13,6 +13,12 @@ Navigation = function($navigation) {
     this.navigationHeight = this.$navigation.outerHeight();
     this.navigationTop = this.$navigation.offset().top;
     this.events();
+
+    this.$navigation.find('.navigation__link').on('click', function() {
+        $('.background').attr('class', 'background background--'+ $(this).data('channel'));
+        $('.scenes').attr('class', 'scenes scenes--'+ $(this).data('channel'));
+        return false;
+    });
 };
 
 Navigation.prototype = {

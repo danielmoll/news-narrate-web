@@ -1,12 +1,12 @@
 <div class="hero">
 	<div class="hero__media">
 		{{ image.render({
-			url: 'http://res.cloudinary.com/skynews/image/upload/c_scale,w_{width}/v1439289651/queen-timeline/hrm_bw.jpg'
+			url: 'images/asimo.png'
 		}) }}
 	</div>
 
 	<div class="hero__heading">
-		<h1 class="hero__title">Queen Elizabeth</h1>
-		<div class="hero__strap">Britain&rsquo;s Longest Reigning Monarch</div>
+		<h1 class="hero__title">Robot Revolution</h1>
+		<div class="hero__strap">Robots Coming Over Here Stealing Our Jobs</div>
 	</div>
 </div>

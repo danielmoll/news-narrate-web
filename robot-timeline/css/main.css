@@ -55,11 +55,154 @@ body {
   margin: 0 auto;
   text-align: left;
   background: white;
-  color: #7d7d7d;
+  color: #333;
 }
 
 a, a:hover {
   text-decoration: none;
+}
+
+.background {
+  height: 100%;
+  position: fixed;
+  width: 100%;
+}
+
+.background__item {
+  height: 100%;
+  width: 32px;
+  position: absolute;
+  top: 0;
+  transition: all 0.25s ease-out;
+}
+
+.background--killer .background__item--killer {
+  left: 0;
+  width: 90%;
+}
+
+.background--killer .background__item--surgical,
+.background--killer .background__item--prosthetic {
+  width: 5%;
+}
+
+.background--killer .background__item--surgical {
+  left: 90%;
+}
+
+.background--killer .background__item--prosthetic {
+  left: 95%;
+}
+
+.background--surgical .background__item--surgical {
+  left: 5%;
+  width: 90%;
+}
+
+.background--surgical .background__item--killer,
+.background--surgical .background__item--prosthetic {
+  width: 5%;
+}
+
+.background--surgical .background__item--killer {
+  left: 0%;
+}
+
+.background--surgical .background__item--prosthetic {
+  left: 95%;
+}
+
+.background--prosthetic .background__item--prosthetic {
+  left: 10%;
+  width: 90%;
+}
+
+.background--prosthetic .background__item--surgical,
+.background--prosthetic .background__item--killer {
+  width: 5%;
+}
+
+.background--prosthetic .background__item--surgical {
+  left: 5%;
+}
+
+.background--prosthetic .background__item--killer {
+  left: 0%;
+}
+
+.background__item--killer {
+  background-color: #e67e22;
+}
+
+.background__item--surgical {
+  background-color: #3498db;
+}
+
+.background__item--prosthetic {
+  background-color: #bdc3c7;
+}
+
+.channel {
+  position: relative;
+}
+
+.channel__item {
+  transition: all 250ms ease-out;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+}
+
+.channel__item-inner {
+  width: 90%;
+}
+
+.channel__item--killer .channel__item-inner {
+  background-color: #e67e22;
+}
+
+.channel__item--surgical .channel__item-inner {
+  background-color: #3498db;
+}
+
+.channel__item--prosthetic .channel__item-inner {
+  background-color: #bdc3c7;
+}
+
+.scenes--killer .channel__item--killer {
+  transform: translateX(0);
+}
+
+.scenes--killer .channel__item--surgical {
+  transform: translateX(90%);
+}
+
+.scenes--killer .channel__item--prosthetic {
+  transform: translateX(95%);
+}
+
+.scenes--surgical .channel__item--killer {
+  transform: translateX(-90%);
+}
+
+.scenes--surgical .channel__item--surgical {
+  transform: translateX(5%);
+}
+
+.scenes--surgical .channel__item--prosthetic {
+  transform: translateX(95%);
+}
+
+.scenes--prosthetic .channel__item--killer {
+  transform: translateX(-95%);
+}
+
+.scenes--prosthetic .channel__item--surgical {
+  transform: translateX(-90%);
+}
+
+.scenes--prosthetic .channel__item--prosthetic {
+  transform: translateX(10%);
 }
 
 /* Responsive images */
@@ -116,6 +259,7 @@ a, a:hover {
   width: 100%;
   height: 60px;
   background: white;
+  position: relative;
 }
 
 .header__logo {
@@ -181,7 +325,6 @@ a, a:hover {
   margin: 0 auto 20px auto;
   background: white;
   position: relative;
-  padding: 0 20px;
 }
 
 .navigation__wrapper {
@@ -199,10 +342,26 @@ a, a:hover {
   display: table-cell;
   text-align: center;
   width: calc(100% / 7);
+  color: black;
+}
+
+.navigation__item--killer {
+  background-color: #e67e22;
+}
+
+.navigation__item--surgical {
+  background-color: #3498db;
+}
+
+.navigation__item--prosthetic {
+  background-color: #bdc3c7;
 }
 
 .navigation__link {
-  color: #7d7d7d;
+  color: black;
+  padding: 10px;
+  display: block;
+  font-weight: bold;
 }
 
 .navigation--sticky {
@@ -256,21 +415,22 @@ a, a:hover {
 .scenes {
   overflow: hidden;
   position: relative;
-  padding: 0 20px;
 }
 
 .scene {
-  background: white;
   overflow: hidden;
   padding-bottom: 20px;
-  margin: 0 auto 40px auto;
-  width: 100%;
-  max-width: 900px;
   border-bottom: 1px solid #a3a3a3;
 }
 
 .scene:last-child {
   border: none;
+}
+
+.scene__heading {
+  font-size: 4rem;
+  text-align: center;
+  color: black;
 }
 
 .scene__title {

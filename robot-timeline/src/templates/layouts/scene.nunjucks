@@ -1,25 +1,22 @@
 {% import '../macros/image.nunjucks' as image %}
 {% import '../macros/video.nunjucks' as video %}
 
-<div class="scene scene--{{ aspect|default('4x3') }} js-scene js-in-view" id="{{ sceneName }}" data-group-name="{{ sceneGroup }}">
-	{% if sceneImage or sceneVideo %}
-		<div class="scene__media">
-		{% if sceneImage %}
-			{{ image.render({
-				url: sceneImage
-			}) }}
-		{% elif sceneVideo %}
-			{{ video.render({
-				src: sceneVideo,
-				poster: sceneVideoPoster,
-				caption: sceneVideoCaption,
-				label: sceneVideoLabel
-			}) }}
-		{% endif %}
+<div class="scene scene--{{ aspect|default('4x3') }} js-in-view">
+	<div class="channel">
+		<div class="channel__item channel__item--killer">
+			<div class="channel__item-inner">
+				{% block killer %}{% endblock %}
+			</div>
 		</div>
-	{% endif %}
-
-	{% block title %}{% endblock %}
-
-	{% block content %}{% endblock %}
+		<div class="channel__item channel__item--surgical">
+			<div class="channel__item-inner">
+				{% block surgical %}{% endblock %}
+			</div>
+		</div>
+		<div class="channel__item channel__item--prosthetic">
+			<div class="channel__item-inner">
+				{% block prosthetic %}{% endblock %}
+			</div>
+		</div>
+	</div>
 </div>

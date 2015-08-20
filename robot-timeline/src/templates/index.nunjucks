@@ -2,15 +2,15 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Queen Elizabeth II | The World&rsquo;s Longest Reigning Monarch | Sky News</title>
+		<title>Ermagherd Rerberts</title>
 		<meta name="description" content="">
 		<link href="css/main.css" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<meta property="og:title" content="Queen Elizabeth II - The World&rsquo;s Longest Reigning Monarch">
+		<meta property="og:title" content="Ermagherd Rerberts">
 		<meta property="og:description" content="">
 
-		<meta property="og:url" content="http://narrate.news.sky.com/queen-timeline/">
+		<meta property="og:url" content="http://narrate.news.sky.com/robots-timeline/">
 		<meta property="og:image" content="">
 
 	    <link rel="shortcut icon" href="//news.sky.com/images/favicon.ico" type="image/x-icon">
@@ -20,89 +20,24 @@
 	    <link rel="apple-touch-icon" sizes="152x152" href="//news.sky.com/images/61bf2734.sky-news-touch-retina-ipad.png"><!-- 152x152 -->
 	</head>
 	<body id="top">
+
+	<div class="background background--killer">
+		<div class="background__item background__item--killer"></div>
+		<div class="background__item background__item--surgical"></div>
+		<div class="background__item background__item--prosthetic"></div>
+	</div>
+
 		{% include "partials/header.nunjucks" %}
 
 		{% include "partials/hero.nunjucks" %}
 
-		{{ navigation.render({
-			items: [{
-				text: '1952',
-				link: '#scene_1952',
-				id: 'group_50s'
-			},
-			{
-				text: '60s',
-				link: '#scene_1960',
-				id: 'group_60s'
-			},
-			{
-				text: '70s',
-				link: '#scene_1974',
-				id: 'group_70s'
-			},
-			{
-				text: '80s',
-				link: '#scene_1981',
-				id: 'group_80s'
-			},
-			{
-				text: '90s',
-				link: '#scene_1992',
-				id: 'group_90s'
-			},
-			{
-				text: '00s',
-				link: '#scene_2002',
-				id: 'group_00s'
-			},
-			{
-				text: '2015',
-				link: '#scene_2015',
-				id: 'group_2015'
-			}]
-		}) }}
+		{{ navigation.render() }}
 
 		<div class="scenes">
 
-			{% include "scenes/scene_1952.nunjucks" %}
+			<h2 class="scene__heading">50 Years Ago</h2>
 
-			{% include "scenes/scene_1953.nunjucks" %}
-
-			{% include "scenes/scene_1953a.nunjucks" %}
-
-			{% include "scenes/scene_1960.nunjucks" %}
-
-			{% include "scenes/scene_1964.nunjucks" %}
-
-			{% include "scenes/scene_1977.nunjucks" %}
-
-			{% include "scenes/scene_1981.nunjucks" %}
-
-			{% include "scenes/scene_1982.nunjucks" %}
-
-			{% include "scenes/scene_1982a.nunjucks" %}
-
-			{% include "scenes/scene_1992.nunjucks" %}
-
-			{% include "scenes/scene_1997.nunjucks" %}
-			
-			{% include "scenes/scene_1997a.nunjucks" %}
-
-			{% include "scenes/scene_2002.nunjucks" %}
-
-			{% include "scenes/scene_2002a.nunjucks" %}
-
-			{% include "scenes/scene_2011.nunjucks" %}
-
-			{% include "scenes/scene_2011a.nunjucks" %}
-
-			{% include "scenes/scene_2012.nunjucks" %}
-
-			{% include "scenes/scene_2012a.nunjucks" %}
-
-			{% include "scenes/scene_2013.nunjucks" %}
-
-			{% include "scenes/scene_2015.nunjucks" %}
+			{% include "scenes/scene_1960s.nunjucks" %}
 
 		</div>
 
