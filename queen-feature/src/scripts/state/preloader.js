@@ -63,6 +63,15 @@ Game.State.Preloader.prototype = {
         this.game.load.image('maggie_grey', 'assets/sprites/70s_maggie_grey.png');
         this.game.load.image('starwars', 'assets/sprites/70s_starwars.png');
         this.game.load.image('starwars_grey', 'assets/sprites/70s_starwars_grey.png');
+
+        // 80s assets
+        this.game.load.image('parallax_1980s', 'assets/tiles/parallax_1980s.png');
+        this.game.load.image('live_aid', 'assets/sprites/80s_live_aid.png');
+        this.game.load.image('live_aid_grey', 'assets/sprites/80s_live_aid_grey.png');
+        this.game.load.image('charles_diana', 'assets/sprites/80s_charles_diana.png');
+        this.game.load.image('charles_diana_grey', 'assets/sprites/80s_charles_diana_grey.png');
+        this.game.load.image('mobile_phone', 'assets/sprites/80s_mobile_phone.png');
+        this.game.load.image('mobile_phone_grey', 'assets/sprites/80s_mobile_phone_grey.png');
         
         // virtual joystick
         this.load.image('compass', 'assets/sprites/compass_rose.png');
