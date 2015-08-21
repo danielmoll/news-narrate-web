@@ -37,13 +37,31 @@
 
 			<h2 class="scene__heading">50 Years Ago</h2>
 
+			<p class="scene__interstitial">Integrated circuits start to be used in computers</p>
+			<p class="scene__interstitial">The first minicomputers appear</p>
+			<p class="scene__interstitial">Memory costs $411,041,792/Mbyte</p>
+			<p class="scene__interstitial">Processors handle 0.002 MIPS</p>
+
+
+
+
 			{% include "scenes/scene_1960s.nunjucks" %}
 
 			<h2 class="scene__heading">20 Years Ago</h2>
 
+			<p class="scene__interstitial">16 bit home computers are commonplace</p>
+			<p class="scene__interstitial">USB is introduced</p>
+			<p class="scene__interstitial">Memory costs $106/Mbyte</p>
+			<p class="scene__interstitial">Processors handle 44 MIPS</p>
+
+
+
 			{% include "scenes/scene_1990s.nunjucks" %}
 
 			<h2 class="scene__heading">Today</h2>
+			<p class="scene__interstitial">Memory costs $0.0078/Mbyte</p>
+			<p class="scene__interstitial">Processors handle 238,310 MIPS</p>
+
 
 			{% include "scenes/scene_today.nunjucks" %}
 
