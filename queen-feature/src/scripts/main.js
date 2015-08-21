@@ -37,7 +37,8 @@ Game.Map.MAPS = [
     'decade_60s',
     'decade_70s',
     'decade_80s',
-    'decade_90s'
+    'decade_90s',
+    'decade_00s'
 ];
 
 Game.Levels = [
@@ -46,8 +47,8 @@ Game.Levels = [
     { text: '70', stateKey: 'decade_70s', collectibles: ['sex_pistols', 'starwars', 'maggie']},
     { text: '80', stateKey: 'decade_80s', collectibles: ['charles_diana', 'live_aid', 'mobile_phone']},
     { text: '90', stateKey: 'decade_90s' , collectibles: ['web', 'harry', 'spice']},
-    { text: '00', stateKey: null, collectibles: ['.', '.', '.']},
-    { text: 'NOW', stateKey: null, collectibles: ['.', '.', '.']}
+    { text: '00s', stateKey: 'decade_00s', collectibles: ['dome', 'ipod', 'idol']},
+    { text: 'NOW', stateKey: 'decade_2010s', collectibles: ['corgi', 'crown', '.']}
 ];
 
 Game.init = function() {
@@ -67,6 +68,7 @@ Game.init = function() {
     game.state.add('decade_70s', Game.State.Decade_70s);
     game.state.add('decade_80s', Game.State.Decade_80s);
     game.state.add('decade_90s', Game.State.Decade_90s);
+    game.state.add('decade_00s', Game.State.Decade_00s);
     game.state.add('end_screen', Game.State.EndScreen);
 
     // Make sure we know the number of artefacts we can collect
