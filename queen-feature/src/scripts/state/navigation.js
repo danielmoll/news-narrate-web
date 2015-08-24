@@ -74,13 +74,13 @@ Game.State.Navigation.prototype = {
                     scale,
                     bmd;
 
-                if (levelScore) {
-                    levelScore.scoredItems.forEach(function(scoredItem) {
-                        if(scoredItem.sprite_key === collectible) {
-                            collected = true;
-                        }
-                    }.bind(this));
-                }
+                // if (levelScore) {
+                //     levelScore.scoredItems.forEach(function(scoredItem) {
+                //         if(scoredItem.sprite_key === collectible) {
+                //             collected = true;
+                //         }
+                //     }.bind(this));
+                // }
 
                 if (collectible ==='.') {
                     if (collected) {

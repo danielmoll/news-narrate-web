@@ -7,9 +7,9 @@ var SCORE_POSITION_Y = 0,
 Game.LevelScore = function(game, levelKey, collectibles) {
     this.game = game;
     this.sprites = {};
-    this.scoredItems = []; // In current level
+    this.scoredItems = {}; // In current level
     this.score = 0;
-    this.collectedItems = this.game.storage.get(levelKey); // In any previous session
+    this.levelState = this.game.storage.get(levelKey); // In any previous session
     this.collectibles = collectibles;
     this.collectibleSize = 16;
 
@@ -28,15 +28,14 @@ Game.LevelScore.prototype.addDisplay = function() {
     this.scoreBackground.fixedToCamera = true;
 
     this.collectibles.forEach(function(collectible) {
+        collected = false;
         if (collectible.properties.sprite_key !== 'jewel') {
          
             spriteName = collectible.properties.sprite_key;
-            
-            this.collectedItems && this.collectedItems.scoredItems.forEach(function(scoredItem) {
-                if(scoredItem === collectible.properties.sprite_key) {
-                    collected = true;
-                }
-            });
+
+            if (this.levelState && this.levelState.scoredItems && this.levelState.scoredItems[spriteName]) {
+                collected = true;
+            }
 
             if (!collected) {
                 spriteName += '_grey';
@@ -68,7 +67,7 @@ Game.LevelScore.prototype.addDisplay = function() {
 Game.LevelScore.prototype.scoreItem = function (scoredItem, levelKey) {
     var collectibleSprite,
         oldScale,
-        storedScore = Game.Score.levelScores[levelKey] || { scoredItems: [], score: 0 };
+        storedScore = Game.Score.levelScores[levelKey] || { scoredItems: {}, score: 0 };
 
     if (scoredItem !== 'jewel') {
         // artefact collected
@@ -82,7 +81,8 @@ Game.LevelScore.prototype.scoreItem = function (scoredItem, levelKey) {
             collectibleSprite.bringToTop();
             collectibleSprite.alpha = 1;
         }
-        this.scoredItems.push(scoredItem);
+        this.scoredItems[scoredItem] = true;
+        storedScore.scoredItems[scoredItem] = true;
     }
     else {
         // jewel collection
@@ -90,12 +90,9 @@ Game.LevelScore.prototype.scoreItem = function (scoredItem, levelKey) {
         this.scoreText.setText(this.score);
         this.scoreText.scale.set(2, 2);
         this.game.add.tween(this.scoreText.scale).to({x: 1, y: 1}, 500, Phaser.Easing.Bounce.Out, true);
-
     }
 
-
     // Update stored scores
-    storedScore.scoredItems[scoredItem] = true;
     if (storedScore.score < this.score) {
         storedScore.score = this.score;
     }
@@ -103,7 +100,7 @@ Game.LevelScore.prototype.scoreItem = function (scoredItem, levelKey) {
     // Saving on local storage
     this.game.storage.set(levelKey, storedScore);
     Game.Score.levelScores[levelKey] = storedScore;
-
+    console.log(storedScore);
 };
 
 
