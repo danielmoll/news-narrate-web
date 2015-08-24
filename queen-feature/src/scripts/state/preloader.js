@@ -62,6 +62,23 @@ Game.State.Preloader.prototype = {
         this.game.load.image('maggie_grey', 'assets/sprites/70s_maggie_grey.png');
         this.game.load.image('starwars', 'assets/sprites/70s_starwars.png');
         this.game.load.image('starwars_grey', 'assets/sprites/70s_starwars_grey.png');
+<<<<<<< HEAD
+=======
+
+        // 90s assets
+        this.game.load.image('parallax_1990s', 'assets/tiles/parallax_1970s.png');
+        this.game.load.image('web', 'assets/sprites/90s_web.png');
+        this.game.load.image('web_grey', 'assets/sprites/90s_web_grey.png');
+        this.game.load.image('spice', 'assets/sprites/90s_spice.png');
+        this.game.load.image('spice_grey', 'assets/sprites/90s_spice_grey.png');
+        this.game.load.image('harry', 'assets/sprites/90s_harry.png');
+        this.game.load.image('harry_grey', 'assets/sprites/90s_harry_grey.png');
+        
+        // virtual joystick
+        this.load.image('compass', 'assets/sprites/compass_rose.png');
+        this.load.image('touch_segment', 'assets/sprites/touch_segment.png');
+        this.load.image('touch', 'assets/sprites/touch.png');
+>>>>>>> d53d841... level design done for 90s
 
         // 80s assets
         this.game.load.image('parallax_1980s', 'assets/tiles/parallax_1980s.png');
@@ -72,6 +89,15 @@ Game.State.Preloader.prototype = {
         this.game.load.image('mobile_phone', 'assets/sprites/80s_mobile_phone.png');
         this.game.load.image('mobile_phone_grey', 'assets/sprites/80s_mobile_phone_grey.png');
 
+        // 90s assets
+        this.game.load.image('parallax_1990s', 'assets/tiles/parallax_1990s.png');
+        this.game.load.image('web', 'assets/sprites/90s_web.png');
+        this.game.load.image('web_grey', 'assets/sprites/90s_web_grey.png');
+        this.game.load.image('spice', 'assets/sprites/90s_spice.png');
+        this.game.load.image('spice_grey', 'assets/sprites/90s_spice_grey.png');
+        this.game.load.image('harry', 'assets/sprites/90s_harry.png');
+        this.game.load.image('harry_grey', 'assets/sprites/90s_harry_grey.png');
+        
         // In-game menu
         this.load.image('pause', 'assets/sprites/pause.png');
         this.load.image('time_machine_button', 'assets/sprites/time-machine-button.png');
@@ -124,7 +150,8 @@ Game.State.Preloader.prototype = {
     create: function() {
         setTimeout(function() {
             this.game.fadePlugin.fadeOut(0x000, 750, 0, function() {
-            this.game.state.start('intro_skynews');
+            // this.game.state.start('intro_skynews');
+            this.game.state.start('decade_90s');
             }.bind(this));
         }.bind(this), 500);
     }

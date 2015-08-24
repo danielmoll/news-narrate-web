@@ -4,7 +4,7 @@
 Game.State.Decade_80s = function() {};
 Game.State.Decade_80s.prototype = new Game.State.BaseState();
 Game.State.Decade_80s.prototype.levelKey = 'decade_80s';
-Game.State.Decade_80s.prototype.nextLevelKey = 'decade_2010s';
+Game.State.Decade_80s.prototype.nextLevelKey = 'decade_90s';
 
 Game.State.Decade_80s.prototype.setCollisions = function() {
     this.levelModule.tilemap.setCollision(26);
