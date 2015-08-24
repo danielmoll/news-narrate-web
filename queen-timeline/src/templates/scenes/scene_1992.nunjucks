@@ -2,13 +2,14 @@
 
 {% set sceneName = 'scene_1992' %}
 {% set sceneGroup = 'group_90s' %}
-{% set sceneVideo = 'http://res.cloudinary.com/skynews/video/upload/v1437551479/narrate-people-smuggler/Guns_Loop_v1.mp4' %}
-{% set sceneVideoPoster = 'http://res.cloudinary.com/skynews/video/upload/v1437551479/narrate-people-smuggler/Guns_Loop_v1.jpg' %}
+{% set sceneVideo = 'http://res.cloudinary.com/skynews/video/upload/v1439933351/queen-timeline/DIGIQUEENTIMELINEANNUSHORRIBILLIS14397363048323000.mp4' %}
+{% set sceneVideoPoster = 'http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_800/v1439929780/queen-timeline/16x9/1992_Annus_Horribillis.jpg' %}
+{% set sceneVideoLabel = '1992 - Annus Horribillis' %}
 
 {% block title %}
 <div class="scene__title">1992</div>
 {% endblock %}
 
 {% block content %}
-<p class="scene__text">The Queen&rsquo;s &lsquo;Annus Horribillis&rsquo;, as her daughter Princess Anne divorces, and the Prince of Wales and Duke of York separate from their partners. Windsor Castle goes up in flames.</p>
+<p class="scene__text">The Queen&rsquo;s &lsquo;Annus Horribillis&rsquo;, as her daughter Princess Anne divorces, and the Prince of Wales and Duke of York seperate from their partners. Windsor castle goes up in flames. &lsquo;1992 is not a year I shall look back with undiluted pleasure&rsquo; she says. </p>
 {% endblock %}

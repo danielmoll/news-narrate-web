@@ -92,14 +92,7 @@ Game.getCollectedItems = function() {
     this.Score.nbCollected = 0;
     
     Game.Levels.forEach(function (level) {
-        var levelScore = this.game.storage.get(level.stateKey);
-        
-        levelScore && levelScore.scoredItems.forEach(function(ls) {
-            if (ls.sprite_key !== 'jewel') {
-                this.Score.nbCollected++;
-            }
-        }.bind(this));
-        
+        var levelScore = this.game.storage.get(level.stateKey);    
         Game.Score.levelScores[level.stateKey] = levelScore;
     }.bind(this));
 },

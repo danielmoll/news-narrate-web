@@ -42,6 +42,8 @@ Navigation.prototype = {
 };
 
 exports.init = function() {
+    if (window.detect.touch) return;
+
     _.forEach($navigation, function(nav) {
         return new Navigation($(nav));
     });

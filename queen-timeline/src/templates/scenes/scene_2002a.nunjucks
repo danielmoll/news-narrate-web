@@ -2,8 +2,9 @@
 
 {% set sceneName = 'scene_2002a' %}
 {% set sceneGroup = 'group_00s' %}
-{% set sceneVideo = 'http://res.cloudinary.com/skynews/video/upload/v1437551479/narrate-people-smuggler/Guns_Loop_v1.mp4' %}
-{% set sceneVideoPoster = 'http://res.cloudinary.com/skynews/video/upload/v1437551479/narrate-people-smuggler/Guns_Loop_v1.jpg' %}
+{% set sceneVideo = 'http://res.cloudinary.com/skynews/video/upload/v1439965049/queen-timeline/DIGIQUEENTIMELINEGOLDENJUBILEE1508161524567514397351750083000.mp4' %}
+{% set sceneVideoPoster = 'http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_800/v1439929790/queen-timeline/16x9/2012_Diamond_Jubilee.jpg' %}
+{% set sceneVideoLabel = '2002 - The Queen celebrates her Golden Jubilee' %}
 
 {% block title %}
 <div class="scene__title">2002</div>

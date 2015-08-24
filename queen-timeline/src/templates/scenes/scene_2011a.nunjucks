@@ -2,11 +2,12 @@
 
 {% set sceneName = 'scene_2011a' %}
 {% set sceneGroup = 'group_00s' %}
+{% set sceneImage = 'http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_{width}/v1439929786/queen-timeline/16x9/2011_First_state_visit_to_Ireland.jpg' %}
 
 {% block title %}
 <div class="scene__title">2011</div>
 {% endblock %}
 
 {% block content %}
-<p class="scene__text">Primogeniture is abolished. Female members of the Royal family now have equality with the male counterparts for ascension to the throne.</p>
+<p class="scene__text">The Queen embarks on the first state visit to Ireland since the country gained independence.</p>
 {% endblock %}

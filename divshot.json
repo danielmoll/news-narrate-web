@@ -4,6 +4,8 @@
   "clean_urls": true,
   "error_page": "error.html",
   "exclude": [
-    "node_modules"
+  	"node_modules",
+    "queen-timeline/node_modules",
+    "queen-feature/node_modules"
   ]
 }

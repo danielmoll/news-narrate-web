@@ -1,12 +1,12 @@
 <div class="hero">
 	<div class="hero__media">
 		{{ image.render({
-			url: 'http://res.cloudinary.com/skynews/image/upload/c_scale,w_{width}/v1437399881/narrate-people-smuggler/map4x3.jpg'
+			url: 'http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_{width}/v1440149150/queen-timeline/hero_queen_4-3.jpg'
 		}) }}
 	</div>
 
 	<div class="hero__heading">
-		<h1 class="hero__title">Queen Elizabeth</h1>
-		<div class="hero__strap">The World&rsquo;s Longest Reigning Monarch</div>
+		<h1 class="hero__title">Queen Elizabeth II</h1>
+		<div class="hero__strap">Britain&rsquo;s Longest Reigning Monarch</div>
 	</div>
 </div>

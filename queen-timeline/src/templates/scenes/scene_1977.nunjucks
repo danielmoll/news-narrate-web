@@ -2,13 +2,12 @@
 
 {% set sceneName = 'scene_1977' %}
 {% set sceneGroup = 'group_70s' %}
-{% set sceneVideo = 'http://res.cloudinary.com/skynews/video/upload/v1437551479/narrate-people-smuggler/Guns_Loop_v1.mp4' %}
-{% set sceneVideoPoster = 'http://res.cloudinary.com/skynews/video/upload/v1437551479/narrate-people-smuggler/Guns_Loop_v1.jpg' %}
+{% set sceneImage = 'http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_{width}/v1439930313/queen-timeline/4x3/1960_Prince_Andrew_born.jpg' %}
 
 {% block title %}
 <div class="scene__title">1977</div>
 {% endblock %}
 
 {% block content %}
-<p class="scene__text">More than a million line the streets to celebrate the Queen&rsquo;s silver jubilee, marking 25 years of her reign.</p>
+<p class="scene__text">More than a million people line the streets to celebrate the Queen&rsquo;s silver jubilee, marking 25 years of her reign.</p>
 {% endblock %}

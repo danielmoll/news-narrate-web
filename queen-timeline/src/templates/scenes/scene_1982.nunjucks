@@ -2,6 +2,7 @@
 
 {% set sceneName = 'scene_1982' %}
 {% set sceneGroup = 'group_80s' %}
+{% set sceneImage = 'http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_{width}/v1439930319/queen-timeline/4x3/1982_BuckPal_break_in.jpg' %}
 
 {% block title %}
 <div class="scene__title">1982</div>

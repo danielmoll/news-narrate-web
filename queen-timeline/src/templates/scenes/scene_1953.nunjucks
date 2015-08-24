@@ -2,13 +2,14 @@
 
 {% set sceneName = 'scene_1953' %}
 {% set sceneGroup = 'group_50s' %}
-{% set sceneVideo = 'http://res.cloudinary.com/skynews/video/upload/v1437551479/narrate-people-smuggler/Guns_Loop_v1.mp4' %}
-{% set sceneVideoPoster = 'http://res.cloudinary.com/skynews/video/upload/v1437551479/narrate-people-smuggler/Guns_Loop_v1.jpg' %}
+{% set sceneVideo = 'http://res.cloudinary.com/skynews/video/upload/v1439930925/queen-timeline/DIGIQUEENTIMELINEELIZABETHCORONATION14397361636693000.mp4' %}
+{% set sceneVideoPoster = 'http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_800/v1439929772/queen-timeline/16x9/1953_Coronation_Ceremony.jpg' %}
+{% set sceneVideoLabel = '1953 - Queen Elizabeth II is crowned' %}
 
 {% block title %}
 <div class="scene__title">1953</div>
 {% endblock %}
 
 {% block content %}
-<p class="scene__text">Queen Elizabeth II is crowned at a coronation ceremony in Westminster Abbey in front of more than 8,000 guests.</p>
+<p class="scene__text">Queen Elizabeth II is crowned at a coronation ceremony in Westminster Abbey in front of more than 8,000 guests. The Queen promises &quote;throughout all my life and with all my heart I shall strive to be worthy of your trust&quote;.</p>
 {% endblock %}
