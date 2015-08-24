@@ -33,7 +33,6 @@ Game.Score = {
 };
 
 Game.Map.MAPS = [
-    'tutorial',
     'decade_50s',
     'decade_60s',
     'decade_70s',
@@ -63,8 +62,6 @@ Game.init = function() {
     game.state.add('intro_skynews', Game.State.Intro_Skynews);
     game.state.add('intro_alexs_house', Game.State.Intro_AlexsHouse);
     game.state.add('navigation', Game.State.Navigation);
-    game.state.add('tutorial', Game.State.Tutorial);
-    game.state.add('intro_50s', Game.State.Intro_50s);
     game.state.add('decade_50s', Game.State.Decade_50s);
     game.state.add('decade_60s', Game.State.Decade_60s);
     game.state.add('decade_70s', Game.State.Decade_70s);

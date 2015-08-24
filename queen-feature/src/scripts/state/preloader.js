@@ -23,8 +23,7 @@ Game.State.Preloader.prototype = {
         this.game.load.image('alexs_house', 'assets/sprites/alexshouse.png');
 
         // Load our sprites
-        // this.load.spritesheet('player', 'assets/sprites/alex-sprite.png', 59, 64, 8);
-        this.load.spritesheet('player', 'assets/sprites/alex-sprite-resize.png', 44, 64, 8);
+        this.load.spritesheet('player', 'assets/sprites/alex-sprite.png', 44, 64, 8);
         this.load.spritesheet('next_button', 'assets/sprites/next_button.png', 100, 30);
         this.game.load.image('navigation_bg', 'assets/sprites/navigation.png');
         this.game.load.image('sparkle1', 'assets/sprites/sparkle1.png');
@@ -72,11 +71,6 @@ Game.State.Preloader.prototype = {
         this.game.load.image('charles_diana_grey', 'assets/sprites/80s_charles_diana_grey.png');
         this.game.load.image('mobile_phone', 'assets/sprites/80s_mobile_phone.png');
         this.game.load.image('mobile_phone_grey', 'assets/sprites/80s_mobile_phone_grey.png');
-        
-        // virtual joystick
-        this.load.image('compass', 'assets/sprites/compass_rose.png');
-        this.load.image('touch_segment', 'assets/sprites/touch_segment.png');
-        this.load.image('touch', 'assets/sprites/touch.png');
 
         // In-game menu
         this.load.image('pause', 'assets/sprites/pause.png');
