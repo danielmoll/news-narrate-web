@@ -36,10 +36,7 @@ Game.Map.MAPS = [
     'decade_50s',
     'decade_60s',
     'decade_70s',
-<<<<<<< HEAD
     'decade_80s',
-=======
->>>>>>> d53d841... level design done for 90s
     'decade_90s',
     'decade_2010s'
 ];
@@ -48,11 +45,7 @@ Game.Levels = [
     { text: '50', stateKey: 'decade_50s', collectibles: ['record', 'tv', 'mini']},
     { text: '60', stateKey: 'decade_60s', collectibles: ['beatles', 'the_sun', 'worldcup']},
     { text: '70', stateKey: 'decade_70s', collectibles: ['sex_pistols', 'starwars', 'maggie']},
-<<<<<<< HEAD
     { text: '80', stateKey: 'decade_80s', collectibles: ['corgi', '.', '.']},
-=======
-    { text: '80', stateKey: 'tutorial', collectibles: ['corgi', '.', '.']},
->>>>>>> d53d841... level design done for 90s
     { text: '90', stateKey: 'decade_90s' , collectibles: ['web', 'harry', 'spice']},
     { text: '00', stateKey: null, collectibles: ['.', '.', '.']},
     { text: 'NOW', stateKey: 'decade_2010s', collectibles: ['corgi', 'crown', '.']}
@@ -73,10 +66,7 @@ Game.init = function() {
     game.state.add('decade_50s', Game.State.Decade_50s);
     game.state.add('decade_60s', Game.State.Decade_60s);
     game.state.add('decade_70s', Game.State.Decade_70s);
-<<<<<<< HEAD
     game.state.add('decade_80s', Game.State.Decade_80s);
-=======
->>>>>>> d53d841... level design done for 90s
     game.state.add('decade_90s', Game.State.Decade_90s);
     game.state.add('decade_2010s', Game.State.Decade_2010s);
     game.state.add('end_screen', Game.State.EndScreen);
