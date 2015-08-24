@@ -100,7 +100,6 @@ Game.LevelScore.prototype.scoreItem = function (scoredItem, levelKey) {
     // Saving on local storage
     this.game.storage.set(levelKey, storedScore);
     Game.Score.levelScores[levelKey] = storedScore;
-    console.log(storedScore);
 };
 
 
