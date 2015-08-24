@@ -86,10 +86,14 @@ Game.LevelScore.prototype.scoreItem = function (scoredItem, levelKey) {
     }
     else {
         // jewel collection
-        this.score++;
-        this.scoreText.setText(this.score);
-        this.scoreText.scale.set(2, 2);
-        this.game.add.tween(this.scoreText.scale).to({x: 1, y: 1}, 500, Phaser.Easing.Bounce.Out, true);
+        
+        // this.scoreText.scale.set(2, 2);
+        this.game.add.tween(this.scoreText.scale).to({x: 2, y: 2}, 1, 'Linear', true, 500)
+            .chain(this.game.add.tween(this.scoreText.scale).to({x: 1, y: 1}, 500, Phaser.Easing.Bounce.Out))
+            .onComplete.add(function() {
+                this.score++;
+                this.scoreText.setText(this.score);
+            }.bind(this));
     }
 
     // Update stored scores

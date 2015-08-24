@@ -191,7 +191,7 @@ Game.State.BaseState.prototype = {
         sprite2.fixedToCamera = true;
         collectible.body.destroy();
 
-        this.game.add.tween(collectible.cameraOffset).to( { y: -32} , 500, Phaser.Easing.Cubic.In, true);
+        this.game.add.tween(collectible.cameraOffset).to( { y: 0} , 500, Phaser.Easing.Cubic.In, true);
         this.game.add.tween(collectible.cameraOffset).to( { x: 500} , 500, Phaser.Easing.Cubic.In, true)
             .onComplete.add(collectible.destroy, collectible);
 
