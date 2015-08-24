@@ -43,7 +43,7 @@ Game.State.BaseState.prototype = {
         this.collectibleItems = [];
         // Loading the collectibles
         var collectibleSpawns = this.levelModule.findCollectibleObjects(),
-            collectedItems = this.game.storage.get(this.levelKey);
+            collectedItems = this.game.storage.get(this.levelKey) || {};
 
         collectibleSpawns.forEach(function(collectible) {
             var collectibleItem = this.game.add.sprite(collectible.x, collectible.y, collectible.properties.sprite_key);
@@ -53,7 +53,7 @@ Game.State.BaseState.prototype = {
                 collectibleItem.anchor.set(0.5, 0.5);
                 collectibleItem._revealFactId = collectible.properties.revealFactId;
 
-                if (collectedItems.scoredItems[collectible.properties.sprite_key]) {
+                if (collectedItems.scoredItems && collectedItems.scoredItems[collectible.properties.sprite_key]) {
                     collectibleItem.alpha = 0.5;
 
                 } else {
