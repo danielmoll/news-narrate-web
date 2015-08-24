@@ -126,13 +126,6 @@ Game.State.BaseState.prototype = {
 
         this.addNextLevelPortal();
 
-
-
-        // Text overlays
-        // this.fixedTextGroup = this.game.add.group();
-        // this.fixedTextGroup.z = 0;
-        // this.fixedTextGroup.fixedToCamera = false;
-
         textSpawns = this.levelModule.findTextObjects();
 
         this.factReference = {};
@@ -154,8 +147,6 @@ Game.State.BaseState.prototype = {
                 new Game.Map.Object.FloatingText(this.game, textItem);
             }
         }.bind(this));
-
-
 
         if (this.setCollisions && typeof this.setCollisions === 'function') {
             this.setCollisions();

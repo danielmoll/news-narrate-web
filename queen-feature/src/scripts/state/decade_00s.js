@@ -11,6 +11,8 @@ Game.State.Decade_00s.prototype.setCollisions = function() {
 };
 
 Game.State.Decade_00s.prototype.createBackgroundLayers = function() {
+	this.levelModule.parallaxBackground = this.game.add.tileSprite(0, 0, this.game.width, this.game.height, "parallax_1950s");
+    this.levelModule.parallaxBackground.fixedToCamera = true;
     this.levelModule.createLayer('background');
 };
 
