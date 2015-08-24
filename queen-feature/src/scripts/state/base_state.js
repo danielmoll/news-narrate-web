@@ -42,7 +42,8 @@ Game.State.BaseState.prototype = {
     addCollectibles: function() {
         this.collectibleItems = [];
         // Loading the collectibles
-        var collectibleSpawns = this.levelModule.findCollectibleObjects();
+        var collectibleSpawns = this.levelModule.findCollectibleObjects(),
+            collectedItems = this.game.storage.get(this.levelKey);
 
         collectibleSpawns.forEach(function(collectible) {
             var collectibleItem = this.game.add.sprite(collectible.x, collectible.y, collectible.properties.sprite_key);
@@ -51,9 +52,15 @@ Game.State.BaseState.prototype = {
                 collectibleItem._isArtefact = true;
                 collectibleItem.anchor.set(0.5, 0.5);
                 collectibleItem._revealFactId = collectible.properties.revealFactId;
-                this.addArtefactEmitter(collectibleItem);
 
-                this.game.add.tween(collectibleItem).to( { y: collectibleItem.y - 8 } , 500, Phaser.Easing.Quadratic.InOut, true, 0, -1, true);
+                if (collectedItems.scoredItems[collectible.properties.sprite_key]) {
+                    collectibleItem.alpha = 0.5;
+
+                } else {
+                    this.addArtefactEmitter(collectibleItem);
+                    this.game.add.tween(collectibleItem).to( { y: collectibleItem.y - 8 } , 500, Phaser.Easing.Quadratic.InOut, true, 0, -1, true);
+                }
+
             }
 
             collectibleItem.properties = collectible.properties;
