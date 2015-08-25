@@ -26,7 +26,7 @@
 
 		{{ navigation.render({
 			items: [{
-				text: '1952',
+				text: '50s',
 				link: '#scene_1952',
 				id: 'group_50s'
 			},

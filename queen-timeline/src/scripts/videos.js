@@ -15,13 +15,13 @@ Video = function(el) {
 };
 
 Video.prototype = {
-	onInView: function() {
+	onInView: function(e) {
 		if (!this.customEvent) {
 			analytics.videoInView($(this.el).data('label'));
 			this.customEvent = true;
 		}
 
-		this.el.play();
+		if (!this.el.attributes.controls) this.el.play();
 	},
 
 	onOutView: function() {

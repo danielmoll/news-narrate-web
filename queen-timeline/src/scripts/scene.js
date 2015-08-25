@@ -38,10 +38,10 @@ Scene.prototype = {
 	},
 
 	_onInView: function() {
-		var groupIndex = (this.atLast()) ? this.groupIndex : this.groupIndex + 1;
+		var groupIndex = this.groupIndex + 1;
 
 		$timelineMarker.css({
-			'left': 'calc(((100% / ' + this.groups.length + ') * ' + groupIndex + ') - ' + ($timelineMarker.width() / 2) + 'px)'
+			'left': 'calc(((100% / ' + this.groups.length + ') * ' + groupIndex + ') - (100% / ' + (this.groups.length * 2) + ') - ' + ($timelineMarker.width() / 2) + 'px)'
 		});
 	}
 };

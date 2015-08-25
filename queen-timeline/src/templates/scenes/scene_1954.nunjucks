@@ -1,10 +1,10 @@
 {% extends '../layouts/scene.nunjucks' %}
 
-{% set sceneName = 'scene_1992' %}
-{% set sceneGroup = 'group_90s' %}
+{% set sceneName = 'scene_1954' %}
+{% set sceneGroup = 'group_50s' %}
 {% set sceneVideo = 'http://res.cloudinary.com/skynews/video/upload/vc_auto/v1440511146/queen-timeline/SAMKING.mp4' %}
-{% set sceneVideoPoster = 'http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_800/v1439929780/queen-timeline/16x9/1992_Annus_Horribillis.jpg' %}
-{% set sceneVideoLabel = '1992 - Annus Horribillis' %}
+{% set sceneVideoPoster = 'http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_800/v1440516239/queen-timeline/16x9/Sam_King.jpg' %}
+{% set sceneVideoLabel = 'Being Black in Elizabeth&rsquo;s Britain' %}
 {% set sceneControls = 'controls' %}
 
 {% block title %}
@@ -12,5 +12,5 @@
 {% endblock %}
 
 {% block content %}
-<p class="scene__text">TEXT GOES HERE</p>
+<p class="scene__text">Sam King was one of the many immigrants arriving in the UK at the end of WWII. In the face of widespread racism, he became the Mayor of Southwark and founded the event that became Notting Hill Carnival. He reflects on Britain during Elizabeth&rsquo;s reign.</p>
 {% endblock %}

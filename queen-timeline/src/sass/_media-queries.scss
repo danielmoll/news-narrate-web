@@ -1,7 +1,3 @@
-@media (min-width: 30em) { /* 480px */
-
-}
-
 @media (min-width: 37.5em) { /* 600px */
 	.hero__title, .scene__title {
 		font-size: 2.8rem;
@@ -13,7 +9,6 @@
 
 	.header__logo {
 		height: 40px;
-		margin-left: 0;
 	}
 
 	.header__list {
@@ -21,14 +16,12 @@
 	}
 }
 
-@media (min-width: 48em) {  /* 768px */
+@media (min-width: 56.25em) {  /* 900px */
+	.header__logo {
+		margin-left: 0;
+	}
 
-}
-
-@media (min-width: 64em) {  /* 1024px */
-
-}
-
-@media (min-width: 80em) { /* 1280px */
-
+	.header__list {
+		margin-right: 0;
+	}	
 }
