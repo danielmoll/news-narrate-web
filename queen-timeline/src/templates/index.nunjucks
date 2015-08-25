@@ -70,6 +70,8 @@
 
 			{% include "scenes/scene_1953a.nunjucks" %}
 
+			{% include "scenes/scene_1954.nunjucks" %}
+
 			{% include "scenes/scene_1960.nunjucks" %}
 
 			{% include "scenes/scene_1964.nunjucks" %}

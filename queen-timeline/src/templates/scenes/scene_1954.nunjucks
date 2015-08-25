@@ -1,0 +1,16 @@
+{% extends '../layouts/scene.nunjucks' %}
+
+{% set sceneName = 'scene_1992' %}
+{% set sceneGroup = 'group_90s' %}
+{% set sceneVideo = 'http://res.cloudinary.com/skynews/video/upload/vc_auto/v1440511146/queen-timeline/SAMKING.mp4' %}
+{% set sceneVideoPoster = 'http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_800/v1439929780/queen-timeline/16x9/1992_Annus_Horribillis.jpg' %}
+{% set sceneVideoLabel = '1992 - Annus Horribillis' %}
+{% set sceneControls = 'controls' %}
+
+{% block title %}
+<div class="scene__title">Being Black in Elizabeth&rsquo;s Britain</div>
+{% endblock %}
+
+{% block content %}
+<p class="scene__text">TEXT GOES HERE</p>
+{% endblock %}
