@@ -4,9 +4,32 @@
 	padding-top: 10px;
 	width: 100%;
 	max-width: $maxWidth;
+	position: relative;
 }
 
 .footer__text {
 	color: #ccc;
 	margin-left: 10px;
+}
+
+.footer__link {
+	color: $linkColor;
+	text-decoration: none;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	display: table;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.footer__link-image, .footer__link-text {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.footer__link-text {
+	padding-left: 5px;
 }
