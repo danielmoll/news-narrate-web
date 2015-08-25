@@ -2,7 +2,7 @@
 
 {% set sceneName = 'scene_1964' %}
 {% set sceneGroup = 'group_60s' %}
-{% set sceneVideo = 'http://res.cloudinary.com/skynews/video/upload/v1439931810/queen-timeline/DIGIQUEENTIMELINEEDWARDBORN1508161524536814397351237823000.mp4' %}
+{% set sceneVideo = 'http://res.cloudinary.com/skynews/video/upload/vc_auto/v1440489051/queen-timeline/EDWARDBORN.mp4' %}
 {% set sceneVideoPoster = 'http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_800/v1439929772/queen-timeline/16x9/1964_Prince_Edward_born.jpg' %}
 {% set sceneVideoLabel = '1964 - Prince Edward is born' %}
 

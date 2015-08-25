@@ -5,7 +5,7 @@
 {% set sceneImage = 'http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_{width}/v1439930313/queen-timeline/4x3/1960_Prince_Andrew_born.jpg' %}
 
 {% block title %}
-<div class="scene__title">1960</div>
+<div class="scene__title">1960 <span class="scene__title-secondary">A Royal Birth</span></div>
 {% endblock %}
 
 {% block content %}

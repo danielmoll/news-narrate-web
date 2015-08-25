@@ -2,7 +2,7 @@
 
 {% set sceneName = 'scene_1977' %}
 {% set sceneGroup = 'group_70s' %}
-{% set sceneImage = 'http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_{width}/v1439930313/queen-timeline/4x3/1960_Prince_Andrew_born.jpg' %}
+{% set sceneImage = 'http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_{width}/v1440508914/queen-timeline/4x3/1977_Silver_Jubilee.jpg' %}
 
 {% block title %}
 <div class="scene__title">1977</div>

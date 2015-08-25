@@ -2,12 +2,13 @@
 
 {% set sceneName = 'scene_1997a' %}
 {% set sceneGroup = 'group_90s' %}
-{% set sceneVideo = 'http://res.cloudinary.com/skynews/video/upload/v1439964537/queen-timeline/DIGIQUEENTIMELINEDIANADEATHSTATEMEN1508161524566514397352221593000.mp4' %}
-{% set sceneVideoPoster = 'http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_800/v1439929783/queen-timeline/16x9/1997_Princess_Diana_dies.jpg' %}
+{% set sceneVideo = 'http://res.cloudinary.com/skynews/video/upload/vc_auto/v1440490416/queen-timeline/DIANADEATH.mp4' %}
+{% set sceneVideoPoster = 'http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_800/v1440510124/queen-timeline/16x9/1997_Princess_Diana_dies.jpg' %}
 {% set sceneVideoLabel = '1997 - Diana death' %}
+{% set sceneControls = 'controls' %}
 
 {% block title %}
-<div class="scene__title">1997</div>
+<div class="scene__title">1997 <span class="scene__title-secondary">A Royal Address</span></div>
 {% endblock %}
 
 {% block content %}

@@ -6,8 +6,6 @@ var $ = require('jquery'),
 	exports = {},
 	Video;
 
-if (window.detect.touch) return;
-
 Video = function(el) {
 	this.customEvent = false;
 	this.el = el;
@@ -32,6 +30,8 @@ Video.prototype = {
 };
 
 exports.init = function() {
+	if (window.detect.touch) return;
+
 	$videos.each(function() {
 		return new Video(this);
 	});

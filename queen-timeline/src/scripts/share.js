@@ -18,9 +18,9 @@ function popup(e) {
 var _ = require('lodash'),
 	socialItems = document.querySelectorAll('.js-social-item');
 
-if (window.detect.touch) return;
-
 exports.init = function() {
+	if (window.detect.touch) return;
+
 	_.forEach(socialItems, function(socialItem) {
 		socialItem.addEventListener('click', popup);
 	});

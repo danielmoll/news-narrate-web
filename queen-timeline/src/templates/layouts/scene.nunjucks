@@ -13,7 +13,8 @@
 				src: sceneVideo,
 				poster: sceneVideoPoster,
 				caption: sceneVideoCaption,
-				label: sceneVideoLabel
+				label: sceneVideoLabel,
+				controls: sceneControls|default('loop')
 			}) }}
 		{% endif %}
 		</div>
@@ -22,4 +23,6 @@
 	{% block title %}{% endblock %}
 
 	{% block content %}{% endblock %}
+
+	<div class="scene__separator"></div>
 </div>

@@ -2,10 +2,9 @@
 	background: white;
 	overflow: hidden;
 	padding-bottom: $itemSpacingVertical;
-	margin: 0 auto ($itemSpacingVertical * 2) auto;
+	margin: 0 auto ($itemSpacingVertical * 3) auto;
 	width: 100%;
 	max-width: $maxWidth;
-	border-bottom: 1px solid $keyline;
 
 	&:last-child {
 		border: none;	
@@ -14,14 +13,26 @@
 
 .scene__title {
 	font-family: SkyTextMedium;
-	font-size: 2rem;
+	font-size: 1.6rem;
 	text-align: center;
 	margin: 10px 0;
 	color: $titleColor;
 }
 
+.scene__title-secondary {
+	font-family: SkyTextRegular;
+}
+
 .scene__text {
 	margin-left: 20px;
 	margin-right: 20px;
-	font-size: 1.3rem;
+	font-size: 1rem;
+	text-align: center;
+}
+
+.scene__separator {
+	width: 30%;
+	height: 2px;
+	margin: 20px auto 0 auto;
+	background: #333333;
 }

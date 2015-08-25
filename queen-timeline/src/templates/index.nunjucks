@@ -80,9 +80,9 @@
 
 			{% include "scenes/scene_1982.nunjucks" %}
 
-			{% include "scenes/scene_1982a.nunjucks" %}
-
 			{% include "scenes/scene_1992.nunjucks" %}
+
+			{% include "scenes/scene_1992a.nunjucks" %}
 
 			{% include "scenes/scene_1997.nunjucks" %}
 			
