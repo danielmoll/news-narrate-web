@@ -66,7 +66,7 @@ Game.State.Preloader.prototype = {
 
         // 00s assets
         this.game.load.image('ipod', 'assets/sprites/2000s_ipod.png');
-        this.game.load.image('ipod_grey', 'assets/tiles/2000s_ipod_grey.png');
+        this.game.load.image('ipod_grey', 'assets/sprites/2000s_ipod_grey.png');
         this.game.load.image('idol', 'assets/sprites/2000s_pop_idol.png');
         this.game.load.image('idol_grey', 'assets/sprites/2000s_pop_idol_grey.png');
         this.game.load.image('dome', 'assets/sprites/2000s_dome.png');
@@ -146,7 +146,7 @@ Game.State.Preloader.prototype = {
     create: function() {
         setTimeout(function() {
             this.game.fadePlugin.fadeOut(0x000, 750, 0, function() {
-            this.game.state.start('decade_00s');
+            this.game.state.start('intro_skynews');
             }.bind(this));
         }.bind(this), 500);
     }
