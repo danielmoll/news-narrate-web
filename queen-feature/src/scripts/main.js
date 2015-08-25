@@ -37,18 +37,17 @@ Game.Map.MAPS = [
     'decade_60s',
     'decade_70s',
     'decade_80s',
-    'decade_90s',
-    'decade_2010s'
+    'decade_90s'
 ];
 
 Game.Levels = [
     { text: '50', stateKey: 'decade_50s', collectibles: ['record', 'tv', 'mini']},
     { text: '60', stateKey: 'decade_60s', collectibles: ['beatles', 'the_sun', 'worldcup']},
     { text: '70', stateKey: 'decade_70s', collectibles: ['sex_pistols', 'starwars', 'maggie']},
-    { text: '80', stateKey: 'decade_80s', collectibles: ['corgi', '.', '.']},
+    { text: '80', stateKey: 'decade_80s', collectibles: ['charles_diana', 'live_aid', 'mobile_phone']},
     { text: '90', stateKey: 'decade_90s' , collectibles: ['web', 'harry', 'spice']},
     { text: '00', stateKey: null, collectibles: ['.', '.', '.']},
-    { text: 'NOW', stateKey: 'decade_2010s', collectibles: ['corgi', 'crown', '.']}
+    { text: 'NOW', stateKey: null, collectibles: ['.', '.', '.']}
 ];
 
 Game.init = function() {
@@ -68,7 +67,6 @@ Game.init = function() {
     game.state.add('decade_70s', Game.State.Decade_70s);
     game.state.add('decade_80s', Game.State.Decade_80s);
     game.state.add('decade_90s', Game.State.Decade_90s);
-    game.state.add('decade_2010s', Game.State.Decade_2010s);
     game.state.add('end_screen', Game.State.EndScreen);
 
     // Make sure we know the number of artefacts we can collect
@@ -91,7 +89,7 @@ Game.getCollectedItems = function() {
     this.Score.nbCollected = 0;
     
     Game.Levels.forEach(function (level) {
-        var levelScore = this.game.storage.get(level.stateKey);    
+        var levelScore = this.game.storage.get(level.stateKey);
         Game.Score.levelScores[level.stateKey] = levelScore;
     }.bind(this));
 },

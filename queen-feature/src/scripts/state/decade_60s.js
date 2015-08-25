@@ -4,7 +4,7 @@
 Game.State.Decade_60s = function() {};
 Game.State.Decade_60s.prototype = new Game.State.BaseState();
 Game.State.Decade_60s.prototype.levelKey = 'decade_60s';
-Game.State.Decade_60s.prototype.nextLevelKey = 'decade_2010s';
+Game.State.Decade_60s.prototype.nextLevelKey = 'decade_70s';
 
 Game.State.Decade_60s.prototype.setCollisions = function() {
     this.levelModule.tilemap.setCollision(3);
