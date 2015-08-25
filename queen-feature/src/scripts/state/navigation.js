@@ -103,7 +103,7 @@ Game.State.Navigation.prototype = {
         if (!this.transitionning) {
             this.transitionning = true;
             this.game.fadePlugin.fadeOut(0x000, 750, 0, function() {
-                this.game.state.start(button.properties.stateKey || 'intro_skynews');
+                this.game.state.start(button.properties.stateKey || 'navigation');
             });
         }
     }
