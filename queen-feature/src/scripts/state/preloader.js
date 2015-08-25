@@ -82,13 +82,9 @@ Game.State.Preloader.prototype = {
         this.game.load.image('harry_grey', 'assets/sprites/90s_harry_grey.png');
         
         // In-game menu
-        this.load.image('pause', 'assets/sprites/pause.png');
-        this.load.image('time_machine_button', 'assets/sprites/time-machine-button.png');
-        this.load.image('resume_button', 'assets/sprites/resume-button.png');
-        this.load.image('next_level_button', 'assets/sprites/next-level-button.png');
-        this.load.image('restart_level_button', 'assets/sprites/restart-level-button.png');
-        this.load.image('share_on_facebook', 'assets/sprites/share-on-facebook-button.png');
-        this.load.image('share_on_twitter', 'assets/sprites/share-on-twitter-button.png');
+        this.load.atlas('menu_buttons', 'assets/sprites/menu_buttons.png', 'assets/sprites/menu_buttons.json');
+        this.game.load.image('pause', 'assets/sprites/pause.png');
+        this.game.load.image('alex_pause', 'assets/sprites/alex_pause.png');
 
         // Get some audio up in this shit.
         // this.load.audio('doorOpen_1', 'res/audio/doorOpen_1.ogg');

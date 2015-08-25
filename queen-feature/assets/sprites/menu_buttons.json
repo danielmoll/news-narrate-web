@@ -1,0 +1,57 @@
+{"frames": [
+
+{
+	"filename": "Back_button.png",
+	"frame": {"x":276,"y":2,"w":269,"h":40},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":3,"y":0,"w":269,"h":40},
+	"sourceSize": {"w":272,"h":40},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "FB_Button.png",
+	"frame": {"x":547,"y":2,"w":269,"h":40},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":3,"y":0,"w":269,"h":40},
+	"sourceSize": {"w":272,"h":40},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "Play_button.png",
+	"frame": {"x":818,"y":2,"w":269,"h":40},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":3,"y":0,"w":269,"h":40},
+	"sourceSize": {"w":272,"h":40},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "Restart_button.png",
+	"frame": {"x":2,"y":2,"w":272,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":272,"h":40},
+	"sourceSize": {"w":272,"h":40},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "Twitter_button.png",
+	"frame": {"x":1089,"y":2,"w":266,"h":40},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":3,"y":0,"w":266,"h":40},
+	"sourceSize": {"w":269,"h":40},
+	"pivot": {"x":0.5,"y":0.5}
+}],
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "menu_buttons.png",
+	"format": "RGBA8888",
+	"size": {"w":1357,"h":44},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:24275aa4a4ee7ad369edab8f20c0cbab:214d14d71580dc2347d080819b1f5682:9464d567cfe7a2f84290b71525b2c74a$"
+}
+}

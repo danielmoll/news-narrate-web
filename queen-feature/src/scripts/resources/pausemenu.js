@@ -1,4 +1,4 @@
-/* global Game */
+/* global Phaser, Game */
 'use strict';
 
 Game.PauseMenu = function(game) {
@@ -9,37 +9,49 @@ Game.PauseMenu = function(game) {
 
     this.buttonDefinitions = [
         {
-            sprite: 'time_machine_button',
+            id: 'time_machine_button',
+            sourceName: 'Back_button.png',
+            label: 'Back to time machine',
             x: 40,
-            y: 80,
+            y: 40,
             callback: 'backToNavigation'
         },
         {
-            sprite: 'resume_button',
+            id: 'resume_button',
+            sourceName: 'Play_button.png',
+            label: 'Resume',
             x: 40,
-            y: 120,
+            y: 90,
             callback: 'resume',
         },
         {
-            sprite: 'next_level_button',
+            id: 'next_level_button',
+            sourceName: 'Play_button.png',
+            label: 'Next level',
             x: 40,
-            y: 120,
+            y: 90,
             callback: 'nextLevel'
         },
         {
-            sprite: 'restart_level_button',
+            id: 'restart_level_button',
+            sourceName: 'Restart_button.png',
+            label: 'Restart level',
             x: 40,
-            y: 160,
+            y: 140,
             callback: 'restartLevel'
         },
         {
-            sprite: 'share_on_facebook',
+            id: 'share_on_facebook',
+            sourceName: 'FB_Button.png',
+            label: 'Share on Facebook',
             x: 40,
-            y: 200,
+            y: 190,
             callback: 'shareOnFacebook'
         },
         {
-            sprite: 'share_on_twitter',
+            id: 'share_on_twitter',
+            sourceName: 'Twitter_button.png',
+            label: 'Share on Twitter',
             x: 40,
             y: 240,
             callback: 'shareOnTwitter'
@@ -56,12 +68,14 @@ Game.PauseMenu = function(game) {
 };
 
 Game.PauseMenu.prototype.addPauseButton = function() {
-    this.pauseButton = this.game.add.button(10, 10, 'pause', function(){ this.showMenu(true); }.bind(this), this);
+    this.pauseButton = this.game.add.button(10, 10, 'pause', function(){ this.showMenu(); }.bind(this), this);
     this.pauseButton.fixedToCamera = true;
 };
 
 Game.PauseMenu.prototype.drawMenu = function() {
-    var btn,
+    var label,
+        aleks,
+        btn,
         bg;
 
     // Resetting buttons locations.
@@ -70,18 +84,26 @@ Game.PauseMenu.prototype.drawMenu = function() {
     // Drawing the base menu elements
     this.menuGroup = this.game.add.group();
     this.menuGroup.visible = false;
+    this.menuGroup.fixedToCamera = true;
 
     bg = this.game.add.graphics(0, 0);
-    bg.fixedToCamera = true;
     bg.beginFill(0X000, 0.8);
     bg.drawRect(this.game.camera.x, this.game.camera.y, this.game.width, this.game.height);
     bg.endFill();
 
     this.menuGroup.add(bg);
 
+    aleks = this.game.add.sprite(380, 80, 'alex_pause');
+    this.menuGroup.add(aleks);
+
     this.buttonDefinitions.forEach(function(button) {
-        btn = this.game.add.image(button.x, button.y, button.sprite);
-        btn.fixedToCamera = true;
+        btn = this.game.add.sprite(button.x, button.y, 'menu_buttons');
+        btn.frameName = button.sourceName;
+
+        label = this.game.add.text(55, 10, button.label, { font: '16px silkscreennormal', align: 'left', fill: '#fff569'} );
+     
+        btn.addChild(label);
+
         this.menuGroup.add(btn);
 
         this.buttons.push({
@@ -90,19 +112,18 @@ Game.PauseMenu.prototype.drawMenu = function() {
             x2: btn.x + btn.width,
             y2: btn.y + btn.height,
             callback: button.callback,
-            sprite: button.sprite
+            id: button.id
         });
         
-        if (button.sprite === 'resume_button') {
+        if (button.id === 'resume_button') {
             this.resumeButton = btn;
         }
 
-        if (button.sprite === 'next_level_button') {
+        if (button.id === 'next_level_button') {
             this.nextLevelButton = btn;
         }
 
     }.bind(this));
-
 };
 
 Game.PauseMenu.prototype.handleInput = function(event) {
@@ -116,13 +137,13 @@ Game.PauseMenu.prototype.handleInput = function(event) {
         if (!callback) {
             if(event.x > button.x1 && event.x < button.x2 && event.y > button.y1 && event.y < button.y2 ) {
                 
-                if (button.sprite === 'resume_button' && this.resumeButton.visible === true) {
+                if (button.id === 'resume_button' && this.resumeButton.visible === true) {
                     callback = button.callback;
 
-                } else if (button.sprite === 'next_level_button' && this.nextLevelButton.visible === true) {
+                } else if (button.id === 'next_level_button' && this.nextLevelButton.visible === true) {
                     callback = button.callback;
 
-                } else if (button.sprite !== 'resume_button' && button.sprite !== 'next_level_button') {
+                } else if (button.id !== 'resume_button' && button.id !== 'next_level_button') {
                     callback = button.callback;
                 }
             }
@@ -153,7 +174,6 @@ Game.PauseMenu.prototype.restartLevel = function() {
 
 Game.PauseMenu.prototype.showMenu = function(state) {
     this.game.paused = true;
-    
     if (state === 'next_level') {
         this.resumeButton.visible = false;
         this.nextLevelButton.visible = true;
@@ -167,12 +187,10 @@ Game.PauseMenu.prototype.showMenu = function(state) {
 };
 
 Game.PauseMenu.prototype.shareOnFacebook = function() {
-    console.log('shared on Facebook');
     this.share('facebook');
 };
 
 Game.PauseMenu.prototype.shareOnTwitter = function() {
-    console.log('shared on Twitter');
     this.share('twitter');
 };
 
