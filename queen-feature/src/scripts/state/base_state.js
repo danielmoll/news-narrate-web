@@ -26,8 +26,6 @@ Game.State.BaseState.prototype = {
         this.player = this.game.add.sprite(spawn[0].x, spawn[0].y - 59, 'player');
 
         this.game.physics.arcade.enable(this.player);
-        // this.player.body.bounce.y = 0.2;
-        // this.player.body.linearDamping = 1;
         this.player.body.collideWorldBounds = true;
         this.game.camera.follow(this.player);
         this.player.body.width = 32;
@@ -94,10 +92,11 @@ Game.State.BaseState.prototype = {
         var nextLevelSpawn = this.levelModule.findObjectsByType('next_level');
 
         if (nextLevelSpawn.length) {
-            this.nextLevel = this.game.add.sprite(nextLevelSpawn[0].x, nextLevelSpawn[0].y, 'next_level');
+            this.nextLevel = this.game.add.sprite(nextLevelSpawn[0].x, nextLevelSpawn[0].y, 'alexs_time_machine');
             this.game.physics.arcade.enable(this.nextLevel);
+
+            this.nextLevel.anchor.set(0.5, 0.5);
             this.nextLevel.body.allowGravity = false;
-            this.nextLevel.y -=110;
         }
     },
 

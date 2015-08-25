@@ -56,7 +56,7 @@
                 }, 
                 {
                  "gid":365,
-                 "height":160,
+                 "height":32.666666666667,
                  "id":28,
                  "name":"door",
                  "properties":
@@ -67,8 +67,8 @@
                  "type":"next_level",
                  "visible":true,
                  "width":32,
-                 "x":4129,
-                 "y":574.666666666667
+                 "x":4128,
+                 "y":547.666666666667
                 }],
          "opacity":1,
          "type":"objectgroup",

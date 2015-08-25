@@ -21,6 +21,7 @@ Game.State.Preloader.prototype = {
 
         // Intro Alex's house
         this.game.load.image('alexs_house', 'assets/sprites/alexshouse.png');
+        this.game.load.image('alexs_time_machine', 'assets/sprites/alexs_time_machine.png');
 
         // Load our sprites
         this.load.spritesheet('player', 'assets/sprites/alex-sprite.png', 44, 64, 8);
