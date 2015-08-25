@@ -48,7 +48,7 @@ Game.Levels = [
     { text: '80', stateKey: 'decade_80s', collectibles: ['charles_diana', 'live_aid', 'mobile_phone']},
     { text: '90', stateKey: 'decade_90s' , collectibles: ['web', 'harry', 'spice']},
     { text: '00s', stateKey: 'decade_00s', collectibles: ['dome', 'ipod', 'idol']},
-    { text: 'NOW', stateKey: 'decade_2010s', collectibles: ['corgi', 'crown', '.']}
+    { text: 'NOW', stateKey: null, collectibles: ['.', '.', '.']}
 ];
 
 Game.init = function() {
