@@ -1,4 +1,4 @@
-/* global Phaser, Game */
+/* global Game */
 'use strict';
 
 Game.State.Intro_AlexsHouse = function() {};
@@ -9,8 +9,9 @@ Game.State.Intro_AlexsHouse.prototype = {
     create: function () {
         this.transitionning = false;
         this.game.add.image(0, 0, 'alexs_house');
-        this.game.add.button(this.game.width - 120, this.game.height - 50, 'next_button', this.nextLevel, this);
+        this.game.add.button(this.game.width - 120, this.game.height - 50, 'next_button', function(){}, this);
         this.game.fadePlugin.fadeIn(0x000, 750, 0);
+        this.game.input.onDown.add(this.nextLevel, this);
     },
 
     nextLevel: function () {

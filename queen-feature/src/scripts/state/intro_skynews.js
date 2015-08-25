@@ -57,9 +57,10 @@ Game.State.Intro_Skynews.prototype = {
 
 		this.updateClock();
 		this.game.time.events.loop(Phaser.Timer.SECOND, this.updateClock, this);
-		this.game.add.button(this.game.width - 120, this.game.height - 50, 'next_button', this.nextFrame, this);
+		this.game.add.button(this.game.width - 120, this.game.height - 50, 'next_button', function(){}, this);
         
         this.game.fadePlugin.fadeIn(0x000, 750, 0);
+        this.game.input.onDown.add(this.nextFrame, this);
 	},
 
 	nextFrame: function() {
