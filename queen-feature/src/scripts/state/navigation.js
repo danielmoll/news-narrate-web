@@ -68,41 +68,14 @@ Game.State.Navigation.prototype = {
                 var collx = x + collectibleId * 39 - this.buttonWidth / 2 + 15,
                     colly = y + this.buttonHeight - this.buttonHeight / 2 + 8,
                     collected = false,
-                    color = '#666666',
-                    drawnRect,
                     collBg,
-                    scale,
-                    bmd;
+                    scale;
 
-                // if (levelScore) {
-                //     levelScore.scoredItems.forEach(function(scoredItem) {
-                //         if(scoredItem.sprite_key === collectible) {
-                //             collected = true;
-                //         }
-                //     }.bind(this));
-                // }
+                if (levelScore && levelScore.scoredItems && levelScore.scoredItems[collectible]) {
+                    collected = true;
+                }
 
-                if (collectible ==='.') {
-                    if (collected) {
-                        color = '#ffffff';
-                    }
-
-                    collBg = this.game.add.bitmapData(this.collectibleSize, this.collectibleSize);
-
-                    collBg.properties = {};
-                    collBg.properties.collectibleName = collectible;
-
-                    collBg.ctx.beginPath();
-                    collBg.ctx.rect(0, 0, this.collectibleSize, this.collectibleSize);
-                    collBg.ctx.fillStyle = color;
-                    collBg.ctx.fill();
-
-                    drawnRect = this.game.add.sprite(collx, colly, collBg);
-                    drawnRect.anchor.setTo(0.5, 0.5);
-
-                } else {
-                    if (!collected) { collectible += '_grey'; }
-
+                if (collectible !=='.' && collected) {
                     collBg = this.game.add.sprite(collx, colly, collectible);
                     collBg.anchor.setTo( 0.5, 0.5 );
                     
