@@ -72,11 +72,6 @@ Game.State.Preloader.prototype = {
         this.game.load.image('dome', 'assets/sprites/2000s_dome.png');
         this.game.load.image('dome_grey', 'assets/sprites/2000s_dome_grey.png');
 
-        // virtual joystick
-        this.load.image('compass', 'assets/sprites/compass_rose.png');
-        this.load.image('touch_segment', 'assets/sprites/touch_segment.png');
-        this.load.image('touch', 'assets/sprites/touch.png');
-
         // 80s assets
         this.game.load.image('parallax_1980s', 'assets/tiles/parallax_1980s.png');
         this.game.load.image('live_aid', 'assets/sprites/80s_live_aid.png');
