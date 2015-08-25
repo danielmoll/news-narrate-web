@@ -101,7 +101,7 @@
                  "properties":
                     {
                      "id":"72",
-                     "text":"THE DOME!",
+                     "text":"Originally an exhibition space open to the public throughout 2000, the Millenium Dome became a white elephant in the capital. It's now in use as a music venue.",
                      "tiles":"10",
                      "type":"factoid"
                     },
@@ -137,7 +137,7 @@
                  "properties":
                     {
                      "id":"563",
-                     "text":"POP IDOL",
+                     "text":"Reality TV From Pop Idol to Big Brother, X Factor to The Only Way Is Essex, Britons have enjoyed a love affair with reality television.",
                      "tiles":"10",
                      "type":"factoid"
                     },
@@ -145,19 +145,19 @@
                  "type":"",
                  "visible":true,
                  "width":32,
-                 "x":6656,
-                 "y":416
+                 "x":6723,
+                 "y":432
                 }, 
                 {
                  "gid":467,
                  "height":32,
                  "id":570,
-                 "name":"idol_fact",
+                 "name":"ipod_fact",
                  "properties":
                     {
                      "id":"567",
-                     "text":"IPOD",
-                     "tiles":"10",
+                     "text":"The Apple iPod revolutionised the music industry and Britain's relationship with technology. The must-have music player spoke to the UK's consumer culture and gave way to the iPhone.",
+                     "tiles":"12",
                      "type":"factoid"
                     },
                  "rotation":0,
@@ -165,7 +165,7 @@
                  "visible":true,
                  "width":32,
                  "x":3616,
-                 "y":320
+                 "y":251
                 }],
          "opacity":1,
          "type":"objectgroup",
