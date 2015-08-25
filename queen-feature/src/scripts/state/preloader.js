@@ -86,6 +86,9 @@ Game.State.Preloader.prototype = {
         this.game.load.image('pause', 'assets/sprites/pause.png');
         this.game.load.image('alex_pause', 'assets/sprites/alex_pause.png');
 
+        // Common
+        this.load.image('next_level', 'assets/sprites/alexs_time_machine.png');
+
         // Get some audio up in this shit.
         // this.load.audio('doorOpen_1', 'res/audio/doorOpen_1.ogg');
         // this.load.audio('doorClose_4', 'res/audio/doorClose_4.ogg');

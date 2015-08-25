@@ -94,7 +94,7 @@ Game.State.BaseState.prototype = {
         var nextLevelSpawn = this.levelModule.findObjectsByType('next_level');
 
         if (nextLevelSpawn.length) {
-            this.nextLevel = this.game.add.sprite(nextLevelSpawn[0].x, nextLevelSpawn[0].y, 'transparent_32-160');
+            this.nextLevel = this.game.add.sprite(nextLevelSpawn[0].x, nextLevelSpawn[0].y, 'next_level');
             this.game.physics.arcade.enable(this.nextLevel);
             this.nextLevel.body.allowGravity = false;
             this.nextLevel.y -=110;
