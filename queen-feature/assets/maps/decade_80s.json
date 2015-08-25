@@ -129,16 +129,15 @@
                  "name":"intro_text",
                  "properties":
                     {
-                     "size":"18",
                      "text":"The era of the yuppie saw Britons become bold and brash, and the UK flex its international muscle in the Falklands War. Britain celebrated two royal weddings, but also mourned terror attacks by the IRA and the Lockerbie bombing. As the mines were closed down and the unions challenged, it was a decade when cultural lines were underscored.",
-                     "tiles":"14"
+                     "tiles":"16"
                     },
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":32,
                  "x":303.900974051491,
-                 "y":223.97944373297
+                 "y":234.97944373297
                 }, 
                 {
                  "height":32,
