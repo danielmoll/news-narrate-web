@@ -212,13 +212,12 @@ Game.State.BaseState.prototype = {
         exploder = this.game.add.emitter(this.nextLevel.x, this.nextLevel.y, 100);
 
         exploder.makeParticles(['sparkle1', 'sparkle2', 'sparkle3']);
-        exploder.minParticleSpeed.setTo(-50, -50);
-        exploder.maxParticleSpeed.setTo(50, 50);
-        exploder.gravity = -600;
+        exploder.minParticleSpeed.setTo(-200, -300);
+        exploder.maxParticleSpeed.setTo(200, 50);
         exploder.alpha = 0.5;
         exploder.minParticleAlpha = 0.7;
         exploder.maxParticleAlpha = 1;
-        exploder.minParticleScale = 0.5;
+        exploder.minParticleScale = 0;
         exploder.maxParticleScale = 1.5;
 
         exploder.start(true);
