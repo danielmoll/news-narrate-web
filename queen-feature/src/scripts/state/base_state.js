@@ -120,9 +120,9 @@ Game.State.BaseState.prototype = {
 
         // Resize the game world to match the layer dimensions
         this.platform.resizeWorld();
-        
 
-        
+
+
 
         this.addNextLevelPortal();
 
@@ -141,7 +141,7 @@ Game.State.BaseState.prototype = {
 
         textSpawns.forEach(function(textItem) {
             if (textItem.properties.type === 'factoid') {
-                this.factReference[textItem.properties.id] = new Game.Map.Object.Factoid(this.game, textItem);                
+                this.factReference[textItem.properties.id] = new Game.Map.Object.Factoid(this.game, textItem);
             }
             else {
                 new Game.Map.Object.FloatingText(this.game, textItem);
@@ -201,7 +201,39 @@ Game.State.BaseState.prototype = {
     },
 
     _endLevelHandler: function() {
-        this.pauseMenu.showMenu('next_level');
+        var inTween, outTween, rotateTween, exploder;
+
+        this.player.visible = false;
+        this.nextLevel.body.destroy();
+
+        inTween = this.game.add.tween(this.nextLevel.scale).to({ x: 1.5, y: 1.5 }, 250, Phaser.Easing.Cubic.InOut);
+        outTween = this.game.add.tween(this.nextLevel.scale).to({ x: 0, y: 0}, 500, Phaser.Easing.Cubic.In);
+        rotateTween = this.game.add.tween(this.nextLevel).to({ angle: 360 }, 500, Phaser.Easing.Cubic.In, true, 250);
+
+        inTween.chain(outTween);
+
+        exploder = this.game.add.emitter(this.nextLevel.x, this.nextLevel.y, 100);
+
+        exploder.makeParticles(['sparkle1', 'sparkle2', 'sparkle3']);
+        exploder.minParticleSpeed.setTo(-50, -50);
+        exploder.maxParticleSpeed.setTo(50, 50);
+        exploder.gravity = -600;
+        exploder.alpha = 0.5;
+        exploder.minParticleAlpha = 0.7;
+        exploder.maxParticleAlpha = 1;
+        exploder.minParticleScale = 0.5;
+        exploder.maxParticleScale = 1.5;
+
+        exploder.start(true);
+
+        outTween.onComplete.add(function() {
+            exploder.explode(750, 100);
+            setTimeout(function() {
+                this.pauseMenu.showMenu('next_level');
+            }.bind(this), 1000);
+        }.bind(this));
+
+        inTween.start();
     },
 
     update: function() {
@@ -216,7 +248,7 @@ Game.State.BaseState.prototype = {
             this.levelModule.parallaxBackground.tilePosition.x = this.world.x / 2;
             this.levelModule.parallaxBackground.tilePosition.y = this.world.y / 2;
         }
-        
+
     },
 
     _updateState: function() {
