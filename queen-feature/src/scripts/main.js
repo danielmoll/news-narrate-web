@@ -100,6 +100,7 @@ Game.Score = {
 };
 
 Game.Map.MAPS = [
+    'alexs_house',
     'decade_50s',
     'decade_60s',
     'decade_70s',

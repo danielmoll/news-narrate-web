@@ -120,9 +120,6 @@ Game.State.BaseState.prototype = {
 
         // Resize the game world to match the layer dimensions
         this.platform.resizeWorld();
-        
-
-        
 
         this.addNextLevelPortal();
 
@@ -141,9 +138,8 @@ Game.State.BaseState.prototype = {
 
         textSpawns.forEach(function(textItem) {
             if (textItem.properties.type === 'factoid') {
-                this.factReference[textItem.properties.id] = new Game.Map.Object.Factoid(this.game, textItem);                
-            }
-            else {
+                this.factReference[textItem.properties.id] = new Game.Map.Object.Factoid(this.game, textItem);
+            } else {
                 new Game.Map.Object.FloatingText(this.game, textItem);
             }
         }.bind(this));
@@ -201,7 +197,11 @@ Game.State.BaseState.prototype = {
     },
 
     _endLevelHandler: function() {
-        this.pauseMenu.showMenu('next_level');
+        if (this.levelKey === 'alexs_house') {
+            this.game.state.start('navigation');
+        } else {
+            this.pauseMenu.showMenu('next_level');
+        }
     },
 
     update: function() {

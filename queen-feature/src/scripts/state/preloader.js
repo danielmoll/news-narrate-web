@@ -19,6 +19,7 @@ Game.State.Preloader.prototype = {
         this.game.load.image('kay', 'assets/sprites/kayburley.png');
 
         // Intro Alex's house
+        this.game.load.image('parallax_alexs_house', 'assets/tiles/parallax_alexs_house.png');
         this.game.load.image('alexs_house', 'assets/sprites/alexshouse.png');
         this.game.load.image('alexs_time_machine', 'assets/sprites/alexs_time_machine.png');
 
