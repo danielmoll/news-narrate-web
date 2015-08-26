@@ -120,12 +120,6 @@ Game.State.BaseState.prototype = {
 
         // Resize the game world to match the layer dimensions
         this.platform.resizeWorld();
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> d4215f997d391fbd3995cca9fdf39ea2b754a0ed
 
         this.addNextLevelPortal();
 
@@ -145,12 +139,8 @@ Game.State.BaseState.prototype = {
         textSpawns.forEach(function(textItem) {
             if (textItem.properties.type === 'factoid') {
                 this.factReference[textItem.properties.id] = new Game.Map.Object.Factoid(this.game, textItem);
-<<<<<<< HEAD
             }
             else {
-=======
-            } else {
->>>>>>> d4215f997d391fbd3995cca9fdf39ea2b754a0ed
                 new Game.Map.Object.FloatingText(this.game, textItem);
             }
         }.bind(this));
