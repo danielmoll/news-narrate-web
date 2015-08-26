@@ -21,8 +21,11 @@ Game.State.BaseState.prototype = {
     },
 
     addPlayer: function() {
+        var spawn,
+            offset;
+
         // Loading the player
-        var spawn = this.levelModule.findObjectsByType('player_spawn');
+        spawn = this.levelModule.findObjectsByType('player_spawn');
         this.player = this.game.add.sprite(spawn[0].x, spawn[0].y - 59, 'player');
 
         this.game.physics.arcade.enable(this.player);
@@ -30,7 +33,8 @@ Game.State.BaseState.prototype = {
         this.game.camera.follow(this.player);
         this.player.body.width = 32;
         this.player.body.height = 50;
-        var offset = new Phaser.Point(5,14);
+
+        offset = new Phaser.Point(5,14);
         this.player.body.offset = offset;
 
         this.player.animations.add('left', [1,0,1,2], 7, true);
