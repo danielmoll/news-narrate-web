@@ -85,6 +85,17 @@ Game.Score = {
         Game.Levels.forEach(function(level) {
             this.game.storage.set(level.stateKey, this.levelScores[level.stateKey]);
         }.bind(this));
+    },
+    resetAll: function() {
+        Game.Levels.forEach(function(level) {
+            var levelKey = level.stateKey;
+            this.levelScores[levelKey] = { scoredItems: {}, score: 0, artefactsCollected: 0 };
+        }.bind(this));
+
+        this.allArtefactsCollected = false;
+        this.artefactsCollected = 0;
+
+        this.save();
     }
 };
 

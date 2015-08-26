@@ -10,24 +10,24 @@ var LabelButton = function(game, x, y, key, label, callback, callbackContext, la
     }
 
     Phaser.Button.call(this, game, x, y, key, callback, callbackContext, overFrame, outFrame, downFrame, upFrame);
- 
+
     this.anchor.setTo( 0.5, 0.5 );
     this.label = new Phaser.Text(game, 0, 0, label, options );
- 
+
     // Puts the label in the center of the button
     // Not 0.5, 0.5 because of the font height offset
     this.label.anchor.setTo( 0.5, 0.63 );
- 
+
     this.addChild(this.label);
     this.setLabel( label );
- 
+
     //adds button to game
     game.add.existing( this );
 };
- 
+
 LabelButton.prototype = Object.create(Phaser.Button.prototype);
 LabelButton.prototype.constructor = LabelButton;
- 
+
 LabelButton.prototype.setLabel = function( label ) {
    this.label.setText(label);
 };
@@ -59,10 +59,7 @@ Game.State.Navigation.prototype = {
 
         this.game.add.image(0, 0, 'navigation_bg');
 
-        // Commented out as this is still WIP, pending score refactoring
-        //  being compelted.
-        // Uncomment this to show the reset button and popup.
-        // resetButton = new LabelButton(this.game, 300, 260, null, 'RESET', this.showResetPopup, this, { font: '25px silkscreennormal', fill: '#ccc' });
+        resetButton = new LabelButton(this.game, 300, 260, null, 'RESET', this.showResetPopup, this, { font: '25px silkscreennormal', fill: '#ccc' });
 
         Game.Levels.forEach(function(level) {
             var levelScore = Game.Score.levelScores[level.stateKey],
@@ -91,7 +88,7 @@ Game.State.Navigation.prototype = {
                 if (collectible !=='.' && collected) {
                     collBg = this.game.add.sprite(collx, colly, collectible);
                     collBg.anchor.setTo( 0.5, 0.5 );
-                    
+
                     scale = Math.min(this.collectibleSize / collBg.width, this.collectibleSize / collBg.height);
                     collBg.scale.setTo(scale, scale);
                 }
@@ -175,7 +172,8 @@ Game.State.Navigation.prototype = {
     },
 
     resetGame: function () {
-        console.log('Reset game state here.');
+        Game.Score.resetAll();
         this.hideResetPopup();
+        this.game.state.start('navigation');
     }
 };
