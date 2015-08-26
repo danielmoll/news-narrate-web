@@ -11,7 +11,7 @@ Game.Map.Object.Factoid = function(game, textItem) {
     this.bg.anchor.set(0.5, 0.5);
     this.text.anchor.set(0.5, 0.5);
 
-    this.bg.visible = false;	
+    this.bg.visible = false;
 
     // this.bg.add(this.bg);
     this.bg.addChild(this.text);
