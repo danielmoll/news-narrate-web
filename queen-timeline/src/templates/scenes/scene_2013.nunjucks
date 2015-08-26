@@ -11,5 +11,5 @@
 {% endblock %}
 
 {% block content %}
-<p class="scene__text">The Queen&rsquo;s great-grandson Prince George is born, becoming fourth in line to the throne. Primogeniture was abolished in 2011, meaning had a baby girl been born first, she would have become Queen.</p>
+<p class="scene__text">The Queen&rsquo;s great-grandson Prince George is born, becoming third in line to the throne. Primogeniture was abolished in 2011, meaning had a baby girl been born first, she would have become Queen.</p>
 {% endblock %}
