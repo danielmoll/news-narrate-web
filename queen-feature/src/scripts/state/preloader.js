@@ -5,7 +5,7 @@ Game.State.Preloader = function() {};
 Game.State.Preloader.prototype = {
     preload: function() {
         this.stage.backgroundColor = '#000000';
-        
+
         // loading screen
         this.add.sprite(195, 138, 'crown');
 
@@ -16,7 +16,6 @@ Game.State.Preloader.prototype = {
 
         // Intro Sky News report
         this.game.load.image('intro_ticker', 'assets/sprites/intro-ticker.png');
-        this.game.load.image('skynews_logo', 'assets/sprites/8bit_sky_logo.png');
         this.game.load.image('kay', 'assets/sprites/kayburley.png');
 
         // Intro Alex's house
@@ -89,7 +88,7 @@ Game.State.Preloader.prototype = {
         this.game.load.image('spice_grey', 'assets/sprites/90s_spice_grey.png');
         this.game.load.image('harry', 'assets/sprites/90s_harry.png');
         this.game.load.image('harry_grey', 'assets/sprites/90s_harry_grey.png');
-        
+
         // In-game menu
         this.load.atlas('menu_buttons', 'assets/sprites/menu_buttons.png', 'assets/sprites/menu_buttons.json');
         this.game.load.image('pause', 'assets/sprites/pause.png');
