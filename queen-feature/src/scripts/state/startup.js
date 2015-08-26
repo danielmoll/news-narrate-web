@@ -16,6 +16,14 @@ Game.State.Startup.prototype = {
         this.load.bitmapFont('pixeltype', 'assets/fonts/bitmapFonts/pixeltype.png', 'assets/fonts/bitmapFonts/pixeltype.xml');
 
         // Load the json maps, so we can load the images in the next steps.
+        // Load map json
+        var map,
+            i;
+
+        for (i = 0; i < Game.Map.MAPS.length; i++) {
+            map = Game.Map.MAPS[i];
+            this.load.tilemap(map, 'assets/maps/' + map + '.json', null, Phaser.Tilemap.TILED_JSON);
+        }
 
     },
 

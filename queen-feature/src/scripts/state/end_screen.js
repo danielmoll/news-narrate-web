@@ -28,7 +28,7 @@ Game.State.EndScreen.prototype = {
         this.textGroup.fixedToCamera = false;
         this.textGroup.alpha = 1;
         this.fixedTextOverlays.forEach(function(textItem) {
-            var txtElement = new Phaser.BitmapText(this.game, textItem.x, textItem.y, 'nokia', textItem.text, textItem.size);
+            var txtElement = new Phaser.BitmapText(this.game, textItem.x, textItem.y, 'pixeltype', textItem.text, textItem.size);
             txtElement.alpha = textItem.alpha || 1;
             this.textGroup.add(txtElement);
         }.bind(this));
