@@ -11,11 +11,12 @@ Game.State = {};
 Game.Map = {};
 Game.Map.Object = {};
 Game.Score = {
-    nbCollectibles: 0,
-    nbCollected: 0,
+    totalArtefacts: 0,
+    artefactsCollected: 0,
+    allArtefactsCollected: false,
     levelScores: {},
     allCollected: function() {
-        return this.nbCollectibles === this.nbCollected;
+        return this.allArtefactsCollected;
     },
     getTotalScore: function() {
         var score = 0;
@@ -29,6 +30,61 @@ Game.Score = {
         }.bind(this));
 
         return score;
+    },
+    init: function(game) {
+
+        this.game = game;
+
+        Game.Levels.forEach(function(level) {
+
+            var levelKey = level.stateKey,
+                levelState = this.game.storage.get(levelKey);
+
+            if (levelKey === null) return;
+
+            if (levelState) {
+                this.levelScores[levelKey] = levelState;
+                this.artefactsCollected += levelState.artefactsCollected;
+            }
+            else {
+                this.levelScores[levelKey] = { scoredItems: {}, score: 0, artefactsCollected: 0 };
+            }
+
+            level.collectibles.forEach(function(collectible) {
+                if(collectible !== '.') {
+                    this.totalArtefacts ++;
+                }
+            }.bind(this));
+
+        }.bind(this));
+
+        if (this.artefactsCollected === this.totalArtefacts) {
+            this.allArtefactsCollected = true;
+        }
+    },
+    artefactCollected: function(level, artefact) {
+        if (!this.levelScores[level].scoredItems[artefact]) {
+            this.levelScores[level].scoredItems[artefact] = true;
+            this.levelScores[level].artefactsCollected ++;
+            this.artefactsCollected ++;
+        }
+
+        if (this.artefactsCollected === this.totalArtefacts) {
+            this.allArtefactsCollected = true;
+        }
+
+        this.save();
+    },
+    updateScore: function(level, score) {
+        if (this.levelScores[level].score < score ) {
+          this.levelScores[level].score = score;
+          this.save();
+        }
+    },
+    save: function() {
+        Game.Levels.forEach(function(level) {
+            this.game.storage.set(level.stateKey, this.levelScores[level.stateKey]);
+        }.bind(this));
     }
 };
 
@@ -71,30 +127,11 @@ Game.init = function() {
     game.state.add('decade_00s', Game.State.Decade_00s);
     game.state.add('end_screen', Game.State.EndScreen);
 
-    // Make sure we know the number of artefacts we can collect
-    Game.Levels.forEach(function(level) {
-        level.collectibles.forEach(function(collectible) {
-            if(collectible !== '.') {
-                this.Score.nbCollectibles++;
-            }
-        }.bind(this));
-    }.bind(this));
-
-    // Save in memory the artefacts already collected
-    Game.getCollectedItems();
+    this.Score.init(this.game);
 
     // Start our game.
     game.state.start('startup');
 };
-
-Game.getCollectedItems = function() {
-    this.Score.nbCollected = 0;
-    
-    Game.Levels.forEach(function (level) {
-        var levelScore = this.game.storage.get(level.stateKey);
-        Game.Score.levelScores[level.stateKey] = levelScore;
-    }.bind(this));
-},
 
 window.onload = function() {
     Game.init();
