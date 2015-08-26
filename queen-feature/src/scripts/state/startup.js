@@ -13,17 +13,10 @@ Game.State.Startup.prototype = {
         // Fonts
         // This load call is only here because we need it
         // on the loading screen.
-        this.load.bitmapFont('nokia', 'assets/fonts/bitmapFonts/nokia.png', 'assets/fonts/bitmapFonts/nokia.xml');
         this.load.bitmapFont('pixeltype', 'assets/fonts/bitmapFonts/pixeltype.png', 'assets/fonts/bitmapFonts/pixeltype.xml');
 
         // Load the json maps, so we can load the images in the next steps.
-        var map,
-            i;
 
-        for (i = 0; i < Game.Map.MAPS.length; i++) {
-            map = Game.Map.MAPS[i];
-            this.load.tilemap(map, 'assets/maps/' + map + '.json', null, Phaser.Tilemap.TILED_JSON);
-        }
     },
 
     create: function() {

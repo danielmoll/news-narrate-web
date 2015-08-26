@@ -6,6 +6,15 @@ Game.State.Preloader.prototype = {
     preload: function() {
         this.stage.backgroundColor = '#000000';
 
+        // Load map json
+        var map,
+            i;
+
+        for (i = 0; i < Game.Map.MAPS.length; i++) {
+            map = Game.Map.MAPS[i];
+            this.load.tilemap(map, 'assets/maps/' + map + '.json', null, Phaser.Tilemap.TILED_JSON);
+        }
+
         // loading screen
         this.add.sprite(195, 138, 'crown');
 
@@ -103,7 +112,10 @@ Game.State.Preloader.prototype = {
         // this.load.audio('doorClose_4', 'res/audio/doorClose_4.ogg');
 
         // Load all of our maps and their components.
-        this.loadTileMaps();
+        this.game.load.onLoadComplete.add(function() {
+            this.loadTileMaps();
+        }, this);
+
     },
 
     // Many of the maps use the same tile images. We create a map of all these images
