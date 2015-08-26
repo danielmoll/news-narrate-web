@@ -7,8 +7,7 @@ Game.State.Intro_Skynews.prototype = {
 	transitionning: false,
 
 	create: function () {
-		var skynewsLogo,
-			text,
+		var text,
 			textClone,
 			textGroup,
 			tween;
@@ -18,8 +17,6 @@ Game.State.Intro_Skynews.prototype = {
         this.game.stage.backgroundColor = '#fff';
 
 		this.game.add.image(0, 0, 'kay');
-
-		skynewsLogo = this.game.add.image(10, 10, 'skynews_logo');
 
 		text = this.game.add.image(0, 300, 'intro_ticker');
 		textClone = this.game.add.image(568, 300, 'intro_ticker');
@@ -37,16 +34,16 @@ Game.State.Intro_Skynews.prototype = {
 			boundsAlignV: 'middle'
 		});
 
-		this.speechText1 = this.game.add.text(10, 50, "A dastardly villain has travelled through time and stolen artifacts from the Queen's reign", {
-			font: "16px Arial",
+		this.speechText1 = this.game.add.text(30, 80, "A dastardly villain has travelled through time and stolen artifacts from the Queen's reign", {
+			font: "16px silkscreennormal",
 			fill: "#000",
 			backgroundColor: 'white',
 			wordWrap: true,
 			wordWrapWidth: 200
 		});
 
-		this.speechText2 = this.game.add.text(10, 50, "Police are baffled. Won't somebody come forward and help? For our country!", {
-			font: "16px Arial",
+		this.speechText2 = this.game.add.text(30, 80, "Police are baffled. Won't somebody come forward and help? For our country!", {
+			font: "16px silkscreennormal",
 			fill: "#000",
 			backgroundColor: 'white',
 			wordWrap: true,
@@ -58,7 +55,7 @@ Game.State.Intro_Skynews.prototype = {
 		this.updateClock();
 		this.game.time.events.loop(Phaser.Timer.SECOND, this.updateClock, this);
 		this.game.add.button(this.game.width - 120, this.game.height - 50, 'next_button', function(){}, this);
-        
+
         this.game.fadePlugin.fadeIn(0x000, 750, 0);
         this.game.input.onDown.add(this.nextFrame, this);
 	},

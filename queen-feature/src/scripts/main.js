@@ -76,9 +76,11 @@ Game.Score = {
         this.save();
     },
     updateScore: function(level, score) {
-        if (this.levelScores[level].score < score ) {
-          this.levelScores[level].score = score;
-          this.save();
+        if (level !== 'alexs_house') {
+            if (this.levelScores[level].score < score ) {
+              this.levelScores[level].score = score;
+              this.save();
+            }
         }
     },
     save: function() {
@@ -100,6 +102,7 @@ Game.Score = {
 };
 
 Game.Map.MAPS = [
+    'alexs_house',
     'decade_50s',
     'decade_60s',
     'decade_70s',
