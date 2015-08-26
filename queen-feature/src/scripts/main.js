@@ -76,9 +76,11 @@ Game.Score = {
         this.save();
     },
     updateScore: function(level, score) {
-        if (this.levelScores[level].score < score ) {
-          this.levelScores[level].score = score;
-          this.save();
+        if (level !== 'alexs_house') {
+            if (this.levelScores[level].score < score ) {
+              this.levelScores[level].score = score;
+              this.save();
+            }
         }
     },
     save: function() {
