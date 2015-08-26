@@ -165,8 +165,7 @@ Game.State.BaseState.prototype = {
     },
 
     _collectiblesCollisionHandler: function(sprite1, sprite2) {
-        var collectible = null,
-            factoid;
+        var collectible = null;
 
         if (sprite2._emitter) {
             sprite2._emitter.on = false;

@@ -47,7 +47,7 @@ Game.Levels = [
     { text: '70', stateKey: 'decade_70s', collectibles: ['sex_pistols', 'starwars', 'maggie']},
     { text: '80', stateKey: 'decade_80s', collectibles: ['charles_diana', 'live_aid', 'mobile_phone']},
     { text: '90', stateKey: 'decade_90s' , collectibles: ['web', 'harry', 'spice']},
-    { text: '00s', stateKey: 'decade_00s', collectibles: ['dome', 'ipod', 'idol']},
+    { text: '00', stateKey: 'decade_00s', collectibles: ['dome', 'ipod', 'idol']},
     { text: 'NOW', stateKey: null, collectibles: ['.', '.', '.']}
 ];
 

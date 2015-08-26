@@ -1,14 +1,22 @@
 /* global Phaser, Game */
 'use strict';
 
-var LabelButton = function(game, x, y, key, label, callback, callbackContext, overFrame, outFrame, downFrame, upFrame) {
+var LabelButton = function(game, x, y, key, label, callback, callbackContext, labelOptions, overFrame, outFrame, downFrame, upFrame) {
+    var options = { font: '35px silkscreennormal', fill: '#fff'},
+        k;
+
+    for (k in labelOptions) {
+        options[k] = labelOptions[k];
+    }
+
     Phaser.Button.call(this, game, x, y, key, callback, callbackContext, overFrame, outFrame, downFrame, upFrame);
  
     this.anchor.setTo( 0.5, 0.5 );
-    this.label = new Phaser.BitmapText(game, 0, 0, 'pixeltype', label, 48);
+    this.label = new Phaser.Text(game, 0, 0, label, options );
  
-    //puts the label in the center of the button
-    this.label.anchor.setTo( 0.5, 0.5 );
+    // Puts the label in the center of the button
+    // Not 0.5, 0.5 because of the font height offset
+    this.label.anchor.setTo( 0.5, 0.63 );
  
     this.addChild(this.label);
     this.setLabel( label );
@@ -44,12 +52,17 @@ Game.State.Navigation.prototype = {
     },
 
     createState: function() {
-        var col = 0,
+
+        var resetButton,
+            col = 0,
             row = 0;
 
-        this.game.add.image(0, 0, 'navigation_bg'),
+        this.game.add.image(0, 0, 'navigation_bg');
 
-        this.buttonsGroup = this.game.add.group();
+        // Commented out as this is still WIP, pending score refactoring
+        //  being compelted.
+        // Uncomment this to show the reset button and popup.
+        // resetButton = new LabelButton(this.game, 300, 260, null, 'RESET', this.showResetPopup, this, { font: '25px silkscreennormal', fill: '#ccc' });
 
         Game.Levels.forEach(function(level) {
             var levelScore = Game.Score.levelScores[level.stateKey],
@@ -97,14 +110,72 @@ Game.State.Navigation.prototype = {
         }.bind(this));
 
         this.cursors = this.game.input.keyboard.createCursorKeys();
+
+        this.createResetPopup();
     },
 
     nextLevel: function (button) {
-        if (!this.transitionning) {
+        if (!this.transitionning && !this.popup.visible) {
             this.transitionning = true;
             this.game.fadePlugin.fadeOut(0x000, 750, 0, function() {
                 this.game.state.start(button.properties.stateKey || 'navigation');
             });
         }
+    },
+
+    createResetPopup: function () {
+        var width = this.game.width - 30,
+            height = this.game.height - 30,
+            centerX = this.game.width / 2,
+            centerY = this.game.height / 2,
+            bmd = this.game.add.bitmapData(width, height),
+            yesButton,
+            noButton,
+            popupTitle,
+            popupText,
+            popupBg;
+
+        bmd.ctx.beginPath();
+        bmd.ctx.rect(0, 0, width, height);
+        bmd.ctx.fillStyle = 'rgba(255,255,255, 0.9)';
+        bmd.ctx.strokeStyle = 'rgba(0,0,0,0.6)';
+        bmd.ctx.lineWidth = 5;
+
+        bmd.ctx.fill();
+        bmd.ctx.stroke();
+
+        popupTitle = new Phaser.Text(this.game, 0, 0, 'Are you sure?', { font: '22px silkscreennormal', wordWrap: true, wordWrapWidth: this.game.width - 180, align: 'center'} ),
+        popupText = new Phaser.Text(this.game, 0, 0, 'This will reset your progress and any items you have collected until now.', { font: '16px silkscreennormal', wordWrap: true, wordWrapWidth: this.game.width - 170, align: 'center'} ),
+        popupBg = this.game.add.sprite(centerX, centerY, bmd);
+
+        popupBg.visible = false;
+
+        popupBg.anchor.set(0.5, 0.5);
+        popupTitle.anchor.set(0.5, 3);
+        popupText.anchor.set(0.5, 0.6);
+
+        popupBg.addChild(popupTitle);
+        popupBg.addChild(popupText);
+
+        yesButton = new LabelButton(this.game, -65, 80, null, 'YES', this.resetGame, this, { fill: '#000' });
+        noButton = new LabelButton(this.game, 50, 80, null, 'NO', this.hideResetPopup, this, { fill: '#000' });
+
+        popupBg.addChild(yesButton);
+        popupBg.addChild(noButton);
+
+        this.popup = popupBg;
+    },
+
+    showResetPopup: function () {
+        this.popup.visible = true;
+    },
+
+    hideResetPopup: function () {
+        this.popup.visible = false;
+    },
+
+    resetGame: function () {
+        console.log('Reset game state here.');
+        this.hideResetPopup();
     }
 };
