@@ -1,6 +1,5 @@
 {% extends '../layouts/scene.nunjucks' %}
 
-{% set sceneName = 'scene_2011' %}
 {% set sceneGroup = 'group_00s' %}
 {% set sceneVideo = 'http://res.cloudinary.com/skynews/video/upload/vc_auto/v1440489052/queen-timeline/WILLIAMKATE.mp4' %}
 {% set sceneVideoPoster = 'http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_800/v1439929786/queen-timeline/16x9/2011_William_Catherine_Wedding.jpg' %}

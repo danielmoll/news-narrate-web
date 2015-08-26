@@ -27,32 +27,32 @@
 		{{ navigation.render({
 			items: [{
 				text: '50s',
-				link: '#scene_1952',
+				link: '#scene_50s',
 				id: 'group_50s'
 			},
 			{
 				text: '60s',
-				link: '#scene_1960',
+				link: '#scene_60s',
 				id: 'group_60s'
 			},
 			{
 				text: '70s',
-				link: '#scene_1974',
+				link: '#scene_70s',
 				id: 'group_70s'
 			},
 			{
 				text: '80s',
-				link: '#scene_1981',
+				link: '#scene_80s',
 				id: 'group_80s'
 			},
 			{
 				text: '90s',
-				link: '#scene_1992',
+				link: '#scene_90s',
 				id: 'group_90s'
 			},
 			{
 				text: '00s',
-				link: '#scene_2002',
+				link: '#scene_00s',
 				id: 'group_00s'
 			},
 			{
@@ -87,7 +87,7 @@
 			{% include "scenes/scene_1992a.nunjucks" %}
 
 			{% include "scenes/scene_1997.nunjucks" %}
-			
+
 			{% include "scenes/scene_1997a.nunjucks" %}
 
 			{% include "scenes/scene_2002.nunjucks" %}
