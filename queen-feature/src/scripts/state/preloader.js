@@ -21,8 +21,12 @@ Game.State.Preloader.prototype = {
 
         // Intro Alex's house
         this.game.load.image('parallax_alexs_house', 'assets/tiles/parallax_alexs_house.png');
-        this.game.load.image('alexs_house', 'assets/sprites/alexshouse.png');
         this.game.load.image('alexs_time_machine', 'assets/sprites/alexs_time_machine.png');
+        this.game.load.image('crown_grey', 'assets/sprites/crown_grey.png');
+        this.game.load.image('corgi', 'assets/sprites/corgi.png');
+        this.game.load.image('corgi_grey', 'assets/sprites/corgi_grey.png');
+        this.game.load.image('horse', 'assets/sprites/horse.png');
+        this.game.load.image('horse_grey', 'assets/sprites/horse_grey.png');
 
         // Load our sprites
         this.load.spritesheet('player', 'assets/sprites/alex-sprite.png', 44, 64, 8);
@@ -34,9 +38,6 @@ Game.State.Preloader.prototype = {
         this.game.load.image('transparent_32-160', 'assets/sprites/transparent_32-160.png');
         this.game.load.image('jewel', 'assets/sprites/jewel.png');
         this.game.load.image('jewel_grey', 'assets/sprites/jewel_grey.png');
-        this.game.load.image('corgi', 'assets/sprites/corgi.png');
-        this.game.load.image('corgi_grey', 'assets/sprites/corgi_grey.png');
-        this.game.load.image('crown_grey', 'assets/sprites/crown_grey.png');
 
         // 50s assets
         this.game.load.image('tv', 'assets/sprites/50s_tv.png');
