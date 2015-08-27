@@ -12,6 +12,8 @@ Game.State.Navigation.prototype = {
     buttonHeight: 59,
     buttonWidth: 110,
     collectibleSize: 10,
+    musicButton: null,
+    soundButton: null,
 
     create: function () {
         this.game.analytics.stateStarted('navigation');
@@ -30,6 +32,15 @@ Game.State.Navigation.prototype = {
         this.game.add.image(0, 0, 'navigation_bg');
 
         resetButton = new LabelButton(this.game, 300, 260, null, 'RESET', this.showResetPopup, this, { font: '25px silkscreennormal', fill: '#ccc' });
+
+        this.musicButton = this.game.add.button(510, 75, 'music_sound', Game.SoundControls.toggleMusic.bind(Game.SoundControls), this);
+        this.musicButton.visible = false;
+        this.musicButton.anchor.setTo(0.5, 0.5);
+        this.musicButton.frameName = Game.musicEnabled ? 'music.png' : 'music_off.png';
+
+        this.soundButton = this.game.add.button(505, 75, 'music_sound', Game.SoundControls.toggleSound.bind(Game.SoundControls), this);
+        this.soundButton.anchor.setTo(0.5, 0.5);
+        this.soundButton.frameName = Game.soundEnabled ? 'sound.png' : 'sound_off.png';
 
         Game.Levels.forEach(function(level) {
             var levelScore = Game.Score.levelScores[level.stateKey],
@@ -131,6 +142,11 @@ Game.State.Navigation.prototype = {
         popupBg.addChild(noButton);
 
         this.popup = popupBg;
+    },
+
+    update: function () {
+        this.musicButton.frameName = Game.SoundControls.musicEnabled ? 'music.png' : 'music_off.png';
+        this.soundButton.frameName = Game.SoundControls.soundEnabled ? 'sound.png' : 'sound_off.png';
     },
 
     showResetPopup: function () {
