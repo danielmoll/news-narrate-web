@@ -26,7 +26,7 @@ Game.State.Outro_Credits.prototype = {
 		{ size: HEADING_SIZE, text: 'Mad Design Skillz' },
 		{ text: 'Matt Simpson' },
 		{ text: 'Justin Ewins' },
-		{ text: 'James Eccleston' },
+		{ text: 'James Ronan' },
 		{ text: ' ' },
 		{ size: HEADING_SIZE, text: 'Developers' },
 		{ text: 'Mathieu Davy' },
