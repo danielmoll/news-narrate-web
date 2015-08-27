@@ -168,6 +168,7 @@ Game.PauseMenu.prototype.resume = function() {
 
 Game.PauseMenu.prototype.restartLevel = function() {
     this.game.paused = false;
+    this.game.sounds.bgmusic.stop();
 
     this.game.state.start(this.game.state.current);
 };

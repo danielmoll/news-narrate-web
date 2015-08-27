@@ -23,8 +23,12 @@ Game.State.BaseState.prototype = {
             jump: this.game.add.audio('jump'),
             timemachine: this.game.add.audio('timemachine'),
             pop: this.game.add.audio('pop'),
-            jewel: this.game.add.audio('jewel')
+            jewel: this.game.add.audio('jewel'),
+            bgmusic: this.game.add.audio('bgmusic')
         };
+
+        this.game.sounds.bgmusic.play();
+        this.game.sounds.bgmusic.loopFull();
     },
 
     addPlayer: function() {
@@ -210,6 +214,8 @@ Game.State.BaseState.prototype = {
 
     _endLevelHandler: function() {
         var inTween, outTween, rotateTween, exploder;
+
+        this.game.sounds.bgmusic.fadeOut(1000);
 
         this.player.visible = false;
         this.nextLevel.body.destroy();
