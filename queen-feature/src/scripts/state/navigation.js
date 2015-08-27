@@ -18,7 +18,7 @@ Game.State.Navigation.prototype = {
         this.transitionning = false;
         this.createState();
         this.game.fadePlugin.fadeIn(0x000, 750, 0);
-        this.game.sounds.bgmusic.stop();
+        this.game.sounds && this.game.sounds.bgmusic && this.game.sounds.bgmusic.stop();
     },
 
     createState: function() {

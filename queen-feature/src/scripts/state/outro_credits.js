@@ -60,6 +60,10 @@ Game.State.Outro_Credits.prototype = {
 
 		this.game.stage.backgroundColor = '#000';
 
+		this.music = this.game.add.audio('credits');
+		this.music.play();
+		this.music.loopFull();
+
 
 		this.game.fadePlugin.fadeIn(0x000, 750, 0);
 
@@ -70,6 +74,10 @@ Game.State.Outro_Credits.prototype = {
 			yPosition += textItem.gameText.height;
 			textItem.gameText.bringToTop();
 		}.bind(this));
+
+		setTimeout(function() {
+			this.music.fadeOut(10000);
+		}.bind(this), 50000);
 
 		this.game.add.tween(textGroup).to({ y: -(textGroup.height + this.game.world.centerY )}, 60000, 'Linear', true)
 			.onComplete.add(function() {
