@@ -8,7 +8,7 @@ Game.State.EndScreen.prototype = {
 
     fixedTextOverlays: [
         { text: "Well done", size: 100, x: 20, y: 20, alpha: 0.2 },
-        { text: "All royal artefacts have been returned!", size: 20, x: 20, y: 120 }
+        { text: "All royal artefacts have been returned!", size: 50, x: 20, y: 120 }
     ],
 
     create: function () {
@@ -42,7 +42,7 @@ Game.State.EndScreen.prototype = {
         if (!this.transitionning) {
             this.transitionning = true;
             this.game.fadePlugin.fadeOut(0x000, 750, 0, function() {
-                this.game.state.start('navigation');
+                this.game.state.start('outro_skynews');
             });
         }
     }

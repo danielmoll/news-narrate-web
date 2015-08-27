@@ -144,6 +144,12 @@ Game.init = function() {
     game.state.add('decade_00s', Game.State.Decade_00s);
     game.state.add('now', Game.State.Now);
     game.state.add('end_screen', Game.State.EndScreen);
+    game.state.add('outro_skynews', Game.State.Outro_Skynews);
+    game.state.add('outro_credits', Game.State.Outro_Credits);
+    game.state.add('outro_timemachine', Game.State.Outro_TimeMachine);
+
+
+
 
     this.Score.init(this.game);
 
