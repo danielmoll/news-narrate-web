@@ -63,17 +63,19 @@ Game.Score = {
         }
     },
     artefactCollected: function(level, artefact) {
-        if (!this.levelScores[level].scoredItems[artefact]) {
-            this.levelScores[level].scoredItems[artefact] = true;
-            this.levelScores[level].artefactsCollected ++;
-            this.artefactsCollected ++;
-        }
+        if (level !== 'alexs_house') {
+            if (!this.levelScores[level].scoredItems[artefact]) {
+                this.levelScores[level].scoredItems[artefact] = true;
+                this.levelScores[level].artefactsCollected ++;
+                this.artefactsCollected ++;
+            }
 
-        if (this.artefactsCollected === this.totalArtefacts) {
-            this.allArtefactsCollected = true;
-        }
+            if (this.artefactsCollected === this.totalArtefacts) {
+                this.allArtefactsCollected = true;
+            }
 
-        this.save();
+            this.save();
+        }
     },
     updateScore: function(level, score) {
         if (level !== 'alexs_house') {
