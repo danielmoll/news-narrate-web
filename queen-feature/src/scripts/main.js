@@ -111,7 +111,7 @@ Game.Map.MAPS = [
     'decade_80s',
     'decade_90s',
     'decade_00s',
-    'now'
+    'decade_now'
 ];
 
 Game.Levels = [
@@ -121,7 +121,7 @@ Game.Levels = [
     { text: '80', stateKey: 'decade_80s', collectibles: ['charles_diana', 'live_aid', 'mobile_phone']},
     { text: '90', stateKey: 'decade_90s' , collectibles: ['web', 'harry', 'spice']},
     { text: '00', stateKey: 'decade_00s', collectibles: ['dome', 'ipod', 'idol']},
-    { text: 'NOW', stateKey: 'now', collectibles: ['.', '.', '.']}
+    { text: 'NOW', stateKey: 'decade_now', collectibles: ['olympics', 'selfie', '1d']}
 ];
 
 Game.init = function() {
@@ -142,7 +142,7 @@ Game.init = function() {
     game.state.add('decade_80s', Game.State.Decade_80s);
     game.state.add('decade_90s', Game.State.Decade_90s);
     game.state.add('decade_00s', Game.State.Decade_00s);
-    game.state.add('now', Game.State.Now);
+    game.state.add('decade_now', Game.State.Decade_Now);
     game.state.add('end_screen', Game.State.EndScreen);
 
     this.Score.init(this.game);

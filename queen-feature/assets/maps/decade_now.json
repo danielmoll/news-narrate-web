@@ -101,7 +101,7 @@
                  "properties":
                     {
                      "id":"72",
-                     "text":"Originally an exhibition space open to the public throughout 2000, the Millenium Dome became a white elephant in the capital. It's now in use as a music venue.",
+                     "text":"As The Games came to the capital for the third time, Britain basked in the glory of hosting a succesful event. Britons also celebrated a bumper medal haul, coming third in the table with 29 golds.",
                      "tiles":"10",
                      "type":"factoid"
                     },
@@ -137,7 +137,7 @@
                  "properties":
                     {
                      "id":"867",
-                     "text":"Originally an exhibition space open to the public throughout 2000, the Millenium Dome became a white elephant in the capital. It's now in use as a music venue.",
+                     "text":"Photos taken of the user - by the user, have become so popular that in 2013 'selfie' was crowned Oxford Dictionaries' word of the year. The monarch isn't a fan herself... saying she finds the trend 'strange',",
                      "tiles":"10",
                      "type":"factoid"
                     },
@@ -145,8 +145,8 @@
                  "type":"",
                  "visible":true,
                  "width":32,
-                 "x":1728,
-                 "y":384
+                 "x":1785.277371255,
+                 "y":385.380643379815
                 }, 
                 {
                  "gid":467,
@@ -156,7 +156,7 @@
                  "properties":
                     {
                      "id":"869",
-                     "text":"Originally an exhibition space open to the public throughout 2000, the Millenium Dome became a white elephant in the capital. It's now in use as a music venue.",
+                     "text":"1D are the biggest British band since the Beatles. A symbol of the times, the band were first created on reality TV show The X Factor. Since forming they have accumulated an estimated combined wealth of \u00a325million.",
                      "tiles":"10",
                      "type":"factoid"
                     },
@@ -2548,15 +2548,15 @@
                  "gid":455,
                  "height":32,
                  "id":868,
-                 "name":"one_direction",
+                 "name":"1d",
                  "properties":
                     {
                      "revealFactId":"869",
                      "score":"50",
-                     "sprite_key":"one_direction"
+                     "sprite_key":"1d"
                     },
                  "rotation":0,
-                 "type":"one_direction_spawn",
+                 "type":"1d_spawn",
                  "visible":true,
                  "width":32,
                  "x":1728,
@@ -2649,7 +2649,7 @@
         {
          "firstgid":1,
          "image":"..\/tiles\/tiles_now.png",
-         "imageheight":452,
+         "imageheight":448,
          "imagewidth":1024,
          "margin":0,
          "name":"now",

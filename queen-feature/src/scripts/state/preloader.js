@@ -35,7 +35,6 @@ Game.State.Preloader.prototype = {
         this.game.load.image('sparkle1', 'assets/sprites/sparkle1.png');
         this.game.load.image('sparkle2', 'assets/sprites/sparkle2.png');
         this.game.load.image('sparkle3', 'assets/sprites/sparkle3.png');
-        this.game.load.image('transparent_32-160', 'assets/sprites/transparent_32-160.png');
         this.game.load.image('jewel', 'assets/sprites/jewel.png');
         this.game.load.image('jewel_grey', 'assets/sprites/jewel_grey.png');
 
@@ -66,14 +65,6 @@ Game.State.Preloader.prototype = {
         this.game.load.image('starwars', 'assets/sprites/70s_starwars.png');
         this.game.load.image('starwars_grey', 'assets/sprites/70s_starwars_grey.png');
 
-        // 00s assets
-        this.game.load.image('ipod', 'assets/sprites/2000s_ipod.png');
-        this.game.load.image('ipod_grey', 'assets/sprites/2000s_ipod_grey.png');
-        this.game.load.image('idol', 'assets/sprites/2000s_pop_idol.png');
-        this.game.load.image('idol_grey', 'assets/sprites/2000s_pop_idol_grey.png');
-        this.game.load.image('dome', 'assets/sprites/2000s_dome.png');
-        this.game.load.image('dome_grey', 'assets/sprites/2000s_dome_grey.png');
-
         // 80s assets
         this.game.load.image('parallax_1980s', 'assets/tiles/parallax_1980s.png');
         this.game.load.image('live_aid', 'assets/sprites/80s_live_aid.png');
@@ -92,6 +83,22 @@ Game.State.Preloader.prototype = {
         this.game.load.image('harry', 'assets/sprites/90s_harry.png');
         this.game.load.image('harry_grey', 'assets/sprites/90s_harry_grey.png');
 
+        // 2000s assets
+        this.game.load.image('ipod', 'assets/sprites/2000s_ipod.png');
+        this.game.load.image('ipod_grey', 'assets/sprites/2000s_ipod_grey.png');
+        this.game.load.image('idol', 'assets/sprites/2000s_pop_idol.png');
+        this.game.load.image('idol_grey', 'assets/sprites/2000s_pop_idol_grey.png');
+        this.game.load.image('dome', 'assets/sprites/2000s_dome.png');
+        this.game.load.image('dome_grey', 'assets/sprites/2000s_dome_grey.png');
+
+        // 2010s assets
+        this.game.load.image('olympics', 'assets/sprites/2010s_olympics.png');
+        this.game.load.image('olympics_grey', 'assets/sprites/2010s_olympics_grey.png');
+        this.game.load.image('selfie', 'assets/sprites/2010s_selfie.png');
+        this.game.load.image('selfie_grey', 'assets/sprites/2010s_selfie_grey.png');
+        this.game.load.image('1d', 'assets/sprites/2010s_1d.png');
+        this.game.load.image('1d_grey', 'assets/sprites/2010s_1d_grey.png');
+
         // In-game menu
         this.load.atlas('menu_buttons', 'assets/sprites/menu_buttons.png', 'assets/sprites/menu_buttons.json');
         this.game.load.image('pause', 'assets/sprites/pause.png');
@@ -105,14 +112,6 @@ Game.State.Preloader.prototype = {
         this.game.load.audio('timemachine', 'assets/audio/timemachine.mp3');
         this.game.load.audio('pop', 'assets/audio/pop.mp3');
         this.game.load.audio('jewel', 'assets/audio/jewel.mp3');
-
-
-
-
-        // Get some audio up in this shit.
-        // this.load.audio('doorOpen_1', 'res/audio/doorOpen_1.ogg');
-        // this.load.audio('doorClose_4', 'res/audio/doorClose_4.ogg');
-
 
         this.loadTileMaps();
     },
