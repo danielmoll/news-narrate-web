@@ -103,6 +103,26 @@ Game.Score = {
     }
 };
 
+
+Game.SoundControls = {
+    
+    init: function(game) {
+        this.game = game;
+        
+        this.musicEnabled = this.game.storage.get('music') || 1;
+        this.soundEnabled = this.game.storage.get('sound') || 1;
+    },
+
+    toggleMusic: function () {
+        this.musicEnabled = !this.musicEnabled;
+    },
+
+    toggleSound: function () {
+        this.soundEnabled = !this.soundEnabled;
+        this.game.sound.mute = !this.soundEnabled;
+    }
+};
+
 Game.Map.MAPS = [
     'alexs_house',
     'decade_50s',
@@ -148,9 +168,7 @@ Game.init = function() {
     game.state.add('outro_credits', Game.State.Outro_Credits);
     game.state.add('outro_timemachine', Game.State.Outro_TimeMachine);
 
-
-
-
+    this.SoundControls.init(this.game);
     this.Score.init(this.game);
 
     // Start our game.

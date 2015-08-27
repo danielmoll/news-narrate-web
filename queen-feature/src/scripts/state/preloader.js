@@ -31,12 +31,15 @@ Game.State.Preloader.prototype = {
         // Load our sprites
         this.load.spritesheet('player', 'assets/sprites/alex-sprite.png', 44, 64, 8);
         this.load.spritesheet('next_button', 'assets/sprites/next_button.png', 100, 30);
-        this.game.load.image('navigation_bg', 'assets/sprites/navigation.png');
         this.game.load.image('sparkle1', 'assets/sprites/sparkle1.png');
         this.game.load.image('sparkle2', 'assets/sprites/sparkle2.png');
         this.game.load.image('sparkle3', 'assets/sprites/sparkle3.png');
         this.game.load.image('jewel', 'assets/sprites/jewel.png');
         this.game.load.image('jewel_grey', 'assets/sprites/jewel_grey.png');
+
+        // Navigation assets
+        this.game.load.image('navigation_bg', 'assets/sprites/navigation.png');
+        this.load.atlas('music_sound', 'assets/sprites/music_sound.png', 'assets/sprites/music_sound.json');
 
         // 50s assets
         this.game.load.image('tv', 'assets/sprites/50s_tv.png');

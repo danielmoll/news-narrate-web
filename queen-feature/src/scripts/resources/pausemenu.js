@@ -1,4 +1,4 @@
-/* global Phaser, Game */
+/* global Game */
 'use strict';
 
 Game.PauseMenu = function(game) {

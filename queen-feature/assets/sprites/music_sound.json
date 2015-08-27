@@ -1,0 +1,48 @@
+{"frames": [
+
+{
+	"filename": "music.png",
+	"frame": {"x":2,"y":2,"w":37,"h":46},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":12,"y":9,"w":37,"h":46},
+	"sourceSize": {"w":64,"h":64},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "music_off.png",
+	"frame": {"x":41,"y":2,"w":61,"h":60},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":2,"w":61,"h":60},
+	"sourceSize": {"w":64,"h":64},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "sound.png",
+	"frame": {"x":104,"y":2,"w":48,"h":38},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":8,"y":12,"w":48,"h":38},
+	"sourceSize": {"w":64,"h":64},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "sound_off.png",
+	"frame": {"x":154,"y":2,"w":61,"h":60},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":2,"w":61,"h":60},
+	"sourceSize": {"w":64,"h":64},
+	"pivot": {"x":0.5,"y":0.5}
+}],
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "music_sound.png",
+	"format": "RGBA8888",
+	"size": {"w":217,"h":64},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:8cd24ae5d0a8cad0f43366e74f5daf65:79ec8e06087630ff3874876a97353f6e:414da7e276006bdd36f4279d81f41f41$"
+}
+}
