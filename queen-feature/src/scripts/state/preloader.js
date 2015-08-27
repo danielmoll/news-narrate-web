@@ -99,6 +99,15 @@ Game.State.Preloader.prototype = {
         // Common
         this.load.image('next_level', 'assets/sprites/alexs_time_machine.png');
 
+        // Sounds effects
+        this.game.load.audio('jump', 'assets/audio/jump.mp3');
+        this.game.load.audio('timemachine', 'assets/audio/timemachine.mp3');
+        this.game.load.audio('pop', 'assets/audio/pop.mp3');
+        this.game.load.audio('jewel', 'assets/audio/jewel.mp3');
+
+
+
+
         // Get some audio up in this shit.
         // this.load.audio('doorOpen_1', 'res/audio/doorOpen_1.ogg');
         // this.load.audio('doorClose_4', 'res/audio/doorClose_4.ogg');

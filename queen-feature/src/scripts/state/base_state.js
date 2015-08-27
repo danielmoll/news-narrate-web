@@ -18,6 +18,13 @@ Game.State.BaseState.prototype = {
         this.game.physics.arcade.gravity.y = 600;
         this._createState();
         this.game.fadePlugin.fadeIn(0x000, 750, 0);
+
+        this.game.sounds = {
+            jump: this.game.add.audio('jump'),
+            timemachine: this.game.add.audio('timemachine'),
+            pop: this.game.add.audio('pop'),
+            jewel: this.game.add.audio('jewel')
+        };
     },
 
     addPlayer: function() {
@@ -203,11 +210,13 @@ Game.State.BaseState.prototype = {
         this.player.visible = false;
         this.nextLevel.body.destroy();
 
-        inTween = this.game.add.tween(this.nextLevel.scale).to({ x: 1.5, y: 1.5 }, 250, Phaser.Easing.Cubic.InOut);
-        outTween = this.game.add.tween(this.nextLevel.scale).to({ x: 0, y: 0}, 500, Phaser.Easing.Cubic.In);
-        rotateTween = this.game.add.tween(this.nextLevel).to({ angle: 360 }, 500, Phaser.Easing.Cubic.In, true, 250);
+        inTween = this.game.add.tween(this.nextLevel.scale).to({ x: 2, y: 2 }, 500, Phaser.Easing.Cubic.InOut);
+        outTween = this.game.add.tween(this.nextLevel.scale).to({ x: 0, y: 0}, 1500, Phaser.Easing.Cubic.In);
+        rotateTween = this.game.add.tween(this.nextLevel).to({ angle: 360 }, 1500, Phaser.Easing.Cubic.In, true, 500);
 
         inTween.chain(outTween);
+
+        this.game.sounds.timemachine.play();
 
         exploder = this.game.add.emitter(this.nextLevel.x, this.nextLevel.y, 100);
 
@@ -223,14 +232,15 @@ Game.State.BaseState.prototype = {
         exploder.start(true);
 
         outTween.onComplete.add(function() {
-            exploder.explode(750, 100);
+            exploder.explode(2000, 100);
+            this.game.sounds.pop.play();
             setTimeout(function() {
                 if (this.levelKey === 'alexs_house') {
                     this.game.state.start('navigation');
                 } else {
                     this.pauseMenu.showMenu('next_level');
                 }
-            }.bind(this), 1000);
+            }.bind(this), 2500);
         }.bind(this));
 
         inTween.start();

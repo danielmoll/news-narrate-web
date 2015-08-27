@@ -64,6 +64,7 @@ Game.Controls.prototype.moveRight = function(speed) {
 Game.Controls.prototype.jump = function () {
     if (this.player.body.onFloor()) {
         this.player.body.velocity.y = -300;
+        this.game.sounds.jump.play();
     }
 };
 
@@ -106,9 +107,9 @@ Game.Controls.prototype.update = function () {
         } else if (this.activePointer.x > this.game.width / 2) {
             this.moveRight();
         }
-    } 
+    }
 
-   
+
 
     if (this.player.body.velocity.x === 0) {
         this.player.animations.stop();

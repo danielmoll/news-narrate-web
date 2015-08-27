@@ -94,6 +94,7 @@ Game.LevelScore.prototype.scoreItem = function (scoredItem, levelKey) {
                 // Update stored scores
                 Game.Score.updateScore(levelKey, this.score);
             }.bind(this));
+        this.game.sounds.jewel.play();
     }
 
 };
