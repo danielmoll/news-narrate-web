@@ -24,7 +24,8 @@ Game.State.BaseState.prototype = {
             timemachine: this.game.add.audio('timemachine'),
             pop: this.game.add.audio('pop'),
             jewel: this.game.add.audio('jewel'),
-            bgmusic: this.game.add.audio('bgmusic')
+            bgmusic: this.game.add.audio('bgmusic'),
+            collectable: this.game.add.audio('collectable')
         };
 
         this.game.sounds.bgmusic.play();
@@ -208,6 +209,7 @@ Game.State.BaseState.prototype = {
 
         // reveal associated factoid
         if (collectible._revealFactId) {
+            this.game.sounds.collectable.play();
             this.factReference[collectible._revealFactId].reveal();
         }
     },

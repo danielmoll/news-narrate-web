@@ -116,6 +116,7 @@ Game.State.Preloader.prototype = {
         this.game.load.audio('jewel', 'assets/audio/jewel.mp3');
         this.game.load.audio('bgmusic', 'assets/audio/bgmusic.mp3');
         this.game.load.audio('credits', 'assets/audio/credits.mp3');
+        this.game.load.audio('collectable', 'assets/audio/collectable.mp3');
 
 
         this.loadTileMaps();
