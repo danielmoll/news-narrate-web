@@ -84,6 +84,7 @@ Game.State.Preloader.prototype = {
         this.game.load.image('harry_grey', 'assets/sprites/90s_harry_grey.png');
 
         // 2000s assets
+        this.game.load.image('parallax_2000s', 'assets/tiles/parallax_2000s.png');
         this.game.load.image('ipod', 'assets/sprites/2000s_ipod.png');
         this.game.load.image('ipod_grey', 'assets/sprites/2000s_ipod_grey.png');
         this.game.load.image('idol', 'assets/sprites/2000s_pop_idol.png');
@@ -92,6 +93,7 @@ Game.State.Preloader.prototype = {
         this.game.load.image('dome_grey', 'assets/sprites/2000s_dome_grey.png');
 
         // 2010s assets
+        this.game.load.image('parallax_now', 'assets/tiles/parallax_now.png');
         this.game.load.image('olympics', 'assets/sprites/2010s_olympics.png');
         this.game.load.image('olympics_grey', 'assets/sprites/2010s_olympics_grey.png');
         this.game.load.image('selfie', 'assets/sprites/2010s_selfie.png');
