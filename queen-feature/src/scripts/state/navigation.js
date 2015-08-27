@@ -111,7 +111,7 @@ Game.State.Navigation.prototype = {
         bmd.ctx.stroke();
 
         popupTitle = new Phaser.Text(this.game, 0, 0, 'Are you sure?', { font: '22px silkscreennormal', wordWrap: true, wordWrapWidth: this.game.width - 180, align: 'center'} ),
-        popupText = new Phaser.Text(this.game, 0, 0, 'This will reset your progress and any items you have collected until now.', { font: '16px silkscreennormal', wordWrap: true, wordWrapWidth: this.game.width - 170, align: 'center'} ),
+        popupText = new Phaser.Text(this.game, 0, 0, 'This will reset your progress and lose any items you have collected until now.', { font: '16px silkscreennormal', wordWrap: true, wordWrapWidth: this.game.width - 160, align: 'center'} ),
         popupBg = this.game.add.sprite(centerX, centerY, bmd);
 
         popupBg.visible = false;
