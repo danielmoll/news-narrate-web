@@ -244,7 +244,7 @@ Game.State.BaseState.prototype = {
                 } else {
                     this.pauseMenu.showMenu('next_level');
                 }
-            }.bind(this), 2500);
+            }.bind(this), 500);
         }.bind(this));
 
         inTween.start();
