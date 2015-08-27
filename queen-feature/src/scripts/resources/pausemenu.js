@@ -101,7 +101,7 @@ Game.PauseMenu.prototype.drawMenu = function() {
         btn.frameName = button.sourceName;
 
         label = this.game.add.text(55, 10, button.label, { font: '16px silkscreennormal', align: 'left', fill: '#fff569'} );
-     
+
         btn.addChild(label);
 
         this.menuGroup.add(btn);
@@ -114,7 +114,7 @@ Game.PauseMenu.prototype.drawMenu = function() {
             callback: button.callback,
             id: button.id
         });
-        
+
         if (button.id === 'resume_button') {
             this.resumeButton = btn;
         }
@@ -136,7 +136,7 @@ Game.PauseMenu.prototype.handleInput = function(event) {
     this.buttons.forEach(function(button) {
         if (!callback) {
             if(event.x > button.x1 && event.x < button.x2 && event.y > button.y1 && event.y < button.y2 ) {
-                
+
                 if (button.id === 'resume_button' && this.resumeButton.visible === true) {
                     callback = button.callback;
 

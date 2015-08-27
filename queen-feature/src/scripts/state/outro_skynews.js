@@ -55,7 +55,7 @@ Game.State.Outro_Skynews.prototype = {
 		this.updateClock();
 		this.game.time.events.loop(Phaser.Timer.SECOND, this.updateClock, this);
 
-        this.game.fadePlugin.fadeIn(0x000, 750, 0);
+        // this.game.fadePlugin.fadeIn(0x000, 750, 0);
         this.game.input.onDown.add(this.nextFrame, this);
 		this.game.input.keyboard.addCallbacks(this, this.nextFrame);
 	},
@@ -78,9 +78,9 @@ Game.State.Outro_Skynews.prototype = {
 	nextLevel: function () {
 		if (!this.transitionning) {
 			this.transitionning = true;
-			this.game.fadePlugin.fadeOut(0x000, 750, 0, function() {
+			// this.game.fadePlugin.fadeOut(0x000, 750, 0, function() {
 				this.game.state.start('outro_credits');
-			});
+			// });
 		}
 	}
 };

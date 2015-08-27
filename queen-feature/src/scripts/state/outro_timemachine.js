@@ -11,12 +11,9 @@ Game.State.Outro_TimeMachine.prototype = {
 		this.player.anchor.set(0.5, 0.5);
 		this.timeMachine = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY - 16, 'next_level');
 		this.timeMachine.anchor.set(0.5, 0.5);
-		this.timeMachine.alpha = 0;
 
 		this.game.add.tween(this.player).to({ x: this.game.world.centerX }, 2500, 'Linear', true).
 			onComplete.add(this.disappear, this);
-
-		this.game.add.tween(this.timeMachine).to({ alpha: 1}, 500, "Linear", true);
 
 		this.game.sounds = {
             jump: this.game.add.audio('jump'),
@@ -24,6 +21,10 @@ Game.State.Outro_TimeMachine.prototype = {
             pop: this.game.add.audio('pop'),
             jewel: this.game.add.audio('jewel')
         };
+
+		this.game.stage.backgroundColor = '#000';
+
+		this.game.fadePlugin.fadeIn(0x000, 750, 0);
 	},
 
 	disappear: function() {
@@ -56,7 +57,9 @@ Game.State.Outro_TimeMachine.prototype = {
             exploder.explode(2000, 100);
             this.game.sounds.pop.play();
             setTimeout(function() {
-                this.game.state.start('navigation');
+				this.game.fadePlugin.fadeOut(0x000, 750, 0, function() {
+                	this.game.state.start('navigation');
+				});
             }.bind(this), 500);
         }.bind(this));
 
