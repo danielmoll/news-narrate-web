@@ -287,6 +287,6 @@
         <key>normalMapSuffix</key>
         <string></string>
         <key>normalMapSheetFileName</key>
-        <filename></filename>
+        <filename>sprites/assets.png</filename>
     </struct>
 </data>
