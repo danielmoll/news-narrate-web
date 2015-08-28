@@ -39,7 +39,7 @@ Game.State.Outro_Credits.prototype = {
 		{ text: ' ' },
 		{ size: HEADING_SIZE, text: 'Testing and QA' },
 		{ text: 'Oge Opara-Nadi' },
-		{ text: 'Joaquin Kess' },
+		{ text: 'Joaquin Bello' },
 		{ text: ' ' },
 		{ size: HEADING_SIZE, text: 'Chief iOS wrangler' },
 		{ text: 'Kavi Kumra' },
