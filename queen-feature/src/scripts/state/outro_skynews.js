@@ -51,7 +51,7 @@ Game.State.Outro_Skynews.prototype = {
 			boundsAlignV: 'middle'
 		});
 
-		this.speechText1 = this.game.add.text(20, 80, "Sky sources are reporting an unknown individual has recovered items belonging to the Queen, thought to have been lost in time.", {
+		this.speechText1 = this.game.add.text(20, 80, "Breaking news, her majesty the Queen’s lost mementos have been found. The palace has extended its greatest thanks...", {
 			font: "16px silkscreennormal",
 			fill: "#000",
 			backgroundColor: 'white',
@@ -59,7 +59,7 @@ Game.State.Outro_Skynews.prototype = {
 			wordWrapWidth: 200
 		});
 
-		this.speechText2 = this.game.add.text(20, 80, "Very little is known about the time-traveller… but it’s believed they have been invited to Buckingham Palace for a personal thank you from her Majesty.", {
+		this.speechText2 = this.game.add.text(20, 80, "to the unknown member of the public who recovered the items. It’s said they would look to include the finder in next year’s honours list.", {
 			font: "16px silkscreennormal",
 			fill: "#000",
 			backgroundColor: 'white',
