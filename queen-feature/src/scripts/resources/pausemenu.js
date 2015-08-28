@@ -200,10 +200,6 @@ Game.PauseMenu.prototype.nextLevel = function () {
 
     var nextLevel = this.game.state.states[this.game.state.current].nextLevelKey;
 
-    if(Game.Score.allCollected()) {
-        nextLevel = 'end_screen';
-    }
-
     this.game.analytics.stateComplete(this.game.state.current);
     this.game.state.start(nextLevel);
 };

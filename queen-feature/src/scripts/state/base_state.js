@@ -247,7 +247,9 @@ Game.State.BaseState.prototype = {
             exploder.explode(2000, 100);
             this.game.sounds.pop.play();
             setTimeout(function() {
-                if (this.levelKey === 'alexs_house') {
+                if(Game.Score.allCollected()) {
+                    this.game.state.start('end_screen');
+                } else if (this.levelKey === 'alexs_house') {
                     this.game.state.start('navigation');
                 } else {
                     this.pauseMenu.showMenu('next_level');
