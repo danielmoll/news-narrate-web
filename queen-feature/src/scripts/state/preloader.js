@@ -127,7 +127,7 @@ Game.State.Preloader.prototype = {
         this.game.load.audio('collectable', 'assets/audio/collectable.mp3');
         this.game.load.audio('kay_voice_intro', 'assets/audio/kay_voice_intro.mp3');
         this.game.load.audio('kay_voice_outro', 'assets/audio/kay_voice_outro.mp3');
-    
+
 
         this.loadTileMaps();
     },
@@ -165,9 +165,11 @@ Game.State.Preloader.prototype = {
     },
 
     create: function() {
+        document.body.className += 'game-loaded';
         setTimeout(function() {
             this.game.fadePlugin.fadeOut(0x000, 750, 0, function() {
             this.game.state.start('intro_skynews');
+
             }.bind(this));
         }.bind(this), 500);
     }

@@ -165,7 +165,7 @@ Game.Levels = [
 ];
 
 Game.init = function() {
-    var game = new Phaser.Game(568, 320, Phaser.AUTO, 'main', null, false, false);
+    var game = new Phaser.Game(568, 320, Phaser.AUTO, 'main', null, true, false);
     this.game = game;
 
     game.analytics = Game.Analytics;
