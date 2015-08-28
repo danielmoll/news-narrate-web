@@ -1,11 +1,31 @@
 /* global Phaser */
 'use strict';
 
-var Game = {};
+var html = document.querySelector('html'),
+    detectedFeatures = [],
+    detectedFeaturesMap = {},
+    Game = {},
+    tests = {},
+    result;
+
+tests.touch = function() {
+    return (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch);
+};
+
+for (var test in tests) {
+    result = tests[test]();
+    detectedFeatures.push(result ? test : 'no-' + test);
+    detectedFeaturesMap[result ? test : 'no-' + test] = true;
+}
+
+detectedFeatures.forEach(function(feature) {
+    html.classList.add(feature);
+});
+
+window.detect = detectedFeaturesMap;
 
 // Setup our namespaces and resource lists.
-Game = {
-};
+Game = {};
 
 Game.State = {};
 Game.Map = {};

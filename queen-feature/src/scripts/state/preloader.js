@@ -15,6 +15,16 @@ Game.State.Preloader.prototype = {
         this.textGroup.fixedToCamera = true;
         this.textGroup.add(new Phaser.BitmapText(this.game, this.game.width / 2 - 50, this.game.height / 2 - 15, 'pixeltype', 'Loading...', 40));
 
+        // Load our sprites
+        this.load.spritesheet('player', 'assets/sprites/alex-sprite.png', 44, 64, 8);
+        this.load.spritesheet('next_button', 'assets/sprites/next_button.png', 100, 30);
+        this.game.load.image('sparkle1', 'assets/sprites/sparkle1.png');
+        this.game.load.image('sparkle2', 'assets/sprites/sparkle2.png');
+        this.game.load.image('sparkle3', 'assets/sprites/sparkle3.png');
+        this.game.load.image('jewel', 'assets/sprites/jewel.png');
+        this.game.load.image('jewel_grey', 'assets/sprites/jewel_grey.png');
+        this.load.atlas('controls', 'assets/sprites/controls.png', 'assets/sprites/controls.json');
+
         // Intro Sky News report
         this.game.load.image('intro_ticker', 'assets/sprites/intro-ticker.png');
         this.game.load.image('kay', 'assets/sprites/kayburley.png');
@@ -28,15 +38,6 @@ Game.State.Preloader.prototype = {
         this.game.load.image('corgi_grey', 'assets/sprites/corgi_grey.png');
         this.game.load.image('horse', 'assets/sprites/horse.png');
         this.game.load.image('horse_grey', 'assets/sprites/horse_grey.png');
-
-        // Load our sprites
-        this.load.spritesheet('player', 'assets/sprites/alex-sprite.png', 44, 64, 8);
-        this.load.spritesheet('next_button', 'assets/sprites/next_button.png', 100, 30);
-        this.game.load.image('sparkle1', 'assets/sprites/sparkle1.png');
-        this.game.load.image('sparkle2', 'assets/sprites/sparkle2.png');
-        this.game.load.image('sparkle3', 'assets/sprites/sparkle3.png');
-        this.game.load.image('jewel', 'assets/sprites/jewel.png');
-        this.game.load.image('jewel_grey', 'assets/sprites/jewel_grey.png');
 
         // Navigation assets
         this.game.load.image('navigation_bg', 'assets/sprites/navigation.png');

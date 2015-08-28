@@ -5,7 +5,7 @@ Game.State.Navigation = function() {};
 Game.State.Navigation.prototype = {
     cursors: null,
     transitionning: false,
-    buttonsOriginX: 33,
+    buttonsOriginX: 31,
     buttonsOriginY: 45,
     buttonsMargin: 30,
     buttonsPerRow: 3,
@@ -56,7 +56,7 @@ Game.State.Navigation.prototype = {
             button.properties = level;
 
             level.collectibles.forEach(function(collectible) {
-                var collx = x + collectibleId * 39 - this.buttonWidth / 2 + 15,
+                var collx = x + collectibleId * 39 - this.buttonWidth / 2 + 17,
                     colly = y + this.buttonHeight - this.buttonHeight / 2 + 8,
                     collected = false,
                     collBg,
