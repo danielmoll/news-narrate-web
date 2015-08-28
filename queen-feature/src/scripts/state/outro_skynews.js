@@ -103,5 +103,10 @@ Game.State.Outro_Skynews.prototype = {
 				this.game.state.start('outro_credits');
 			// });
 		}
+	},
+
+	preload: function() {
+		this.game.load.audio('kay_voice_outro', 'assets/audio/kay_voice_outro.mp3');
+		this.game.load.image('outro_ticker', 'assets/sprites/outro-ticker.png');
 	}
 };

@@ -26,3 +26,18 @@ Game.State.Intro_AlexsHouse.prototype.createForegroundLayers = function() {
 Game.State.Intro_AlexsHouse.prototype.skip = function() {
     this.game.state.start('navigation');
 };
+
+Game.State.Intro_AlexsHouse.prototype.preload = function() {
+    this.game.load.withSyncPoint(function(load) {
+        // Intro Alex's house
+        load.image('parallax_alexs_house', 'assets/tiles/parallax_alexs_house.png');
+        load.image('alexs_time_machine', 'assets/sprites/alexs_time_machine.png');
+        load.image('crown_grey', 'assets/sprites/crown_grey.png');
+        load.image('corgi', 'assets/sprites/corgi.png');
+        load.image('corgi_grey', 'assets/sprites/corgi_grey.png');
+        load.image('horse', 'assets/sprites/horse.png');
+        load.image('horse_grey', 'assets/sprites/horse_grey.png');
+    }, this);
+
+
+};

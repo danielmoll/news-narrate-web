@@ -20,3 +20,13 @@ Game.State.Decade_50s.prototype.createForegroundLayers = function() {
     this.levelModule.createLayer('foreground');
 };
 
+Game.State.Decade_50s.prototype.preload = function() {
+    // 50s assets
+    this.game.load.image('tv', 'assets/sprites/50s_tv.png');
+    this.game.load.image('tv_grey', 'assets/sprites/50s_tv_grey.png');
+    this.game.load.image('record', 'assets/sprites/50s_record.png');
+    this.game.load.image('record_grey', 'assets/sprites/50s_record_grey.png');
+    this.game.load.image('mini', 'assets/sprites/50s_mini.png');
+    this.game.load.image('mini_grey', 'assets/sprites/50s_mini_grey.png');
+    this.game.load.image('parallax_1950s', 'assets/tiles/parallax_1950s.png');
+};

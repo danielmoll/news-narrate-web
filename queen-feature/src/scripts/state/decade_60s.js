@@ -22,3 +22,14 @@ Game.State.Decade_60s.prototype.createForegroundLayers = function() {
 
 Game.State.Decade_60s.prototype.updateState = function() {
 };
+
+Game.State.Decade_60s.prototype.preload = function() {
+    // 60s assets
+    this.game.load.image('beatles', 'assets/sprites/60s_beatles.png');
+    this.game.load.image('beatles_grey', 'assets/sprites/60s_beatles_grey.png');
+    this.game.load.image('worldcup', 'assets/sprites/60s_worldcup.png');
+    this.game.load.image('worldcup_grey', 'assets/sprites/60s_worldcup_grey.png');
+    this.game.load.image('the_sun', 'assets/sprites/60s_the_sun.png');
+    this.game.load.image('the_sun_grey', 'assets/sprites/60s_the_sun_grey.png');
+    this.game.load.image('parallax_1960s', 'assets/tiles/parallax_1960s.png');
+};

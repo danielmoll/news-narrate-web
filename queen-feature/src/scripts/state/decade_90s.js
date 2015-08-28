@@ -24,3 +24,13 @@ Game.State.Decade_90s.prototype.createForegroundLayers = function() {
     this.levelModule.createLayer('foreground3');
 };
 
+Game.State.Decade_90s.prototype.preload = function() {
+    // 90s assets
+    this.game.load.image('parallax_1990s', 'assets/tiles/parallax_1990s.png');
+    this.game.load.image('web', 'assets/sprites/90s_web.png');
+    this.game.load.image('web_grey', 'assets/sprites/90s_web_grey.png');
+    this.game.load.image('spice', 'assets/sprites/90s_spice.png');
+    this.game.load.image('spice_grey', 'assets/sprites/90s_spice_grey.png');
+    this.game.load.image('harry', 'assets/sprites/90s_harry.png');
+    this.game.load.image('harry_grey', 'assets/sprites/90s_harry_grey.png');
+};

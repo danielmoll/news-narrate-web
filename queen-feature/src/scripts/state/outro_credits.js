@@ -94,4 +94,10 @@ Game.State.Outro_Credits.prototype = {
 			}.bind(this));
 	},
 
+	preload: function() {
+		this.game.load.audio('kay_voice_outro', 'assets/audio/kay_voice_outro.mp3');
+		this.game.load.audio('credits', 'assets/audio/credits.mp3');
+
+	}
+
 };
