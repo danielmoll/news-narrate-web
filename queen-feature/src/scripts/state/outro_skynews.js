@@ -18,6 +18,17 @@ Game.State.Outro_Skynews.prototype = {
 
 		this.game.add.image(0, 0, 'kay');
 
+		this.game.sounds = {
+			kay_voice_outro: this.game.add.audio('kay_voice_outro')
+		};
+
+		this.game.sounds.kay_voice_outro.play();
+		this.game.sounds.kay_voice_outro.onStop.add(function() {
+			this.kayMouth.animations.stop();
+			this.kayMouth.frame = 0;
+		}.bind(this));
+
+
 		text = this.game.add.image(0, 300, 'outro_ticker');
 		textClone = this.game.add.image(568, 300, 'outro_ticker');
 		textGroup = this.game.add.group();
@@ -64,6 +75,10 @@ Game.State.Outro_Skynews.prototype = {
         // this.game.fadePlugin.fadeIn(0x000, 750, 0);
         this.game.input.onDown.add(this.nextFrame, this);
 		this.game.input.keyboard.addCallbacks(this, this.nextFrame);
+	},
+
+	shutdown: function() {
+		this.game.sounds.kay_voice_outro.stop();
 	},
 
 	nextFrame: function() {

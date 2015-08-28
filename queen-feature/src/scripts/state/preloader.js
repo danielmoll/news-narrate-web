@@ -124,7 +124,9 @@ Game.State.Preloader.prototype = {
         this.game.load.audio('bgmusic', 'assets/audio/bgmusic.mp3');
         this.game.load.audio('credits', 'assets/audio/credits.mp3');
         this.game.load.audio('collectable', 'assets/audio/collectable.mp3');
-
+        this.game.load.audio('kay_voice_intro', 'assets/audio/kay_voice_intro.mp3');
+        this.game.load.audio('kay_voice_outro', 'assets/audio/kay_voice_outro.mp3');
+    
 
         this.loadTileMaps();
     },

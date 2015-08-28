@@ -16,6 +16,17 @@ Game.State.Intro_Skynews.prototype = {
         this.transitionning = false;
         this.game.stage.backgroundColor = '#fff';
 
+		this.game.sounds = {
+            kay_voice_intro: this.game.add.audio('kay_voice_intro')
+        };
+
+		this.game.sounds.kay_voice_intro.play();
+		this.game.sounds.kay_voice_intro.onStop.add(function() {
+			this.kayMouth.animations.stop();
+	        this.kayMouth.frame = 0;
+		}.bind(this));
+
+
 		this.game.add.image(0, 0, 'kay');
 
 		text = this.game.add.image(0, 300, 'intro_ticker');
@@ -62,6 +73,10 @@ Game.State.Intro_Skynews.prototype = {
         this.game.fadePlugin.fadeIn(0x000, 750, 0);
         this.game.input.onDown.add(this.nextFrame, this);
 		this.game.input.keyboard.addCallbacks(this, this.nextFrame);
+	},
+
+	shutdown: function() {
+		this.game.sounds.kay_voice_intro.stop();
 	},
 
 	nextFrame: function() {
