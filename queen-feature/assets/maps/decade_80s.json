@@ -742,7 +742,7 @@
                     {
                      "revealFactId":"67",
                      "score":"50",
-                     "sprite_key":"live_aid"
+                     "sprite_key":"80s_live_aid"
                     },
                  "rotation":0,
                  "type":"live_aid_spawn",
@@ -760,7 +760,7 @@
                     {
                      "revealFactId":"73",
                      "score":"50",
-                     "sprite_key":"mobile_phone"
+                     "sprite_key":"80s_mobile_phone"
                     },
                  "rotation":0,
                  "type":"mobile_phone_spawn",
@@ -778,7 +778,7 @@
                     {
                      "revealFactId":"72",
                      "score":"50",
-                     "sprite_key":"charles_diana"
+                     "sprite_key":"80s_charles_diana"
                     },
                  "rotation":0,
                  "type":"charles_diana_spawn",

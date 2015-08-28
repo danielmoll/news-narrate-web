@@ -502,7 +502,7 @@
                     {
                      "revealFactId":"35",
                      "score":"10",
-                     "sprite_key":"worldcup"
+                     "sprite_key":"60s_worldcup"
                     },
                  "rotation":0,
                  "type":"worldcup_spawn",
@@ -520,7 +520,7 @@
                     {
                      "revealFactId":"82",
                      "score":"30",
-                     "sprite_key":"beatles"
+                     "sprite_key":"60s_beatles"
                     },
                  "rotation":0,
                  "type":"beatles_spawn",
@@ -589,7 +589,7 @@
                     {
                      "revealFactId":"83",
                      "score":"50",
-                     "sprite_key":"the_sun"
+                     "sprite_key":"60s_the_sun"
                     },
                  "rotation":0,
                  "type":"the_sun_spawn",

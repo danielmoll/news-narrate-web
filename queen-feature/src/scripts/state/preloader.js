@@ -6,7 +6,6 @@ Game.State.Preloader.prototype = {
     preload: function() {
         this.stage.backgroundColor = '#000000';
 
-
         // loading screen
         this.add.sprite(195, 138, 'crown');
 
@@ -15,107 +14,24 @@ Game.State.Preloader.prototype = {
         this.textGroup.fixedToCamera = true;
         this.textGroup.add(new Phaser.BitmapText(this.game, this.game.width / 2 - 50, this.game.height / 2 - 15, 'pixeltype', 'Loading...', 40));
 
-        // Load our sprites
+        this.load.atlas('assets', 'assets/sprites/assets.png', 'assets/sprites/assets.json');
+
+        // Animation sprites
         this.load.spritesheet('player', 'assets/sprites/alex-sprite.png', 44, 64, 8);
-        this.load.spritesheet('next_button', 'assets/sprites/next_button.png', 100, 30);
         this.game.load.image('sparkle1', 'assets/sprites/sparkle1.png');
         this.game.load.image('sparkle2', 'assets/sprites/sparkle2.png');
         this.game.load.image('sparkle3', 'assets/sprites/sparkle3.png');
-        this.game.load.image('jewel', 'assets/sprites/jewel.png');
-        this.game.load.image('jewel_grey', 'assets/sprites/jewel_grey.png');
-        this.load.atlas('controls', 'assets/sprites/controls.png', 'assets/sprites/controls.json');
-
-        // Intro Sky News report
-        this.game.load.image('intro_ticker', 'assets/sprites/intro-ticker.png');
-        this.game.load.image('kay', 'assets/sprites/kayburley.png');
         this.load.spritesheet('kay_mouth', 'assets/sprites/kay_mouth.png', 44, 25, 2);
 
-        // Intro Alex's house
+        // Parallax backgrounds
         this.game.load.image('parallax_alexs_house', 'assets/tiles/parallax_alexs_house.png');
-        this.game.load.image('alexs_time_machine', 'assets/sprites/alexs_time_machine.png');
-        this.game.load.image('crown_grey', 'assets/sprites/crown_grey.png');
-        this.game.load.image('corgi', 'assets/sprites/corgi.png');
-        this.game.load.image('corgi_grey', 'assets/sprites/corgi_grey.png');
-        this.game.load.image('horse', 'assets/sprites/horse.png');
-        this.game.load.image('horse_grey', 'assets/sprites/horse_grey.png');
-
-        // Navigation assets
-        this.game.load.image('navigation_bg', 'assets/sprites/navigation.png');
-        this.load.atlas('music_sound', 'assets/sprites/music_sound.png', 'assets/sprites/music_sound.json');
-
-        // 50s assets
-        this.game.load.image('tv', 'assets/sprites/50s_tv.png');
-        this.game.load.image('tv_grey', 'assets/sprites/50s_tv_grey.png');
-        this.game.load.image('record', 'assets/sprites/50s_record.png');
-        this.game.load.image('record_grey', 'assets/sprites/50s_record_grey.png');
-        this.game.load.image('mini', 'assets/sprites/50s_mini.png');
-        this.game.load.image('mini_grey', 'assets/sprites/50s_mini_grey.png');
         this.game.load.image('parallax_1950s', 'assets/tiles/parallax_1950s.png');
-
-        // 60s assets
-        this.game.load.image('beatles', 'assets/sprites/60s_beatles.png');
-        this.game.load.image('beatles_grey', 'assets/sprites/60s_beatles_grey.png');
-        this.game.load.image('worldcup', 'assets/sprites/60s_worldcup.png');
-        this.game.load.image('worldcup_grey', 'assets/sprites/60s_worldcup_grey.png');
-        this.game.load.image('the_sun', 'assets/sprites/60s_the_sun.png');
-        this.game.load.image('the_sun_grey', 'assets/sprites/60s_the_sun_grey.png');
         this.game.load.image('parallax_1960s', 'assets/tiles/parallax_1960s.png');
-
-        // 70s assets
         this.game.load.image('parallax_1970s', 'assets/tiles/parallax_1970s.png');
-        this.game.load.image('sex_pistols', 'assets/sprites/70s_sex_pistols.png');
-        this.game.load.image('sex_pistols_grey', 'assets/sprites/70s_sex_pistols_grey.png');
-        this.game.load.image('maggie', 'assets/sprites/70s_maggie.png');
-        this.game.load.image('maggie_grey', 'assets/sprites/70s_maggie_grey.png');
-        this.game.load.image('starwars', 'assets/sprites/70s_starwars.png');
-        this.game.load.image('starwars_grey', 'assets/sprites/70s_starwars_grey.png');
-
-        // 80s assets
         this.game.load.image('parallax_1980s', 'assets/tiles/parallax_1980s.png');
-        this.game.load.image('live_aid', 'assets/sprites/80s_live_aid.png');
-        this.game.load.image('live_aid_grey', 'assets/sprites/80s_live_aid_grey.png');
-        this.game.load.image('charles_diana', 'assets/sprites/80s_charles_diana.png');
-        this.game.load.image('charles_diana_grey', 'assets/sprites/80s_charles_diana_grey.png');
-        this.game.load.image('mobile_phone', 'assets/sprites/80s_mobile_phone.png');
-        this.game.load.image('mobile_phone_grey', 'assets/sprites/80s_mobile_phone_grey.png');
-
-        // 90s assets
         this.game.load.image('parallax_1990s', 'assets/tiles/parallax_1990s.png');
-        this.game.load.image('web', 'assets/sprites/90s_web.png');
-        this.game.load.image('web_grey', 'assets/sprites/90s_web_grey.png');
-        this.game.load.image('spice', 'assets/sprites/90s_spice.png');
-        this.game.load.image('spice_grey', 'assets/sprites/90s_spice_grey.png');
-        this.game.load.image('harry', 'assets/sprites/90s_harry.png');
-        this.game.load.image('harry_grey', 'assets/sprites/90s_harry_grey.png');
-
-        // 2000s assets
         this.game.load.image('parallax_2000s', 'assets/tiles/parallax_2000s.png');
-        this.game.load.image('ipod', 'assets/sprites/2000s_ipod.png');
-        this.game.load.image('ipod_grey', 'assets/sprites/2000s_ipod_grey.png');
-        this.game.load.image('idol', 'assets/sprites/2000s_pop_idol.png');
-        this.game.load.image('idol_grey', 'assets/sprites/2000s_pop_idol_grey.png');
-        this.game.load.image('dome', 'assets/sprites/2000s_dome.png');
-        this.game.load.image('dome_grey', 'assets/sprites/2000s_dome_grey.png');
-
-        // 2010s assets
         this.game.load.image('parallax_now', 'assets/tiles/parallax_now.png');
-        this.game.load.image('olympics', 'assets/sprites/2010s_olympics.png');
-        this.game.load.image('olympics_grey', 'assets/sprites/2010s_olympics_grey.png');
-        this.game.load.image('selfie', 'assets/sprites/2010s_selfie.png');
-        this.game.load.image('selfie_grey', 'assets/sprites/2010s_selfie_grey.png');
-        this.game.load.image('1d', 'assets/sprites/2010s_1d.png');
-        this.game.load.image('1d_grey', 'assets/sprites/2010s_1d_grey.png');
-
-        // In-game menu
-        this.load.atlas('menu_buttons', 'assets/sprites/menu_buttons.png', 'assets/sprites/menu_buttons.json');
-        this.game.load.image('pause', 'assets/sprites/pause.png');
-        this.game.load.image('alex_pause', 'assets/sprites/alex_pause.png');
-
-        // Outro
-        this.game.load.image('outro_ticker', 'assets/sprites/outro-ticker.png');
-
-        // Common
-        this.load.image('next_level', 'assets/sprites/alexs_time_machine.png');
 
         // Sounds effects
         this.game.load.audio('jump', 'assets/audio/jump.mp3');

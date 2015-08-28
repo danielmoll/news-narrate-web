@@ -60,7 +60,8 @@ Game.State.BaseState.prototype = {
             collectedItems = this.game.storage.get(this.levelKey) || {};
 
         collectibleSpawns.forEach(function(collectible) {
-            var collectibleItem = this.game.add.sprite(collectible.x, collectible.y, collectible.properties.sprite_key);
+            var collectibleItem = this.game.add.sprite(collectible.x, collectible.y, 'assets');
+            collectibleItem.frameName = collectible.properties.sprite_key + '.png';
 
             if (collectible.properties.sprite_key !== 'jewel') {
                 collectibleItem._isArtefact = true;
@@ -108,7 +109,8 @@ Game.State.BaseState.prototype = {
         var nextLevelSpawn = this.levelModule.findObjectsByType('next_level');
 
         if (nextLevelSpawn.length) {
-            this.nextLevel = this.game.add.sprite(nextLevelSpawn[0].x, nextLevelSpawn[0].y, 'alexs_time_machine');
+            this.nextLevel = this.game.add.sprite(nextLevelSpawn[0].x, nextLevelSpawn[0].y, 'assets');
+            this.nextLevel.frameName = 'alexs_time_machine.png';
             this.game.physics.arcade.enable(this.nextLevel);
 
             this.nextLevel.anchor.set(0.5, 0.5);

@@ -7,7 +7,8 @@ Game.State.Intro_Skynews.prototype = {
 	transitionning: false,
 
 	create: function () {
-		var text,
+		var bg,
+			text,
 			textClone,
 			textGroup,
 			tween;
@@ -23,19 +24,24 @@ Game.State.Intro_Skynews.prototype = {
 		this.game.sounds.kay_voice_intro.play();
 		this.game.sounds.kay_voice_intro.onStop.add(function() {
 			this.kayMouth.animations.stop();
-	        this.kayMouth.frame = 0;
+			this.kayMouth.frame = 0;
 		}.bind(this));
 
 
-		this.game.add.image(0, 0, 'kay');
+		bg = this.game.add.image(0, 0, 'assets');
+		bg.frameName = 'kayburley.png';
 
-		text = this.game.add.image(0, 300, 'intro_ticker');
-		textClone = this.game.add.image(568, 300, 'intro_ticker');
+		text = this.game.add.image(0, 300, 'assets');
+		textClone = this.game.add.image(568, 300, 'assets');
+		text.frameName = 'intro-ticker.png';
+		textClone.frameName = 'intro-ticker.png';
+
 		textGroup = this.game.add.group();
 		textGroup.add(text);
 		textGroup.add(textClone);
 
 		this.kayMouth = this.game.add.sprite(317, 150, 'kay_mouth');
+
 		this.kayMouth.animations.add('talk', [1,0], 7, true);
 		this.kayMouth.animations.play('talk');
 
