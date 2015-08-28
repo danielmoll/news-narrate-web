@@ -18,6 +18,7 @@ Game.State.Preloader.prototype = {
         // Intro Sky News report
         this.game.load.image('intro_ticker', 'assets/sprites/intro-ticker.png');
         this.game.load.image('kay', 'assets/sprites/kayburley.png');
+        this.load.spritesheet('kay_mouth', 'assets/sprites/kay_mouth.png', 44, 25, 2);
 
         // Intro Alex's house
         this.game.load.image('parallax_alexs_house', 'assets/tiles/parallax_alexs_house.png');

@@ -24,6 +24,10 @@ Game.State.Intro_Skynews.prototype = {
 		textGroup.add(text);
 		textGroup.add(textClone);
 
+		this.kayMouth = this.game.add.sprite(317, 150, 'kay_mouth');
+		this.kayMouth.animations.add('talk', [1,0], 7, true);
+		this.kayMouth.animations.play('talk');
+
 		tween = this.game.add.tween(textGroup).to( { x: -568 }, 10000, "Linear", true);
 		tween.repeat();
 
