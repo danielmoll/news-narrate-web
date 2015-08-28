@@ -223,8 +223,8 @@
                  "type":"",
                  "visible":true,
                  "width":32,
-                 "x":3440,
-                 "y":282.513088213043
+                 "x":3461,
+                 "y":282.51
                 }, 
                 {
                  "gid":219,
@@ -243,8 +243,8 @@
                  "type":"",
                  "visible":true,
                  "width":32,
-                 "x":3185,
-                 "y":271
+                 "x":3189,
+                 "y":270
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -416,24 +416,6 @@
                  "gid":207,
                  "height":32,
                  "id":86,
-                 "name":"corgi",
-                 "properties":
-                    {
-                     "revealFactId":"90",
-                     "score":"10",
-                     "sprite_key":"corgi"
-                    },
-                 "rotation":0,
-                 "type":"corgi_spawn",
-                 "visible":true,
-                 "width":32,
-                 "x":3440,
-                 "y":350
-                }, 
-                {
-                 "gid":207,
-                 "height":32,
-                 "id":87,
                  "name":"horse",
                  "properties":
                     {
@@ -445,7 +427,25 @@
                  "type":"horse_spawn",
                  "visible":true,
                  "width":32,
-                 "x":3185,
+                 "x":3190,
+                 "y":351
+                }, 
+                {
+                 "gid":207,
+                 "height":32,
+                 "id":87,
+                 "name":"corgi",
+                 "properties":
+                    {
+                     "revealFactId":"90",
+                     "score":"10",
+                     "sprite_key":"corgi"
+                    },
+                 "rotation":0,
+                 "type":"corgi_spawn",
+                 "visible":true,
+                 "width":32,
+                 "x":3460,
                  "y":350
                 }],
          "opacity":1,

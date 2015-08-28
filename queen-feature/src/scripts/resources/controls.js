@@ -16,23 +16,23 @@ Game.Controls = function(game, player) {
     this.controlButtons = [
         {
             x: 20,
-            y: 230,
+            y: 250,
             frame: 'button_left.png',
             cb: 'moveLeft'
         },
         {
             x: 100,
-            y: 230,
+            y: 250,
             frame: 'button_right.png',
             cb: 'moveRight'
         },
         {
             x: 480,
-            y: 230,
+            y: 250,
             frame: 'button_jump.png',
             cb: 'jump'
         }
-    ]
+    ];
 
     this.addedButtons = [];
 
