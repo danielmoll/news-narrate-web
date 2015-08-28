@@ -1,4 +1,4 @@
-/* global Phaser, Game */
+/* global Game */
 'use strict';
 
 Game.State.Preloader = function() {};
@@ -6,14 +6,7 @@ Game.State.Preloader.prototype = {
     preload: function() {
         this.stage.backgroundColor = '#000000';
 
-        // loading screen
-        this.add.sprite(195, 138, 'crown');
-
-        // Adding the 'loading text'
-        this.textGroup = this.game.add.group();
-        this.textGroup.fixedToCamera = true;
-        this.textGroup.add(new Phaser.BitmapText(this.game, this.game.width / 2 - 50, this.game.height / 2 - 15, 'pixeltype', 'Loading...', 40));
-
+        this.load.bitmapFont('pixeltype', 'assets/fonts/bitmapFonts/pixeltype.png', 'assets/fonts/bitmapFonts/pixeltype.xml');
         this.load.atlas('assets', 'assets/sprites/assets.png', 'assets/sprites/assets.json');
 
         // Animation sprites
