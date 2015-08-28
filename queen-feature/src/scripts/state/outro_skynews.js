@@ -18,8 +18,8 @@ Game.State.Outro_Skynews.prototype = {
 
 		this.game.add.image(0, 0, 'kay');
 
-		text = this.game.add.image(0, 300, 'intro_ticker');
-		textClone = this.game.add.image(568, 300, 'intro_ticker');
+		text = this.game.add.image(0, 300, 'outro_ticker');
+		textClone = this.game.add.image(568, 300, 'outro_ticker');
 		textGroup = this.game.add.group();
 		textGroup.add(text);
 		textGroup.add(textClone);

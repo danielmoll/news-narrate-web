@@ -109,6 +109,9 @@ Game.State.Preloader.prototype = {
         this.game.load.image('pause', 'assets/sprites/pause.png');
         this.game.load.image('alex_pause', 'assets/sprites/alex_pause.png');
 
+        // Outro
+        this.game.load.image('outro_ticker', 'assets/sprites/outro-ticker.png');
+
         // Common
         this.load.image('next_level', 'assets/sprites/alexs_time_machine.png');
 
