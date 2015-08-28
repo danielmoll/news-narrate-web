@@ -15,11 +15,11 @@
 	font-family: SkyTextMedium;
 	font-size: 1.6rem;
 	margin: 10px 20px;
-	color: $textColor;
+	color: $black;
 }
 
-.scene__title-secondary {
-	font-family: SkyTextRegular;
+.scene__title--secondary {
+	color: $teal;
 }
 
 .scene__text {

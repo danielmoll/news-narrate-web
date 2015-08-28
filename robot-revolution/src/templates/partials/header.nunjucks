@@ -4,10 +4,10 @@
 
 		<ul class="header__list">
 			<li class="header__item">
-				<a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fnarrate.news.sky.com%2Fqueen-timeline/;text=Queen+Elizabeth+II+-+Britain%27s+Longest+Reigning+Monarch" class="header__link js-social-item"><img alt="" class="header__social-icon" src="images/twitter.svg"></a>
+				<a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fnarrate.news.sky.com%2Frobot-revolution/;text=Robot%20Revolution%20-%20How%20much%20would%20it%20cost%20you%20to%20become%20bionic%3F" class="header__link js-social-item"><img alt="" class="header__social-icon" src="images/twitter.svg"></a>
 			</li>
 			<li class="header__item">
-				<a href="https://www.facebook.com/sharer/sharer.php?u=http://narrate.news.sky.com/queen-timeline/" class="header__link js-social-item"><img alt="" class="header__social-icon" src="images/facebook.svg"></a>
+				<a href="https://www.facebook.com/sharer/sharer.php?u=http://narrate.news.sky.com/robot-revolution/" class="header__link js-social-item"><img alt="" class="header__social-icon" src="images/facebook.svg"></a>
 			</li>
 		</ul>
 	</div>

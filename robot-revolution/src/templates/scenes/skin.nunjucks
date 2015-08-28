@@ -1,19 +1,15 @@
 {% extends '../layouts/scene.nunjucks' %}
 
-{% set sceneName = 'scene_70s' %}
-{% set sceneGroup = 'group_70s' %}
-{% set sceneImage = 'http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_{width}/v1440508914/queen-timeline/4x3/1977_Silver_Jubilee.jpg' %}
+{% set sceneImage = 'images/skin1.png' %}
 
 {% block title %}
-<div class="scene__title">Skin <span class="scene__title-secondary">iCub</span></div>
-<div class="scene__title"><span class="scene__title-secondary">$250,000</span></div>
+<div class="scene__title">Skin &dash; iCub</div>
+
+<div class="scene__title scene__title--secondary">Cost: &#36;250,000</div>
 {% endblock %}
 
 {% block content %}
 <p class="scene__text">
-  Most robots don’t bother with skin: getting the basics of locomotion is hard enough. The iCub, created at the Italian Institute of Technology, takes it seriously, though: its chest, arms, hands and legs are covered in pressure sensitive skin that allow the child-sized robot to interact more delicately with objects and humans. Its creators say that this gives the robot a more developed “sense of self”.
-</p>
-<p class="scene__text">
-  It’s nowhere near as sensitive or as extensive as human skin, but new research that uses electric ‘nanowires’ could eventually let robots properly feel.
+  Robots don&rsquo;t have to worry about tanning, waxing, or having too much of it on show. In fact, most robots don&rsquo;t bother with skin at all: getting the basics of locomotion is hard enough. The iCub, takes it seriously though. Its chest, arms, hands and legs are covered in pressure sensitive skin that allows the child&dash;sized robot to interact more delicately with objects and humans. It&rsquo;s thought electric &lsquo;nanowires&rsquo; being developed could eventually let robots properly &lsquo;feel&rsquo;.
 </p>
 {% endblock %}
