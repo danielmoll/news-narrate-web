@@ -520,7 +520,7 @@
                     {
                      "revealFactId":"35",
                      "score":"10",
-                     "sprite_key":"mini"
+                     "sprite_key":"50s_mini"
                     },
                  "rotation":0,
                  "type":"mini_spawn",
@@ -538,7 +538,7 @@
                     {
                      "revealFactId":"67",
                      "score":"30",
-                     "sprite_key":"record"
+                     "sprite_key":"50s_record"
                     },
                  "rotation":0,
                  "type":"record_spawn",
@@ -624,7 +624,7 @@
                     {
                      "revealFactId":"72",
                      "score":"50",
-                     "sprite_key":"tv"
+                     "sprite_key":"50s_tv"
                     },
                  "rotation":0,
                  "type":"tv_spawn",

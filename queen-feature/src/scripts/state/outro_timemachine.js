@@ -9,7 +9,8 @@ Game.State.Outro_TimeMachine.prototype = {
 		this.player.animations.add('right', [6,7,6,5], 6, true);
 		this.player.animations.play('right');
 		this.player.anchor.set(0.5, 0.5);
-		this.timeMachine = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY - 16, 'next_level');
+		this.timeMachine = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY - 16, 'assets');
+        this.timeMachine.frameName = 'alexs_time_machine.png';
 		this.timeMachine.anchor.set(0.5, 0.5);
 
 		this.game.add.tween(this.player).to({ x: this.game.world.centerX }, 2500, 'Linear', true).

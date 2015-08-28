@@ -243,7 +243,7 @@
                     {
                      "revealFactId":"67",
                      "score":"30",
-                     "sprite_key":"harry"
+                     "sprite_key":"90s_harry"
                     },
                  "rotation":0,
                  "type":"harry_spawn",
@@ -261,10 +261,10 @@
                     {
                      "revealFactId":"35",
                      "score":"30",
-                     "sprite_key":"spice"
+                     "sprite_key":"90s_spice"
                     },
                  "rotation":0,
-                 "type":"maggie_spawn",
+                 "type":"spice_spawn",
                  "visible":true,
                  "width":32,
                  "x":592,
@@ -279,7 +279,7 @@
                     {
                      "revealFactId":"39",
                      "score":"30",
-                     "sprite_key":"web"
+                     "sprite_key":"90s_web"
                     },
                  "rotation":0,
                  "type":"web_spawn",

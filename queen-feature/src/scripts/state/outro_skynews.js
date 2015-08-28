@@ -7,7 +7,8 @@ Game.State.Outro_Skynews.prototype = {
 	transitionning: false,
 
 	create: function () {
-		var text,
+		var bg,
+			text,
 			textClone,
 			textGroup,
 			tween;
@@ -16,7 +17,8 @@ Game.State.Outro_Skynews.prototype = {
         this.transitionning = false;
         this.game.stage.backgroundColor = '#fff';
 
-		this.game.add.image(0, 0, 'kay');
+		bg = this.game.add.image(0, 0, 'assets');
+		bg.frameName = 'kayburley.png';
 
 		this.game.sounds = {
 			kay_voice_outro: this.game.add.audio('kay_voice_outro')
@@ -28,13 +30,13 @@ Game.State.Outro_Skynews.prototype = {
 			this.kayMouth.frame = 0;
 		}.bind(this));
 
-
-		text = this.game.add.image(0, 300, 'outro_ticker');
-		textClone = this.game.add.image(568, 300, 'outro_ticker');
+		text = this.game.add.image(0, 300, 'assets');
+		textClone = this.game.add.image(568, 300, 'assets');
+		text.frameName = 'outro-ticker.png';
+		textClone.frameName = 'outro-ticker.png';
 		textGroup = this.game.add.group();
 		textGroup.add(text);
 		textGroup.add(textClone);
-
 
 		this.kayMouth = this.game.add.sprite(317, 150, 'kay_mouth');
 		this.kayMouth.animations.add('talk', [1,0], 7, true);

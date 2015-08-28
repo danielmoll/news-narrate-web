@@ -45,7 +45,7 @@ Game.Controls.prototype.create = function() {
     if (!window.detect.touch) return;
 
     this.controlButtons.forEach(function(ctrl){
-        var btn = this.game.add.sprite(0, 0, 'controls');
+        var btn = this.game.add.sprite(0, 0, 'assets');
         btn.alpha = 0.6;
         btn.fixedToCamera = true;
         btn.cameraOffset.x = ctrl.x;

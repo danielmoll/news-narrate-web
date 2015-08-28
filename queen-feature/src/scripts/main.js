@@ -155,17 +155,17 @@ Game.Map.MAPS = [
 ];
 
 Game.Levels = [
-    { text: '50', stateKey: 'decade_50s', collectibles: ['record', 'tv', 'mini']},
-    { text: '60', stateKey: 'decade_60s', collectibles: ['beatles', 'the_sun', 'worldcup']},
-    { text: '70', stateKey: 'decade_70s', collectibles: ['sex_pistols', 'starwars', 'maggie']},
-    { text: '80', stateKey: 'decade_80s', collectibles: ['charles_diana', 'live_aid', 'mobile_phone']},
-    { text: '90', stateKey: 'decade_90s' , collectibles: ['web', 'harry', 'spice']},
-    { text: '00', stateKey: 'decade_00s', collectibles: ['dome', 'ipod', 'idol']},
-    { text: 'NOW', stateKey: 'decade_now', collectibles: ['olympics', 'selfie', '1d']}
+    { text: '50', stateKey: 'decade_50s', collectibles: ['50s_record', '50s_tv', '50s_mini']},
+    { text: '60', stateKey: 'decade_60s', collectibles: ['60s_beatles', '60s_the_sun', '60s_worldcup']},
+    { text: '70', stateKey: 'decade_70s', collectibles: ['70s_sex_pistols', '70s_starwars', '70s_maggie']},
+    { text: '80', stateKey: 'decade_80s', collectibles: ['80s_charles_diana', '80s_live_aid', '80s_mobile_phone']},
+    { text: '90', stateKey: 'decade_90s' , collectibles: ['90s_web', '90s_harry', '90s_spice']},
+    { text: '00', stateKey: 'decade_00s', collectibles: ['2000s_dome', '2000s_ipod', '2000s_pop_idol']},
+    { text: 'NOW', stateKey: 'decade_now', collectibles: ['2010s_olympics', '2010s_selfie', '2010s_1d']}
 ];
 
 Game.init = function() {
-    var game = new Phaser.Game(568, 320, Phaser.AUTO, 'main', null, false, false);
+    var game = new Phaser.Game(568, 320, Phaser.AUTO, 'main', null, true, false);
     this.game = game;
 
     game.analytics = Game.Analytics;

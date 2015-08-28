@@ -25,20 +25,21 @@ Game.State.Navigation.prototype = {
 
     createState: function() {
 
-        var resetButton,
+        var navBg = this.game.add.image(0, 0, 'assets'),
+            resetButton,
             col = 0,
             row = 0;
 
-        this.game.add.image(0, 0, 'navigation_bg');
+        navBg.frameName = 'navigation.png';
 
         resetButton = new LabelButton(this.game, 300, 260, null, 'RESET', this.showResetPopup, this, { font: '25px silkscreennormal', fill: '#ccc' });
 
-        this.musicButton = this.game.add.button(510, 75, 'music_sound', Game.SoundControls.toggleMusic.bind(Game.SoundControls), this);
+        this.musicButton = this.game.add.button(510, 75, 'assets', Game.SoundControls.toggleMusic.bind(Game.SoundControls), this);
         this.musicButton.visible = false;
         this.musicButton.anchor.setTo(0.5, 0.5);
         this.musicButton.frameName = Game.musicEnabled ? 'music.png' : 'music_off.png';
 
-        this.soundButton = this.game.add.button(505, 75, 'music_sound', Game.SoundControls.toggleSound.bind(Game.SoundControls), this);
+        this.soundButton = this.game.add.button(505, 75, 'assets', Game.SoundControls.toggleSound.bind(Game.SoundControls), this);
         this.soundButton.anchor.setTo(0.5, 0.5);
         this.soundButton.frameName = Game.soundEnabled ? 'sound.png' : 'sound_off.png';
 
@@ -67,7 +68,8 @@ Game.State.Navigation.prototype = {
                 }
 
                 if (collectible !=='.' && collected) {
-                    collBg = this.game.add.sprite(collx, colly, collectible);
+                    collBg = this.game.add.sprite(collx, colly, 'assets');
+                    collBg.frameName = collectible + '.png';
                     collBg.anchor.setTo( 0.5, 0.5 );
 
                     scale = Math.min(this.collectibleSize / collBg.width, this.collectibleSize / collBg.height);

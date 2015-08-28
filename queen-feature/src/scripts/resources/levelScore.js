@@ -41,7 +41,9 @@ Game.LevelScore.prototype.addDisplay = function() {
                 spriteName += '_grey';
             }
 
-            collectibleScoreItem = this.game.add.sprite(collx + 8, 16, spriteName);
+            collectibleScoreItem = this.game.add.sprite(collx + 8, 16, 'assets');
+            collectibleScoreItem.frameName = spriteName + '.png';
+
             if (!collected) {
                 collectibleScoreItem.alpha = 0.5;
             }
@@ -57,7 +59,8 @@ Game.LevelScore.prototype.addDisplay = function() {
         }
     }.bind(this));
 
-    this.scoreJewel = this.game.add.sprite(collx, 0, 'jewel');
+    this.scoreJewel = this.game.add.sprite(collx, 0, 'assets');
+    this.scoreJewel.frameName = 'jewel.png';
     this.scoreText = new Phaser.Text(this.game, collx + 60, 16, '0', { font: '24px silkscreennormal', } );
     this.scoreText.anchor.set(0.5, 0.5);
     this.scoreBackground.addChild(this.scoreText);
@@ -74,7 +77,7 @@ Game.LevelScore.prototype.scoreItem = function (scoredItem, levelKey) {
         collectibleSprite = this.sprites[scoredItem];
         if (collectibleSprite) {
             oldScale = {x: collectibleSprite.scale.x, y: collectibleSprite.scale.y };
-            collectibleSprite.loadTexture(scoredItem);
+            collectibleSprite.frameName = scoredItem + '.png';
             collectibleSprite.scale.set(2, 2);
             this.game.add.tween(collectibleSprite.scale).to(oldScale, 500, Phaser.Easing.Bounce.Out, true);
             collectibleSprite.bringToTop();

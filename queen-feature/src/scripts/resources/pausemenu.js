@@ -68,7 +68,8 @@ Game.PauseMenu = function(game) {
 };
 
 Game.PauseMenu.prototype.addPauseButton = function() {
-    this.pauseButton = this.game.add.button(10, 10, 'pause', function(){ this.showMenu(); }.bind(this), this);
+    this.pauseButton = this.game.add.button(10, 10, 'assets', function(){ this.showMenu(); }.bind(this), this);
+    this.pauseButton.frameName = 'pause.png';
     this.pauseButton.fixedToCamera = true;
 };
 
@@ -93,11 +94,12 @@ Game.PauseMenu.prototype.drawMenu = function() {
 
     this.menuGroup.add(bg);
 
-    aleks = this.game.add.sprite(380, 80, 'alex_pause');
+    aleks = this.game.add.sprite(380, 80, 'assets');
+    aleks.frameName = 'alex_pause.png';
     this.menuGroup.add(aleks);
 
     this.buttonDefinitions.forEach(function(button) {
-        btn = this.game.add.sprite(button.x, button.y, 'menu_buttons');
+        btn = this.game.add.sprite(button.x, button.y, 'assets');
         btn.frameName = button.sourceName;
 
         label = this.game.add.text(55, 10, button.label, { font: '16px silkscreennormal', align: 'left', fill: '#fff569'} );

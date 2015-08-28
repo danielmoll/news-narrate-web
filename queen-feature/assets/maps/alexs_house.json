@@ -141,7 +141,7 @@
                  "name":"intro_text",
                  "properties":
                     {
-                     "text":"Press and hold on one side of the screen to move \/ Tap with another finger while moving to jump.",
+                     "text":"Use the on-screen controls\\nor your cursor keys to move and jump.",
                      "tiles":"17"
                     },
                  "rotation":0,
@@ -149,7 +149,7 @@
                  "visible":true,
                  "width":32,
                  "x":291.355945705836,
-                 "y":289.000255972813
+                 "y":283.000255972813
                 }, 
                 {
                  "gid":219,

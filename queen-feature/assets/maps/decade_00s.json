@@ -188,7 +188,7 @@
                     {
                      "revealFactId":"72",
                      "score":"50",
-                     "sprite_key":"dome"
+                     "sprite_key":"2000s_dome"
                     },
                  "rotation":0,
                  "type":"dome_spawn",
@@ -6666,7 +6666,7 @@
                     {
                      "revealFactId":"563",
                      "score":"50",
-                     "sprite_key":"idol"
+                     "sprite_key":"2000s_pop_idol"
                     },
                  "rotation":0,
                  "type":"idol_spawn",
@@ -6684,7 +6684,7 @@
                     {
                      "revealFactId":"567",
                      "score":"50",
-                     "sprite_key":"ipod"
+                     "sprite_key":"2000s_ipod"
                     },
                  "rotation":0,
                  "type":"ipod_spawn",

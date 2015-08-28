@@ -19,7 +19,9 @@ Game.State.EndScreen.prototype = {
     },
 
     createState: function() {
-        var bg = this.game.add.graphics(0, 0);
+        var bg = this.game.add.graphics(0, 0),
+            nextButton;
+
         bg.beginFill(0X000, 1);
         bg.drawRect(this.game.camera.x, this.game.camera.y, this.game.width * 1.5, this.game.height * 1.5);
         bg.endFill();
@@ -33,7 +35,8 @@ Game.State.EndScreen.prototype = {
             this.textGroup.add(txtElement);
         }.bind(this));
 
-        this.game.add.button(this.game.width - 120, this.game.height - 50, 'next_button', this.nextLevel, this);
+        nextButton = this.game.add.button(this.game.width - 120, this.game.height - 50, 'assets', this.nextLevel, this);
+        nextButton.frameName = 'next_button.png';
 
         this.cursors = this.game.input.keyboard.createCursorKeys();
     },
