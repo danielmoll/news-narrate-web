@@ -36,5 +36,25 @@ Game.State.Startup.prototype = {
         this.game.physics.startSystem(Phaser.Physics.ARCADE);
 
         this.game.state.start('preloader');
+
+        document.querySelector('.fullscreen-prompt__link').addEventListener('click', function(e) {
+            // var elem = this.game.canvas;
+            //
+            //
+            // e.preventDefault();
+            // if (elem.requestFullscreen) {
+            //   elem.requestFullscreen();
+            // } else if (elem.msRequestFullscreen) {
+            //   elem.msRequestFullscreen();
+            // } else if (elem.mozRequestFullScreen) {
+            //   elem.mozRequestFullScreen();
+            // } else if (elem.webkitRequestFullscreen) {
+            //   elem.webkitRequestFullscreen();
+            // }
+            this.game.scale.fullScreenScaleMode = Phaser.ScaleManager.SHOW_ALL;
+            this.game.scale.startFullScreen(false);
+        }.bind(this), false);
+
+
     }
 };

@@ -105,10 +105,10 @@ Game.Score = {
 
 
 Game.SoundControls = {
-    
+
     init: function(game) {
         this.game = game;
-        
+
         this.musicEnabled = this.game.storage.get('music') || 1;
         this.soundEnabled = this.game.storage.get('sound') || 1;
     },

@@ -30,6 +30,15 @@ body {
     max-width: 1024px;
 }
 
+.fullscreen-prompt {
+    margin-top: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.fullscreen-prompt__link {
+    color: white;
+}
 
 @media (min-width: 720px) { /* Totally arbitrary, this should probably be changed to the correct breakpoint. */
     .game_wrapper {
