@@ -145,7 +145,6 @@ Game.State.BaseState.prototype = {
 
         this.addPlayer();
         this.addCollectibles();
-        this.controls = new Game.Controls(this.game, this.player);
 
         // If subclass has a createForegroundLayers method, call it.
         if (this.createForegroundLayers && typeof this.createForegroundLayers === 'function') {
@@ -173,6 +172,7 @@ Game.State.BaseState.prototype = {
         // Add pause button
         this.pauseMenu = new Game.PauseMenu(this.game);
 
+        this.controls = new Game.Controls(this.game, this.player);
         // this.player.bringToTop();
 
     },

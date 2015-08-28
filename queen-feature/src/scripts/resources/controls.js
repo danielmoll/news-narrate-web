@@ -12,13 +12,53 @@ Game.Controls = function(game, player) {
         left: 3,
         right: 4
     };
+
+    this.controlButtons = [
+        {
+            x: 20,
+            y: 230,
+            frame: 'button_left.png',
+            cb: 'moveLeft'
+        },
+        {
+            x: 100,
+            y: 230,
+            frame: 'button_right.png',
+            cb: 'moveRight'
+        },
+        {
+            x: 480,
+            y: 230,
+            frame: 'button_jump.png',
+            cb: 'jump'
+        }
+    ]
+
+    this.addedButtons = [];
+
     this.create();
 };
 
 Game.Controls.prototype.create = function() {
     this.cursors = this.game.input.keyboard.createCursorKeys();
-    // this.game.input.onDown.add(this.handleDown, this);
-    // this.game.input.onUp.add(this.handleUp, this);
+
+    this.controlButtons.forEach(function(ctrl){
+        var btn = this.game.add.sprite(0, 0, 'controls');
+        btn.alpha = 0.6;
+        btn.fixedToCamera = true;
+        btn.cameraOffset.x = ctrl.x;
+        btn.cameraOffset.y = ctrl.y;
+        btn.frameName = ctrl.frame;
+
+        this.addedButtons.push({
+            x1: ctrl.x,
+            y1: ctrl.y,
+            x2: ctrl.x + btn.width,
+            y2: ctrl.y + btn.height,
+            cb: this[ctrl.cb].bind(this)
+        });
+
+    }.bind(this));
 };
 
 Game.Controls.prototype.handleDown = function(e) {
@@ -37,7 +77,7 @@ Game.Controls.prototype.handleDown = function(e) {
     }
 };
 
-Game.Controls.prototype.handleUp = function(e) {
+Game.Controls.prototype.handleUp = function() {
     if (this.game.input.totalActivePointers === 0) {
         this.player.animations.stop();
         this.player.frame = this.playerStoppedFrames[this.lastDirection];
@@ -49,13 +89,13 @@ Game.Controls.prototype.handleUp = function(e) {
     }
 };
 
-Game.Controls.prototype.moveLeft = function(speed) {
+Game.Controls.prototype.moveLeft = function() {
     this.lastDirection = 'left';
     this.player.body.velocity.x = -PLAYER_SPEED;
     this.player.animations.play('left');
 };
 
-Game.Controls.prototype.moveRight = function(speed) {
+Game.Controls.prototype.moveRight = function() {
     this.lastDirection = 'right';
     this.player.body.velocity.x = PLAYER_SPEED;
     this.player.animations.play('right');
@@ -68,23 +108,33 @@ Game.Controls.prototype.jump = function () {
     }
 };
 
+Game.Controls.prototype.actionPointerDown = function (pointer) {
+    if (pointer.isDown) {
+        console.log(pointer.x, pointer.y);
+
+        this.addedButtons.forEach(function(button){
+            console.log(button.x1, button.x2, button.y1, button.y2);
+            if(pointer.x > button.x1 && pointer.x < button.x2 && pointer.y > button.y1 && pointer.y < button.y2 ) {
+                button.cb();
+            }
+        }.bind(this));
+
+        return 1;
+    } else {
+        return 0;
+    }
+};
+
 Game.Controls.prototype.update = function () {
     var activePointers = 0;
 
-    if (this.game.input.pointer1.isDown) {
-        activePointers ++;
-    }
-
-    if (this.game.input.pointer2.isDown) {
-        activePointers ++;
-    }
-
-    if (this.cursors.up.isDown || activePointers > 1) {
+    // Touch actions
+    activePointers += this.actionPointerDown(this.game.input.pointer1);
+    activePointers += this.actionPointerDown(this.game.input.pointer2);
+    
+    // Keyboard actions
+    if (this.cursors.up.isDown) {
         this.jump();
-    }
-
-    if (activePointers === 1) {
-        this.activePointer = (this.game.input.pointer1.isDown) ? this.game.input.pointer1 : this.game.input.pointer2;
     }
 
     if (this.cursors.left.isDown) {
@@ -99,30 +149,9 @@ Game.Controls.prototype.update = function () {
         this.activePointer = null;
     }
 
-
-    if (this.activePointer) {
-        if (this.activePointer.x < this.game.width / 2) {
-            this.moveLeft();
-
-        } else if (this.activePointer.x > this.game.width / 2) {
-            this.moveRight();
-        }
-    }
-
-
-
     if (this.player.body.velocity.x === 0) {
         this.player.animations.stop();
         this.player.frame = this.playerStoppedFrames[this.lastDirection];
     }
-
-    // this.game.debug.inputInfo(32, 32);
-    // this.game.debug.pointer( this.game.input.pointer2 );
-    // this.game.debug.pointer( this.game.input.pointer1 );
-    // this.game.debug.text(this.game.input.pointer1.isDown, 0, 20 );
-    // this.game.debug.text(this.game.input.pointer2.isDown, 0, 30 );
-    // this.game.debug.text(activePointers, 0, 40 );
-
-
 
 };
