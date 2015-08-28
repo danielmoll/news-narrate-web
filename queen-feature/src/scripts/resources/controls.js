@@ -15,13 +15,13 @@ Game.Controls = function(game, player) {
 
     this.controlButtons = [
         {
-            x: 20,
+            x: 30,
             y: 250,
             frame: 'button_left.png',
             cb: 'moveLeft'
         },
         {
-            x: 100,
+            x: 94,
             y: 250,
             frame: 'button_right.png',
             cb: 'moveRight'
@@ -41,6 +41,8 @@ Game.Controls = function(game, player) {
 
 Game.Controls.prototype.create = function() {
     this.cursors = this.game.input.keyboard.createCursorKeys();
+
+    if (!window.detect.touch) return;
 
     this.controlButtons.forEach(function(ctrl){
         var btn = this.game.add.sprite(0, 0, 'controls');
@@ -110,10 +112,7 @@ Game.Controls.prototype.jump = function () {
 
 Game.Controls.prototype.actionPointerDown = function (pointer) {
     if (pointer.isDown) {
-        console.log(pointer.x, pointer.y);
-
         this.addedButtons.forEach(function(button){
-            console.log(button.x1, button.x2, button.y1, button.y2);
             if(pointer.x > button.x1 && pointer.x < button.x2 && pointer.y > button.y1 && pointer.y < button.y2 ) {
                 button.cb();
             }
@@ -129,8 +128,10 @@ Game.Controls.prototype.update = function () {
     var activePointers = 0;
 
     // Touch actions
-    activePointers += this.actionPointerDown(this.game.input.pointer1);
-    activePointers += this.actionPointerDown(this.game.input.pointer2);
+    if (window.detect.touch) {
+        activePointers += this.actionPointerDown(this.game.input.pointer1);
+        activePointers += this.actionPointerDown(this.game.input.pointer2);
+    }
     
     // Keyboard actions
     if (this.cursors.up.isDown) {
