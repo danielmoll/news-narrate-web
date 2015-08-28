@@ -49,7 +49,7 @@ Game.State.Intro_Skynews.prototype = {
 			boundsAlignV: 'middle'
 		});
 
-		this.speechText1 = this.game.add.text(20, 80, "Breaking news coming into Sky Centre. Reports suggest the Queen has lost many valuable artefacts from across her 63 year reign…", {
+		this.speechText1 = this.game.add.text(20, 80, "Breaking news just in to us here at Sky Centre. The Queen has lost a number of precious mementos  from her 63 year reign…", {
 			font: "16px silkscreennormal",
 			fill: "#000",
 			backgroundColor: 'white',
@@ -57,7 +57,7 @@ Game.State.Intro_Skynews.prototype = {
 			wordWrapWidth: 200
 		});
 
-		this.speechText2 = this.game.add.text(20, 80, "It’s believed mementos from seven decades have been misplaced in time. Is there any hope they can be recovered?", {
+		this.speechText2 = this.game.add.text(20, 80, "She wants you to try and help find them. Will you help her?", {
 			font: "16px silkscreennormal",
 			fill: "#000",
 			backgroundColor: 'white',
