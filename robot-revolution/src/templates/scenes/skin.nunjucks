@@ -1,0 +1,19 @@
+{% extends '../layouts/scene.nunjucks' %}
+
+{% set sceneName = 'scene_70s' %}
+{% set sceneGroup = 'group_70s' %}
+{% set sceneImage = 'http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_{width}/v1440508914/queen-timeline/4x3/1977_Silver_Jubilee.jpg' %}
+
+{% block title %}
+<div class="scene__title">Skin <span class="scene__title-secondary">iCub</span></div>
+<div class="scene__title"><span class="scene__title-secondary">$250,000</span></div>
+{% endblock %}
+
+{% block content %}
+<p class="scene__text">
+  Most robots don’t bother with skin: getting the basics of locomotion is hard enough. The iCub, created at the Italian Institute of Technology, takes it seriously, though: its chest, arms, hands and legs are covered in pressure sensitive skin that allow the child-sized robot to interact more delicately with objects and humans. Its creators say that this gives the robot a more developed “sense of self”.
+</p>
+<p class="scene__text">
+  It’s nowhere near as sensitive or as extensive as human skin, but new research that uses electric ‘nanowires’ could eventually let robots properly feel.
+</p>
+{% endblock %}

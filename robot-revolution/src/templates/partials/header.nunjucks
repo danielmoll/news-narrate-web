@@ -1,0 +1,14 @@
+<div class="header">
+	<div class="header__inner">
+		<a href="http://news.sky.com/" class="header__link"><img alt="" class="header__logo" src="images/sky_news_logo.svg"></a>
+
+		<ul class="header__list">
+			<li class="header__item">
+				<a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fnarrate.news.sky.com%2Fqueen-timeline/;text=Queen+Elizabeth+II+-+Britain%27s+Longest+Reigning+Monarch" class="header__link js-social-item"><img alt="" class="header__social-icon" src="images/twitter.svg"></a>
+			</li>
+			<li class="header__item">
+				<a href="https://www.facebook.com/sharer/sharer.php?u=http://narrate.news.sky.com/queen-timeline/" class="header__link js-social-item"><img alt="" class="header__social-icon" src="images/facebook.svg"></a>
+			</li>
+		</ul>
+	</div>
+</div>

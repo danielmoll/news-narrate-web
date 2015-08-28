@@ -1,0 +1,38 @@
+{
+  "name": "sky-news-narrate",
+  "description": "Sky News Narrate",
+  "version": "0.0.1",
+  "scripts": {
+    "clean": "parallelshell 'rm -f npm-debug.log' 'rm -f ./scripts/*' 'rm -f ./css/*' 'rm -f ./index.html'",
+    "dist": "npm run browserify && npm run uglifyjs && npm run sass && npm run nunjucks && npm run cleancss",
+    "dev": "npm run clean && parallelshell 'npm run watch'",
+    "nunjucks": "node ./build/render-templates.js",
+    "browserify": "browserify ./src/scripts/main.js -d -o ./scripts/bundle.js",
+    "sass": "node-sass --output-style expanded --source-map true ./src/sass/ -o ./css/",
+    "cleancss": "cleancss -o ./css/main.css ./css/main.css",
+    "uglifyjs": "uglifyjs ./scripts/bundle.js -b beautify=false --screw-ie8 -m --compress drop_console -o ./scripts/bundle.js",
+    "watch": "parallelshell 'npm run watch:sass' 'npm run watch:appjs' 'npm run watch:templates'",
+    "watch:sass": "sane 'npm run sass' ./src/sass",
+    "watch:appjs": "sane 'npm run browserify' ./src/scripts --glob='**/*.js'",
+    "watch:templates": "sane 'npm run nunjucks' ./src/templates",
+    "start": "npm run dev"
+  },
+  "private": true,
+  "dependencies": {
+    "async": "^1.4.0",
+    "browserify": "^11.0.1",
+    "clean-css": "^3.3.9",
+    "fs-extra": "^0.22.1",
+    "glob": "^5.0.13",
+    "jquery": "^2.1.4",
+    "lodash": "^3.10.1",
+    "node-sass": "3.1.1",
+    "nunjucks": "^1.3.4",
+    "parallelshell": "^1.2.0",
+    "uglify-js": "^2.4.24"
+  },
+  "devDependencies": {
+    "sane": "^1.1.3",
+    "watch": "^0.16.0"
+  }
+}

@@ -1,0 +1,27 @@
+@media (min-width: 37.5em) { /* 600px */
+	.hero__title, .scene__title {
+		font-size: 2.8rem;
+	}
+
+	.scene__text {
+		font-size: 1.3rem;
+	}
+
+	.header__logo {
+		height: 40px;
+	}
+
+	.header__list {
+		margin-top: 10px;
+	}
+}
+
+@media (min-width: 56.25em) {  /* 900px */
+	.header__logo {
+		margin-left: 0;
+	}
+
+	.header__list {
+		margin-right: 0;
+	}	
+}

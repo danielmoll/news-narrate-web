@@ -1,0 +1,20 @@
+{% extends '../layouts/scene.nunjucks' %}
+
+{% set sceneGroup = 'group_60s' %}
+{% set sceneVideo = 'http://res.cloudinary.com/skynews/video/upload/vc_auto/v1440489051/queen-timeline/EDWARDBORN.mp4' %}
+{% set sceneVideoPoster = 'http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_800/v1439929772/queen-timeline/16x9/1964_Prince_Edward_born.jpg' %}
+{% set sceneVideoLabel = '1964 - Prince Edward is born' %}
+
+{% block title %}
+<div class="scene__title">Hand <span class="scene__title-secondary">Open Bionics / John Hopkins University</span></div>
+<div class="scene__title"><span class="scene__title-secondary">£2000 - $500,000</span></div>
+{% endblock %}
+
+{% block content %}
+<p class="scene__text">
+  Prosthetic limbs are one of the stand-out successes of current robotics. Hands are the most complicated to replicate, but thought controlled robotic versions are now being built. Some of these are eye waveringly expensive - a research project at John Hopkins University has built 10, at a cost of $500,000 each.
+</p>
+<p class="scene__text">
+  The most impressive, perhaps, is from a Bristol based company called Open Bionics. This is a 3D printed prosthetic hand which works by detecting muscle movements with electrical signals. It can be custom built and fitted in only two days, at a cost of £2000.
+</p>
+{% endblock %}

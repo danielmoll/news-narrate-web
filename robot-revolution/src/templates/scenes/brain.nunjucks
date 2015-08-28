@@ -1,0 +1,26 @@
+{% extends '../layouts/scene.nunjucks' %}
+
+{% set sceneName = 'scene_60s' %}
+{% set sceneGroup = 'group_60s' %}
+{# {% set sceneImage = 'http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_{width}/v1439930313/queen-timeline/4x3/1960_Prince_Andrew_born.jpg' %} #}
+{% set sceneImage = 'images/brain.png' %}
+
+{% block title %}
+<div class="scene__title">Brain <span class="scene__title-secondary">Google's Neural Networks</span></div>
+<div class="scene__title"><span class="scene__title-secondary">Millions, but Google's 'low-cost' version is $20,000</span></div>
+{% endblock %}
+
+{% block content %}
+<p class="scene__text">
+  Computers have long been better than us at certain types of simple ‘thinking’- but they’re bad at learning on their own, or dealing with unpredictable or uncontrolled situations.</p>
+<p class="scene__text">
+  Artificial neural networks (ANN) are loosely modelled on the human brain, which has billions of neuron interacting with each other. ANNs combine huge numbers of processors which work together to ‘learn’ - sometimes in ways their creators don’t even quite understand. Google runs some of the largest neural networks of any private company, using it for services like Google Translate, or recommending videos on YouTube.
+</p>
+<p class="scene__text">
+  It’s still a long way from matching up to a human brain, though, which has massive computing power and remarkably low energy consumption - about 20 watts, which is less than a light bulb. And it only takes up the space in your skull, compared to the rooms of computers needed for a neural network.
+</p>
+<p class="scene__text">
+  1-0 to the humans.
+</p>
+
+{% endblock %}

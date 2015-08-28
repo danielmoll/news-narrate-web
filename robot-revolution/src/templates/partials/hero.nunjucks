@@ -1,0 +1,12 @@
+<div class="hero">
+	<div class="hero__media">
+		{{ image.render({
+			url: 'images/hero.png'
+		}) }}
+	</div>
+
+	<div class="hero__heading">
+		<h1 class="hero__title">Bionic You</h1>
+		<div class="hero__strap">How can robots aid us in the future?</div>
+	</div>
+</div>

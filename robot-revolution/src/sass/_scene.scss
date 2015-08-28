@@ -1,0 +1,30 @@
+.scene {
+	background: white;
+	overflow: hidden;
+	padding-bottom: $itemSpacingVertical;
+	margin: 0 auto ($itemSpacingVertical * 3) auto;
+	width: 100%;
+	max-width: $maxWidth;
+
+	&:last-child {
+		border: none;
+	}
+}
+
+.scene__title {
+	font-family: SkyTextMedium;
+	font-size: 1.6rem;
+	margin: 10px 20px;
+	color: $textColor;
+}
+
+.scene__title-secondary {
+	font-family: SkyTextRegular;
+}
+
+.scene__text {
+	margin-left: 20px;
+	margin-right: 20px;
+	font-size: 1.2rem;
+	margin-bottom: 16px;
+}

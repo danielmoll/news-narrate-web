@@ -1,0 +1,9 @@
+{% macro render(options) %}
+	<div class="image image--{{ options.aspect|default('4x3') }}{% if options.classes %} {{ options.classes }}{% endif %}">
+		{% if aspect == '16x9' %}
+			<img alt="" class="image__item" src="{{ options.url|replace('{width}', 362) }}" data-template="{{ options.url }}" data-sizes="362x204 600x338 900x506 1500x844">
+		{% else %}
+			<img alt="" class="image__item" src="{{ options.url|replace('{width}', 362) }}" data-template="{{ options.url }}" data-sizes="362x270 589x442 750x563 1500x1126">
+		{% endif %}
+	</div>
+{% endmacro %}

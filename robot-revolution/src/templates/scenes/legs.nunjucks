@@ -1,0 +1,19 @@
+{% extends '../layouts/scene.nunjucks' %}
+
+{% set sceneName = 'scene_60s' %}
+{% set sceneGroup = 'group_60s' %}
+{% set sceneImage = 'http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_{width}/v1439930313/queen-timeline/4x3/1960_Prince_Andrew_born.jpg' %}
+
+{% block title %}
+<div class="scene__title">Legs/Feet <span class="scene__title-secondary">Manufacturer needed here</span></div>
+<div class="scene__title"><span class="scene__title-secondary">€6 million</span></div>
+{% endblock %}
+
+{% block content %}
+<p class="scene__text">
+  Walking is hard. Like humans, robots don’t rely just on legs. The Walk-Man, created by the Italian Institute of Technology in Genoa, is a ‘whole-body’ system, its eyes, arms, hands and legs work together to walk smoothly(ish).
+</p>
+<p class="scene__text">
+  The legs are pliant, rather than rigid, making balance easier and sensors in its feet feel Walk-Man how its weight is distributed. It is still nowhere near as nimble as a human, and requires a hefty power supply.
+</p>
+{% endblock %}

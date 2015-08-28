@@ -1,0 +1,28 @@
+.hero {
+	margin: 0 auto $itemSpacingVertical auto;
+	width: 100%;
+	max-width: $maxWidth;
+}
+
+.hero__heading {
+	font-weight: normal;
+	margin: 40px;
+}
+
+.hero__media {
+	margin-bottom: $itemSpacingVertical;
+}
+
+.hero__title {
+	font-family: SkyTextMedium;
+	margin: 0;
+	letter-spacing: 2px;
+	line-height: 1.2;
+	color: $titleColor;
+	font-size: 2.8rem;
+}
+
+.hero__strap {
+	text-transform: none;
+	font-size: 2.8rem;
+}

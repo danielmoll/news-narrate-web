@@ -1,0 +1,5 @@
+<div class="footer">
+	<p class="footer__text">&copy; Sky 2015</p>
+
+	<a href="#top" class="footer__link"><div class="footer__link-image"><img src="images/back_to_top.png" width="35" height="35" alt=""></div><div class="footer__link-text">Top</div></a>
+</div>

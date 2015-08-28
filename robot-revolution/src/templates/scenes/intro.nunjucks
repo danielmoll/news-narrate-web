@@ -1,0 +1,16 @@
+{% extends '../layouts/scene.nunjucks' %}
+
+{% set sceneName = 'scene_50s' %}
+{% set sceneGroup = 'group_50s' %}
+
+{% block content %}
+<p class="scene__text">
+  Choosing a robot? First- choose your flavour. Because there are a lot: flying bots, walking bots, swimming bots, bots that swim in your blood, caring, running bots, surgical bots, killer bots. Driverless cars, delivery drones, warehouse bots, military drones, prosthetics - they all come under robotics and artificial intelligence.
+</p>
+<p class="scene__text">
+  Robot Revolution is Sky News’s effort to make sense of our robotic future - where we are now, and where we’re going. We’ve been around the world to see the most interesting robots and to speak to the most interesting researchers in the field. Those who think there’s a good chance robots will destroy a lot of jobs, and perhaps wipe out humanity (accidentally or otherwise) and those who think robots will usher in an unprecedented golden age, where robots are our carers, friends and providers. For some, robots are the chance to upgrade - and ultimately escape - our biology.
+</p>
+<p class="scene__text">
+  Perhaps the most surprising thing we’ve found is that robots are actually a lot like us: how they see, walk and navigate the world borrows a lot from biology (even if they do differ in some pretty dramatic ways). Which got us thinking: what would it be like if we were robotic? Just how much of what we do can robots do - and can they do it better?
+</p>
+{% endblock %}
