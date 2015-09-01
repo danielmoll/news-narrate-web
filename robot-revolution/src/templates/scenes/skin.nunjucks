@@ -2,7 +2,8 @@
 
 {% set classname = 'scene--even' %}
 
-{% set sceneImage = 'images/skin1.png' %}
+{% set topImageUrl = 'images/skin-human.png' %}
+{% set bottomImageUrl = 'images/skin-robot.png' %}
 
 {% block title %}
 <div class="scene__title">Skin &dash; iCub</div>

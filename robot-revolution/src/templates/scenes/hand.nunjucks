@@ -2,8 +2,8 @@
 
 {% set classname = 'scene--odd' %}
 
-{% set sceneImage = 'images/hand1.png' %}
-
+{% set topImageUrl = 'images/hand-human.png' %}
+{% set bottomImageUrl = 'images/hand-robot.png' %}
 
 {% block title %}
 <div class="scene__title">Hand &dash; Open Bionics / John Hopkins University</div>

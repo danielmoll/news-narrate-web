@@ -1,4 +1,5 @@
 {% import '../macros/image.nunjucks' as image %}
+{% import '../macros/image-transition.nunjucks' as imageTransition %}
 
 <div class="scene {{ classname }}">
 	{% if sceneImage %}
@@ -11,8 +12,15 @@
 		</div>
 	{% endif %}
 
+  {% if topImageUrl and bottomImageUrl %}
+    {{ imageTransition.render({
+      topImageUrl: topImageUrl,
+      bottomImageUrl: bottomImageUrl
+    }) }}
+  {% endif %}
+
 	{% block title %}{% endblock %}
 
 	{% block content %}{% endblock %}
-	
+
 </div>
