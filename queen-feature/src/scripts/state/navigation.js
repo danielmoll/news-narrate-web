@@ -32,7 +32,7 @@ Game.State.Navigation.prototype = {
 
         navBg.frameName = 'navigation.png';
 
-        resetButton = new LabelButton(this.game, 300, 260, null, 'RESET', this.showResetPopup, this, { font: '25px silkscreennormal', fill: '#ccc' });
+        resetButton = new LabelButton(this.game, 505, 200, null, 'RESET', this.showResetPopup, this, { font: '20px silkscreennormal', fill: '#ccc' });
 
         this.musicButton = this.game.add.button(510, 75, 'assets', Game.SoundControls.toggleMusic.bind(Game.SoundControls), this);
         this.musicButton.visible = false;
@@ -42,6 +42,14 @@ Game.State.Navigation.prototype = {
         this.soundButton = this.game.add.button(505, 75, 'assets', Game.SoundControls.toggleSound.bind(Game.SoundControls), this);
         this.soundButton.anchor.setTo(0.5, 0.5);
         this.soundButton.frameName = Game.soundEnabled ? 'sound.png' : 'sound_off.png';
+
+        this.jewel = this.game.add.sprite(180, 220, 'assets');
+        this.jewel.frameName = 'jewel.png';
+
+        this.jewelTotal = this.game.add.text(210, 223, Game.Score.getCurrentJewelScore() + ' / ' + Game.Score.totalJewels, { font: '20px silkscreennormal', fill: '#fff' });
+
+        this.ratingText = this.game.add.text(184, 250, 'Current rating:', { font: '20px silkscreennormal', fill: '#fff' });
+        this.ratingLevelText = this.game.add.text(184, 270, Game.Score.getCurrentRating(), { font: '20px silkscreennormal', fill: '#fff' });
 
         Game.Levels.forEach(function(level) {
             var levelScore = Game.Score.levelScores[level.stateKey],

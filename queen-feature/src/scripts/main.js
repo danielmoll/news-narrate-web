@@ -1,4 +1,4 @@
-/* global Phaser */
+/* global Phaser, DocumentTouch */
 'use strict';
 
 var html = document.querySelector('html'),
@@ -31,7 +31,21 @@ Game.State = {};
 Game.Map = {};
 Game.Map.Object = {};
 Game.Score = {
+    ranks: [
+        'Corgi',
+        'Liveried Helper',
+        'Butler',
+        'The Queen\'s Piper',
+        'Knight',
+        'Baronetess',
+        'Baroness',
+        'Viscountess',
+        'Countess',
+        'Marchioness',
+        'Duchess'
+    ],
     totalArtefacts: 0,
+    totalJewels: 0,
     artefactsCollected: 0,
     allArtefactsCollected: false,
     levelScores: {},
@@ -120,6 +134,18 @@ Game.Score = {
         this.artefactsCollected = 0;
 
         this.save();
+    },
+    getCurrentJewelScore: function() {
+        var total = 0;
+
+        Game.Levels.forEach(function(level) {
+            total += this.levelScores[level.stateKey].score;
+        }.bind(this));
+        return total;
+    },
+    getCurrentRating: function() {
+        var rank = Math.round((this.getCurrentJewelScore() / this.totalJewels) * (this.ranks.length - 1));
+        return this.ranks[rank];
     }
 };
 
