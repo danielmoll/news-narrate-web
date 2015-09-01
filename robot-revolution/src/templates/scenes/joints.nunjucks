@@ -3,8 +3,9 @@
 {% set sceneImage = 'images/arm1.png' %}
 
 {% block title %}
-<div class="scene__title">Arms/Joints <span class="scene__title-secondary">Manufacturer needed here</span></div>
-<div class="scene__title"><span class="scene__title-secondary">$14 million</span></div>
+<div class="scene__title">Brain &dash; Google&rsquo;s Neural Networks</div>
+
+<div class="scene__title scene__title--secondary">Cost: Millions, but Google&rsquo;s &lsquo;low-cost&rsquo; version is &#36;20,000</div>
 {% endblock %}
 
 {% block content %}

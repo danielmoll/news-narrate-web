@@ -6,6 +6,7 @@
 	</div>
 
 	<div class="hero__heading">
-		<h1 class="hero__title">Bionic You</h1>
+		<h1 class="hero__title">Robot Revolution</h1>
+		<div class="hero__strap">Bionic You</div>
 	</div>
 </div>
