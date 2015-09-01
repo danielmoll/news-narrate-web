@@ -101,7 +101,7 @@
                  "properties":
                     {
                      "id":"72",
-                     "text":"As the Olympic Games came to the capital for the third time, Britain basked in the glory of hosting a successful event. Britons also celebrated a bumper medal haul, coming third in the table with 29 golds.",
+                     "text":"Olympics: As the Games came to the capital for the third time, Britain basked in the glory of hosting a successful event. Britons also celebrated a bumper medal haul, coming third in the table with 29 golds.",
                      "tiles":"10",
                      "type":"factoid"
                     },
@@ -120,7 +120,7 @@
                  "properties":
                     {
                      "id":"867",
-                     "text":"Photos taken of the user - by the user, have become so popular that in 2013 'selfie' was crowned Oxford Dictionaries' word of the year. The monarch isn't a fan herself... saying she finds the trend 'strange'",
+                     "text":"Selfies: Photos taken of the user - by the user, have become so popular that in 2013 'selfie' was crowned Oxford Dictionaries' word of the year. The monarch isn't a fan herself... saying she finds the trend 'strange'",
                      "tiles":"10",
                      "type":"factoid"
                     },
@@ -139,7 +139,7 @@
                  "properties":
                     {
                      "id":"869",
-                     "text":"1D are the biggest British band since the Beatles. A symbol of the times, the band were first created on reality TV show The X Factor. Since forming they have accumulated an estimated combined net wealth of approximately \u00a370million.",
+                     "text":"1D: A symbol of the times, the band were first created on reality TV show The X Factor. Since forming they have accumulated an estimated combined net wealth of approximately \u00a370million.",
                      "tiles":"10",
                      "type":"factoid"
                     },
