@@ -10,6 +10,7 @@ Game.State.Preloader.prototype = {
 
         this.load.bitmapFont('pixeltype', 'assets/fonts/bitmapFonts/pixeltype.png', 'assets/fonts/bitmapFonts/pixeltype.xml');
         this.load.atlas('assets', 'assets/sprites/assets.png', 'assets/sprites/assets.json');
+        this.game.load.image('reset_panel', 'assets/sprites/reset_panel.png');
 
         // Animation sprites
         this.load.spritesheet('player', 'assets/sprites/alex-sprite.png', 44, 64, 8);
@@ -92,7 +93,7 @@ Game.State.Preloader.prototype = {
         document.body.className += 'game-loaded';
         setTimeout(function() {
             this.game.fadePlugin.fadeOut(0x000, 750, 0, function() {
-            this.game.state.start('intro_skynews');
+            this.game.state.start('navigation');
 
             }.bind(this));
         }.bind(this), 500);
