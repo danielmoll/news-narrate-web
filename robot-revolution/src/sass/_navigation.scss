@@ -1,0 +1,29 @@
+.navigation {
+	width: 100%;
+	max-width: $maxWidth;
+	margin: 0 auto $itemSpacingVertical auto;
+	position: relative;
+}
+
+.navigation__wrapper {
+	width: 100%;
+	background: white;
+}
+
+.navigation__list {
+	display: table;
+	width: 100%;
+}
+
+.navigation__item {
+	display: table-cell;
+	border: 1px solid $grey;
+	text-align: center;
+	width: calc(100% / 4)
+}
+
+.navigation__link {
+	display: block;
+	
+	color: #999;
+}

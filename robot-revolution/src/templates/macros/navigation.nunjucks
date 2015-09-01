@@ -1,0 +1,11 @@
+{% macro render(options) %}
+	<nav class="navigation">
+		<div class="navigation__wrapper js-navigation">
+			<ol class="navigation__list">
+			{% for item in options.items %}
+				<li class="navigation__item"><a class="navigation__link" href="{{ item.link }}" >{{ item.text }}</a></li>
+			{% endfor %}
+			</ol>
+		</div>
+	</nav>
+{% endmacro %}
