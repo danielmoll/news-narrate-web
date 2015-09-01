@@ -35,7 +35,7 @@ Game.Score = {
         'Corgi',
         'Liveried Helper',
         'Butler',
-        'The Queen\'s Piper',
+        'Queen\'s Piper',
         'Knight',
         'Baronetess',
         'Baroness',
