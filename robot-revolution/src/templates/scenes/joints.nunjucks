@@ -1,17 +1,18 @@
 {% extends '../layouts/scene.nunjucks' %}
 
-{% set sceneImage = 'images/arm1.png' %}
+{% set sceneImage = 'images/knee1.png' %}
 
 {% block title %}
-<div class="scene__title">Arms/Joints <span class="scene__title-secondary">Manufacturer needed here</span></div>
-<div class="scene__title"><span class="scene__title-secondary">$14 million</span></div>
+<div class="scene__title">Joints &dash; Robonaut 2</div>
+
+<div class="scene__title scene__title--secondary">Cost: &#36;14 million</div>
 {% endblock %}
 
 {% block content %}
 <p class="scene__text">
-  The human arm is puny compared to most robots: Boston Dynamic’s Atlas Robot can lift 250kg, thanks to hydraulic power. But robot arms can be very different to biological arm. German company Festo’s prototype Bionic Handling Assistant is modelled on an elephant trunk, meaning it’s strong, but much more flexible than a human arm - and a lot more off putting.
+  Festo&rsquo;s prototype Bionic Handling Assistant is modelled on an elephant trunk, meaning it&rsquo;d beat you hands down in an arm wrestle. It&rsquo;s pretty flexible too. 
 </p>
 <p class="scene__text">
-  Nasa is using a similar technology for its own humanoid robot called Robonaut 2. Its flexible limbs have already helped it climb around inside and outside the International Space Station. It didn’t come cheap though: the total cost was $14 million
+  Nasa is using a similar technology for its own humanoid robot &dash; Robonaut 2. Its flexible joints have already helped it climb around the International Space Station.  Don&rsquo;t rush out to buy one to help out with the chores just yet though &dash; the total cost was &#36;14 million.
 </p>
 {% endblock %}

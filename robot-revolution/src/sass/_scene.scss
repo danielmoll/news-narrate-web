@@ -13,7 +13,7 @@
 
 .scene__title {
 	font-family: SkyTextMedium;
-	font-size: 1.6rem;
+	font-size: 1.2rem;
 	margin: 10px 20px;
 	color: $black;
 }
@@ -25,6 +25,15 @@
 .scene__text {
 	margin-left: 20px;
 	margin-right: 20px;
-	font-size: 1.2rem;
 	margin-bottom: 16px;
+}
+
+@media (min-width: $m) {
+	.scene__title {
+		font-size: 2.8rem;
+	}
+
+	.scene__text {
+		font-size: 1.3rem;
+	}
 }

@@ -1,11 +1,13 @@
 <div class="hero">
 	<div class="hero__media">
 		{{ image.render({
-			url: 'images/hero.jpg'
+			url: 'images/hero.jpg',
+			classes: 'hero__media-image'
 		}) }}
 	</div>
 
 	<div class="hero__heading">
-		<h1 class="hero__title">Bionic You</h1>
+		<h1 class="hero__title">Robot Revolution</h1>
+		<div class="hero__strap">Bionic You</div>
 	</div>
 </div>

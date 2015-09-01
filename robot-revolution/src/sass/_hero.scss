@@ -6,11 +6,15 @@
 
 .hero__heading {
 	font-weight: normal;
-	margin: 40px;
+	margin: 25px 20px;
 }
 
 .hero__media {
 	margin-bottom: $itemSpacingVertical;
+}
+
+.hero__media-image {
+	line-height: 0;
 }
 
 .hero__title {
@@ -19,5 +23,10 @@
 	letter-spacing: 2px;
 	line-height: 1.2;
 	color: $teal;
-	font-size: 2.8rem;
+	font-size: 1.8rem;
+}
+
+.hero__strap {
+	text-transform: none;
+	font-size: 1.8rem;
 }
