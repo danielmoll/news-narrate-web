@@ -6,7 +6,7 @@
 {% block title %}
 <div class="scene__title">Hand &dash; Open Bionics / John Hopkins University</div>
 
-<div class="scene__title scene__title--secondary">Cost: &pound;2000 &dash; &#36;500,000</div>
+<div class="scene__title scene__title--secondary">Cost: &pound;2000 &dash; &pound;325,000</div>
 {% endblock %}
 
 {% block content %}
