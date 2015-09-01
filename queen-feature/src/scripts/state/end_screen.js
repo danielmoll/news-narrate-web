@@ -8,7 +8,7 @@ Game.State.EndScreen.prototype = {
 
     fixedTextOverlays: [
         { text: "Well done", size: 100, x: 20, y: 20, alpha: 0.2 },
-        { text: "All royal artefacts have been returned!", size: 50, x: 20, y: 120 }
+        { text: "All royal artefacts\nhave been returned!", size: 50, x: 20, y: 120 }
     ],
 
     create: function () {
@@ -33,12 +33,11 @@ Game.State.EndScreen.prototype = {
             this.textGroup.add(txtElement);
         }.bind(this));
 
-        this.game.add.button(this.game.width - 120, this.game.height - 50, 'next_button', this.nextLevel, this);
-
-        this.cursors = this.game.input.keyboard.createCursorKeys();
+        this.game.input.onDown.add(this.nextFrame, this);
+        this.game.input.keyboard.addCallbacks(this, this.nextFrame);
     },
 
-    nextLevel: function () {
+    nextFrame: function () {
         if (!this.transitionning) {
             this.transitionning = true;
             this.game.fadePlugin.fadeOut(0x000, 750, 0, function() {
