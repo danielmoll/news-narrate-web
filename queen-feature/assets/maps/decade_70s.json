@@ -91,7 +91,7 @@
                     {
                      "id":"35",
                      "size":"24",
-                     "text":"Britain's first female Prime Minister walked into number ten amid political upheaval. Serving three terms,the 'Iron Lady' was one of the dominant political figures of 20th century Britain",
+                     "text":"Britain's first female Prime Minister walked into number ten amid political upheaval. Serving three terms, the 'Iron Lady' was one of the dominant political figures of 20th century Britain",
                      "tiles":"12",
                      "type":"factoid"
                     },
@@ -130,7 +130,7 @@
                  "properties":
                     {
                      "size":"16",
-                     "text":"The 1970s marked a difficult decade for Britain, both politically and economically. The country was reduced to a three day working week and suffered a 'Winter of Discontent' with widespread strikes. But power cuts and walk-outs were met with punk and glam rock. While the country struggled economically, social change continued with a 'second wave' of feminism and by the end of the decade, the first female Prime Minister was in Downing Street.",
+                     "text":"The 1970s marked a difficult decade for Britain, both politically and economically. The country was reduced to a three-day working week and suffered a 'Winter of Discontent' with widespread strikes. But power cuts and walk-outs were met with punk and glam rock. While the country struggled economically, social change continued with a 'second wave' of feminism and by the end of the decade, the first female Prime Minister was in Downing Street.",
                      "tiles":"18"
                     },
                  "rotation":0,
@@ -149,7 +149,7 @@
                     {
                      "id":"39",
                      "size":"24",
-                     "text":"From a galaxy 'far, far away' came Jedis, lightsabers, and 'the force'. The biggest film of the decade, George Lucas' epic space odyssey had a major cultural impact and developed a huge cult-following.",
+                     "text":"From a galaxy 'far, far away' came Jedis, lightsabers, and \u2018The Force'. The biggest film of the decade, George Lucas' epic space odyssey had a major cultural impact and developed a huge cult-following.",
                      "tiles":"12",
                      "type":"factoid"
                     },

@@ -130,7 +130,7 @@
                  "gid":383,
                  "height":32,
                  "id":35,
-                 "name":"maggie_text",
+                 "name":"spice_text",
                  "properties":
                     {
                      "id":"35",
@@ -150,7 +150,7 @@
                  "gid":383,
                  "height":32,
                  "id":67,
-                 "name":"sex_pistols_text",
+                 "name":"harry_text",
                  "properties":
                     {
                      "id":"67",
@@ -189,12 +189,12 @@
                  "gid":383,
                  "height":32,
                  "id":179,
-                 "name":"starwars_text",
+                 "name":"internet_text",
                  "properties":
                     {
                      "id":"39",
                      "size":"24",
-                     "text":"At the start of the decade Tim Berners-Lee debuted his system that made it easier to share data between scientists. His project would see make the internet accessible to the masses, and by the end of the decade more than 100 million people were accessing his web of pages across the world.",
+                     "text":"At the start of the decade Tim Berners-Lee debuted his system that made it easier to share data between scientists. His project would make the internet accessible to the masses, and by the end of the decade more than 100 million people were accessing his web of pages across the world.",
                      "tiles":"15",
                      "type":"factoid"
                     },

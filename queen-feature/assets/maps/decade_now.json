@@ -101,7 +101,7 @@
                  "properties":
                     {
                      "id":"72",
-                     "text":"As The Games came to the capital for the third time, Britain basked in the glory of hosting a succesful event. Britons also celebrated a bumper medal haul, coming third in the table with 29 golds.",
+                     "text":"As the Olympic Games came to the capital for the third time, Britain basked in the glory of hosting a successful event. Britons also celebrated a bumper medal haul, coming third in the table with 29 golds.",
                      "tiles":"10",
                      "type":"factoid"
                     },
@@ -115,29 +115,12 @@
                 {
                  "gid":467,
                  "height":32,
-                 "id":80,
-                 "name":"intro_text",
-                 "properties":
-                    {
-                     "text":"Britain stepped in the 'noughties' in a jubilant mood, but found itself grappling with a financial crisis, a war in Iraq and a major terror attack on the capital. Britons became more 'social' and everyone had the chance of fame, as reality TV hit our screens.",
-                     "tiles":"17"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":32,
-                 "x":1312,
-                 "y":128
-                }, 
-                {
-                 "gid":467,
-                 "height":32,
                  "id":867,
                  "name":"selfie_fact",
                  "properties":
                     {
                      "id":"867",
-                     "text":"Photos taken of the user - by the user, have become so popular that in 2013 'selfie' was crowned Oxford Dictionaries' word of the year. The monarch isn't a fan herself... saying she finds the trend 'strange',",
+                     "text":"Photos taken of the user - by the user, have become so popular that in 2013 'selfie' was crowned Oxford Dictionaries' word of the year. The monarch isn't a fan herself... saying she finds the trend 'strange'",
                      "tiles":"10",
                      "type":"factoid"
                     },
@@ -156,7 +139,7 @@
                  "properties":
                     {
                      "id":"869",
-                     "text":"1D are the biggest British band since the Beatles. A symbol of the times, the band were first created on reality TV show The X Factor. Since forming they have accumulated an estimated combined wealth of \u00a325million.",
+                     "text":"1D are the biggest British band since the Beatles. A symbol of the times, the band were first created on reality TV show The X Factor. Since forming they have accumulated an estimated combined net wealth of approximately \u00a370million.",
                      "tiles":"10",
                      "type":"factoid"
                     },
