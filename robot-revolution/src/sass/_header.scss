@@ -44,3 +44,24 @@
 .header__link:hover .header__social-icon {
 	opacity: 0.6;
 }
+
+@media (min-width: $m) {
+
+	.header__logo {
+		height: 40px;
+	}
+
+	.header__list {
+		margin-top: 10px;
+	}
+}
+
+@media (min-width: $l) {
+	.header__logo {
+		margin-left: 0;
+	}
+
+	.header__list {
+		margin-right: 0;
+	}	
+}

@@ -1,7 +1,8 @@
 <div class="hero">
 	<div class="hero__media">
 		{{ image.render({
-			url: 'images/hero.jpg'
+			url: 'images/hero.jpg',
+			classes: 'hero__media-image'
 		}) }}
 	</div>
 

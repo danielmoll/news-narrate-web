@@ -1,5 +1,5 @@
 {% macro render(options) %}
-	<div class="image">
+	<div class="image {{ options.classes }}">
 		<img src="{{ options.url }}" alt="" class="image__item">
 	</div>
 {% endmacro %}

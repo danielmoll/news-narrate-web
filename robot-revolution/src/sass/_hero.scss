@@ -13,7 +13,7 @@
 	margin-bottom: $itemSpacingVertical;
 }
 
-.hero__media .image {
+.hero__media-image {
 	line-height: 0;
 }
 
@@ -29,25 +29,4 @@
 .hero__strap {
 	text-transform: none;
 	font-size: 1.8rem;
-}
-
-@media (min-width: $m) {
-
-	.header__logo {
-		height: 40px;
-	}
-
-	.header__list {
-		margin-top: 10px;
-	}
-}
-
-@media (min-width: $l) {
-	.header__logo {
-		margin-left: 0;
-	}
-
-	.header__list {
-		margin-right: 0;
-	}	
 }

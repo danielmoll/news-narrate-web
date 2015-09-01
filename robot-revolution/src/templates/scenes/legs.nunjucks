@@ -5,15 +5,13 @@
 {% set sceneImage = 'images/foot1.png' %}
 
 {% block title %}
-<div class="scene__title">Legs/Feet <span class="scene__title-secondary">Manufacturer needed here</span></div>
-<div class="scene__title"><span class="scene__title-secondary">€6 million</span></div>
+<div class="scene__title">Legs/Feet &dash; WALK&dash;MAN</div>
+
+<div class="scene__title scene__title--secondary">Cost: &euro;6 million</div>
 {% endblock %}
 
 {% block content %}
 <p class="scene__text">
-  Walking is hard. Like humans, robots don’t rely just on legs. The Walk-Man, created by the Italian Institute of Technology in Genoa, is a ‘whole-body’ system, its eyes, arms, hands and legs work together to walk smoothly(ish).
-</p>
-<p class="scene__text">
-  The legs are pliant, rather than rigid, making balance easier and sensors in its feet feel Walk-Man how its weight is distributed. It is still nowhere near as nimble as a human, and requires a hefty power supply.
+  Like us, robots don&rsquo;t rely just on legs to get around. The WALK&dash;MAN, has legs which are pliant, rather than rigid, making balance easier, and allows it to walk smoothly(ish). It’s still nowhere near as nimble as a us though, and requires a hefty power supply.
 </p>
 {% endblock %}
