@@ -1,5 +1,7 @@
 {% extends '../layouts/scene.nunjucks' %}
 
+{% set classname = 'scene--odd' %}
+
 {% set sceneImage = 'images/hand1.png' %}
 
 

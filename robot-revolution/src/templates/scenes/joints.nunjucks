@@ -1,5 +1,7 @@
 {% extends '../layouts/scene.nunjucks' %}
 
+{% set classname = 'scene--even' %}
+
 {% set sceneImage = 'images/knee1.png' %}
 
 {% block title %}
