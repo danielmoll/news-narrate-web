@@ -20,6 +20,7 @@ Game.State.EndScreen.prototype = {
 
     createState: function() {
         var bg = this.game.add.graphics(0, 0);
+
         bg.beginFill(0X000, 1);
         bg.drawRect(this.game.camera.x, this.game.camera.y, this.game.width * 1.5, this.game.height * 1.5);
         bg.endFill();
@@ -35,6 +36,7 @@ Game.State.EndScreen.prototype = {
 
         this.game.input.onDown.add(this.nextFrame, this);
         this.game.input.keyboard.addCallbacks(this, this.nextFrame);
+
     },
 
     nextFrame: function () {

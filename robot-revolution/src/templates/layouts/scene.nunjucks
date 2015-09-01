@@ -1,6 +1,6 @@
 {% import '../macros/image.nunjucks' as image %}
 
-<div class="scene scene--{{ aspect|default('4x3') }} js-scene js-in-view" id="{{ sceneName }}" data-group-name="{{ sceneGroup }}">
+<div class="scene">
 	{% if sceneImage %}
 		<div class="scene__media">
 			{{

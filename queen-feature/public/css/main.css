@@ -47,7 +47,7 @@ body {
 }
 
 @media (min-width: 720px) { /* Totally arbitrary, this should probably be changed to the correct breakpoint. */
-    .game_wrapper {
+    .no-touch .game_wrapper {
         border: 10px solid #000;
         margin-top: 200px;
     }

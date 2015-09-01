@@ -4,17 +4,6 @@
 Game.State.Startup = function() {};
 Game.State.Startup.prototype = {
     preload: function() {
-        // /!\ If you remove the crow from the preloader
-        // /!\   screen, and remove this line, you MUST
-        // /!\   add load it in the preloader.js file or
-        // /!\   levels using the crown asset will fail
-        this.load.image('crown', 'assets/sprites/crown.png');
-
-        // Fonts
-        // This load call is only here because we need it
-        // on the loading screen.
-        this.load.bitmapFont('pixeltype', 'assets/fonts/bitmapFonts/pixeltype.png', 'assets/fonts/bitmapFonts/pixeltype.xml');
-
         // Load the json maps, so we can load the images in the next steps.
         // Load map json
         var map,
@@ -24,7 +13,6 @@ Game.State.Startup.prototype = {
             map = Game.Map.MAPS[i];
             this.load.tilemap(map, 'assets/maps/' + map + '.json', null, Phaser.Tilemap.TILED_JSON);
         }
-
     },
 
     create: function() {
@@ -37,11 +25,10 @@ Game.State.Startup.prototype = {
 
         this.game.state.start('preloader');
 
-        document.querySelector('.fullscreen-prompt__link').addEventListener('click', function(e) {
+        document.querySelector('.fullscreen-prompt__link').addEventListener('click', function() {
             this.game.scale.fullScreenScaleMode = Phaser.ScaleManager.SHOW_ALL;
             this.game.scale.startFullScreen(false);
         }.bind(this), false);
-
 
     }
 };

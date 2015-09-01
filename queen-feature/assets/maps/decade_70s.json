@@ -249,7 +249,7 @@
                     {
                      "revealFactId":"67",
                      "score":"30",
-                     "sprite_key":"sex_pistols"
+                     "sprite_key":"70s_sex_pistols"
                     },
                  "rotation":0,
                  "type":"sex_pistols_spawn",
@@ -1066,7 +1066,7 @@
                     {
                      "revealFactId":"35",
                      "score":"30",
-                     "sprite_key":"maggie"
+                     "sprite_key":"70s_maggie"
                     },
                  "rotation":0,
                  "type":"maggie_spawn",
@@ -1441,7 +1441,7 @@
                     {
                      "revealFactId":"39",
                      "score":"30",
-                     "sprite_key":"starwars"
+                     "sprite_key":"70s_starwars"
                     },
                  "rotation":0,
                  "type":"starwars_spawn",

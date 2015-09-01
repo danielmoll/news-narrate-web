@@ -188,7 +188,7 @@
                     {
                      "revealFactId":"72",
                      "score":"50",
-                     "sprite_key":"olympics"
+                     "sprite_key":"2010s_olympics"
                     },
                  "rotation":0,
                  "type":"olympics_spawn",
@@ -2535,7 +2535,7 @@
                     {
                      "revealFactId":"867",
                      "score":"50",
-                     "sprite_key":"selfie"
+                     "sprite_key":"2010s_selfie"
                     },
                  "rotation":0,
                  "type":"selfie_spawn",
@@ -2553,7 +2553,7 @@
                     {
                      "revealFactId":"869",
                      "score":"50",
-                     "sprite_key":"1d"
+                     "sprite_key":"2010s_1d"
                     },
                  "rotation":0,
                  "type":"1d_spawn",
