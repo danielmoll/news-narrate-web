@@ -1,9 +1,11 @@
-/* global Game */
+/* global Game, Phaser */
 'use strict';
 
 Game.State.Preloader = function() {};
 Game.State.Preloader.prototype = {
     preload: function() {
+        var totalJewels = 0;
+
         this.stage.backgroundColor = '#000000';
 
         this.load.bitmapFont('pixeltype', 'assets/fonts/bitmapFonts/pixeltype.png', 'assets/fonts/bitmapFonts/pixeltype.xml');
@@ -39,6 +41,19 @@ Game.State.Preloader.prototype = {
 
 
         this.loadTileMaps();
+
+        // Figure out how many jewels are in the game
+        Game.Levels.forEach(function(level) {
+            var tilemap;
+            tilemap = new Phaser.Tilemap(this.game, level.stateKey);
+            tilemap.objects.collectibles.forEach(function(element) {
+                if (element.type === 'jewel_spawn') {
+                    totalJewels ++;
+                }
+            });
+        }.bind(this));
+
+        Game.Score.totalJewels = totalJewels;
     },
 
     // Many of the maps use the same tile images. We create a map of all these images
