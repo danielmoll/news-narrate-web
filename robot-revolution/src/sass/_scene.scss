@@ -28,6 +28,10 @@
 	margin-bottom: 16px;
 }
 
+.scene--even {
+	background-color: #E2E3E4;
+}
+
 @media (min-width: $m) {
 	.scene__title {
 		font-size: 2.8rem;

@@ -1,5 +1,7 @@
 {% extends '../layouts/scene.nunjucks' %}
 
+{% set classname = 'scene--odd' %}
+
 {% block content %}
 <p class="scene__text">
   	Look around – and you&rsquo;ll see we&rsquo;re surrounded by robots. Flying bots, walking bots, swimming bots, bots that swim in your blood, surgical bots - even killer bots. Driverless cars, delivery drones, military drones, prosthetics – they&rsquo;re all already here.

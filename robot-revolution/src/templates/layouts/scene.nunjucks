@@ -1,6 +1,6 @@
 {% import '../macros/image.nunjucks' as image %}
 
-<div class="scene">
+<div class="scene {{ classname }}">
 	{% if sceneImage %}
 		<div class="scene__media">
 			{{
