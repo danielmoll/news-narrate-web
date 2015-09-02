@@ -112,9 +112,7 @@ Game.State.Navigation.prototype = {
     },
 
     createResetPopup: function () {
-        var width = this.game.width - 30,
-            height = this.game.height - 30,
-            centerX = this.game.width / 2,
+        var centerX = this.game.width / 2,
             centerY = this.game.height / 2,
             yesButton,
             noButton,
@@ -122,23 +120,24 @@ Game.State.Navigation.prototype = {
             popupText,
             popupBg;
 
-        popupTitle = new Phaser.Text(this.game, 0, 0, 'Are you sure?', { font: '60px pixeltype', align: 'center', fill: '#fff'} ),
-        popupText = new Phaser.Text(this.game, 0, 0, 'This will reset your progress and lose any items you have collected until now.', { font: '30px pixeltype', wordWrap: true, wordWrapWidth: this.game.width - 160, align: 'center', fill: '#fff'} ),
-        popupBg = this.game.add.sprite(centerX, centerY, 'reset_panel');
+        popupTitle = new Phaser.BitmapText(this.game, 0, 0, 'pixeltype', 'Are you sure?', 65);
+        popupText = new Phaser.BitmapText(this.game, 0, 0, 'pixeltype', 'This will reset your progress and lose\nany items you have collected until now.', 36);
+        popupBg = this.game.add.sprite(centerX, centerY, 'assets');
+        popupBg.frameName = 'reset_panel.png';
 
         popupBg.visible = false;
 
         popupBg.anchor.set(0.5, 0.5);
-        popupTitle.anchor.set(0.5, 1.6);
-        popupText.anchor.set(0.5, 0.7);
+        popupTitle.anchor.set(0.5, 2.5);
+        popupText.anchor.set(0.5, 1);
 
         popupText.lineSpacing = -15;
 
         popupBg.addChild(popupTitle);
         popupBg.addChild(popupText);
 
-        yesButton = new LabelButton(this.game, -70, 73, null, 'Yes', this.resetGame, this, { font: '50px pixeltype', fill: '#fff' });
-        noButton = new LabelButton(this.game, 73, 73, null, 'No', this.hideResetPopup, this, { font: '50px pixeltype', fill: '#fff' });
+        yesButton = new LabelButton(this.game, -72, 73, null, 'Yes', this.resetGame, this, { font: '28px silkscreennormal', fill: '#fff' });
+        noButton = new LabelButton(this.game, 71, 73, null, 'No', this.hideResetPopup, this, { font: '28px silkscreennormal', fill: '#fff' });
         yesButton.anchor.setTo(0.5, 0.5);
         noButton.anchor.setTo(0.5, 0.5);
 
