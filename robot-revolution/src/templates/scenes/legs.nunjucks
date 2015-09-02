@@ -2,7 +2,10 @@
 
 {% set classname = 'scene--odd' %}
 
-{% set sceneImage = 'images/foot1.png' %}
+{% set sceneName = 'scene_60s' %}
+{% set sceneGroup = 'group_60s' %}
+{% set topImageUrl = 'images/foot-human.png' %}
+{% set bottomImageUrl = 'images/foot-robot.png' %}
 
 {% block title %}
 <div class="scene__title">Legs/Feet &dash; WALK&dash;MAN</div>

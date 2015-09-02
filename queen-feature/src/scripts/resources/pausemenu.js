@@ -212,7 +212,7 @@ Game.PauseMenu.prototype.share = function (network) {
     if (network === 'facebook') {
         sharerUrl = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(window.location);
     } else if (network === 'twitter') {
-        sharerUrl = "https://twitter.com/intent/tweet?url=" + encodeURIComponent(window.location) + ";text=Play the Reign Game.";
+        sharerUrl = "https://twitter.com/intent/tweet?url=" + encodeURIComponent(window.location) + ";text=I'm a " + Game.Score.getCurrentRating() + ' on the Reign Game, ' + Game.Score.getCurrentJewelScore() + ' jewels collected and ' + Game.Score.artefactsCollected + ' precious artefacts returned.';
     }
 
     window.open(sharerUrl, '_blank');

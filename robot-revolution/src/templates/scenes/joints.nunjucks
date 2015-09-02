@@ -2,7 +2,8 @@
 
 {% set classname = 'scene--even' %}
 
-{% set sceneImage = 'images/knee1.png' %}
+{% set topImageUrl = 'images/joints-human.png' %}
+{% set bottomImageUrl = 'images/joints-robot.png' %}
 
 {% block title %}
 <div class="scene__title">Joints &dash; Robonaut 2</div>

@@ -104,7 +104,7 @@
         <key>algorithmSettings</key>
         <struct type="AlgorithmSettings">
             <key>algorithm</key>
-            <enum type="AlgorithmSettings::AlgorithmId">MaxRects</enum>
+            <enum type="AlgorithmSettings::AlgorithmId">Basic</enum>
             <key>freeSizeMode</key>
             <enum type="AlgorithmSettings::AlgorithmFreeSizeMode">Best</enum>
             <key>sizeConstraints</key>
@@ -267,6 +267,7 @@
             <filename>sprites_source/sparkle2.png</filename>
             <filename>sprites_source/sparkle3.png</filename>
             <filename>sprites_source/Twitter_button.png</filename>
+            <filename>sprites_source/reset_panel.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

@@ -2,7 +2,8 @@
 
 {% set classname = 'scene--odd' %}
 
-{% set sceneImage = 'images/eye1.png' %}
+{% set topImageUrl = 'images/eye-human.png' %}
+{% set bottomImageUrl = 'images/eye-robot.png' %}
 
 {% block title %}
 <div class="scene__title">Eyes &dash; WALK&dash;MAN</div>

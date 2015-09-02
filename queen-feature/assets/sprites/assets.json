@@ -191,7 +191,7 @@
 },
 {
 	"filename": "90s_web.png",
-	"frame": {"x":2,"y":36,"w":37,"h":32},
+	"frame": {"x":1896,"y":2,"w":37,"h":32},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":32},
@@ -200,7 +200,7 @@
 },
 {
 	"filename": "jewel.png",
-	"frame": {"x":41,"y":36,"w":32,"h":32},
+	"frame": {"x":1935,"y":2,"w":32,"h":32},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":32},
@@ -209,7 +209,7 @@
 },
 {
 	"filename": "pause.png",
-	"frame": {"x":75,"y":36,"w":32,"h":32},
+	"frame": {"x":2,"y":36,"w":32,"h":32},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":32},
@@ -218,7 +218,7 @@
 },
 {
 	"filename": "jewel_grey.png",
-	"frame": {"x":109,"y":36,"w":32,"h":32},
+	"frame": {"x":36,"y":36,"w":32,"h":32},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":32},
@@ -227,7 +227,7 @@
 },
 {
 	"filename": "horse_grey.png",
-	"frame": {"x":143,"y":36,"w":32,"h":32},
+	"frame": {"x":70,"y":36,"w":32,"h":32},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":32},
@@ -236,7 +236,7 @@
 },
 {
 	"filename": "90s_web_grey.png",
-	"frame": {"x":177,"y":36,"w":37,"h":32},
+	"frame": {"x":104,"y":36,"w":37,"h":32},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":32},
@@ -245,7 +245,7 @@
 },
 {
 	"filename": "horse.png",
-	"frame": {"x":216,"y":36,"w":32,"h":32},
+	"frame": {"x":143,"y":36,"w":32,"h":32},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":32},
@@ -254,7 +254,7 @@
 },
 {
 	"filename": "corgi.png",
-	"frame": {"x":250,"y":36,"w":32,"h":32},
+	"frame": {"x":177,"y":36,"w":32,"h":32},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":32},
@@ -263,7 +263,7 @@
 },
 {
 	"filename": "80s_charles_diana.png",
-	"frame": {"x":284,"y":36,"w":32,"h":32},
+	"frame": {"x":211,"y":36,"w":32,"h":32},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":32},
@@ -272,7 +272,7 @@
 },
 {
 	"filename": "corgi_grey.png",
-	"frame": {"x":318,"y":36,"w":32,"h":32},
+	"frame": {"x":245,"y":36,"w":32,"h":32},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":32},
@@ -281,7 +281,7 @@
 },
 {
 	"filename": "90s_spice.png",
-	"frame": {"x":352,"y":36,"w":12,"h":32},
+	"frame": {"x":279,"y":36,"w":12,"h":32},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":12,"h":32},
@@ -290,7 +290,7 @@
 },
 {
 	"filename": "60s_beatles.png",
-	"frame": {"x":366,"y":36,"w":64,"h":32},
+	"frame": {"x":293,"y":36,"w":64,"h":32},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":32},
@@ -299,7 +299,7 @@
 },
 {
 	"filename": "2010s_olympics.png",
-	"frame": {"x":432,"y":36,"w":32,"h":32},
+	"frame": {"x":359,"y":36,"w":32,"h":32},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":32},
@@ -308,7 +308,7 @@
 },
 {
 	"filename": "2010s_1d.png",
-	"frame": {"x":466,"y":36,"w":32,"h":32},
+	"frame": {"x":393,"y":36,"w":32,"h":32},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":32},
@@ -317,7 +317,7 @@
 },
 {
 	"filename": "2010s_1d_grey.png",
-	"frame": {"x":500,"y":36,"w":32,"h":32},
+	"frame": {"x":427,"y":36,"w":32,"h":32},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":32},
@@ -326,7 +326,7 @@
 },
 {
 	"filename": "2010s_olympics_grey.png",
-	"frame": {"x":534,"y":36,"w":32,"h":32},
+	"frame": {"x":461,"y":36,"w":32,"h":32},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":32},
@@ -335,7 +335,7 @@
 },
 {
 	"filename": "50s_tv.png",
-	"frame": {"x":568,"y":36,"w":32,"h":32},
+	"frame": {"x":495,"y":36,"w":32,"h":32},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":32},
@@ -344,7 +344,7 @@
 },
 {
 	"filename": "2010s_selfie.png",
-	"frame": {"x":602,"y":36,"w":32,"h":32},
+	"frame": {"x":529,"y":36,"w":32,"h":32},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":32},
@@ -353,7 +353,7 @@
 },
 {
 	"filename": "50s_record_grey.png",
-	"frame": {"x":636,"y":36,"w":32,"h":32},
+	"frame": {"x":563,"y":36,"w":32,"h":32},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":32},
@@ -362,7 +362,7 @@
 },
 {
 	"filename": "2010s_selfie_grey.png",
-	"frame": {"x":670,"y":36,"w":32,"h":32},
+	"frame": {"x":597,"y":36,"w":32,"h":32},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":32},
@@ -371,7 +371,7 @@
 },
 {
 	"filename": "50s_record.png",
-	"frame": {"x":704,"y":36,"w":32,"h":32},
+	"frame": {"x":631,"y":36,"w":32,"h":32},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":32},
@@ -380,43 +380,7 @@
 },
 {
 	"filename": "2000s_pop_idol_grey.png",
-	"frame": {"x":738,"y":36,"w":64,"h":32},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":32},
-	"sourceSize": {"w":64,"h":32},
-	"pivot": {"x":0.5,"y":0.5}
-},
-{
-	"filename": "2000s_ipod_grey.png",
-	"frame": {"x":804,"y":36,"w":32,"h":32},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":32},
-	"sourceSize": {"w":32,"h":32},
-	"pivot": {"x":0.5,"y":0.5}
-},
-{
-	"filename": "2000s_ipod.png",
-	"frame": {"x":838,"y":36,"w":32,"h":32},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":32},
-	"sourceSize": {"w":32,"h":32},
-	"pivot": {"x":0.5,"y":0.5}
-},
-{
-	"filename": "50s_tv_grey.png",
-	"frame": {"x":872,"y":36,"w":32,"h":32},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":32},
-	"sourceSize": {"w":32,"h":32},
-	"pivot": {"x":0.5,"y":0.5}
-},
-{
-	"filename": "2000s_dome_grey.png",
-	"frame": {"x":906,"y":36,"w":64,"h":32},
+	"frame": {"x":665,"y":36,"w":64,"h":32},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":32},
@@ -425,16 +389,52 @@
 },
 {
 	"filename": "2000s_pop_idol.png",
-	"frame": {"x":972,"y":36,"w":64,"h":32},
+	"frame": {"x":731,"y":36,"w":64,"h":32},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":32},
 	"sourceSize": {"w":64,"h":32},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "2000s_ipod.png",
+	"frame": {"x":797,"y":36,"w":32,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":32},
+	"sourceSize": {"w":32,"h":32},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "50s_tv_grey.png",
+	"frame": {"x":831,"y":36,"w":32,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":32},
+	"sourceSize": {"w":32,"h":32},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "2000s_dome_grey.png",
+	"frame": {"x":865,"y":36,"w":64,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":32},
+	"sourceSize": {"w":64,"h":32},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "2000s_ipod_grey.png",
+	"frame": {"x":931,"y":36,"w":32,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":32},
+	"sourceSize": {"w":32,"h":32},
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
 	"filename": "60s_beatles_grey.png",
-	"frame": {"x":1038,"y":36,"w":64,"h":32},
+	"frame": {"x":965,"y":36,"w":64,"h":32},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":32},
@@ -442,8 +442,8 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "60s_the_sun_grey.png",
-	"frame": {"x":1104,"y":36,"w":32,"h":32},
+	"filename": "60s_worldcup_grey.png",
+	"frame": {"x":1031,"y":36,"w":32,"h":32},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":32},
@@ -452,7 +452,16 @@
 },
 {
 	"filename": "60s_the_sun.png",
-	"frame": {"x":1138,"y":36,"w":32,"h":32},
+	"frame": {"x":1065,"y":36,"w":32,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":32},
+	"sourceSize": {"w":32,"h":32},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "60s_the_sun_grey.png",
+	"frame": {"x":1099,"y":36,"w":32,"h":32},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":32},
@@ -461,16 +470,7 @@
 },
 {
 	"filename": "60s_worldcup.png",
-	"frame": {"x":1172,"y":36,"w":32,"h":32},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":32},
-	"sourceSize": {"w":32,"h":32},
-	"pivot": {"x":0.5,"y":0.5}
-},
-{
-	"filename": "60s_worldcup_grey.png",
-	"frame": {"x":1206,"y":36,"w":32,"h":32},
+	"frame": {"x":1133,"y":36,"w":32,"h":32},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":32},
@@ -479,7 +479,7 @@
 },
 {
 	"filename": "corgi-sprite.png",
-	"frame": {"x":1240,"y":36,"w":160,"h":33},
+	"frame": {"x":1167,"y":36,"w":160,"h":33},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":160,"h":33},
@@ -487,8 +487,8 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "70s_starwars.png",
-	"frame": {"x":1402,"y":36,"w":30,"h":35},
+	"filename": "70s_starwars_grey.png",
+	"frame": {"x":1329,"y":36,"w":30,"h":35},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":35},
@@ -496,8 +496,8 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "70s_starwars_grey.png",
-	"frame": {"x":1434,"y":36,"w":30,"h":35},
+	"filename": "70s_starwars.png",
+	"frame": {"x":1361,"y":36,"w":30,"h":35},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":35},
@@ -506,7 +506,7 @@
 },
 {
 	"filename": "70s_sex_pistols.png",
-	"frame": {"x":1466,"y":36,"w":48,"h":37},
+	"frame": {"x":1393,"y":36,"w":48,"h":37},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":48,"h":37},
@@ -515,7 +515,7 @@
 },
 {
 	"filename": "70s_sex_pistols_grey.png",
-	"frame": {"x":1516,"y":36,"w":48,"h":37},
+	"frame": {"x":1443,"y":36,"w":48,"h":37},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":48,"h":37},
@@ -524,7 +524,7 @@
 },
 {
 	"filename": "70s_maggie_grey.png",
-	"frame": {"x":1566,"y":36,"w":38,"h":38},
+	"frame": {"x":1493,"y":36,"w":38,"h":38},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":38},
@@ -533,7 +533,7 @@
 },
 {
 	"filename": "70s_maggie.png",
-	"frame": {"x":1606,"y":36,"w":38,"h":38},
+	"frame": {"x":1533,"y":36,"w":38,"h":38},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":38},
@@ -541,8 +541,8 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "Play_button.png",
-	"frame": {"x":2,"y":76,"w":272,"h":40},
+	"filename": "FB_Button.png",
+	"frame": {"x":1573,"y":36,"w":272,"h":40},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":272,"h":40},
@@ -550,8 +550,17 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "FB_Button.png",
-	"frame": {"x":276,"y":76,"w":272,"h":40},
+	"filename": "Restart_button.png",
+	"frame": {"x":2,"y":78,"w":272,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":272,"h":40},
+	"sourceSize": {"w":272,"h":40},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "Play_button.png",
+	"frame": {"x":276,"y":78,"w":272,"h":40},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":272,"h":40},
@@ -560,7 +569,7 @@
 },
 {
 	"filename": "Twitter_button.png",
-	"frame": {"x":550,"y":76,"w":269,"h":40},
+	"frame": {"x":550,"y":78,"w":269,"h":40},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":269,"h":40},
@@ -568,17 +577,8 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "Restart_button.png",
-	"frame": {"x":821,"y":76,"w":272,"h":40},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":272,"h":40},
-	"sourceSize": {"w":272,"h":40},
-	"pivot": {"x":0.5,"y":0.5}
-},
-{
 	"filename": "Back_button.png",
-	"frame": {"x":1095,"y":76,"w":272,"h":40},
+	"frame": {"x":821,"y":78,"w":272,"h":40},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":272,"h":40},
@@ -586,8 +586,8 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "sound_off.png",
-	"frame": {"x":1369,"y":76,"w":52,"h":49},
+	"filename": "sound.png",
+	"frame": {"x":1095,"y":78,"w":52,"h":49},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":52,"h":49},
@@ -595,8 +595,8 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "sound.png",
-	"frame": {"x":1423,"y":76,"w":52,"h":49},
+	"filename": "sound_off.png",
+	"frame": {"x":1149,"y":78,"w":52,"h":49},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":52,"h":49},
@@ -605,7 +605,7 @@
 },
 {
 	"filename": "music.png",
-	"frame": {"x":1477,"y":76,"w":64,"h":64},
+	"frame": {"x":1203,"y":78,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -614,7 +614,7 @@
 },
 {
 	"filename": "alex-sprite.png",
-	"frame": {"x":1543,"y":76,"w":352,"h":64},
+	"frame": {"x":1269,"y":78,"w":352,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":352,"h":64},
@@ -623,7 +623,7 @@
 },
 {
 	"filename": "music_off.png",
-	"frame": {"x":2,"y":142,"w":64,"h":64},
+	"frame": {"x":1623,"y":78,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -631,8 +631,26 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
+	"filename": "button_left.png",
+	"frame": {"x":1689,"y":78,"w":94,"h":85},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":94,"h":85},
+	"sourceSize": {"w":94,"h":85},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "button_right.png",
+	"frame": {"x":1785,"y":78,"w":94,"h":85},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":94,"h":85},
+	"sourceSize": {"w":94,"h":85},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
 	"filename": "button_jump.png",
-	"frame": {"x":68,"y":142,"w":103,"h":85},
+	"frame": {"x":1881,"y":78,"w":103,"h":85},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":103,"h":85},
@@ -640,26 +658,8 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "button_right.png",
-	"frame": {"x":173,"y":142,"w":94,"h":85},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":94,"h":85},
-	"sourceSize": {"w":94,"h":85},
-	"pivot": {"x":0.5,"y":0.5}
-},
-{
-	"filename": "button_left.png",
-	"frame": {"x":269,"y":142,"w":94,"h":85},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":94,"h":85},
-	"sourceSize": {"w":94,"h":85},
-	"pivot": {"x":0.5,"y":0.5}
-},
-{
 	"filename": "alexs_time_machine.png",
-	"frame": {"x":365,"y":142,"w":64,"h":120},
+	"frame": {"x":2,"y":165,"w":64,"h":120},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":120},
@@ -668,7 +668,7 @@
 },
 {
 	"filename": "alex_pause.png",
-	"frame": {"x":431,"y":142,"w":150,"h":209},
+	"frame": {"x":68,"y":165,"w":150,"h":209},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":150,"h":209},
@@ -677,7 +677,16 @@
 },
 {
 	"filename": "kayburley.png",
-	"frame": {"x":583,"y":142,"w":568,"h":320},
+	"frame": {"x":220,"y":165,"w":568,"h":320},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":568,"h":320},
+	"sourceSize": {"w":568,"h":320},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "reset_panel.png",
+	"frame": {"x":790,"y":165,"w":568,"h":320},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":568,"h":320},
@@ -686,7 +695,7 @@
 },
 {
 	"filename": "navigation.png",
-	"frame": {"x":1153,"y":142,"w":568,"h":320},
+	"frame": {"x":1360,"y":165,"w":568,"h":320},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":568,"h":320},
@@ -698,8 +707,8 @@
 	"version": "1.0",
 	"image": "assets.png",
 	"format": "RGBA8888",
-	"size": {"w":1897,"h":464},
+	"size": {"w":1986,"h":487},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:816b7aa747c3eb16747fc63aab98dbed:348b16bc4889c00bd3e055b78d668388:a759b6bbc8381ac9c472b28f589ad0d6$"
+	"smartupdate": "$TexturePacker:SmartUpdate:bcd5177b8cd77788e2e93cd87f44c398:6263c273600412a722c3c558f0726601:a759b6bbc8381ac9c472b28f589ad0d6$"
 }
 }
