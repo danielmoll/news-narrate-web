@@ -39,7 +39,7 @@
 
 @media (min-width: $m) {
 	.scene__title {
-		font-size: 2.8rem;
+		font-size: 2rem;
 	}
 
 	.scene__text {
@@ -53,12 +53,23 @@
 		padding-bottom: 0;
 	}
 
+	.scene--intro {
+		padding-bottom: $itemSpacingVertical * 4;
+		padding-top: $itemSpacingVertical * 4;
+
+		.content {
+			max-width: 900px;
+		}
+	}
+
 	.image-transition-container {
 		width: 400px;
 	}
 
 	.scene__text-wrapper {
 		max-width: 600px;
+		padding-bottom: $itemSpacingVertical * 2;
+		padding-top: $itemSpacingVertical * 2;
 
 		.scene--intro & {
 			max-width: 100%;
