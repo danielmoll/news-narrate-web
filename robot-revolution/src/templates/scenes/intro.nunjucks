@@ -1,6 +1,6 @@
 {% extends '../layouts/scene.nunjucks' %}
 
-{% set classname = 'scene--odd' %}
+{% set classname = 'scene--intro' %}
 
 {% block content %}
 <p class="scene__text">

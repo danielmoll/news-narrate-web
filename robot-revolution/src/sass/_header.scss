@@ -33,7 +33,7 @@
 }
 
 .header__item:first-child {
-	margin-right: 20px;	
+	margin-right: 20px;
 }
 
 .header__social-icon {
@@ -57,11 +57,15 @@
 }
 
 @media (min-width: $l) {
+	.header {
+		background: #fff;
+	}
+
 	.header__logo {
 		margin-left: 0;
 	}
 
 	.header__list {
 		margin-right: 0;
-	}	
+	}
 }

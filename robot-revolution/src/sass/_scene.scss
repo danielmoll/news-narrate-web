@@ -1,8 +1,8 @@
 .scene {
 	background: white;
 	overflow: hidden;
-	padding-bottom: $itemSpacingVertical;
-	margin: 0 auto ($itemSpacingVertical * 3) auto;
+	padding-bottom: $itemSpacingVertical * 3;
+	margin: 0 auto;
 	width: 100%;
 	max-width: $maxWidth;
 
@@ -13,8 +13,9 @@
 
 .scene__title {
 	font-family: SkyTextMedium;
-	font-size: 1.2rem;
-	margin: 10px 20px;
+	font-size: 1.5625rem;
+	line-height: 1.1;
+	margin: 0  $itemSpacingHorizontal $itemSpacingVertical;
 	color: $black;
 }
 
@@ -28,6 +29,10 @@
 	margin-bottom: 16px;
 }
 
+.scene--odd {
+	background-color: $white;
+}
+
 .scene--even {
 	background-color: $grey;
 }
@@ -39,5 +44,53 @@
 
 	.scene__text {
 		font-size: 1.3rem;
+	}
+}
+
+@media (min-width: $l) {
+	.scene {
+		max-width: 100%;
+		padding-bottom: 0;
+	}
+
+	.image-transition-container {
+		width: 400px;
+	}
+
+	.scene__text-wrapper {
+		max-width: 600px;
+
+		.scene--intro & {
+			max-width: 100%;
+			text-align: center;
+		}
+	}
+
+	.scene--even {
+		.image-transition-container {
+			float: left;
+		}
+
+		.scene__text-wrapper {
+			margin-left: 410px;
+
+			.scene--intro & {
+				margin-left: 0;
+			}
+		}
+	}
+
+	.scene--odd {
+		.image-transition-container {
+			float: right;
+		}
+
+		.scene__text-wrapper {
+			margin-right: 410px;
+
+			.scene--intro & {
+				margin-right: 0;
+			}
+		}
 	}
 }

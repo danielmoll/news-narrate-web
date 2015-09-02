@@ -2,27 +2,30 @@
 {% import '../macros/image-transition.nunjucks' as imageTransition %}
 
 <div class="scene {{ classname }}">
-	<a id="{{ id }}"></a>
-	
-	{% if sceneImage %}
-		<div class="scene__media">
-			{{
-				image.render({
-				url: sceneImage
-				})
-			}}
-		</div>
-	{% endif %}
+    <div class="content content--scene">
+      <a id="{{ id }}"></a>
+    	{% if sceneImage %}
+    		<div class="scene__media">
+    			{{
+    				image.render({
+    					url: sceneImage
+    				})
+    			}}
+    		</div>
+    	{% endif %}
 
-	{% if topImageUrl and bottomImageUrl %}
-	    {{ imageTransition.render({
-	          topImageUrl: topImageUrl,
-		      bottomImageUrl: bottomImageUrl
-	    }) }}
-	{% endif %}
+      {% if topImageUrl and bottomImageUrl %}
+        {{ imageTransition.render({
+          topImageUrl: topImageUrl,
+          bottomImageUrl: bottomImageUrl
+        }) }}
+      {% endif %}
 
-	{% block title %}{% endblock %}
-
-	{% block content %}{% endblock %}
-
+      <div class="scene__text-wrapper">
+        <div class="scene__text-content">
+      	 {% block title %}{% endblock %}
+         {% block content %}{% endblock %}
+        </div>
+      </div>
+    </div>
 </div>
