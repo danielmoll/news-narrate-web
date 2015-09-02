@@ -4,9 +4,17 @@
 	max-width: $maxWidth;
 }
 
+.content--hero {
+	position: relative;
+}
+
 .hero__heading {
 	font-weight: normal;
 	margin: 25px 20px;
+}
+
+.hero__media {
+	width: 100%;
 }
 
 .hero__media-image {
@@ -25,4 +33,32 @@
 .hero__strap {
 	text-transform: none;
 	font-size: 1.8rem;
+}
+
+@media (min-width: $l) {
+	.hero {
+		background-color: #0096a4;
+		max-width: 100%;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.hero__media-bg {
+		background-color: #f6f6f6;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		top: 0;
+		left: 400px;
+	}
+
+	.hero__media-image img {
+		height: 300px;
+	}
+
+	.hero__heading {
+		position: absolute;
+		right: 30px;
+		top: 100px;
+	}
 }

@@ -44,3 +44,14 @@ body {
 a, a:hover {
     text-decoration: none;
 }
+
+.content {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+@media (min-width: $l) {
+    .content {
+        max-width: 980px;
+    }
+}

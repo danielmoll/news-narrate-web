@@ -1,38 +1,41 @@
 {% import 'macros/navigation.nunjucks' as navigation %}
 
 <div class="hero">
-	<div class="hero__media">
-		{{ image.render({
-			url: 'images/hero.jpg',
-			classes: 'hero__media-image'
+	<div class="hero__media-bg"></div>
+	<div class="content content--hero">
+		<div class="hero__media">
+			{{ image.render({
+				url: 'images/hero.jpg',
+				classes: 'hero__media-image'
+			}) }}
+		</div>
+
+		{{ navigation.render({
+			items: [{
+				text: 'Head',
+				link: '#scene_50s',
+				id: 'head'
+			},
+			{
+				text: 'Arm',
+				link: '#scene_60s',
+				id: 'arm'
+			},
+			{
+				text: 'Leg',
+				link: '#scene_70s',
+				id: 'leg'
+			},
+			{
+				text: 'Skin',
+				link: '#scene_2015',
+				id: 'skin'
+			}]
 		}) }}
-	</div>
 
-	{{ navigation.render({
-		items: [{
-			text: 'Head',
-			link: '#scene_50s',
-			id: 'head'
-		},
-		{
-			text: 'Arm',
-			link: '#scene_60s',
-			id: 'arm'
-		},
-		{
-			text: 'Leg',
-			link: '#scene_70s',
-			id: 'leg'
-		},
-		{
-			text: 'Skin',
-			link: '#scene_2015',
-			id: 'skin'
-		}]
-	}) }}
-
-	<div class="hero__heading">
-		<h1 class="hero__title">Robot Revolution</h1>
-		<div class="hero__strap">Bionic You</div>
+		<div class="hero__heading">
+			<h1 class="hero__title">Robot Revolution</h1>
+			<div class="hero__strap">Bionic You</div>
+		</div>
 	</div>
 </div>
