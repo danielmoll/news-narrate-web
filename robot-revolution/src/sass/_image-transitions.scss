@@ -1,8 +1,10 @@
 .image-transition-container {
-  position: relative;
+    line-height: 0;
+    margin-bottom: $itemSpacingVertical;
+    position: relative;
 }
 
 .image-transition-top {
-  position: absolute;
+    position: absolute;
 }
 

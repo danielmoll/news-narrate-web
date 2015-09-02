@@ -3,6 +3,7 @@
 
 <div class="scene {{ classname }}">
     <div class="content content--scene">
+      <a id="{{ id }}"></a>
     	{% if sceneImage %}
     		<div class="scene__media">
     			{{
