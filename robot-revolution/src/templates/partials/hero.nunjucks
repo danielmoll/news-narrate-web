@@ -15,6 +15,11 @@
 			id: 'head'
 		},
 		{
+			text: 'Skin',
+			link: '#skin',
+			id: 'skin'
+		},
+		{
 			text: 'Arm',
 			link: '#hand',
 			id: 'arm'
@@ -23,11 +28,6 @@
 			text: 'Leg',
 			link: '#joints',
 			id: 'leg'
-		},
-		{
-			text: 'Skin',
-			link: '#skin',
-			id: 'skin'
 		}]
 	}) }}
 
