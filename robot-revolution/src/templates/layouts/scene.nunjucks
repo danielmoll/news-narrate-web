@@ -2,22 +2,24 @@
 {% import '../macros/image-transition.nunjucks' as imageTransition %}
 
 <div class="scene {{ classname }}">
+	<a id="{{ id }}"></a>
+	
 	{% if sceneImage %}
 		<div class="scene__media">
 			{{
 				image.render({
-					url: sceneImage
+				url: sceneImage
 				})
 			}}
 		</div>
 	{% endif %}
 
-  {% if topImageUrl and bottomImageUrl %}
-    {{ imageTransition.render({
-      topImageUrl: topImageUrl,
-      bottomImageUrl: bottomImageUrl
-    }) }}
-  {% endif %}
+	{% if topImageUrl and bottomImageUrl %}
+	    {{ imageTransition.render({
+	          topImageUrl: topImageUrl,
+		      bottomImageUrl: bottomImageUrl
+	    }) }}
+	{% endif %}
 
 	{% block title %}{% endblock %}
 

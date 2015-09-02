@@ -11,22 +11,22 @@
 	{{ navigation.render({
 		items: [{
 			text: 'Head',
-			link: '#scene_50s',
+			link: '#brain',
 			id: 'head'
 		},
 		{
 			text: 'Arm',
-			link: '#scene_60s',
+			link: '#hand',
 			id: 'arm'
 		},
 		{
 			text: 'Leg',
-			link: '#scene_70s',
+			link: '#joints',
 			id: 'leg'
 		},
 		{
 			text: 'Skin',
-			link: '#scene_2015',
+			link: '#skin',
 			id: 'skin'
 		}]
 	}) }}

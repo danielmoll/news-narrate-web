@@ -1,9 +1,8 @@
 {% extends '../layouts/scene.nunjucks' %}
 
 {% set classname = 'scene--odd' %}
+{% set id = 'joints' %}
 
-{% set sceneName = 'scene_60s' %}
-{% set sceneGroup = 'group_60s' %}
 {% set topImageUrl = 'images/foot-human.png' %}
 {% set bottomImageUrl = 'images/foot-robot.png' %}
 
