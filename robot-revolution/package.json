@@ -5,7 +5,7 @@
   "scripts": {
     "clean": "parallelshell 'rm -f npm-debug.log' 'rm -f ./scripts/*' 'rm -f ./css/*' 'rm -f ./index.html'",
     "dist": "npm run browserify && npm run uglifyjs && npm run sass && npm run nunjucks && npm run cleancss",
-    "dev": "npm run clean && parallelshell 'npm run watch'",
+    "dev": "mkdir -p ./scripts && npm run clean && parallelshell 'npm run watch'",
     "nunjucks": "node ./build/render-templates.js",
     "browserify": "browserify ./src/scripts/main.js -d -o ./scripts/bundle.js",
     "sass": "node-sass --output-style expanded --source-map true ./src/sass/ -o ./css/",
