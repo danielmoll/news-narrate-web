@@ -51,6 +51,12 @@ a, a:hover {
     position: relative;
 }
 
+@media (max-width: $l) {
+    .content--scene {
+        padding-bottom: $itemSpacingVertical;
+    }
+}
+
 @media (min-width: $l) {
     .content {
         max-width: 980px;

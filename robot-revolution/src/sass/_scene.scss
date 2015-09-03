@@ -1,7 +1,6 @@
 .scene {
 	background: white;
 	overflow: hidden;
-	padding-bottom: $itemSpacingVertical * 3;
 	margin: 0 auto;
 	width: 100%;
 	max-width: $maxWidth;
@@ -24,17 +23,33 @@
 }
 
 .scene__text {
-	margin-left: 20px;
-	margin-right: 20px;
-	margin-bottom: 16px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 16px;
 }
 
-.scene--odd {
+.scene--odd .scene__content-wrapper {
 	background-color: $white;
 }
 
-.scene--even {
+.scene--even .scene__content-wrapper {
 	background-color: $grey;
+}
+
+@media (max-width: $l) {
+	.scene_anchor {
+		background-color: $grey;
+		display: block;
+		height: 45px;
+
+		.scene--even & {
+			background-color: $white;
+		}
+
+		.scene--intro & {
+			display: none;
+		}
+	}
 }
 
 @media (min-width: $m) {
@@ -51,6 +66,10 @@
 	.scene {
 		max-width: 100%;
 		padding-bottom: 0;
+	}
+
+	.scene_anchor {
+		display: none;
 	}
 	
 	.scene__text {
