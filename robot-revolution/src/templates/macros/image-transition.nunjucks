@@ -1,4 +1,5 @@
 {% macro render(options) %}
+<div class="image-transition-container__wrapper">
   <div class="image-transition-container {{ options.imageContainerClasses }}">
     <div class="image-transition image-transition-top">
       <img src="{{ options.topImageUrl }}" alt="" class="image__item image-top">
@@ -7,4 +8,5 @@
       <img src="{{ options.bottomImageUrl }}" alt="" class="image__item image-bottom">
     </div>
   </div>
+</div>
 {% endmacro %}

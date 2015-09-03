@@ -1,21 +1,33 @@
+.image-transition-container__wrapper {
+    text-align: center;
+}
+
 .image-transition-container {
     line-height: 0;
-    margin-bottom: $itemSpacingVertical;
-    position: relative;
+    margin: 0 auto $itemSpacingVertical;
+    padding-top: $itemSpacingVertical * 2;
+    display: inline-block;
 }
 
 .image-transition {
     max-height: 100%;
     max-width: 100%;
+
+    .image__item {
+        max-height: 300px;
+        max-width: 100%;
+    }
 }
 
 .image-transition-top {
     position: absolute;
 }
 
+.image-transition-container-top {
+    padding-top: 0;
+}
 
 @media (min-width: $l) {
-
     .image-transition-container {
         margin-bottom: 0;
         top: 0;
@@ -36,6 +48,10 @@
 
     .image-transition-top {
         z-index: 1;
+    }
+
+    .image-transition-container-top {
+        padding-top: 0;
     }
 
     .image-transition-container-top .image-transition {
