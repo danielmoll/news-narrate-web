@@ -1,6 +1,6 @@
 .footer {
 	border-top: 1px solid #ccc;
-	margin: 0 auto 20px auto;
+	margin: $itemSpacingVertical auto $itemSpacingVertical auto;
 	padding-top: 10px;
 	width: 100%;
 	max-width: $maxWidth;
@@ -9,15 +9,16 @@
 
 .footer__text {
 	color: #ccc;
+	float: left;
 	margin-left: 10px;
+	padding-top: $itemSpacingHorizontal / 2;
 }
 
 .footer__link {
 	color: $black;
 	text-decoration: none;
-	position: absolute;
-	right: 10px;
-	top: 10px;
+	float: right;
+	margin: 0 $itemSpacingHorizontal / 2 0 0;
 	display: table;
 
 	&:hover {
@@ -28,6 +29,7 @@
 .footer__link-image, .footer__link-text {
 	display: table-cell;
 	vertical-align: middle;
+	line-height: 0;
 }
 
 .footer__link-text {
