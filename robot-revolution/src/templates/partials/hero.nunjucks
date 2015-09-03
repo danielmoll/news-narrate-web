@@ -12,26 +12,27 @@
 
 		{{ navigation.render({
 			items: [{
-				text: 'Head',
-				link: '#brain',
-				id: 'head'
-			},
-			{
-				text: 'Skin',
-				link: '#skin',
-				id: 'skin'
-			},
-			{
-				text: 'Arm',
-				link: '#hand',
-				id: 'arm'
-			},
-			{
-				text: 'Leg',
-				link: '#joints',
-				id: 'leg'
-			}]
-		}) }}
+					text: 'Head',
+					link: '#brain',
+					menuid: 'head'
+				},
+				{
+					text: 'Skin',
+					link: '#skin',
+					menuid: 'skin'
+				},
+				{
+					text: 'Arm',
+					link: '#hand',
+					menuid: 'arm'
+				},
+				{
+					text: 'Leg',
+					link: '#joints',
+					menuid: 'leg'
+				}]
+			})
+		}}
 
 		<div class="hero__heading">
 			<h1 class="hero__title">Robot Revolution</h1>

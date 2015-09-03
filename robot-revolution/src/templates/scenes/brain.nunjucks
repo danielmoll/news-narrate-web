@@ -2,6 +2,7 @@
 
 {% set classname = 'scene--even' %}
 {% set id = 'brain' %}
+{% set menuid = 'head' %}
 
 {% set topImageUrl = 'images/brain-human.png' %}
 {% set bottomImageUrl = 'images/brain-robot.png' %}

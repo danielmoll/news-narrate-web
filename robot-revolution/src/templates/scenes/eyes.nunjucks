@@ -1,6 +1,7 @@
 {% extends '../layouts/scene.nunjucks' %}
 
 {% set classname = 'scene--odd' %}
+{% set menuid = 'head' %}
 
 {% set topImageUrl = 'images/eye-human.png' %}
 {% set bottomImageUrl = 'images/eye-robot.png' %}

@@ -1,6 +1,8 @@
 {% extends '../layouts/scene.nunjucks' %}
 
 {% set classname = 'scene--even' %}
+{% set id = 'joints' %}
+{% set menuid = 'leg' %}
 
 {% set topImageUrl = 'images/joints-human.png' %}
 {% set bottomImageUrl = 'images/joints-robot.png' %}

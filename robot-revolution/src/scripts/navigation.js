@@ -38,6 +38,33 @@ Navigation.prototype = {
         $window.on('scroll resize', this.handleSticky.bind(this));
 
         this.handleSticky();
+        this.handleScenes();
+    },
+
+
+    handleScenes: function() {
+        var scenes = document.querySelectorAll('.scene'),
+            linkItems = document.querySelectorAll('.navigation__link');
+
+        _.forEach(scenes, function(scene) {
+            var scene_anchor = scene.querySelector('.navigation__anchor');
+            
+            if (scene_anchor && scene_anchor.hasAttribute('data-menuid')) {
+                var menuid = scene_anchor.getAttribute('data-menuid'),
+                    menuItem = document.querySelector('.navigation__link--' + menuid);
+
+                console.log('adding _onInView event listener for ', menuid, menuItem);
+                
+                scene._onInView = function() {
+                    console.log('CALLED!!!!');
+                    _.forEach(linkItems, function(item) {
+                        item.classList.remove('navigation__link--active');
+                    });
+
+                    menuItem.classList.add('navigation__link--active');
+                };
+            }
+        });
     }
 };
 
