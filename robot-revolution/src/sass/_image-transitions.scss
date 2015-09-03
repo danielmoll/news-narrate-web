@@ -8,19 +8,32 @@
     position: absolute;
 }
 
+
 @media (min-width: $l) {
 
     .image-transition-container {
         margin-bottom: 0;
+        top: 0;
+        bottom: 0;
         position: absolute;
         width: 400px;
-    }
+    }   
 
-    .image-transition-container-top {
-        top: 0;
-    }
-
-    .image-transition-container-bottom {
+    .image-transition {
+        position: absolute;
         bottom: 0;
+
+        .image__item {
+            max-height: 100%;
+            max-width: 100%;
+        }
+    }
+
+    .image-transition-top {
+        z-index: 1;
+    }
+
+    .image-transition-container-top .image-transition {
+        top: 0;
     }
 }
