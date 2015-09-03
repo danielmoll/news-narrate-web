@@ -52,14 +52,26 @@
 		max-width: 100%;
 		padding-bottom: 0;
 	}
+	
+	.scene__text {
+		font-size: 1.2rem;
+	}
 
 	.scene--intro {
-		padding-bottom: $itemSpacingVertical * 4;
-		padding-top: $itemSpacingVertical * 4;
+		padding-bottom: $itemSpacingVertical * 2;
+		padding-top: $itemSpacingVertical * 2;
 
 		.content {
 			max-width: 900px;
 		}
+	}
+
+	.scene__title {
+		margin-bottom: $itemSpacingVertical / 3;
+	}
+	
+	.scene__title--secondary {
+		margin-bottom: $itemSpacingVertical * 1.5;
 	}
 
 	.image-transition-container {
@@ -68,8 +80,8 @@
 
 	.scene__text-wrapper {
 		max-width: 600px;
-		padding-bottom: $itemSpacingVertical * 2;
-		padding-top: $itemSpacingVertical * 2;
+		padding-bottom: $itemSpacingVertical * 3;
+		padding-top: $itemSpacingVertical * 3;
 
 		.scene--intro & {
 			max-width: 100%;

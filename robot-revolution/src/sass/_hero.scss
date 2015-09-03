@@ -62,4 +62,22 @@
 		right: 30px;
 		top: 100px;
 	}
+
+	.hero__title {
+		font-size: 2.4rem;
+	}
+
+	.hero__strap {
+		font-size: 2.4rem;
+	}
+}
+
+@media (min-width: $xl) {
+	.hero__title {
+		font-size: 2.8rem;
+	}
+
+	.hero__strap {
+		font-size: 2.8rem;
+	}
 }
