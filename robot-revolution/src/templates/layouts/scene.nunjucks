@@ -17,7 +17,8 @@
       {% if topImageUrl and bottomImageUrl %}
         {{ imageTransition.render({
           topImageUrl: topImageUrl,
-          bottomImageUrl: bottomImageUrl
+          bottomImageUrl: bottomImageUrl,
+          imageContainerClasses: imageContainerClasses
         }) }}
       {% endif %}
 

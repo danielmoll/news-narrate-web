@@ -7,3 +7,20 @@
 .image-transition-top {
     position: absolute;
 }
+
+@media (min-width: $l) {
+
+    .image-transition-container {
+        margin-bottom: 0;
+        position: absolute;
+        width: 400px;
+    }
+
+    .image-transition-container-top {
+        top: 0;
+    }
+
+    .image-transition-container-bottom {
+        bottom: 0;
+    }
+}

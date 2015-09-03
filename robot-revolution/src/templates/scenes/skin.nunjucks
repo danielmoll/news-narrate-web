@@ -5,6 +5,7 @@
 
 {% set topImageUrl = 'images/skin-human.png' %}
 {% set bottomImageUrl = 'images/skin-robot.png' %}
+{% set imageContainerClasses = 'image-transition-container-top' %}
 
 {% block title %}
 <div class="scene__title">Skin &dash; iCub</div>

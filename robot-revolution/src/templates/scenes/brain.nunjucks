@@ -5,6 +5,7 @@
 
 {% set topImageUrl = 'images/brain-human.png' %}
 {% set bottomImageUrl = 'images/brain-robot.png' %}
+{% set imageContainerClasses = 'image-transition-container-bottom' %}
 
 {% block title %}
 <div class="scene__title">Brain &dash; Google&rsquo;s Neural Networks</div>

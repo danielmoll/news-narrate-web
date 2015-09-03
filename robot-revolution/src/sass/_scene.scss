@@ -74,10 +74,6 @@
 		margin-bottom: $itemSpacingVertical * 1.5;
 	}
 
-	.image-transition-container {
-		width: 400px;
-	}
-
 	.scene__text-wrapper {
 		max-width: 600px;
 		padding-bottom: $itemSpacingVertical * 3;
@@ -91,7 +87,7 @@
 
 	.scene--even {
 		.image-transition-container {
-			float: left;
+			left: 0;
 		}
 
 		.scene__text-wrapper {
@@ -105,7 +101,7 @@
 
 	.scene--odd {
 		.image-transition-container {
-			float: right;
+			right: 0;
 		}
 
 		.scene__text-wrapper {

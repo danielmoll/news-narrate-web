@@ -4,6 +4,7 @@
 
 {% set topImageUrl = 'images/joints-human.png' %}
 {% set bottomImageUrl = 'images/joints-robot.png' %}
+{% set imageContainerClasses = 'image-transition-container-top' %}
 
 {% block title %}
 <div class="scene__title">Joints &dash; Robonaut 2</div>

@@ -5,6 +5,7 @@
 
 {% set topImageUrl = 'images/foot-human.png' %}
 {% set bottomImageUrl = 'images/foot-robot.png' %}
+{% set imageContainerClasses = 'image-transition-container-top' %}
 
 {% block title %}
 <div class="scene__title">Legs/Feet &dash; WALK&dash;MAN</div>

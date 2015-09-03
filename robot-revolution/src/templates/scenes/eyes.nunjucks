@@ -4,6 +4,7 @@
 
 {% set topImageUrl = 'images/eye-human.png' %}
 {% set bottomImageUrl = 'images/eye-robot.png' %}
+{% set imageContainerClasses = 'image-transition-container-bottom' %}
 
 {% block title %}
 <div class="scene__title">Eyes &dash; WALK&dash;MAN</div>
