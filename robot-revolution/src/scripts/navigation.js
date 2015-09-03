@@ -58,7 +58,9 @@ Navigation.prototype = {
                         item.classList.remove('navigation__link--active');
                     });
 
-                    menuItem.classList.add('navigation__link--active');
+                    if (menuItem) {
+                        menuItem.classList.add('navigation__link--active');        
+                    }
                 };
             }
         });

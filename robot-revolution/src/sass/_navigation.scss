@@ -24,12 +24,12 @@
 }
 
 .navigation__item a {
-	padding: 10px;
+	padding: 10px 10px 6px;
 }
 
 .navigation__link {
 	display: block;
-
+	border-bottom: 4px solid $white;
 	color: $skynewsGrey;
 }
 
@@ -53,7 +53,7 @@
 }
 
 .navigation__link--active {
-	border-bottom: 3px solid $teal;
+	border-bottom: 4px solid $teal;
 }
 
 @media (min-width: $l) {

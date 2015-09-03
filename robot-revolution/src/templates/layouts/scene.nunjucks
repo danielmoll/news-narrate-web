@@ -1,7 +1,7 @@
 {% import '../macros/image.nunjucks' as image %}
 {% import '../macros/image-transition.nunjucks' as imageTransition %}
 
-<div class="scene {{ classname }}{% if noJsInView != true %} js-in-view {% endif %}">
+<div class="scene {{ classname }} js-in-view">
     <a class="scene__anchor"{% if id %} id="{{ id }}"{% endif %} data-menuid="{{ menuid }}">&nbsp;</a>
     
     <div class="scene__content-wrapper">
