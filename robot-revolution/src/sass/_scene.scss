@@ -37,7 +37,7 @@
 }
 
 @media (max-width: $l) {
-	.scene_anchor {
+	.scene__anchor {
 		background-color: $grey;
 		display: block;
 		height: 45px;
@@ -68,7 +68,7 @@
 		padding-bottom: 0;
 	}
 
-	.scene_anchor {
+	.scene__anchor {
 		display: none;
 	}
 	

@@ -2,7 +2,7 @@
 
 {% set classname = 'scene--even' %}
 {% set id = 'skin' %}
-{% set id = 'skin' %}
+{% set menuid = 'skin' %}
 
 {% set topImageUrl = 'images/skin-human.png' %}
 {% set bottomImageUrl = 'images/skin-robot.png' %}

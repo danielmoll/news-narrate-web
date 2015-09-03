@@ -1,6 +1,7 @@
 {% extends '../layouts/scene.nunjucks' %}
 
 {% set classname = 'scene--intro' %}
+{% set noJsInView = true %}
 
 {% block content %}
 <p class="scene__text">

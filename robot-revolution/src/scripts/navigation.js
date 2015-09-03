@@ -47,16 +47,13 @@ Navigation.prototype = {
             linkItems = document.querySelectorAll('.navigation__link');
 
         _.forEach(scenes, function(scene) {
-            var scene_anchor = scene.querySelector('.navigation__anchor');
+            var scene_anchor = scene.querySelector('.scene__anchor');
             
             if (scene_anchor && scene_anchor.hasAttribute('data-menuid')) {
                 var menuid = scene_anchor.getAttribute('data-menuid'),
                     menuItem = document.querySelector('.navigation__link--' + menuid);
-
-                console.log('adding _onInView event listener for ', menuid, menuItem);
                 
-                scene._onInView = function() {
-                    console.log('CALLED!!!!');
+                scene._onInView = function() {                    
                     _.forEach(linkItems, function(item) {
                         item.classList.remove('navigation__link--active');
                     });

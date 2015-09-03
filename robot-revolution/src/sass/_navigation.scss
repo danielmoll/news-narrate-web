@@ -46,6 +46,14 @@
 		max-width: $maxWidth;
 		margin: 0 auto;
 	}
+
+	.navigation__item {
+		border-bottom: none;
+	}
+}
+
+.navigation__link--active {
+	border-bottom: 3px solid $teal;
 }
 
 @media (min-width: $l) {
