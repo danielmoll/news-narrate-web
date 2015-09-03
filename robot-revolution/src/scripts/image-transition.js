@@ -3,15 +3,11 @@
 exports.imageTransitionHandler = function() {
 	var imagesToTransition,
 		pixUntilVisible,
-		scrollTop,
 		opacity,
 		image,
 		bound,
+		lastImageIndex,
 		i;
-
-	scrollTop = (window.pageYOffset !== undefined) ?
-				window.pageYOffset :
-				(document.documentElement || document.body.parentNode || document.body).scrollTop;
 
 	imagesToTransition = document.getElementsByClassName('image-transition-top');
 
@@ -20,8 +16,13 @@ exports.imageTransitionHandler = function() {
 		image = imagesToTransition[i];
 		bound = image.getBoundingClientRect();
 		pixUntilVisible = bound.top / 2;
-		opacity = (pixUntilVisible / 100) / 2;
 
+    lastImageIndex = imagesToTransition.length -1;
+    if (i === lastImageIndex) {
+      pixUntilVisible = bound.top - 400 ;
+    }
+
+		opacity = (pixUntilVisible / 100) / 2;
 		image.style.opacity = opacity;
 	}
 };
