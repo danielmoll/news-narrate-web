@@ -11,7 +11,7 @@
 {% block title %}
 <div class="scene__title">Skin &dash; iCub</div>
 
-<div class="scene__title scene__title--secondary">Cost: &#36;250,000</div>
+<div class="scene__title scene__title--secondary">Cost: &pound;164,000</div>
 {% endblock %}
 
 {% block content %}

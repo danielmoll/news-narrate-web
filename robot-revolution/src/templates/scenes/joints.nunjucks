@@ -11,7 +11,7 @@
 {% block title %}
 <div class="scene__title">Joints &dash; Robonaut 2</div>
 
-<div class="scene__title scene__title--secondary">Cost: &#36;14 million</div>
+<div class="scene__title scene__title--secondary">Cost: &pound;9.1 million</div>
 {% endblock %}
 
 {% block content %}

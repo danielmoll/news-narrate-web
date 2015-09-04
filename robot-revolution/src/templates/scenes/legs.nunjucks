@@ -10,7 +10,7 @@
 {% block title %}
 <div class="scene__title">Legs/Feet &dash; WALK&dash;MAN</div>
 
-<div class="scene__title scene__title--secondary">Cost: &euro;6 million</div>
+<div class="scene__title scene__title--secondary">Cost: &pound;4.3 million</div>
 {% endblock %}
 
 {% block content %}
