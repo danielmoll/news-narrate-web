@@ -5,7 +5,7 @@
 
 {% block content %}
 <p class="scene__text">
-  	Look around – and you&rsquo;ll see we&rsquo;re surrounded by robots. Flying bots, walking bots, swimming bots, bots that swim in your blood, surgical bots - even killer bots. Driverless cars, delivery drones, military drones, prosthetics – they&rsquo;re all already here.
+  	Look around &dash; and you&rsquo;ll see we&rsquo;re surrounded by robots. Flying bots, walking bots, swimming bots, bots that swim in your blood, surgical bots &dash; even killer bots. Driverless cars, delivery drones, military drones and prosthetics &dash; they&rsquo;re all already here.
 </p>
 <p class="scene__text">
 	Robots are actually a lot like us: how they see, walk and navigate the world borrows a lot from biology. Which got us thinking: can robots navigate the world better than you? And how much would it set you back to become truly bionic?

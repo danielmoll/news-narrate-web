@@ -16,6 +16,6 @@
 
 {% block content %}
 <p class="scene__text">
-  Robots don&rsquo;t have to worry about tanning, waxing, or having too much of it on show. In fact, most robots don&rsquo;t bother with skin at all: getting the basics of locomotion is hard enough. The iCub, takes it seriously though. Its chest, arms, hands and legs are covered in pressure sensitive skin that allows the child&dash;sized robot to interact more delicately with objects and humans. It&rsquo;s thought electric &lsquo;nanowires&rsquo; being developed could eventually let robots properly &lsquo;feel&rsquo;.
+  Robots don&rsquo;t have to worry about tanning, waxing, or having too much of it on show. In fact, most robots don&rsquo;t bother with skin at all: getting the basics of locomotion is hard enough. The iCub takes it seriously though. Its chest, arms, hands and legs are covered in pressure sensitive skin that allows the child&dash;sized robot to interact more delicately with objects and humans. It&rsquo;s thought electric &lsquo;nanowires&rsquo; being developed could eventually let robots properly &lsquo;feel&rsquo;.
 </p>
 {% endblock %}

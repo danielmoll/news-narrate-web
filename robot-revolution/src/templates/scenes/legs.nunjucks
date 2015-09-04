@@ -15,6 +15,6 @@
 
 {% block content %}
 <p class="scene__text">
-  Like us, robots don&rsquo;t rely just on legs to get around. The WALK&dash;MAN, has legs which are pliant, rather than rigid, making balance easier, and allows it to walk smoothly(ish). It’s still nowhere near as nimble as us though, and requires a hefty power supply.
+  Like us, robots don&rsquo;t rely just on legs to get around. The WALK&dash;MAN has legs which are pliant rather than rigid, making balance easier, and allows it to walk smoothly(ish). It’s still nowhere near as nimble as us though, and requires a hefty power supply.
 </p>
 {% endblock %}

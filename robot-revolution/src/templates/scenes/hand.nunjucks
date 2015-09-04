@@ -16,7 +16,7 @@
 
 {% block content %}
 <p class="scene__text">
-  Prosthetic limbs are one of the stand&dash;out successes of current robotics. Some of these are eye waveringly expensive &dash; a research project at John Hopkins University has built 10 prosthetic hands, at a cost of &#36;500,000 each.
+  Prosthetic limbs are one of the stand&dash;out successes of current robotics. Some of these are expensive enough to make your eyes water &dash; a research project at John Hopkins University has built 10 prosthetic hands, at a cost of &#36;500,000 each.
 </p>
 <p class="scene__text">
   The most impressive, perhaps, is from Open Bionics. This is a 3D&dash;printed prosthetic hand which works by detecting muscle movements with electrical signals. It can be custom built and fitted in only two days, at a cost of &pound;2000.

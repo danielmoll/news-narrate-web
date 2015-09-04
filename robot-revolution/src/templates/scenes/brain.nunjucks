@@ -11,7 +11,7 @@
 {% block title %}
 <div class="scene__title">Brain &dash; Google&rsquo;s Neural Networks</div>
 
-<div class="scene__title scene__title--secondary">Cost: Millions, but Google&rsquo;s &lsquo;low-cost&rsquo; version is &#36;20,000</div>
+<div class="scene__title scene__title--secondary">Cost: Millions, but Google&rsquo;s &lsquo;low&dash;cost&rsquo; version is &#36;20,000</div>
 {% endblock %}
 
 {% block content %}
