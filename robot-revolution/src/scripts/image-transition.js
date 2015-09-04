@@ -1,40 +1,41 @@
 'use strict';
 
 exports.imageTransitionHandler = function() {
-	var imagesToTransition,
-		pixUntilVisible,
-		opacity,
-		image,
-		bound,
-		lastImageIndex,
-		i;
+    var imagesToTransition,
+        pixUntilVisible,
+        imageBounds,
+        opacity,
+        image,
+        i;
 
-	imagesToTransition = document.getElementsByClassName('image-transition-top');
+    imagesToTransition = document.getElementsByClassName('image-transition-top');
 
-	for (i = 0; i < imagesToTransition.length; i++) {
+    for (i = 0; i < imagesToTransition.length; i++) {
 
-		image = imagesToTransition[i];
-		bound = image.getBoundingClientRect();
-		pixUntilVisible = bound.top / 2;
+        image = imagesToTransition[i];
+        imageBounds = image.getBoundingClientRect();
+        pixUntilVisible = (imageBounds.top / 2) - 50;
 
-    lastImageIndex = imagesToTransition.length -1;
-    if (i === lastImageIndex) {
-      pixUntilVisible = bound.top - 400 ;
+        if (i === imagesToTransition.length - 2) {
+            pixUntilVisible = imageBounds.top - (window.innerHeight - (window.innerHeight > 600 ? 700 : 400));
+        }
+
+        if (i === imagesToTransition.length - 1) {
+            pixUntilVisible = imageBounds.top - (window.innerHeight - 400);
+        }
+
+        opacity = (pixUntilVisible / 100) / 2;
+        image.style.opacity = opacity;
     }
-
-		opacity = (pixUntilVisible / 100) / 2;
-		image.style.opacity = opacity;
-	}
 };
 
 exports.init = function() {
-	if (window.addEventListener) {
-		window.addEventListener('scroll', exports.imageTransitionHandler, false);
+    if (window.addEventListener) {
+        window.addEventListener('scroll', exports.imageTransitionHandler, false);
 
-	} else if (window.attachEvent) {
-		window.attachEvent('onscroll', exports.imageTransitionHandler);
-	}
+    } else if (window.attachEvent) {
+        window.attachEvent('onscroll', exports.imageTransitionHandler);
+    }
 };
 
 module.exports = exports;
-
