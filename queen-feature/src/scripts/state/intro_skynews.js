@@ -63,7 +63,7 @@ Game.State.Intro_Skynews.prototype = {
 			wordWrapWidth: 200
 		});
 
-		this.speechText2 = this.game.add.text(20, 80, "She wants you to try and help find them. Will you help her?", {
+		this.speechText2 = this.game.add.text(20, 80, "She wants you to try and help find them. Can you help her?", {
 			font: "16px silkscreennormal",
 			fill: "#000",
 			backgroundColor: 'white',
