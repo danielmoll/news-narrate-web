@@ -19,8 +19,10 @@ Game.State.Intro_AlexsHouse.prototype.createBackgroundLayers = function() {
 Game.State.Intro_AlexsHouse.prototype.createForegroundLayers = function() {
     this.levelModule.createLayer('foreground');
 
-    var skipBtn = new LabelButton(this.game, 285, 420, null, '[SKIP]', this.skip, this, { font: '25px silkscreennormal', fill: '#f00' });
-    skipBtn.anchor.set(0.5, 0.5);
+    if (Game.Score.getCurrentJewelScore() > 0) {
+        var skipBtn = new LabelButton(this.game, 285, 420, null, '[SKIP]', this.skip, this, { font: '25px silkscreennormal', fill: '#f00' });
+        skipBtn.anchor.set(0.5, 0.5);
+    }
 };
 
 Game.State.Intro_AlexsHouse.prototype.skip = function() {
