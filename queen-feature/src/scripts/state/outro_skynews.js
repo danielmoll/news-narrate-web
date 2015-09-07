@@ -77,6 +77,9 @@ Game.State.Outro_Skynews.prototype = {
         // this.game.fadePlugin.fadeIn(0x000, 750, 0);
         this.game.input.onDown.add(this.nextFrame, this);
 		this.game.input.keyboard.addCallbacks(this, this.nextFrame);
+
+		this.continueText = this.game.add.text(420, 260, 'Continue...', { font: 'silkscreennormal', fontSize: 20, fill: 'white'});
+		this.game.add.tween(this.continueText).to({ alpha: 0}, 500, 'Linear', true, 0, -1, true);
 	},
 
 	shutdown: function() {
