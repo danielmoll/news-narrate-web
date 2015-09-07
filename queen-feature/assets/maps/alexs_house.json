@@ -141,7 +141,7 @@
                  "name":"intro_text",
                  "properties":
                     {
-                     "text":"Use the on-screen controls\\nor your cursor keys to move and jump.",
+                     "text":"Use the on-screen controls\\nor your arrow keys to move and jump.\\nWalk this way to continue >>>",
                      "tiles":"17"
                     },
                  "rotation":0,
