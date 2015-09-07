@@ -51,6 +51,8 @@ Game.State.Navigation.prototype = {
         this.ratingText = this.game.add.text(184, 250, 'Current rating:', { font: '20px silkscreennormal', fill: '#fff' });
         this.ratingLevelText = this.game.add.text(184, 270, Game.Score.getCurrentRating(), { font: '20px silkscreennormal', fill: '#fff' });
 
+        this.instructionText = this.game.add.text(130, 2, 'Choose a decade', { font: '20px silkscreennormal', fill: '#fff' });
+
         Game.Levels.forEach(function(level) {
             var levelScore = Game.Score.levelScores[level.stateKey],
                 collectibleId = 0,
