@@ -108,7 +108,7 @@
                  "properties":
                     {
                      "id":"35",
-                     "text":"World Cup: Playing in front of 93,000 spectators at Wembley (including the Queen), England beat West Germany to win the World Cup in 1966. Football has not made it home since, but still holds a place in British hearts.",
+                     "text":"World Cup: Playing in front of 93,000 spectators at Wembley (including the Queen), England beat West Germany to win the World Cup in 1966.",
                      "tiles":"12",
                      "type":"factoid"
                     },
@@ -128,7 +128,7 @@
                     {
                      "parallax":"true",
                      "size":"16",
-                     "text":"The 'Swinging Sixties' saw a cultural explosion of British music and fashion. Social changes also gathered pace with the passing of the Race Relations Act and the decriminilisation of homosexuality.",
+                     "text":"The 'Swinging Sixties' saw a cultural explosion of British music and fashion. Social changes also gathered pace with the passing of the Race Relations Act and the decriminalisation of homosexuality.",
                      "tiles":"14"
                     },
                  "rotation":0,
