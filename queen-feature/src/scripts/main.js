@@ -219,6 +219,11 @@ Game.init = function() {
 
     // Start our game.
     game.state.start('startup');
+
+    // The credits live on. Sort of.
+    window.credits = function() {
+        game.state.start('outro_credits');
+    };
 };
 
 window.onload = function() {
