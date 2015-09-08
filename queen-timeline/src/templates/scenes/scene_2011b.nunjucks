@@ -1,0 +1,15 @@
+{% extends '../layouts/scene.nunjucks' %}
+
+{% set sceneGroup = 'group_00s' %}
+{% set sceneVideo = 'http://res.cloudinary.com/skynews/video/upload/vc_auto/v1441721320/AUDREYCOOKMARS_m0bwdi.mp4' %}
+{% set sceneVideoPoster = 'http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_800/v1441724960/queen-timeline/16x9/queen_meet_16-9.jpg' %}
+{% set sceneVideoLabel = 'Meeting The Queen' %}
+{% set sceneControls = 'controls' %}
+
+{% block title %}
+<div class="scene__title">&lsquo;Everybody Was Excited&rsquo; Meeting The Queen</div>
+{% endblock %}
+
+{% block content %}
+<p class="scene__text">Audrey Cook has been working at the same factory for as long as Queen Elizabeth has been on the throne. She looks back on her coronation, her charisma, and curtseying for the Queen when she visited her workplace.</p>
+{% endblock %}

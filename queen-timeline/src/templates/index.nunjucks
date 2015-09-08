@@ -98,11 +98,15 @@
 
 			{% include "scenes/scene_2011a.nunjucks" %}
 
+			{% include "scenes/scene_2011b.nunjucks" %}
+
 			{% include "scenes/scene_2012.nunjucks" %}
 
 			{% include "scenes/scene_2012a.nunjucks" %}
 
 			{% include "scenes/scene_2013.nunjucks" %}
+
+			{% include "scenes/scene_2013a.nunjucks" %}
 
 			{% include "scenes/scene_2015.nunjucks" %}
 
