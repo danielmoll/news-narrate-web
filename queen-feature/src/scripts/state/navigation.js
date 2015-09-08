@@ -57,14 +57,28 @@ Game.State.Navigation.prototype = {
             var levelScore = Game.Score.levelScores[level.stateKey],
                 collectibleId = 0,
                 button,
+                buttonText,
                 x,
                 y;
 
             x = this.buttonsOriginX + row * (this.buttonWidth + this.buttonsMargin) + this.buttonWidth / 2;
             y = this.buttonsOriginY + col * (this.buttonHeight + this.buttonsMargin) + this.buttonHeight / 2;
 
-            button = new LabelButton(this.game, x, y, null, level.text, this.nextLevel, this);
+            // button = new LabelButton(this.game, x, y, null, level.text, this.nextLevel, this);
+            button = this.game.add.button(x, y, null, this.nextLevel, this);
+            button.anchor.setTo( 0.5, 0.5 );
+            button.width = this.buttonWidth;
+            button.height = this.buttonHeight;
+
+            buttonText = this.game.add.text(x, y, level.text, { font: '35px silkscreennormal', fill: '#fff'});
+            buttonText.anchor.setTo( 0.5, 0.63 );
+
+
             button.properties = level;
+
+            if (level.stateKey === 'decade_50s' &&  Game.Score.artefactsCollected === 0) {
+                this.game.add.tween(buttonText).to({ alpha: 0.1 }, 200, 'Linear', true, 0, -1, true);
+            }
 
             level.collectibles.forEach(function(collectible) {
                 var collx = x + collectibleId * 39 - this.buttonWidth / 2 + 17,
