@@ -10,5 +10,5 @@
 {% endblock %}
 
 {% block content %}
-<p class="scene__text">Queen Elizabeth II is crowned at a coronation ceremony in Westminster Abbey in front of more than 8,000 guests. The Queen promises &quot;throughout all my life and with all my heart I shall strive to be worthy of your trust&quot;.</p>
+<p class="scene__text">Queen Elizabeth II is crowned at a coronation ceremony in Westminster Abbey in front of more than 8,000 guests. The Queen promises &lsquo;throughout all my life and with all my heart I shall strive to be worthy of your trust&rsquo;.</p>
 {% endblock %}
