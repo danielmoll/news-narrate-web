@@ -13,14 +13,11 @@ Game.State.Decade_90s.prototype.setCollisions = function() {
 Game.State.Decade_90s.prototype.createBackgroundLayers = function() {
     this.levelModule.parallaxBackground = this.game.add.tileSprite(0, 0, this.game.width, this.game.height, "parallax_1990s");
     this.levelModule.parallaxBackground.fixedToCamera = true;
-    this.levelModule.createLayer('white');
     this.levelModule.createLayer('background');
-    this.levelModule.createLayer('background2');
     this.levelModule.layers.push(this.levelModule.parallaxBackground);    
 };
 
 Game.State.Decade_90s.prototype.createForegroundLayers = function() {
-    this.levelModule.createLayer('foreground');
-    this.levelModule.createLayer('foreground2');
-    this.levelModule.createLayer('foreground3');
+    this.levelModule.createLayer('visible_platforms');
+    this.levelModule.createLayer('platform_decoration');
 };
