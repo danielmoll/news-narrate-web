@@ -105,7 +105,7 @@ Game.State.Outro_Skynews.prototype = {
 		if (!this.transitionning) {
 			this.transitionning = true;
 			// this.game.fadePlugin.fadeOut(0x000, 750, 0, function() {
-				this.game.state.start('outro_credits');
+				this.game.state.start('outro_timemachine');
 			// });
 		}
 	}
