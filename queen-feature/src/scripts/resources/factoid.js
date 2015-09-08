@@ -48,11 +48,15 @@ Game.Map.Object.Factoid.prototype.reveal = function() {
     this.emitter.explode(1000, 100);
 };
 
+Game.Map.Object.Factoid.prototype.hide = function() {
+	this.bg.visible = false;
+};
+
 Game.Map.Object.Factoid.prototype._getBackground = function() {
 	var width = this.text.width+ 5 + (FACTOID_TEXT_PADDING * 2),
 		height = this.text.height + (FACTOID_TEXT_PADDING * 2),
 		bmd = this.game.add.bitmapData(width, height);
-	 
+
 	bmd.ctx.beginPath();
 	bmd.ctx.rect(0, 0, width, height);
 	bmd.ctx.fillStyle = 'rgba(255,255,255, 0.7)';

@@ -16,6 +16,7 @@ Game.State.Decade_90s.prototype.createBackgroundLayers = function() {
     this.levelModule.createLayer('white');
     this.levelModule.createLayer('background');
     this.levelModule.createLayer('background2');
+    this.levelModule.layers.push(this.levelModule.parallaxBackground);    
 };
 
 Game.State.Decade_90s.prototype.createForegroundLayers = function() {
@@ -23,4 +24,3 @@ Game.State.Decade_90s.prototype.createForegroundLayers = function() {
     this.levelModule.createLayer('foreground2');
     this.levelModule.createLayer('foreground3');
 };
-

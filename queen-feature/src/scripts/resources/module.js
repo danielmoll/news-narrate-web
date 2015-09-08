@@ -8,12 +8,16 @@ Game.Map.Module = function(game, key) {
     for (var i = 0; i < this.tilemap.tilesets.length; i++) {
         this.tilemap.addTilesetImage(this.tilemap.tilesets[i].name);
     }
+    this.layers = [];
 };
 
 Game.Map.Module.prototype = {
     // Pass through to the Phaser.TileMap createLayer function
     createLayer: function() {
-        return this.tilemap.createLayer.apply(this.tilemap, arguments);
+        var layer = this.tilemap.createLayer.apply(this.tilemap, arguments);
+
+        this.layers.push(layer);
+        return layer;
     },
 
     // Expects strings for the layer names

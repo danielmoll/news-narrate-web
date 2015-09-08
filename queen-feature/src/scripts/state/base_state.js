@@ -217,7 +217,13 @@ Game.State.BaseState.prototype = {
     },
 
     _endLevelHandler: function() {
-        var inTween, outTween, rotateTween, exploder;
+        var inTween, outTween, rotateTween, exploder, progressText,
+            artefactsFound,
+            progress = '';
+
+        if (Game.Score.levelScores[this.levelKey]) {
+            artefactsFound = Game.Score.levelScores[this.levelKey].artefactsCollected;
+        }
 
         this.game.sounds.bgmusic.fadeOut(1000);
 
@@ -245,18 +251,49 @@ Game.State.BaseState.prototype = {
 
         exploder.start(true);
 
+        this.levelModule.layers.forEach(function(layer) {
+            this.game.add.tween(layer).to({ alpha: 0 }, 500, 'Linear', true);
+        }.bind(this));
+
+        // Hide any collectible items nearby
+        this.collectibleItems.forEach(function(item) {
+            item.visible = false;
+            if (item._revealFactId) {
+                this.factReference[item._revealFactId].hide();
+            }
+        }.bind(this));
+
+        if (this.levelKey !== 'alexs_house') {
+            if (artefactsFound === 0) {
+                progress = 'You found no artefacts';
+            } else if (artefactsFound === 3) {
+                progress = 'You found all 3 artefacts';
+            } else {
+                progress = 'You found ' + artefactsFound + ' of the 3 artefacts';
+            }
+        }
+
+        progressText = this.game.add.text(this.game.width / 2, -20, '', { font: 'silkscreennormal', fontSize: 24, fill: 'white'} );
+        progressText.fixedToCamera = true;
+        progressText.anchor.set(0.5, 0.5);
+        progressText.setText(progress);
+        this.game.add.tween(progressText.cameraOffset).to({ y: this.game.height / 2 }, 1000, Phaser.Easing.Bounce.Out, true);
+
         outTween.onComplete.add(function() {
             exploder.explode(2000, 100);
             this.game.sounds.pop.play();
             setTimeout(function() {
-                if(Game.Score.allCollected()) {
-                    this.game.state.start('end_screen');
-                } else if (this.levelKey === 'alexs_house') {
-                    this.game.state.start('navigation');
-                } else {
-                    this.pauseMenu.showMenu('next_level');
-                }
-            }.bind(this), 500);
+                this.game.add.tween(progressText.cameraOffset).to({ y: this.game.height + 60 }, 500, Phaser.Easing.Back.In, true)
+                    .onComplete.add(function() {
+                        if(Game.Score.allCollected()) {
+                            this.game.state.start('end_screen');
+                        } else if (this.levelKey === 'alexs_house') {
+                            this.game.state.start('navigation');
+                        } else {
+                            this.pauseMenu.showMenu('next_level');
+                        }
+                    }.bind(this));
+            }.bind(this), 1000);
         }.bind(this));
 
         inTween.start();

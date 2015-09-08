@@ -16,6 +16,7 @@ Game.State.Decade_80s.prototype.createBackgroundLayers = function() {
     // this.levelModule.createLayer('bg_colour');
     this.levelModule.createLayer('background_shizzle');
     this.levelModule.createLayer('background');
+    this.levelModule.layers.push(this.levelModule.parallaxBackground);
 };
 
 Game.State.Decade_80s.prototype.createForegroundLayers = function() {

@@ -14,6 +14,7 @@ Game.State.Decade_60s.prototype.createBackgroundLayers = function() {
 	this.levelModule.parallaxBackground = this.game.add.tileSprite(0, 0, this.game.width, this.game.height, "parallax_1960s");
     this.levelModule.parallaxBackground.fixedToCamera = true;
     this.levelModule.createLayer('background');
+    this.levelModule.layers.push(this.levelModule.parallaxBackground);
 };
 
 Game.State.Decade_60s.prototype.createForegroundLayers = function() {
