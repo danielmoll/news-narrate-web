@@ -5,6 +5,9 @@
 Game.State.Outro_TimeMachine = function() {};
 Game.State.Outro_TimeMachine.prototype = {
 	create: function () {
+		this.game.world.width = this.game.width;
+		this.game.world.height = this.game.height;
+
 		this.player = this.game.add.sprite(-32, this.game.world.centerY, 'player');
 		this.player.animations.add('right', [6,7,6,5], 6, true);
 		this.player.animations.play('right');
