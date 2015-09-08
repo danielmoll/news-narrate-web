@@ -11,5 +11,5 @@
 {% endblock %}
 
 {% block content %}
-<p class="scene__text">The Queen&rsquo;s &lsquo;Annus Horribillis&rsquo;, as her daughter Princess Anne divorces, and the Prince of Wales and Duke of York seperate from their partners. Windsor castle goes up in flames. &lsquo;1992 is not a year I shall look back with undiluted pleasure&rsquo; she says. </p>
+<p class="scene__text">The Queen&rsquo;s &lsquo;Annus Horribillis&rsquo;, as her daughter Princess Anne divorces, and the Prince of Wales and Duke of York separate from their partners. Windsor castle goes up in flames. &lsquo;1992 is not a year on which I shall look back with undiluted pleasure&rsquo; she says. </p>
 {% endblock %}

@@ -10,5 +10,5 @@
 {% endblock %}
 
 {% block content %}
-<p class="scene__text">The Queen celebrates 60 years on the throne with a Diamond Jubilee River Pageant. 1,000 boats accompany the royal family along the Thames, as the weather does little to dampen the British public&rsquo;s spirits.</p>
+<p class="scene__text">The Queen celebrates 60 years on the throne with a Diamond Jubilee River Pageant. 1,000 boats accompany the royal family along the Thames.</p>
 {% endblock %}

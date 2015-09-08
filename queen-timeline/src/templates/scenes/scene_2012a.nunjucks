@@ -8,5 +8,5 @@
 {% endblock %}
 
 {% block content %}
-<p class="scene__text">At the London 2012 Olympics the Queen jumps out of a helicopter to mark the Opening Ceremony. In fact, it is a stunt double, but embodies the jovial nature with which the games are treated by the nation.</p>
+<p class="scene__text">The Queen makes an appearance in a film with James Bond for the Opening Ceremony of the London Olympics, while her stunt double jumps out of a helicopter into the Olympic stadium. </p>
 {% endblock %}
