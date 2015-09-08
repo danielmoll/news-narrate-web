@@ -1,0 +1,15 @@
+{% extends '../layouts/scene.nunjucks' %}
+
+{% set sceneGroup = 'group_00s' %}
+{% set sceneVideo = 'http://res.cloudinary.com/skynews/video/upload/vc_auto/v1441721320/90SECONDS_lqobzn.mp4' %}
+{% set sceneVideoPoster = 'http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_800/v1441724960/queen-timeline/16x9/queen_photos_16-9.jpg' %}
+{% set sceneVideoLabel = 'Business As Usual After 63 Years' %}
+{% set sceneControls = 'controls' %}
+
+{% block title %}
+<div class="scene__title">&lsquo;Business As Usual&rsquo; After 63 Years</div>
+{% endblock %}
+
+{% block content %}
+<p class="scene__text">Sky&rsquo;s Royal Correspondent Rhiannon Mills looks back on the highs and lows of the Queen&rsquo;s reign.</p>
+{% endblock %}
