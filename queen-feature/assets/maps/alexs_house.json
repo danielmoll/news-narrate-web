@@ -89,7 +89,7 @@
                  "name":"collectibles_text",
                  "properties":
                     {
-                     "text":"Each level has 3 collectible items.\\nCollect all 3 in each level to complete the game!",
+                     "text":"Each level has 3 collectable items.\\nCollect all 3 in each level to complete the game!",
                      "tiles":"16"
                     },
                  "rotation":0,

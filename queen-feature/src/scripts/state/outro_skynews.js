@@ -53,7 +53,7 @@ Game.State.Outro_Skynews.prototype = {
 			boundsAlignV: 'middle'
 		});
 
-		this.speechText1 = this.game.add.text(20, 80, "Breaking news, her majesty the Queen’s lost mementos have been found. The palace has extended its greatest thanks...", {
+		this.speechText1 = this.game.add.text(20, 80, "Breaking news, her majesty the Queen’s lost mementoes have been found. The palace has extended its greatest thanks...", {
 			font: "16px silkscreennormal",
 			fill: "#000",
 			backgroundColor: 'white',

@@ -55,7 +55,7 @@ Game.State.Intro_Skynews.prototype = {
 			boundsAlignV: 'middle'
 		});
 
-		this.speechText1 = this.game.add.text(20, 80, "Breaking news just in to us here at Sky Centre. The Queen has lost a number of precious mementos  from her 63 year reign…", {
+		this.speechText1 = this.game.add.text(20, 80, "Breaking news just in to us here at Sky Centre. The Queen has lost a number of precious mementoes from her 63 year reign…", {
 			font: "16px silkscreennormal",
 			fill: "#000",
 			backgroundColor: 'white',
