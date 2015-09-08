@@ -6,6 +6,19 @@ Game.State.Intro_AlexsHouse.prototype = new Game.State.BaseState();
 Game.State.Intro_AlexsHouse.prototype.levelKey = 'alexs_house';
 Game.State.Intro_AlexsHouse.prototype.nextLevelKey = 'navigation';
 
+Game.State.Intro_AlexsHouse.prototype.create = function() {
+    Game.State.BaseState.prototype.create.call(this, arguments);
+
+    this.controls.addedButtons.forEach(function(button) {
+        button.flashTween = this.game.add.tween(button.buttonSprite).to({alpha: 1}, 250, 'Linear', true, 0, -1, true);
+        button.text = this.game.add.text(0, 0, button.label, { font: '20px silkscreennormal', fill: '#000' });
+        button.text.fixedToCamera = true;
+        button.text.cameraOffset.x = button.buttonSprite.cameraOffset.x + 18;
+        button.text.cameraOffset.y = button.buttonSprite.cameraOffset.y + 80;
+        this.controlHintsVisible = true;
+    }.bind(this));
+};
+
 Game.State.Intro_AlexsHouse.prototype.setCollisions = function() {
     this.levelModule.tilemap.setCollision(22);
 };
@@ -27,4 +40,16 @@ Game.State.Intro_AlexsHouse.prototype.createForegroundLayers = function() {
 
 Game.State.Intro_AlexsHouse.prototype.skip = function() {
     this.game.state.start('navigation');
+};
+
+Game.State.Intro_AlexsHouse.prototype.updateState = function() {
+    if (this.game.camera.x > 0 && this.controlHintsVisible) {
+        this.controlHintsVisible = false;
+
+        this.controls.addedButtons.forEach(function(button) {
+            button.flashTween.stop();
+            button.buttonSprite.alpha = 0.6;
+            this.game.add.tween(button.text).to({ alpha: 0}, 500, 'Linear', true);
+        }.bind(this));
+    }
 };

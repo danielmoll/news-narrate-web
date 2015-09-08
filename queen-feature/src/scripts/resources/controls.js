@@ -18,19 +18,22 @@ Game.Controls = function(game, player) {
             x: 0,
             y: 185,
             frame: 'button_left.png',
-            cb: 'moveLeft'
+            cb: 'moveLeft',
+            label: 'Left'
         },
         {
             x: 94,
             y: 185,
             frame: 'button_right.png',
-            cb: 'moveRight'
+            cb: 'moveRight',
+            label: 'Right'
         },
         {
             x: 480,
             y: 185,
             frame: 'button_jump.png',
-            cb: 'jump'
+            cb: 'jump',
+            label: 'Jump'
         }
     ];
 
@@ -57,7 +60,9 @@ Game.Controls.prototype.create = function() {
             y1: ctrl.y,
             x2: ctrl.x + btn.width,
             y2: ctrl.y + btn.height,
-            cb: this[ctrl.cb].bind(this)
+            cb: this[ctrl.cb].bind(this),
+            buttonSprite: btn,
+            label: ctrl.label
         });
 
     }.bind(this));
@@ -132,7 +137,7 @@ Game.Controls.prototype.update = function () {
         activePointers += this.actionPointerDown(this.game.input.pointer1);
         activePointers += this.actionPointerDown(this.game.input.pointer2);
     }
-    
+
     // Keyboard actions
     if (this.cursors.up.isDown) {
         this.jump();
