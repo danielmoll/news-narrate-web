@@ -1,0 +1,40 @@
+.header-nav--sticky {
+    margin: 0 auto;
+    max-width: 900px;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav.header-nav {
+    background-color: #fff;
+    border-bottom: 1px solid $darkBg;
+    border-top: 1px solid $darkBg;
+    text-align: center;
+    width: 100%;
+}
+
+.header-nav__link {
+    border-left: 1px solid $darkBg;
+    color: $textColour;
+    display: block;
+    float: left;
+    font-size: 14px;
+    padding: 12px 0;
+    text-decoration: none;
+    width: 34%;
+
+    &:first-child {
+        border-left: none;
+        width: 33%;
+    }
+
+    &:last-child {
+        width: 33%;
+    }
+
+    &:hover,
+    &.selected {
+        background-color: $darkBg;
+        color: #fff;
+    }
+}

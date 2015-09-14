@@ -1,0 +1,107 @@
+section.scenes {
+    position: relative;
+    padding-top: 1rem;
+}
+
+.scene {
+    clear: both;
+    padding-bottom: 1rem;
+    position: relative;
+    width: 100%;
+    z-index: 10;
+
+    &:before {
+        border-right: 1px dotted $darkBg;
+        content: " ";
+        display: block;
+        height: 100%;
+        position: absolute;
+        left: 25px;
+        z-index: 0;
+    }
+
+    &:last-child {
+        &:before {
+            border: none;
+        }
+    }
+}
+
+.scene:last-child {
+    margin-bottom: 0;
+}
+
+.scene__time {
+    background-color: $darkBg;
+    color: #fff;
+    display: block;
+    float: left;
+    font-size: 14px;
+    line-height: 3rem;
+    min-height: 3rem;
+    text-align: center;
+    width: 55px;
+    z-index: 10;
+}
+
+.scene__image {
+    margin-bottom: 20px;
+    position: relative;
+    width: 100%;
+}
+
+.scene__content {
+    background-color: #fff;
+    margin-left: 55px;
+    padding-bottom: 25px;
+}
+
+.scene__title {
+    color: $textColour;
+    font-family: SkyTextMedium;
+    font-size: 20px;
+    padding: 10px 25px 11px;
+    position: relative;
+
+    .icon {
+        float: right;
+        margin-top: 8px;
+    }
+}
+
+.scene__title--with_icon {
+    padding: 10px 25px 11px 50px;
+}
+
+.scene__title-type {
+    @include spriteBg;
+
+    display: block;
+    position: absolute;
+    height: 32px;
+    left: 10px;
+    top: 8px;
+    width: 32px;
+}
+
+.scene__title-type--icon1 {
+    background-position: 0 -195px;
+}
+
+.scene__title-type--icon2 {
+    background-position: 0 -235px;
+}
+
+.scene__title-type--icon3 {
+    background-position: 0 -273px;
+}
+
+.scene_text {
+    color: $textgrey;
+    display: block;
+    padding-bottom: 10px;
+
+    p {
+        padding: 0 25px 5px;
+    }
+}

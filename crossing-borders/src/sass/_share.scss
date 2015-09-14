@@ -1,0 +1,22 @@
+.share {}
+
+.share__list {
+    display: inline-block;
+    margin-left: 0;
+
+    .skycon {
+        color: $socialGrey;
+    }
+
+    li {
+        margin: 0 20px 0 0;
+    }
+}
+
+.share__list--right {
+    float: right;
+
+    li {
+        margin: 0 0 0 20px;
+    }
+}

@@ -1,0 +1,122 @@
+@mixin heroBg {
+    .hero__content {
+        background-image: url('../img/heroContentBg.png');
+    }
+}
+
+section.hero {
+    color: #fff;
+    min-height: 370px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.hero__video {
+    background-color: #000;
+    background-image: url('../img/heroBg.jpg');
+    background-size: cover;
+    background-position: top center;
+    height: auto;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.hero__content {
+    bottom: 0;
+    font-size: 14px;
+    left: 0;
+    margin: 0;
+    position: absolute;
+    padding: 60px 25px 25px;
+    right: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.hero__title,
+.hero__text {
+    margin: 0 auto;
+    max-width: 315px;
+}
+
+.hero__title {
+    font-size: 30px;
+    margin-bottom: 22px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.hero__text {
+    line-height: 19px;
+    padding: 0 48px;
+}
+
+.hero__action {
+    background: none;
+    border: none;
+    border-top: 1px dotted #fff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 25px;
+    padding: 7px 8px 0;
+}
+
+@media (max-width: 768px) {
+    section.hero {
+        background-color: #000;
+        background-image: url('../img/heroBg.jpg');
+        background-size: cover;
+        background-position: top center;
+    }
+
+    .hero__video {
+        display: none;
+    }
+
+    @include heroBg;
+}
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+    @include heroBg;
+
+}
+
+/* ----------- iPad 1 and 2 ----------- */
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+    @include heroBg;
+}
+
+/* ----------- iPad 3 and 4 ----------- */
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    @include heroBg;
+}

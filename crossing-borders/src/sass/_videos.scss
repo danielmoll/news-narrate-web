@@ -1,0 +1,93 @@
+@mixin tableCell {
+    display: table-cell;
+    padding-top: 10px;
+    padding-bottom: 7px;
+    vertical-align: middle;
+}
+
+.videos {
+    display: table;
+    text-align: left;
+    width: 100%;
+}
+
+.videos__video {
+    cursor: pointer;
+    display: table-row;
+    margin: 0;
+
+    .videos__thumbnail-wrapper,
+    .videos__text-wrapper,
+    .videos__play-button-wrapper {
+        border-top: 1px solid #d1d1d1;
+    }
+
+    &:first-child {
+        .videos__thumbnail-wrapper,
+        .videos__text-wrapper,
+        .videos__play-button-wrapper {
+            border: none;
+        }
+    }
+}
+
+.video__spacer {
+    width: 55px;
+}
+
+.videos__thumbnail-wrapper {
+    border-top: 1px solid #ddd;
+    @include tableCell;
+    padding-right: 15px;
+    width: 90px;
+}
+
+.videos__thumbnail {
+    border-radius: 38px;
+    width: 75px;
+}
+
+.videos__text-wrapper {
+    @include tableCell;
+    padding-right: 20px;
+}
+
+.videos__title {
+    display: block;
+    font-family: SkyTextMedium;
+}
+
+.videos__play-button-wrapper {
+    border-top: 1px solid #ddd;
+    @include tableCell;
+    padding-right: 15px;
+}
+
+.videos__play-button {
+    // reset browser styles
+    background: none;
+    border: none;
+    // include our own
+    @include spriteBg;
+    background-position: 0 -90px;
+    height: 32px;
+    text-indent: -9999em;
+    width: 32px;
+}
+
+@media (min-width: 769px) {
+    .video__spacer {
+        width: 36px;
+    }
+
+    .videos__thumbnail-wrapper {
+        @include tableCell;
+        padding-right: 15px;
+        width: 115px;
+    }
+
+    .videos__thumbnail {
+        border-radius: 50px;
+        width: 100px;
+    }
+}

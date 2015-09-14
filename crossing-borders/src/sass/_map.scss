@@ -1,0 +1,67 @@
+.map {
+    position: relative;
+}
+
+.map__container {
+    background-color: #262730;
+    background-image: url('../img/mapBg.jpg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 1000px 500px;
+    height: 400px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.map__marker {
+    background-image: url('../img/marker.png');
+    background-size: 40px 40px;
+    background-position: center;
+    cursor: pointer;
+    display: block;
+    height: 40px;
+    position: absolute;
+    width: 40px;
+}
+
+.map__marker--selected {
+    background-image: url('../img/markerRed.png');
+    background-size: 60px 60px;
+    height: 60px;
+    width: 60px;
+}
+
+.map__title-bg {
+    background-image: url('../img/map__title-bg.png');
+    background-position: top left;
+    background-repeat: repeat-x;
+    height: 150px;
+    text-align: center;
+}
+
+.map__title {
+    color: #fff;
+    font-family: SkyTextRegular;
+    font-size: 26px;
+    margin: 0 auto;
+    max-width: 400px;
+    padding-top: 2rem;
+    text-transform: uppercase;
+    width: 80%;
+}
+
+@media (max-width: 769px) {
+    .map__title-bg {
+        background-size: 1px 120px;
+        height: 120px;
+    }
+
+    .map__title {
+        font-size: 18px;
+        max-width: 300px;
+        padding-top: 1.5rem;
+    }
+}

@@ -1,0 +1,28 @@
+.video-player {
+    display: none;
+}
+
+.video-player__overlay {
+    background: rgba(0,0,0,0.65);
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 3000;
+}
+
+.video-player__close {
+    left: 40px;
+    position: absolute;
+    top: 40px;
+    z-index: 3099;
+}
+
+.video-player__player {
+    left: 0;
+    position: fixed;
+    top: 0;
+    z-index: 3100;
+}

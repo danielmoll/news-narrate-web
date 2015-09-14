@@ -12,6 +12,7 @@
     "trailing": true,
     "sub": false,
     "strict": true,
+    "esnext": true,
     "globals": {
         "jQuery": true,
         "kWidget": false,

@@ -1,0 +1,14 @@
+.header {
+    background-color: #fff;
+    padding: 25px;
+}
+
+.header__logo {
+    @include spriteBg;
+
+    background-position: 0 -8px;
+    display: inline-block;
+    height: 25px;
+    width: 107px;
+    text-indent: -9999em;
+}

@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+    <title>Crossing Borders</title>
+
+    <script src="/__/env.js"></script>
+
+    <link href='//web-toolkit.global.sky.com/static/fonts/sky_regular.ttf' rel='prefetch'>
+    <link href='//web-toolkit.global.sky.com/static/fonts/sky_regular.svg' rel='prefetch'>
+    <link href='//web-toolkit.global.sky.com/static/fonts/sky_medium.ttf' rel='prefetch'>
+    <link href='//web-toolkit.global.sky.com/static/fonts/sky_medium.svg' rel='prefetch'>
+
+
+    <link rel="shortcut icon" href="//news.sky.com/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="//news.sky.com/images/f670e1be.sky-news-touch.png"><!-- 60x60 -->
+    <link rel="apple-touch-icon" sizes="76x76" href="//news.sky.com/images/1b5f54e3.sky-news-touch-ipad.png"><!-- 76x76 -->
+    <link rel="apple-touch-icon" sizes="120x120" href="//news.sky.com/images/74ebaccd.sky-news-touch-retina.png"><!-- 120x120 -->
+    <link rel="apple-touch-icon" sizes="152x152" href="//news.sky.com/images/61bf2734.sky-news-touch-retina-ipad.png"><!-- 152x152 -->
+
+
+
+    <link rel="stylesheet" href="http://web-toolkit.global.sky.com/components/skycons/0.3.5/styles/skycons.min.css" />
+    <link rel="stylesheet" href="http://web-toolkit.global.sky.com/components/share/0.3.2/styles/share.min.css" />
+    <script type="text/javascript" src="http://web-toolkit.global.sky.com/components/share/0.3.2/scripts/share.min.js"></script>
+
+    <link rel="stylesheet" media="all" href="build/css/main.css">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+<body>
+    <div id="narrate-app"></div>
+    <script src="build/build.js"></script>
+
+    <script>
+
+        if (window.__env) {
+            window.googleAnalyticsAccount = __env.GOOGLE_ANALYTICS;
+        } else {
+            window.googleAnalyticsAccount = "UA-64699888-3";
+        }
+
+
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', window.googleAnalyticsAccount, 'auto');
+        ga('send', 'pageview');
+
+    </script>
+</body>
+</html>
