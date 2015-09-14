@@ -6,6 +6,7 @@ node_modules
 *.swp
 npm-debug.log
 london7-7/build
+crossing-borders/build
 people-smuggler/scripts/bundle.js
 queen-timeline/scripts/bundle.js
 queen-timeline/css/main.css

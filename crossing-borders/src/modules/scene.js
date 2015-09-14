@@ -50,7 +50,6 @@ class Scene extends React.Component {
 
         return (
             <article className="cf scene scene--timeline">
-                <TimeTab data={sceneData.time} key={ sceneKey + '_time' } />
                 <div className={ contentClassString }  key={ sceneKey + '_content' }>
                     <h2 className={ h2ClassString } onClick={this.handleClick} key={ sceneKey + '_title' }>
                         { typeIcon }
