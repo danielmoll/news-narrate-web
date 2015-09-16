@@ -50,7 +50,7 @@ class Map extends React.Component {
             mapBgWidth = 1000,
             mapBgHeight = 500,
             mobileBreakpoint = 768,
-            mapMaxHeightDesktop = 400,
+            mapMaxHeightDesktop = 500,
             // Arbitrary offset from top/bottom edges...
             verticalEdgeOffset = 80,
             // Offset to increase the height of the map on < 768 width
@@ -162,7 +162,7 @@ class Map extends React.Component {
         }
 
         return (
-            <div className="map">
+            <div className="map content-container">
                 <div className="map__container" ref="container" style={containerStyle}>{ markers }<div className="map__title-bg"><h2 className="map__title">Explore the locations</h2></div></div>
                 { scenesOut }
             </div>

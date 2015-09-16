@@ -22,7 +22,7 @@ class Timeline extends React.Component {
         });
 
         return (
-            <div>
+            <div className="content-container">
                 <Hero></Hero>
                 <section className="scenes">{scenes}</section>
             </div>

@@ -67,6 +67,10 @@ footer {
   footer {
     padding: 15px 0; } }
 
+@media (min-width: 600px) {
+  .content-container {
+    padding-top: 65px; } }
+
 .header {
   background-color: #fff;
   padding: 25px;
@@ -169,17 +173,23 @@ section.hero {
 .hero__title,
 .hero__text {
   margin: 0 auto;
-  max-width: 315px; }
+  max-width: 240px; }
 
 .hero__title {
-  font-size: 30px;
+  font-size: 40px;
   margin-bottom: 22px;
-  text-transform: uppercase;
-  white-space: nowrap; }
+  white-space: nowrap;
+  padding: 0 20px;
+  display: inline; }
 
 .hero__text {
-  line-height: 19px;
-  padding: 0 48px; }
+  display: inline-block;
+  text-align: left;
+  border-left: 3px solid #a61421;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 0 20px;
+  text-shadow: #000 0px 0px 20px; }
 
 .hero__action {
   background: none;
@@ -336,11 +346,11 @@ section.hero {
 
 .map__container {
   background-color: #262730;
-  background-image: url("../img/mapBg.jpg");
+  background-image: url("../img/mapBg.png");
   background-position: center top;
   background-repeat: no-repeat;
   background-size: 1000px 500px;
-  height: 400px;
+  height: 500px;
   margin-bottom: 1rem;
   overflow: hidden;
   position: relative;
@@ -349,19 +359,19 @@ section.hero {
 
 .map__marker {
   background-image: url("../img/marker.png");
-  background-size: 40px 40px;
+  background-size: 30px 30px;
   background-position: center;
   cursor: pointer;
   display: block;
-  height: 40px;
+  height: 30px;
   position: absolute;
-  width: 40px; }
+  width: 30px; }
 
 .map__marker--selected {
   background-image: url("../img/markerRed.png");
-  background-size: 60px 60px;
-  height: 60px;
-  width: 60px; }
+  background-size: 50px 50px;
+  height: 50px;
+  width: 50px; }
 
 .map__title-bg {
   background-image: url("../img/map__title-bg.png");

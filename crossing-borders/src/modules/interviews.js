@@ -51,7 +51,7 @@ class Interviews extends React.Component {
             extend: true
         };
         return (
-            <div>
+            <div className="content-container">
                 <DocumentMeta {...metaData} />
                 <section className="interviews" key="interviews">{interviews}</section>
             </div>

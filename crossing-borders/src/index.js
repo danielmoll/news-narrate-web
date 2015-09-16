@@ -10,6 +10,7 @@ import VideoPlayer from './modules/videoPlayer';
 import Share from './modules/share'
 
 import londonData from './data/london';
+import mapData from './data/map';
 
 var dataSource = 'https://crossing-borders.firebaseio.com/timeline.json';
 
@@ -57,7 +58,7 @@ class Narrate extends React.Component {
                 data.videos = londonData.videos;
             }
             if (!data.locations) {
-                data.locations = londonData.locations;
+                data.locations = mapData.locations;
             }
 
             this.setState({
