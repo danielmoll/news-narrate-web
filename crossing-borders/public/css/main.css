@@ -74,7 +74,10 @@ footer {
 
 @media (min-width: 600px) {
   .header {
-    padding: 25px 25px 0 25px; } }
+    padding: 25px 25px 0 25px;
+    position: fixed;
+    width: 100%;
+    z-index: 100; } }
 
 .header__logo {
   background-image: url("../img/sprite.png");
