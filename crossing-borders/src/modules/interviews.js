@@ -8,7 +8,7 @@ class Interviews extends React.Component {
         super(props);
         this.state = {
             interviews: [],
-            title: "July 7 bombings - Timeline and key interviews"
+            title: "Crossing Borders"
         };
     }
 

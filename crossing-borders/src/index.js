@@ -11,7 +11,7 @@ import Share from './modules/share'
 
 import londonData from './data/london';
 
-var dataSource = 'https://prod-narrate.firebaseio.com/london.json';
+var dataSource = 'https://crossing-borders.firebaseio.com/timeline.json';
 
 class Narrate extends React.Component {
     constructor(props) {
@@ -96,7 +96,7 @@ class Narrate extends React.Component {
             template = this.getTemplate(route),
             Content = template.module,
             id = template.id || 'all',
-            pageTitle = 'July 7 bombings - Timeline and key interviews';
+            pageTitle = 'Crossing Borders';
 
 
         const metaData = {
@@ -115,9 +115,9 @@ class Narrate extends React.Component {
                 <div className="header">
                     <a className="header__logo" href="http://news.sky.com/">go to...</a>
                     <Share data={ {classNames:'share__list--right'} }/>
+                    <Menu data={ route }></Menu>
                 </div>
 
-                <Menu data={ route }></Menu>
 
                 <Content data={ this.state.data } id={ id }></Content>
                 <VideoPlayer></VideoPlayer>
@@ -134,4 +134,3 @@ $(function(){
         <Narrate/>
         , mountNode);
 });
-

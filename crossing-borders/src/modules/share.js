@@ -19,7 +19,7 @@ class Share extends React.Component {
     }
 
     title() {
-       return this.props.data.title || "July 7 bombings - Timeline and key interviews"
+       return this.props.data.title || "Crossing Borders"
     }
 
     titleEncoded() {

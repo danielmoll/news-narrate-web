@@ -1,6 +1,13 @@
 .header {
     background-color: #fff;
     padding: 25px;
+    overflow: hidden;
+}
+
+@media (min-width: 600px) {
+    .header {
+        padding: 25px 25px 0 25px;
+    }
 }
 
 .header__logo {
