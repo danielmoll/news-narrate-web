@@ -4,6 +4,12 @@
     z-index: 1000;
 }
 
+.header-nav-container {
+    width: calc(100% + 50px);
+    margin-left: -25px;
+    position: relative;
+}
+
 nav.header-nav {
     display: block;
 }
@@ -42,6 +48,8 @@ nav.header-nav {
     .header-nav-container {
         display: inline-block;
         float: right;
+        margin: 0;
+        width: auto;
     }
 
     nav.header-nav {
