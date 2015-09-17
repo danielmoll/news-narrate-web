@@ -37,8 +37,8 @@ class Hero extends React.Component {
         var video = '';
 
         if (this.state.showVideo) {
-            video = (<video autoPlay muted loop poster="/build/img/heroBg.jpg" className="hero__video">
-                        <source src="http://res.cloudinary.com/skynews/video/upload/vc_auto/v1435760116/landingpage-bg_e0klcl.mp4" type="video/mp4"></source>
+            video = (<video autoPlay muted loop poster="http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_980/v1442501416/migration-crisis/GettyImages-456380920.jpg" className="hero__video">
+                        <source src="http://res.cloudinary.com/skynews/video/upload/c_scale,vc_auto,w_980/v1442500439/migration-crisis/MIGRANT_PHOTO_SEQ_V3_CLIPCHAMP_keep.mp4" type="video/mp4"></source>
                     </video>);
         }
 
