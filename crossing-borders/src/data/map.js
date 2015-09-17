@@ -36,7 +36,7 @@ var map = {
                 "y": 252
             },
             "locationName": "Hungary",
-            "scenes": ["-JzFe3fhN14FLue8In6N", "-JzFeTa2gqqtbMMpmPDJ", "-JzFeU78x507zTs99Pbt", "-JzFeULxHd9HcLXWvcFT", "-JzFezhbDBGES1bjok34"]
+            "scenes": ["-JzFe3fhN14FLue8In6N", "-JzFeTa2gqqtbMMpmPDJ", "-JzFeU78x507zTs99Pbt", "-JzFeULxHd9HcLXWvcFT", "-JzFezhbDBGES1bjok34", "-JzQm4BMIxAp6oeVd3i-", "-JzQn-VPRGl6I5D-ObEB", "-JzQn5K_u0MYlhOUepbJ", "-JzQn9coVA6xYrrZfQUV", "-JzQnPHOoSy9Xfc52mR5"]
         },
         "macedonia": {
             "coordinates": {
@@ -44,7 +44,7 @@ var map = {
                 "y": 360
             },
             "locationName": "Macedonia",
-            "scenes": [""]
+            "scenes": ["-JzQmotpVHz3KvC69lec"]
         },
         "greece": {
             "coordinates": {
@@ -52,7 +52,7 @@ var map = {
                 "y": 400
             },
             "locationName": "Greece",
-            "scenes": [""]
+            "scenes": ["-JzQm3lvm8U4lbfgs3we"]
         },
         "turkey": {
             "coordinates": {
