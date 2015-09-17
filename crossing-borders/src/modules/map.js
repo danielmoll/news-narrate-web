@@ -60,7 +60,7 @@ class Map extends React.Component {
             // Arbitrary offset from left/right edges...
             horizontalEdgeOffset = 150,
             markerUnselectedHalfSize = 20,
-            markerSelectedHalfSize = 30,
+            markerSelectedHalfSize = 20,
             markerHalfSizeDifference = markerSelectedHalfSize - markerUnselectedHalfSize,
             markersMinX = 0,
             markersMaxX = 0,
