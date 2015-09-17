@@ -9,7 +9,7 @@ var map = {
                 "y": 191
             },
             "locationName": "Calais",
-            "scenes": ["-Jsk3ajX7ZbwvDro9iah"]
+            "scenes": ["-JzFe3N0dI1rOIGBaitH"]
         },
         "munich": {
             "coordinates": {
@@ -18,7 +18,8 @@ var map = {
             },
             "locationName": "Munich",
             "scenes": [
-                "-Jsk3cO6B653vRvbiayF"
+                "-JzFe3wPoDgUd3ALODEZ",
+								"-JzFenByMdn5P1mhU9w9"
             ]
         },
         "austria": {
@@ -27,7 +28,7 @@ var map = {
                 "y": 254
             },
             "locationName": "Austria",
-            "scenes": ["-Jsk3b-7kQcTtIAVlX0O"]
+            "scenes": ["-JzFeTsuerO6agnrsgWk"]
         },
         "hungary": {
             "coordinates": {
@@ -35,7 +36,7 @@ var map = {
                 "y": 252
             },
             "locationName": "Hungary",
-            "scenes": ["-Jsk6aeJkAHyQMXBoycA"]
+            "scenes": ["-JzFe3fhN14FLue8In6N", "-JzFeTa2gqqtbMMpmPDJ", "-JzFeU78x507zTs99Pbt", "-JzFeULxHd9HcLXWvcFT", "-JzFezhbDBGES1bjok34"]
         },
         "macedonia": {
             "coordinates": {
@@ -43,7 +44,7 @@ var map = {
                 "y": 360
             },
             "locationName": "Macedonia",
-            "scenes": ["-Jsk6aeJkAHyQMXBoycA"]
+            "scenes": [""]
         },
         "greece": {
             "coordinates": {
@@ -51,7 +52,7 @@ var map = {
                 "y": 400
             },
             "locationName": "Greece",
-            "scenes": ["-Jsk6aeJkAHyQMXBoycA"]
+            "scenes": [""]
         },
         "turkey": {
             "coordinates": {
@@ -59,7 +60,7 @@ var map = {
                 "y": 400
             },
             "locationName": "Turkey",
-            "scenes": ["-Jsk6aeJkAHyQMXBoycA"]
+            "scenes": ["-JzFeqDc16sOhj1kFZ5d"]
         },
         "syria": {
             "coordinates": {
@@ -67,7 +68,7 @@ var map = {
                 "y": 459
             },
             "locationName": "Syria",
-            "scenes": ["-Jsk6aeJkAHyQMXBoycA"]
+            "scenes": ["-JzFdDIqgAoO_CUtMbm1", "-JzFdSnfNTWSwPX-JUba"]
         },
         "med": {
             "coordinates": {
@@ -75,7 +76,7 @@ var map = {
                 "y": 450
             },
             "locationName": "Med",
-            "scenes": ["-Jsk6aeJkAHyQMXBoycA"]
+            "scenes": ["-JzFe2ytj6-s28BnLern", "-JzFeUcuFqlo4YqfLqC-"]
         }
 
     },
