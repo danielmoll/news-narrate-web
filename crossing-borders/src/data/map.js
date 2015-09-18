@@ -48,7 +48,7 @@ var map = {
         },
         "greece": {
             "coordinates": {
-                "x": 99,
+                "x": 160,
                 "y": 400
             },
             "locationName": "Greece",
@@ -70,13 +70,21 @@ var map = {
             "locationName": "Syria",
             "scenes": ["-JzFdDIqgAoO_CUtMbm1", "-JzFdSnfNTWSwPX-JUba"]
         },
+        "spain": {
+            "coordinates": {
+                "x": -230,
+                "y": 430
+            },
+            "locationName": "Spain",
+            "scenes": ["-JzFeUcuFqlo4YqfLqC-"]
+        },
         "med": {
             "coordinates": {
                 "x": 60,
                 "y": 450
             },
             "locationName": "Med",
-            "scenes": ["-JzFe2ytj6-s28BnLern", "-JzFeUcuFqlo4YqfLqC-"]
+            "scenes": ["-JzFe2ytj6-s28BnLern"]
         }
 
     },
