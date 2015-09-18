@@ -8,7 +8,7 @@ class Interviews extends React.Component {
         super(props);
         this.state = {
             interviews: [],
-            title: "Crossing Borders"
+            title: "Migration Crisis"
         };
     }
 
@@ -22,7 +22,7 @@ class Interviews extends React.Component {
             ogImage;
 
         if (id !== 'all' && propInterviews[id]) {
-            newDocTitle = 'Migration Crisis - Sky News speaks to ' + propInterviews[id].name;
+            newDocTitle = 'Migration Crisis - In-Depth: Journey to Europe';
             ogImage = propInterviews[id].thumbnail;
             interviews.push(<Interview data={ {interview: propInterviews[id], globalData: this.props.data, expanded: true} } key={ 'interview_' + id} />)
 

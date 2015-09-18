@@ -104,7 +104,7 @@ class Narrate extends React.Component {
 
         const metaData = {
             title: pageTitle,
-            canonical: 'http://narrate.news.sky.com/london7-7',
+            canonical: 'http://narrate.news.sky.com/migration-crisis',
             meta: {
                 charset: 'utf-8',
                 'og:image': '',
