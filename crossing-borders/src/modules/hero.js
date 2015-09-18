@@ -45,8 +45,8 @@ class Hero extends React.Component {
         return (<section className="hero">
                 { video }
                 <div className="hero__content">
-                    <h1 className="hero__title">EU Migrant Crisis</h1>
-                    <p className="hero__text">In-Depth: Refugee Crisis Explained</p>
+                    <h1 className="hero__title">Migration Crisis</h1>
+                    <p className="hero__text">In-Depth: Journey to Europe</p>
                 </div>
             </section>)
     }
