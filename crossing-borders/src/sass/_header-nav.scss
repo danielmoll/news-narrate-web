@@ -9,6 +9,25 @@
     width: calc(100% + 50px);
     margin-left: -25px;
     position: relative;
+
+    // margin-top: -64px;
+
+
+
+    &.header-nav--sticky {
+        margin-top: 0;
+    }
+
+    @media (max-width: 600px) {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 64px;
+
+        padding: 0;
+        margin: 0;
+    }
 }
 
 nav.header-nav {
