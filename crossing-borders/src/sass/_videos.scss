@@ -33,6 +33,10 @@
 
 .video__spacer {
     width: 55px;
+
+    .scene__videos & {
+        width: 25px;
+    }
 }
 
 .videos__thumbnail-wrapper {
