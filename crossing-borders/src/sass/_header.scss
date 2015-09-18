@@ -1,15 +1,26 @@
 .header {
     background-color: #fff;
-    padding: 25px;
     overflow: hidden;
 }
 
 @media (min-width: 600px) {
     .header {
-        padding: 25px 25px 0 25px;
         position: fixed;
         width: 100%;
         z-index: 100;
+    }
+}
+
+
+.header__content {
+    padding: 25px;
+}
+
+@media (min-width: 600px) {
+    .header__content {
+        padding: 25px 25px 0 25px;
+        max-width: 1050px;
+        margin: 0 auto;
     }
 }
 

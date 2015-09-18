@@ -116,9 +116,11 @@ class Narrate extends React.Component {
             <div>
                 <DocumentMeta {...metaData} />
                 <div className="header">
-                    <a className="header__logo" href="http://news.sky.com/">go to...</a>
-                    <Share data={ {classNames:'share__list--right'} }/>
-                    <Menu data={ route }></Menu>
+                    <div className="header__content">
+                        <a className="header__logo" href="http://news.sky.com/">go to...</a>
+                        <Share data={ {classNames:'share__list--right'} }/>
+                        <Menu data={ route }></Menu>
+                    </div>
                 </div>
 
 
