@@ -99,7 +99,7 @@ class Narrate extends React.Component {
             template = this.getTemplate(route),
             Content = template.module,
             id = template.id || 'all',
-            pageTitle = 'Crossing Borders';
+            pageTitle = 'Migration Crisis';
 
 
         const metaData = {
