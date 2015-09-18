@@ -105,7 +105,7 @@ var videos = {
     },
     "alex-crawford-people-smuggler": {
         "name": "People Smuggler",
-        "thumbnail": "http://res.cloudinary.com/skynews/image/upload/v1442580148/migration-crisis/thumbnails/sky-alex-crawford.jpg",
+        "thumbnail": "http://res.cloudinary.com/skynews/image/upload/v1442580141/migration-crisis/thumbnails/people-smuggler.jpg",
         "title": "\"I give refugees a new life\"",
         "url": "http://video.news.sky.com/video/h264/vod/374/2015/09/DIGI112851FR110915CRAWFORDMIGRANTSP150911113210491441967557912374.mp4"
     },

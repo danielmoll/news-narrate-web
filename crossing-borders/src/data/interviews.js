@@ -38,7 +38,7 @@ var interviews = {
         }
     },
     "fadi": {
-        "location": "September 2015:",
+        "location": "Damascus, Syria",
         "name": "Fadi",
         "quote": "Looking for anywhere I can find a home",
         "text": "Fadi used to work in Arts in Damascus before civil war forced him to flee. He explains the living conditions he and thousands others endure in their journey for a new life.",
@@ -70,8 +70,8 @@ var interviews = {
     "harriet": {
         "location": "My journey through Europe",
         "name": "Sky's Harriet Hadfield",
-        "quote": "",
-        "text": " ",
+        "quote": "Hungry, hungry",
+        "text": "Sky's Harriet Hadfield travels from Serbia to Germany and speaks to refugees trying to find \"freedom\" and a better life.",
         "thumbnail": "http://res.cloudinary.com/skynews/image/upload/v1442580156/migration-crisis/thumbnails/sky-harriet-hadfield.jpg",
         "videos": {
             "harriet-hadfield": true
@@ -79,7 +79,7 @@ var interviews = {
     },
     "alexrossi": {
         "location": "Syria",
-        "name": "Sky's Alex Rossi",
+        "name": "Sky’s Alex Rossi and migrant mother",
         "quote": "Please take my daughter to safety",
         "text": "Sky’s Alex Rossi speaks to a Syrian English teacher who says she just wants to pass through Hungary to a country for refuge.",
         "thumbnail": "http://res.cloudinary.com/skynews/image/upload/v1442580151/migration-crisis/thumbnails/sky-alex-rossi.jpg",
@@ -89,12 +89,21 @@ var interviews = {
     },
     "alexcrawford": {
         "location": "Journey on a dinghy",
-        "name": "Sky's Alex Crawford",
-        "quote": "I give refugees a new life",
-        "text": " ",
+        "name": "Q&A with Sky’s Alex Crawford",
+        "quote": "Stop! Stop! Turn around now.",
+        "text": "Sky's Alex Crawford joins refugees packed into an inflatable boat as they make the perilous journey across the sea to Greece.",
         "thumbnail": "http://res.cloudinary.com/skynews/image/upload/v1442580148/migration-crisis/thumbnails/sky-alex-crawford.jpg",
         "videos": {
             "alex-crawford": true,
+        }
+    },
+    "alexcrawfordpeoplesmuggler": {
+        "location": "Turkey",
+        "name": "People Smuggler",
+        "quote": "I give refugees a new life",
+        "text": "Sky’s Alex Crawford speaks to a people smuggler in Izmir, who claims he is providing a valuable service to refugees.",
+        "thumbnail": "http://res.cloudinary.com/skynews/image/upload/v1442580141/migration-crisis/thumbnails/people-smuggler.jpg",
+        "videos": {
             "alex-crawford-people-smuggler" : true
         }
     }
