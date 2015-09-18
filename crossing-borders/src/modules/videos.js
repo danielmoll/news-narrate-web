@@ -99,7 +99,7 @@ class Videos extends React.Component {
         }
 
         return (
-            <div className="videos" key="videos">{ videos }</div>
+            <div className="videos scene__videos" key="videos">{ videos }</div>
         )
     }
 }
