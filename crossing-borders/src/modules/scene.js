@@ -52,13 +52,18 @@ class Scene extends React.Component {
             <article className="cf scene scene--timeline">
                 <div className={ contentClassString }  key={ sceneKey + '_content' }>
                     <h2 className={ h2ClassString } onClick={this.handleClick} key={ sceneKey + '_title' }>
+                        <span className="scene__date"><em>Mar</em> 2011</span>
                         { typeIcon }
                         {sceneData.title}
                     </h2>
                     { imageOutput }
                     { text }
                 </div>
-                <Videos data={ {ids: sceneData.videos, videos: this.props.data.globalData.videos } } key={ sceneKey + '_videos' }></Videos>
+
+                {sceneData.videos &&
+                    <Videos data={ {ids: sceneData.videos, videos: this.props.data.globalData.videos } } key={ sceneKey + '_videos' }></Videos>
+                }
+
             </article>
         )
     }

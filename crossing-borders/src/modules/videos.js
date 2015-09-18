@@ -96,6 +96,8 @@ class Videos extends React.Component {
                     videos.push(<div className="videos__video" onClick={this.handleClick.bind(null,video.url)} key={videoKey}>{ sceneVideo }</div>);
                 }
             }
+
+
         }
 
         return (

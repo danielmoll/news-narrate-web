@@ -1,7 +1,20 @@
+.interviews-container {
+	background: #eee;
+	padding: 10px 0;
+
+	@media (min-width: 600px) {
+		padding: 65px 0 50px 1px;
+	}
+
+	@media (min-width: 769px) {
+		padding: 100px 0 50px;
+	}
+}
+
 .interviews {
 	max-width: 1000px;
 	margin: 0 auto;
-	
+
 	.interview:first-child {
 		margin-top: 20px;
 	}
