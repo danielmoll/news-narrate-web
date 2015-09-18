@@ -21,7 +21,7 @@ section.scenes {
     position: relative;
     width: 100%;
     z-index: 10;
-    border-left: 2px solid #000;
+    border-left: 1px solid #000;
 
     &:last-child {
         &:before {
@@ -142,7 +142,7 @@ section.scenes {
 }
 
 .scene .scene__videos {
-    border-top: 2px solid #000;
-    border-bottom: 2px solid #000;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
     margin-bottom: 30px;
 }
