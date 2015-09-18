@@ -164,7 +164,9 @@ class Map extends React.Component {
         return (
             <div className="map content-container">
                 <div className="map__container" ref="container" style={containerStyle}>{ markers }<div className="map__title-bg"><h2 className="map__title">Explore the locations</h2></div></div>
-                { scenesOut }
+                <div className="map__scenes-container">
+                    { scenesOut }
+                </div>
             </div>
         );
     }
