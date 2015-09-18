@@ -66,9 +66,9 @@ gulp.task('copy', function(){
 });
 
 gulp.task('sass', function () {
-    gulp.src('./src/sass/**/*.scss')
-        .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./public/css'));
+    // gulp.src('./src/sass/**/*.scss')
+    //     .pipe(sass().on('error', sass.logError))
+    //     .pipe(gulp.dest('./public/css'));
 
     gulp.src('./src/sass/**/*.scss')
         .pipe(sass().on('error', sass.logError))
