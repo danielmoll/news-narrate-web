@@ -42,7 +42,7 @@ footer {
     font-family: SkyTextMedium;
     display: block;
     margin-top: 15px;
-    padding: 15px;
+    padding: 0;
     text-align: right;
     width: 100%;
 
@@ -55,15 +55,21 @@ footer {
     }
 }
 
-@media (min-width: 769px) {
-    body {
-        font-size: 17px;
+.footer__content {
+    padding: 15px;
+}
+
+
+@media (min-width: 600px) {
+    .footer__content {
+        max-width: 1030px;
+        margin: 0 auto;
     }
 }
 
-@media (min-width: 900px) {
-    footer {
-        padding: 15px 0;
+@media (min-width: 769px) {
+    body {
+        font-size: 17px;
     }
 }
 

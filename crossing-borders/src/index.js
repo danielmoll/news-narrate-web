@@ -126,7 +126,11 @@ class Narrate extends React.Component {
 
                 <Content data={ this.state.data } id={ id }></Content>
                 <VideoPlayer></VideoPlayer>
-                <footer><a href="http://news.sky.com/">skynews.com</a></footer>
+                <footer>
+                    <div className="footer__content">
+                        <a href="http://news.sky.com/">skynews.com</a>
+                    </div>
+                </footer>
             </div>
         );
     }
