@@ -22,7 +22,7 @@ class Interviews extends React.Component {
             ogImage;
 
         if (id !== 'all' && propInterviews[id]) {
-            newDocTitle = 'July 7 bombings - Sky News speaks to ' + propInterviews[id].name;
+            newDocTitle = 'Migration Crisis - Sky News speaks to ' + propInterviews[id].name;
             ogImage = propInterviews[id].thumbnail;
             interviews.push(<Interview data={ {interview: propInterviews[id], globalData: this.props.data, expanded: true} } key={ 'interview_' + id} />)
 
