@@ -1,7 +1,7 @@
 var menuItemData = [
     {
         key: 'timeline',
-        label: 'In-Depth',
+        label: 'Explore',
         href: 'timeline'
     },
     {
