@@ -996,8 +996,9 @@ var Narrate = (function (_React$Component) {
                 canonical: 'http://narrate.news.sky.com/migration-crisis',
                 meta: {
                     charset: 'utf-8',
-                    'og:image': '',
-                    'og:title': pageTitle
+                    'og:title': pageTitle,
+                    'og:description': 'In-Depth: Journey to Europe',
+                    'og:image': 'http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_980/v1442501416/migration-crisis/GettyImages-456380920.jpg'
                 }
             };
 
