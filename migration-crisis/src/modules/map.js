@@ -49,7 +49,7 @@ class Map extends React.Component {
             scale = 1,
             mapBgWidth = 1000,
             mapBgHeight = 500,
-            mobileBreakpoint = 769,
+            mobileBreakpoint = 768,
             mapMaxHeightDesktop = 500,
             // Arbitrary offset from top/bottom edges...
             verticalEdgeOffset = 80,
@@ -117,7 +117,7 @@ class Map extends React.Component {
         }
 
         // Applying the vertical offset if needed.
-        if (window.innerWidth < mobileBreakpoint) {
+        if (window.innerWidth <= mobileBreakpoint) {
             containerStyle['backgroundPosition'] = '50% ' + offset + 'px';
         }
 
