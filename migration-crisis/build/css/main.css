@@ -29,7 +29,7 @@ html,
   box-sizing: border-box; }
 
 html {
-  background-color: #eee;
+  background-color: #fff;
   text-align: center;
   -webkit-text-size-adjust: 100%;
   /* Prevent font scaling in landscape while allowing user zoom */ }
@@ -40,7 +40,8 @@ body {
   font-size: 15px;
   line-height: 1.35714286;
   margin: 0 auto;
-  text-align: left; }
+  text-align: left;
+  overflow-y: scroll; }
 
 footer {
   border-top: 1px solid #ddd;
@@ -291,6 +292,16 @@ section.hero {
 .icon--quote-right {
   margin-left: 10px; }
 
+.interviews-container {
+  background: #eee;
+  padding: 10px 0; }
+  @media (min-width: 600px) {
+    .interviews-container {
+      padding: 65px 0 50px 1px; } }
+  @media (min-width: 769px) {
+    .interviews-container {
+      padding: 100px 0 50px; } }
+
 .interviews {
   max-width: 1000px;
   margin: 0 auto; }
@@ -396,8 +407,17 @@ section.hero {
   width: 100%; }
 
 .map__scenes-container {
-  max-width: 1000px;
+  padding-top: 1rem;
+  padding-left: 35px;
+  padding-right: 0;
+  max-width: 1020px;
   margin: 0 auto; }
+
+@media (min-width: 600px) {
+  .map__scenes-container {
+    padding-top: 3rem;
+    padding-left: 50px;
+    padding-right: 50px; } }
 
 .map__marker {
   background-image: url("../img/marker.png");
@@ -441,15 +461,24 @@ section.hero {
 section.scenes {
   position: relative;
   padding-top: 1rem;
-  max-width: 1000px;
+  padding-left: 35px;
+  padding-right: 0;
+  max-width: 1020px;
   margin: 0 auto; }
+
+@media (min-width: 600px) {
+  section.scenes {
+    padding-top: 3rem;
+    padding-left: 50px;
+    padding-right: 50px; } }
 
 .scene {
   clear: both;
   padding-bottom: 1rem;
   position: relative;
   width: 100%;
-  z-index: 10; }
+  z-index: 10;
+  border-left: 1px solid #000; }
   .scene:last-child:before {
     border: none; }
 
@@ -475,6 +504,28 @@ section.scenes {
   position: relative;
   width: 100%; }
 
+.scene__date {
+  background-color: #000;
+  color: #fff;
+  font-family: SkyTextRegular;
+  text-transform: uppercase;
+  display: block;
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  top: 0;
+  left: -32px;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 1;
+  box-sizing: border-box;
+  padding-top: 12px; }
+  .scene__date em {
+    display: block;
+    font-style: normal;
+    font-family: SkyTextMedium; }
+
 .scene__content {
   background-color: #fff;
   padding-bottom: 25px; }
@@ -482,12 +533,17 @@ section.scenes {
 .scene__title {
   color: #333;
   font-family: SkyTextMedium;
-  font-size: 33px;
-  padding: 10px 25px 11px;
-  position: relative; }
+  font-size: 24px;
+  padding: 10px 25px 40px 50px;
+  position: relative;
+  line-height: 1.2; }
   .scene__title .icon {
     float: right;
     margin-top: 8px; }
+
+@media (min-width: 600px) {
+  .scene__title {
+    font-size: 33px; } }
 
 .scene__title--with_icon {
   padding: 10px 25px 11px 50px; }
@@ -519,9 +575,10 @@ section.scenes {
   .scene_text p {
     padding: 0 25px 5px; }
 
-.scene__videos {
-  border-top: 1px solid #eee;
-  background-color: #fff; }
+.scene .scene__videos {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  margin-bottom: 30px; }
 
 .share__list {
   display: inline-block;
