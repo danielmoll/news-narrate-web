@@ -22,8 +22,17 @@ class Scene extends React.Component {
             imageOutput = '',
             textParagraphs = [''],
             paragraphs = [],
-            text = [];
+            text = [],
+            date = null,
+            dateSplit = null;
 
+        if (sceneData.date) {
+          dateSplit = sceneData.date.split(' ');
+          date = {
+            month: dateSplit[0],
+            year: dateSplit[1]
+          }
+        }
 
         if (sceneData.type) {
             h2ClassString += ' scene__title--with_icon';
@@ -52,7 +61,9 @@ class Scene extends React.Component {
             <article className="cf scene scene--timeline">
                 <div className={ contentClassString }  key={ sceneKey + '_content' }>
                     <h2 className={ h2ClassString } onClick={this.handleClick} key={ sceneKey + '_title' }>
-                        <span className="scene__date"><em>Mar</em> 2011</span>
+                        {sceneData.date &&
+                          <span className="scene__date"><em>{date.month}</em> {date.year}</span>
+                        }
                         { typeIcon }
                         {sceneData.title}
                     </h2>
