@@ -9,12 +9,12 @@ import Timeline from './modules/timeline'
 import VideoPlayer from './modules/videoPlayer';
 import Share from './modules/share'
 
-import londonData from './data/london';
 import videoData from './data/videos';
 import interviewData from './data/interviews';
 import mapData from './data/map';
+import scenesData from './data/scenes'
 
-var dataSource = 'https://crossing-borders.firebaseio.com/timeline.json';
+//var dataSource = 'https://crossing-borders.firebaseio.com/timeline.json';
 
 class Narrate extends React.Component {
     constructor(props) {
@@ -33,40 +33,27 @@ class Narrate extends React.Component {
             window.scrollTo(0,0);
         });
 
-        $.get(dataSource, function(data) {
-            // Those are placeholders in case the live data doesn't
-            //   contain the right bits.
-            // REMOVE FOR PROD!!!!
+        var data = {};
 
-            var sortedScenes = [];
+        var unsortedScenes = scenesData.scenes;
+        var sortedScenes = [];
 
-            _.forEach(data.scenes, function(s, k) {
-                s._id = k;
-            });
+        _.forEach(unsortedScenes, function(s, k) {
+            s._id = k;
+        });
 
-            sortedScenes = _.sortBy(data.scenes, function(s) {
-                return new Date(s.time).getTime();
-            })
+        sortedScenes = _.sortBy(unsortedScenes, function(s) {
+            return new Date(s.time).getTime();
+        })
 
-            data.scenes = sortedScenes;
+        data.scenes = sortedScenes;
+        data.interviews = interviewData;
+        data.videos = videoData;
+        data.locations = mapData.locations;
 
-            if (!data.scenes) {
-                data.scenes = londonData.scenes;
-            }
-            if (!data.interviews) {
-                data.interviews = interviewData;
-            }
-            if (!data.videos) {
-                data.videos = videoData;
-            }
-            if (!data.locations) {
-                data.locations = mapData.locations;
-            }
-
-            this.setState({
-                data: data
-            });
-        }.bind(this));
+        this.setState({
+            data: data
+        });
     }
 
     getTemplate(route) {
