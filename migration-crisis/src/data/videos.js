@@ -27,7 +27,7 @@ var videos = {
     "greece": {
         "name": "People Smuggler",
         "thumbnail": "",
-        "title": "\"It's Miracle When They Get To Europe\"",
+        "title": "\"It's A Miracle When They Get To Europe\"",
         "url": "http://video.news.sky.com/video/h264/vod/374/2015/09/DIGI111505FRBOATSMUGGLINGCRAWFORD12150911112830871441967680271374.mp4"
     },
     "macedonia": {
@@ -56,7 +56,7 @@ var videos = {
     },
     // Interviews
     "andrew-wilson": {
-        "name": "Andrew Wilson",
+        "name": "Sky's Andrew Wilson",
         "thumbnail": "http://res.cloudinary.com/skynews/image/upload/v1442580129/migration-crisis/thumbnails/andrew-wilson.jpg",
         "title": "Destination Europe",
         "url": "http://video.news.sky.com/video/h264/vod/374/2015/08/DIGI071502THMIGRANTSWILSON0700150827071624211440656244621374.mp4"
