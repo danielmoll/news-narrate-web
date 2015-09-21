@@ -90,7 +90,7 @@ var interviews = {
     "alexcrawford": {
         "location": "Dinghy crossing between Turkey and Greece",
         "name": "Q&A with Sky’s Alex Crawford",
-        "quote": "Stop! Stop! Turn around now.",
+        "quote": "Stop! Stop! Turn around now",
         "text": "Sky's Alex Crawford joins refugees packed into an inflatable boat as they make the perilous journey across the sea to Greece.",
         "thumbnail": "http://res.cloudinary.com/skynews/image/upload/v1442580148/migration-crisis/thumbnails/sky-alex-crawford.jpg",
         "videos": {

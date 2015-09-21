@@ -32,8 +32,8 @@ var map = {
         },
         "hungary": {
             "coordinates": {
-                "x": 62,
-                "y": 252
+                "x": 72,
+                "y": 282
             },
             "locationName": "Hungary",
             "scenes": ["-JzFe3fhN14FLue8In6N", "-JzFeTa2gqqtbMMpmPDJ", "-JzFeU78x507zTs99Pbt", "-JzFeULxHd9HcLXWvcFT", "-JzFezhbDBGES1bjok34", "-JzQm4BMIxAp6oeVd3i-", "-JzQn-VPRGl6I5D-ObEB", "-JzQn5K_u0MYlhOUepbJ", "-JzQn9coVA6xYrrZfQUV", "-JzQnPHOoSy9Xfc52mR5"]

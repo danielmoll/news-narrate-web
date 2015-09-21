@@ -1,8 +1,18 @@
 section.scenes {
     position: relative;
     padding-top: 1rem;
-    max-width: 1000px;
+    padding-left: 35px;
+    padding-right: 0;
+    max-width: 1020px;
     margin: 0 auto;
+}
+
+@media (min-width: 600px) {
+    section.scenes {
+        padding-top: 3rem;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
 }
 
 .scene {
@@ -11,6 +21,7 @@ section.scenes {
     position: relative;
     width: 100%;
     z-index: 10;
+    border-left: 1px solid #000;
 
     &:last-child {
         &:before {
@@ -44,6 +55,31 @@ section.scenes {
     width: 100%;
 }
 
+.scene__date {
+    background-color: #000;
+    color: #fff;
+    font-family: SkyTextRegular;
+    text-transform: uppercase;
+    display: block;
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    top: 0;
+    left: -32px;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 1;
+    box-sizing: border-box;
+    padding-top: 12px;
+
+    em {
+        display: block;
+        font-style: normal;
+        font-family: SkyTextMedium;
+    }
+}
+
 .scene__content {
     background-color: #fff;
     padding-bottom: 25px;
@@ -52,13 +88,19 @@ section.scenes {
 .scene__title {
     color: $textColour;
     font-family: SkyTextMedium;
-    font-size: 33px;
-    padding: 10px 25px 11px;
+    font-size: 24px;
+    padding: 10px 25px 40px 50px;
     position: relative;
+    line-height: 1.2;
 
     .icon {
         float: right;
         margin-top: 8px;
+    }
+}
+@media (min-width: 600px) {
+    .scene__title {
+        font-size: 33px;
     }
 }
 
@@ -99,7 +141,8 @@ section.scenes {
     }
 }
 
-.scene__videos {
-    border-top: 1px solid #eee;
-    background-color: #fff;
+.scene .scene__videos {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    margin-bottom: 30px;
 }

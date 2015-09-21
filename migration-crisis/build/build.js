@@ -96,7 +96,7 @@ var interviews = {
     "alexcrawford": {
         "location": "Dinghy crossing between Turkey and Greece",
         "name": "Q&A with Sky’s Alex Crawford",
-        "quote": "Stop! Stop! Turn around now.",
+        "quote": "Stop! Stop! Turn around now",
         "text": "Sky's Alex Crawford joins refugees packed into an inflatable boat as they make the perilous journey across the sea to Greece.",
         "thumbnail": "http://res.cloudinary.com/skynews/image/upload/v1442580148/migration-crisis/thumbnails/sky-alex-crawford.jpg",
         "videos": {
@@ -623,8 +623,8 @@ var map = {
         },
         "hungary": {
             "coordinates": {
-                "x": 62,
-                "y": 252
+                "x": 72,
+                "y": 282
             },
             "locationName": "Hungary",
             "scenes": ["-JzFe3fhN14FLue8In6N", "-JzFeTa2gqqtbMMpmPDJ", "-JzFeU78x507zTs99Pbt", "-JzFeULxHd9HcLXWvcFT", "-JzFezhbDBGES1bjok34", "-JzQm4BMIxAp6oeVd3i-", "-JzQn-VPRGl6I5D-ObEB", "-JzQn5K_u0MYlhOUepbJ", "-JzQn9coVA6xYrrZfQUV", "-JzQnPHOoSy9Xfc52mR5"]
@@ -729,7 +729,7 @@ Object.defineProperty(exports, "__esModule", {
 var videos = {
     "hungary": {
         "name": "Desperate Man's Rail Track Protest",
-        "thumbnail": "",
+        "thumbnail": "https://res.cloudinary.com/skynews/image/upload/v1442832005/desperate-man_x4ip1i.jpg",
         "title": "Protests In Hungary Over Camp Fears",
         "url": "http://video.news.sky.com/video/h264/vod/374/2015/09/DIGI115936TH030915MIGRANTSONTRACKP150903120450081441278340587374.mp4"
     },
@@ -741,37 +741,37 @@ var videos = {
     },
     "greece": {
         "name": "People Smuggler",
-        "thumbnail": "",
-        "title": "\"It's Miracle When They Get To Europe\"",
+        "thumbnail": "https://res.cloudinary.com/skynews/image/upload/v1442832005/_people-smuggler_tu22wk.jpg",
+        "title": "\"It's A Miracle When They Get To Europe\"",
         "url": "http://video.news.sky.com/video/h264/vod/374/2015/09/DIGI111505FRBOATSMUGGLINGCRAWFORD12150911112830871441967680271374.mp4"
     },
     "macedonia": {
         "name": "Record Number Cross Border",
-        "thumbnail": "",
+        "thumbnail": "https://res.cloudinary.com/skynews/image/upload/v1442832005/record-number-cross-borde_u7r0os.jpg",
         "title": "Refugees Stream Across Southern Europe",
         "url": "http://video.news.sky.com/video/h264/vod/700/2015/09/DIGI052603SAMIGRATIONCRISISRAMSAY06150912053527671442032646175700.mp4"
     },
     "hungary-born-on-the-border": {
         "name": "Born On The Border",
-        "thumbnail": "",
+        "thumbnail": "https://res.cloudinary.com/skynews/image/upload/v1442832005/_born-on-the-borde_ne5zmr.jpg",
         "title": "Sky's Alex Rossi Meets Baby Just Days Old ",
         "url": "http://video.news.sky.com/video/h264/vod/374/2015/09/APPLE150915TUROSSIBORDERASLIVE0900150915093448281442306187616374.mp4"
     },
     "hungary-please-take-my-daughter": {
         "name": "Take My Kid",
-        "thumbnail": "",
+        "thumbnail": "https://res.cloudinary.com/skynews/image/upload/v1442832005/_take-my-kid_ap6tmi.jpg",
         "title": "Teacher Wants Her Daughter Taken To Safety",
         "url": "http://video.news.sky.com/video/h264/vod/374/2015/09/DIGI061543WE160915ROSSIMIGRANTMOTHE150916062352301442381182410374.mp4"
     },
     "hungary-tear-gas": {
         "name": "In The Thick Of It",
-        "thumbnail": "",
+        "thumbnail": "https://res.cloudinary.com/skynews/image/upload/v1442832005/in-the-thick-of-it_jk5izi.jpg",
         "title": "Sky's Colin Brazier On Chaos And Clashes",
         "url": "http://video.news.sky.com/video/h264/vod/374/2015/09/DIGI180402WEHUNGARYMIGRANTSGASBRAZI150916181103151442423543920374.mp4"
     },
     // Interviews
     "andrew-wilson": {
-        "name": "Andrew Wilson",
+        "name": "Sky's Andrew Wilson",
         "thumbnail": "http://res.cloudinary.com/skynews/image/upload/v1442580129/migration-crisis/thumbnails/andrew-wilson.jpg",
         "title": "Destination Europe",
         "url": "http://video.news.sky.com/video/h264/vod/374/2015/08/DIGI071502THMIGRANTSWILSON0700150827071624211440656244621374.mp4"
@@ -993,13 +993,7 @@ var Narrate = (function (_React$Component) {
 
             var metaData = {
                 title: pageTitle,
-                canonical: 'http://narrate.news.sky.com/migration-crisis',
-                meta: {
-                    charset: 'utf-8',
-                    'og:title': pageTitle,
-                    'og:description': 'In-Depth: Journey to Europe',
-                    'og:image': 'http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_980/v1442501416/migration-crisis/GettyImages-456380920.jpg'
-                }
+                canonical: 'http://narrate.news.sky.com/migration-crisis'
             };
 
             return _react2['default'].createElement(
@@ -1455,7 +1449,7 @@ var Interviews = (function (_React$Component) {
             };
             return _react2['default'].createElement(
                 'div',
-                { className: 'content-container' },
+                { className: 'interviews-container content-container' },
                 _react2['default'].createElement(_reactDocumentMeta2['default'], metaData),
                 _react2['default'].createElement(
                     'section',
@@ -1864,7 +1858,17 @@ var Scene = (function (_React$Component) {
                 imageOutput = '',
                 textParagraphs = [''],
                 paragraphs = [],
-                text = [];
+                text = [],
+                date = null,
+                dateSplit = null;
+
+            if (sceneData.date) {
+                dateSplit = sceneData.date.split(' ');
+                date = {
+                    month: dateSplit[0],
+                    year: dateSplit[1]
+                };
+            }
 
             if (sceneData.type) {
                 h2ClassString += ' scene__title--with_icon';
@@ -1914,13 +1918,24 @@ var Scene = (function (_React$Component) {
                     _react2['default'].createElement(
                         'h2',
                         { className: h2ClassString, onClick: this.handleClick, key: sceneKey + '_title' },
+                        sceneData.date && _react2['default'].createElement(
+                            'span',
+                            { className: 'scene__date' },
+                            _react2['default'].createElement(
+                                'em',
+                                null,
+                                date.month
+                            ),
+                            ' ',
+                            date.year
+                        ),
                         typeIcon,
                         sceneData.title
                     ),
                     imageOutput,
                     text
                 ),
-                _react2['default'].createElement(_videos2['default'], { data: { ids: sceneData.videos, videos: this.props.data.globalData.videos }, key: sceneKey + '_videos' })
+                sceneData.videos && _react2['default'].createElement(_videos2['default'], { data: { ids: sceneData.videos, videos: this.props.data.globalData.videos }, key: sceneKey + '_videos' })
             );
         }
     }]);
