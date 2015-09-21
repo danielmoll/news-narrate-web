@@ -15,11 +15,11 @@ class Share extends React.Component {
     }
 
     urlEncoded() {
-        return encodeURIComponent(this.fullUrl())
+        return encodeURIComponent("http://narrate.news.sky.com/migration-crisis")
     }
 
     title() {
-       return this.props.data.title || "Crossing Borders"
+       return this.props.data.title || "Migration Crisis"
     }
 
     titleEncoded() {

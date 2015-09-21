@@ -99,16 +99,17 @@ class Narrate extends React.Component {
             template = this.getTemplate(route),
             Content = template.module,
             id = template.id || 'all',
-            pageTitle = 'Crossing Borders';
+            pageTitle = 'Migration Crisis';
 
 
         const metaData = {
             title: pageTitle,
-            canonical: 'http://narrate.news.sky.com/london7-7',
+            canonical: 'http://narrate.news.sky.com/migration-crisis',
             meta: {
                 charset: 'utf-8',
-                'og:image': '',
-                'og:title': pageTitle
+                'og:title': pageTitle,
+                'og:description': 'In-Depth: Journey to Europe',
+                'og:image': 'http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_980/v1442501416/migration-crisis/GettyImages-456380920.jpg'
             }
         };
 
@@ -126,7 +127,11 @@ class Narrate extends React.Component {
 
                 <Content data={ this.state.data } id={ id }></Content>
                 <VideoPlayer></VideoPlayer>
-                <footer><a href="http://news.sky.com/">skynews.com</a></footer>
+                <footer>
+                    <div className="footer__content">
+                        <a href="http://news.sky.com/">skynews.com</a>
+                    </div>
+                </footer>
             </div>
         );
     }

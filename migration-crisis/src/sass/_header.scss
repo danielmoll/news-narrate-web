@@ -13,8 +13,10 @@
 
 
 .header__content {
-    padding: 25px;
+    padding: 25px 25px 0;
+    position: relative;
 }
+
 
 @media (min-width: 600px) {
     .header__content {
@@ -32,4 +34,14 @@
     height: 25px;
     width: 107px;
     text-indent: -9999em;
+
+    margin-bottom: 64px;
 }
+
+
+@media (min-width: 600px) {
+    .header__logo {
+        margin-bottom: 0;
+    }
+}
+
