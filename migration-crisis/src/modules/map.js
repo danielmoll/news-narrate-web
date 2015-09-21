@@ -117,7 +117,7 @@ class Map extends React.Component {
         }
 
         // Applying the vertical offset if needed.
-        if (window.innerWidth < mobileBreakpoint) {
+        if (window.innerWidth <= mobileBreakpoint) {
             containerStyle['backgroundPosition'] = '50% ' + offset + 'px';
         }
 
