@@ -20,7 +20,7 @@ var videos = {
     },
     "through-a-lens": {
         "name": "Picture By Picture",
-        "thumbnail": "",
+        "thumbnail": "https://res.cloudinary.com/skynews/image/upload/v1442834073/picture-by-picture_civgta.jpg",
         "title": "Sky's Harriet Hadfield's Journey",
         "url": "http://video.news.sky.com/video/h264/vod/374/2015/09/DIGI163853WEHADFIELDSTILLSJOURNEYEUROPE1442418318954374.mp4"
     },
