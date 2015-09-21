@@ -178,7 +178,8 @@ section.hero {
   overflow: hidden;
   position: relative;
   text-align: center;
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 1rem; }
 
 .hero__video {
   background-color: #000;
@@ -411,13 +412,14 @@ section.hero {
   padding-left: 35px;
   padding-right: 0;
   max-width: 1020px;
-  margin: 0 auto; }
+  margin: 0 auto 40px; }
 
 @media (min-width: 600px) {
   .map__scenes-container {
     padding-top: 3rem;
     padding-left: 50px;
-    padding-right: 50px; } }
+    padding-right: 50px;
+    margin: 0 auto 60px; } }
 
 .map__marker {
   background-image: url("../img/marker.png");
@@ -464,13 +466,14 @@ section.scenes {
   padding-left: 35px;
   padding-right: 0;
   max-width: 1020px;
-  margin: 0 auto; }
+  margin: 0 auto 40px; }
 
 @media (min-width: 600px) {
   section.scenes {
     padding-top: 3rem;
     padding-left: 50px;
-    padding-right: 50px; } }
+    padding-right: 50px;
+    margin: 0 auto 60px; } }
 
 .scene {
   clear: both;

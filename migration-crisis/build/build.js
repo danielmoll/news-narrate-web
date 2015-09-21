@@ -996,8 +996,9 @@ var Narrate = (function (_React$Component) {
                 canonical: 'http://narrate.news.sky.com/migration-crisis',
                 meta: {
                     charset: 'utf-8',
-                    'og:image': '',
-                    'og:title': pageTitle
+                    'og:title': pageTitle,
+                    'og:description': 'In-Depth: Journey to Europe',
+                    'og:image': 'http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_980/v1442501416/migration-crisis/GettyImages-456380920.jpg'
                 }
             };
 
@@ -1454,7 +1455,7 @@ var Interviews = (function (_React$Component) {
             };
             return _react2['default'].createElement(
                 'div',
-                { className: 'content-container' },
+                { className: 'interviews-container content-container' },
                 _react2['default'].createElement(_reactDocumentMeta2['default'], metaData),
                 _react2['default'].createElement(
                     'section',
@@ -1913,13 +1914,23 @@ var Scene = (function (_React$Component) {
                     _react2['default'].createElement(
                         'h2',
                         { className: h2ClassString, onClick: this.handleClick, key: sceneKey + '_title' },
+                        _react2['default'].createElement(
+                            'span',
+                            { className: 'scene__date' },
+                            _react2['default'].createElement(
+                                'em',
+                                null,
+                                'Mar'
+                            ),
+                            ' 2011'
+                        ),
                         typeIcon,
                         sceneData.title
                     ),
                     imageOutput,
                     text
                 ),
-                _react2['default'].createElement(_videos2['default'], { data: { ids: sceneData.videos, videos: this.props.data.globalData.videos }, key: sceneKey + '_videos' })
+                sceneData.videos && _react2['default'].createElement(_videos2['default'], { data: { ids: sceneData.videos, videos: this.props.data.globalData.videos }, key: sceneKey + '_videos' })
             );
         }
     }]);

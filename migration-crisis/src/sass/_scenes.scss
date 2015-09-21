@@ -4,7 +4,7 @@ section.scenes {
     padding-left: 35px;
     padding-right: 0;
     max-width: 1020px;
-    margin: 0 auto;
+    margin: 0 auto 40px;
 }
 
 @media (min-width: 600px) {
@@ -12,6 +12,7 @@ section.scenes {
         padding-top: 3rem;
         padding-left: 50px;
         padding-right: 50px;
+        margin: 0 auto 60px;
     }
 }
 
