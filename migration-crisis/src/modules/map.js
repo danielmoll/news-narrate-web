@@ -49,7 +49,7 @@ class Map extends React.Component {
             scale = 1,
             mapBgWidth = 1000,
             mapBgHeight = 500,
-            mobileBreakpoint = 768,
+            mobileBreakpoint = 769,
             mapMaxHeightDesktop = 500,
             // Arbitrary offset from top/bottom edges...
             verticalEdgeOffset = 80,
