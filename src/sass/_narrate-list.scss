@@ -9,7 +9,6 @@
 
 .narrate-list__item-link {
     color: $darkBg;
-    // margin-bottom: 2rem;
     display: block;
     text-decoration: none;
     position: relative;
@@ -49,14 +48,6 @@
         float: left;
         width: 50%;
     }
-
-    // .narrate-list__item:nth-child(2n+1) .narrate-list__item-link {
-    //     padding-right: 0.5rem;
-    // }
-
-    // .narrate-list__item:nth-child(2n) .narrate-list__item-link {
-    //     padding-left: 0.5rem;
-    // }
 }
 
 @media (min-width: 1300px) {
