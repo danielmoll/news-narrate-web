@@ -1,7 +1,7 @@
 {% extends '../layouts/scene.nunjucks' %}
 
 {% set sceneGroup = 'group_50s' %}
-{% set sceneVideo = 'http://res.cloudinary.com/skynews/video/upload/vc_auto/v1440489069/queen-timeline/ELIZABETHCORONATION.mp4' %}
+{% set sceneVideo = 'http://interactive.news.sky.com/narrate/queen-timeline/ELIZABETHCORONATION.mp4' %}
 {% set sceneVideoPoster = 'http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_800/v1439929772/queen-timeline/16x9/1953_Coronation_Ceremony.jpg' %}
 {% set sceneVideoLabel = '1953 - Queen Elizabeth II is crowned' %}
 
