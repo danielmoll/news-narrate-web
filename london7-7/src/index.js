@@ -30,40 +30,21 @@ class Narrate extends React.Component {
             window.scrollTo(0,0);
         });
 
-        $.get(dataSource, function(data) {
-            // Those are placeholders in case the live data doesn't
-            //   contain the right bits.
-            // REMOVE FOR PROD!!!!
+        var sortedScenes = [];
 
-            var sortedScenes = [];
+        _.forEach(londonData.scenes, function(s, k) {
+            s._id = k;
+        });
 
-            _.forEach(data.scenes, function(s, k) {
-                s._id = k;
-            });
+        sortedScenes = _.sortBy(londonData.scenes, function(s) {
+            return new Date(s.time).getTime();
+        });
 
-            sortedScenes = _.sortBy(data.scenes, function(s) {
-                return new Date(s.time).getTime();
-            })
+        londonData.scenes = sortedScenes;
 
-            data.scenes = sortedScenes;
-
-            if (!data.scenes) {
-                data.scenes = londonData.scenes;
-            }
-            if (!data.interviews) {
-                data.interviews = londonData.interviews;
-            }
-            if (!data.videos) {
-                data.videos = londonData.videos;
-            }
-            if (!data.locations) {
-                data.locations = londonData.locations;
-            }
-
-            this.setState({
-                data: data
-            });
-        }.bind(this));
+        this.setState({
+            data: londonData
+        });
     }
 
     getTemplate(route) {
