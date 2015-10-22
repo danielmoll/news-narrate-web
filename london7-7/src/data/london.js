@@ -538,6 +538,6 @@ var london = {
             "url": "http://res.cloudinary.com/skynews/video/upload/v1435758291/Tim_Coulson_-_Helping_Survivors_ih87gd.mp4"
         }
     }
-}
+};
 
 export default london;
