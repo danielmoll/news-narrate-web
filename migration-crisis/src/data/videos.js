@@ -6,7 +6,7 @@
     "thumbnail": "http://res.cloudinary.com/skynews/image/upload/v1435847053/Colin-Pettet_iyxfwu.jpg",
     "frame": "http://news.carrentals.co.uk/wp-content/uploads/2012/04/Passengers-Wait-for-Tube-Train.jpg",
     "title": "I Was Expecting To Die",
-    "url": "http://res.cloudinary.com/skynews/video/upload/v1435586047/narrate/london-bombing-7-7/colin.mp4"
+    "url": "http://interactive.news.sky.com/narrate/london-bombing-7-7/colin.mp4"
 }
 
 */

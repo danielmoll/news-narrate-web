@@ -445,97 +445,97 @@ var london = {
             "name": "Colin Pettet",
             "thumbnail": "http://res.cloudinary.com/skynews/image/upload/v1435847053/Colin-Pettet_iyxfwu.jpg",
             "title": "I Was Expecting To Die",
-            "url": "http://res.cloudinary.com/skynews/video/upload/v1435586047/narrate/london-bombing-7-7/colin.mp4"
+            "url": "http://interactive.news.sky.com/narrate/london-bombing-7-7/colin.mp4"
         },
         "colin_2": {
             "name": "Colin Pettet",
             "thumbnail": "http://res.cloudinary.com/skynews/image/upload/v1435847053/Colin-Pettet_iyxfwu.jpg",
             "title": "How I Rescued Thelma",
-            "url": "http://res.cloudinary.com/skynews/video/upload/v1435757816/Colin_Pettet_-_How_I_Rescued_Thelma_l8gnui.mp4"
+            "url": "http://interactive.news.sky.com/narrate/london-bombing-7-7/Colin_Pettet_-_How_I_Rescued_Thelma_l8gnui.mp4"
         },
         "george": {
             "name": "George Psaradakis",
             "thumbnail": "http://res.cloudinary.com/skynews/image/upload/v1435847068/George-Psaradakis_tucu28.jpg",
             "title": "They Killed All My Passengers",
-            "url": "http://res.cloudinary.com/skynews/video/upload/v1435758316/GEORGEPSARADAKIS_zsavxx.mp4"
+            "url": "http://interactive.news.sky.com/narrate/london-bombing-7-7/GEORGEPSARADAKIS_zsavxx.mp4"
         },
         "gill_hicks": {
             "name": "Gill Hicks",
             "thumbnail": "http://res.cloudinary.com/skynews/image/upload/v1435847068/Gill-Hicks_dxxtry.jpg",
-            "title": "This Is Death!!!!!!!!!",
-            "url": "http://res.cloudinary.com/skynews/video/upload/v1435586046/narrate/london-bombing-7-7/gill_hicks.mp4"
+            "title": "This Is Death",
+            "url": "http://interactive.news.sky.com/narrate/london-bombing-7-7/gill_hicks.mp4"
         },
         "gill_hicks2": {
             "name": "Gill Hicks",
             "thumbnail": "http://res.cloudinary.com/skynews/image/upload/v1435847068/Gill-Hicks_dxxtry.jpg",
             "title": "Will They Think I'm Dead?",
-            "url": "http://res.cloudinary.com/skynews/video/upload/v1435758954/Gill_Hicks_-_How_She_Stayed_Alive_vdqrlz.mp4"
+            "url": "http://interactive.news.sky.com/narrate/london-bombing-7-7/Gill_Hicks_-_How_She_Stayed_Alive_vdqrlz.mp4"
         },
         "gill_hicks3": {
             "name": "Gill Hicks",
             "thumbnail": "http://res.cloudinary.com/skynews/image/upload/v1435847068/Gill-Hicks_dxxtry.jpg",
             "title": "I Didn't See A Monster",
-            "url": "http://res.cloudinary.com/skynews/video/upload/v1435757965/Gill_Hicks_-_I_Didn_t_See_A_Monster_w8w2ol.mp4"
+            "url": "http://interactive.news.sky.com/narrate/london-bombing-7-7/Gill_Hicks_-_I_Didn_t_See_A_Monster_w8w2ol.mp4"
         },
         "john": {
             "name": "John Tulloch",
             "thumbnail": "http://res.cloudinary.com/skynews/image/upload/v1435847068/John-Tulloch_gmcerh.jpg",
             "title": "I Was Really Lucky",
-            "url": "http://res.cloudinary.com/skynews/video/upload/v1435586439/narrate/london-bombing-7-7/john.mp4"
+            "url": "http://interactive.news.sky.com/narrate/london-bombing-7-7/john.mp4"
         },
         "peter_holden": {
             "name": "Peter Holden",
             "thumbnail": "http://res.cloudinary.com/skynews/image/upload/v1435850377/peter-holden_e9ofzi.jpg",
             "title": "Helping The Victims",
-            "url": "http://res.cloudinary.com/skynews/video/upload/v1435586439/narrate/london-bombing-7-7/peter_holden.mp4"
+            "url": "http://interactive.news.sky.com/narrate/london-bombing-7-7/peter_holden.mp4"
         },
         "philip": {
             "name": "Philip Duckworth",
             "thumbnail": "http://res.cloudinary.com/skynews/image/upload/v1435847068/Philip-Duckworth_inwhxt.jpg",
             "title": "This One's Gone",
-            "url": "http://res.cloudinary.com/skynews/video/upload/v1435586439/narrate/london-bombing-7-7/philip.mp4"
+            "url": "http://interactive.news.sky.com/narrate/london-bombing-7-7/philip.mp4"
         },
         "philip2": {
             "name": "Philip Duckworth",
             "thumbnail": "http://res.cloudinary.com/skynews/image/upload/v1435847068/Philip-Duckworth_inwhxt.jpg",
             "title": "Hit By Human Shrapnel",
-            "url": "http://res.cloudinary.com/skynews/video/upload/v1435758036/Phil_Duckworth_-_Hit_By_Human_Shrapnel_w0o79d.mp4"
+            "url": "http://interactive.news.sky.com/narrate/london-bombing-7-7/Phil_Duckworth_-_Hit_By_Human_Shrapnel_w0o79d.mp4"
         },
         "richard": {
             "name": "Richard Levy",
             "thumbnail": "http://res.cloudinary.com/skynews/image/upload/v1435850123/richard-levy_kafftu.jpg",
             "title": "I Didn't Think About Myself",
-            "url": "http://res.cloudinary.com/skynews/video/upload/v1435758104/Richard_Levy_-_I_Didn_t_Think_About_Myself_nhbltk.mp4"
+            "url": "http://interactive.news.sky.com/narrate/london-bombing-7-7/Richard_Levy_-_I_Didn_t_Think_About_Myself_nhbltk.mp4"
         },
         "richard2": {
             "name": "Richard Levy",
             "thumbnail": "http://res.cloudinary.com/skynews/image/upload/v1435850123/richard-levy_kafftu.jpg",
             "title": "How He Was Helped",
-            "url": "http://res.cloudinary.com/skynews/video/upload/v1435758066/Richard_Levy_-_How_He_Was_Helped_ekng3d.mp4"
+            "url": "http://interactive.news.sky.com/narrate/london-bombing-7-7/Richard_Levy_-_How_He_Was_Helped_ekng3d.mp4"
         },
         "thelma": {
             "name": "Thelma Stober",
             "thumbnail": "http://res.cloudinary.com/skynews/image/upload/v1435853028/Thelma-Stober_1_rmd5ja.jpg",
             "title": "The Door Was Stuck To My Thigh",
-            "url": "http://res.cloudinary.com/skynews/video/upload/v1435586439/narrate/london-bombing-7-7/thelma.mp4"
+            "url": "http://interactive.news.sky.com/narrate/london-bombing-7-7/thelma.mp4"
         },
         "thelma2": {
             "name": "Thelma Stober",
             "thumbnail": "http://res.cloudinary.com/skynews/image/upload/v1435853028/Thelma-Stober_1_rmd5ja.jpg",
             "title": "He Was My Guardian Angel",
-            "url": "http://res.cloudinary.com/skynews/video/upload/v1435758134/Thelma_Stober_-_He_Was_My_Guardian_Angel_si1uvg.mp4"
+            "url": "http://interactive.news.sky.com/narrate/london-bombing-7-7/Thelma_Stober_-_He_Was_My_Guardian_Angel_si1uvg.mp4"
         },
         "tim_coul": {
             "name": "Tim Coulson",
             "thumbnail": "http://res.cloudinary.com/skynews/image/upload/v1435847068/Tim-Couslon-2_rh1o0b.jpg",
             "title": "You Can't Forget That Noise",
-            "url": "http://res.cloudinary.com/skynews/video/upload/v1435586439/narrate/london-bombing-7-7/tim_coul.mp4"
+            "url": "http://interactive.news.sky.com/narrate/london-bombing-7-7/tim_coul.mp4"
         },
         "tim_coul2": {
             "name": "Tim Coulson",
             "thumbnail": "http://res.cloudinary.com/skynews/image/upload/v1435847068/Tim-Couslon-2_rh1o0b.jpg",
             "title": "Helping Survivors",
-            "url": "http://res.cloudinary.com/skynews/video/upload/v1435758291/Tim_Coulson_-_Helping_Survivors_ih87gd.mp4"
+            "url": "http://interactive.news.sky.com/narrate/london-bombing-7-7/Tim_Coulson_-_Helping_Survivors_ih87gd.mp4"
         }
     }
 };
