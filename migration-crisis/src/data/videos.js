@@ -3,7 +3,7 @@
 
 "colin": {
     "name": "Colin Pettet",
-    "thumbnail": "http://res.cloudinary.com/skynews/image/upload/v1435847053/Colin-Pettet_iyxfwu.jpg",
+    "thumbnail": "http://interactive.news.sky.com/narrate/migration-crisis-images/v1435847053/Colin-Pettet_iyxfwu.jpg",
     "frame": "http://news.carrentals.co.uk/wp-content/uploads/2012/04/Passengers-Wait-for-Tube-Train.jpg",
     "title": "I Was Expecting To Die",
     "url": "http://interactive.news.sky.com/narrate/london-bombing-7-7/colin.mp4"
@@ -57,55 +57,55 @@ var videos = {
     // Interviews
     "andrew-wilson": {
         "name": "Sky's Andrew Wilson",
-        "thumbnail": "http://res.cloudinary.com/skynews/image/upload/v1442580129/migration-crisis/thumbnails/andrew-wilson.jpg",
+        "thumbnail": "http://interactive.news.sky.com/narrate/migration-crisis-images/v1442580129/migration-crisis/thumbnails/andrew-wilson.jpg",
         "title": "Destination Europe",
         "url": "http://video.news.sky.com/video/h264/vod/374/2015/08/DIGI071502THMIGRANTSWILSON0700150827071624211440656244621374.mp4"
     },
     "mustafa": {
         "name": "Mustafa",
-        "thumbnail": "http://res.cloudinary.com/skynews/image/upload/v1442580137/migration-crisis/thumbnails/mustafa.jpg",
+        "thumbnail": "http://interactive.news.sky.com/narrate/migration-crisis-images/v1442580137/migration-crisis/thumbnails/mustafa.jpg",
         "title": "\"My home was destroyed\"",
         "url": "http://video.news.sky.com/video/h264/vod/374/2015/09/DIGI131904WEMIGRATIONSTORIESMUSTAFAIV1442418675546374.mp4"
     },
     "fadi": {
         "name": "Fadi",
-        "thumbnail": "http://res.cloudinary.com/skynews/image/upload/v1442580133/migration-crisis/thumbnails/fadi.jpg",
+        "thumbnail": "http://interactive.news.sky.com/narrate/migration-crisis-images/v1442580133/migration-crisis/thumbnails/fadi.jpg",
         "title": "\"Anywhere I can find a home\"",
         "url": "http://video.news.sky.com/video/h264/vod/374/2015/09/DIGI131811WEMIGRATIONSTORIESFADIIV1442418963852374.mp4"
     },
     "ahmed": {
         "name": "Ahmed",
-        "thumbnail": "http://res.cloudinary.com/skynews/image/upload/v1442580126/migration-crisis/thumbnails/ahmed.jpg",
+        "thumbnail": "http://interactive.news.sky.com/narrate/migration-crisis-images/v1442580126/migration-crisis/thumbnails/ahmed.jpg",
         "title": "\"Slept in the street for days\"",
         "url": "http://video.news.sky.com/video/h264/vod/374/2015/09/DIGI131933WEMIGRATIONSTORIESAHMEDIV1442418519663374.mp4"
     },
     "raafat": {
         "name": "Raafat",
-        "thumbnail": "http://res.cloudinary.com/skynews/image/upload/v1442580144/migration-crisis/thumbnails/raafat.jpg",
+        "thumbnail": "http://interactive.news.sky.com/narrate/migration-crisis-images/v1442580144/migration-crisis/thumbnails/raafat.jpg",
         "title": "\"Returning home, but not now\"",
         "url": "http://video.news.sky.com/video/h264/vod/374/2015/09/DIGI131952WEMIGRATIONSTORIESRAAFATIV1442418765696374.mp4"
     },
     "harriet-hadfield": {
         "name": "Sky’s Harriet Hadfield",
-        "thumbnail": "http://res.cloudinary.com/skynews/image/upload/v1442580156/migration-crisis/thumbnails/sky-harriet-hadfield.jpg",
+        "thumbnail": "http://interactive.news.sky.com/narrate/migration-crisis-images/v1442580156/migration-crisis/thumbnails/sky-harriet-hadfield.jpg",
         "title": "\"My journey through Europe\"",
         "url": "http://video.news.sky.com/video/h264/vod/374/2015/09/DIGI163853WEHADFIELDSTILLSJOURNEYEUROPE1442418318954374.mp4"
     },
     "alex-rossi": {
         "name": "Sky’s Alex Rossi",
-        "thumbnail": "http://res.cloudinary.com/skynews/image/upload/v1442580151/migration-crisis/thumbnails/sky-alex-rossi.jpg",
+        "thumbnail": "http://interactive.news.sky.com/narrate/migration-crisis-images/v1442580151/migration-crisis/thumbnails/sky-alex-rossi.jpg",
         "title": "\"Please take my daughter to safety\"",
         "url": "http://video.news.sky.com/video/h264/vod/374/2015/09/DIGI061543WE160915ROSSIMIGRANTMOTHE150916062352301442381182410374.mp4"
     },
     "alex-crawford": {
         "name": "Sky’s Alex Crawford",
-        "thumbnail": "http://res.cloudinary.com/skynews/image/upload/v1442580148/migration-crisis/thumbnails/sky-alex-crawford.jpg",
+        "thumbnail": "http://interactive.news.sky.com/narrate/migration-crisis-images/v1442580148/migration-crisis/thumbnails/sky-alex-crawford.jpg",
         "title": "Journey on a dinghy",
         "url": "http://video.news.sky.com/video/h264/vod/374/2015/09/DIGI183409FRMIGRATIONCRAWFORDBRAZIER150911183904671441993324402374.mp4"
     },
     "alex-crawford-people-smuggler": {
         "name": "People Smuggler",
-        "thumbnail": "http://res.cloudinary.com/skynews/image/upload/v1442580141/migration-crisis/thumbnails/people-smuggler.jpg",
+        "thumbnail": "http://interactive.news.sky.com/narrate/migration-crisis-images/v1442580141/migration-crisis/thumbnails/people-smuggler.jpg",
         "title": "\"I give refugees a new life\"",
         "url": "http://video.news.sky.com/video/h264/vod/374/2015/09/DIGI112851FR110915CRAWFORDMIGRANTSP150911113210491441967557912374.mp4"
     },

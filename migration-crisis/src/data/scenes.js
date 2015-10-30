@@ -3,42 +3,42 @@ var scenes = {
       "-JzFdDIqgAoO_CUtMbm1" : {
         "body" : "Syria’s turmoil began with protests against President Bashar al Assad’s regime in March 2011. A year and a half later, the International Red Cross formally declared it a civil war. ",
         "date" : "Mar 2011",
-        "image" : "http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_980/v1442496838/migration-crisis/GettyImages-114144723.jpg",
+        "image" : "http://interactive.news.sky.com/narrate/migration-crisis-images/c_scale,q_70,w_980/v1442496838/migration-crisis/GettyImages-114144723.jpg",
         "time" : "2005-07-07T11:00:00.000Z",
         "title" : "CIVIL WAR"
       },
       "-JzFdSnfNTWSwPX-JUba" : {
         "body" : "Four days after Islamic State militants entered Kobani – on the Turkish border with Syria - the UN revealed 130,000 people had fled the country.\nIt was the largest single movement of people since the Syrian conflict began.\n",
         "date" : "Sept 2014",
-        "image" : "http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_980/v1442496850/migration-crisis/GettyImages-456849288.jpg",
+        "image" : "http://interactive.news.sky.com/narrate/migration-crisis-images/c_scale,q_70,w_980/v1442496850/migration-crisis/GettyImages-456849288.jpg",
         "time" : "2005-07-07T11:00:01.000Z",
         "title" : "FLEEING KOBANI"
       },
       "-JzFe2ytj6-s28BnLern" : {
         "body" : "This was a month of fatal sea crossings - hundreds drowned after a packed migrant boat capsized off the Italian island of Lampedusa, and less than a week later a smuggler’s boat carrying 950 people – many locked in the hold - capsized off the coast of Libya.",
         "date" : "Apr 2015",
-        "image" : "http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_980/v1442496807/migration-crisis/GettyImages-470785932.jpg",
+        "image" : "http://interactive.news.sky.com/narrate/migration-crisis-images/c_scale,q_70,w_980/v1442496807/migration-crisis/GettyImages-470785932.jpg",
         "time" : "2005-07-07T11:00:02.000Z",
         "title" : "THE DEADLY MED"
       },
       "-JzFe3N0dI1rOIGBaitH" : {
         "body" : "Thousands of migrants attempted to reach UK shores by getting onto UK-bound lorries. David Cameron called it “totally unacceptable”. He was later criticised for his description of migrants trying to reach Britain as a “swarm”.",
         "date" : "June 2015",
-        "image" : "http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_980/v1442496882/migration-crisis/GettyImages-482416200.jpg",
+        "image" : "http://interactive.news.sky.com/narrate/migration-crisis-images/c_scale,q_70,w_980/v1442496882/migration-crisis/GettyImages-482416200.jpg",
         "time" : "2005-07-07T11:00:03.000Z",
         "title" : "THE CALAIS “SWARM”"
       },
       "-JzFe3fhN14FLue8In6N" : {
         "body" : "Hungary closed its border with Serbia, which isn’t an EU member. In July it began to build a razor-wire fence along the countries’ boundary, which was completed on August 29th.",
         "date" : "June 2015",
-        "image" : "http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_980/v1442496909/migration-crisis/GettyImages-478495960.jpg",
+        "image" : "http://interactive.news.sky.com/narrate/migration-crisis-images/c_scale,q_70,w_980/v1442496909/migration-crisis/GettyImages-478495960.jpg",
         "time" : "2005-07-07T11:00:04.000Z",
         "title" : "BUILDING FENCES ON HUNGARIAN BORDER"
       },
       "-JzFe3wPoDgUd3ALODEZ" : {
         "body" : "All countries in the EU are bound by the Dublin regulation, which means anyone seeking asylum in Europe has to submit an application first. Germany suspended this process for Syrians, making it easier for them to seek asylum. ",
         "date" : "Aug 2015",
-        "image" : "http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_980/v1442496884/migration-crisis/GettyImages-487102960.jpg",
+        "image" : "http://interactive.news.sky.com/narrate/migration-crisis-images/c_scale,q_70,w_980/v1442496884/migration-crisis/GettyImages-487102960.jpg",
         "time" : "2005-07-07T11:00:05.000Z",
         "title" : "LIFTING RESTRICTIONS"
       },
@@ -51,42 +51,42 @@ var scenes = {
       "-JzFeTsuerO6agnrsgWk" : {
         "body" : "71 refugees- including four children - are found dead in the back of a freezer truck in Austria.",
         "date" : "Aug 2015",
-        "image" : "http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_980/v1442496827/migration-crisis/GettyImages-485360590.jpg",
+        "image" : "http://interactive.news.sky.com/narrate/migration-crisis-images/c_scale,q_70,w_980/v1442496827/migration-crisis/GettyImages-485360590.jpg",
         "time" : "2005-07-07T11:00:07.000Z",
         "title" : "AUSTRIA'S FREEZER TRUCK TRAGEDY"
       },
       "-JzFeU78x507zTs99Pbt" : {
         "body" : "Maya Narlband, 20, carried her dog Poopy across the border from Serbia into Hungary close to the village of Roszke. Maya brought the dog all the way with her from her home city of Aleppo. Ironically, her pet has already been issued with a European Union recognised pet passport allowing him to enter EU countries freely.",
         "date" : "Aug 2015",
-        "image" : "http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_980/v1442496864/migration-crisis/GettyImages-486103910.jpg",
+        "image" : "http://interactive.news.sky.com/narrate/migration-crisis-images/c_scale,q_70,w_980/v1442496864/migration-crisis/GettyImages-486103910.jpg",
         "time" : "2005-07-07T11:00:08.000Z",
         "title" : "MAN’S BEST FRIEND"
       },
       "-JzFeULxHd9HcLXWvcFT" : {
         "body" : "Police sealed off entry to Keleti railway station in Budapest to stop migrants travelling north to Germany. Many decided to walk towards Austria in order to get out of Hungary.",
         "date" : "Sept 2015",
-        "image" : "http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_980/v1442496938/migration-crisis/GettyImages-486206880.jpg",
+        "image" : "http://interactive.news.sky.com/narrate/migration-crisis-images/c_scale,q_70,w_980/v1442496938/migration-crisis/GettyImages-486206880.jpg",
         "time" : "2005-07-07T11:00:09.000Z",
         "title" : "NO ENTRY"
       },
       "-JzFeUcuFqlo4YqfLqC-" : {
         "body" : "A migrant was found hiding under a car bonnet in Spain.",
         "date" : "Sept 2015",
-        "image" : "http://res.cloudinary.com/skynews/image/upload/c_scale,w_980/v1442584376/migration-crisis/cegrab-20150901-142719-186-1.jpg",
+        "image" : "http://interactive.news.sky.com/narrate/migration-crisis-images/c_scale,w_980/v1442584376/migration-crisis/cegrab-20150901-142719-186-1.jpg",
         "time" : "2005-07-07T11:00:10.000Z",
         "title" : "DESPERATE MEASURES IN SPAIN"
       },
       "-JzFenByMdn5P1mhU9w9" : {
         "body" : "A German police officer and a migrant boy joked with the officer’s cap whilst migrants waited for a bus after their arrival at the main train station in Munich.",
         "date" : "Sept 2015",
-        "image" : "http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_980/v1442496900/migration-crisis/GettyImages-486141952.jpg",
+        "image" : "http://interactive.news.sky.com/narrate/migration-crisis-images/c_scale,q_70,w_980/v1442496900/migration-crisis/GettyImages-486141952.jpg",
         "time" : "2005-07-07T11:00:11.000Z",
         "title" : "MAKING FRIENDS"
       },
       "-JzFeqDc16sOhj1kFZ5d" : {
         "body" : "Three-year-old Aylan Kurdi and his family left Turkey to reach the Greek island of Kos. The boat they were travelling in overturned, and Aylan, his five-year-old brother and mother died, along with nine others.\nAn image of Aylan’s body on a Turkish beach sparked an international outcry – many appealing for European countries to accept more migrants.",
         "date" : "Sept 2015",
-        "image" : "http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_980/v1442508732/GettyImages-486458910_lkimc9.jpg",
+        "image" : "http://interactive.news.sky.com/narrate/migration-crisis-images/c_scale,q_70,w_980/v1442508732/GettyImages-486458910_lkimc9.jpg",
         "time" : "2005-07-07T11:00:12.000Z",
         "title" : "DEATH OF AYLAN KURDI"
       },
@@ -111,7 +111,7 @@ var scenes = {
       "-JzQm4BMIxAp6oeVd3i-" : {
         "body" : "Hungarian prisoners, believed to be part of a work force, arrived at the Hungarian and Serbian border as part of work to finish the barrier. ",
         "date" : "Sept 2015",
-        "image" : "http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_980/v1442497100/migration-crisis/GettyImages-487743432.jpg",
+        "image" : "http://interactive.news.sky.com/narrate/migration-crisis-images/c_scale,q_70,w_980/v1442497100/migration-crisis/GettyImages-487743432.jpg",
         "time" : "2005-07-07T11:00:15.000Z",
         "title" : "RAZOR WIRE"
       },
@@ -136,7 +136,7 @@ var scenes = {
       "-JzQn5K_u0MYlhOUepbJ" : {
         "body" : "Hungary detained 60 migrants for illegally crossing the Serbian border fence as it imposed tough new rules to secure its southern border and stop the flow of refugees.",
         "date" : "Sept 2015",
-        "image" : "http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_980/v1442507470/migration-crisis/2015-09-15t080011z-1095865669-lr2eb9f0m807h-rtrmadp-3-europe-migrants-hungary-detentions-1.jpg",
+        "image" : "http://interactive.news.sky.com/narrate/migration-crisis-images/c_scale,q_70,w_980/v1442507470/migration-crisis/2015-09-15t080011z-1095865669-lr2eb9f0m807h-rtrmadp-3-europe-migrants-hungary-detentions-1.jpg",
         "time" : "2005-07-07T11:00:18.000Z",
         "title" : "HUNGARY DECLARED BORDER EMERGENCY"
       },
@@ -160,22 +160,22 @@ var scenes = {
       },
       "-JzQufH0avu8-9NrzQ12" : {
         "body" : "Sky’s Harriet Hadfield travelled through Europe to find out what drives a person to leave their home and everything they know behind in search of a new life.",
-        "image" : "http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_980/v1442505485/migration-crisis/pMoNwat2q0BBw35cc48tmgOgVW7bKTQiBMV7IJvsWo8.jpg",
+        "image" : "http://interactive.news.sky.com/narrate/migration-crisis-images/c_scale,q_70,w_980/v1442505485/migration-crisis/pMoNwat2q0BBw35cc48tmgOgVW7bKTQiBMV7IJvsWo8.jpg",
         "time" : "2005-07-07T11:00:21.000Z",
         "title" : "JOURNEY THROUGH EUROPE"
       },
       "-JzQuvzsrT3gz7vA5kvA" : {
-        "image" : "http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_980/v1442505573/migration-crisis/eha5DDYTHAeryNKqBqPcqhM6jiZLFRZBDMdoTK9v_mQ.jpg",
+        "image" : "http://interactive.news.sky.com/narrate/migration-crisis-images/c_scale,q_70,w_980/v1442505573/migration-crisis/eha5DDYTHAeryNKqBqPcqhM6jiZLFRZBDMdoTK9v_mQ.jpg",
         "time" : "2005-07-07T11:00:22.000Z",
         "title" : ""
       },
       "-JzQuww2iLANp3nNClb8" : {
-        "image" : "http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_980/v1442505625/migration-crisis/2djC-zgqALwDoeIGeBZhAjSN-Ans77-Yt7WmAPw3WOU.jpg",
+        "image" : "http://interactive.news.sky.com/narrate/migration-crisis-images/c_scale,q_70,w_980/v1442505625/migration-crisis/2djC-zgqALwDoeIGeBZhAjSN-Ans77-Yt7WmAPw3WOU.jpg",
         "time" : "2005-07-07T11:00:23.000Z",
         "title" : ""
       },
       "-JzQuxmyB-cqlJnMklRs" : {
-        "image" : "http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_980/v1442505687/migration-crisis/-8dKGNo2xuQc4lyB--hPCmgtt878WlnE-1PV3mMdq38.jpg",
+        "image" : "http://interactive.news.sky.com/narrate/migration-crisis-images/c_scale,q_70,w_980/v1442505687/migration-crisis/-8dKGNo2xuQc4lyB--hPCmgtt878WlnE-1PV3mMdq38.jpg",
         "time" : "2005-07-07T11:00:24.000Z",
         "title" : ""
       },
@@ -188,22 +188,22 @@ var scenes = {
         }
       },
       "-JzWGYUTLccxb8qYmyEL" : {
-        "image" : "http://res.cloudinary.com/skynews/image/upload/v1442593506/migration-crisis/infographics/1.gif",
+        "image" : "http://interactive.news.sky.com/narrate/migration-crisis-images/v1442593506/migration-crisis/infographics/1.gif",
         "time" : "2005-07-07T11:00:03.001Z",
         "title" : ""
       },
       "-JzWGkyXxUSZX0BjE0Xw" : {
-        "image" : "http://res.cloudinary.com/skynews/image/upload/v1442593505/migration-crisis/infographics/2.gif",
+        "image" : "http://interactive.news.sky.com/narrate/migration-crisis-images/v1442593505/migration-crisis/infographics/2.gif",
         "time" : "2005-07-07T11:00:02.001Z",
         "title" : ""
       },
       "-JzWGlSUnZWVpI2lvv3_" : {
-        "image" : "http://res.cloudinary.com/skynews/image/upload/v1442593505/migration-crisis/infographics/3.gif",
+        "image" : "http://interactive.news.sky.com/narrate/migration-crisis-images/v1442593505/migration-crisis/infographics/3.gif",
         "time" : "2005-07-07T11:00:01.001Z",
         "title" : ""
       },
       "-JzWGliLv3DDjv1umTRv" : {
-        "image" : "http://res.cloudinary.com/skynews/image/upload/v1442593504/migration-crisis/infographics/4.gif",
+        "image" : "http://interactive.news.sky.com/narrate/migration-crisis-images/v1442593504/migration-crisis/infographics/4.gif",
         "time" : "2005-07-07T11:00:01.002Z",
         "title" : ""
       }
