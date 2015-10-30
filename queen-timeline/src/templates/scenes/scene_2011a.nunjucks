@@ -1,7 +1,7 @@
 {% extends '../layouts/scene.nunjucks' %}
 
 {% set sceneGroup = 'group_00s' %}
-{% set sceneImage = 'http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_{width}/v1439929786/queen-timeline/16x9/2011_First_state_visit_to_Ireland.jpg' %}
+{% set sceneImage = 'http://interactive.news.sky.com/narrate/queen-timeline-images/c_scale,q_70,w_{width}/v1439929786/queen-timeline/16x9/2011_First_state_visit_to_Ireland.jpg' %}
 
 {% block title %}
 <div class="scene__title">2011</div>
