@@ -2,7 +2,7 @@
 
 {% set sceneName = 'scene_2015' %}
 {% set sceneGroup = 'group_2015' %}
-{% set sceneImage = 'http://interactive.news.sky.com/narrate/queen-timeline-images/c_scale,q_70,w_{width}/v1440516112/queen-timeline/4x3/2015_Queen.jpg' %}
+{% set sceneImage = 'http://e0.365dm.com/sky-news-narrate/queen-timeline-images/c_scale,q_70,w_{width}/v1440516112/queen-timeline/4x3/2015_Queen.jpg' %}
 
 {% block title %}
 <div class="scene__title">2015</div>

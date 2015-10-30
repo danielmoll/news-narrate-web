@@ -2,8 +2,8 @@
 
 {% set sceneName = 'scene_90s' %}
 {% set sceneGroup = 'group_90s' %}
-{% set sceneVideo = 'http://interactive.news.sky.com/narrate/queen-timeline/CASTLEFIRE.mp4' %}
-{% set sceneVideoPoster = 'http://interactive.news.sky.com/narrate/queen-timeline-images/c_scale,q_70,w_800/v1439929786/queen-timeline/16x9/1992_Windsor_Fire.jpg' %}
+{% set sceneVideo = 'http://e0.365dm.com/sky-news-narrate/queen-timeline/CASTLEFIRE.mp4' %}
+{% set sceneVideoPoster = 'http://e0.365dm.com/sky-news-narrate/queen-timeline-images/c_scale,q_70,w_800/v1439929786/queen-timeline/16x9/1992_Windsor_Fire.jpg' %}
 {% set sceneVideoLabel = '1992 - Windsor Castle fire' %}
 
 {% block title %}

@@ -1,7 +1,7 @@
 {% extends '../layouts/scene.nunjucks' %}
 
 {% set sceneGroup = 'group_90s' %}
-{% set sceneImage = 'http://interactive.news.sky.com/narrate/queen-timeline-images/c_scale,q_70,w_{width}/v1440510019/queen-timeline/4x3/1997_Princess_Diana_dies.jpg' %}
+{% set sceneImage = 'http://e0.365dm.com/sky-news-narrate/queen-timeline-images/c_scale,q_70,w_{width}/v1440510019/queen-timeline/4x3/1997_Princess_Diana_dies.jpg' %}
 
 {% block title %}
 <div class="scene__title">1997</div>

@@ -2,7 +2,7 @@
 
 {% set sceneName = 'scene_70s' %}
 {% set sceneGroup = 'group_70s' %}
-{% set sceneImage = 'http://interactive.news.sky.com/narrate/queen-timeline-images/c_scale,q_70,w_{width}/v1440508914/queen-timeline/4x3/1977_Silver_Jubilee.jpg' %}
+{% set sceneImage = 'http://e0.365dm.com/sky-news-narrate/queen-timeline-images/c_scale,q_70,w_{width}/v1440508914/queen-timeline/4x3/1977_Silver_Jubilee.jpg' %}
 
 {% block title %}
 <div class="scene__title">1977</div>

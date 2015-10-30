@@ -38,7 +38,7 @@ class Hero extends React.Component {
 
         if (this.state.showVideo) {
             video = (<video autoPlay muted loop poster="/build/img/heroBg.jpg" className="hero__video">
-                        <source src="http://interactive.news.sky.com/narrate/london-bombing-7-7/landingpage-bg_e0klcl.mp4" type="video/mp4"></source>
+                        <source src="http://e0.365dm.com/sky-news-narrate/london-bombing-7-7/landingpage-bg_e0klcl.mp4" type="video/mp4"></source>
                     </video>);
         }
 

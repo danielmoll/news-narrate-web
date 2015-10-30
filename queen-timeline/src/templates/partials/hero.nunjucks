@@ -1,7 +1,7 @@
 <div class="hero">
 	<div class="hero__media">
 		{{ image.render({
-			url: 'http://interactive.news.sky.com/narrate/queen-timeline-images/c_scale,q_70,w_{width}/v1440149150/queen-timeline/hero_queen_4-3.jpg'
+			url: 'http://e0.365dm.com/sky-news-narrate/queen-timeline-images/c_scale,q_70,w_{width}/v1440149150/queen-timeline/hero_queen_4-3.jpg'
 		}) }}
 	</div>
 
