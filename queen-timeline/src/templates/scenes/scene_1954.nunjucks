@@ -2,7 +2,7 @@
 
 {% set sceneGroup = 'group_50s' %}
 {% set sceneVideo = 'http://interactive.news.sky.com/narrate/queen-timeline/SAMKING.mp4' %}
-{% set sceneVideoPoster = 'http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_800/v1440516239/queen-timeline/16x9/Sam_King.jpg' %}
+{% set sceneVideoPoster = 'http://e0.365dm.com/sky-news-narrate/queen-timeline-images/c_scale,q_70,w_800/v1440516239/queen-timeline/16x9/Sam_King.jpg' %}
 {% set sceneVideoLabel = 'Being Black in Elizabeth&rsquo;s Britain' %}
 {% set sceneControls = 'controls' %}
 

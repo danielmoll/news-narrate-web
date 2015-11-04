@@ -2,7 +2,7 @@
 
 {% set sceneGroup = 'group_00s' %}
 {% set sceneVideo = 'http://interactive.news.sky.com/narrate/queen-timeline/WILLIAMKATE.mp4' %}
-{% set sceneVideoPoster = 'http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_800/v1439929786/queen-timeline/16x9/2011_William_Catherine_Wedding.jpg' %}
+{% set sceneVideoPoster = 'http://e0.365dm.com/sky-news-narrate/queen-timeline-images/c_scale,q_70,w_800/v1439929786/queen-timeline/16x9/2011_William_Catherine_Wedding.jpg' %}
 {% set sceneVideoLabel = '2011 - Prince William marries Catherine Middleton' %}
 
 {% block title %}

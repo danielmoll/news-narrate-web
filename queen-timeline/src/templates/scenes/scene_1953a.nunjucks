@@ -2,7 +2,7 @@
 
 {% set sceneGroup = 'group_50s' %}
 {% set sceneVideo = 'http://interactive.news.sky.com/narrate/queen-timeline/COMMONWEALTHTOUR.mp4' %}
-{% set sceneVideoPoster = 'http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_800/v1439929775/queen-timeline/16x9/1953_Commonwealth_tour.jpg' %}
+{% set sceneVideoPoster = 'http://e0.365dm.com/sky-news-narrate/queen-timeline-images/c_scale,q_70,w_800/v1439929775/queen-timeline/16x9/1953_Commonwealth_tour.jpg' %}
 {% set sceneVideoLabel = '1953 - Queen Elizabeth embarks on her first Commonweath tour' %}
 
 {% block title %}

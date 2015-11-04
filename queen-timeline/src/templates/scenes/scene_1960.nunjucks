@@ -2,7 +2,7 @@
 
 {% set sceneName = 'scene_60s' %}
 {% set sceneGroup = 'group_60s' %}
-{% set sceneImage = 'http://res.cloudinary.com/skynews/image/upload/c_scale,q_70,w_{width}/v1439930313/queen-timeline/4x3/1960_Prince_Andrew_born.jpg' %}
+{% set sceneImage = 'http://e0.365dm.com/sky-news-narrate/queen-timeline-images/c_scale,q_70,w_{width}/v1439930313/queen-timeline/4x3/1960_Prince_Andrew_born.jpg' %}
 
 {% block title %}
 <div class="scene__title">1960 <span class="scene__title-secondary">A Royal Birth</span></div>
