@@ -8,6 +8,4 @@ applications:
   services:
     - proxy_skysports
   stack: cflinuxfs2
-  env:
-      GOOGLE_ANALYTICS: UA-64699888-1
   buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
