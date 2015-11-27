@@ -7,5 +7,6 @@ applications:
   instances: 1
   services:
     - proxy_skysports
-    - ssdm-graylog
   stack: cflinuxfs2
+  env:
+      GOOGLE_ANALYTICS: UA-64699888-1
