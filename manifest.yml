@@ -4,7 +4,7 @@ applications:
 - name: news-narrate
   memory: 64M
   disk: 64M
-  instances: 1
+  instances: 2
   services:
     - proxy_skysports
   stack: cflinuxfs2
