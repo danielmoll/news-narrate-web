@@ -7,7 +7,7 @@
     "test": "gulp test:ie11"
   },
   "author": "Sky News Products",
-  "license": "MIT",
+  "license": "Sky UK",
   "devDependencies": {
     "babel": "^5.5.8",
     "babelify": "^6.1.2",

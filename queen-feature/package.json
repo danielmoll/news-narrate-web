@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Sky News Narrate",
   "author": "Sky News Products",
-  "license": "MIT",
+  "license": "Sky UK",
   "scripts": {
     "start": "mkdir -p public/scripts && npm run clean && npm run watcher",
     "dist": "node ./build/uglify.js",
