@@ -8,4 +8,4 @@ applications:
   services:
     - proxy_skysports
   stack: cflinuxfs2
-  buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
+  buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git#v1.2.3
