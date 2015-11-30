@@ -35,6 +35,8 @@ npm install
 
 ## Development
 
+Check `build_all.sh` for instructions on development build scripts in the first instance
+
 ### London 7-7 feature
 
 http://narrate.news.sky.com/london7-7
