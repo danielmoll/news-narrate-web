@@ -1,7 +1,7 @@
 ---
 # Manifest for deploying app to nimbus2 cloud
 applications:
-- name: news-narrate
+- name: narrate
   memory: 64M
   disk: 64M
   instances: 2
